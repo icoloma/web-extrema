@@ -1,0 +1,38 @@
+!!!
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.min2.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+  body
+    .header
+      .navbar.container-fluid
+        .navbar-inner
+          .container
+            ul.nav.first-list
+              li
+                a.brand(href='#') Extrema
+            ul.nav.main-list
+              li
+                a(href='#') Home
+              li
+                a(href='#') Team
+              li
+                a(href='#') Follow us
+            ul.nav.pull-right.langs
+              li.dropdown
+                a.dropdown-toggle(data-toggle='dropdown')
+                  | English
+                  b.caret
+                ul.dropdown-menu
+                  li
+                    a(href='#') Español
+                  li.divider
+                  li
+                    a(href='#') Italiano
+    !{body}
+
+  script(type="text/javascript", src="/javascripts/jquery-1.7.2.min.js")
+  script(type="text/javascript", src="/javascripts/bootstrap-dropdown.js")
