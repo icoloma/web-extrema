@@ -13,7 +13,7 @@ var app = module.exports = express.createServer();
 app.helpers({
   renderTeam: function(teamArray) {
     var teamList = '';
-    teamArray.forEach(function(person) {
+    teamArray.forEach(function(person) { //map _template
       teamList = teamList +
                  '<li><p>' + person.name +
                  '</p><p>' + person.email+
@@ -31,6 +31,7 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
+  app.use(express.logger());
 });
 
 app.configure('development', function(){
@@ -46,7 +47,9 @@ app.configure('production', function(){
   //app.get('/', routes.index);
 app.get('/', routes.list);
   // app.get('/team', routes.team);
-app.get('/addmember', routes.addmember);
+app.get('/newmember', routes.newmember);
+
+app.post('/addmember', routes.addmember);
 
 app.listen(4000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
