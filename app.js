@@ -54,8 +54,8 @@ app.configure('production', function(){
 app.get('/', routes.admin);
 app.get('/admin/team', routes['admin-team']);
 app.get('/admin/team/new', routes['admin-team-new']);
+app.get('/admin/team/:member/edit', routes['admin-team-member-edit']);
 app.get('/admin/team/:member', routes['admin-team-member']);
-app.get('/admin/team/:member/edit');
 app.get('/admin/courses', routes['admin-courses']);
 app.get('/admin/venues', routes['admin-venues']);
 
