@@ -3,11 +3,13 @@ table.table.table-striped
   thead
     tr
       th Name
+      th Team
       th
   tbody
   -for (var i in members)
     tr
       td !{members[i].name}
+      td !{members[i].team}
       td
         a.btn(href="/admin/team/"+ members[i].name) Edit
 a(href="/admin/team/new") Add

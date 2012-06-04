@@ -1,5 +1,40 @@
-form(method="post", action="/admin/team/new/add")#person-form
-  !{renderNewMember()}
+form(method="post", action="/admin/team/new/add").form-horizontal
+  .row-fluid
+    .span4
+      .control-group
+        label Name
+        input(type="text", name="name", required)
+      .control-group
+        label E-mail
+        input(type="email", name="email")
+      .control-group
+        label Type
+        select
+          option IT
+          option Management
+    .span4
+      .control-group
+        //- label Picture
+        //- input(type="file")
+      .control-group
+        label Description (english)
+        textarea(name="description-en", style="resize:vertical")
+      .control-group
+        label Description (spanish)
+        textarea(name="description-es", style="resize:vertical")
+    .span4
+      label
+        h4 Social links
+      .control-group
+        label Twitter 
+        input(type="text", name="social-twitter",placeholder="@user")
+      .control-group
+        label Blog 
+        input(type="text", name="social-blog")
+      .control-group
+        label Linkedin
+        input(type="text", name="social-linkedin")
+
   div
     button(type="submit").btn.btn-info Submit
     a(href="/admin/team").btn.btn-warning Cancel

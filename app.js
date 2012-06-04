@@ -59,7 +59,7 @@ app.get('/admin/team/:member/edit');
 app.get('/admin/courses', routes['admin-courses']);
 app.get('/admin/venues', routes['admin-venues']);
 
-app.post('/admin/team/new/add', routes.addmember);
+app.post('/admin/team/new/add', routes['admin-team-new-add']);
 
 
 app.listen(4000, function(){

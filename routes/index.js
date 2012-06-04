@@ -31,11 +31,13 @@ _.extend(exports, {
   'admin-team-member': function(req, res) {
     res.render('admin-team-member', {
       title: req.params.member, 
-      member: db.getMember(req.params.member)
+      member: db.getMember({
+        "name": req.params.member
+      })
     });
   },
 
-  addmember: function(req, res) {
+  'admin-team-new-add': function(req, res) {
     db.addMember(req.body);
     res.redirect('/admin/team');
   },
