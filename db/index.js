@@ -3,7 +3,10 @@
 var _database = require('mongoskin').db('localhost:27017/extrema');
 
 //Collections
-var peopleCollection = 'persons';
+var peopleCollection = 'persons',
+  coursesCollection = 'courses',
+  editionsCollection = 'editions',
+  venuesCollection = 'venues';
 
 var DB = {
   
@@ -14,6 +17,12 @@ var DB = {
       .toArray(callback)
   },
 
+  getMember: function(name, callback) {
+    return _database
+            .collection(peopleCollection)
+            .find(name);
+  },
+
   addMember: function(params) {
     _database
       .collection(peopleCollection)
@@ -22,8 +31,7 @@ var DB = {
         email: params.email
       });
   }
-
-}
+};
 
 
 exports.db = DB;

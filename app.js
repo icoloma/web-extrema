@@ -4,23 +4,29 @@
  */
 
 var express = require('express')
-  , routes = require('./routes');
+  , routes = require('./routes')
+  , management = require('./management');
 
 var app = module.exports = express.createServer();
 
 // Configuration
 
 app.helpers({
-  renderTeam: function(teamArray) {
+  renderTeamList: function(teamArray) {
     var teamList = '';
-    teamArray.forEach(function(person) { //map _template
-      teamList = teamList +
-                 '<li><p>' + person.name +
-                 '</p><p>' + person.email+
-                 '</p>'+
-                 '<button class="btn">Edit</button></li>';
-    })
-    return teamList;
+      teamArray.forEach(function(person) { //map _template
+        teamList = teamList +
+         '<li><p>' + person.name +
+         '</p><p>' + person.email +
+         '</p>' +
+         '<a class="btn">Edit</a></li>';
+        })
+        return teamList;
+      },
+
+  renderNewMember: function() {
+    var fieldList = '<label>Name</label><input type="text" name="name"></input>';
+    return fieldList;
   }
 })
 
@@ -44,12 +50,17 @@ app.configure('production', function(){
 
 // Routes
 
-  //app.get('/', routes.index);
-app.get('/', routes.list);
-  // app.get('/team', routes.team);
-app.get('/newmember', routes.newmember);
 
-app.post('/addmember', routes.addmember);
+app.get('/', routes.admin);
+app.get('/admin/team', routes['admin-team']);
+app.get('/admin/team/new', routes['admin-team-new']);
+app.get('/admin/team/:member', routes['admin-team-member']);
+app.get('/admin/team/:member/edit');
+app.get('/admin/courses', routes['admin-courses']);
+app.get('/admin/venues', routes['admin-venues']);
+
+app.post('/admin/team/new/add', routes.addmember);
+
 
 app.listen(4000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

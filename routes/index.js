@@ -1,5 +1,5 @@
 var _ = require('underscore');
-var management = require('../management');
+var db = require('../db').db;
 
 _.extend(exports, {
 
@@ -7,26 +7,47 @@ _.extend(exports, {
     res.render('index', { title: 'extrema-sistemas.com' })
   },
 
+  admin: function(req, res){
+  res.render('admin', { title: 'Admin panel' })
+  },
+
   team: function(req, res){
     res.render('team', { title: 'Team' })
   },
 
-  list: function(req, res){
-    management.listMembers(function(err, items) {
-        res.render('list', { 
+  'admin-team': function(req, res){
+    db.listMembers(function(err, items) {
+        res.render('admin-team', { 
           title: 'Current team members',
           members: items
-        })
+        });
       });
   },
 
-  newmember: function(req, res){
-    res.render('newmember', { title: 'Add new member' })
+  'admin-team-new': function(req, res){
+    res.render('admin-team-new', { title: 'Add new member' })
+  },
+
+  'admin-team-member': function(req, res) {
+    res.render('admin-team-member', {
+      title: req.params.member, 
+      member: db.getMember(req.params.member)
+    });
   },
 
   addmember: function(req, res) {
-    management.addMember(req.body);
-    res.redirect('/');
-  }
+    db.addMember(req.body);
+    res.redirect('/admin/team');
+  },
+
+  'admin-courses': function(req, res){
+    res.render('admin-courses', { title: 'Current courses' })
+  },
+
+  'admin-venues': function(req, res){
+    res.render('admin-venues', { title: 'Current venues' })
+  },
+
+
 
 });
