@@ -1,4 +1,4 @@
-form(method="post", action="/admin/team/new/add").form-horizontal
+form(method="post", action="/team/new/add").form-horizontal
   .row-fluid
     .span4
       .control-group
@@ -18,24 +18,23 @@ form(method="post", action="/admin/team/new/add").form-horizontal
         //- input(type="file")
       .control-group
         label Description (english)
-        textarea(name="description-en", style="resize:vertical")
+        textarea(name="description", style="resize:vertical")
       .control-group
         label Description (spanish)
-        textarea(name="description-es", style="resize:vertical")
+        textarea(name="descripcion", style="resize:vertical")
     .span4
       label
         h4 Social links
       .control-group
         label Twitter 
-        input(type="text", name="social-twitter",placeholder="@user")
+        input(type="text", name="twitter",placeholder="@user")
       .control-group
         label Blog 
-        input(type="text", name="social-blog")
+        input(type="text", name="blog")
       .control-group
         label Linkedin
-        input(type="text", name="social-linkedin")
-
+        input(type="text", name="linkedin")
   div
     button(type="submit").btn.btn-info Submit
-    a(href="/admin/team").btn.btn-warning Cancel
+    a(href="/team").btn.btn-warning Cancel
 

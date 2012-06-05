@@ -51,15 +51,17 @@ app.configure('production', function(){
 // Routes
 
 
-app.get('/', routes.admin);
-app.get('/admin/team', routes['admin-team']);
-app.get('/admin/team/new', routes['admin-team-new']);
-app.get('/admin/team/:member/edit', routes['admin-team-member-edit']);
-app.get('/admin/team/:member', routes['admin-team-member']);
-app.get('/admin/courses', routes['admin-courses']);
-app.get('/admin/venues', routes['admin-venues']);
+app.get('/admin', routes.admin);
+app.get('/team', routes.adminTeam.index);
+app.get('/team/new', routes.adminTeam.newMember);
+app.get('/team/:member/edit', routes.adminTeam.editMember);
+// app.get('/team/:member', routes['admin-team-member']);
+app.get('/courses', routes['admin-courses']);
+app.get('/venues', routes['admin-venues']);
 
-app.post('/admin/team/new/add', routes['admin-team-new-add']);
+app.post('/team/new/add', routes.adminTeam.addMember);
+app.post('/team/:member/update', routes.adminTeam.updateMember);
+app.post('/team/:member/delete', routes.adminTeam.deleteMember);
 
 
 app.listen(4000, function(){

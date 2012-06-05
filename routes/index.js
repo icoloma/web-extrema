@@ -1,10 +1,10 @@
 var _ = require('underscore'),
- // db = require('../db').db,
- dv = require('../db/models');
+ mongoose = require('mongoose'),
+ Member = require('../db/models').Member;
 
-var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/extrema');
+
 
 _.extend(exports, {
 
@@ -20,54 +20,82 @@ _.extend(exports, {
     res.render('team', { title: 'Team' })
   },
 
-  'admin-team': function(req, res){
-    dv.Member.find({},function(err, items) {
-      res.render('admin-team', {
-        title: 'Current team members'
-      , members: items
+  adminTeam: {
+
+    index: function(req, res){ 
+      Member.find({},function(err, items) {
+        res.render('admin-team', { 
+          title: 'Current team members'
+        , members: items
+        })
+      });
+    },
+
+    newMember: function(req, res){
+      res.render('admin-team-new', { title: 'Add new member' })
+    },
+
+    addMember: function (req, res) {
+      member = new Member();
+      input = req.body;
+      _.extend(member, {
+        name: input.name,
+        email: input.email,
+        type: input.type,
+        social: {
+          twitter: input.twitter,
+          blog: input.blog,
+          linkedin: input.linkedin
+        },
+        description: {
+          en: input.description,
+          es: input.descripcion
+        }
+      });
+      console.log(member);
+      member.save(function (err) {
+        res.redirect('/team');
       })
-    });
-    // db.listMembers(function(err, items) {
-    //     res.render('admin-team', { 
-    //       title: 'Current team members',
-    //       members: items
-    //     });
-    //   });
-  },
+    },
 
-  'admin-team-new': function(req, res){
-    res.render('admin-team-new', { title: 'Add new member' })
-  },
-
-  'admin-team-member': function(req,res) {
-    res.render('admin-team-member', {
-      title: req.params.member,
-      member: dv.Member.find({"name" : req.params.member})
-    })
-  },
-
-  'admin-team-member-edit': function(req, res) {
-    res.render('admin-team-member-edit', {
-      title: req.params.member, 
-      member: db.getMember({
-        "name": req.params.member
+    editMember: function(req, res) {
+      Member.findOne({"name" : req.params.member}, function(err, person) {
+        res.render('admin-team-member-edit', {
+          title: req.params.member,
+          member: person
+        });
       })
-    });
-  },
+    },
 
-  'admin-team-new-add': function (req, res) {
-    member = new dv.Member();
-    input = req.body;
-    _.extend(member, {
-      name: input.name,
-      email: input.email,
-      type: input.type,
-      social: [input['social-twitter'], input['social-blog']],
-      description: [input['description-es'], input['description-en']]
-    })
-    member.save(function (err) {
-      res.redirect('/admin/team');
-    })
+    updateMember: function(req, res) {
+      member = {};
+      //Guardar el nombre viejo, para buscar el documento
+      name = req.params.member;
+      input = req.body;
+      _.extend(member, {
+        name: input.name,
+        email: input.email,
+        type: input.type,
+        social: {
+          twitter: input.twitter,
+          blog: input.blog,
+          linkedin: input.linkedin
+        },
+        description: {
+          en: input.description,
+          es: input.descripcion
+        }
+      });
+      Member.update({name: name}, member, function(err,num) {
+        res.redirect('/team');
+      });
+    },
+
+    deleteMember: function(req,res) {
+      Member.remove({name : req.params.member}, function(err) {
+        res.redirect('/team');
+      });
+    },
   },
 
   'admin-courses': function(req, res){
@@ -77,7 +105,5 @@ _.extend(exports, {
   'admin-venues': function(req, res){
     res.render('admin-venues', { title: 'Current venues' })
   },
-
-
 
 });

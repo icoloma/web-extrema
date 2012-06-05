@@ -4,14 +4,11 @@ table.table.table-striped
     tr
       th Name
       th Team
-      th
   tbody
   -for (var i in members)
     tr
       td 
-        a(href="/admin/team/"+members[i].name) !{members[i].name}
+        a(href="/team/"+members[i].name+"/edit") !{members[i].name}
       td !{members[i].type}
-      td
-        a.btn(href="/admin/team/"+ members[i].name + "/edit") Edit
-a(href="/admin/team/new") Add
+a(href="team/new") Add
 

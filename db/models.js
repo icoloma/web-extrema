@@ -11,11 +11,18 @@ var teamCollection = 'team',
 
 
 var MemberSchema = new Schema({
-   name: String
- , email: String
- , social: [String]
- , type: String
- , description: [String]
+     name: String
+   , email: String
+   , social: {
+      twitter: String,
+      linkedin: String,
+      blog: String
+     }
+   , type: String
+   , description: {
+      es: String,
+      en: String
+     }
  //Picture
 } , {collection: teamCollection});
 
