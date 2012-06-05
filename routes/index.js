@@ -69,7 +69,7 @@ _.extend(exports, {
     },
 
     editMember: function(req, res) {
-      Member.findOne({"name" : req.params.member}, function(err, person) {
+      Member.findOne({ "name" : req.params.member }, function(err, person) {
         res.render('admin-team-member-edit', {
           title: req.params.member,
           member: person
@@ -106,28 +106,25 @@ _.extend(exports, {
         };
       };
 
-      Member.update({name: name}, member, function(err,num) {
+      Member.update({ name: name }, member, function(err,num) {
         res.redirect('/team');
       });
     },
 
     deleteMember: function(req,res) {
-      Member.remove({name : req.params.member}, function(err) {
+      Member.remove({ name : req.params.member }, function(err) {
         res.redirect('/team');
       });
     },
 
     picture: function(req,res) {
-      Member.findOne({ name : req.params.member} , function(err, person) {
-        // console.log(person);
-        if (err) return next(err);
+      Member.findOne({ name : req.params.member } , function(err, person) {
         if(person.img.data) {
-           console.log(person.img.content);
            res.contentType(person.img.contentType);
            res.send(person.img.data);
         }
         else {
-           res.sendfile('/public/images/person.png');
+           res.redirect('/images/person.png');
         }
       });
     },

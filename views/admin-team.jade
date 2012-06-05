@@ -2,13 +2,18 @@ h1 #{title}
 table.table.table-striped
   thead
     tr
+      th
       th Name
       th Team
   tbody
   -for (var i in members)
     tr
+      td
+        img(src="/team/"+members[i].name+"/thumb",style="width: 50px")
       td 
         a(href="/team/"+members[i].name+"/edit") !{members[i].name}
       td !{members[i].type}
-a(href="team/new") Add
+a(href="team/new").btn Add
+
+a(href="admin").btn Back
 
