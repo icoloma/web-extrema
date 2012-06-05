@@ -4,31 +4,11 @@
  */
 
 var express = require('express')
-  , routes = require('./routes')
-  , management = require('./management');
+  , routes = require('./routes');
 
 var app = module.exports = express.createServer();
 
 // Configuration
-
-app.helpers({
-  renderTeamList: function(teamArray) {
-    var teamList = '';
-      teamArray.forEach(function(person) { //map _template
-        teamList = teamList +
-         '<li><p>' + person.name +
-         '</p><p>' + person.email +
-         '</p>' +
-         '<a class="btn">Edit</a></li>';
-        })
-        return teamList;
-      },
-
-  renderNewMember: function() {
-    var fieldList = '<label>Name</label><input type="text" name="name"></input>';
-    return fieldList;
-  }
-})
 
 app.configure(function(){
   app.set('views', __dirname + '/views');
@@ -62,6 +42,13 @@ app.get('/venues', routes['admin-venues']);
 app.post('/team/new/add', routes.adminTeam.addMember);
 app.post('/team/:member/update', routes.adminTeam.updateMember);
 app.post('/team/:member/delete', routes.adminTeam.deleteMember);
+
+//Imágenes
+// app.get('/team/:member/thumb', function(req,res) {
+//   res.redirect('/images/person.png')
+// });
+app.get('/team/:member/thumb', routes.adminTeam.picture);
+
 
 
 app.listen(4000, function(){

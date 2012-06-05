@@ -1,14 +1,14 @@
 
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
-    ObjectId = Schema.ObjectId;
+    ObjectId = Schema.ObjectId,
+    fs = require('fs');
 
 //Collections
 var teamCollection = 'team',
   coursesCollection = 'courses',
   editionsCollection = 'editions',
   venuesCollection = 'venues';
-
 
 var MemberSchema = new Schema({
      name: String
@@ -23,7 +23,11 @@ var MemberSchema = new Schema({
       es: String,
       en: String
      }
- //Picture
+   , img : {
+      data: Buffer,
+      contentType: String
+   }
+   , editions: [EditionSchema]
 } , {collection: teamCollection});
 
 var CourseSchema = new Schema({

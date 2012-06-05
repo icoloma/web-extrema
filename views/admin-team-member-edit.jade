@@ -1,5 +1,5 @@
 h1 !{title}
-form(method="post", action="/team/"+title+"/update").form-horizontal
+form(method="post", action="/team/"+title+"/update",enctype="multipart/form-data").form-horizontal
   .row-fluid
     .span4
       .control-group
@@ -22,8 +22,10 @@ form(method="post", action="/team/"+title+"/update").form-horizontal
         -}
     .span4
       .control-group
-        //- label Picture
-        //- input(type="file")
+        label Picture
+        // -if(member.picture)
+        img(src="thumb")
+        input(type="file", name="picture")
       .control-group
         label Description (english)
         textarea(name="description", style="resize:vertical") !{member.description.en}

@@ -1,4 +1,4 @@
-form(method="post", action="/team/new/add").form-horizontal
+form(method="post", action="/team/new/add",enctype="multipart/form-data").form-horizontal
   .row-fluid
     .span4
       .control-group
@@ -14,8 +14,8 @@ form(method="post", action="/team/new/add").form-horizontal
           option Management
     .span4
       .control-group
-        //- label Picture
-        //- input(type="file")
+        label Picture
+        input(type="file", name="picture")
       .control-group
         label Description (english)
         textarea(name="description", style="resize:vertical")
@@ -37,4 +37,3 @@ form(method="post", action="/team/new/add").form-horizontal
   div
     button(type="submit").btn.btn-info Submit
     a(href="/team").btn.btn-warning Cancel
-
