@@ -11,7 +11,7 @@ var CourseSchema = new mongoose.Schema({
       data: Buffer,
       contentType: String
    }
-  //Picture
+   , editions: [ mongoose.Schema.ObjectId ]
 });
 
 //Diccionarios entre atributos de HTML y campos del Schema
@@ -40,7 +40,8 @@ CourseSchema.statics.toHTML = function(sch) {
       description_en: sch.description.en,
       description_es: sch.description.es,
       img: sch.img,
-      _id: sch._id  
+      _id: sch._id,
+      editions: sch.editions,
    };
    return formatted;
 };

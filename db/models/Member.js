@@ -18,7 +18,7 @@ var MemberSchema = new mongoose.Schema({
       data: Buffer,
       contentType: String
    }
-   // , editions: [EditionSchema]
+   , editions: [ mongoose.Schema.ObjectId ]
 });
 
 //Diccionarios entre atributos de HTML y campos del Schema
@@ -58,7 +58,8 @@ MemberSchema.statics.toHTML = function(sch) {
       description_en: sch.description.en,
       description_es: sch.description.es,
       img: sch.img,    
-      _id: sch._id
+      _id: sch._id,
+      editions: sch.editions
    };
    return formatted;
 };

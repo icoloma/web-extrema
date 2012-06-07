@@ -8,6 +8,7 @@ var VenueSchema = new mongoose.Schema({
     data: Buffer,
     contentType: String
   }
+  ,  editions: [mongoose.Schema.ObjectId]
 });
 
 //Diccionarios entre atributos de HTML y campos del Schema
@@ -31,7 +32,8 @@ VenueSchema.statics.toHTML = function(sch) {
       name: sch.name,
       address: sch.address,
       img: sch.img,
-      _id: sch._id   
+      _id: sch._id,
+      editions: sch.editions
    };
    return formatted;
 };
