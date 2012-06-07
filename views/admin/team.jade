@@ -10,9 +10,9 @@ table.table.table-striped
   -for (var i in members)
     tr
       td
-        img(src="/team/"+members[i].name+"/thumb",style="width: 50px")
+        img(src="/team/"+members[i]._id+"/thumb",style="width: 50px")
       td 
-        a(href="/team/"+members[i].name+"/edit") !{members[i].name}
+        a(href="/team/"+members[i]._id+"/edit") !{members[i].name}
       td !{members[i].type}
 a(href="team/new").btn New
 

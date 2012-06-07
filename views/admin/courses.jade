@@ -9,9 +9,9 @@ table.table.table-striped
   -for (var i in courses)
     tr
       td
-        img(src="/courses/"+courses[i].name+"/thumb",style="width: 50px")
+        img(src="/courses/"+courses[i]._id+"/thumb",style="width: 50px")
       td 
-        a(href="/courses/"+courses[i].name+"/edit") !{courses[i].name}
+        a(href="/courses/"+courses[i]._id+"/edit") !{courses[i].name}
 a(href="/courses/new").btn New
 
 a(href="/admin").btn Back

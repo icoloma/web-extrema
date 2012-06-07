@@ -1,6 +1,6 @@
 h1 !{title}
 -var course = item
-form(method="post", action="/courses/"+course.name+"/update",enctype="multipart/form-data").form-horizontal
+form(method="post", action="/courses/"+course._id+"/update",enctype="multipart/form-data").form-horizontal
   .row-fluid
     .span6
       .control-group
@@ -20,5 +20,5 @@ form(method="post", action="/courses/"+course.name+"/update",enctype="multipart/
   div
     button(type="submit").btn.btn-info Submit
     a(href="/courses").btn.btn-warning Cancel
-form(method="post", action="/courses/"+course.name+"/delete", style="float:right")
+form(method="post", action="/courses/"+course._id+"/delete", style="float:right")
   button(type="submit").btn.btn-danger.btn-large Delete

@@ -5,14 +5,14 @@ table.table.table-striped
     tr
       th
       th Name
-      th Adress
+      th Address
   tbody
   -for (var i in venues)
     tr
       td
-        img(src="/venues/"+venues[i].name+"/thumb",style="width: 50px")
+        img(src="/venues/"+venues[i]._id+"/thumb",style="width: 50px")
       td 
-        a(href="/venues/"+venues[i].name+"/edit") !{venues[i].name}
+        a(href="/venues/"+venues[i]._id+"/edit") !{venues[i].name}
       td
         !{venues[i].address}
 a(href="/venues/new").btn New

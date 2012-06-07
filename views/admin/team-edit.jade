@@ -1,6 +1,6 @@
 h1 !{title}
 -var member = item
-form(method="post", action="/team/"+member.name+"/update",enctype="multipart/form-data").form-horizontal
+form(method="post", action="/team/"+member._id+"/update",enctype="multipart/form-data").form-horizontal
   .row-fluid
     .span4
       .control-group
@@ -47,5 +47,5 @@ form(method="post", action="/team/"+member.name+"/update",enctype="multipart/for
   div
     button(type="submit").btn.btn-info Submit
     a(href="/team").btn.btn-warning Cancel
-form(method="post", action="/team/"+member.name+"/delete", style="float:right")
+form(method="post", action="/team/"+member._id+"/delete", style="float:right")
   button(type="submit").btn.btn-danger.btn-large Delete

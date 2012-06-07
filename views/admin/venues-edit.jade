@@ -1,6 +1,6 @@
 h1 !{title}
 -var venue = item
-form(method="post", action="/venues/"+venue.name+"/update",enctype="multipart/form-data").form-horizontal
+form(method="post", action="/venues/"+venue._id+"/update",enctype="multipart/form-data").form-horizontal
   .row-fluid
     .span6
       .control-group
@@ -17,5 +17,5 @@ form(method="post", action="/venues/"+venue.name+"/update",enctype="multipart/fo
   div
     button(type="submit").btn.btn-info Submit
     a(href="/venues").btn.btn-warning Cancel
-form(method="post", action="/venues/"+venue.name+"/delete", style="float:right")
+form(method="post", action="/venues/"+venue._id+"/delete", style="float:right")
   button(type="submit").btn.btn-danger.btn-large Delete

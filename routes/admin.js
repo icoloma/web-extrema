@@ -28,7 +28,7 @@ module.exports = function (app) {
       id = req.params.item;
     db.getItem(field, id, function(err, item) {
       res.render('admin/' + field + '-edit', {
-        title: 'Edit ' + id,
+        title: 'Edit ' + item.name,
         item: item
       });
     });

@@ -28,26 +28,26 @@ _.extend(module.exports, {
   },
 
   getItems: function (field, callback) {
-    model = getModel(field);
+    var model = getModel(field);
     model.find({}, callback);
   },
 
   getItem: function(field, id, callback) {
-    model = getModel(field);
-    model.findOne({ name: id }, function(err, item) {
+    var model = getModel(field);
+    model.findById(id, function(err, item) {
       formatted = model.toHTML(item);
       callback.apply(this,[err, formatted]);
     });
   },
 
   updateItem: function(field, id, body, callback) {
-    model = getModel(field);
+    var model = getModel(field);
     updated = model.fromHTML(body);
-    model.update({ name: id }, updated, callback);
+    model.update({ _id: id }, updated, callback);
   },
 
   addItem: function(field, body, callback) {
-    model = getModel(field);
+    var model = getModel(field);
     _new = model.fromHTML(body),
       instance = new model();
 
@@ -56,8 +56,8 @@ _.extend(module.exports, {
   },
 
   deleteItem: function(field, id, callback) {
-    model = getModel(field);
-    model.remove( {name: id }, callback);
+    var model = getModel(field);
+    model.remove( {_id: id }, callback);
   },
 
 });
