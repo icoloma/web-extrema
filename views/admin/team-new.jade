@@ -1,4 +1,4 @@
-form(method="post", action="/team/new/add",enctype="multipart/form-data").form-horizontal
+form(method="post", action="/team/add",enctype="multipart/form-data").form-horizontal
   .row-fluid
     .span4
       .control-group
@@ -18,10 +18,10 @@ form(method="post", action="/team/new/add",enctype="multipart/form-data").form-h
         input(type="file", name="picture")
       .control-group
         label Description (english)
-        textarea(name="description", style="resize:vertical")
+        textarea(name="description_en", style="resize:vertical")
       .control-group
         label Description (spanish)
-        textarea(name="descripcion", style="resize:vertical")
+        textarea(name="description_es", style="resize:vertical")
     .span4
       label
         h4 Social links

@@ -1,4 +1,5 @@
 h1 #{title}
+-var members = items
 table.table.table-striped
   thead
     tr
@@ -13,7 +14,7 @@ table.table.table-striped
       td 
         a(href="/team/"+members[i].name+"/edit") !{members[i].name}
       td !{members[i].type}
-a(href="team/new").btn Add
+a(href="team/new").btn New
 
 a(href="admin").btn Back
 

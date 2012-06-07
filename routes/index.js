@@ -1,12 +1,12 @@
 var _ = require('underscore'),
  mongoose = require('mongoose'),
- models = require('../models'),
+ db = require('../db'),
  // models.Member = require('../db/models').Member,
  fs = require('fs');
 
+// foo = mongoose.model('');
 
 mongoose.connect('mongodb://localhost/extrema');
-
 
 _.extend(exports, {
 

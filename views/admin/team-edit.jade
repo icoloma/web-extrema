@@ -1,5 +1,6 @@
 h1 !{title}
-form(method="post", action="/team/"+title+"/update",enctype="multipart/form-data").form-horizontal
+-var member = item
+form(method="post", action="/team/"+member.name+"/update",enctype="multipart/form-data").form-horizontal
   .row-fluid
     .span4
       .control-group
@@ -28,24 +29,24 @@ form(method="post", action="/team/"+title+"/update",enctype="multipart/form-data
         input(type="file", name="picture")
       .control-group
         label Description (english)
-        textarea(name="description", style="resize:vertical") !{member.description.en}
+        textarea(name="description_en", style="resize:vertical") !{member.description_en}
       .control-group
         label Description (spanish)
-        textarea(name="descripcion", style="resize:vertical") !{member.description.es}
+        textarea(name="description_es", style="resize:vertical") !{member.description_es}
     .span4
       label
         h4 Social links
       .control-group
         label Twitter 
-        input(type="text", name="twitter", placeholder="@user", value=member.social.twitter)
+        input(type="text", name="twitter", placeholder="@user", value=member.twitter)
       .control-group
         label Blog 
-        input(type="text", name="blog", value=member.social.blog)
+        input(type="text", name="blog", value=member.blog)
       .control-group
         label Linkedin
         input(type="text", name="linkedin", value=member.linkedin)
   div
     button(type="submit").btn.btn-info Submit
     a(href="/team").btn.btn-warning Cancel
-form(method="post", action="/team/"+title+"/delete", style="float:right")
+form(method="post", action="/team/"+member.name+"/delete", style="float:right")
   button(type="submit").btn.btn-danger.btn-large Delete
