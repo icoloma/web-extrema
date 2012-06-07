@@ -1,6 +1,7 @@
 var _ = require('underscore'),
  mongoose = require('mongoose'),
- Member = require('../db/models').Member,
+ models = require('../models'),
+ // models.Member = require('../db/models').Member,
  fs = require('fs');
 
 
@@ -24,7 +25,7 @@ _.extend(exports, {
   adminTeam: {
 
     index: function(req, res){ 
-      Member.find({},function(err, items) {
+      models.Member.find({},function(err, items) {
         res.render('admin-team', { 
           title: 'Current team members'
         , members: items
@@ -37,7 +38,7 @@ _.extend(exports, {
     },
 
     addMember: function (req, res) {
-      member = new Member();
+      member = new models.Member();
       input = req.body;
 
       _.extend(member, {
@@ -69,7 +70,7 @@ _.extend(exports, {
     },
 
     editMember: function(req, res) {
-      Member.findOne({ "name" : req.params.member }, function(err, person) {
+      models.Member.findOne({ "name" : req.params.member }, function(err, person) {
         res.render('admin-team-member-edit', {
           title: req.params.member,
           member: person
@@ -106,19 +107,19 @@ _.extend(exports, {
         };
       };
 
-      Member.update({ name: name }, member, function(err,num) {
+      models.Member.update({ name: name }, member, function(err,num) {
         res.redirect('/team');
       });
     },
 
     deleteMember: function(req,res) {
-      Member.remove({ name : req.params.member }, function(err) {
+      models.Member.remove({ name : req.params.member }, function(err) {
         res.redirect('/team');
       });
     },
 
     picture: function(req,res) {
-      Member.findOne({ name : req.params.member } , function(err, person) {
+      models.Member.findOne({ name : req.params.member } , function(err, person) {
         if(person.img.data) {
            res.contentType(person.img.contentType);
            res.send(person.img.data);
