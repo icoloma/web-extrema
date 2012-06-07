@@ -1,4 +1,5 @@
-var mongoose = require('mongoose');
+var mongoose = require('mongoose'),
+   fs = require('fs');
 
 var EditionSchema = new mongoose.Schema({
   date: Date

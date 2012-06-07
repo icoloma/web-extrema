@@ -1,0 +1,21 @@
+h1 #{title}
+-var venues = items
+table.table.table-striped
+  thead
+    tr
+      th
+      th Name
+      th Adress
+  tbody
+  -for (var i in venues)
+    tr
+      td
+        img(src="/venues/"+venues[i].name+"/thumb",style="width: 50px")
+      td 
+        a(href="/venues/"+venues[i].name+"/edit") !{venues[i].name}
+      td
+        !{venues[i].address}
+a(href="/venues/new").btn New
+
+a(href="/admin").btn Back
+

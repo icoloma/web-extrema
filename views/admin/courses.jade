@@ -1,0 +1,18 @@
+h1 #{title}
+-var courses = items
+table.table.table-striped
+  thead
+    tr
+      th
+      th Name
+  tbody
+  -for (var i in courses)
+    tr
+      td
+        img(src="/courses/"+courses[i].name+"/thumb",style="width: 50px")
+      td 
+        a(href="/courses/"+courses[i].name+"/edit") !{courses[i].name}
+a(href="/courses/new").btn New
+
+a(href="/admin").btn Back
+

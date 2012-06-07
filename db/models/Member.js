@@ -23,7 +23,7 @@ var MemberSchema = new mongoose.Schema({
 
 //Diccionarios entre atributos de HTML y campos del Schema
 MemberSchema.statics.fromHTML = function(req) {
-   formatted = {
+   var formatted = {
       name: req.name,
       email: req.email,
       type: req.type,
@@ -48,7 +48,7 @@ MemberSchema.statics.fromHTML = function(req) {
 };
 
 MemberSchema.statics.toHTML = function(sch) {
-   formatted = {
+   var formatted = {
       name: sch.name,
       email: sch.email,
       type: sch.type,

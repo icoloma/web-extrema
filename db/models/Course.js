@@ -1,9 +1,47 @@
-var mongoose = require('mongoose');
+var mongoose = require('mongoose'),
+   fs = require('fs');
 
 var CourseSchema = new mongoose.Schema({
     name: String
-  , description: [String]
+  , description: {
+    en: String,
+    es: String
+  }
+  , img : {
+      data: Buffer,
+      contentType: String
+   }
   //Picture
 });
+
+//Diccionarios entre atributos de HTML y campos del Schema
+CourseSchema.statics.fromHTML = function(req) {
+   var formatted = {
+      name: req.name,
+      description: {
+         en: req.description_en,
+         es: req.description_es
+      }
+   };
+    if(req.picture.size) {
+      data = fs.readFileSync(req.picture.path)
+      formatted.img = {
+        contentType: req.picture.mime,
+        data: data
+      };
+    };
+   return formatted;
+};
+
+CourseSchema.statics.toHTML = function(sch) {
+   var formatted = {
+      name: sch.name,
+      email: sch.email,
+      description_en: sch.description.en,
+      description_es: sch.description.es,
+      img: sch.img,    
+   };
+   return formatted;
+};
 
 exports.Course = mongoose.model('Courses', CourseSchema);
