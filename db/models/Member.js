@@ -48,7 +48,6 @@ MemberSchema.statics.fromHTML = function(req) {
 };
 
 MemberSchema.statics.toHTML = function(sch) {
-  console.log(sch)
    var formatted = {
       name: sch.name,
       email: sch.email,

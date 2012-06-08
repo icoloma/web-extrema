@@ -77,7 +77,7 @@ module.exports = function (app) {
     var field = req.params.field,
       id = req.params.item;
 
-    db.getItem(field, id, function(err, item) {
+    db.getItem(field, id, function (err, item) {
       if(item.picture && item.picture.data) {
         res.contentType(item.picture.contentType);
         res.send(item.picture.data);
@@ -85,6 +85,49 @@ module.exports = function (app) {
         res.redirect('/images/person.png');
       };
     });
+  });
+
+  app.post('/editions/new', function (req, res) {
+    var origin = {
+      courses: req.body.course,
+      venues: req.body.venue,
+      team: req.body.instructor,
+    };
+    for(p in origin) {
+      var x = p;
+      if(origin[p])
+        origin.address = '/' + p + '/' + origin[p] + '/edit'; 
+    };
+
+    var getName = function (items) {
+      return items.map(function (item) {
+        return item.name;
+      });
+    };
+    //Horrible llamada triple
+    var getNames = function (callback) {
+      db.getItems('team', function (err, items) {
+        var members = getName(items);
+        db.getItems('venues', function (err, items) {
+          var venues = getName(items);
+          db.getItems('courses', function (err, items) {
+            var courses = getName(items);
+            callback.apply(this,[members, venues, courses]);
+          });
+        });
+      });
+    };
+
+    getNames(function (members, venues, courses) {
+      res.render('admin/editions-new', {
+        title: 'Modify edition',
+        origin: origin,
+        venues: venues,
+        courses: courses,
+        members: members,
+      })
+    });
+
   });
 
 }

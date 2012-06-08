@@ -1,0 +1,34 @@
+form(method="post",
+  action="/editions/add").form-horizontal.row-fluid
+  .span6
+    .control-group
+      label Date
+      input(type="date", name="date")
+    .control-group
+      label Venue
+      select(name="venue")
+        each item in venues
+          -if(item === origin.venues)
+            option(selected="selected") !{item}
+          -else
+            option !{item}
+  .span6
+    .control-group
+      label Course
+      select(name="course")
+        each item in courses
+          -if(item === origin.courses)
+            option(selected="selected") !{item}
+          -else
+            option !{item}
+    .control-group
+      label Instructor
+      select(name="instructor")
+        each item in members
+          -if(item === origin.team)
+            option(selected="selected") !{item}
+          -else
+            option !{item}
+div
+  button(type="submit").btn.btn-info Submit
+  a(href=origin.address).btn.btn-warning Cancel
