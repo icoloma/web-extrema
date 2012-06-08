@@ -1,34 +1,38 @@
+- var formatCombos = function (label, name, list, or) {
+- var combo = '<div class="control-group">';
+// - if(or) {
+// -   combo += ' success">'
+// - } else {
+// -   combo += '">';
+// -}
+- combo += '<label>' + label + '</label>';
+- combo += '<select name="' + name + '"';
+- if(or) {
+-   combo += ' disabled>'
+-} else {
+-   combo += '>'
+-}
+- for(i in list) {
+-   if(list[i].id === or) {
+-     combo += '<option selected="selected">' + list[i].name + '</option>';
+-   } else {
+-     combo += '<option>' + list[i].name + '</option>';
+-   }
+-}
+- 
+- combo += '</select></div>'
+- return combo;
+-}
 form(method="post",
   action="/editions/add").form-horizontal.row-fluid
   .span6
     .control-group
       label Date
       input(type="date", name="date")
-    .control-group
-      label Venue
-      select(name="venue")
-        each item in venues
-          -if(item === origin.venues)
-            option(selected="selected") !{item}
-          -else
-            option !{item}
+    !{formatCombos('Venue', 'venue', venues, origin.venues)}
   .span6
-    .control-group
-      label Course
-      select(name="course")
-        each item in courses
-          -if(item === origin.courses)
-            option(selected="selected") !{item}
-          -else
-            option !{item}
-    .control-group
-      label Instructor
-      select(name="instructor")
-        each item in members
-          -if(item === origin.team)
-            option(selected="selected") !{item}
-          -else
-            option !{item}
+    !{formatCombos('Course', 'course', courses, origin.courses)}
+    !{formatCombos('Instructor', 'instructor', members, origin.team)}
 div
   button(type="submit").btn.btn-info Submit
   a(href=origin.address).btn.btn-warning Cancel

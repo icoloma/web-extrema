@@ -1,6 +1,8 @@
 h1 !{title}
 -var venue = item
-form(method="post", action="/venues/"+venue._id+"/update",enctype="multipart/form-data").form-horizontal
+form(method="post",
+  action="/venues/"+venue._id+"/update",
+  enctype="multipart/form-data").form-horizontal
   .row-fluid
     .span6
       .control-group
@@ -14,8 +16,31 @@ form(method="post", action="/venues/"+venue._id+"/update",enctype="multipart/for
         label Picture
         img(src="thumb")
         input(type="file", name="picture")
-  div
+  .row-fluid
     button(type="submit").btn.btn-info Submit
     a(href="/venues").btn.btn-warning Cancel
-form(method="post", action="/venues/"+venue._id+"/delete", style="float:right")
-  button(type="submit").btn.btn-danger.btn-large Delete
+form(method="post",
+  action="/venues/"+venue._id+"/delete").row-fluid
+  button(type="submit").btn.btn-danger.btn-large.pull-right Delete
+
+h2 Editions
+.row-fluid
+  .span12
+    table.table.table-striped
+      thead
+        tr
+          th Course
+          th Date
+          th Instructor
+      tbody
+      -for (var i in venue.editions)
+        tr
+          td 
+            !{editions[i].course}
+          td
+            !{editions[i].date}
+          td
+            !{editions[i].instructor}
+  form(method="post", action="/editions/new")
+    input(name="venue", type="hidden", value=venue._id)
+    button(type="submit").btn New

@@ -1,6 +1,8 @@
 h1 !{title}
 -var member = item
-form(method="post", action="/team/"+member._id+"/update",enctype="multipart/form-data").form-horizontal
+form(method="post",
+  action="/team/"+member._id+"/update",
+  enctype="multipart/form-data").form-horizontal
   .row-fluid
     .span4
       .control-group
@@ -44,8 +46,31 @@ form(method="post", action="/team/"+member._id+"/update",enctype="multipart/form
       .control-group
         label Linkedin
         input(type="text", name="linkedin", value=member.linkedin)
-  div
+  .row-fluid      
     button(type="submit").btn.btn-info Submit
     a(href="/team").btn.btn-warning Cancel
-form(method="post", action="/team/"+member._id+"/delete", style="float:right")
-  button(type="submit").btn.btn-danger.btn-large Delete
+form(method="post",
+  action="/team/"+member._id+"/delete").row-fluid
+  button(type="submit").btn.btn-danger.btn-large.pull-right Delete
+
+h2 Editions
+.row-fluid
+  .span12
+    table.table.table-striped
+      thead
+        tr
+          th Course
+          th Date
+          th Venue
+      tbody
+      -for (var i in member.editions)
+        tr
+          td 
+            !{editions[i].course}
+          td
+            !{editions[i].date}
+          td
+            !{editions[i].venue}
+  form(method="post", action="/editions/new")
+    input(name="instructor", type="hidden", value=member._id)
+    button(type="submit").btn New

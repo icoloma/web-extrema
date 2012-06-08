@@ -2,24 +2,26 @@ h1 !{title}
 -var course = item
 form(method="post",
   action="/courses/"+course._id+"/update",
-  enctype="multipart/form-data").form-horizontal.row-fluid
-  .span6
-    .control-group
-      label Name
-      input(type="text", name="name", required, value=course.name)
-  .span6
-    .control-group
-      label Picture
-      img(src="thumb")
-      input(type="file", name="picture")
-    .control-group
-      label Description (english)
-      textarea(name="description_en", style="resize:vertical") !{course.description_en}
-    .control-group
-      label Description (spanish)
-      textarea(name="description_es", style="resize:vertical") !{course.description_es}
-  button(type="submit").btn.btn-info Submit
-  a(href="/courses").btn.btn-warning Cancel
+  enctype="multipart/form-data").form-horizontal
+  .row-fluid
+    .span6
+      .control-group
+        label Name
+        input(type="text", name="name", required, value=course.name)
+    .span6
+      .control-group
+        label Picture
+        img(src="thumb")
+        input(type="file", name="picture")
+      .control-group
+        label Description (english)
+        textarea(name="description_en", style="resize:vertical") !{course.description_en}
+      .control-group
+        label Description (spanish)
+        textarea(name="description_es", style="resize:vertical") !{course.description_es}
+  .row-fluid
+    button(type="submit").btn.btn-info Submit
+    a(href="/courses").btn.btn-warning Cancel
 form(method="post",
   action="/courses/"+course._id+"/delete").row-fluid
   button(type="submit").btn.btn-danger.btn-large.pull-right Delete

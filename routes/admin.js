@@ -99,19 +99,19 @@ module.exports = function (app) {
         origin.address = '/' + p + '/' + origin[p] + '/edit'; 
     };
 
-    var getName = function (items) {
+    var cropItems = function (items) {
       return items.map(function (item) {
-        return item.name;
+        return {name: item.name, id: item._id};
       });
     };
     //Horrible llamada triple
     var getNames = function (callback) {
       db.getItems('team', function (err, items) {
-        var members = getName(items);
+        var members = cropItems(items);
         db.getItems('venues', function (err, items) {
-          var venues = getName(items);
+          var venues = cropItems(items);
           db.getItems('courses', function (err, items) {
-            var courses = getName(items);
+            var courses = cropItems(items);
             callback.apply(this,[members, venues, courses]);
           });
         });
