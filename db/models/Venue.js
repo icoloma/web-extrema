@@ -31,7 +31,7 @@ VenueSchema.statics.toHTML = function(sch) {
    var formatted = {
       name: sch.name,
       address: sch.address,
-      img: sch.img,
+      picture: sch.img,
       _id: sch._id,
       editions: sch.editions
    };

@@ -39,7 +39,7 @@ CourseSchema.statics.toHTML = function(sch) {
       email: sch.email,
       description_en: sch.description.en,
       description_es: sch.description.es,
-      img: sch.img,
+      picture: sch.img,
       _id: sch._id,
       editions: sch.editions,
    };

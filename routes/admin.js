@@ -78,9 +78,9 @@ module.exports = function (app) {
       id = req.params.item;
 
     db.getItem(field, id, function(err, item) {
-      if(item.img && item.img.data) {
-        res.contentType(item.img.contentType);
-        res.send(item.img.data);
+      if(item.picture && item.picture.data) {
+        res.contentType(item.picture.contentType);
+        res.send(item.picture.data);
       } else {
         res.redirect('/images/person.png');
       };

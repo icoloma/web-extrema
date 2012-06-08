@@ -37,17 +37,18 @@ MemberSchema.statics.fromHTML = function(req) {
          es: req.description_es
       }
    };
-    if(req.picture.size) {
-      data = fs.readFileSync(req.picture.path)
+  if(req.picture.size) {
+    data = fs.readFileSync(req.picture.path)
       formatted.img = {
         contentType: req.picture.mime,
         data: data
       };
     };
-   return formatted;
+  return formatted;
 };
 
 MemberSchema.statics.toHTML = function(sch) {
+  console.log(sch)
    var formatted = {
       name: sch.name,
       email: sch.email,
@@ -57,7 +58,7 @@ MemberSchema.statics.toHTML = function(sch) {
       linkedin: sch.social.linkedin,
       description_en: sch.description.en,
       description_es: sch.description.es,
-      img: sch.img,    
+      picture: sch.img,    
       _id: sch._id,
       editions: sch.editions
    };

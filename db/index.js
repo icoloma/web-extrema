@@ -51,13 +51,18 @@ _.extend(module.exports, {
 
   getItems: function (field, callback) {
     var model = getModel(field);
-    model.find({}, callback);
+    model.find({}, function(err, items) {
+      var formatted = items.map(function(item) {
+        return model.toHTML(item);
+      });
+      callback.apply(this, [err, formatted]);
+    });
   },
 
   getItem: function(field, id, callback) {
     var model = getModel(field);
     model.findById(id, function(err, item) {
-      formatted = model.toHTML(item);
+      var formatted = model.toHTML(item);
       formatEditions(formatted.editions, function(eds) {
         formatted.editions = eds;
         callback.apply(this,[err, formatted]);
