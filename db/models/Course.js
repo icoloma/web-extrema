@@ -1,6 +1,8 @@
 var mongoose = require('mongoose'),
    fs = require('fs');
 
+var EditionSchema = require('./Edition').Edition.schema;
+
 var CourseSchema = new mongoose.Schema({
     name: String
   , description: {
@@ -11,11 +13,11 @@ var CourseSchema = new mongoose.Schema({
       data: Buffer,
       contentType: String
    }
-   , editions: [ mongoose.Schema.ObjectId ]
+   , editions: [ EditionSchema ]
 });
 
 //Diccionarios entre atributos de HTML y campos del Schema
-CourseSchema.statics.fromHTML = function(req) {
+CourseSchema.statics.fromHTML = function(req, callback) {
    var formatted = {
       name: req.name,
       description: {
@@ -30,10 +32,10 @@ CourseSchema.statics.fromHTML = function(req) {
         data: data
       };
     };
-   return formatted;
+   callback(null, formatted);
 };
 
-CourseSchema.statics.toHTML = function(sch) {
+CourseSchema.statics.toHTML = function(sch, callback) {
    var formatted = {
       name: sch.name,
       email: sch.email,
@@ -43,7 +45,7 @@ CourseSchema.statics.toHTML = function(sch) {
       _id: sch._id,
       editions: sch.editions,
    };
-   return formatted;
+   callback(null, formatted);
 };
 
 exports.Course = mongoose.model('Courses', CourseSchema);

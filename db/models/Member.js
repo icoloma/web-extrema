@@ -1,5 +1,8 @@
 var mongoose = require('mongoose'),
-   fs = require('fs');
+   fs = require('fs'),
+   async = require('async');
+
+var EditionSchema = require('./Edition').Edition.schema;
 
 var MemberSchema = new mongoose.Schema({
      name: String
@@ -18,11 +21,11 @@ var MemberSchema = new mongoose.Schema({
       data: Buffer,
       contentType: String
    }
-   , editions: [ mongoose.Schema.ObjectId ]
+   // , editions: [ EditionSchema ]
 });
 
 //Diccionarios entre atributos de HTML y campos del Schema
-MemberSchema.statics.fromHTML = function(req) {
+MemberSchema.statics.fromHTML = function(req, callback) {
    var formatted = {
       name: req.name,
       email: req.email,
@@ -44,10 +47,10 @@ MemberSchema.statics.fromHTML = function(req) {
         data: data
       };
     };
-  return formatted;
+   callback(null, formatted);
 };
 
-MemberSchema.statics.toHTML = function(sch) {
+MemberSchema.statics.toHTML = function(sch, callback) {
    var formatted = {
       name: sch.name,
       email: sch.email,
@@ -61,7 +64,7 @@ MemberSchema.statics.toHTML = function(sch) {
       _id: sch._id,
       editions: sch.editions
    };
-   return formatted;
+   callback(null, formatted);
 };
 
 exports.Member = mongoose.model('Members', MemberSchema);

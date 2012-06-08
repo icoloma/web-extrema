@@ -1,22 +1,17 @@
 - var formatCombos = function (label, name, list, or) {
-- var combo = '<div class="control-group">';
-// - if(or) {
-// -   combo += ' success">'
-// - } else {
-// -   combo += '">';
-// -}
-- combo += '<label>' + label + '</label>';
-- combo += '<select name="' + name + '"';
+- var combo = '<div class="control-group';
 - if(or) {
--   combo += ' disabled>'
--} else {
--   combo += '>'
+-   combo += ' success">'
+- } else {
+-   combo += '">';
 -}
+- combo += '<label>' + label + '</label>';
+- combo += '<select name="' + name + '">';
 - for(i in list) {
 -   if(list[i].id === or) {
--     combo += '<option selected="selected">' + list[i].name + '</option>';
+-     combo += '<option selected="selected" label="' + list[i].name +'">' + list[i].id + '</option>';
 -   } else {
--     combo += '<option>' + list[i].name + '</option>';
+-     combo += '<option label="' + list[i].name +'">' + list[i].id + '</option>';
 -   }
 -}
 - 
@@ -33,6 +28,7 @@ form(method="post",
   .span6
     !{formatCombos('Course', 'course', courses, origin.courses)}
     !{formatCombos('Instructor', 'instructor', members, origin.team)}
-div
-  button(type="submit").btn.btn-info Submit
-  a(href=origin.address).btn.btn-warning Cancel
+  input(type="hidden", name="origin", value=origin.address)
+  div
+    button(type="submit").btn.btn-info Submit
+    a(href=origin.address).btn.btn-warning Cancel

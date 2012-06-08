@@ -1,6 +1,8 @@
 var mongoose = require('mongoose'),
    fs = require('fs');
 
+var EditionSchema = require('./Edition').Edition.schema;
+
 var VenueSchema = new mongoose.Schema({
     name: String
   , address: String
@@ -8,11 +10,11 @@ var VenueSchema = new mongoose.Schema({
     data: Buffer,
     contentType: String
   }
-  ,  editions: [mongoose.Schema.ObjectId]
+  ,  editions: [ EditionSchema ]
 });
 
 //Diccionarios entre atributos de HTML y campos del Schema
-VenueSchema.statics.fromHTML = function(req) {
+VenueSchema.statics.fromHTML = function(req, callback) {
    var formatted = {
       name: req.name,
       address: req.address
@@ -24,10 +26,10 @@ VenueSchema.statics.fromHTML = function(req) {
         data: data
       };
     };
-   return formatted;
+   callback(null, formatted);
 };
 
-VenueSchema.statics.toHTML = function(sch) {
+VenueSchema.statics.toHTML = function(sch, callback) {
    var formatted = {
       name: sch.name,
       address: sch.address,
@@ -35,7 +37,7 @@ VenueSchema.statics.toHTML = function(sch) {
       _id: sch._id,
       editions: sch.editions
    };
-   return formatted;
+   callback(null, formatted);
 };
 
 

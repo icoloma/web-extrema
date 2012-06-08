@@ -45,26 +45,34 @@ module.exports = function (app) {
       body = req.body;
     body.picture = req.files.picture;
 
-    db.updateItem(field, id, body, function(err, num) {
+    db.updateItem(field, id, body, function (err, num) {
       res.redirect('/' + field);
     });
   });
 
-  app.post('/:field/add', function(req, res) {
+  app.post('/editions/add', function (req, res) {
+    var field = 'editions',
+      body = req.body;
+    db.addItem(field, body, function (err) {
+      res.redirect(body.origin);
+    });
+  });
+
+  app.post('/:field/add', function (req, res) {
     var field = req.params.field,
       body = req.body;
     body.picture = req.files.picture;
 
-    db.addItem(field, body, function(err) {
+    db.addItem(field, body, function (err) {
       res.redirect('/' + field);
     });
   });
 
-  app.post('/:field/:item/delete', function(req, res) {
+  app.post('/:field/:item/delete', function (req, res) {
     var field = req.params.field,
       id = req.params.item;
 
-    db.deleteItem(field, id, function(err) {
+    db.deleteItem(field, id, function (err) {
       res.redirect('/' + field);
     });
   });
@@ -73,7 +81,7 @@ module.exports = function (app) {
     res.render('admin', { title: 'Admin panel' });
   });
 
-  app.get('/:field/:item/thumb', function(req, res) {
+  app.get('/:field/:item/thumb', function (req, res) {
     var field = req.params.field,
       id = req.params.item;
 
@@ -101,7 +109,7 @@ module.exports = function (app) {
 
     var cropItems = function (items) {
       return items.map(function (item) {
-        return {name: item.name, id: item._id};
+        return {name: item.name, id: item._id.toString()};
       });
     };
     //Horrible llamada triple
