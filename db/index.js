@@ -1,7 +1,4 @@
-var _ = require('underscore'), 
-  key = require('../routes/key'),
-  async = require('async')
-  Model = require('mongoose').Model;
+var key = require('../routes/key');
 
 
 module.exports = {};
@@ -20,66 +17,37 @@ var getModel = function(field) {
     return module.exports[key.fields[field]];
 };
 
-var getEditions = function(field, model) {
-  Edition.find({})
-};
-
 var formatEditions = function (eds, callback) {
   if(!eds || eds.length === 0) {
     callback(null, [])
   } else {
-    async.map(eds, function (ed, c_b) {
-      async.parallel([
-        function (cb) {
-          Member.findById(ed.instructor._id, cb(err, item))
-      },
-        function (cb) {
-          Course.findById(ed.course._id, cb(err, item))
-      },
-        function (cb) {
-          Venue.findById(ed.venue._id, cb(err, item))
-      },
-      ], function (err, results) {
-        formatted = {
-          id: ed._id.toString(),
-          instructor: {
-            name: results[0].name,
-            id: results[0]._id.toString()
-          },
-          course: {
-            name: results[1].name,
-            id: results[1]._id.toString()
-          },
-          venue: {
-            name: results[2].name,
-            id: results[2]._id.toString()
-          },
-        };
-        c_b(err, formatted);
+    module.exports.Edition
+      .find()
+      .or(eds)
+      .populate('instructor', ['name', '_id'])
+      .populate('course', ['name', '_id'])
+      .populate('venue', ['name', '_id'])
+      .run(function (err, formatted) {
+        reformatted = formatted.map(function (ed) {
+          return {
+            date: ed.date || 'None',
+            course: {
+              name: (ed.course && ed.course.name) || 'No one',
+              // id: ed.course._id.toString()},
+              },
+            venue: {
+              name: (ed.venue && ed.venue.name) || 'No one',
+              // id: ed.venue._id.toString()},
+            },
+            instructor: {
+              name: (ed.instructor && ed.instructor.name) || 'Nobody',
+              // id: ed.instructor._id.toString()},
+            }
+          };
+        });
+        callback(err, reformatted);
       });
-
-    }, function (err, results) {
-      callback(err, results);
-    });
   };
-
-  // eds.map(function (id_ed) {
-  //   return {_id: id_ed};
-  // });
-  
-  // module.exports.Edition.find({})
-  //   .or(eds)
-  //   .exec(function (err, items) {
-  //     if(err === '$or requires nonempty array') {
-  //       items = [];
-  //     } else {
-  //       items.map(function (item)  {
-  //         return item.schema.toHTML(item)
-  //       });
-  //     };
-  //     eds = items;
-  //     callback.apply(this, [eds]);
-  //   });
 };
 
 //Métodos para gestionar la base de datos
@@ -94,84 +62,82 @@ _.extend(module.exports, {
 
   getItems: function (field, callback) {
     var model = getModel(field);
-    async.waterfall([
-      function (cb) {
-        model.find({}, function (err, items) {
-          cb(err, items);
-        });
-      },
-      function (items, cb) {
-        async.map(items, function (item, c_b) {
-          model.toHTML(item, c_b);
-        },
-        function (err, results) {
-          cb(err, results);
-        });
-      },
-      ], function (err, formatted) {
-          callback(err, formatted);
-      });
-
-    // model.find({}, function(err, items) {
-    //   var formatted = items.map(function(item) {
-    //     return model.toHTML(item);
-    //   });
-    //   callback.apply(this, [err, formatted]);
-    // });
+    model.find({}, function (err, items) {
+      async.map(items, function (item, callback) {
+        item.toHTML(callback)
+      }, callback);
+    });
   },
 
-  getItem: function(field, id, callback) {
+  getItem: function (field, id, callback) {
     var model = getModel(field);
-    async.waterfall([
-      function (cb) {
-        model.findById(id, cb);
-      },
-      function (item, cb) {
-        model.toHTML(item, cb);
-      },
-      function (formatted, cb) {
-        formatEditions(formatted.editions, function (err, reformatted) {
-          formatted.editions = reformatted;
-          cb(err, formatted);
-        });
-      },
-      ], function (err, reformatted) {
-          callback(err, reformatted);
+    model.findById(id, function (err, item) {
+      item.toHTML(function (err, formatted) {
+        if(model.modelName === 'Editions') {
+          callback(err, formatted);
+        } else {
+          formatEditions(formatted.editions, function (err, reformatted) {
+            formatted.editions = reformatted;
+            callback(err, formatted);
+          });
+        };
       });
-
-    // model.findById(id, function(err, item) {
-    //   var formatted = model.toHTML(item);
-    //   formatEditions(formatted.editions, function(eds) {
-    //     formatted.editions = eds;
-    //     callback.apply(this,[err, formatted]);
-    //   });
-    // });
+    });
   },
 
   updateItem: function(field, id, body, callback) {
     var model = getModel(field);
-    model.fromHTML(body, function (err, updated) {
-      model.update({ _id: id }, updated, callback);
-    });
+    model.updateFromHTML(id, body, callback);
   },
 
   addItem: function(field, body, callback) {
     var model = getModel(field);
-    async.series([
-      function (callback) {
-        model.fromHTML(body, callback);
-      }], function (err, results) {
-        instance = new model();
-        _.extend(instance, results[0]);
-        instance.save(callback);
-      }
-    );
+    model.saveFromHTML(body, callback);
   },
 
   deleteItem: function(field, id, callback) {
-    var model = getModel(field);
-    model.remove( {_id: id }, callback);
-  },
+    var model = getModel(field),
+      Edition = module.exports.Edition;
+    if(model.modelName === 'Editions') {
+      Edition.remove( {_id: id}, callback);
+    } else {
+      model.remove({_id: id}, function (err) {
+        for(pathName in Edition.schema.paths) {
+          var path = Edition.schema.paths[pathName];
+          if(path.options && path.options.ref && path.options.ref === model.modelName)
+            var modelPath = pathName;
+        }
+        search = {};
+        search[modelPath] = id;
+        Edition.find(search, function (err, items) {
+          async.forEach(items, function (item, cb) {
+            var _new = {};
+            for(pathName in Edition.schema.paths) {
+              if(pathName !== "_id" && pathName !== modelPath && item[pathName]) {
+                var prop = {};
+                prop[pathName] = item[pathName];
+                _.extend(_new, prop)
+              };
+            };
+            Edition.remove( {_id: item._id}, function (err) {
+              _New = new Edition(_new);
+              _New.save(cb);
+            });
+          }, callback);
+        });
 
+        //No parece que funcione mediante $unset
+        //
+        // var search = {};
+        // search[modelPath] = id;
+        // var updating = 1,
+        //   updated = {};
+        // updated[modelPath] = updating;
+        // Edition
+        //   .collection
+        //   .update(search, {$unset: updated }, callback);
+      });
+    }
+  },
 });
 

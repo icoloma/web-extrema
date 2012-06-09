@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
    fs = require('fs');
 
-var EditionSchema = require('./Edition').Edition.schema;
+var Edition = require('./Edition').Edition;
 
 var VenueSchema = new mongoose.Schema({
     name: String
@@ -10,35 +10,52 @@ var VenueSchema = new mongoose.Schema({
     data: Buffer,
     contentType: String
   }
-  ,  editions: [ EditionSchema ]
 });
 
 //Diccionarios entre atributos de HTML y campos del Schema
-VenueSchema.statics.fromHTML = function(req, callback) {
-   var formatted = {
-      name: req.name,
-      address: req.address
-   };
-    if(req.picture.size) {
-      data = fs.readFileSync(req.picture.path)
-      formatted.img = {
-        contentType: req.picture.mime,
-        data: data
-      };
+var parseHTML = function (body) {
+  var formatted = {
+    name: body.name,
+    address: body.address
+  };
+  if(body.picture.size) {
+    data = fs.readFileSync(body.picture.path)
+    formatted.img = {
+      contentType: body.picture.mime,
+      data: data
     };
-   callback(null, formatted);
+  };
+  return formatted;
+};
+   
+VenueSchema.statics.saveFromHTML = function(body, callback) {
+  var formatted = parseHTML(body),
+    _new = new Venue(formatted);
+  _new.save(callback);
 };
 
-VenueSchema.statics.toHTML = function(sch, callback) {
-   var formatted = {
-      name: sch.name,
-      address: sch.address,
-      picture: sch.img,
-      _id: sch._id,
-      editions: sch.editions
-   };
-   callback(null, formatted);
+VenueSchema.statics.updateFromHTML = function(id, body, callback) {
+  var formatted = parseHTML(body);
+  Venue.update( {_id: id}, formatted, callback);
 };
 
+VenueSchema.methods.getEditions = function (callback) {
+  Edition.find({venue: this._id}, callback);
+};
 
-exports.Venue = mongoose.model('Venues', VenueSchema);
+VenueSchema.methods.toHTML = function(callback) {
+  var formatted = {
+    name: this.name,
+    address: this.address,
+    picture: this.img,
+    _id: this._id,
+  };
+  this.getEditions(function (err, eds) {
+    formatted.editions = eds;
+    callback(null, formatted);
+  });
+};
+
+var Venue = mongoose.model('Venues', VenueSchema);
+
+exports.Venue = Venue;

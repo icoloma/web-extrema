@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
    fs = require('fs');
 
-var EditionSchema = require('./Edition').Edition.schema;
+var Edition = require('./Edition').Edition;
 
 var CourseSchema = new mongoose.Schema({
     name: String
@@ -13,39 +13,57 @@ var CourseSchema = new mongoose.Schema({
       data: Buffer,
       contentType: String
    }
-   , editions: [ EditionSchema ]
 });
 
 //Diccionarios entre atributos de HTML y campos del Schema
-CourseSchema.statics.fromHTML = function(req, callback) {
-   var formatted = {
-      name: req.name,
-      description: {
-         en: req.description_en,
-         es: req.description_es
-      }
-   };
-    if(req.picture.size) {
-      data = fs.readFileSync(req.picture.path)
-      formatted.img = {
-        contentType: req.picture.mime,
-        data: data
-      };
+var parseHTML = function (body) {
+  var formatted = {
+    name: body.name,
+    description: {
+      en: body.description_en,
+      es: body.description_es
+    }
+  };
+  if(body.picture.size) {
+    data = fs.readFileSync(body.picture.path)
+    formatted.img = {
+      contentType: body.picture.mime,
+      data: data
     };
-   callback(null, formatted);
+  };
+  return formatted;
 };
 
-CourseSchema.statics.toHTML = function(sch, callback) {
+CourseSchema.statics.saveFromHTML = function(body, callback) {
+  var formatted = parseHTML(body),
+    _new = new Course(formatted);
+  _new.save(callback);
+};
+
+CourseSchema.statics.updateFromHTML = function(id, body, callback) {
+  var formatted = parseHTML(body);
+  Course.update( {_id: id}, formatted, callback);
+};
+
+CourseSchema.methods.getEditions = function (callback) {
+  Edition.find({course: this._id}, callback);
+};
+
+CourseSchema.methods.toHTML = function(callback) {
    var formatted = {
-      name: sch.name,
-      email: sch.email,
-      description_en: sch.description.en,
-      description_es: sch.description.es,
-      picture: sch.img,
-      _id: sch._id,
-      editions: sch.editions,
+      name: this.name,
+      email: this.email,
+      description_en: this.description.en,
+      description_es: this.description.es,
+      picture: this.img,
+      _id: this._id,
    };
-   callback(null, formatted);
+   this.getEditions(function (err, eds) {
+    formatted.editions = eds;
+    callback(null, formatted);
+   });
 };
 
-exports.Course = mongoose.model('Courses', CourseSchema);
+var Course = mongoose.model('Courses', CourseSchema);
+
+exports.Course = Course;

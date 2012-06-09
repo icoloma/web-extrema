@@ -23,24 +23,25 @@ form(method="post",
   action="/venues/"+venue._id+"/delete").row-fluid
   button(type="submit").btn.btn-danger.btn-large.pull-right Delete
 
+-var editions = venue.editions;
 h2 Editions
 .row-fluid
   .span12
     table.table.table-striped
       thead
         tr
-          th Course
           th Date
+          th Course
           th Instructor
       tbody
-      -for (var i in venue.editions)
+      -for (var i in editions)
         tr
           td 
-            !{editions[i].course}
-          td
             !{editions[i].date}
           td
-            !{editions[i].instructor}
+            !{editions[i].course.name}
+          td
+            !{editions[i].instructor.name}
   form(method="post", action="/editions/new")
     input(name="venue", type="hidden", value=venue._id)
     button(type="submit").btn New

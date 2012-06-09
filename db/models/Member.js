@@ -2,7 +2,7 @@ var mongoose = require('mongoose'),
    fs = require('fs'),
    async = require('async');
 
-var EditionSchema = require('./Edition').Edition.schema;
+var Edition = require('./Edition').Edition;
 
 var MemberSchema = new mongoose.Schema({
      name: String
@@ -21,50 +21,69 @@ var MemberSchema = new mongoose.Schema({
       data: Buffer,
       contentType: String
    }
-   // , editions: [ EditionSchema ]
 });
 
 //Diccionarios entre atributos de HTML y campos del Schema
-MemberSchema.statics.fromHTML = function(req, callback) {
-   var formatted = {
-      name: req.name,
-      email: req.email,
-      type: req.type,
-      social: {
-         twitter: req.twitter,
-         linkedin: req.linkedin,
-         blog: req.blog
-      },
-      description: {
-         en: req.description_en,
-         es: req.description_es
-      }
-   };
-  if(req.picture.size) {
-    data = fs.readFileSync(req.picture.path)
-      formatted.img = {
-        contentType: req.picture.mime,
-        data: data
-      };
+
+var parseHTML = function (body) {
+  var formatted = {
+    name: body.name,
+    email: body.email,
+    type: body.type,
+    social: {
+      twitter: body.twitter,
+      linkedin: body.linkedin,
+      blog: body.blog
+    },
+    description: {
+      en: body.description_en,
+      es: body.description_es
+    }
+  };
+  if(body.picture.size) {
+   data = fs.readFileSync(body.picture.path)
+    formatted.img = {
+      contentType: body.picture.mime,
+      data: data
     };
-   callback(null, formatted);
-};
-
-MemberSchema.statics.toHTML = function(sch, callback) {
-   var formatted = {
-      name: sch.name,
-      email: sch.email,
-      type: sch.type,
-      twitter: sch.social.twitter,
-      blog: sch.social.blog,
-      linkedin: sch.social.linkedin,
-      description_en: sch.description.en,
-      description_es: sch.description.es,
-      picture: sch.img,    
-      _id: sch._id,
-      editions: sch.editions
    };
-   callback(null, formatted);
+   return formatted;
 };
 
-exports.Member = mongoose.model('Members', MemberSchema);
+MemberSchema.statics.saveFromHTML = function(body, callback) {
+  var formatted = parseHTML(body),
+    _new = new Member(formatted);
+  _new.save(callback);
+};
+
+MemberSchema.statics.updateFromHTML = function(id, body, callback) {
+  var formatted = parseHTML(body);
+  Member.update( {_id: id}, formatted, callback);
+};
+
+MemberSchema.methods.toHTML = function (callback) {
+   var formatted = {
+      name: this.name,
+      email: this.email,
+      type: this.type,
+      twitter: this.social.twitter,
+      blog: this.social.blog,
+      linkedin: this.social.linkedin,
+      description_en: this.description.en,
+      description_es: this.description.es,
+      picture: this.img,    
+      _id: this._id,
+   };
+   return this.getEditions(function (err, eds) {
+    formatted.editions = eds;
+    callback(null, formatted);
+   });
+};
+
+MemberSchema.methods.getEditions = function (callback) {
+  Edition.find({instructor: this._id}, callback);
+};
+
+var Member = mongoose.model('Members', MemberSchema);
+
+exports.Member = Member;

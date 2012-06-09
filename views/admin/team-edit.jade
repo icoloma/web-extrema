@@ -53,6 +53,7 @@ form(method="post",
   action="/team/"+member._id+"/delete").row-fluid
   button(type="submit").btn.btn-danger.btn-large.pull-right Delete
 
+-var editions = member.editions;
 h2 Editions
 .row-fluid
   .span12
@@ -63,14 +64,14 @@ h2 Editions
           th Date
           th Venue
       tbody
-      -for (var i in member.editions)
+      -for (var i in editions)
         tr
           td 
-            !{editions[i].course}
+            !{editions[i].course.name}
           td
             !{editions[i].date}
           td
-            !{editions[i].venue}
+            !{editions[i].venue.name}
   form(method="post", action="/editions/new")
     input(name="instructor", type="hidden", value=member._id)
     button(type="submit").btn New

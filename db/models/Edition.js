@@ -1,6 +1,4 @@
-var mongoose = require('mongoose'),
-   fs = require('fs'),
-   async = require('async');
+var ObjectId = mongoose.Schema.ObjectId;
 
 // var Course = require('./Course').Course,
 //   Venue = require('./Venue').Venue,
@@ -8,32 +6,31 @@ var mongoose = require('mongoose'),
 
 var EditionSchema = new mongoose.Schema({
   date: Date
-  ,  course: mongoose.Schema.ObjectId
-  ,  venue: mongoose.Schema.ObjectId
-  ,  instructor: mongoose.Schema.ObjectId
+  ,  course: {type: ObjectId, ref: 'Courses'}
+  ,  venue: {type: ObjectId, ref: 'Venues'}
+  ,  instructor: {type: ObjectId, ref: 'Members'}
 });
 
 //Diccionarios entre atributos de HTML y campos del Schema
-EditionSchema.statics.fromHTML = function (req, callback) {
-  async.parallel([
-    function (callback) {
-      Member.findById(req.instructor, callback);
-    },
-    function (callback) {
-      Course.findById(req.course, callback)
-    },
-    function (callback) {
-      Venue.findById(req.venue, callback)
-    },
-  ], function (err, results) {
-    var formatted = {
-      date: req.date,
-      instructor: results[0]._id,
-      course: results[1]._id,
-      venue: results[2]._id,
-    };
-    callback(err, formatted);
-  });
+var parseHTML = function (body) {
+  var formatted = {
+    date: body.date,
+    course: body.course,
+    venue: body.venue,
+    instructor: body.instructor
+  };
+  return formatted;
 };
 
-exports.Edition = mongoose.model('Editions', EditionSchema);
+EditionSchema.statics.saveFromHTML = function (body, callback) {
+  var formatted = parseHTML(body),
+    _new = new Edition(formatted);
+  _new.save(callback);
+};
+
+EditionSchema.statics.updateFromHTML = function(id, body, callback) {
+  var formatted = parseHTML(body);
+  Edition.update( {_id: id}, formatted, callback);
+};
+
+var Edition = exports.Edition = mongoose.model('Editions', EditionSchema);

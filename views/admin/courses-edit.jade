@@ -26,6 +26,7 @@ form(method="post",
   action="/courses/"+course._id+"/delete").row-fluid
   button(type="submit").btn.btn-danger.btn-large.pull-right Delete
 
+-var editions = course.editions;
 h2 Editions
 .row-fluid
   .span12
@@ -36,14 +37,14 @@ h2 Editions
           th Venue
           th Instructor
       tbody
-      -for (var i in course.editions)
+      -for (var i in editions)
         tr
           td 
             !{editions[i].date}
           td
-            !{editions[i].venue}
+            !{editions[i].venue.name}
           td
-            !{editions[i].instructor}
+            !{editions[i].instructor.name}
   form(method="post", action="/editions/new")
     input(name="course", type="hidden", value=course._id)
     button(type="submit").btn New
