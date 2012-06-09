@@ -1,9 +1,7 @@
 /*
 Rutas para la zona de administración
 */
-var _ = require('underscore'),
-  mongoose = require('mongoose'),
-  db = require('../db');
+var db = require('../db');
 
 mongoose.connect('mongodb://localhost/extrema');
 
@@ -43,7 +41,7 @@ module.exports = function (app) {
     var field = req.params.field,
       id = req.params.item,
       body = req.body;
-    body.picture = req.files.picture;
+    body.thumb = req.files.thumb;
 
     db.updateItem(field, id, body, function (err, num) {
       res.redirect('/' + field);
@@ -61,7 +59,7 @@ module.exports = function (app) {
   app.post('/:field/add', function (req, res) {
     var field = req.params.field,
       body = req.body;
-    body.picture = req.files.picture;
+    body.thumb = req.files.thumb;
 
     db.addItem(field, body, function (err) {
       res.redirect('/' + field);
@@ -85,16 +83,26 @@ module.exports = function (app) {
     var field = req.params.field,
       id = req.params.item;
 
-    db.getItem(field, id, function (err, item) {
-      if(item.picture && item.picture.data) {
-        res.contentType(item.picture.contentType);
-        res.send(item.picture.data);
+    db.getThumbnail(field, id, function (err, thumb) {
+      if(thumb) {
+        res.contentType(thumb.contentType);
+        res.send(thumb.data);
       } else {
         res.redirect('/images/person.png');
       };
-    });
+    })
+    // db.getItem(field, id, function (err, item) {
+    //   if(item.picture && item.picture.data) {
+    //     res.contentType(item.picture.contentType);
+    //     res.send(item.picture.data);
+    //   } else {
+    //     res.redirect('/images/person.png');
+    //   };
+    // });
   });
 
+  //Usa POST para pasar el origin
+  //Seguro que puede hacerse más sencillo
   app.post('/editions/new', function (req, res) {
     var origin = {
       courses: req.body.course,
@@ -107,32 +115,13 @@ module.exports = function (app) {
         origin.address = '/' + p + '/' + origin[p] + '/edit'; 
     };
 
-    var cropItems = function (items) {
-      return items.map(function (item) {
-        return {name: item.name, id: item._id.toString()};
-      });
-    };
-    //Horrible llamada triple
-    var getNames = function (callback) {
-      db.getItems('team', function (err, items) {
-        var members = cropItems(items);
-        db.getItems('venues', function (err, items) {
-          var venues = cropItems(items);
-          db.getItems('courses', function (err, items) {
-            var courses = cropItems(items);
-            callback.apply(this,[members, venues, courses]);
-          });
-        });
-      });
-    };
-
-    getNames(function (members, venues, courses) {
+    db.getAllItems(function (items) {
       res.render('admin/editions-new', {
         title: 'Modify edition',
         origin: origin,
-        venues: venues,
-        courses: courses,
-        members: members,
+        venues: items.venues,
+        courses: items.courses,
+        members: items.members,
       })
     });
 

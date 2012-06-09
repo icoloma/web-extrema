@@ -1,7 +1,7 @@
 var key = require('../routes/key');
 
-
-module.exports = {};
+var me = {};
+module.exports =  me;
 
 //Lista de modelos a para exportar
 ['Course',
@@ -9,39 +9,38 @@ module.exports = {};
   'Venue',
   'Edition',
   ].forEach(function(name) {
-    _.extend(module.exports, require('./models/' + name + '.js'));
+    _.extend(me, require('./models/' + name + '.js'));
   });
 
 //Obtiene el modelo correspondiente a partir de la url
 var getModel = function(field) {
-    return module.exports[key.fields[field]];
+    return me[key.fields[field]];
 };
 
+//Formatea las ediciones mediante 'populate'
 var formatEditions = function (eds, callback) {
   if(!eds || eds.length === 0) {
     callback(null, [])
   } else {
-    module.exports.Edition
+    me.Edition
       .find()
-      .or(eds)
-      .populate('instructor', ['name', '_id'])
-      .populate('course', ['name', '_id'])
-      .populate('venue', ['name', '_id'])
+      .or(eds) //Busca mediante el array de IDs
+      .populate('instructor', ['name'])
+      .populate('course', ['name'])
+      .populate('venue', ['name'])
       .run(function (err, formatted) {
         reformatted = formatted.map(function (ed) {
           return {
+            id: ed._id,
             date: ed.date || 'None',
             course: {
               name: (ed.course && ed.course.name) || 'No one',
-              // id: ed.course._id.toString()},
               },
             venue: {
               name: (ed.venue && ed.venue.name) || 'No one',
-              // id: ed.venue._id.toString()},
             },
             instructor: {
               name: (ed.instructor && ed.instructor.name) || 'Nobody',
-              // id: ed.instructor._id.toString()},
             }
           };
         });
@@ -51,7 +50,7 @@ var formatEditions = function (eds, callback) {
 };
 
 //Métodos para gestionar la base de datos
-_.extend(module.exports, {
+_.extend(me, {
 
   isModel: function(field) {
     if (key.fields[field])
@@ -76,6 +75,10 @@ _.extend(module.exports, {
         if(model.modelName === 'Editions') {
           callback(err, formatted);
         } else {
+          
+          //Si no es una Edition, 
+          //formatear las Editions correspondientes antes
+          
           formatEditions(formatted.editions, function (err, reformatted) {
             formatted.editions = reformatted;
             callback(err, formatted);
@@ -97,11 +100,17 @@ _.extend(module.exports, {
 
   deleteItem: function(field, id, callback) {
     var model = getModel(field),
-      Edition = module.exports.Edition;
+      Edition = me.Edition;
     if(model.modelName === 'Editions') {
       Edition.remove( {_id: id}, callback);
     } else {
+      
+      //Si no es una Edition, se borra el documento
+      //en las editions que lo contengan
+      
       model.remove({_id: id}, function (err) {
+
+        //Selecciona el campo adecuado para filtrar las Editions
         for(pathName in Edition.schema.paths) {
           var path = Edition.schema.paths[pathName];
           if(path.options && path.options.ref && path.options.ref === model.modelName)
@@ -109,8 +118,13 @@ _.extend(module.exports, {
         }
         search = {};
         search[modelPath] = id;
+
         Edition.find(search, function (err, items) {
           async.forEach(items, function (item, cb) {
+
+            //WORKAROUND: de momento, se crea una Edition idéntica salvo por el
+            //campo borrado, y se borra la anterior
+
             var _new = {};
             for(pathName in Edition.schema.paths) {
               if(pathName !== "_id" && pathName !== modelPath && item[pathName]) {
@@ -137,7 +151,39 @@ _.extend(module.exports, {
         //   .collection
         //   .update(search, {$unset: updated }, callback);
       });
-    }
+    };
   },
-});
 
+  //Obtiene todos los items para seleccionar a la 
+  //hora de gestionar una Edition
+  getAllItems: function(callback) {
+    async.parallel([function (cb) {
+      me.Member.find({}, cb);
+    }, function (cb) {
+        me.Course.find({}, cb);
+    }, function (cb) {
+        me.Venue.find({}, cb);
+    }], function (err, results) {
+      callback({
+        members: results[0],
+        courses: results[1],
+        venues: results[2]
+      })
+    });
+  },
+
+  getThumbnail: function(field, id, callback) {
+    var model = getModel(field);
+    model.findById(id, function (err, item) {
+      var thumb = false;
+      if(item.thumb && item.thumb.data) {
+        thumb = {
+          data: item.thumb.data,
+          contentType: item.thumb.contentType
+        };
+      };
+      callback(err, thumb);
+    })
+  }
+
+});

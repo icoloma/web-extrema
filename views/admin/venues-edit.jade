@@ -15,7 +15,7 @@ form(method="post",
       .control-group
         label Picture
         img(src="thumb")
-        input(type="file", name="picture")
+        input(type="file", name="thumb")
   .row-fluid
     button(type="submit").btn.btn-info Submit
     a(href="/venues").btn.btn-warning Cancel
@@ -37,7 +37,8 @@ h2 Editions
       -for (var i in editions)
         tr
           td 
-            !{editions[i].date}
+            a(href='/editions/' + editions[i].id + '/edit')
+              !{editions[i].date}
           td
             !{editions[i].course.name}
           td

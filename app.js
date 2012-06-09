@@ -2,15 +2,17 @@
 /**
  * Module dependencies.
  */
-
 var express = require('express');
  
+//Paquetes globales
 fs = require('fs'),
   mongoose = require('mongoose'),
   async = require('async'),
   _ = require('underscore');
 
+
 var app = module.exports = express.createServer();
+
 
 // Configuration
 app.configure(function(){
@@ -31,26 +33,10 @@ app.configure('production', function(){
   app.use(express.errorHandler());
 });
 
-// Routes
+
+// Rutas
 require('./routes/admin.js')(app);
 
-// app.get('/admin', routes.admin);
-// app.get('/team', routes.adminTeam.index);
-// app.get('/team/new', routes.adminTeam.newMember);
-// app.get('/team/:member/edit', routes.adminTeam.editMember);
-// // app.get('/team/:member', routes['admin-team-member']);
-// app.get('/courses', routes['admin-courses']);
-// app.get('/venues', routes['admin-venues']);
-
-// app.post('/team/new/add', routes.adminTeam.addMember);
-// app.post('/team/:member/update', routes.adminTeam.updateMember);
-// app.post('/team/:member/delete', routes.adminTeam.deleteMember);
-
-// //Imágenes
-// // app.get('/team/:member/thumb', function(req,res) {
-// //   res.redirect('/images/person.png')
-// // });
-// app.get('/team/:member/thumb', routes.adminTeam.picture);
 
 app.listen(4000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

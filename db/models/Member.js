@@ -1,7 +1,3 @@
-var mongoose = require('mongoose'),
-   fs = require('fs'),
-   async = require('async');
-
 var Edition = require('./Edition').Edition;
 
 var MemberSchema = new mongoose.Schema({
@@ -17,7 +13,7 @@ var MemberSchema = new mongoose.Schema({
       es: String,
       en: String
      }
-   , img : {
+   , thumb : {
       data: Buffer,
       contentType: String
    }
@@ -40,10 +36,10 @@ var parseHTML = function (body) {
       es: body.description_es
     }
   };
-  if(body.picture.size) {
-   data = fs.readFileSync(body.picture.path)
-    formatted.img = {
-      contentType: body.picture.mime,
+  if(body.thumb.size) {
+   data = fs.readFileSync(body.thumb.path)
+    formatted.thumb = {
+      contentType: body.thumb.mime,
       data: data
     };
    };
@@ -71,7 +67,7 @@ MemberSchema.methods.toHTML = function (callback) {
       linkedin: this.social.linkedin,
       description_en: this.description.en,
       description_es: this.description.es,
-      picture: this.img,    
+      thumb: this.thumb,    
       _id: this._id,
    };
    return this.getEditions(function (err, eds) {

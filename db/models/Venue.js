@@ -1,12 +1,9 @@
-var mongoose = require('mongoose'),
-   fs = require('fs');
-
 var Edition = require('./Edition').Edition;
 
 var VenueSchema = new mongoose.Schema({
     name: String
   , address: String
-  , img: {
+  , thumb: {
     data: Buffer,
     contentType: String
   }
@@ -18,10 +15,10 @@ var parseHTML = function (body) {
     name: body.name,
     address: body.address
   };
-  if(body.picture.size) {
-    data = fs.readFileSync(body.picture.path)
-    formatted.img = {
-      contentType: body.picture.mime,
+  if(body.thumb.size) {
+    data = fs.readFileSync(body.thumb.path)
+    formatted.thumb = {
+      contentType: body.thumb.mime,
       data: data
     };
   };
@@ -47,7 +44,7 @@ VenueSchema.methods.toHTML = function(callback) {
   var formatted = {
     name: this.name,
     address: this.address,
-    picture: this.img,
+    thumb: this.thumb,
     _id: this._id,
   };
   this.getEditions(function (err, eds) {

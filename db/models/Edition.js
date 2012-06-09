@@ -1,9 +1,5 @@
 var ObjectId = mongoose.Schema.ObjectId;
 
-// var Course = require('./Course').Course,
-//   Venue = require('./Venue').Venue,
-//   Member = require('./Member').Member;
-
 var EditionSchema = new mongoose.Schema({
   date: Date
   ,  course: {type: ObjectId, ref: 'Courses'}

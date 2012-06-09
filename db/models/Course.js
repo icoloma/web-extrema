@@ -1,6 +1,3 @@
-var mongoose = require('mongoose'),
-   fs = require('fs');
-
 var Edition = require('./Edition').Edition;
 
 var CourseSchema = new mongoose.Schema({
@@ -9,7 +6,7 @@ var CourseSchema = new mongoose.Schema({
     en: String,
     es: String
   }
-  , img : {
+  , thumb : {
       data: Buffer,
       contentType: String
    }
@@ -24,10 +21,10 @@ var parseHTML = function (body) {
       es: body.description_es
     }
   };
-  if(body.picture.size) {
-    data = fs.readFileSync(body.picture.path)
-    formatted.img = {
-      contentType: body.picture.mime,
+  if(body.thumb.size) {
+    data = fs.readFileSync(body.thumb.path)
+    formatted.thumb = {
+      contentType: body.thumb.mime,
       data: data
     };
   };
@@ -55,7 +52,7 @@ CourseSchema.methods.toHTML = function(callback) {
       email: this.email,
       description_en: this.description.en,
       description_es: this.description.es,
-      picture: this.img,
+      thumb: this.thumb,
       _id: this._id,
    };
    this.getEditions(function (err, eds) {

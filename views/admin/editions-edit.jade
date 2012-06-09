@@ -1,0 +1,34 @@
+- var formatCombos = function (label, name, list, or) {
+- var combo = '<div class="control-group';
+- if(or) {
+-   combo += ' success">'
+- } else {
+-   combo += '">';
+-}
+- combo += '<label>' + label + '</label>';
+- combo += '<select name="' + name + '">';
+- for(i in list) {
+-   if(list[i].id === or) {
+-     combo += '<option selected="selected" label="' + list[i].name +'">' + list[i].id + '</option>';
+-   } else {
+-     combo += '<option label="' + list[i].name +'">' + list[i].id + '</option>';
+-   }
+-}
+- 
+- combo += '</select></div>'
+- return combo;
+-}
+form(method="post",
+  action="/editions/add").form-horizontal.row-fluid
+  .span6
+    .control-group
+      label Date
+      input(type="date", name="date")
+    !{formatCombos('Venue', 'venue', venues, origin.venues)}
+  .span6
+    !{formatCombos('Course', 'course', courses, origin.courses)}
+    !{formatCombos('Instructor', 'instructor', members, origin.team)}
+  input(type="hidden", name="origin", value=origin.address)
+  div
+    button(type="submit").btn.btn-info Submit
+    a(href=origin.address).btn.btn-warning Cancel

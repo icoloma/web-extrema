@@ -27,7 +27,7 @@ form(method="post",
       .control-group
         label Picture
         img(src="thumb")
-        input(type="file", name="picture")
+        input(type="file", name="thumb")
       .control-group
         label Description (english)
         textarea(name="description_en", style="resize:vertical") !{member.description_en}
@@ -60,16 +60,17 @@ h2 Editions
     table.table.table-striped
       thead
         tr
-          th Course
           th Date
+          th Course
           th Venue
       tbody
       -for (var i in editions)
         tr
+          td
+            a(href='/editions/' + editions[i].id + '/edit')
+              !{editions[i].date}
           td 
             !{editions[i].course.name}
-          td
-            !{editions[i].date}
           td
             !{editions[i].venue.name}
   form(method="post", action="/editions/new")
