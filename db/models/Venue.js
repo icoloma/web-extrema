@@ -10,46 +10,24 @@ var VenueSchema = new mongoose.Schema({
 });
 
 //Diccionarios entre atributos de HTML y campos del Schema
-var parseHTML = function (body) {
-  var formatted = {
-    name: body.name,
-    address: body.address
-  };
-  if(body.thumb.size) {
-    data = fs.readFileSync(body.thumb.path)
-    formatted.thumb = {
-      contentType: body.thumb.mime,
-      data: data
-    };
-  };
-  return formatted;
-};
-   
-VenueSchema.statics.saveFromHTML = function(body, callback) {
-  var formatted = parseHTML(body),
-    _new = new Venue(formatted);
-  _new.save(callback);
+var setVirtual = function(virtual, real) {
+  VenueSchema
+    .virtual(virtual)
+    .get(function () {
+      return this[real];
+    })
+    .set(function (item) {
+      this.set(real, item);
+    })
 };
 
-VenueSchema.statics.updateFromHTML = function(id, body, callback) {
-  var formatted = parseHTML(body);
-  Venue.update( {_id: id}, formatted, callback);
-};
-
-VenueSchema.methods.getEditions = function (callback) {
-  Edition.find({venue: this._id}, callback);
-};
-
-VenueSchema.methods.toHTML = function(callback) {
-  var formatted = {
-    name: this.name,
-    address: this.address,
-    thumb: this.thumb,
-    _id: this._id,
-  };
-  this.getEditions(function (err, eds) {
-    formatted.editions = eds;
-    callback(null, formatted);
+VenueSchema.methods.getEditions = function(callback) {
+  var self = this;
+  Edition.find({venue: this._id}, function (err, eds) {
+    Edition.formatEditions(eds, function (err, formatted) {
+      self.editions = formatted;
+      callback(null, self);
+    });
   });
 };
 

@@ -1,32 +1,56 @@
 var ObjectId = mongoose.Schema.ObjectId;
 
 var EditionSchema = new mongoose.Schema({
-  date: Date
+     date: Date
   ,  course: {type: ObjectId, ref: 'Courses'}
   ,  venue: {type: ObjectId, ref: 'Venues'}
   ,  instructor: {type: ObjectId, ref: 'Members'}
 });
 
 //Diccionarios entre atributos de HTML y campos del Schema
-var parseHTML = function (body) {
-  var formatted = {
-    date: body.date,
-    course: body.course,
-    venue: body.venue,
-    instructor: body.instructor
+var setVirtual = function(virtual, real) {
+  EditionsSchema
+    .virtual(virtual)
+    .get(function () {
+      return this[real];
+    })
+    .set(function (item) {
+      this.set(real, item);
+    })
+};
+
+//Utiliza 'populate' para devolver las Editions con 
+EditionSchema.statics.formatEditions = function (eds, callback) {
+  if(!eds || eds.length === 0) {
+    callback(null, [])
+  } else {
+    if(!_.isArray(eds))
+      eds = [eds];
+    Edition
+      .find()
+      .or(eds) //Busca mediante el array de IDs
+      .populate('instructor', ['name'])
+      .populate('course', ['name'])
+      .populate('venue', ['name'])
+      .run(function (err, formatted) {
+        reformatted = formatted.map(function (ed) {
+          return {
+            id: ed._id,
+            date: ed.date || 'None',
+            course: {
+              name: (ed.course && ed.course.name) || 'Something bad happened',
+              },
+            venue: {
+              name: (ed.venue && ed.venue.name) || 'No one',
+            },
+            instructor: {
+              name: (ed.instructor && ed.instructor.name) || 'Nobody',
+            }
+          };
+        });
+        callback(err, reformatted);
+      });
   };
-  return formatted;
-};
-
-EditionSchema.statics.saveFromHTML = function (body, callback) {
-  var formatted = parseHTML(body),
-    _new = new Edition(formatted);
-  _new.save(callback);
-};
-
-EditionSchema.statics.updateFromHTML = function(id, body, callback) {
-  var formatted = parseHTML(body);
-  Edition.update( {_id: id}, formatted, callback);
 };
 
 var Edition = exports.Edition = mongoose.model('Editions', EditionSchema);

@@ -91,18 +91,11 @@ module.exports = function (app) {
         res.redirect('/images/person.png');
       };
     })
-    // db.getItem(field, id, function (err, item) {
-    //   if(item.picture && item.picture.data) {
-    //     res.contentType(item.picture.contentType);
-    //     res.send(item.picture.data);
-    //   } else {
-    //     res.redirect('/images/person.png');
-    //   };
-    // });
   });
 
   //Usa POST para pasar el origin
   //Seguro que puede hacerse más sencillo
+
   app.post('/editions/new', function (req, res) {
     var origin = {
       courses: req.body.course,
