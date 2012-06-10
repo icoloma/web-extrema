@@ -105,51 +105,58 @@ _.extend(me, {
       Edition.remove( {_id: id}, callback);
     } else {
       
-      //Si no es una Edition, se borra el documento
-      //en las editions que lo contengan
+      //Si no es una Edition, se borra también el campo
+      //correspondiente en las editions que lo contengan.
+      //En particular, si es un Course,
+      // se borran directamente todas sus Editions.
       
       model.remove({_id: id}, function (err) {
 
-        //Selecciona el campo adecuado para filtrar las Editions
-        for(pathName in Edition.schema.paths) {
-          var path = Edition.schema.paths[pathName];
-          if(path.options && path.options.ref && path.options.ref === model.modelName)
-            var modelPath = pathName;
-        }
-        search = {};
-        search[modelPath] = id;
+        if(model.modelName === 'Courses') {
+          Edition.remove({course: id}, callback);          
+        } else {
 
-        Edition.find(search, function (err, items) {
-          async.forEach(items, function (item, cb) {
+          //Encuentra el campo correspondiente al item borrado
+          for(pathName in Edition.schema.paths) {
+            var path = Edition.schema.paths[pathName];
+            if(path.options && path.options.ref && path.options.ref === model.modelName)
+              var modelPath = pathName;
+          }
+          search = {};
+          search[modelPath] = id;
 
-            //WORKAROUND: de momento, se crea una Edition idéntica salvo por el
-            //campo borrado, y se borra la anterior
+          Edition.find(search, function (err, items) {
+            async.forEach(items, function (item, cb) {
 
-            var _new = {};
-            for(pathName in Edition.schema.paths) {
-              if(pathName !== "_id" && pathName !== modelPath && item[pathName]) {
-                var prop = {};
-                prop[pathName] = item[pathName];
-                _.extend(_new, prop)
+              //WORKAROUND: de momento, se crea una Edition nueva, idéntica salvo
+              //por el campo borrado, y se borra la anterior.
+
+              var _new = {};
+              for(pathName in Edition.schema.paths) {
+                if(pathName !== "_id" && pathName !== modelPath && item[pathName]) {
+                  var prop = {};
+                  prop[pathName] = item[pathName];
+                  _.extend(_new, prop)
+                };
               };
-            };
-            Edition.remove( {_id: item._id}, function (err) {
-              _New = new Edition(_new);
-              _New.save(cb);
-            });
-          }, callback);
-        });
+              Edition.remove( {_id: item._id}, function (err) {
+                _New = new Edition(_new);
+                _New.save(cb);
+              });
+            }, callback);
+          });
 
-        //No parece que funcione mediante $unset
-        //
-        // var search = {};
-        // search[modelPath] = id;
-        // var updating = 1,
-        //   updated = {};
-        // updated[modelPath] = updating;
-        // Edition
-        //   .collection
-        //   .update(search, {$unset: updated }, callback);
+          //No parece que funcione mediante $unset
+          //
+          // var search = {};
+          // search[modelPath] = id;
+          // var updating = 1,
+          //   updated = {};
+          // updated[modelPath] = updating;
+          // Edition
+          //   .collection
+          //   .update(search, {$unset: updated }, callback);
+        };
       });
     };
   },
