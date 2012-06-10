@@ -1,7 +1,7 @@
 var Edition = require('./Edition').Edition;
 
 var MemberSchema = new mongoose.Schema({
-     name: String
+     name: {type: String, required: true}
    , email: String
    , social: {
       twitter: String,

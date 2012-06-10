@@ -2,7 +2,7 @@ var ObjectId = mongoose.Schema.ObjectId;
 
 var EditionSchema = new mongoose.Schema({
      date: Date
-  ,  course: {type: ObjectId, ref: 'Courses'}
+  ,  course: {type: ObjectId, ref: 'Courses', required: true}
   ,  venue: {type: ObjectId, ref: 'Venues'}
   ,  instructor: {type: ObjectId, ref: 'Members'}
 });

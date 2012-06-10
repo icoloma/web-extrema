@@ -1,7 +1,7 @@
 var Edition = require('./Edition').Edition;
 
 var VenueSchema = new mongoose.Schema({
-    name: String
+    name: {type: String, required: true}
   , address: String
   , thumb: {
     data: Buffer,

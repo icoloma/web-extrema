@@ -1,7 +1,7 @@
 var Edition = require('./Edition').Edition;
 
 var CourseSchema = new mongoose.Schema({
-    name: String
+    name: {type: String, required: true}
   , description: {
     en: String,
     es: String
