@@ -1,0 +1,29 @@
+h2 Editions
+.row-fluid
+  .span12
+    table.table.table-striped
+      thead
+        tr
+          th Date
+          th Course
+          th Instructor
+          th Venue
+      tbody
+      -for (var i in editions)
+        tr
+          td 
+            a(href='/editions/' + editions[i].id + '/edit')
+              !{editions[i].date.toLocaleDateString()}
+          td
+            img(src="/courses/"+editions[i].course.id+"/thumb").thumb-edition
+            span
+              !{editions[i].course.name}
+          td
+            img(src="/team/"+editions[i].instructor.id+"/thumb").thumb-edition
+            span
+              !{editions[i].instructor.name}
+          td
+            img(src="/venues/"+editions[i].venue.id+"/thumb").thumb-edition
+            span
+              !{editions[i].venue.name}
+  a(href="/editions/new").btn New

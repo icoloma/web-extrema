@@ -24,23 +24,4 @@ form(method="post",
   button(type="submit").btn.btn-danger.btn-large.pull-right Delete
 
 -var editions = venue.editions;
-h2 Editions
-.row-fluid
-  .span12
-    table.table.table-striped
-      thead
-        tr
-          th Date
-          th Course
-          th Instructor
-      tbody
-      -for (var i in editions)
-        tr
-          td 
-            a(href='/editions/' + editions[i].id + '/edit')
-              !{editions[i].date}
-          td
-            !{editions[i].course.name}
-          td
-            !{editions[i].instructor.name}
-  a(href="/editions/new").btn New
+include editions-list

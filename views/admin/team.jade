@@ -10,7 +10,7 @@ table.table.table-striped
   -for (var i in members)
     tr
       td
-        img(src="/team/"+members[i]._id+"/thumb",style="width: 50px")
+        img(src="/team/"+members[i]._id+"/thumb").thumb-list
       td 
         a(href="/team/"+members[i]._id+"/edit") !{members[i].name}
       td !{members[i].type}

@@ -30,10 +30,10 @@ form(method="post",
         input(type="file", name="thumb")
       .control-group
         label Description (english)
-        textarea(name="description_en", style="resize:vertical") !{member.description_en}
+        textarea(name="description_en").description !{member.description_en}
       .control-group
         label Description (spanish)
-        textarea(name="description_es", style="resize:vertical") !{member.description_es}
+        textarea(name="description_es").description !{member.description_es}
     .span4
       label
         h4 Social links
@@ -54,23 +54,4 @@ form(method="post",
   button(type="submit").btn.btn-danger.btn-large.pull-right Delete
 
 -var editions = member.editions;
-h2 Editions
-.row-fluid
-  .span12
-    table.table.table-striped
-      thead
-        tr
-          th Date
-          th Course
-          th Venue
-      tbody
-      -for (var i in editions)
-        tr
-          td
-            a(href='/editions/' + editions[i].id + '/edit')
-              !{editions[i].date}
-          td 
-            !{editions[i].course.name}
-          td
-            !{editions[i].venue.name}
-  a(href="/editions/new").btn New
+include editions-list

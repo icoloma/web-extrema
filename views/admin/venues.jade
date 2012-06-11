@@ -10,7 +10,7 @@ table.table.table-striped
   -for (var i in venues)
     tr
       td
-        img(src="/venues/"+venues[i]._id+"/thumb",style="width: 50px")
+        img(src="/venues/"+venues[i]._id+"/thumb").thumb-list
       td 
         a(href="/venues/"+venues[i]._id+"/edit") !{venues[i].name}
       td

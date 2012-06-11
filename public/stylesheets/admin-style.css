@@ -1,0 +1,12 @@
+.description {
+  resize: vertical;
+}
+
+.thumb-list {
+  width: 50px;
+}
+
+.thumb-edition {
+  width: 35px;
+  margin-right: 5px;
+}

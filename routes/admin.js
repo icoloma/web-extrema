@@ -7,6 +7,21 @@ mongoose.connect('mongodb://localhost/extrema');
 
 module.exports = function (app) {
 
+  app.set('view options', {
+    layout: 'layout-admin'
+  });
+
+  app.configure(function(){
+    app.set('views', app.path + '/views/admin');
+  });
+
+  //Página principal
+  app.get('/admin', function (req, res) {
+    res.render('index', { title: 'Admin panel' });
+  });
+
+  //Pasar la página de origen y las opciones para 
+  //las combo box, para una Edition
   app.get(/\/editions.*/, function (req, res, next) {
     var referer = req.header('Referer')
                     .match(/http.+\/([a-z]+)\/([0-9a-f]+)\/[a-z]*/),
@@ -28,11 +43,12 @@ module.exports = function (app) {
     });
   }); 
 
+  //Lista de items
   app.get('/:field', function (req, res, next) {
     var field = req.params.field;
     if(db.isModel(field)) {
       db.getItems(field, function (err, items) {
-        res.render('admin/' + field, { 
+        res.render(field, { 
         title : field,
         items: items
         });
@@ -42,6 +58,7 @@ module.exports = function (app) {
     };
   });
 
+  //Visualizar y editar un item individual
   app.get('/:field/:item/edit', function (req, res) {
     var field = req.params.field,
       id = req.params.item,
@@ -54,10 +71,11 @@ module.exports = function (app) {
         title: 'Edit ' + (item.name || item.date.toLocaleDateString()),
         item: item
       });
-      res.render('admin/' + field + '-edit', params);
+      res.render(field + '-edit', params);
     });
   });
 
+  //Añadir un nuevo item
   app.get('/:field/new', function (req, res) {
     var field = req.params.field,
       params = {};
@@ -66,9 +84,14 @@ module.exports = function (app) {
     _.extend(params, {
       title: 'Add new ' + field + ' item'
     });
-    res.render('admin/' + field + '-new', params);
+    res.render(field + '-new', params);
   });
 
+  /*
+  * POST
+  */
+
+  //Actualizar un item
   app.post('/:field/:item/update', function(req, res) {
     var field = req.params.field,
       id = req.params.item,
@@ -81,37 +104,32 @@ module.exports = function (app) {
     });
   });
 
-  app.post('/editions/add', function (req, res) {
-    var field = 'editions',
-      body = req.body;
-    db.addItem(field, body, function (err) {
-      res.redirect(body.origin);
-    });
-  });
-
+  //Añadir un nuevo item
   app.post('/:field/add', function (req, res) {
     var field = req.params.field,
       body = req.body;
-    body.thumb = req.files.thumb;
+    body.thumb = req.files && req.files.thumb;
 
     db.addItem(field, body, function (err) {
-      res.redirect('/' + field);
+      var origin = req.body.origin || ('/' + field);
+      res.redirect(origin);
     });
   });
 
+  //Borrar un item
   app.post('/:field/:item/delete', function (req, res) {
     var field = req.params.field,
       id = req.params.item;
 
     db.deleteItem(field, id, function (err) {
-      res.redirect('/' + field);
+      var origin = req.body.origin || ('/' + field);
+      res.redirect(origin);
     });
   });
 
-  app.get('/admin', function (req, res) {
-    res.render('admin', { title: 'Admin panel' });
-  });
+  /****/
 
+  //Pedir un thumbnail
   app.get('/:field/:item/thumb', function (req, res) {
     var field = req.params.field,
       id = req.params.item;
@@ -125,32 +143,5 @@ module.exports = function (app) {
       };
     })
   });
-
-  //Usa POST para pasar el origin
-  //Seguro que puede hacerse más sencillo
-
-  // app.post('/editions/new', function (req, res) {
-  //   var origin = {
-  //     courses: req.body.course,
-  //     venues: req.body.venue,
-  //     team: req.body.instructor,
-  //   };
-  //   for(p in origin) {
-  //     var x = p;
-  //     if(origin[p])
-  //       origin.address = '/' + p + '/' + origin[p] + '/edit'; 
-  //   };
-
-  //   db.getAllItems(function (items) {
-  //     res.render('admin/editions-new', {
-  //       title: 'Modify edition',
-  //       origin: origin,
-  //       venues: items.venues,
-  //       courses: items.courses,
-  //       members: items.members,
-  //     })
-  //   });
-
-  // });
 
 }

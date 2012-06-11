@@ -10,10 +10,10 @@ form(method="post", action="/courses/add",enctype="multipart/form-data").form-ho
         input(type="file", name="thumb")
       .control-group
         label Description (english)
-        textarea(name="description_en", style="resize:vertical")
+        textarea(name="description_en").description
       .control-group
         label Description (spanish)
-        textarea(name="description_es", style="resize:vertical")
+        textarea(name="description_es").description
   div
     button(type="submit").btn.btn-info Submit
     a(href="/courses").btn.btn-warning Cancel

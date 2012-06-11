@@ -13,6 +13,7 @@ fs = require('fs'),
 
 var app = module.exports = express.createServer();
 
+app.path = __dirname;
 
 // Configuration
 app.configure(function(){

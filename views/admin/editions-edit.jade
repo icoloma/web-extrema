@@ -30,3 +30,7 @@ form(method="post",
   div
     button(type="submit").btn.btn-info Update
     a(href=origin.address).btn.btn-warning Cancel
+form(method="post",
+  action="/editions/" + edition.id + "/delete").row-fluid
+  input(type="hidden", name="origin", value=origin.address)
+  button(type="submit").btn.btn-large.btn-danger.pull-right Delete
