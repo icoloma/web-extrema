@@ -15,6 +15,30 @@ module.exports = function (app) {
     app.set('views', app.path + '/views/admin');
   });
 
+  //Login
+  app.get('/user', function (req, res) {
+    res.render('login', {title: 'Login' });
+  });
+
+  var adminZone = /\/(admin|editions|team|courses|venues).*/;
+
+  app.all(adminZone, function (req, res, next) {
+    if(req.session.user_id) {
+      res.send('What are u tryin\' 2 do???')
+    } else {
+      next();
+    }
+  });
+
+  app.post('/login', function (req, res) {
+    if(req.body.user === 'info@extrema-sistemas.com' && req.body.password === 'foo') {
+      req.session.user_id = '4S7RYP20OCVZFQASCVE5';
+      res.redirect('/admin');
+    } else {
+      res.send('Bad user/pass');
+    };
+  });
+
   //Página principal
   app.get('/admin', function (req, res) {
     res.render('index', { title: 'Admin panel' });
