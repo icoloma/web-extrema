@@ -46,6 +46,4 @@ h2 Editions
             !{editions[i].venue.name}
           td
             !{editions[i].instructor.name}
-  form(method="post", action="/editions/new")
-    input(name="course", type="hidden", value=course._id)
-    button(type="submit").btn New
+  a(href="/editions/new").btn New

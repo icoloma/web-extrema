@@ -5,7 +5,9 @@ var EditionSchema = new mongoose.Schema({
   ,  course: {type: ObjectId, ref: 'Courses', required: true}
   ,  venue: {type: ObjectId, ref: 'Venues'}
   ,  instructor: {type: ObjectId, ref: 'Members'}
-});
+},
+//Strict true para deshacerse del origin
+{strict: true});
 
 //Diccionarios entre atributos de HTML y campos del Schema
 var setVirtual = function(virtual, real) {
@@ -39,12 +41,15 @@ EditionSchema.statics.formatEditions = function (eds, callback) {
             date: ed.date || 'None',
             course: {
               name: (ed.course && ed.course.name) || 'Something bad happened',
+              id: (ed.course && ed.course._id.toString())
               },
             venue: {
               name: (ed.venue && ed.venue.name) || 'No one',
+              id: (ed.venue && ed.venue._id.toString())
             },
             instructor: {
               name: (ed.instructor && ed.instructor.name) || 'Nobody',
+              id: (ed.instructor && ed.instructor._id.toString())
             }
           };
         });
