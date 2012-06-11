@@ -8,7 +8,7 @@ mongoose.connect('mongodb://localhost/extrema');
 module.exports = function (app) {
 
   app.set('view options', {
-    layout: 'layout-admin'
+    layout: app.path + '/views/layouts/layout-admin'
   });
 
   app.configure(function(){
