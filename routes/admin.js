@@ -51,7 +51,7 @@ module.exports = function (app) {
 
     db.getItem(field, id, function(err, item) {
       _.extend(params, {
-        title: 'Edit ' + (item.name || item.date),
+        title: 'Edit ' + (item.name || item.date.toLocaleDateString()),
         item: item
       });
       res.render('admin/' + field + '-edit', params);

@@ -21,7 +21,8 @@ var setVirtual = function(virtual, real) {
     })
 };
 
-//Utiliza 'populate' para devolver las Editions con 
+//Utiliza 'populate' para devolver las Editions con
+//los documentos correspondientes
 EditionSchema.statics.formatEditions = function (eds, callback) {
   if(!eds || eds.length === 0) {
     callback(null, [])
