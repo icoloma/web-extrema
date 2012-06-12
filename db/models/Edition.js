@@ -29,7 +29,7 @@ EditionSchema.statics.formatEditions = function (eds, callback) {
   } else {
     if(!_.isArray(eds))
       eds = [eds];
-    Edition
+    Editions
       .find()
       .or(eds) //Busca mediante el array de IDs
       .populate('instructor', ['name'])
@@ -59,4 +59,4 @@ EditionSchema.statics.formatEditions = function (eds, callback) {
   };
 };
 
-var Edition = exports.Edition = mongoose.model('Editions', EditionSchema);
+var Editions = exports.Editions = mongoose.model('Editions', EditionSchema);

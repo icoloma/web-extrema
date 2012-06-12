@@ -4,10 +4,10 @@
 module.exports = {
 
   fields : {
-    team : 'Member',
-    courses : 'Course',
-    venues : 'Venue',
-    editions : 'Edition'
+    team : 'Members',
+    courses : 'Courses',
+    venues : 'Venues',
+    editions : 'Editions'
   },
 
 };

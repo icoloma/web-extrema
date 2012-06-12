@@ -1,4 +1,4 @@
-var Edition = require('./Edition').Edition;
+var Editions = require('./Edition').Editions;
 
 var MemberSchema = new mongoose.Schema({
      name: {type: String, required: true}
@@ -41,11 +41,12 @@ setVirtual('linkedin', 'social.linkedin');
 //IDEA: podrían añadirse las Editions como un virtual,
 //pero no funciona: al buscar el campo 'editions' se 
 //llama de forma asíncrona
+//Quizá con un plugin para Promises: express-mongoose
 // MemberSchema
 //   .virtual('editions')
 //   .get(function() {
-//     Edition.find({instructor: this._id}, function (err, eds) {
-//       Edition.formatEditions(eds, function (err, formatted_eds) {
+//     Editions.find({instructor: this._id}, function (err, eds) {
+//       Editions.formatEditions(eds, function (err, formatted_eds) {
 //         return formatted_eds;
 //       });
 //     });
@@ -53,14 +54,14 @@ setVirtual('linkedin', 'social.linkedin');
 
 MemberSchema.methods.getEditions = function (callback) {
    var self = this;
-   Edition.find({instructor: this._id}, function (err, eds) {
-    Edition.formatEditions(eds, function (err, formatted) {
+   Editions.find({instructor: this._id}, function (err, eds) {
+    Editions.formatEditions(eds, function (err, formatted) {
       self.editions = formatted;
       callback(null, self);
     });
    });
 };
 
-var Member = mongoose.model('Members', MemberSchema);
+var Members = mongoose.model('Members', MemberSchema);
 
-exports.Member = Member;
+exports.Members = Members;

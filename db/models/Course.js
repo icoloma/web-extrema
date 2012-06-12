@@ -1,4 +1,4 @@
-var Edition = require('./Edition').Edition;
+var Editions = require('./Edition').Editions;
 
 var CourseSchema = new mongoose.Schema({
     name: {type: String, required: true}
@@ -29,14 +29,14 @@ setVirtual('description_es', 'description.en');
 
 CourseSchema.methods.getEditions = function(callback) {
    var self = this;
-   Edition.find({course: this._id}, function (err, eds) {
-    Edition.formatEditions(eds, function (err, formatted) {
+   Editions.find({course: this._id}, function (err, eds) {
+    Editions.formatEditions(eds, function (err, formatted) {
       self.editions = formatted;
       callback(null, self);
     });
    });
 };
 
-var Course = mongoose.model('Courses', CourseSchema);
+var Courses = mongoose.model('Courses', CourseSchema);
 
-exports.Course = Course;
+exports.Courses = Courses;

@@ -54,7 +54,7 @@ _.extend(me, {
     //sus editions
     model.findById(id, function (err, item) {
       if(model.modelName === 'Editions') {
-        me.Edition.formatEditions(item, function (err, formatted) {
+        me.Editions.formatEditions(item, function (err, formatted) {
           callback(err, formatted[0]);
         })
       } else {
@@ -80,76 +80,36 @@ _.extend(me, {
 
   deleteItem: function(field, id, callback) {
     var model = getModel(field),
-      Edition = me.Edition;
-    if(model.modelName === 'Editions') {
-      Edition.remove( {_id: id}, callback);
-    } else {
-      
-      //Si no es una Edition, se borra también el campo
-      //correspondiente en las editions que lo contengan.
-      //En particular, si es un Course,
-      // se borran directamente todas sus Editions.
-      
-      model.remove({_id: id}, function (err) {
+      Editions = me.Editions;
 
-        if(model.modelName === 'Courses') {
-          Edition.remove({course: id}, callback);          
-        } else {
-
-          //Encuentra el campo correspondiente al item borrado
-          for(pathName in Edition.schema.paths) {
-            var path = Edition.schema.paths[pathName];
-            if(path.options && path.options.ref && path.options.ref === model.modelName)
-              var modelPath = pathName;
-          }
-          search = {};
-          search[modelPath] = id;
-
-          Edition.find(search, function (err, items) {
-            async.forEach(items, function (item, cb) {
-
-              //WORKAROUND: de momento, se crea una Edition nueva, idéntica salvo
-              //por el campo borrado, y se borra la anterior.
-
-              var _new = {};
-              for(pathName in Edition.schema.paths) {
-                if(pathName !== "_id" && pathName !== modelPath && item[pathName]) {
-                  var prop = {};
-                  prop[pathName] = item[pathName];
-                  _.extend(_new, prop)
-                };
-              };
-              Edition.remove( {_id: item._id}, function (err) {
-                _New = new Edition(_new);
-                _New.save(cb);
-              });
-            }, callback);
-          });
-
-          //No parece que funcione mediante $unset
-          //
-          // var search = {};
-          // search[modelPath] = id;
-          // var updating = 1,
-          //   updated = {};
-          // updated[modelPath] = updating;
-          // Edition
-          //   .collection
-          //   .update(search, {$unset: updated }, callback);
+    model.remove({_id: id}, function (err) {
+      if (model.modelName === 'Editions') {
+        callback(err);
+      } else if (model.modelName === 'Courses') {
+        Editions.remove({course: id}, callback);
+      } else {
+        for(pathName in Editions.schema.paths) {
+          var path = Editions.schema.paths[pathName];
+          if(path.options && path.options.ref && path.options.ref === model.modelName)
+            var modelPath = pathName;
         };
-      });
-    };
+        var search = {};
+        search[modelPath] = id;
+        Editions
+          .update(search, { $unset: search }, {multi: true}, callback);
+      };
+    });
   },
 
   //Obtiene todos los items para seleccionar a la 
   //hora de gestionar una Edition
   getAllItems: function(callback) {
     async.parallel([function (cb) {
-      me.Member.find({}, cb);
+      me.Members.find({}, cb);
     }, function (cb) {
-        me.Course.find({}, cb);
+        me.Courses.find({}, cb);
     }, function (cb) {
-        me.Venue.find({}, cb);
+        me.Venues.find({}, cb);
     }], function (err, results) {
       callback({
         members: results[0],
@@ -163,7 +123,7 @@ _.extend(me, {
     var model = getModel(field);
     model.findById(id, function (err, item) {
       var thumb = false;
-      if(item.thumb && item.thumb.data) {
+      if(!err && item.thumb && item.thumb.data) {
         thumb = {
           data: item.thumb.data,
           contentType: item.thumb.contentType

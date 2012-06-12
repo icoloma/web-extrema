@@ -1,4 +1,4 @@
-var Edition = require('./Edition').Edition;
+var Editions = require('./Edition').Editions;
 
 var VenueSchema = new mongoose.Schema({
     name: {type: String, required: true}
@@ -23,14 +23,14 @@ var setVirtual = function(virtual, real) {
 
 VenueSchema.methods.getEditions = function(callback) {
   var self = this;
-  Edition.find({venue: this._id}, function (err, eds) {
-    Edition.formatEditions(eds, function (err, formatted) {
+  Editions.find({venue: this._id}, function (err, eds) {
+    Editions.formatEditions(eds, function (err, formatted) {
       self.editions = formatted;
       callback(null, self);
     });
   });
 };
 
-var Venue = mongoose.model('Venues', VenueSchema);
+var Venues = mongoose.model('Venues', VenueSchema);
 
-exports.Venue = Venue;
+exports.Venues = Venues;
