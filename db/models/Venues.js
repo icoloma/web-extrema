@@ -1,5 +1,12 @@
 var Editions = require('./Editions').Editions;
 
+/*
+Modelo de un local para un curso
+Campos:
+  Nombre
+  Dirección
+  Imagen
+*/
 var VenueSchema = new mongoose.Schema({
     name: {type: String, required: true}
   , address: String
@@ -21,15 +28,13 @@ var setVirtual = function(virtual, real) {
     })
 };
 
-VenueSchema.methods.getEditions = function(callback) {
-  var self = this;
-  Editions.find({venue: this._id}, function (err, eds) {
-    Editions.formatEditions(eds, function (err, formatted) {
-      self.editions = formatted;
-      callback(null, self);
-    });
-  });
-};
+//Métodos
+_.extend(VenueSchema.statics, require('../utils').statics);
+_.extend(VenueSchema.methods, require('../utils').methods);
+
+VenueSchema.statics.getItem = function (id, callback) {
+  VenueSchema.statics.getItemWithEditions.apply(this, arguments)
+}
 
 var Venues = mongoose.model('Venues', VenueSchema);
 

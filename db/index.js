@@ -17,19 +17,6 @@ var getModel = function(field) {
     return me[key.fields[field]];
 };
 
-//Comprueba que se ha elegido un thumbnail
-var validateThumb = function(body) {
-    if(body.thumb && body.thumb.size ) {
-      var data = fs.readFileSync(body.thumb.path);
-      body.thumb = {
-        contentType: body.thumb.mime,
-        data: data
-      };
-  } else {
-    delete body.thumb;
-  };
-};
-
 /*
 *Métodos para gestionar la base de datos
 */
@@ -44,61 +31,27 @@ _.extend(me, {
 
   getItems: function (field, callback) {
     var model = getModel(field);
-    model.find({}, callback);
+    model.getItems(callback);    
   },
 
   getItem: function (field, id, callback) {
     var model = getModel(field);
-    //Si se trata de una Edition, se formatea y se devuelve
-    //Si se trata de otro tipo de item, se buscan y formatean todas
-    //sus editions
-    model.findById(id, function (err, item) {
-      if(model.modelName === 'Editions') {
-        me.Editions.formatEditions(item, function (err, formatted) {
-          callback(err, formatted[0]);
-        })
-      } else {
-        item.getEditions(function (err, whith_eds) {         
-          callback(err, whith_eds);
-        });
-      };
-    });
+    model.getItem(id, callback);    
   },
 
   updateItem: function(field, id, body, callback) {
     var model = getModel(field);
-    validateThumb(body);
-    model.update({_id: id}, body, callback);
+    model.updateItem(id, body, callback)
   },
 
   addItem: function(field, body, callback) {
     var model = getModel(field);
-    validateThumb(body);
-    var _new = new model(body);
-    _new.save(callback);
+    model.addItem(body, callback)
   },
 
   deleteItem: function(field, id, callback) {
-    var model = getModel(field),
-      Editions = me.Editions;
-
-    model.remove({_id: id}, function (err) {
-      if (model.modelName === 'Editions') {
-        callback(err);
-      } else if (model.modelName === 'Courses') {
-        Editions.remove({course: id}, callback);
-      } else {
-        for(pathName in Editions.schema.paths) {
-          var path = Editions.schema.paths[pathName];
-          if(path.options && path.options.ref && path.options.ref === model.modelName)
-            var modelPath = pathName;
-        };
-        var search = {};
-        search[modelPath] = id;
-        Editions
-          .update(search, { $unset: search }, {multi: true}, callback);
-      };
-    });
+    var model = getModel(field);    
+    model.deleteItem(id, callback);
   },
 
   //Obtiene todos los items para seleccionar a la 
@@ -121,16 +74,7 @@ _.extend(me, {
 
   getThumbnail: function(field, id, callback) {
     var model = getModel(field);
-    model.findById(id, function (err, item) {
-      var thumb = false;
-      if(!err && item.thumb && item.thumb.data) {
-        thumb = {
-          data: item.thumb.data,
-          contentType: item.thumb.contentType
-        };
-      };
-      callback(err, thumb);
-    })
-  }
+    model.getThumbnail(id, callback);
+  },
 
 });

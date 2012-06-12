@@ -1,13 +1,18 @@
 var Editions = require('./Editions').Editions;
 
+/*
+Modelo de un miembro de Extrem
+Campos:
+  Nombre
+  E-mail
+  Enlaces de redes sociales
+  Descripción
+  Tipo de miembro (IT/management)
+  Imagen
+*/
 var MemberSchema = new mongoose.Schema({
      name: {type: String, required: true}
    , email: String
-   , social: {
-      twitter: String,
-      linkedin: String,
-      blog: String
-     }
    , type: String
    , description: {
       es: String,
@@ -17,6 +22,10 @@ var MemberSchema = new mongoose.Schema({
       data: Buffer,
       contentType: String
    }
+   //Enlaces a redes sociales
+   , twitter: String
+   , linkedin: String
+   , blog: String
 });
 
 //Diccionarios entre atributos de HTML y campos del Schema
@@ -34,9 +43,6 @@ var setVirtual = function(virtual, real) {
 
 setVirtual('description_en', 'description.en');
 setVirtual('description_es', 'description.en');
-setVirtual('twitter', 'social.twitter');
-setVirtual('blog', 'social.blog');
-setVirtual('linkedin', 'social.linkedin');
 
 //IDEA: podrían añadirse las Editions como un virtual,
 //pero no funciona: al buscar el campo 'editions' se 
@@ -52,15 +58,11 @@ setVirtual('linkedin', 'social.linkedin');
 //     });
 //   });
 
-MemberSchema.methods.getEditions = function (callback) {
-   var self = this;
-   Editions.find({instructor: this._id}, function (err, eds) {
-    Editions.formatEditions(eds, function (err, formatted) {
-      self.editions = formatted;
-      callback(null, self);
-    });
-   });
-};
+//Métodos
+_.extend(MemberSchema.statics, require('../utils').statics);
+_.extend(MemberSchema.methods, require('../utils').methods);
+
+MemberSchema.statics.getItem = MemberSchema.statics.getItemWithEditions;
 
 var Members = mongoose.model('Members', MemberSchema);
 

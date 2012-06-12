@@ -13,7 +13,7 @@ h2 Editions
         tr
           td 
             a(href='/editions/' + editions[i].id + '/edit')
-              !{editions[i].date.toLocaleDateString()}
+              !{editions[i].date}
           td
             img(src="/courses/"+editions[i].course.id+"/thumb").thumb-edition
             span

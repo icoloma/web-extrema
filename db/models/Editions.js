@@ -1,5 +1,15 @@
 var ObjectId = mongoose.Schema.ObjectId;
 
+
+/*
+Modelo de una convocatoria de un curso:
+Campos:
+  Fecha
+  Curso
+  Local
+  Instructor
+*/
+
 var EditionSchema = new mongoose.Schema({
      date: Date
   ,  course: {type: ObjectId, ref: 'Courses', required: true}
@@ -9,20 +19,27 @@ var EditionSchema = new mongoose.Schema({
 //Strict true para deshacerse del origin
 {strict: true});
 
-//Diccionarios entre atributos de HTML y campos del Schema
-var setVirtual = function(virtual, real) {
-  EditionsSchema
-    .virtual(virtual)
-    .get(function () {
-      return this[real];
-    })
-    .set(function (item) {
-      this.set(real, item);
-    })
+//Métodos
+_.extend(EditionSchema.statics, require('../utils').statics);
+_.extend(EditionSchema.methods, require('../utils').methods);
+
+//El get por defecto no está pensado para una edición
+EditionSchema.statics.getItem = function (id, callback) {
+  this.findById(id, function (err, item) {
+    Editions.formatEditions(item, function (err, formatted) {
+      callback(err, formatted[0]);
+    }); 
+  });
+};
+
+//El delete por defecto busca las ediciones correspondiente
+//No procede para una edición.
+EditionSchema.statics.deleteItem = function (id, callback) {
+  this.remove({_id: id}, callback);
 };
 
 //Utiliza 'populate' para devolver las Editions con
-//los documentos correspondientes
+//los documentos correspondientes.
 EditionSchema.statics.formatEditions = function (eds, callback) {
   if(!eds || eds.length === 0) {
     callback(null, [])
@@ -39,7 +56,7 @@ EditionSchema.statics.formatEditions = function (eds, callback) {
         reformatted = formatted.map(function (ed) {
           return {
             id: ed._id,
-            date: ed.date || 'None',
+            date: (ed.date && ed.date.toLocaleDateString()) || 'None',
             course: {
               name: (ed.course && ed.course.name) || 'Something bad happened',
               id: (ed.course && ed.course._id.toString())

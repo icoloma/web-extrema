@@ -92,7 +92,7 @@ module.exports = function (app) {
 
     db.getItem(field, id, function(err, item) {
       _.extend(params, {
-        title: 'Edit ' + (item.name || item.date.toLocaleDateString()),
+        title: 'Edit ' + (item.name || item.date),
         item: item
       });
       res.render(field + '-edit', params);
