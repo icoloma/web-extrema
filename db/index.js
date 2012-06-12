@@ -4,10 +4,10 @@ var me = {};
 module.exports =  me;
 
 //Lista de modelos a para exportar
-['Course',
-  'Member',
-  'Venue',
-  'Edition',
+['Courses',
+  'Members',
+  'Venues',
+  'Editions',
   ].forEach(function(name) {
     _.extend(me, require('./models/' + name + '.js'));
   });

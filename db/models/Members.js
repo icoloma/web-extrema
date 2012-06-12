@@ -1,4 +1,4 @@
-var Editions = require('./Edition').Editions;
+var Editions = require('./Editions').Editions;
 
 var MemberSchema = new mongoose.Schema({
      name: {type: String, required: true}
