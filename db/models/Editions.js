@@ -53,9 +53,9 @@ EditionSchema.statics.formatEditions = function (eds, callback) {
     Editions
       .find()
       .or(eds) //Busca mediante el array de IDs
-      .populate('instructor', ['name', 'available'])
-      .populate('course', ['name', 'available'])
-      .populate('venue', ['name', 'available'])
+      .populate('instructor', ['name', 'deleted'])
+      .populate('course', ['name', 'deleted'])
+      .populate('venue', ['name', 'deleted'])
       .run(function (err, formatted) {
         var reformatted = formatted.map(function (ed) {
           return {

@@ -22,6 +22,8 @@ var validateThumb = function(body) {
 
 //Busca todas las editions asociadas a un item dado
 var getEditions = function(id, field, callback) {
+  //La dependencia de Editions no debe exportarse,
+  //para evitar un loop en las dependencias
   var Editions = require('./models/Editions').Editions; 
 
   var search = {deleted: false};

@@ -13,7 +13,8 @@ fs = require('fs'),
 
 var app = module.exports = express.createServer();
 
-app.path = __dirname;
+//Guarda la ruta de la aplicación
+appPath = __dirname;
 
 // Configuration
 app.configure(function(){
@@ -38,7 +39,7 @@ app.configure('production', function(){
 
 
 // Rutas
-require('./routes/admin.js')(app);
+require('./routes')(app);
 
 
 app.listen(4000, function(){
