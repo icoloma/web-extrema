@@ -90,10 +90,11 @@ module.exports = function (app) {
     if(req.itemList)
       params = req.itemList;
 
-    db.getItem(field, id, function(err, item) {
+    db.getItem(field, id, function (err, item, editions) {
       _.extend(params, {
         title: 'Edit ' + (item.name || item.date),
-        item: item
+        item: item,
+        editions: editions
       });
       res.render(field + '-edit', params);
     });

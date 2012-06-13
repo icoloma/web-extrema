@@ -5,16 +5,20 @@ var ObjectId = mongoose.Schema.ObjectId;
 Modelo de una convocatoria de un curso:
 Campos:
   Fecha
-  Curso
+  Curso (req)
   Local
   Instructor
+El parámetro 'ref' permite hacer usar el método populate para
+encontrar los documentos correspondientes.
+El campo 'deleted' se usa en el borrado lógico.
 */
 
 var EditionSchema = new mongoose.Schema({
      date: Date
-  ,  course: {type: ObjectId, ref: 'Courses', required: true}
+  ,  course: {type: ObjectId, ref: 'Courses'}
   ,  venue: {type: ObjectId, ref: 'Venues'}
   ,  instructor: {type: ObjectId, ref: 'Members'}
+  ,  deleted: {type: Boolean, default: false}
 },
 //Strict true para deshacerse del origin
 {strict: true});
@@ -32,15 +36,15 @@ EditionSchema.statics.getItem = function (id, callback) {
   });
 };
 
-//El delete por defecto busca las ediciones correspondiente
-//No procede para una edición.
-EditionSchema.statics.deleteItem = function (id, callback) {
-  this.remove({_id: id}, callback);
-};
-
 //Utiliza 'populate' para devolver las Editions con
 //los documentos correspondientes.
 EditionSchema.statics.formatEditions = function (eds, callback) {
+  
+  //Comprueba que el documento correspondiente no se encuentre borrado
+  var checkProp = function (obj, prop, defaultMsg) {
+    return (!obj.deleted && obj[prop]) || defaultMsg;
+  };
+
   if(!eds || eds.length === 0) {
     callback(null, [])
   } else {
@@ -49,25 +53,25 @@ EditionSchema.statics.formatEditions = function (eds, callback) {
     Editions
       .find()
       .or(eds) //Busca mediante el array de IDs
-      .populate('instructor', ['name'])
-      .populate('course', ['name'])
-      .populate('venue', ['name'])
+      .populate('instructor', ['name', 'available'])
+      .populate('course', ['name', 'available'])
+      .populate('venue', ['name', 'available'])
       .run(function (err, formatted) {
-        reformatted = formatted.map(function (ed) {
+        var reformatted = formatted.map(function (ed) {
           return {
             id: ed._id,
             date: (ed.date && ed.date.toLocaleDateString()) || 'None',
             course: {
-              name: (ed.course && ed.course.name) || 'Something bad happened',
-              id: (ed.course && ed.course._id.toString())
-              },
+              name: checkProp(ed.course, 'name', 'Something bad happened'),
+              id:  checkProp(ed.course, '_id') //.toString()
+            },
             venue: {
-              name: (ed.venue && ed.venue.name) || 'No one',
-              id: (ed.venue && ed.venue._id.toString())
+              name: checkProp(ed.venue, 'name', 'No one'),
+              id:  checkProp(ed.venue, '_id')
             },
             instructor: {
-              name: (ed.instructor && ed.instructor.name) || 'Nobody',
-              id: (ed.instructor && ed.instructor._id.toString())
+              name: checkProp(ed.instructor, 'name', 'No one'), 
+              id:  checkProp(ed.instructor, '_id')
             }
           };
         });

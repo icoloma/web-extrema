@@ -4,13 +4,10 @@ var me = {};
 module.exports =  me;
 
 //Lista de modelos a para exportar
-['Courses',
-  'Members',
-  'Venues',
-  'Editions',
-  ].forEach(function(name) {
-    _.extend(me, require('./models/' + name + '.js'));
-  });
+_.extend(me, require('./models/Courses'));
+_.extend(me, require('./models/Members'));
+_.extend(me, require('./models/Venues'));
+_.extend(me, require('./models/Editions'));
 
 //Obtiene el modelo correspondiente a partir de la url
 var getModel = function(field) {
@@ -58,11 +55,11 @@ _.extend(me, {
   //hora de gestionar una Edition
   getAllItems: function(callback) {
     async.parallel([function (cb) {
-      me.Members.find({}, cb);
+      me.Members.find({deleted: false}, cb);
     }, function (cb) {
-        me.Courses.find({}, cb);
+        me.Courses.find({deleted: false}, cb);
     }, function (cb) {
-        me.Venues.find({}, cb);
+        me.Venues.find({deleted: false}, cb);
     }], function (err, results) {
       callback({
         members: results[0],

@@ -3,9 +3,11 @@ var Editions = require('./Editions').Editions;
 /*
 Modelo de un local para un curso
 Campos:
-  Nombre
+  Nombre (req)
   Dirección
   Imagen
+
+El campo 'deleted' se usa en el borrado lógico.
 */
 var VenueSchema = new mongoose.Schema({
     name: {type: String, required: true}
@@ -14,27 +16,19 @@ var VenueSchema = new mongoose.Schema({
     data: Buffer,
     contentType: String
   }
+  , deleted: {type: Boolean, default: false}
 });
 
-//Diccionarios entre atributos de HTML y campos del Schema
-var setVirtual = function(virtual, real) {
-  VenueSchema
-    .virtual(virtual)
-    .get(function () {
-      return this[real];
-    })
-    .set(function (item) {
-      this.set(real, item);
-    })
-};
-
-//Métodos
+/*
+Métodos
+*/
 _.extend(VenueSchema.statics, require('../utils').statics);
 _.extend(VenueSchema.methods, require('../utils').methods);
 
 VenueSchema.statics.getItem = function (id, callback) {
-  VenueSchema.statics.getItemWithEditions.apply(this, arguments)
-}
+  //Se especifica el campo correspondiente en las Editions
+  this.getItemWithEditions(id, 'venue', callback)
+};
 
 var Venues = mongoose.model('Venues', VenueSchema);
 
