@@ -8,7 +8,7 @@ module.exports = function (app) {
   //Lista de items
   app.get('/team', function (req, res, next) {
     Members.getItems(function (err, items) {
-      res.render('team', {
+      res.render('admin/team', {
         title: 'Team',
         items: items
       })
@@ -20,7 +20,7 @@ module.exports = function (app) {
     var id = req.params.item;
 
     Members.getItem(id, function (err, item, editions) {
-      res.render('team-edit', {
+      res.render('admin/team-edit', {
         title: 'Edit ' + item.name,
         item: item,
         editions: editions 
@@ -30,7 +30,7 @@ module.exports = function (app) {
 
   //Añadir un nuevo item
   app.get('/team/new', function (req, res) {
-    res.render('team-new', {
+    res.render('admin/team-new', {
       title: 'Add new team member'
     });
   });

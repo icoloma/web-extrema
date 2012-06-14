@@ -13,25 +13,16 @@ html
           .container
             ul.nav.first-list
               li
-                a.brand(href='#') Extrema
+                a.brand(href='/') Extrema
             ul.nav.main-list
               li
-                a(href='#') Home
+                a(href='/') !{__('Home')}
               li
-                a(href='#') Team
+                a(href='/team2') !{__('Team')}
               li
-                a(href='#') Follow us
+                a(href='/follow-us') !{__('Follow-us')}
             ul.nav.pull-right.langs
-              li.dropdown
-                a.dropdown-toggle(data-toggle='dropdown')
-                  | English
-                  b.caret
-                ul.dropdown-menu
-                  li
-                    a(href='#') Español
-                  li.divider
-                  li
-                    a(href='#') Italiano
+              include ../includes/lang-list
     .container-fluid
       !{body}
 

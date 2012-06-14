@@ -1,0 +1,12 @@
+-var langs = ['en', 'es', 'it']
+-var current = langs.splice(langs.indexOf(lang),1)
+li.dropdown
+  a.dropdown-toggle(data-toggle='dropdown')
+    | !{__('lang-' + current)}
+    b.caret
+  ul.dropdown-menu
+    -for locale in langs
+      li
+        a(href='/' + locale) !{__('lang-' + locale)}
+          -if(langs.indexOf(locale) !== langs.length-1)
+            li.divider

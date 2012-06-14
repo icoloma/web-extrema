@@ -10,17 +10,9 @@ module.exports = function (app) {
     venues = require('./venues'),
     editions = require('./editions');
 
-  app.set('view options', {
-    layout: appPath + '/views/layouts/layout-admin'
-  });
-
-  app.configure(function () {
-    app.set('views', appPath + '/views/admin');
-  });
-
   //Página principal
   app.get('/admin', function (req, res) {
-    res.render('index', { title: 'Admin panel' });
+    res.render('admin/index', { title: 'Admin panel' });
   });
 
   courses(app);

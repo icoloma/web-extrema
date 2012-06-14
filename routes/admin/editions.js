@@ -32,7 +32,7 @@ module.exports = function (app) {
       options = req.editionOptions;
 
     Editions.getItem(id, function (err, item) {
-      res.render('editions-edit', {
+      res.render('admin/editions-edit', {
         title: 'Edit ' + item.date,
         item: item,
         venues: options.venues,
@@ -47,7 +47,7 @@ module.exports = function (app) {
   app.get('/editions/new', function (req, res) {
     var options = req.editionOptions;
 
-    res.render('editions-new', {
+    res.render('admin/editions-new', {
       title: 'Add new edition',
       venues: options.venues,
       courses: options.courses,

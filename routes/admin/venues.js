@@ -8,7 +8,7 @@ module.exports = function (app) {
   //Lista de items
   app.get('/venues', function (req, res, next) {
     Venues.getItems(function (err, items) {
-      res.render('venues', {
+      res.render('admin/venues', {
         title: 'Venues',
         items: items
       })
@@ -20,7 +20,7 @@ module.exports = function (app) {
     var id = req.params.item;
 
     Venues.getItem(id, function (err, item, editions) {
-      res.render('venues-edit', {
+      res.render('admin/venues-edit', {
         title: 'Edit ' + item.name,
         item: item,
         editions: editions 
@@ -30,7 +30,7 @@ module.exports = function (app) {
 
   //Añadir un nuevo item
   app.get('/venues/new', function (req, res) {
-    res.render('venues-new', {
+    res.render('admin/venues-new', {
       title: 'Add new venue'
     });
   });

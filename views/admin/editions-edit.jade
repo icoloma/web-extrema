@@ -5,7 +5,7 @@
 - combo += '<select name="' + name + '">';
 
 - for(i in list) {
--   if(list[i].id === edition[name].id) {
+-   if(list[i].id === edition[name].id.toString()) {
 -     combo += '<option selected="selected" label="' + list[i].name + '">' + list[i].id + '</option>';
 -   } else {
 -     combo += '<option label="' + list[i].name + '">' + list[i].id + '</option>';

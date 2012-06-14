@@ -5,7 +5,7 @@ module.exports = function (app) {
   //Lista de items
   app.get('/courses', function (req, res, next) {
     Courses.getItems(function (err, items) {
-      res.render('courses', {
+      res.render('admin/courses', {
         title: 'Courses',
         items: items
       })
@@ -17,7 +17,7 @@ module.exports = function (app) {
     var id = req.params.item;
 
     Courses.getItem(id, function (err, item, editions) {
-      res.render('courses-edit', {
+      res.render('admin/courses-edit', {
         title: 'Edit ' + item.name,
         item: item,
         editions: editions 
@@ -27,7 +27,7 @@ module.exports = function (app) {
 
   //Añadir un nuevo item
   app.get('/courses/new', function (req, res) {
-    res.render('courses-new', {
+    res.render('admin/courses-new', {
       title: 'Add new course'
     });
   });

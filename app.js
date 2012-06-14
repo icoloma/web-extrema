@@ -8,7 +8,8 @@ var express = require('express');
 fs = require('fs'),
   mongoose = require('mongoose'),
   async = require('async'),
-  _ = require('underscore');
+  _ = require('underscore'),
+  i18n = require('i18n');
 
 
 var app = module.exports = express.createServer();
@@ -24,6 +25,9 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(express.cookieParser());
   app.use(express.session({ secret: "Greedo no disparó primero" }));
+
+  app.use(i18n.init);
+
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
   app.use(express.logger());
@@ -36,6 +40,13 @@ app.configure('development', function(){
 app.configure('production', function(){
   app.use(express.errorHandler());
 });
+
+//i18n
+i18n.configure({
+  locales: ['en', 'es', 'it'],
+  register: global,
+  cookie: 'language',
+})
 
 
 // Rutas
