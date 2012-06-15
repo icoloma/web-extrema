@@ -1,18 +1,18 @@
-var Editions = require('./Editions').Editions;
+var Editions = require('./Editions').Editions,
+  locales = require('./locales');
 
 /*
 Modelo de un curso
 Campos:
-  Nombre (req)
+  Nombre
   Descripción
   Imagen
 
 El campo 'deleted' se usa en el borrado lógico.
 */
 var CourseSchema = new mongoose.Schema({
-    name: {type: String, required: true}
-  , description_en: String
-  , description_es: String
+    name: locales
+  , description: locales  
   , thumb : {
       data: Buffer,
       contentType: String

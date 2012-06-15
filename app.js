@@ -17,6 +17,9 @@ var app = module.exports = express.createServer();
 //Guarda la ruta de la aplicación
 appPath = __dirname;
 
+//Idiomas para la web
+appLocales = ['en', 'es', 'it'];
+
 // Configuration
 app.configure(function(){
   app.set('views', __dirname + '/views');
@@ -33,6 +36,10 @@ app.configure(function(){
   app.use(express.logger());
 });
 
+
+//Helpers
+app.helpers(require('./views/helpers'));
+
 app.configure('development', function(){
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
@@ -43,7 +50,7 @@ app.configure('production', function(){
 
 //i18n
 i18n.configure({
-  locales: ['en', 'es', 'it'],
+  locales: appLocales,
   register: global,
   cookie: 'language',
 })

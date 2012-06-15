@@ -1,27 +1,3 @@
-- var formatCombos = function (label, name, list, or) {
--   var combo = '<div class="control-group';
--   if(or) {
--     combo += ' success">'
--   } else {
--     combo += '">';
--  }
--   combo += '<label>' + label + '</label><select name="' + name + '"';
--   if(label === 'Courses')
--     combo += ' required';
- 
--   combo += '>';
- 
--   for(i in list) {
--     if(list[i].id === or) {
--       combo += '<option selected="selected" label="' + list[i].name +'">' + list[i].id + '</option>';
--     } else {
--       combo += '<option label="' + list[i].name +'">' + list[i].id + '</option>';
--     }
--  }
- 
--   combo += '</select></div>'
--   return combo;
--}
 h1 !{title}
 form(method="post",
   action="/editions/add").form-horizontal.row-fluid

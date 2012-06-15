@@ -5,20 +5,13 @@ form(method="post",
   enctype="multipart/form-data").form-horizontal
   .row-fluid
     .span6
-      .control-group
-        label Name
-        input(type="text", name="name", required, value=course.name)
+      !{i18nTextInput('Name', 'name', 'required', course.name)}
     .span6
       .control-group
         label Picture
         img(src="thumb")
         input(type="file", name="thumb")
-      .control-group
-        label Description (english)
-        textarea(name="description_en").description !{course.description_en}
-      .control-group
-        label Description (spanish)
-        textarea(name="description_es").description !{course.description_es}
+        !{i18nTextArea('Description', 'description', course.description)}    
   .row-fluid
     button(type="submit").btn.btn-info Submit
     a(href="/courses").btn.btn-warning Cancel

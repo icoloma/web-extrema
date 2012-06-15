@@ -28,12 +28,7 @@ form(method="post",
         label Picture
         img(src="thumb")
         input(type="file", name="thumb")
-      .control-group
-        label Description (english)
-        textarea(name="description_en").description !{member.description_en}
-      .control-group
-        label Description (spanish)
-        textarea(name="description_es").description !{member.description_es}
+        !{i18nTextArea('Description', 'description', member.description)}
     .span4
       label
         h4 Social links

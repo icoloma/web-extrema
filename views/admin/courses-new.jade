@@ -1,19 +1,12 @@
 form(method="post", action="/courses/add",enctype="multipart/form-data").form-horizontal
   .row-fluid
     .span6
-      .control-group
-        label Name
-        input(type="text", name="name", required)
+      !{i18nTextInput('Name', 'name', 'required')}
     .span6
       .control-group
         label Picture
         input(type="file", name="thumb")
-      .control-group
-        label Description (english)
-        textarea(name="description_en").description
-      .control-group
-        label Description (spanish)
-        textarea(name="description_es").description
+      !{i18nTextArea('Description', 'description')}
   div
     button(type="submit").btn.btn-info Submit
     a(href="/courses").btn.btn-warning Cancel

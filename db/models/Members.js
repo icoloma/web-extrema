@@ -1,7 +1,8 @@
-var Editions = require('./Editions').Editions;
+var Editions = require('./Editions').Editions,
+  locales = require('./locales');
 
 /*
-Modelo de un miembro de Extrem
+Modelo de un miembro de Extrema
 Campos:
   Nombre (req)
   E-mail
@@ -16,8 +17,7 @@ var MemberSchema = new mongoose.Schema({
      name: {type: String, required: true}
    , email: String
    , type: String
-   , description_en: String
-   , description_es: String
+   , description: locales
    , thumb : {
       data: Buffer,
       contentType: String

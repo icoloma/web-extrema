@@ -18,7 +18,7 @@ module.exports = function (app) {
 
     Courses.getItem(id, function (err, item, editions) {
       res.render('admin/courses-edit', {
-        title: 'Edit ' + item.name,
+        title: 'Edit ' + item.name.en,
         item: item,
         editions: editions 
       });

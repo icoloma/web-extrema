@@ -59,19 +59,19 @@ EditionSchema.statics.formatEditions = function (eds, callback) {
       .run(function (err, formatted) {
         var reformatted = formatted.map(function (ed) {
           return {
-            id: ed._id,
+            _id: ed._id,
             date: (ed.date && ed.date.toLocaleDateString()) || 'None',
             course: {
               name: checkProp(ed.course, 'name', 'Something bad happened'),
-              id:  checkProp(ed.course, '_id') //.toString()
+              _id:  checkProp(ed.course, '_id')
             },
             venue: {
               name: checkProp(ed.venue, 'name', 'No one'),
-              id:  checkProp(ed.venue, '_id')
+              _id:  checkProp(ed.venue, '_id')
             },
             instructor: {
               name: checkProp(ed.instructor, 'name', 'No one'), 
-              id:  checkProp(ed.instructor, '_id')
+              _id:  checkProp(ed.instructor, '_id')
             }
           };
         });

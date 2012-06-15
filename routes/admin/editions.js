@@ -6,14 +6,18 @@ module.exports = function (app) {
   //Pasar la página de origen y las opciones para 
   //las combo box, para una Edition
   app.get(/\/editions.*/, function (req, res, next) {
-    var referer = req.header('Referer')
-                    .match(/http.+\/([a-z]+)\/([0-9a-f]+)\/[a-z]*/),
-      origin = {},
-      field = referer[1];
+    if(req.header('Referer')) {
+      var referer = req.header('Referer')
+                      .match(/http.+\/([a-z]+)\/([0-9a-f]+)\/[a-z]*/),
+        origin = {},
+        field = referer[1];
 
-    origin.address = referer[0];
-    origin[field] = referer[2];
-    
+      origin.address = referer[0];
+      origin[field] = referer[2];
+    } else {
+      var origin = { address: '/admin' };
+    }
+
     db.getAllItems(function (lists) {
       var editionOptions = {
         origin: origin,
@@ -82,7 +86,7 @@ module.exports = function (app) {
   });
 
   //Borrar un item
-  app.post('editions/:item/delete', function (req, res) {
+  app.post('/editions/:item/delete', function (req, res) {
     var id = req.params.item;
 
     Editions.deleteItem(id, function (err) {
