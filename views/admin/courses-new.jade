@@ -6,7 +6,7 @@ form(method="post", action="/courses/add",enctype="multipart/form-data").form-ho
       .control-group
         label Picture
         input(type="file", name="thumb")
-      !{i18nTextArea('Description', 'description')}
+      !{i18nTextArea('Description', 'description', 'class="description-input"')}
   div
     button(type="submit").btn.btn-info Submit
     a(href="/courses").btn.btn-warning Cancel

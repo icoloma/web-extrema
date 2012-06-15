@@ -16,10 +16,10 @@ module.exports = function (app) {
     })
   });
 
-  //Team page
-  app.get('/team2', function (req, res) {
-    res.render('team', {
-      title: 'Team | extrema-sistemas.com'
-    })
-  })
+  // //Team page
+  // app.get('/team', function (req, res) {
+  //   res.render('team', {
+  //     title: 'Team | extrema-sistemas.com'
+  //   })
+  // })
 }

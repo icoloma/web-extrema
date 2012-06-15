@@ -21,10 +21,11 @@ module.exports = {
     return list;
   },
 
-  i18nTextArea: function(label, field, content) {
+  i18nTextArea: function(label, field, options, content) {
     var list = '',
       tagOpen = function (locale) {
-        var tag = '<textarea name="' + field + '.'  + locale + '">';
+        var tag = '<textarea name="' + field + '.'  + locale + '" ' +
+          (options || '') + '>';
         return tag;
       },
       tagClose = '</textarea>',

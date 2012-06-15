@@ -1,0 +1,20 @@
+li
+  -if(!user) {
+    h3.crewtitle !{member.name}
+  -} else {
+    h3.crewtitle 
+      a(href="/team/" + member._id + "/edit") !{member.name}
+  -}
+  .details
+    img(src="/team/" + member._id + "/thumb", alt=member.name)
+    ul.sociallinks
+      -if(member.twitter)
+        li.twitterlink
+          a(href="http://twitter.com/" + member.twitter) Twitter
+      -if(member.linkedin)
+        li.linkedinlink
+          a(href="http://linkedin.com/" + member.linkedin) Linkedin
+      -if(member.blog)
+        li.weblink
+          a(href=member.blog) Blog
+  p !{member.description[lang]}

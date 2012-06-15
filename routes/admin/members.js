@@ -8,7 +8,7 @@ module.exports = function (app) {
   //Lista de items
   app.get('/team', function (req, res, next) {
     Members.getItems(function (err, items) {
-      res.render('admin/team', {
+      res.render('team', {
         title: 'Team',
         items: items
       })

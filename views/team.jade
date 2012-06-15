@@ -1,108 +1,30 @@
+-var members = items
 .main.container-fluid
   .about
-    h2 About us
-    p
-      | Since 2002 we have been passionate about what we do. We make software applications that change the world one bit at a time, and that look good while at it.
-    p
-      | Many companies have relied on us to move their information systems to the next level in such disparate areas as air traffic systems or e-banking. We have learned and reinvented our ways, which helped to produce a great training team that makes us proud.
-    p
-      | We have presence in Spain, Switzerland and Italy, but we keep getting the phone ourselves.
+    h2 !{__('About us')}
+    p !{__('about-us-p1')}
+    p !{__('about-us-p3')}
+    p !{__('about-us-p3')}
   .team
     .row-fluid
       .span6
         h2 IT team
         ul.team-members.IT
-          li
-            h3.crewtitle Nacho Coloma
-            .details
-              img(src='/images/nacho_1.jpg', alt='Nacho Coloma')
-              ul.sociallinks
-                li.weblink
-                  a(href='http://icoloma.blogspot.com', target='_blank') Blog
-                li.twitterlink
-                  a(href='http://twitter.com/nachocoloma', target='_blank') Twitter
-            p
-              | MS in Computer Science by University of La Laguna, Nacho has designed systems for air traffic control, e-banking, railway control and online ticketing platforms. He has also collaborated in 20+ open source projects and has delivered talks at events in and outside Spain.
-          li
-            h3.crewtitle David Gómez
-            .details
-              img(src='/images/david_1.jpg', alt='David Gómez')
-              ul.sociallinks
-                li.twitterlink
-                  a(href='http://twitter.com/dgomezg', target='_blank') Twitter
-                li.linkedinlink
-                  a(href='http://es.linkedin.com/pub/david-g%C3%B3mez-garc%C3%ADa/10/657/964', target='_blank') Linkedin
-            p
-              | BS in Computer Science at Universidad Politécnica de Madrid in 1998, David has participated in telco projects, e-commerce, banking, defense and ground transport systems. He has pioneered web projects, SOA backbones, client applications and integration gateways.
-          li
-            h3.crewtitle Ernesto Hernández
-            .details
-              img(src='/images/ernesto.jpg', alt='Ernesto Hernández')
-              ul.sociallinks
-                li.twitterlink
-                  a(href='http://twitter.com/ehdez73', target='_blank') Twitter
-                li.linkedinlink
-                  a(href='http://es.linkedin.com/in/ernestohernandezrodriguez', target='_blank') Linkedin
-            p
-              | MS in Computer Science by University of La Laguna, where he finished first of his promotion in 2002. Ernesto has designed solutions for Public Administrations, online newspapers and banking systems. He has developed all kind of web applications including ERP, DMS and CMS, and he holds a MCSE y MCP.
-          li
-            h3.crewtitle German García
-            .details
-              img(src='/images/german_text.jpg', alt='German García')
-              ul.sociallinks
-                li.twitterlink
-                  a(href='http://twitter.com/germangf', target='_blank') Twitter
-                li.linkedinlink
-                  a(href='http://es.linkedin.com/pub/german-garcia/33/b6a/35', target='_blank') Linkedin
-            p
-              | MS in Computer Science by Polytechnic University of Madrid, German has been involved in telecommunications, government, land transport systems and banking. He is currently involved in his most important project: becoming a dad.
-          li
-            h3.crewtitle Carlos Coloma
-            .details
-              img(src='/images/perfil_ccoloma.jpg', alt='Carlos Coloma')
-              ul.sociallinks
-                li.twitterlink
-                  a(href='http://twitter.com/ccescribano', target='_blank') Twitter
-                li.linkedinlink
-                  a(href='http://es.linkedin.com/pub/carlos-coloma/32/5b4/910', target='_blank') Linkedin
-            p
-              | MS in Computer Science by University of La Laguna, where he finished first in his class in 2009. Carlos, as Cloud Engineer, has worked with Amazon and Google cloud and participated in several e-government projects.
-          li
-            h3.crewtitle Javier Manzano
-            .details
-              img(src='/images/javier_manzano.jpg', alt='')
-              ul.sociallinks
-                li.twitterlink
-                  a(href='http://twitter.com/jmanzanomorilla', target='_blank') Twitter
-            p
-              | BS in Computer Science at Malaga University. Javier is passionate about technology and specially in software development. Java and Android are the sectors where he applies his knowledge with more passion. He has participated in a different array of projects for the Android platform. He holds CCNA certification granted by CISCO.
+          -for(i in members) {
+            -var member = members[i]
+            -if(member.type === 'IT')
+              include ./includes/team-member
+          -}
       .span6
         h2 Management team
         ul.team-members.management
-          li
-            h3.crewtitle Enrique Lancis
-            .details
-              img(src='/images/elancis.jpg', alt='')
-              ul.sociallinks
-                li.weblink
-                  a(href='http://enriquelancis.com', target='_blank') Blog
-                li.twitterlink
-                  a(href='http://twitter.com/elancis', target='_blank') Twitter
-                li.linkedinlink
-                  a(href='http://es.linkedin.com/in/enriquelancis', target='_blank') Linkedin
-            p
-              | Bachelor of Business Administration (BBA) and International MBA at IE Business School. He has been part of Deloitte for 3 years auditing firms like General Motors, Solvay Group and Quicksilver, among others. He has worked in countries like Puerto Rico, USA and Australia.
-          li
-            h3.crewtitle Laura Vignali
-            .details
-              img(src='/images/laura_text.jpg', alt='Laura Vignali')
-              ul.sociallinks
-                li.twitterlink
-                  a(href='http://twitter.com/eos983', target='_blank') Twitter
-                li.linkedinlink
-                  a(href='http://es.linkedin.com/pub/laura-vignali/26/199/525', target='_blank') Linkedin
-            p
-              | After obtaining her Master of Laws from the University of Perugia, Laura began her training in Barcelona and Madrid. She has been part of companies like Citibank and Idealista.com, gaining experience in business administration, accounting and sales.
-.footer
-  .wrapper
-    a(href='#') Contact
+          -for(i in members) {
+            -var member = members[i]
+            -if(member.type === 'Management')
+              include ./includes/team-member
+          -}
+-if(user) {
+a(href="/team/new").btn New
+
+a(href="/admin").btn Back
+-}

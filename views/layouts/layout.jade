@@ -5,8 +5,12 @@ html
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.min2.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-    
+    -if(user) {
+    link(rel='stylesheet', href='/stylesheets/admin-style.css')
+    -}
   body
+    -if (user)
+      p user
     .header
       .navbar.container-fluid
         .navbar-inner
@@ -18,9 +22,14 @@ html
               li
                 a(href='/') !{__('Home')}
               li
-                a(href='/team2') !{__('Team')}
+                a(href='/team') !{__('Team')}
               li
                 a(href='/follow-us') !{__('Follow-us')}
+            -if (user) {
+              ul.nav.pull-right
+                li
+                  a Logout
+            -}
             ul.nav.pull-right.langs
               include ../includes/lang-list
     .container-fluid

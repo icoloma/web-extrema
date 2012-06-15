@@ -9,6 +9,7 @@ module.exports = function(app) {
 //Pasar el idioma para la barra de navegación
 app.all('*', function (req, res, next) {
     res.local('lang', i18n.getLocale(req));
+    res.local('user', req.user || '')
     next();
 });
 
@@ -25,14 +26,14 @@ app.get('/en', function (req, res, next) {
   var origin = req.header('Referer') || '/';
 
   res.cookie('language', 'en');
-  res.redirect('/');
+  res.redirect(origin);
 });
 
 app.get('/it', function (req, res, next) {
   var origin = req.header('Referer') || '/';
 
   res.cookie('language', 'it');
-  res.redirect('/');
+  res.redirect(origin);
 });
 
 /**/

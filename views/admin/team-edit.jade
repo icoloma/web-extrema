@@ -28,7 +28,7 @@ form(method="post",
         label Picture
         img(src="thumb")
         input(type="file", name="thumb")
-        !{i18nTextArea('Description', 'description', member.description)}
+        !{i18nTextArea('Description', 'description', 'class="description-input"', member.description)}
     .span4
       label
         h4 Social links

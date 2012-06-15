@@ -9,36 +9,72 @@ fs = require('fs'),
   mongoose = require('mongoose'),
   async = require('async'),
   _ = require('underscore'),
-  i18n = require('i18n');
+  i18n = require('i18n'),
+  passport = require('passport');
 
 
 var app = module.exports = express.createServer();
 
-//Guarda la ruta de la aplicación
+/*
+* Variables globales
+*/
+
+//Ruta de la aplicación
 appPath = __dirname;
 
-//Idiomas para la web
+//Idiomas
 appLocales = ['en', 'es', 'it'];
+
+/**/
+
+
+/*
+* Autenticación
+*/
+
+var LocalStrategy = require('passport-local').Strategy;
+
+passport.use(new LocalStrategy(
+  function(username, password, done) {
+    if(username === 'info' && password === 'foo') {
+      return done(null, 'user')
+    } else {
+      return done(null, false, {message: 'Bad user/pass'})
+    }
+  }
+));
+
+passport.serializeUser(function(user, done) {
+  done(null, user);
+});
+
+passport.deserializeUser(function(obj, done) {
+  done(null, obj);
+});
 
 // Configuration
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
+  app.use(express.logger());
+  app.use(express.cookieParser());
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.cookieParser());
-  app.use(express.session({ secret: "Greedo no disparó primero" }));
+  app.use(express.session({ secret: 'Greedo no disparó primero' }));
+
+  app.use(passport.initialize());
+  app.use(passport.session());
 
   app.use(i18n.init);
 
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
-  app.use(express.logger());
 });
 
 
 //Helpers
 app.helpers(require('./views/helpers'));
+
 
 app.configure('development', function(){
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
@@ -47,6 +83,7 @@ app.configure('development', function(){
 app.configure('production', function(){
   app.use(express.errorHandler());
 });
+
 
 //i18n
 i18n.configure({

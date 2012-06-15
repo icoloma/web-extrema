@@ -11,7 +11,7 @@ form(method="post",
         label Picture
         img(src="thumb")
         input(type="file", name="thumb")
-        !{i18nTextArea('Description', 'description', course.description)}    
+        !{i18nTextArea('Description', 'description', 'class="description-input"', course.description)}    
   .row-fluid
     button(type="submit").btn.btn-info Submit
     a(href="/courses").btn.btn-warning Cancel
