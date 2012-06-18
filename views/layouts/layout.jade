@@ -9,8 +9,6 @@ html
     link(rel='stylesheet', href='/stylesheets/admin-style.css')
     -}
   body
-    -if (user)
-      p user
     .header
       .navbar.container-fluid
         .navbar-inner
@@ -28,12 +26,16 @@ html
             -if (user) {
               ul.nav.pull-right
                 li
-                  a Logout
+                  a(href="/logout") Logout
             -}
             ul.nav.pull-right.langs
               include ../includes/lang-list
     .container-fluid
       !{body}
+
+    .footer
+      .container-fluid
+        a(href='#') Contact
 
   script(type="text/javascript", src="/javascripts/jquery-1.7.2.min.js")
   script(type="text/javascript", src="/javascripts/bootstrap-dropdown.js")

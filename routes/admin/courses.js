@@ -2,15 +2,15 @@ var Courses = require(appPath + '/db/models/Courses').Courses;
 
 module.exports = function (app) {
   
-  //Lista de items
-  app.get('/courses', function (req, res, next) {
-    Courses.getItems(function (err, items) {
-      res.render('admin/courses', {
-        title: 'Courses',
-        items: items
-      })
-    });
-  });
+  // //Lista de items
+  // app.get('/courses', function (req, res, next) {
+  //   Courses.getItems(function (err, items) {
+  //     res.render('admin/courses', {
+  //       title: 'Courses',
+  //       items: items
+  //     })
+  //   });
+  // });
 
   //Visualizar y editar un item individual
   app.get('/courses/:item/edit', function (req, res) {
@@ -68,18 +68,18 @@ module.exports = function (app) {
 
   /****/
 
-  //Pedir un thumbnail
-  app.get('/courses/:item/thumb', function (req, res) {
-    var id = req.params.item;
+  // //Pedir un thumbnail
+  // app.get('/courses/:item/thumb', function (req, res) {
+  //   var id = req.params.item;
 
-    Courses.getThumbnail(id, function (err, thumb) {
-      if(thumb) {
-        res.contentType(thumb.contentType);
-        res.send(thumb.data);
-      } else {
-        res.redirect('/images/person.png');
-      }
-    });
-  });
+  //   Courses.getThumbnail(id, function (err, thumb) {
+  //     if(thumb) {
+  //       res.contentType(thumb.contentType);
+  //       res.send(thumb.data);
+  //     } else {
+  //       res.redirect('/images/person.png');
+  //     }
+  //   });
+  // });
 
 }

@@ -2,18 +2,15 @@ var Members = require(appPath + '/db/models/Members').Members;
 
 module.exports = function (app) {
 
-  //Pasar la página de origen y las opciones para 
-  //las combo box, para una Edition
-
-  //Lista de items
-  app.get('/team', function (req, res, next) {
-    Members.getItems(function (err, items) {
-      res.render('team', {
-        title: 'Team',
-        items: items
-      })
-    });
-  });
+  // //Lista de items
+  // app.get('/team', function (req, res, next) {
+  //   Members.getItems(function (err, items) {
+  //     res.render('team', {
+  //       title: 'Team',
+  //       items: items
+  //     })
+  //   });
+  // });
 
   //Visualizar y editar un item individual
   app.get('/team/:item/edit', function (req, res) {
@@ -71,18 +68,18 @@ module.exports = function (app) {
 
   /****/
 
-  //Pedir un thumbnail
-  app.get('/team/:item/thumb', function (req, res) {
-    var id = req.params.item;
+  // //Pedir un thumbnail
+  // app.get('/team/:item/thumb', function (req, res) {
+  //   var id = req.params.item;
 
-    Members.getThumbnail(id, function (err, thumb) {
-      if(thumb) {
-        res.contentType(thumb.contentType);
-        res.send(thumb.data);
-      } else {
-        res.redirect('/images/person.png');
-      }
-    });
-  });
+  //   Members.getThumbnail(id, function (err, thumb) {
+  //     if(thumb) {
+  //       res.contentType(thumb.contentType);
+  //       res.send(thumb.data);
+  //     } else {
+  //       res.redirect('/images/person.png');
+  //     }
+  //   });
+  // });
 
 }
