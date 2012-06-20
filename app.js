@@ -29,6 +29,7 @@ i18n.configure({
   cookie: 'language',
 })
 
+//Servidores
 var http = require('./nonSecureServer'),
   https = require('./secureServer');
 

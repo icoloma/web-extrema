@@ -1,33 +1,21 @@
-var http = module.exports = express.createServer();
+
+
+var lessMiddleware = require('less-middleware');
 
 // Configuration
-http.configure(function(){
-  http.set('views', __dirname + '/views');
-  http.set('view engine', 'jade');
-  http.use(express.logger());
-  http.use(express.cookieParser());
-  http.use(express.bodyParser());
-  http.use(express.methodOverride());
-  // http.use(express.session({ secret: 'Greedo no disparó primero' }));
+var http = module.exports = express.createServer(),
+  config = require('./config');
 
-  // http.use(passport.initialize());
-  // http.use(passport.session());
+http.configure(config.initial_config(http));
 
-  http.use(i18n.init);
-
-  http.use(http.router);
-  http.use(express.static(appPath + '/public'));
-});
-
-
-
-http.configure('development', function(){
-  http.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
-});
+http.configure('development', config.dev_config(http));
 
 http.configure('production', function(){
   http.use(express.errorHandler());
 });
+
+http.configure(config.final_config(http));
+
 
 //Ruta de login
 http.get('/user', function (req, res) {

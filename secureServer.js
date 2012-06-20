@@ -5,7 +5,8 @@ var privateKey = fs.readFileSync('./https/lalala.key'),
 /*
 * Autenticación
 */
-var LocalStrategy = require('passport-local').Strategy;
+var LocalStrategy = require('passport-local').Strategy,
+  lessMiddleware = require('less-middleware');
 
 passport.use(new LocalStrategy(
   function(username, password, done) {
@@ -26,33 +27,25 @@ passport.deserializeUser(function(obj, done) {
 });
 
 //Configurar server
-var https = express.createServer({key: privateKey, cert: certificate});
+var https = express.createServer({key: privateKey, cert: certificate}),
+  config = require('./config');
 
-https.configure(function () {
-  https.set('views', __dirname + '/views');
-  https.set('view engine', 'jade');
-  https.use(express.logger());
-  https.use(express.cookieParser());
-  https.use(express.bodyParser());
-  https.use(express.methodOverride());
+https.configure(function() {
+  config.initial_config(https)();
   https.use(express.session({ secret: 'Greedo no disparó primero' }));
-
-  https.use(i18n.init);
-
   https.use(passport.initialize());
   https.use(passport.session());
-
-  https.use(express.static(__dirname + '/public'));
 });
+
+https.configure('development', config.dev_config(https));
+
+https.configure('production', function(){
+  https.use(express.errorHandler());
+});
+
+https.configure(config.final_config(https));
 
 //Helpers
 https.helpers(require('./views/helpers'));
-
-// //i18n
-// i18n.configure({
-//   locales: appLocales,
-//   register: global,
-//   cookie: 'language',
-// })
 
 module.exports = https;
