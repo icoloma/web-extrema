@@ -24,6 +24,6 @@ exports.final_config = function (app) {
 exports.dev_config = function (app) {
   return function () {
     app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
-    app.use(lessMiddleware({src: appPath + '/public', compress: true }));
+    app.use(lessMiddleware({src: appPath + '/public' }));
   };
 };

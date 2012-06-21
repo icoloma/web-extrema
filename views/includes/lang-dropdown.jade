@@ -1,0 +1,14 @@
+-var languages = locales.slice(0);
+-languages.splice(languages.indexOf(lang),1);
+li.dropdown
+  a.dropdown-toggle(data-toggle='dropdown')
+    | !{__('lang-' + lang)}
+    b.caret
+  ul.dropdown-menu
+    -for locale in languages
+      -if(locale !== lang) {
+        li
+          a(href='/' + locale) !{__('lang-' + locale)}
+            -if(languages.indexOf(locale) !== languages.length-1)
+              li.divider
+      -}

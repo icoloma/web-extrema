@@ -13,7 +13,8 @@ module.exports = function(server) {
   //Pasar el idioma para la barra de navegación
   server.all('*', function (req, res, next) {
       res.local('lang', i18n.getLocale(req));
-      res.local('user', req.user || '')
+      res.local('user', req.user || '');
+      res.local('locales', appLocales);
       next();
   });
 
