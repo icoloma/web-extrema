@@ -13,7 +13,7 @@
           -for(i in members) {
             -var member = members[i]
             -if(member.type === 'IT')
-              include ./includes/team-member
+              include ../includes/team-member
           -}
       .span6
         h2 !{__('Management-team')}
@@ -21,10 +21,8 @@
           -for(i in members) {
             -var member = members[i]
             -if(member.type === 'Management')
-              include ./includes/team-member
+              include ../includes/team-member
           -}
 -if(user) {
 a(href="/team/new").btn New
-
-a(href="/admin").btn Back
 -}

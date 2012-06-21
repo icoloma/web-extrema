@@ -33,17 +33,26 @@ body, p, h1, h2, h3, h4, h5 {
 
 .logo {
 
-  .hide-text();
-
-  display: block;
-  background: url('../images/logo_extrema.png') no-repeat 50% 50%;
-
-  background-size: auto 100%;
+  background: #d1dbe4;
+  background: -moz-linear-gradient(top, #d1dbe4 0%, #9fb6c8 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d1dbe4), color-stop(100%,#9fb6c8));
+  background: -webkit-linear-gradient(top, #d1dbe4 0%,#9fb6c8 100%);
+  background: -o-linear-gradient(top, #d1dbe4 0%,#9fb6c8 100%);
+  background: -ms-linear-gradient(top, #d1dbe4 0%,#9fb6c8 100%);
+  background: linear-gradient(top, #d1dbe4 0%,#9fb6c8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1dbe4', endColorstr='#9fb6c8',GradientType=0 );
 
   height: 100px;
 
-  // padding: 10px 0;
-  // margin: 10px 0;
+  & > a {
+      height: 100%;
+      display: block;
+      background: url('../images/logo_extrema.png') no-repeat 50% 50%;
+
+      .hide-text();
+
+      background-size: auto 70%;
+  }
 }
 
 .navbar-inner { //Bootstrap
@@ -74,6 +83,14 @@ body, p, h1, h2, h3, h4, h5 {
 
 /* ***** */
 
+/* MAIN SECTION */
+
+.main {
+  // max-width: 950px;
+  // .center();
+}
+
+
 /* HOME PAGE */
 ul.thumbnails {
   margin-left: 0;
@@ -83,15 +100,19 @@ ul.thumbnails {
   text-align: center;
 }
 
+a.thumbnail {
+  color: black;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 /* ***** */
 
 /* TEAM PAGE */
 
-.team-members {
-  list-style: none;
-}
-
-.sociallinks {
+.team-members, .sociallinks {
   list-style: none;
 }
 
@@ -124,6 +145,25 @@ ul.thumbnails {
 
 }
 /* ***** */
+
+/* COURSES PAGE */
+
+.courses-list {
+  list-style: none;
+
+  & > li {
+      & > img {
+        float: left;
+        margin-top: 20px;
+        margin-right: 20px;
+      }
+
+      & > p {
+        overflow: hidden;
+        margin-top: 20px;
+      }
+  }
+}
 
 @media (max-width: 580px) {
   /* HEADER */
@@ -193,6 +233,7 @@ ul.thumbnails {
     .center();
 
     margin-bottom: 10px;
+
   }
 
 

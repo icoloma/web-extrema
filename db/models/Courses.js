@@ -18,6 +18,7 @@ var CourseSchema = new mongoose.Schema({
       contentType: String
    }
   , deleted: {type: Boolean, default: false}
+  , type: String
 });
 
 /*

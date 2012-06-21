@@ -2,6 +2,11 @@ form(method="post", action="/courses/add",enctype="multipart/form-data").form-ho
   .row-fluid
     .span6
       !{i18nTextInput('Name', 'name', 'required')}
+      .control-group
+        select(name="type")
+          option HTML5
+          option Spring
+          option Javaspecialists
     .span6
       .control-group
         label Picture

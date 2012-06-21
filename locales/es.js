@@ -10,5 +10,6 @@
 	"about-us-p2": "Multitud de empresas han confiado en nosotros para llevar sus sistemas informáticos al siguiente nivel en ámbitos tan diversos como sistemas de navegación aérea o banca. Esto nos ha permitido aprender y reinventarnos cada día, desarrollando un magnífico equipo de trabajo del que sentirnos orgullosos.",
 	"about-us-p3": "Tenemos presencia en España, Suiza e Italia, pero seguimos contestando al teléfono nosotros mismos.",
 	"IT-team": "Equipo técnico",
-	"Management-team": "Equipo gestión"
+	"Management-team": "Equipo gestión",
+	"Courses": "Cursos"
 }

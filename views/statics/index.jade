@@ -1,34 +1,24 @@
 .main.container-fluid
   .home-text
-    h1 !{__('Salutations')}
-    p
-      | !{__('Ninjas')}
-  hr
-  .home-text
     h1 Training
     h4
       | The most advanced IT training courses delivered by experienced professionals. Nuestros cursos son la repera, prosciutto beef flank chuck turkey, ...
     ul.thumbnails.row-fluid.courses
-      li.span3
-        .thumbnail
+      li.span4
+        a(href="/courses/javaspecialists").thumbnail
           img(src='/images/javasp.jpg')
           .caption
             h4 Javaspecialists
-      li.span3
-        .thumbnail
+      li.span4
+        a(href="/courses/HTML5").thumbnail
           img(src='/images/html5.png')
           .caption
             h4 HTML5 and CSS3
-      li.span3
-        .thumbnail
+      li.span4
+        a(href="/courses/spring").thumbnail
           img(src='/images/spring.png')
           .caption
             h4 Spring alpha
-      li.span3
-        .thumbnail
-          img(src='/images/spring.png')
-          .caption
-            h4 Spring omega
   hr
   .home-text
     h1 Clients

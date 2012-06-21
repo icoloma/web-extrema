@@ -10,15 +10,18 @@ module.exports = function (server) {
 
   //Home page
   server.get('/', function (req, res) {
-    res.render('index', {
-      title: 'extrema-sistemas.com'
-    })
+    Courses.getItems(function (err, items) {
+      res.render('statics/index', {
+        title: 'extrema-sistemas.com',
+        courses: items
+      });      
+    });
   });
 
   //Team page
   server.get('/team', function (req, res, next) {
     Members.getItems(function (err, items) {
-      res.render('team', {
+      res.render('statics/team', {
         title: 'Team',
         items: items
       })
@@ -39,16 +42,6 @@ module.exports = function (server) {
     });
   });
 
-  //Courses page
-  server.get('/courses', function (req, res, next) {
-    Courses.getItems(function (err, items) {
-      res.render('admin/courses', {
-        title: 'Courses',
-        items: items
-      })
-    });
-  });
-
   //Pedir thumbnail
   server.get('/courses/:item/thumb', function (req, res) {
     var id = req.params.item;
@@ -62,4 +55,6 @@ module.exports = function (server) {
       }
     });
   });
+
+  require('./courses')(server);
 }

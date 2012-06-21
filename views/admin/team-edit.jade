@@ -13,16 +13,9 @@ form(method="post",
         input(type="email", name="email", value=member.email)
       .control-group
         label Type
-        -if(member.type == 'IT') {
         select(name="type")
-          option(selected="selected") IT
-          option Management
-        -}
-        -else {
-          select(name="type")
-           option IT
-           option(selected="selected") Management
-        -}
+          !{typeComboOption(member.type, 'IT')}
+          !{typeComboOption(member.type, 'Management')}
     .span4
       .control-group
         label Picture

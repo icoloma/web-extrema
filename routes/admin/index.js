@@ -5,14 +5,11 @@ mongoose.connect('mongodb://localhost/extrema');
 
 
 module.exports = function (server) {
-  var courses = require('./courses'),
-    members = require('./members'),
-    venues = require('./venues'),
-    editions = require('./editions');
 
+  var adminZone = /edit|delete|add|new|admin|venues|update|editions/;
 
-  server.all('/(.+)/', function (req, res, next) {
-    if (req.isAuthenticated() || req.params[0] === '/user') { 
+  server.get(adminZone, function (req, res, next) {
+    if (req.user || req.url === '/user') { 
       next(); 
     } else {
       res.redirect('/user')
@@ -39,6 +36,12 @@ module.exports = function (server) {
     req.logout();
     res.redirect('http://localhost:4000');
   });
+
+
+  var courses = require('./courses'),
+    members = require('./members'),
+    venues = require('./venues'),
+    editions = require('./editions');
 
   courses(server);
   members(server);

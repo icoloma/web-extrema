@@ -2,20 +2,48 @@
 html
   head
     title= title
+
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.min2.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     -if(user) {
     link(rel='stylesheet', href='/stylesheets/admin-style.css')
     -}
+
   body
-    .header
-      .navbar.container-fluid
+    header
+      div.logo
+        a(href="/") Extrema
+      .navbar
         .navbar-inner
           .container
-            ul.nav.first-list
-              li
-                a.brand(href='/') Extrema
+            a#btn-toggle(data-toggle="collapse", data-target=".nav-collapse") V
+            .nav-collapse
+              ul.nav.main-list
+                li
+                  a(href='/') !{__('Home')}
+                li
+                  a(href='/team') !{__('Team')}
+                li
+                  a(href='/follow-us') !{__('Follow-us')}
+                -if(user)
+                  li
+                    a(href='/courses') !{__('Courses')}
+              -if (user) {
+                ul.nav.pull-right
+                  li
+                    a(href="/logout") Logout
+              -}
+              ul.nav.pull-right.langs.visible-desktop
+                include ../includes/lang-dropdown
+    !{body}
+
+    .footer
+      .navbar.visible-phone
+        .navbar-inner
+          .container
             ul.nav.main-list
               li
                 a(href='/') !{__('Home')}
@@ -28,14 +56,11 @@ html
                 li
                   a(href="/logout") Logout
             -}
-            ul.nav.pull-right.langs
-              include ../includes/lang-list
-    .container-fluid
-      !{body}
-
-    .footer
-      .container-fluid
-        a(href='#') Contact
+              ul.nav.langs
+                include ../includes/lang-dropdown
 
   script(type="text/javascript", src="/javascripts/jquery-1.7.2.min.js")
   script(type="text/javascript", src="/javascripts/bootstrap-dropdown.js")
+  script(type="text/javascript", src="/javascripts/bootstrap-collapse.js")
+  script(type="text/javascript", src="/javascripts/bootstrap-tab.js") 
+

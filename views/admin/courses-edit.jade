@@ -1,11 +1,17 @@
 h1 !{title}
 -var course = item
+-if(item.type)
 form(method="post",
   action="/courses/"+course._id+"/update",
   enctype="multipart/form-data").form-horizontal
   .row-fluid
     .span6
       !{i18nTextInput('Name', 'name', 'required', course.name)}
+      .control-group
+        select(name="type")
+          !{typeComboOption(item.type, 'HTML5')}
+          !{typeComboOption(item.type, 'Spring')}
+          !{typeComboOption(item.type, 'Javaspecialists')}
     .span6
       .control-group
         label Picture

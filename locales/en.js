@@ -10,5 +10,6 @@
 	"about-us-p2": "Many companies have relied on us to move their information systems to the next level in such disparate areas as air traffic systems or e-banking. We have learned and reinvented our ways, which helped to produce a great training team that makes us proud.",
 	"about-us-p3": "We have presence in Spain, Switzerland and Italy, but we keep getting the phone ourselves.",
 	"IT-team": "IT team",
-	"Management-team": "Management team"
+	"Management-team": "Management team",
+	"Courses": "Courses"
 }

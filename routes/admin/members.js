@@ -2,16 +2,6 @@ var Members = require(appPath + '/db/models/Members').Members;
 
 module.exports = function (app) {
 
-  // //Lista de items
-  // app.get('/team', function (req, res, next) {
-  //   Members.getItems(function (err, items) {
-  //     res.render('team', {
-  //       title: 'Team',
-  //       items: items
-  //     })
-  //   });
-  // });
-
   //Visualizar y editar un item individual
   app.get('/team/:item/edit', function (req, res) {
     var id = req.params.item;

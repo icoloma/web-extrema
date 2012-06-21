@@ -47,9 +47,4 @@ module.exports = function(server) {
   var statics = require('./statics');
   statics(server);
 
-  // //Rutas de la zona de administración
-  // var admin = require('./admin');
-  // admin(server);
-
-
 };
