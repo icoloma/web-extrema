@@ -1,9 +1,12 @@
-.row
-  form(method="post",
-    action="/login").span8.offset2
-    label User
-    input(type="text", name="username").span4.offset2
-    label Password
-    input(type="password", name="password").span4.offset2
-    .control-group
-      button(type="submit") Login
+extends ../layouts/layout
+
+block content
+  .row
+    form(method="post",
+      action="/login").span8.offset2
+      label User
+      input(type="text", name="username").span4.offset2
+      label Password
+      input(type="password", name="password").span4.offset2
+      .control-group
+        button(type="submit") Login

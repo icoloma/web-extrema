@@ -1,16 +1,17 @@
 !!!
 html
-  head
-    title= title
+  block head
+    head
+      title= title
 
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
-    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
-    link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.min2.css')
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    -if(user) {
-    link(rel='stylesheet', href='/stylesheets/admin-style.css')
-    -}
+      link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+      link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.min2.css')
+      link(rel='stylesheet', href='/stylesheets/style.css')
+      -if(user) {
+      link(rel='stylesheet', href='/stylesheets/admin-style.css')
+      -}
 
   body
     header
@@ -36,11 +37,10 @@ html
                   li
                     a(href="/logout") Logout
               -}
-              ul.nav.pull-right.langs.visible-desktop
-                include ../includes/lang-dropdown
-    !{body}
+              include ../includes/lang-dropdown
+    block content
 
-    .footer
+    footer
       .navbar.visible-phone
         .navbar-inner
           .container
@@ -56,11 +56,11 @@ html
                 li
                   a(href="/logout") Logout
             -}
-              ul.nav.langs
-                include ../includes/lang-dropdown
+              include ../includes/lang-pills
 
-  script(type="text/javascript", src="/javascripts/jquery-1.7.2.min.js")
-  script(type="text/javascript", src="/javascripts/bootstrap-dropdown.js")
-  script(type="text/javascript", src="/javascripts/bootstrap-collapse.js")
-  script(type="text/javascript", src="/javascripts/bootstrap-tab.js") 
+  block scripts
+    script(type="text/javascript", src="/javascripts/jquery-1.7.2.min.js")
+    script(type="text/javascript", src="/javascripts/bootstrap-dropdown.js")
+    script(type="text/javascript", src="/javascripts/bootstrap-collapse.js")
+    script(type="text/javascript", src="/javascripts/bootstrap-tab.js")
 

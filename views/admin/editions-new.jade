@@ -1,15 +1,18 @@
-h1 !{title}
-form(method="post",
-  action="/editions/add").form-horizontal.row-fluid
-  .span6
-    .control-group
-      label Date
-      input(type="date", name="date")
-    !{formatCombos('Venue', 'venue', venues, origin.venues)}
-  .span6
-    !{formatCombos('Course', 'course', courses, origin.courses)}
-    !{formatCombos('Instructor', 'instructor', members, origin.team)}
-  input(type="hidden", name="origin", value=origin.address)
-  div
-    button(type="submit").btn.btn-info Submit
-    a(href=origin.address).btn.btn-warning Cancel
+extends ../layouts/layout
+
+block content
+  h1 !{title}
+  form(method="post",
+    action="/editions/add").form-horizontal.row-fluid
+    .span6
+      .control-group
+        label Date
+        input(type="date", name="date")
+      !{formatCombos('Venue', 'venue', venues, origin.venues)}
+    .span6
+      !{formatCombos('Course', 'course', courses, origin.courses)}
+      !{formatCombos('Instructor', 'instructor', members, origin.team)}
+    input(type="hidden", name="origin", value=origin.address)
+    div
+      button(type="submit").btn.btn-info Submit
+      a(href=origin.address).btn.btn-warning Cancel

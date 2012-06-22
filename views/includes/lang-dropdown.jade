@@ -1,14 +1,13 @@
--var languages = locales.slice(0);
--languages.splice(languages.indexOf(lang),1);
-li.dropdown
-  a.dropdown-toggle(data-toggle='dropdown')
-    | !{__('lang-' + lang)}
-    b.caret
-  ul.dropdown-menu
-    -for locale in languages
-      -if(locale !== lang) {
-        li
-          a(href='/' + locale) !{__('lang-' + locale)}
-            -if(languages.indexOf(locale) !== languages.length-1)
-              li.divider
-      -}
+ul.nav.pull-right.visible-desktop
+  li.dropdown
+    a.dropdown-toggle(data-toggle='dropdown')
+      | !{__('lang-' + lang)}
+      b.caret
+    ul.dropdown-menu
+      -for locale in other_langs
+        -if(locale !== lang) {
+          li
+            a(href='/' + locale) !{__('lang-' + locale)}
+              -if(other_langs.indexOf(locale) !== other_langs.length-1)
+                li.divider
+        -}

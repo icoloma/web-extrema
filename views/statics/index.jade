@@ -1,42 +1,45 @@
-.main.container-fluid
-  .home-text
-    h1 Training
-    h4
-      | The most advanced IT training courses delivered by experienced professionals. Nuestros cursos son la repera, prosciutto beef flank chuck turkey, ...
-    ul.thumbnails.row-fluid.courses
-      li.span4
-        a(href="/courses/javaspecialists").thumbnail
-          img(src='/images/javasp.jpg')
-          .caption
-            h4 Javaspecialists
-      li.span4
-        a(href="/courses/HTML5").thumbnail
-          img(src='/images/html5.png')
-          .caption
-            h4 HTML5 and CSS3
-      li.span4
-        a(href="/courses/spring").thumbnail
-          img(src='/images/spring.png')
-          .caption
-            h4 Spring alpha
-  hr
-  .home-text
-    h1 Clients
-    h4
-      | Our clients love us, tenderloin pastrami. Jowl swine beef ribs brisket. Pig bacon prosciutto jerky, Tart pudding lollipop biscuit cupcake sweet roll wafer candy lollipop. Cheesecake oat cake biscuit fruitcake gummi bears...
-    ul.thumbnails.row-fluid.clients
-      li.span2
-        .thumbnail
-          img(src='/images/aena.png')
-      li.span2
-        .thumbnail
-          img(src='/images/bbva.jpg')
-      li.span2
-        .thumbnail
-          img(src='/images/cajamadrid.jpg')
-      li.span2
-        .thumbnail
-          img(src='/images/indra.jpg')
-      li.span2
-        .thumbnail
-          img(src='/images/tenerife.gif')
+extends ../layouts/layout
+
+block content
+  .main.container-fluid
+    .home-text
+      h1 Training
+      h4
+        | The most advanced IT training courses delivered by experienced professionals. Nuestros cursos son la repera, prosciutto beef flank chuck turkey, ...
+      ul.thumbnails.row-fluid.courses
+        li.span4
+          a(href="/courses#javaspecialists").thumbnail
+            img(src='/images/javasp.jpg')
+            .caption
+              h4 Javaspecialists
+        li.span4
+          a(href="/courses#HTML5").thumbnail
+            img(src='/images/html5.png')
+            .caption
+              h4 HTML5 and CSS3
+        li.span4
+          a(href="/courses#spring").thumbnail
+            img(src='/images/spring.png')
+            .caption
+              h4 Spring alpha
+    hr
+    .home-text
+      h1 Clients
+      h4
+        | Our clients love us, tenderloin pastrami. Jowl swine beef ribs brisket. Pig bacon prosciutto jerky, Tart pudding lollipop biscuit cupcake sweet roll wafer candy lollipop. Cheesecake oat cake biscuit fruitcake gummi bears...
+      ul.thumbnails.row-fluid.clients
+        li.span2
+          .thumbnail
+            img(src='/images/aena.png')
+        li.span2
+          .thumbnail
+            img(src='/images/bbva.jpg')
+        li.span2
+          .thumbnail
+            img(src='/images/cajamadrid.jpg')
+        li.span2
+          .thumbnail
+            img(src='/images/indra.jpg')
+        li.span2
+          .thumbnail
+            img(src='/images/tenerife.gif')

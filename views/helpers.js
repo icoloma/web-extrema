@@ -7,7 +7,7 @@ module.exports = {
         if(!content) {
           return tag + '>';
         } else {
-          tag += ' value=' + content[locale] + '>';
+          tag += ' value="' + content[locale] + '">';
           return tag;
         }
       },
@@ -65,6 +65,20 @@ module.exports = {
     combo += '</select></div>';
 
     return combo;
+  },
+
+  typeComboOption: function(type, option) {
+    var html = '<option' + (type === option && ' selected="selected"' || '') +
+      '>' + option + '</option>';
+    return html;
+  },
+
+  courseThumbnail: function (course, lang) {
+    var html = '<div class="thumbnail"><img src="/courses/' + course._id +
+      '/thumb"><div class="caption"><h4>' + course.name[lang] +
+      '</h4></div></div>';
+      
+    return html;
   },
 
 }

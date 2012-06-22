@@ -1,20 +1,25 @@
+extends ../layouts/layout
+
 include ../includes/courses-list
--var courses = items
 
+block content
+  -var courses = items
+  ul.nav.nav-tabs
+      mixin courseTab('Javaspecialists', 'javaspecialists')
+      mixin courseTab('HTML5', 'HTML5')
+      mixin courseTab('Spring', 'spring')
+  .container-fluid
+    .span8.tab-content
+      mixin courseContent('Javaspecialists', 'javaspecialists')
+      mixin courseContent('HTML5', 'HTML5')
+      mixin courseContent('Spring', 'spring')
+  -if(user) {
+    a(href="/courses/new").btn New
+  -}
 
-ul.nav.nav-pills
-    mixin courseTab('Javaspecialists', 'javaspecialists')
-    mixin courseTab('HTML5', 'HTML5')
-    mixin courseTab('Spring', 'spring')
-.container-fluid
-  .span8.tab-content
-    mixin courseContent('Javaspecialists', 'javaspecialists')
-    mixin courseContent('HTML5', 'HTML5')
-    mixin courseContent('Spring', 'spring')
--if(user) {
-a(href="/courses/new").btn New
--}
-script
-  $(function() {
-    //location.hash && 
-  });
+block append scripts
+  script
+    if(location.hash) {
+      $('li > [href=' + location.hash + ']').parent().addClass('active')
+      $(location.hash).addClass('active')
+    }

@@ -1,20 +1,23 @@
-h1 #{title}
--var members = items
-table.table.table-striped
-  thead
-    tr
-      th
-      th Name
-      th Team
-  tbody
-  -for (var i in members)
-    tr
-      td
-        img(src="/team/"+members[i]._id+"/thumb").thumb-list
-      td 
-        a(href="/team/"+members[i]._id+"/edit") !{members[i].name}
-      td !{members[i].type}
-a(href="/team/new").btn New
+extends ../layouts/layout
 
-a(href="/admin").btn Back
+block content
+  h1 #{title}
+  -var members = items
+  table.table.table-striped
+    thead
+      tr
+        th
+        th Name
+        th Team
+    tbody
+    -for (var i in members)
+      tr
+        td
+          img(src="/team/"+members[i]._id+"/thumb").thumb-list
+        td 
+          a(href="/team/"+members[i]._id+"/edit") !{members[i].name}
+        td !{members[i].type}
+  a(href="/team/new").btn New
+
+  a(href="/admin").btn Back
 

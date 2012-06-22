@@ -1,34 +1,37 @@
-form(method="post", action="/team/add",enctype="multipart/form-data").form-horizontal
-  .row-fluid
-    .span4
-      .control-group
-        label Name
-        input(type="text", name="name", required)
-      .control-group
-        label E-mail
-        input(type="email", name="email")
-      .control-group
-        label Type
-        select(name="type")
-          option IT
-          option Management
-    .span4
-      .control-group
-        label Picture
-        input(type="file", name="thumb")
-        !{i18nTextArea('Description', 'description', 'class="description-input"')}
-    .span4
-      label
-        h4 Social links
-      .control-group
-        label Twitter 
-        input(type="text", name="twitter",placeholder="@user")
-      .control-group
-        label Blog 
-        input(type="text", name="blog")
-      .control-group
-        label Linkedin
-        input(type="text", name="linkedin")
-  div
-    button(type="submit").btn.btn-info Submit
-    a(href="/team").btn.btn-warning Cancel
+extends ../layouts/layout
+
+block content
+  form(method="post", action="/team/add",enctype="multipart/form-data").form-horizontal
+    .row-fluid
+      .span4
+        .control-group
+          label Name
+          input(type="text", name="name", required)
+        .control-group
+          label E-mail
+          input(type="email", name="email")
+        .control-group
+          label Type
+          select(name="type")
+            option IT
+            option Management
+      .span4
+        .control-group
+          label Picture
+          input(type="file", name="thumb")
+          !{i18nTextArea('Description', 'description', 'class="description-input"')}
+      .span4
+        label
+          h4 Social links
+        .control-group
+          label Twitter 
+          input(type="text", name="twitter",placeholder="@user")
+        .control-group
+          label Blog 
+          input(type="text", name="blog")
+        .control-group
+          label Linkedin
+          input(type="text", name="linkedin")
+    div
+      button(type="submit").btn.btn-info Submit
+      a(href="/team").btn.btn-warning Cancel

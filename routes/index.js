@@ -4,7 +4,7 @@ module.exports = function(server) {
 
 
   server.set('view options', {
-    layout: appPath + '/views/layouts/layout'
+    layout: false
   });
 
   /*
@@ -12,10 +12,15 @@ module.exports = function(server) {
   */
   //Pasar el idioma para la barra de navegación
   server.all('*', function (req, res, next) {
-      res.local('lang', i18n.getLocale(req));
-      res.local('user', req.user || '');
-      res.local('locales', appLocales);
-      next();
+    var lang = i18n.getLocale(req),
+      other_langs = appLocales
+                      .slice(0);
+      other_langs.splice(other_langs.indexOf(lang), 1);
+
+    res.local('lang', lang);
+    res.local('user', req.user || '');
+    res.local('other_langs', other_langs);
+    next();
   });
 
   //Cambio de idioma mediante cookie

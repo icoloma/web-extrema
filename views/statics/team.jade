@@ -1,28 +1,32 @@
--var members = items
-.main.container-fluid
-  .about
-    h2 !{__('About us')}
-    p !{__('about-us-p1')}
-    p !{__('about-us-p2')}
-    p !{__('about-us-p3')}
-  .team
-    .row-fluid
-      .span6
-        h2 !{__('IT-team')}
-        ul.team-members.IT
-          -for(i in members) {
-            -var member = members[i]
-            -if(member.type === 'IT')
-              include ../includes/team-member
-          -}
-      .span6
-        h2 !{__('Management-team')}
-        ul.team-members.management
-          -for(i in members) {
-            -var member = members[i]
-            -if(member.type === 'Management')
-              include ../includes/team-member
-          -}
--if(user) {
-a(href="/team/new").btn New
--}
+extends ../layouts/layout
+
+block content
+
+  -var members = items
+  .main.container-fluid
+    .about
+      h2 !{__('About us')}
+      p !{__('about-us-p1')}
+      p !{__('about-us-p2')}
+      p !{__('about-us-p3')}
+    .team
+      .row-fluid
+        .span6
+          h2 !{__('IT-team')}
+          ul.team-members.IT
+            -for(i in members) {
+              -var member = members[i]
+              -if(member.type === 'IT')
+                include ../includes/team-member
+            -}
+        .span6
+          h2 !{__('Management-team')}
+          ul.team-members.management
+            -for(i in members) {
+              -var member = members[i]
+              -if(member.type === 'Management')
+                include ../includes/team-member
+            -}
+  -if(user) {
+  a(href="/team/new").btn New
+  -}
