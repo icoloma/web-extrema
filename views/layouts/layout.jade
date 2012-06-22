@@ -21,7 +21,7 @@ html
         .navbar-inner
           .container
             a#btn-toggle(data-toggle="collapse", data-target=".nav-collapse") V
-            .nav-collapse
+            .nav-collapse.wrapper
               ul.nav.main-list
                 li
                   a(href='/') !{__('Home')}
@@ -38,7 +38,8 @@ html
                     a(href="/logout") Logout
               -}
               include ../includes/lang-dropdown
-    block content
+    .wrapper
+      block content
 
     footer
       .navbar.visible-phone

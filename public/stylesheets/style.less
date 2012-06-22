@@ -31,6 +31,15 @@ body, p, h1, h2, h3, h4, h5 {
   font-family: RobotoRegular;
 }
 
+ul {
+  margin-left: 0px;
+}
+
+.wrapper {
+  max-width: 950px;
+  .center();
+}
+
 /* HEADER */
 
 .logo {
@@ -94,9 +103,6 @@ body, p, h1, h2, h3, h4, h5 {
 
 
 /* HOME PAGE */
-ul.thumbnails {
-  margin-left: 0;
-}
 
 .caption {
   text-align: center;
@@ -167,7 +173,23 @@ a.thumbnail {
   }
 }
 
+#courses-pills {
+  text-align: center;
+  & > ul {
+    display: inline-block;
+    
+    & > .active > a {
+      background-color: darken(@backgroundNav, 3%);
+    }
+  }
+}
+
 @media (max-width: 580px) {
+
+  [class*="span"] {
+    margin-left: 0;
+  }
+
   /* HEADER */
 
   .navbar-inner { //Bootstrap
