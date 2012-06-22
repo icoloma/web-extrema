@@ -19,18 +19,18 @@ append content
           select(name="type")
             !{typeComboOption(member.type, 'IT')}
             !{typeComboOption(member.type, 'Management')}
-      .span4
         .control-group
           label Picture
           img(src="thumb")
-          input(type="file", name="thumb")
+          input(type="file", name="thumb")      
+      .span4
           !{i18nTextArea('Description', 'description', 'class="description-input"', member.description)}
       .span4
         label
           h4 Social links
         .control-group
           label Twitter 
-          input(type="text", name="twitter", placeholder="@user", value=member.twitter)
+          input(type="text", name="twitter", placeholder="User name", value=member.twitter)
         .control-group
           label Blog 
           input(type="text", name="blog", value=member.blog)

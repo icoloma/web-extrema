@@ -15,17 +15,17 @@ append content
           select(name="type")
             option IT
             option Management
-      .span4
         .control-group
           label Picture
           input(type="file", name="thumb")
+      .span4
           !{i18nTextArea('Description', 'description', 'class="description-input"')}
       .span4
         label
           h4 Social links
         .control-group
           label Twitter 
-          input(type="text", name="twitter",placeholder="@user")
+          input(type="text", name="twitter", placeholder="User name")
         .control-group
           label Blog 
           input(type="text", name="blog")

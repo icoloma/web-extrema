@@ -24,7 +24,7 @@ module.exports = {
   i18nTextArea: function(label, field, options, content) {
     var list = '',
       tagOpen = function (locale) {
-        var tag = '<textarea name="' + field + '.'  + locale + '" ' +
+        var tag = '<textarea rows=5 name="' + field + '.'  + locale + '" ' +
           (options || '') + '>';
         return tag;
       },

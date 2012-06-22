@@ -4,19 +4,20 @@ include ../includes/courses-list
 
 append content
   -var courses = items
-  div#courses-pills
-    ul.nav.nav-pills
-        mixin courseTab('Javaspecialists', 'javaspecialists')
-        mixin courseTab('HTML5', 'HTML5')
-        mixin courseTab('Spring', 'spring')
   .container-fluid
-    .span8.tab-content
-      mixin courseContent('Javaspecialists', 'javaspecialists')
-      mixin courseContent('HTML5', 'HTML5')
-      mixin courseContent('Spring', 'spring')
-  -if(user) {
-    a(href="/courses/new").btn New
-  -}
+    div#courses-pills
+      ul.nav.nav-pills
+          mixin courseTab('Javaspecialists', 'javaspecialists')
+          mixin courseTab('HTML5', 'HTML5')
+          mixin courseTab('Spring', 'spring')
+    .row-fluid
+      .span8.tab-content
+        mixin courseContent('Javaspecialists', 'javaspecialists')
+        mixin courseContent('HTML5', 'HTML5')
+        mixin courseContent('Spring', 'spring')
+        if(user)
+          a(href="/courses/new").btn.btn-large.btn-info New
+      .span4
 
 block append scripts
   script

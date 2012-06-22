@@ -40,6 +40,10 @@ ul {
   .center();
 }
 
+.thumbnails {
+  margin-left: 0;
+}
+
 /* HEADER */
 
 .logo {
@@ -160,14 +164,16 @@ a.thumbnail {
   list-style: none;
 
   & > li {
+    margin-bottom: 40px;
+
       & > img {
         float: left;
         margin-top: 20px;
         margin-right: 20px;
+        margin-bottom: 20px;
       }
 
       & > p {
-        overflow: hidden;
         margin-top: 20px;
       }
   }
@@ -178,6 +184,10 @@ a.thumbnail {
   & > ul {
     display: inline-block;
     
+    & > li {
+      min-width: 10px;
+    }
+
     & > .active > a {
       background-color: darken(@backgroundNav, 3%);
     }
@@ -191,6 +201,10 @@ a.thumbnail {
   }
 
   /* HEADER */
+
+  .logo {
+    height: 60px;
+  }
 
   .navbar-inner { //Bootstrap
     width: 100%; 

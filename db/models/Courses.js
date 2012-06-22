@@ -12,7 +12,9 @@ El campo 'deleted' se usa en el borrado lógico.
 */
 var CourseSchema = new mongoose.Schema({
     name: locales
-  , description: locales  
+  , description: locales
+  , long_description: locales
+  , details: locales  
   , thumb : {
       data: Buffer,
       contentType: String

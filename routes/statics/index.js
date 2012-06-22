@@ -22,9 +22,16 @@ module.exports = function (server) {
   server.get('/team', function (req, res, next) {
     Members.getItems(function (err, items) {
       res.render('statics/team', {
-        title: 'Team',
+        title: __('Team') + ' | extrema-sistemas.com',
         items: items
-      })
+      });
+    });
+  });
+
+  //Follow-us page
+  server.get('/follow-us', function (req, res, next) {
+    res.render('statics/follow-us', {
+      title: __('Follow-us') + ' | extrema-sistemas.com',
     });
   });
 
