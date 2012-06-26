@@ -11,5 +11,9 @@
 	"about-us-p3": "Tenemos presencia en España, Suiza e Italia, pero seguimos contestando al teléfono nosotros mismos.",
 	"IT-team": "Equipo técnico",
 	"Management-team": "Equipo gestión",
-	"Courses": "Cursos"
+	"Courses": "Cursos",
+	"details-spring": "<p>Exento de IVA.<br><strong>Registro múltiple</strong>: 10% de descuento a partir del segundo alumno.<br><strong>Miembros de extrema-alumni</strong>: 15% de descuento.<br>Los descuentos no son acumulativos.</p><p>Si desea información adicional o condiciones preferentes para cursos con más de cinco asistentes solicítela escribiendo a <a href=\"mailto:training@extrema-sistemas.com\">training@extrema-sistemas.com</a>.</p>",
+	"details-javaspecialists": "<p>Exentos de IVA.<br>Asistentes miembros de extrema-alumni pueden beneficiarse de un <strong>15% de descuento</strong><br>Los descuentos no son acumulables.</p><p>Si desea información adicional o condiciones preferentes para cursos con más de cinco asistentes solicítela escribiendo a <a href=\"mailto:training@extrema-sistemas.com\">training@extrema-sistemas.com</a> .</p>",
+	"details-HTML5": "<p>Exento de IVA.<br><strong>Registro múltiple</strong>: 10% de descuento si se inscriben 2 alumnos, 15% a partir del tercero<br><strong>Miembros de extrema-alumni</strong> 15% de descuento.<br>Estos descuentos no son acumulativos.</p>",
+	"tripartita": "Cursos bonificables por la Fundación Tripartita."
 }

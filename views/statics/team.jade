@@ -1,7 +1,6 @@
 extends ../layouts/layout
 
 append content
-
   -var members = items
   .main.container-fluid
     .about
@@ -9,24 +8,19 @@ append content
       p !{__('about-us-p1')}
       p !{__('about-us-p2')}
       p !{__('about-us-p3')}
-    .team
-      .row-fluid
-        .span6
-          h2 !{__('IT-team')}
-          ul.team-members.IT
-            -for(i in members) {
-              -var member = members[i]
-              -if(member.type === 'IT')
-                include ../includes/team-member
-            -}
-        .span6
-          h2 !{__('Management-team')}
-          ul.team-members.management
-            -for(i in members) {
-              -var member = members[i]
-              -if(member.type === 'Management')
-                include ../includes/team-member
-            -}
+      div
+        a(href="http://blog.extrema-sistemas.com/").blog-extrema ex^2
+        a.twitter-extrema
+    .team-members
+      -for(var i = 0; i < members.length; i += 2) {
+        .row-fluid
+          -var member = members[i]
+            .span6.team-member
+              include ../includes/team-member
+            -var member = members[i+1]
+            .span6.team-member
+              include ../includes/team-member
+      -}
   -if(user) {
   a(href="/team/new").btn New
   -}

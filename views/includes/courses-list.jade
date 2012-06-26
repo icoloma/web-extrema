@@ -1,14 +1,13 @@
-mixin courseContent(type, id)
-  .tab-pane(id=id).row-fluid
+mixin courseContent(type)
+  .row-fluid
     ul.courses-list.span12
       for course in courses
         -if(course.type === type) {
           li
             h4 !{course.name[lang]}
             img(src="/courses/" + course._id + "/thumb")
-            //- p !{course.description[lang]}
-            !{course.long_description[lang]}
-            //- !{course.details[lang]}
+            span.label !{course.price + ' euros'}
+            !{course.description[lang]}
 
             -if(user) {
               a.btn(href="/courses/" + course._id + "/edit") Edit

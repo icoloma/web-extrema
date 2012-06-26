@@ -10,14 +10,42 @@ append content
           mixin courseTab('Javaspecialists', 'javaspecialists')
           mixin courseTab('HTML5', 'HTML5')
           mixin courseTab('Spring', 'spring')
-    .row-fluid
-      .span8.tab-content
-        mixin courseContent('Javaspecialists', 'javaspecialists')
-        mixin courseContent('HTML5', 'HTML5')
-        mixin courseContent('Spring', 'spring')
-        if(user)
-          a(href="/courses/new").btn.btn-large.btn-info New
-      .span4
+    .tab-content
+      .row-fluid.tab-pane#javaspecialists
+        .span8
+          mixin courseContent('Javaspecialists')
+        .span4
+          //- div.kcontainer(data-show-id="htP")
+          .alert
+            !{__('details-javaspecialists')}
+          .thumbnail
+            img(src="images/tripartita.jpg")
+            .caption
+              h5 !{__('tripartita')}
+      .row-fluid.tab-pane#HTML5
+        .span8
+          mixin courseContent('HTML5')
+        .span4
+          .alert
+            !{__('details-HTML5')}
+          .thumbnail
+            img(src="images/tripartita.jpg")
+            .caption
+              h5 !{__('tripartita')}
+      .row-fluid.tab-pane#spring
+        .span8
+          mixin courseContent('Spring')
+        .span4
+          div.kcontainer(data-show-id="BMf")
+          .alert
+            !{__('details-spring')}
+          .thumbnail
+            img(src="images/tripartita.jpg")
+            .caption
+              h5 !{__('tripartita')}
+
+    if(user)
+      a(href="/courses/new").btn.btn-large.btn-info New
 
 block append scripts
   script
@@ -28,3 +56,4 @@ block append scripts
       $('li > [href=#javaspecialists]').parent().addClass('active')
       $('#javaspecialists').addClass('active')
     }
+  script(src="//www.koliseo.com/w/kperf/1.0/kperf.min.js")

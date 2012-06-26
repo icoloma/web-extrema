@@ -4,5 +4,34 @@ append content
   .container-fluid
     .row-fluid
       .span8
-      .span4
-        include ../includes/twitter-widget.html
+        .blog-header
+          h1 EX^2
+          h2 El blog de Extrema Sistemas
+        for article in articles
+          article.post
+            -if(article.image && article.image.url)
+              img(src=article.image.url)
+            .post-header
+              a(href=article.link)
+                h3 !{article.title}
+              p.date !{article.date.toLocaleDateString()}
+            p !{article.summary}
+          hr
+      .span4.tweets-extrema
+        a(href="http://twitter.com/extremasistemas")
+          h4 @extremasistemas
+        .tweet
+        //- include ../includes/twitter-widget.html
+
+append scripts
+  script
+    jQuery(function($){
+      $(".tweet").tweet({
+          username: "extremasistemas",
+          join_text: "auto",
+          count: 5,
+          template: '{text}{time}',
+          loading_text: "Loading tweets..."
+      });
+    });
+  script(type="text/javascript", src="/javascripts/jquery.tweet.js")

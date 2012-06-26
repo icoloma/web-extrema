@@ -3,7 +3,7 @@ extends ../layouts/layout
 append content
   form(method="post", action="/courses/add",enctype="multipart/form-data").form-horizontal
     .row-fluid
-      .span3
+      .span4
         !{i18nTextInput('Name', 'name', 'required')}
         .control-group
           label Type
@@ -12,14 +12,13 @@ append content
             option Spring
             option Javaspecialists
         .control-group
+          label Price
+          input(type="number", name="price")
+        .control-group
           label Picture
           input(type="file", name="thumb")
-      .span3
+      .span8
         !{i18nTextArea('Description', 'description', 'class="description-input"')}
-      .span3
-        !{i18nTextArea('Long description', 'long_description', 'class="description-input"')}
-      .span3
-        !{i18nTextArea('Details', 'details', 'class="description-input"')}
     div
       button(type="submit").btn.btn-info Submit
       a(href="/courses").btn.btn-warning Cancel

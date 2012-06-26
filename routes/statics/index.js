@@ -1,6 +1,8 @@
 var Members = require('../../db/models/Members').Members,
   Courses = require('../../db/models/Courses').Courses;
 
+var FeedParser = require('feedparser'),
+  parser = new FeedParser();
 
 module.exports = function (server) {
 
@@ -23,15 +25,20 @@ module.exports = function (server) {
     Members.getItems(function (err, items) {
       res.render('statics/team', {
         title: __('Team') + ' | extrema-sistemas.com',
-        items: items
+        items: items.sort(function (john, jane) {
+          return john.name.localeCompare(jane.name);
+        }),
       });
     });
   });
 
   //Follow-us page
   server.get('/follow-us', function (req, res, next) {
-    res.render('statics/follow-us', {
-      title: __('Follow-us') + ' | extrema-sistemas.com',
+    parser.parseUrl('http://blog.extrema-sistemas.com/feed/', function (err, meta, articles) {
+      res.render('statics/follow-us', {
+        title: __('Follow-us') + ' | extrema-sistemas.com',
+        articles: articles,
+      });
     });
   });
 
