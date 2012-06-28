@@ -15,5 +15,19 @@
 	"details-spring": "<p>Exento de IVA.<br><strong>Registro múltiple</strong>: 10% de descuento a partir del segundo alumno.<br><strong>Miembros de extrema-alumni</strong>: 15% de descuento.<br>Los descuentos no son acumulativos.</p><p>Si desea información adicional o condiciones preferentes para cursos con más de cinco asistentes solicítela escribiendo a <a href=\"mailto:training@extrema-sistemas.com\">training@extrema-sistemas.com</a>.</p>",
 	"details-javaspecialists": "<p>Exentos de IVA.<br>Asistentes miembros de extrema-alumni pueden beneficiarse de un <strong>15% de descuento</strong><br>Los descuentos no son acumulables.</p><p>Si desea información adicional o condiciones preferentes para cursos con más de cinco asistentes solicítela escribiendo a <a href=\"mailto:training@extrema-sistemas.com\">training@extrema-sistemas.com</a> .</p>",
 	"details-HTML5": "<p>Exento de IVA.<br><strong>Registro múltiple</strong>: 10% de descuento si se inscriben 2 alumnos, 15% a partir del tercero<br><strong>Miembros de extrema-alumni</strong> 15% de descuento.<br>Estos descuentos no son acumulativos.</p>",
-	"tripartita": "Cursos bonificables por la Fundación Tripartita."
+	"tripartita": "Cursos bonificables por la Fundación Tripartita.",
+	"javasp-thumb": "javasp-thumb",
+	"HTML5-thumb": "HTML5-thumb",
+	"spring-thumb": "spring-thumb",
+	"Contact": "Contacto",
+	"Address": "Dirección",
+	"Phone": "Teléfono",
+	"Italy": "Italia",
+	"Email-to": "Email a",
+	"Join-us": "¿Quieres ser nuestro próximo desarrollador?",
+	"Send-CV": "Envía tu CV a",
+	"Join-us-p": "Para unirte a nuestro equipo, envía tu CV a:",
+	"required-fields": "required-fields",
+	"required": "required",
+	"Submit": "Submit"
 }
