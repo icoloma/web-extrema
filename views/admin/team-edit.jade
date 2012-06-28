@@ -15,14 +15,19 @@ append content
           label E-mail
           input(type="email", name="email", value=member.email)
         .control-group
-          label Type
-          select(name="type")
-            !{typeComboOption(member.type, 'IT')}
-            !{typeComboOption(member.type, 'Management')}
+          label Tags
+          textarea(id="textarea", name="tags") 
+          div
+            input(type="text", id="tagname", placeholder="tag name")
+            a(id="addtag").btn Click to add tag
+          ul(style="display: none")#previous-tags
+            -member.tags.forEach(function (tag) {
+              li !{tag}
+            -})
         .control-group
           label Picture
           img(src="thumb")
-          input(type="file", name="thumb")      
+          input(type="file", name="thumb")  
       .span4
           !{i18nTextArea('Description', 'description', 'class="description-input"', member.description)}
       .span4
@@ -45,3 +50,19 @@ append content
     button(type="submit").btn.btn-danger.btn-large.pull-right Delete
 
   include ../includes/editions-list
+
+append scripts
+  script(src="/javascripts/textext.js", type="text/javascript", charset="utf-8")
+  script(type="text/javascript")
+    
+    $('#textarea').textext({ plugins: 'tags' });
+
+    var previous = jQuery.makeArray($('#previous-tags > li').text());
+
+    $('#textarea').textext()[0].tags().addTags(previous);
+
+    $('#addtag').bind('click', function(e)
+    {
+        $('#textarea').textext()[0].tags().addTags([ $('#tagname').val() ]);
+        $('#tagname').val('');
+    });

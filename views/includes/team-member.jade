@@ -1,15 +1,13 @@
 -if(!user) {
-  h3.crewtitle 
+  h3(itemprop="name").crewtitle 
     !{member.name} 
-    span.label !{member.type}
 -} else {
-  h3.crewtitle 
+  h3(itemprop="name").crewtitle 
     a(href="/team/" + member._id + "/edit") 
       !{member.name}
-    span.label !{member.type}
 -}
 .details
-  img(src="/team/" + member._id + "/thumb", alt=member.name)
+  img(src="/team/" + member._id + "/thumb", alt=member.name, itemprop="image")
   ul.sociallinks
     -if(member.twitter)
       li.twitterlink
@@ -21,4 +19,8 @@
       li.weblink
         a(href=member.blog) Blog
 
-p !{member.description[lang]}
+p(itemprop="description") !{member.description[lang]}
+-member.tags.forEach( function (item) {
+  if(item)
+    span.label !{item}
+-});

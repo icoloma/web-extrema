@@ -1,0 +1,79 @@
+extends ../layouts/layout
+
+append content
+
+  .container-fluid
+    .row-fluid
+      .span8
+        h1 !{__('Contact')}
+        p !{__('required-fields')}
+        -if(alert) {
+          .alert.alert-warning
+            p !{alert}
+        -}
+        form(method="post", action="/send-comment").contact-form
+          .control-group
+            label Name:
+            input(type="text", name="name")
+          .control-group
+            label Organization:
+            input(type="text", name="organization")
+          -var required = '<span class="required" title="' + __('required') + '">*</span>'
+          .control-group
+            label 
+              | Email: 
+              | !{required}
+            input(type="email", required, name="email")
+          .control-group
+            label 
+              | Comment:
+              | !{required}
+            textarea(required, name="comment", rows=10)
+
+
+            script(type='text/javascript', src='http://www.google.com/recaptcha/api/challenge?k=6LcjZdMSAAAAAM6BSZH_hjej4enmL1KmSyPq5VrP')
+      
+            noscript
+              iframe(src='http://www.google.com/recaptcha/api/noscript?k=your_public_key', height='300', width='500', frameborder='0')
+              br
+              textarea(name='recaptcha_challenge_field', rows='3', cols='40')
+              input(type='hidden', name='recaptcha_response_field', value='manual_challenge')
+
+          button(type="submit") !{__('Submit')}
+      .span4.contact-data
+        .alert.alert-details
+          h2.alert-heading Madrid
+          br
+          h4 
+            | <i class="icon-user"></i>
+            | !{__('Address')}
+          address
+            | Extrema Sistemas S.L. <br />
+            | C/Casas de Miravete, 24A, Planta 1, Oficina 2 <br />
+            | CP 28031 <br />
+            | Madrid
+          h4 
+            | <i class="icon-th"></i>
+            | !{__('Phone')}
+          p (+34) 91 172 7081
+          hr
+          h2.alert-heading !{__('Italy')}
+          br
+          h4 
+            | <i class="icon-th"></i>
+            | !{__('Phone')}
+          p (+39) 06 929 56 158
+          hr
+          h2.alert-heading Email
+          br
+          h4 
+            | <i class="icon-envelope"></i>
+            | Email
+          a(href="mailto:info@extrema-sistemas.com",title=__('Email-to') + ": info@extrema-sistemas.com") info@extrema-sistemas.com
+          br
+          br
+          h4 !{__('Join-us')}
+          -var linkCV = '<a href="mailto:team@extrema-sistemas.com" class="email" title="' + __('Send-CV') + ': team@extrema-sistemas.com">team@extrema-sistemas.com</a>'
+          p  
+            | !{__('Join-us-p')}
+            | !{linkCV}

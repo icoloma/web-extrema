@@ -1,45 +1,35 @@
 extends ../layouts/layout
 
 append content
-  .main.container-fluid
-    .home-text
-      ul.thumbnails.row-fluid.courses
-        li.span4
-          a(href="/courses#javaspecialists").thumbnail.javaspecialists
-            .caption
-              h4 Javaspecialists
-              p Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla 
-              p Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla 
-              p Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla 
-        li.span4
-          a(href="/courses#HTML5").thumbnail.html5
-            .caption
-              h4 HTML5 and CSS3
-              p Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla 
-              p Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla 
-              p Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla 
-        li.span4
-          a(href="/courses#spring").thumbnail.spring
-            .caption
-              h4 Spring alpha
-              p Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla 
-              p Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla 
-              p Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla 
-    hr
-    .home-text
-      ul.thumbnails.row-fluid.clients
-        li.span2
-          .thumbnail
-            img(src='/images/aena.png')
-        li.span2
-          .thumbnail
-            img(src='/images/bbva.jpg')
-        li.span2
-          .thumbnail
-            img(src='/images/cajamadrid.jpg')
-        li.span2
-          .thumbnail
-            img(src='/images/indra.jpg')
-        li.span2
-          .thumbnail
-            img(src='/images/tenerife.gif')
+  .container-fluid.training
+    ul.thumbnails.row-fluid.courses
+      li.span4
+        a(href="/courses#javaspecialists").thumbnail.javaspecialists
+          .caption
+            h4 Javaspecialists
+            p !{__('javasp-thumb')}
+      li.span4
+        a(href="/courses#HTML5").thumbnail.html5
+          .caption
+            h4 HTML5 and CSS3
+            p !{__('HTML5-thumb')}
+      li.span4
+        a(href="/courses#spring").thumbnail.spring
+          .caption
+            h4 Spring
+            p !{__('spring-thumb')}
+  .row-fluid.clients
+    .span12
+      span.client-accenture Accenture
+      span.client-aena AENA
+      span.client-atos Atos
+      span.client-bbva BBVA
+      span.client-bde Banco de España
+      span.client-carrefour Carrefour
+      span.client-corteingles El Corte Inglés
+      span.client-everis Everis
+      span.client-iberdrola Iberdrola
+      span.client-icm ICM
+      span.client-indra INDRA
+      span.client-mapfre Mapfre
+      span.client-telefonica Telefónica

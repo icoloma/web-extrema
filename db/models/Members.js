@@ -16,7 +16,7 @@ El campo 'deleted' se usa en el borrado lógico.
 var MemberSchema = new mongoose.Schema({
      name: {type: String, required: true}
    , email: String
-   , type: String
+   , tags: [String]
    , description: locales
    , thumb : {
       data: Buffer,

@@ -2,24 +2,30 @@ extends ../layouts/layout
 
 append content
   -var members = items
-  .main.container-fluid
-    .about
-      h2 !{__('About us')}
-      p !{__('about-us-p1')}
-      p !{__('about-us-p2')}
-      p !{__('about-us-p3')}
-      div
-        a(href="http://blog.extrema-sistemas.com/").blog-extrema ex^2
-        a.twitter-extrema
+  .container-fluid
+    .row-fluid
+      .about(itemscope, itemtype="http://schema.org/Corporation").well.span12
+        h2 !{__('About us')}
+        .details
+          img(src="/images/logo-extrema.png", itemprop="image")
+          ul.sociallinks
+            li.twitterlink
+              a(href="http://twitter.com/extremasistemas") Twitter
+            li.wordpresslink
+              a(href="http:blog.extrema-sistemas.com") Blog
+        p(itemprop="description") !{__('about-us-p1')}
+        p(itemprop="description") !{__('about-us-p2')}
+        p(itemprop="description") !{__('about-us-p3')}
     .team-members
       -for(var i = 0; i < members.length; i += 2) {
         .row-fluid
           -var member = members[i]
             .span6.team-member
               include ../includes/team-member
-            -var member = members[i+1]
-            .span6.team-member
-              include ../includes/team-member
+            -if(members[i+1])
+              -var member = members[i+1]
+              .span6.team-member(itemscope, itemtype="http://schema.org/Person")
+                include ../includes/team-member
       -}
   -if(user) {
   a(href="/team/new").btn New

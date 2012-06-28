@@ -8,6 +8,6 @@ ul.nav.pull-right.visible-desktop
         -if(locale !== lang) {
           li
             a(href='/' + locale) !{__('lang-' + locale)}
-              -if(other_langs.indexOf(locale) !== other_langs.length-1)
-                li.divider
+        -if(other_langs.indexOf(locale) !== other_langs.length-1)
+          li.divider
         -}

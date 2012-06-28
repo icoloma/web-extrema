@@ -11,10 +11,11 @@ append content
           label E-mail
           input(type="email", name="email")
         .control-group
-          label Type
-          select(name="type")
-            option IT
-            option Management
+          label Tags
+          textarea(id="textarea", name="tags")
+          div
+            input(type="text", id="tagname", placeholder="tag name")
+            a(id="addtag").btn Click to add tag
         .control-group
           label Picture
           input(type="file", name="thumb")
@@ -35,3 +36,16 @@ append content
     div
       button(type="submit").btn.btn-info Submit
       a(href="/team").btn.btn-warning Cancel
+
+append scripts
+  script(src="/javascripts/textext.js", type="text/javascript", charset="utf-8")
+  script(type="text/javascript")
+    
+    $('#textarea').textext({ plugins: 'tags' });
+
+    $('#addtag').bind('click', function(e)
+    {
+        $('#textarea').textext()[0].tags().addTags([ $('#tagname').val() ]);
+        $('#tagname').val('');
+    });
+

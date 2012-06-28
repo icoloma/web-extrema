@@ -6,7 +6,7 @@ html
 
       meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
-      link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+      link(rel='stylesheet', href='/stylesheets/bootstrap.css')
       link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.min2.css')
       link(rel='stylesheet', href='/stylesheets/style.css')
       -if(user) {
@@ -42,6 +42,8 @@ html
       block content
 
     footer
+      .wrapper
+        a(href='/contact') !{__('Contact')}
       .navbar.visible-phone
         .navbar-inner
           .container
@@ -59,9 +61,9 @@ html
             -}
               include ../includes/lang-pills
 
-  block scripts
-    script(type="text/javascript", src="/javascripts/jquery-1.7.2.min.js")
-    script(type="text/javascript", src="/javascripts/bootstrap-dropdown.js")
-    script(type="text/javascript", src="/javascripts/bootstrap-collapse.js")
-    script(type="text/javascript", src="/javascripts/bootstrap-tab.js")
+block scripts
+  script(type="text/javascript", src="/javascripts/jquery-1.7.2.min.js")
+  script(type="text/javascript", src="/javascripts/bootstrap-dropdown.js")
+  script(type="text/javascript", src="/javascripts/bootstrap-collapse.js")
+  script(type="text/javascript", src="/javascripts/bootstrap-tab.js")
 

@@ -1,5 +1,13 @@
 var Members = require(appPath + '/db/models/Members').Members;
 
+var parseTags = function (body) {
+  var plainList = body.substring(1, body.length-1),
+    list = plainList.split(',');
+  return list.map(function (item) {
+    return item.substring(1, item.length-1);
+  });
+}
+
 module.exports = function (app) {
 
   //Visualizar y editar un item individual
@@ -32,6 +40,8 @@ module.exports = function (app) {
       body = req.body;
     body.thumb = (req.files && req.files.thumb) || undefined;
 
+    body.tags = parseTags(body.tags);
+
     Members.updateItem(id, body, function (err, num) {
       res.redirect('/team');
     });
@@ -41,6 +51,8 @@ module.exports = function (app) {
   app.post('/team/add', function (req, res) {
     var body = req.body;
     body.thumb = req.files && req.files.thumb;
+
+    body.tags = parseTags(body.tags);
 
     Members.addItem(body, function (err) {
       res.redirect('/team')
