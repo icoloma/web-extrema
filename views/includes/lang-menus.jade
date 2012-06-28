@@ -1,0 +1,25 @@
+mixin langDropdown(lang)
+  ul.nav.pull-right.visible-desktop
+    li.dropdown
+      a.dropdown-toggle(data-toggle='dropdown')
+        | !{__('lang-' + lang)}
+        b.caret
+      -var other_langs = appLocales.slice(0)
+      -other_langs.splice(appLocales.indexOf(lang),1)
+      ul.dropdown-menu
+        -for locale in other_langs
+          li
+            a(href='/' + locale) !{__('lang-' + locale)}
+          -if(other_langs.indexOf(locale) !== other_langs.length-1)
+            li.divider
+
+mixin langPills(lang)
+  -var languages = appLocales.slice(0);
+  ul.nav.nav-pills#lang-pills
+    -for locale in languages
+      -if(locale === lang)
+        li.active
+          a !{__('lang-' + locale)}
+      -else
+        li
+          a(href="/" + locale) !{__('lang-' + locale)}

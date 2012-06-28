@@ -19,7 +19,11 @@ http.configure(config.final_config(http));
 
 //Ruta de login
 http.get('/user', function (req, res) {
-  res.redirect('https://' + req.header('host').match(/(.+):[0-9]+/)[1] + ':4500' + '/user');
+  //Development
+  res.redirect('https://localhost:4500/user');
+
+  //Production
+  // res.redirect('https://' + req.header('host') + '/user');  
 });
 
 //Helpers

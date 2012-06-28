@@ -9,10 +9,10 @@ append content
       .control-group
         label Date
         input(type="date", name="date", value=edition.date)
-      !{formatCombos('Venue', 'venue', venues, origin.venues, edition.venue)}
+      mixin formatEditionCombos('Venue', 'venue', venues, origin.venues, edition.venue)
     .span6
-      !{formatCombos('Course', 'course', courses, origin.courses, edition.course)}
-      !{formatCombos('Instructor', 'instructor', members, origin.team, edition.instructor)}
+      mixin formatEditionCombos('Course', 'course', courses, origin.courses, edition.course)
+      mixin formatEditionCombos('Instructor', 'instructor', members, origin.team, edition.instructor)
     input(type="hidden", name="origin", value=origin.address)
     div
       button(type="submit").btn.btn-info Update

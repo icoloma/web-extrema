@@ -10,7 +10,7 @@ var FeedParser = require('feedparser'),
 var checkCaptcha = function(body, callback) {
   var data = {
     privatekey: '6LcjZdMSAAAAAKzCILUhp8so63rBA7VeYAY3AAUo',
-    remoteip: '88.12.26.48',
+    remoteip: req.headers['x-forwarded-for'] || req.connection.remoteAddress,
     challenge: body.recaptcha_challenge_field,
     response: body.recaptcha_response_field
   },
@@ -24,6 +24,7 @@ var checkCaptcha = function(body, callback) {
     method: 'POST',
     headers: {
       'Content-Length': data_string.length,
+      'Content-Type': 'application/x-www-form-urlencoded'
     },
   }, function (res) {
     var response = '';

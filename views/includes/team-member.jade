@@ -1,26 +1,27 @@
--if(!user) {
-  h3(itemprop="name").crewtitle 
-    !{member.name} 
--} else {
-  h3(itemprop="name").crewtitle 
-    a(href="/team/" + member._id + "/edit") 
-      !{member.name}
--}
-.details
-  img(src="/team/" + member._id + "/thumb", alt=member.name, itemprop="image")
-  ul.sociallinks
-    -if(member.twitter)
-      li.twitterlink
-        a(href="http://twitter.com/" + member.twitter) Twitter
-    -if(member.linkedin)
-      li.linkedinlink
-        a(href=member.linkedin) Linkedin
-    -if(member.blog)
-      li.weblink
-        a(href=member.blog) Blog
+mixin teamMember(member)
+  -if(!user) {
+    h3(itemprop="name").crewtitle 
+      !{member.name} 
+  -} else {
+    h3(itemprop="name").crewtitle 
+      a(href="/team/" + member._id + "/edit") 
+        !{member.name}
+  -}
+  .details
+    img(src="/team/" + member._id + "/thumb", alt=member.name, itemprop="image")
+    ul.sociallinks
+      -if(member.twitter)
+        li.twitterlink
+          a(href="http://twitter.com/" + member.twitter) Twitter
+      -if(member.linkedin)
+        li.linkedinlink
+          a(href=member.linkedin) Linkedin
+      -if(member.blog)
+        li.weblink
+          a(href=member.blog) Blog
 
-p(itemprop="description") !{member.description[lang]}
--member.tags.forEach( function (item) {
-  if(item)
-    span.label !{item}
--});
+  p(itemprop="description") !{member.description[lang]}
+  -member.tags.forEach( function (item) {
+    if(item)
+      span.label !{item}
+  -});

@@ -13,10 +13,10 @@ append content
         -}
         form(method="post", action="/send-comment").contact-form
           .control-group
-            label Name:
+            label !{__('Name')}:
             input(type="text", name="name")
           .control-group
-            label Organization:
+            label !{__('Organization')}:
             input(type="text", name="organization")
           -var required = '<span class="required" title="' + __('required') + '">*</span>'
           .control-group
@@ -26,7 +26,7 @@ append content
             input(type="email", required, name="email")
           .control-group
             label 
-              | Comment:
+              | !{__('Comment')}:
               | !{required}
             textarea(required, name="comment", rows=10)
 

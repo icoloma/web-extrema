@@ -27,7 +27,10 @@
 	"Join-us": "Want to become a ninja developer?",
 	"Send-CV": "Send your CV to",
 	"Join-us-p": "If you want to join our team, send your CV to: ",
-	"required-fields": "required-fields",
+	"required-fields": "Fields marked <span class=\"required\" title=\"This field is required\">*</span> are required.",
 	"Submit": "Submit",
-	"required": "required"
+	"required": "This field is required",
+	"Name": "Name",
+	"Organization": "Organization",
+	"Comment": "Comment"
 }

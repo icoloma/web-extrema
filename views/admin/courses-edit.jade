@@ -1,5 +1,7 @@
 extends ../layouts/layout
 
+include ../includes/admin-mixins
+
 append content
   h1 !{title}
   -var course = item
@@ -13,9 +15,9 @@ append content
         .control-group
           label Type
           select(name="type")
-            !{typeComboOption(item.type, 'HTML5')}
-            !{typeComboOption(item.type, 'Spring')}
-            !{typeComboOption(item.type, 'Javaspecialists')}
+            mixin typeComboOption(item.type, 'HTML5')
+            mixin typeComboOption(item.type, 'Spring')
+            mixin typeComboOption(item.type, 'Javaspecialists')
         .control-group
           label Price
           input(type="number", name="price", value=course.price)

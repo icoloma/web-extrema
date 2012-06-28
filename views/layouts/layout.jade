@@ -1,8 +1,12 @@
+include ../includes/lang-menus
+
 !!!
 html
   block head
     head
       title= title
+
+      meta(charset="utf-8")
 
       meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
@@ -37,7 +41,7 @@ html
                   li
                     a(href="/logout") Logout
               -}
-              include ../includes/lang-dropdown
+              mixin langDropdown(lang)
     .wrapper
       block content
 
@@ -59,7 +63,7 @@ html
                 li
                   a(href="/logout") Logout
             -}
-              include ../includes/lang-pills
+              mixin langPills(lang)
 
 block scripts
   script(type="text/javascript", src="/javascripts/jquery-1.7.2.min.js")

@@ -1,5 +1,7 @@
 extends ../layouts/layout
 
+include ../includes/admin-mixins
+
 append content
   h1 !{title}
   form(method="post",
@@ -8,10 +10,10 @@ append content
       .control-group
         label Date
         input(type="date", name="date")
-      !{formatCombos('Venue', 'venue', venues, origin.venues)}
+      mixin formatEditionCombos('Venue', 'venue', venues, origin.venues)
     .span6
-      !{formatCombos('Course', 'course', courses, origin.courses)}
-      !{formatCombos('Instructor', 'instructor', members, origin.team)}
+      mixin formatEditionCombos('Course', 'course', courses, origin.courses)
+      mixin formatEditionCombos('Instructor', 'instructor', members, origin.team)
     input(type="hidden", name="origin", value=origin.address)
     div
       button(type="submit").btn.btn-info Submit

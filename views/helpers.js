@@ -40,39 +40,6 @@ module.exports = {
     return list;
   },
 
-  formatCombos: function (label, name, list, origin, defaults) {
-    var combo = '<div class="control-group' + 
-      ( (origin && ' success') || '' ) +
-      '">' + 
-      '<label>' + label + '</label>' +
-      '<select name="' + name + '">';
-
-    for(i in list) {
-      var option = list[i],
-        id = option._id.toString(),
-        name = option.name.en || option.name,
-        id_default = defaults && defaults._id && defaults._id.toString();
-
-      combo += '<option ';
-
-      if( (id === origin) || (id === id_default) ) {
-        combo += ' selected="selected" ';
-      }
-      combo += ' label="' + name + '">' +
-        id + '</option>';
-    }
-
-    combo += '</select></div>';
-
-    return combo;
-  },
-
-  typeComboOption: function(type, option) {
-    var html = '<option' + (type === option && ' selected="selected"' || '') +
-      '>' + option + '</option>';
-    return html;
-  },
-
   courseThumbnail: function (course, lang) {
     var html = '<div class="thumbnail"><img src="/courses/' + course._id +
       '/thumb"><div class="caption"><h4>' + course.name[lang] +

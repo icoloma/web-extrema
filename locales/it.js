@@ -1,7 +1,7 @@
 {
 	"Home": "Home",
 	"Team": "Team",
-	"Follow-us": "Follow-us",
+	"Follow-us": "Seguici",
 	"lang-en": "English",
 	"lang-es": "Español",
 	"lang-it": "Italiano",
@@ -16,9 +16,9 @@
 	"details-javaspecialists": "<p>Esente IVA. <br>I partecipanti membri di extrema-alumni possono beneficiare di uno  <strong>sconto del 15%.</strong><br>Gli sconti non sono cumulativi.</p><p>Se vuole ulteriori informazioni o condizioni particolari per corsi con più di cinque partecipanti la richieda scrivendo a  <a href=\"mailto:training@extrema-sistemas.com\">training@extrema-sistemas.com</a> .</p>",
 	"details-HTML5": "<p>Esente IVA. <br><strong>Registrazione multipla</strong>: 10% di sconto a partire dal secondo alunno. 15% a partire dal terzo. <br><strong>Membri di extrema-alumni</strong> 15% di sconto.<br>Gli sconti non sono cumulativi.</p>",
 	"tripartita": "Corsi sponsorizzati dalla Fundación tripartita.",
-	"javasp-thumb": "javasp-thumb",
-	"HTML5-thumb": "HTML5-thumb",
-	"spring-thumb": "spring-thumb",
+	"javasp-thumb": "Un corso di quattro giorni e guidati dal Java Champion Dr. Heinz M Kabutz. Perfino i professionisti Java con più esperienza sentiranno lo stimolo della sfida personale.",
+	"HTML5-thumb": "Questo corso dá una visione dello stato attuale delle tecnologie web e degli standard più innovativi, dedicando particolare attenzione al supporto presente in Firefox, Chrome e Internet Explorer.",
+	"spring-thumb": "I corsi ufficiali della piattaforma che sono diventati uno standard di fatto per le applicazioni imprenditoriali basate sulla tecnologia Java.",
 	"Contact": "Contatti",
 	"Address": "Indirizzo",
 	"Phone": "Telefono",
@@ -26,5 +26,11 @@
 	"Email-to": "Email to",
 	"Join-us": "Vuoi essere il nostro prossimo sviluppatore?",
 	"Send-CV": "Send your CV to",
-	"Join-us-p": "Per unirti al nostro gruppo, invia il tuo CV a:"
+	"Join-us-p": "Per unirti al nostro gruppo, invia il tuo CV a:",
+	"required-fields": "I campi contrassegnati <span class=\"required\" title=\"Campo obbligatorio\">*</span> sono obbligatori.",
+	"required": "Campo obbligatorio",
+	"Submit": "Invia",
+	"Name": "Nome",
+	"Organization": "Azienda",
+	"Comment": "Commento"
 }

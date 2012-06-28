@@ -1,5 +1,8 @@
 extends ../layouts/layout
 
+
+include ../includes/team-member
+
 append content
   -var members = items
   .container-fluid
@@ -20,12 +23,12 @@ append content
       -for(var i = 0; i < members.length; i += 2) {
         .row-fluid
           -var member = members[i]
-            .span6.team-member
-              include ../includes/team-member
+            .span6.team-member(itemscope, itemtype="http://schema.org/Person")
+              mixin teamMember(member)
             -if(members[i+1])
               -var member = members[i+1]
               .span6.team-member(itemscope, itemtype="http://schema.org/Person")
-                include ../includes/team-member
+                mixin teamMember(member)
       -}
   -if(user) {
   a(href="/team/new").btn New
