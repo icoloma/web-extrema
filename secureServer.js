@@ -5,8 +5,7 @@ var privateKey = fs.readFileSync('./https/lalala.key'),
 /*
 * Autenticación
 */
-var LocalStrategy = require('passport-local').Strategy,
-  lessMiddleware = require('less-middleware');
+var LocalStrategy = require('passport-local').Strategy;
 
 passport.use(new LocalStrategy(
   function(username, password, done) {
@@ -39,9 +38,7 @@ https.configure(function() {
 
 https.configure('development', config.dev_config(https));
 
-https.configure('production', function(){
-  https.use(express.errorHandler());
-});
+https.configure('production', config.prod_config(https));
 
 https.configure(config.final_config(https));
 

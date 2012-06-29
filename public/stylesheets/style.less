@@ -105,21 +105,6 @@ ul {
 
 /* ***** */
 
-/* FOOTER */
-
-footer {
-  margin-top: 50px;
-}
-
-footer > .wrapper > a {
-  display: block;
-  text-align: right;
-  margin-bottom: 20px;
-  margin-right: 20px;
-}
-
-/* ***** */
-
 
 /* HOME PAGE */
 
@@ -221,8 +206,20 @@ span[class^="client-"] {
   background-position: -1200px 0px;
 }
 
+/* ***** */
 
+/* FOOTER */
 
+footer {
+  margin-top: 50px;
+}
+
+footer > .wrapper > a {
+  display: block;
+  text-align: right;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
 
 /* ***** */
 
@@ -501,6 +498,19 @@ li.wordpresslink > a {
     margin-top: 14px;
   }
 
+  /* ***** */
+
+  /* FOOTER */
+
+  .navbar.visible-phone {
+    ul {
+      width: 100%;
+      & > li {
+        float: none;
+      }
+    }
+  }
+
   #lang-pills > li {
       float: left;
       width: 99.9999%/@langsNumber;
@@ -508,7 +518,7 @@ li.wordpresslink > a {
       &.active > a {
         background-color: @backgroundNavHover;
       }
-  }
+  }  
 
   /* ***** */
 

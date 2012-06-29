@@ -10,6 +10,7 @@ Campos:
   Descripción
   Tipo de miembro (IT/management)
   Imagen
+  Etiquetas (con un formato 'nombre:color')
   
 El campo 'deleted' se usa en el borrado lógico.
 */

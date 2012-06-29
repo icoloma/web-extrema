@@ -11,7 +11,7 @@ html
       meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
       link(rel='stylesheet', href='/stylesheets/bootstrap.css')
-      link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.min2.css')
+      link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
       link(rel='stylesheet', href='/stylesheets/style.css')
       -if(user) {
       link(rel='stylesheet', href='/stylesheets/admin-style.css')
@@ -24,7 +24,7 @@ html
       .navbar
         .navbar-inner
           .container
-            a#btn-toggle(data-toggle="collapse", data-target=".nav-collapse") V
+            a#btn-toggle(data-toggle="collapse", data-target=".nav-collapse") !{__('show-navbar')}
             .nav-collapse.wrapper
               ul.nav.main-list
                 li
@@ -58,12 +58,13 @@ html
                 a(href='/team') !{__('Team')}
               li
                 a(href='/follow-us') !{__('Follow-us')}
-            -if (user) {
-              ul.nav.pull-right
-                li
-                  a(href="/logout") Logout
-            -}
               mixin langPills(lang)
+              -if (user) {
+                ul.nav.pull-right
+                  li
+                    a(href="/logout") Logout
+              -}
+                
 
 block scripts
   script(type="text/javascript", src="/javascripts/jquery-1.7.2.min.js")

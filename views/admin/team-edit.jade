@@ -1,5 +1,7 @@
 extends ../layouts/layout
 
+include ../includes/admin-mixins
+
 append content
   h1 !{title}
   -var member = item
@@ -31,7 +33,7 @@ append content
           img(src="thumb")
           input(type="file", name="thumb")  
       .span4
-          !{i18nTextArea('Description', 'description', 'class="description-input"', member.description)}
+          mixin i18nTextarea('Description', 'description', 'class="description-input"', member.description)
       .span4
         label
           h4 Social links

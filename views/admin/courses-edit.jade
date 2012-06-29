@@ -11,7 +11,7 @@ append content
     enctype="multipart/form-data").form-horizontal
     .row-fluid
       .span4
-        !{i18nTextInput('Name', 'name', 'required', course.name)}
+        mixin i18nTextInput('Name', 'name', 'required', course.name)
         .control-group
           label Type
           select(name="type")
@@ -26,7 +26,7 @@ append content
           img(src="thumb")
           input(type="file", name="thumb")
       .span8
-          !{i18nTextArea('Description', 'description', 'class="description-input"', course.description)}  
+          mixin i18nTextarea('Description', 'description', 'class="description-input"', course.description)
     .row-fluid
       button(type="submit").btn.btn-info Submit
       a(href="/courses").btn.btn-warning Cancel

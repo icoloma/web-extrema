@@ -1,10 +1,12 @@
 extends ../layouts/layout
 
+include ../includes/admin-mixins
+
 append content
   form(method="post", action="/courses/add",enctype="multipart/form-data").form-horizontal
     .row-fluid
       .span4
-        !{i18nTextInput('Name', 'name', 'required')}
+        mixin i18nTextInput('Name', 'name', 'required')
         .control-group
           label Type
           select(name="type")
@@ -18,7 +20,7 @@ append content
           label Picture
           input(type="file", name="thumb")
       .span8
-        !{i18nTextArea('Description', 'description', 'class="description-input"')}
+        mixin i18nTextarea('Description', 'description', 'class="description-input"')
     div
       button(type="submit").btn.btn-info Submit
       a(href="/courses").btn.btn-warning Cancel
