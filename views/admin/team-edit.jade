@@ -62,7 +62,6 @@ append scripts
     $('#textarea').textext({ plugins: 'tags' });
 
     var previous = $('#previous-tags > li').map(function(i) {
-      console.log(i)
       return $('#previous-tags > li:nth-child(' + (i+1) + ')').html()
     })
 

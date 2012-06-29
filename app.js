@@ -34,6 +34,7 @@ var http = require('./nonSecureServer'),
   https = require('./secureServer');
 
 // Rutas
+// var routes = require('./routes');
 require('./routes')(http);
 require('./routes')(https);
 require('./routes/admin')(https);

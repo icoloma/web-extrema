@@ -6,85 +6,17 @@ var FeedParser = require('feedparser'),
   http = require('http'),
   querystring = require('querystring');
 
-
-var checkCaptcha = function(req, callback) {
-  var data = {
-    privatekey: '6LcjZdMSAAAAAKzCILUhp8so63rBA7VeYAY3AAUo',
-    remoteip: req.headers['x-forwarded-for'] || req.connection.remoteAddress,
-    challenge: req.body.recaptcha_challenge_field,
-    response: req.body.recaptcha_response_field
-  },
-    data_string = querystring.stringify(data);
-
-
-  var recaptcha = http.request({
-    host: 'www.google.com',
-    path: '/recaptcha/api/verify',
-    port: 80,
-    method: 'POST',
-    headers: {
-      'Content-Length': data_string.length,
-      'Content-Type': 'application/x-www-form-urlencoded'
-    },
-  }, function (res) {
-    var response = '';
-    res.on('data', function (chunk) {
-      response += chunk;
-    });
-    res.on('end', function () {
-      var responses = response.split('\n');
-      if(responses[0] === 'true') {
-        callback(true);
-      } else {
-        callback(false);
-      }
-    });
-  });
-
-  recaptcha.write(data_string);
-  recaptcha.end()
-}
-
-var nodemailer = require('nodemailer'); 
-
-
-var smtpTransport = nodemailer.createTransport('SMTP', {
-  service: 'Gmail',
-  auth: {
-      XOAuthToken: nodemailer.createXOAuthGenerator({
-          user: 'info@extrema-sistemas.com',
-          token: '1/FMeGZPPHzish_PtQKqGmdTjPFy0sUIFFvuLv-UvDot8',
-          tokenSecret: 'l0zCd5oWC4jx48Ccas-uC0K2'
-      })
-  }
-});
-
-var sendEmail = function (body, callback) {
-  var date = new Date (Date.now());
-
-  var mailOptions = {
-    from: 'Yourself',
-    to: 'rvidal@extrema-sistemas.com',
-    subject: 'Nuevo comentario en extrema-sistemas.com',
-    html: 'Se ha enviado un nuevo comentario desde http://extrema-sistemas.com/contact.<br><br>' +
-            '<b>Fecha</b>: ' + date.toLocaleDateString() + ' ' + date.toLocaleTimeString() +
-            '<br><br><b>Nombre</b>: ' + body.name +
-            '<br><br><b>Organización</b>: ' + body.organization + 
-            '<br><br><b>Email</b>: ' + body.email + 
-            '<br><br><b>Comentario</b>:<br>\"' + body.comment + '\"'
-  };
-
-  smtpTransport.sendMail(mailOptions, function (err, res) {
-    callback(err);
-  });
-}
-
-
 module.exports = function (server) {
 
   server.configure(function () {
     server.set('views', appPath + '/views');
   });
+
+  server.get('/:where?', function (req, res, next) {
+    var link = req.params.where ? '/' + req.originalUrl.split('/')[1] : '/';
+    res.local('selected', link);
+    next();
+  })
 
   //Home page
   server.get('/', function (req, res) {
@@ -172,4 +104,79 @@ module.exports = function (server) {
   });
 
   require('./courses')(server);
+}
+
+
+var checkCaptcha = function(req, callback) {
+  var data = {
+    privatekey: '6LcjZdMSAAAAAKzCILUhp8so63rBA7VeYAY3AAUo',
+    remoteip: req.headers['x-forwarded-for'] || req.connection.remoteAddress,
+    challenge: req.body.recaptcha_challenge_field,
+    response: req.body.recaptcha_response_field
+  },
+    data_string = querystring.stringify(data);
+
+
+  var recaptcha = http.request({
+    host: 'www.google.com',
+    path: '/recaptcha/api/verify',
+    port: 80,
+    method: 'POST',
+    headers: {
+      'Content-Length': data_string.length,
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+  }, function (res) {
+    var response = '';
+    res.on('data', function (chunk) {
+      response += chunk;
+    });
+    res.on('end', function () {
+      var responses = response.split('\n');
+      if(responses[0] === 'true') {
+        callback(true);
+      } else {
+        callback(false);
+      }
+    });
+  });
+
+  recaptcha.write(data_string);
+  recaptcha.end()
+}
+
+
+//Helpers Captcha y mailer
+var nodemailer = require('nodemailer'); 
+
+
+var smtpTransport = nodemailer.createTransport('SMTP', {
+  service: 'Gmail',
+  auth: {
+      XOAuthToken: nodemailer.createXOAuthGenerator({
+          user: 'info@extrema-sistemas.com',
+          token: '1/FMeGZPPHzish_PtQKqGmdTjPFy0sUIFFvuLv-UvDot8',
+          tokenSecret: 'l0zCd5oWC4jx48Ccas-uC0K2'
+      })
+  }
+});
+
+var sendEmail = function (body, callback) {
+  var date = new Date (Date.now());
+
+  var mailOptions = {
+    from: 'Yourself',
+    to: 'rvidal@extrema-sistemas.com',
+    subject: 'Nuevo comentario en extrema-sistemas.com',
+    html: 'Se ha enviado un nuevo comentario desde http://extrema-sistemas.com/contact.<br><br>' +
+            '<b>Fecha</b>: ' + date.toLocaleDateString() + ' , ' + date.toLocaleTimeString() +
+            '<br><br><b>Nombre</b>: ' + body.name +
+            '<br><br><b>Organización</b>: ' + body.organization + 
+            '<br><br><b>Email</b>: ' + body.email + 
+            '<br><br><b>Comentario</b>:<br>\"' + body.comment + '\"'
+  };
+
+  smtpTransport.sendMail(mailOptions, function (err, res) {
+    callback(err);
+  });
 }

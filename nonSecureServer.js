@@ -6,7 +6,16 @@ var http = module.exports = express.createServer(),
 
 http.configure(config.initial_config(http));
 
-http.configure('development', config.dev_config(http));
+http.configure('development', function () {
+  config.dev_config(http)();
+  http.get('*', function (req, res, next) {
+    console.log(req.originalUrl)
+    if(!req.originalUrl.match(/\.png|\.css|\.js|\.ico/)) {
+      // console.log(req.originalUrl)
+    }
+    next();
+  });
+});
 
 http.configure('production', config.prod_config(http));
 

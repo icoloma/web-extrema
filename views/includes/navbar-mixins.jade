@@ -23,3 +23,8 @@ mixin langPills(lang)
       -else
         li
           a(href="/" + locale) !{__('lang-' + locale)}
+
+mixin navbarLink(selected, href, text)
+  -var chosen = selected === href ? 'active-section' : false
+  li
+    a(href=href,class=chosen) !{__(text)}

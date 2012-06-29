@@ -1,4 +1,4 @@
-include ../includes/lang-menus
+include ../includes/navbar-mixins
 
 !!!
 html
@@ -27,15 +27,11 @@ html
             a#btn-toggle(data-toggle="collapse", data-target=".nav-collapse") !{__('show-navbar')}
             .nav-collapse.wrapper
               ul.nav.main-list
-                li
-                  a(href='/') !{__('Home')}
-                li
-                  a(href='/team') !{__('Team')}
-                li
-                  a(href='/follow-us') !{__('Follow-us')}
-                -if(user)
-                  li
-                    a(href='/courses') !{__('Courses')}
+                -var selected
+                mixin navbarLink(selected, '/', 'Home')
+                mixin navbarLink(selected, '/courses', 'Training')
+                mixin navbarLink(selected, '/team', 'Team')
+                mixin navbarLink(selected, '/follow-us', 'Follow-us')
               -if (user) {
                 ul.nav.pull-right
                   li

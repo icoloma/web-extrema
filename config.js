@@ -26,11 +26,13 @@ exports.final_config = function (app) {
 exports.dev_config = function (app) {
   return function () {
     app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
-    app.get('/:stuff', function(req, res, next) {
-      if(!req.params.stuff.match(/\.png|\.js|\.css|\.ico/))
-        compileLessFiles();
-      next();
-    });
+    
+    // app.get('*', function (req, res, next) {
+    //   console.log(req.originalUrl)
+    //   if(!req.originalUrl.match(/\.png|\.css|\.js|\.ico/))
+    //     compileLessFiles();
+    //     next();
+    // });
   };
 };
 
@@ -56,7 +58,6 @@ var bootstrapPath = appPath + '/public/bootstrap/less',
   cssPath = appPath + '/public/stylesheets';
 
 var compileLessFiles = function () {
-  debugger;
   compileLessFile(bootstrapPath + '/bootstrap.less', cssPath + '/bootstrap.css')
   compileLessFile(bootstrapPath + '/responsive.less', cssPath + '/bootstrap-responsive.css')
 

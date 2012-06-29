@@ -1,4 +1,5 @@
 
+require('mongoose').connect('mongodb://localhost/extrema');
 
 module.exports = function(server) {
 
@@ -12,11 +13,12 @@ module.exports = function(server) {
   */
   //Pasar el idioma para la barra de navegación
   server.all('*', function (req, res, next) {
-    var lang = i18n.getLocale(req);
+    if(!req.originalUrl.match(/\.png|\.css|\.js|\.ico/))
+      var lang = i18n.getLocale(req);
 
-    res.local('lang', lang);
-    res.local('user', req.user || '');
-    next();
+      res.local('lang', lang);
+      res.local('user', req.user || '');
+      next();
   });
 
   //Cambio de idioma mediante cookie
