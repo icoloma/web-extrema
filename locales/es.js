@@ -32,5 +32,7 @@
 	"Submit": "Submit",
 	"Name": "Name",
 	"Organization": "Organization",
-	"Comment": "Comment"
+	"Comment": "Comment",
+	"wrong-captcha": "La respuesta a la pregunta no es correcta.",
+	"captcha-please": "Esta pregunta se hace para comprobar que es usted una persona real e impedir el envío automatizado de mensajes basura."
 }

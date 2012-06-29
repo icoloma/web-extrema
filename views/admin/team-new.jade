@@ -13,8 +13,10 @@ append content
         .control-group
           label Tags
           textarea(id="textarea", name="tags")
+        .control-group
+          | Format: 'tag name:tag color' (a CSS color)
           div
-            input(type="text", id="tagname", placeholder="tag name")
+            input(type="text", id="tagname", placeholder="E.g.: Sexy:#ff123a")
             a(id="addtag").btn Click to add tag
         .control-group
           label Picture
@@ -45,7 +47,14 @@ append scripts
 
     $('#addtag').bind('click', function(e)
     {
-        $('#textarea').textext()[0].tags().addTags([ $('#tagname').val() ]);
+
+        var tag = $('#tagname').val();
+        if(tag.split(':').length === 1) 
+          tag = tag.concat(':#aaa')
+
+        $('#textarea').textext()[0].tags().addTags([ tag ]);
+
+
         $('#tagname').val('');
     });
 

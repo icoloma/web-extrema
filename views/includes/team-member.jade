@@ -21,7 +21,13 @@ mixin teamMember(member)
           a(href=member.blog) Blog
 
   p(itemprop="description") !{member.description[lang]}
-  -member.tags.forEach( function (item) {
-    if(item)
-      span.label !{item}
-  -});
+  p
+    -member.tags.forEach(function (tag) {
+    -var parts = tag.split(':'), color
+    -if(parts.length === 1)
+      -color = '#aaa'
+    -else
+      -color = parts[1]
+      span.label.team-tag(style="background-color: " + color + ";") !{parts[0]}
+      | 
+    -})

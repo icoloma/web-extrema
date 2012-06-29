@@ -16,9 +16,11 @@ append content
           input(type="email", name="email", value=member.email)
         .control-group
           label Tags
-          textarea(id="textarea", name="tags") 
+          textarea(id="textarea", name="tags")
+        .control-group
+          | Format: 'tag name:tag color' (a CSS color)
           div
-            input(type="text", id="tagname", placeholder="tag name")
+            input(type="text", id="tagname", placeholder="E.g.: Sexy:#ff123a")
             a(id="addtag").btn Click to add tag
           ul(style="display: none")#previous-tags
             -member.tags.forEach(function (tag) {
@@ -54,15 +56,25 @@ append content
 append scripts
   script(src="/javascripts/textext.js", type="text/javascript", charset="utf-8")
   script(type="text/javascript")
-    
+
     $('#textarea').textext({ plugins: 'tags' });
 
-    var previous = jQuery.makeArray($('#previous-tags > li').text());
+    var previous = $('#previous-tags > li').map(function(i) {
+      console.log(i)
+      return $('#previous-tags > li:nth-child(' + (i+1) + ')').html()
+    })
 
     $('#textarea').textext()[0].tags().addTags(previous);
 
     $('#addtag').bind('click', function(e)
     {
-        $('#textarea').textext()[0].tags().addTags([ $('#tagname').val() ]);
+
+        var tag = $('#tagname').val();
+        if(tag.split(':').length === 1) 
+          tag = tag.concat(':#aaa')
+
+        $('#textarea').textext()[0].tags().addTags([ tag ]);
+
+
         $('#tagname').val('');
     });

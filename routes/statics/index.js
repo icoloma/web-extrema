@@ -7,12 +7,12 @@ var FeedParser = require('feedparser'),
   querystring = require('querystring');
 
 
-var checkCaptcha = function(body, callback) {
+var checkCaptcha = function(req, callback) {
   var data = {
     privatekey: '6LcjZdMSAAAAAKzCILUhp8so63rBA7VeYAY3AAUo',
     remoteip: req.headers['x-forwarded-for'] || req.connection.remoteAddress,
-    challenge: body.recaptcha_challenge_field,
-    response: body.recaptcha_response_field
+    challenge: req.body.recaptcha_challenge_field,
+    response: req.body.recaptcha_response_field
   },
     data_string = querystring.stringify(data);
 
@@ -118,27 +118,27 @@ module.exports = function (server) {
     });
   });
 
-  var alert_message = '';
-
   //Contact page
   server.get('/contact', function (req, res) {
     res.render('statics/contact', {
       title: __('Contact') + ' | extrema-sistemas.com',
-      alert: alert_message
     });
   });
 
   //Contact form
-  server.post('/send-comment', function (req, res) {
-    checkCaptcha(req.body, function (verified) {
+  server.post('/contact', function (req, res) {
+    checkCaptcha(req, function (verified) {
       if(verified) {
         sendEmail(req.body, function (err) {
           alert_message = '';
           res.redirect('/contact');
         });
       } else {
-        alert_message = 'Ooops'
-        res.redirect('/contact');
+        res.render('statics/contact', {
+          title: __('Contact') + ' | extrema-sistemas.com',
+          alert: __('wrong-captcha'),
+          fields: req.body
+        });
       }
     });
   });
