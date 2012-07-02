@@ -39,6 +39,8 @@ require('./routes')(http);
 require('./routes')(https);
 require('./routes/admin')(https);
 
+//Exportar entorno
+environment = http.settings.env;
 
 http.listen(4000, function(){
   console.log("Express server listening on port %d in %s mode", http.address().port, http.settings.env);

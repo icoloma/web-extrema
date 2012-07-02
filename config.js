@@ -27,40 +27,45 @@ exports.dev_config = function (app) {
   return function () {
     app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
     
-    // app.get('*', function (req, res, next) {
-    //   console.log(req.originalUrl)
-    //   if(!req.originalUrl.match(/\.png|\.css|\.js|\.ico/))
-    //     compileLessFiles();
-    //     next();
-    // });
+    app.use(function (req, res, next) {
+      if(!req.originalUrl.match(/\.png|\.css|\.js|\.ico|\.jpg|\/thumb/))
+        compileLessFiles();
+      next();
+    });
   };
 };
 
 exports.prod_config = function (app) {
   return function () {
     app.use(express.errorHandler());
+    minifyFiles();
   };
 };
 
 
 /* Helpers para precompilar */
 
+var bootstrapPath = appPath + '/public/bootstrap/less',
+  cssPath = appPath + '/public/stylesheets',
+  jsPath = appPath + '/public/javascripts',
+  compressor = require('node-minify');
+
+//Procesa un fichero .less
 var compileLessFile = function(lessFile, cssFile) {
-  //Se asume que los imports está en la misma carpeta
+  //Asume que los imports están en la misma carpeta que el fichero
   var code = fs.readFileSync(lessFile, 'utf-8'),
     path = lessFile.slice(0, lessFile.lastIndexOf('/'));
   less.render(code, {paths: [path]}, function (err, css) {
     fs.writeFileSync(cssFile, css);
   })
-}
-
-var bootstrapPath = appPath + '/public/bootstrap/less',
-  cssPath = appPath + '/public/stylesheets';
+};
 
 var compileLessFiles = function () {
+  //Ficheros de Bootstrap
   compileLessFile(bootstrapPath + '/bootstrap.less', cssPath + '/bootstrap.css')
   compileLessFile(bootstrapPath + '/responsive.less', cssPath + '/bootstrap-responsive.css')
 
+  //Resto de ficheros en la carpeta de stylesheets
   var files = fs.readdirSync(cssPath);
 
   files.forEach(function (file) {
@@ -69,5 +74,38 @@ var compileLessFiles = function () {
       compileLessFile(cssPath + '/' + file, cssPath + '/' + noExtension + '.css')
     }
   })
+};
 
-}
+var minifyFiles = function() {
+
+  new compressor.minify({
+      type: 'yui-css',
+      fileIn: [cssPath + '/bootstrap.css',
+               cssPath + '/bootstrap-responsive.css',
+               cssPath + '/style.css'],
+      fileOut: cssPath + '/style.min.css',
+      callback: function(err){
+          if(err)
+            console.log(err);
+          else
+            console.log('Hojas de estilo compiladas...\n')
+      }
+  });
+
+  new compressor.minify({
+      type: 'yui-js',
+      fileIn: [jsPath + '/jquery-1.7.2.min.js',
+               jsPath + '/bootstrap-tab.js',
+               jsPath + '/bootstrap-dropdown.js',
+               jsPath + '/bootstrap-collapse.js'],
+      fileOut: jsPath + '/scripts.min.js',
+      callback: function(err) {
+          if(err)
+            console.log(err);
+          else
+            console.log('Scripts compilados...\n')
+      }
+  });
+};
+
+
