@@ -9,8 +9,6 @@ express = require('express'),
   i18n = require('i18n'),
   passport = require('passport');
 
-
-
 /*
 * Variables globales
 */
@@ -34,13 +32,12 @@ var http = require('./nonSecureServer'),
   https = require('./secureServer');
 
 // Rutas
-// var routes = require('./routes');
 require('./routes')(http);
 require('./routes')(https);
-require('./routes/admin')(https);
+require('./routes/admin')(https); //Rutas de la parte de administración
 
-//Exportar entorno
-environment = http.settings.env;
+//Exportar entorno (se copia por seguridad)
+environment = http.settings.env.slice(0);
 
 http.listen(4000, function(){
   console.log("Express server listening on port %d in %s mode", http.address().port, http.settings.env);

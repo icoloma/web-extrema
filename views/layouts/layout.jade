@@ -47,12 +47,10 @@ html
         .navbar-inner
           .container
             ul.nav.main-list
-              li
-                a(href='/') !{__('Home')}
-              li
-                a(href='/team') !{__('Team')}
-              li
-                a(href='/follow-us') !{__('Follow-us')}
+              mixin navbarLink(selected, '/', 'Home')
+              mixin navbarLink(selected, '/courses', 'Training')
+              mixin navbarLink(selected, '/team', 'Team')
+              mixin navbarLink(selected, '/follow-us', 'Follow-us')
               mixin langPills(lang)
               -if (user) {
                 ul.nav.pull-right

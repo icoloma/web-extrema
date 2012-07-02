@@ -1,5 +1,13 @@
 var less = require('less');
 
+/*
+* CONFIGURACIÓN DE LOS SERVIDORES
+*
+*Separada en dos bloques comunes, 'initial' y 'final',
+*y dos bloques particulares para cada entorno (producción o desarrollo)
+*
+*/
+
 exports.initial_config = function(app) {
 
   return function () {
@@ -10,6 +18,7 @@ exports.initial_config = function(app) {
     app.use(express.bodyParser());
     app.use(express.methodOverride());
 
+    //Compilar los ficheros .less al iniciar el servidor
     compileLessFiles();
 
     app.use(i18n.init);
@@ -27,6 +36,7 @@ exports.dev_config = function (app) {
   return function () {
     app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
     
+    //Compilar los .less con cada nueva petición en 'development'
     app.use(function (req, res, next) {
       if(!req.originalUrl.match(/\.png|\.css|\.js|\.ico|\.jpg|\/thumb/))
         compileLessFiles();
@@ -38,6 +48,7 @@ exports.dev_config = function (app) {
 exports.prod_config = function (app) {
   return function () {
     app.use(express.errorHandler());
+    //Minificar ficheros en 'production'
     minifyFiles();
   };
 };
@@ -52,15 +63,20 @@ var bootstrapPath = appPath + '/public/bootstrap/less',
 
 //Procesa un fichero .less
 var compileLessFile = function(lessFile, cssFile) {
+
   //Asume que los imports están en la misma carpeta que el fichero
   var code = fs.readFileSync(lessFile, 'utf-8'),
     path = lessFile.slice(0, lessFile.lastIndexOf('/'));
+
   less.render(code, {paths: [path]}, function (err, css) {
+    if(err)
+      console.log(err)
     fs.writeFileSync(cssFile, css);
   })
 };
 
 var compileLessFiles = function () {
+  
   //Ficheros de Bootstrap
   compileLessFile(bootstrapPath + '/bootstrap.less', cssPath + '/bootstrap.css')
   compileLessFile(bootstrapPath + '/responsive.less', cssPath + '/bootstrap-responsive.css')
@@ -107,5 +123,3 @@ var minifyFiles = function() {
       }
   });
 };
-
-

@@ -8,10 +8,7 @@ var FeedParser = require('feedparser'),
 
 module.exports = function (server) {
 
-  server.configure(function () {
-    server.set('views', appPath + '/views');
-  });
-
+  //Pasar el atributo selected al tab apropiado
   server.get('/:where?', function (req, res, next) {
     var link = req.params.where ? '/' + req.originalUrl.split('/')[1] : '/';
     res.local('selected', link);
@@ -37,6 +34,17 @@ module.exports = function (server) {
           return john.name.localeCompare(jane.name);
         }),
       });
+    });
+  });
+
+  //Courses page
+  server.get('/courses', function (req, res, next) {
+    Courses.getItems(function (err, items) {
+      res.render('statics/courses', {
+        title: __('Courses') + ' | extrema-sistemas.com',
+        items: items,
+        initialType: req.params.type
+      })
     });
   });
 
@@ -103,7 +111,6 @@ module.exports = function (server) {
     });
   });
 
-  require('./courses')(server);
 }
 
 

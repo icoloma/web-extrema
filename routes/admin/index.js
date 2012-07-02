@@ -1,8 +1,6 @@
 /*
 Rutas para la zona de administración
 */
-mongoose.connect('mongodb://localhost/extrema');
-
 
 module.exports = function (server) {
 

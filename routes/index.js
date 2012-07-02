@@ -3,15 +3,16 @@ require('mongoose').connect('mongodb://localhost/extrema');
 
 module.exports = function(server) {
 
-
+  //El layout se implementa mediante 'extend layout' en jade
   server.set('view options', {
     layout: false
   });
 
-  /*
-  * IDIOMAS
-  */
-  //Pasar el idioma para la barra de navegación
+  server.configure(function () {
+    server.set('views', appPath + '/views');
+  });
+
+  //Variables locales: idioma y usuario
   server.all('*', function (req, res, next) {
     if(!req.originalUrl.match(/\.png|\.css|\.js|\.ico/))
       var lang = i18n.getLocale(req);
@@ -20,6 +21,10 @@ module.exports = function(server) {
       res.local('user', req.user || '');
       next();
   });
+
+  /*
+  * IDIOMAS
+  */
 
   //Cambio de idioma mediante cookie
   /**/
