@@ -38,8 +38,9 @@ exports.dev_config = function (app) {
     
     //Compilar los .less con cada nueva petición en 'development'
     app.use(function (req, res, next) {
-      if(!req.originalUrl.match(/\.png|\.css|\.js|\.ico|\.jpg|\/thumb/))
+      if(!req.originalUrl.match(/\.png|\.css|\.js|\.ico|\.jpg|\/thumb/)) {
         compileLessFiles();
+      }
       next();
     });
   };
@@ -69,10 +70,11 @@ var compileLessFile = function(lessFile, cssFile) {
     path = lessFile.slice(0, lessFile.lastIndexOf('/'));
 
   less.render(code, {paths: [path]}, function (err, css) {
-    if(err)
-      console.log(err)
+    if(err) {
+      console.log(err);
+    }
     fs.writeFileSync(cssFile, css);
-  })
+  });
 };
 
 var compileLessFiles = function () {
@@ -89,7 +91,7 @@ var compileLessFiles = function () {
       var noExtension = file.split('.less')[0];
       compileLessFile(cssPath + '/' + file, cssPath + '/' + noExtension + '.css')
     }
-  })
+  });
 };
 
 var minifyFiles = function() {
@@ -101,10 +103,12 @@ var minifyFiles = function() {
                cssPath + '/style.css'],
       fileOut: cssPath + '/style.min.css',
       callback: function(err){
-          if(err)
+          if(err) {
             console.log(err);
-          else
-            console.log('Hojas de estilo compiladas...\n')
+          }
+          else {
+            console.log('Hojas de estilo compiladas...\n');
+          }
       }
   });
 
@@ -116,10 +120,12 @@ var minifyFiles = function() {
                jsPath + '/bootstrap-collapse.js'],
       fileOut: jsPath + '/scripts.min.js',
       callback: function(err) {
-          if(err)
+          if(err) {
             console.log(err);
-          else
-            console.log('Scripts compilados...\n')
+          }
+          else {
+            console.log('Scripts compilados...\n');
+          }
       }
   });
 };

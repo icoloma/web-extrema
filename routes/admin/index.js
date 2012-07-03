@@ -10,7 +10,7 @@ module.exports = function (server) {
     if (req.user || req.url === '/user') { 
       next(); 
     } else {
-      res.redirect('/user')
+      res.redirect('/user');
     }
   });
 

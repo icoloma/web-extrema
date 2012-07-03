@@ -14,12 +14,13 @@ module.exports = function(server) {
 
   //Variables locales: idioma y usuario
   server.all('*', function (req, res, next) {
-    if(!req.originalUrl.match(/\.png|\.css|\.js|\.ico/))
+    if(!req.originalUrl.match(/\.png|\.css|\.js|\.ico/)) {
       var lang = i18n.getLocale(req);
 
       res.local('lang', lang);
       res.local('user', req.user || '');
-      next();
+    }
+    next();
   });
 
   /*

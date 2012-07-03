@@ -13,7 +13,7 @@ module.exports = function (server) {
     var link = req.params.where ? '/' + req.originalUrl.split('/')[1] : '/';
     res.local('selected', link);
     next();
-  })
+  });
 
   //Home page
   server.get('/', function (req, res) {
@@ -44,7 +44,7 @@ module.exports = function (server) {
         title: __('Courses') + ' | extrema-sistemas.com',
         items: items,
         initialType: req.params.type
-      })
+      });
     });
   });
 
@@ -111,7 +111,7 @@ module.exports = function (server) {
     });
   });
 
-}
+};
 
 
 var checkCaptcha = function(req, callback) {
@@ -149,22 +149,21 @@ var checkCaptcha = function(req, callback) {
   });
 
   recaptcha.write(data_string);
-  recaptcha.end()
+  recaptcha.end();
 }
 
 
 //Helpers Captcha y mailer
-var nodemailer = require('nodemailer'); 
-
+var nodemailer = require('nodemailer');
 
 var smtpTransport = nodemailer.createTransport('SMTP', {
   service: 'Gmail',
   auth: {
-      XOAuthToken: nodemailer.createXOAuthGenerator({
-          user: 'info@extrema-sistemas.com',
-          token: '1/FMeGZPPHzish_PtQKqGmdTjPFy0sUIFFvuLv-UvDot8',
-          tokenSecret: 'l0zCd5oWC4jx48Ccas-uC0K2'
-      })
+    XOAuthToken: nodemailer.createXOAuthGenerator({
+        user: 'info@extrema-sistemas.com',
+        token: '1/FMeGZPPHzish_PtQKqGmdTjPFy0sUIFFvuLv-UvDot8',
+        tokenSecret: 'l0zCd5oWC4jx48Ccas-uC0K2'
+    })
   }
 });
 
@@ -186,4 +185,4 @@ var sendEmail = function (body, callback) {
   smtpTransport.sendMail(mailOptions, function (err, res) {
     callback(err);
   });
-}
+};
