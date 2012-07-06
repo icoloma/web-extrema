@@ -26,7 +26,9 @@ mixin i18nTextInput(label, field, options, content)
   -appLocales.forEach(function (locale) {
     .control-group
       label !{label + ' (' + locale + ')'}
-      |<input type="text" name=!{field + '.' + locale} !{options || ''}>
+      -var contentTag = content && content[locale] && ('value="' + content[locale] + '"') || '';
+      -console.log('\n' + content + '\n')
+      |<input type="text" name=!{field + '.' + locale} !{options || ''} !{contentTag}>
   -})
 
 

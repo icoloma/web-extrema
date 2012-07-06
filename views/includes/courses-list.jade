@@ -5,8 +5,9 @@ mixin courseContent(type)
         -if(course.type === type) {
           li
             h4 !{course.name[lang]}
-            img(src="/courses/" + course._id + "/thumb")
-            span.label !{course.price + ' euros'}
+            .course-details
+              !{course.price + ' euros, ' + course.duration + ' ' + __('hours')}
+            //- img(src="/courses/" + course._id + "/thumb")
             !{course.description[lang]}
 
             -if(user) {
