@@ -7,6 +7,9 @@ Campos:
   Nombre
   Descripción
   Imagen
+  Tipo (Spring, HTML5, Javaspecialists)
+  Precio
+  Duración (horas)
 
 El campo 'deleted' se usa en el borrado lógico.
 */
@@ -20,6 +23,7 @@ var CourseSchema = new mongoose.Schema({
   , deleted: {type: Boolean, default: false}
   , type: String
   , price: Number
+  , duration: Number
 });
 
 /*

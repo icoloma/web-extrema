@@ -34,7 +34,7 @@ module.exports = function (server) {
     req.logout();
 
     //Development
-    res.redirect('http://localhost:4000');
+    res.redirect('http://192.168.2.122:4000');
 
     //Production
     // res.redirect('http://' + req.headers.host);

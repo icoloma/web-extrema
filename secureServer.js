@@ -9,7 +9,7 @@ var LocalStrategy = require('passport-local').Strategy;
 
 passport.use(new LocalStrategy(
   function(username, password, done) {
-    if(username === 'info@extrema-sistemas.com' && password === 'foo') {
+    if(username === 'info@extrema-sistemas.com' && password === 'laureano2012') {
       return done(null, 'user');
     } else {
       return done(null, false, {message: 'Bad user/pass'});

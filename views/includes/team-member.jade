@@ -23,11 +23,11 @@ mixin teamMember(member)
   p(itemprop="description") !{member.description[lang]}
   p
     -member.tags.forEach(function (tag) {
-    -var parts = tag.split(':'), color
+    -var parts = tag.split(':'), tagClass
     -if(parts.length === 1)
-      -color = '#aaa'
+      -tagClass = 'default'
     -else
-      -color = parts[1]
-      span.label.team-tag(style="background-color: " + color + ";") !{parts[0]}
+      -tagClass = parts[1]
+      span(class="label label-" + tagClass) !{parts[0]}
       | 
     -})

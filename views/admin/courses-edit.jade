@@ -22,6 +22,9 @@ append content
           label Price
           input(type="number", name="price", value=course.price)
         .control-group
+          label Duration (hours)
+          input(type="number", name="duration", value=course.duration)
+        .control-group
           label Picture
           img(src="thumb")
           input(type="file", name="thumb")

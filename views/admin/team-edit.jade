@@ -20,9 +20,21 @@ append content
           label Tags
           textarea(id="textarea", name="tags")
         .control-group
-          | Format: 'tag name:tag color' (a CSS color)
+          | Format: 'tag name:tag class'</br>
+          span.label.label-default default 
+          | &nbsp;
+          span.label.label-success success
+          | &nbsp;
+          span.label.label-info info
+          | &nbsp;          
+          span.label.label-warning warning
+          | &nbsp;
+          span.label.label-important important
+          | &nbsp;
+          span.label.label-inverse inverse
+          | </br></br>
           div
-            input(type="text", id="tagname", placeholder="E.g.: Sexy:#ff123a")
+            input(type="text", id="tagname", placeholder="E.g.: Sexy:warning")
             a(id="addtag").btn Click to add tag
           ul(style="display: none")#previous-tags
             -member.tags.forEach(function (tag) {
@@ -72,7 +84,7 @@ append scripts
 
         var tag = $('#tagname').val();
         if(tag.split(':').length === 1) 
-          tag = tag.concat(':#aaa')
+          tag = tag.concat(':default')
 
         $('#textarea').textext()[0].tags().addTags([ tag ]);
 
