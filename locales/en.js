@@ -6,7 +6,7 @@
 	"lang-es": "Español",
 	"lang-it": "Italiano",
 	"About us": "About us",
-	"about-us-p1": "Since 2002 we have been passionate about what we do. We make software applications that change the world one bit at a time, and that look good while at it. We have learned and reinvented our ways, which helped to produce a great team that makes us proud.<p>We have presence in Spain, Switzerland and Italy, but we keep getting the phone ourselves.",
+	"about-us-p1": "Since 2002 we have been making software that changes the world and looks great during the process. Our experience has assembled a great team that makes us proud in Spain, Switzerland and Italy.",
 	"IT-team": "IT team",
 	"Management-team": "Management team",
 	"Courses": "Courses",
