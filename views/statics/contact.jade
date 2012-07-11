@@ -49,38 +49,32 @@ append content
       .span4.contact-data(itemscope, itemtype="http://schema.org/Corporation")
         .alert.alert-details
           h2.alert-heading Madrid
-          br
           h4 
-            | <i class="icon-user"></i>
-            | !{__('Address')}
+            | <i class="icon-road"></i>
+            | Extrema Sistemas S.L.
           address(itemprop="address", itemscope, itemtype="http://schema.org/PostalAddress")
-            p Extrema Sistemas S.L.
-            p(itemprop="streetAddress") C/Casas de Miravete, 24A, Planta 1, Oficina 2 <br />
-            p(itemprop="postalCode") CP 28031 <br />
-            p(itemprop="addressCountry") Madrid
+            p(itemprop="streetAddress") C/Casas de Miravete 24A<br />
+            span(itemprop="postalCode") 28031 
+            span(itemprop="addressCountry") Madrid
           h4
             | <i class="icon-th"></i>
-            |!{__('Phone')}
-          p(itemprop="telephone") (+34) 91 172 7081
+            |!{__('Phone')} 
+            span(itemprop="telephone") (+34) 91 172 7081
           hr
           h2.alert-heading !{__('Italy')}
-          br
           h4 
             | <i class="icon-th"></i>
-            | !{__('Phone')}
-          p(itemprop="telephone") (+39) 06 929 56 158
+            | !{__('Phone')} 
+            span(itemprop="telephone") (+39) 06 929 56 158
           hr
           h2.alert-heading Email
-          br
           h4 
-            | <i class="icon-envelope"></i>
-            | Email
-          a(href="mailto:info@extrema-sistemas.com",
-            title=__('Email-to') + ": info@extrema-sistemas.com",
-            itemprop="email") info@extrema-sistemas.com
-          br
-          br
-          h4 !{__('Join-us')}
+            | <i class="icon-envelope"></i> 
+            a(href="mailto:info@extrema-sistemas.com",
+              title=__('Email-to') + ": info@extrema-sistemas.com",
+              itemprop="email") info@extrema-sistemas.com
+          hr
+          h4.join-us !{__('Join-us')}
           -var linkCV = '<a href="mailto:team@extrema-sistemas.com" class="email" title="' + __('Send-CV') + ': team@extrema-sistemas.com">team@extrema-sistemas.com</a>'
           p  
             | !{__('Join-us-p')}
