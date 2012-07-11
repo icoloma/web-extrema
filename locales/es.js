@@ -37,5 +37,7 @@
 	"Training": "Training",
 	"hours": "hours",
 	"vat-exempt": "vat-exempt",
-	"discounts-javasp": "discounts-javasp"
+	"discounts-javasp": "discounts-javasp",
+	"discount-javasp": "discount-javasp",
+	"info-javasp": "info-javasp"
 }

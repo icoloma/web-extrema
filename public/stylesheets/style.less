@@ -114,8 +114,10 @@ p {
   }
 }
 
-.navbar-inner { //Bootstrap
+.navbar-inner {
   color: @barLinksColor;
+
+  border-radius: 0;
 
   background: none;
   background-color: @backgroundNav;
@@ -131,6 +133,10 @@ p {
   &:hover {
     background-color: @backgroundNavHover !important ;
   }
+}
+
+.lang-dropdown {
+  cursor: pointer;
 }
 
 .caret {
@@ -341,6 +347,11 @@ h3 > .label {
 .details  {
   margin-bottom: 10px;
   position: relative;
+
+  & > img {
+    display: inline-block;
+  }
+
 }
 
 .social-sprite(@position, @hover) {
@@ -353,7 +364,7 @@ h3 > .label {
 
 .sociallinks {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: baseline;
   margin-left: 5%;
 
   & > li {
@@ -482,7 +493,7 @@ li.wordpresslink > a {
 
 }
 
-@starBackgroundColor: #e9eef4;
+@starBackgroundColor: darken(#e9eef4, 0%);
 
 .star(@height, @color) {
   @padding: 2px;
@@ -497,10 +508,9 @@ li.wordpresslink > a {
 
   line-height: 100%;
   font-size: @total;
-  text-shadow: 0px 0px 1px darken(@starBackgroundColor, 10%);
+  text-shadow: 0px 0px 2px darken(@starBackgroundColor, 50%);
 
   color: @color;
-  background-color: @starBackgroundColor;
 
   margin-right: 10px;
 }
@@ -525,6 +535,7 @@ li.wordpresslink > a {
 
 .voucher-javaspecialists {
   color: darken(@javaspecialistsColor, 20%);
+  background: lighten(@javaspecialistsColor, 35%);
   &:before {
     .star(@voucherHeight, @javaspecialistsColor);
   }
@@ -532,13 +543,15 @@ li.wordpresslink > a {
 
 .voucher-html5 {
   color: darken(@html5Color, 20%);
-  &:before {
-    .star(@voucherHeight, @html5Color);
-  }
+  // background: lighten(@springColor, 35%);
+  // &:before {
+  //   .star(@voucherHeight, @html5Color);
+  // }
 }
 
 .voucher-spring {
   color: darken(@springColor, 20%);
+  background: lighten(@springColor, 35%);
   &:before {
     .star(@voucherHeight, @springColor);
   }
@@ -666,8 +679,6 @@ li.wordpresslink > a {
   .navbar-inner { //Bootstrap
     width: 100%;
     padding: 0;
-
-    border-radius: 0;
   }
 
   .nav > li {
