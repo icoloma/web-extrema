@@ -1,0 +1,11 @@
+.description-input {
+  resize: vertical;
+  width: 85%;
+}
+.thumb-list {
+  width: 50px;
+}
+.thumb-edition {
+  width: 35px;
+  margin-right: 5px;
+}
