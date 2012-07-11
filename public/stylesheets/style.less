@@ -194,9 +194,10 @@ p {
           .transition(.3s, ease-out);
           max-width: 200px;
 
-          // text-align: center;
+          text-align: center;
 
-          margin-left: 10px;
+
+          margin: 0 auto;
           padding: 5px;
 
           position: relative;
@@ -241,48 +242,54 @@ span[class^="client-"] {
   background-position: -100px 0px;
 }
 
-.client-telefonica {
+.client-carrefour {
   background-position: -200px 0px;
 }
 
-.client-carrefour {
+.client-mapfre {
   background-position: -300px 0px;
 }
 
-.client-mapfre {
+.client-accenture {
   background-position: -400px 0px;
 }
 
-.client-corteingles {
+.client-atos {
   background-position: -500px 0px;
 }
 
-.client-accenture {
+.client-aena {
   background-position: -600px 0px;
 }
 
-.client-atos {
+.client-indra {
   background-position: -700px 0px;
 }
 
-.client-aena {
+.client-bde {
   background-position: -800px 0px;
 }
 
-.client-indra {
+span.client-everis {
+  width: 70px;
   background-position: -900px 0px;
 }
 
-.client-everis {
-  background-position: -1000px 0px;
+span.client-icm {
+  width: 55px;
+  background-position: -970px 0px;
 }
 
-.client-icm {
-  background-position: -1100px 0px;
+span.client-corteingles {
+  width: 90px;
+  background-position: -1025px 0px;
+
 }
 
-.client-bde {
-  background-position: -1200px 0px;
+span.client-movistar {
+  width: 70px;
+  background-position: -1115px 0px;
+
 }
 
 /* ***** */
@@ -307,6 +314,7 @@ footer > .wrapper > a {
 .about.well {
   box-sizing: border-box;
   margin-bottom: 40px;
+  background-color: @backgroundNavHover;
 
   & > h2 {
     margin-bottom: 10px;
@@ -399,7 +407,8 @@ li.wordpresslink > a {
     }
 
     & > .active > a {
-      background-color: darken(@backgroundNav, 3%);
+      color: white !important;
+      background-color: #08C;
     }
   }
 }
@@ -470,6 +479,11 @@ li.wordpresslink > a {
   border: 1px solid #fbeed5;
   padding: 10px 30px 10px 15px;
   margin-bottom: 10px;
+
+  & > li {
+    margin-bottom: 10px;
+  }
+
 }
 
 @starBackgroundColor: #e9eef4;
@@ -477,18 +491,22 @@ li.wordpresslink > a {
 .star(@height, @color) {
   @padding: 2px;
   @total: @padding + @height;
+
   content: "\2605";
   display: block;
   text-align: center;
+
   height: 100%;
   width: @total;
+
   line-height: 100%;
   font-size: @total;
+  text-shadow: 0px 0px 1px darken(@starBackgroundColor, 10%);
+
   color: @color;
   background-color: @starBackgroundColor;
+
   margin-right: 10px;
-  text-shadow: 0px 1px rgba(150, 150, 150, 50%);
-  z-index: -1;
 }
 
 @voucherHeight: 70px;

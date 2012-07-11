@@ -11,7 +11,6 @@
 	"Management-team": "Management team",
 	"Courses": "Courses",
 	"details-spring": "<p>Price VAT exempt.<br><strong>Multiple registrations</strong>: 10% for more than one registration, 15% for three or more registrations. <br><strong>Members of extrema-alumni</strong>: 15% discount.<br>Discounts are not cumulative. </p><p>If you wish to receive additional information about possible discounts based on the number of people registered for a course or deliver them in-house, please send an e-mail to <a href=\"mailto:training@extrema-sistemas.com\">training@extrema-sistemas.com</a> .</p>",
-	"details-javaspecialists": "<p>VAT exempt.<br>Attendees that are members of extrema-alumni may apply a <strong>15% discount</strong><br>Discounts are not cumulative.</p><p>If you wish to receive additional information or a customized price for more than five attendees, please send an e-mail to <a href=\"mailto:training@extrema-sistemas.com\">training@extrema-sistemas.com</a> .</p>",
 	"details-HTML5": "<p>VAT exempt.<br><strong>Multiple registrations</strong>: 10% for two registrations and 15% for three or more<br><strong>Members of extrema-alumni</strong> 15% discount.<br>These discounts are not cumulative.</p>",
 	"tripartita": "Courses sponsored by Fundación Tripartita.",
 	"javasp-thumb": "A 4-day course where even the most experienced Java programmer will be challenged.",
@@ -35,5 +34,8 @@
 	"captcha-please": "This question is for testing whether you are a human visitor and to prevent automated spam submissions.",
 	"show-navbar": "show-navbar",
 	"Training": "Training",
-	"hours": "hours"
+	"hours": "hours",
+	"vat-exempt": "VAT exempt.",
+	"discount-javasp": "Attendees that are members of extrema-alumni may apply a <strong>15% discount</strong><br>Discounts are not cumulative.",
+	"info-javasp": "If you wish to receive additional information or a customized price for more than five attendees, please send an e-mail to <a href=\"mailto:training@extrema-sistemas.com\">training@extrema-sistemas.com</a> ."
 }

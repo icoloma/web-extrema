@@ -35,5 +35,7 @@
 	"captcha-please": "Esta pregunta se hace para comprobar que es usted una persona real e impedir el envío automatizado de mensajes basura.",
 	"show-navbar": "show-navbar",
 	"Training": "Training",
-	"hours": "hours"
+	"hours": "hours",
+	"vat-exempt": "vat-exempt",
+	"discounts-javasp": "discounts-javasp"
 }
