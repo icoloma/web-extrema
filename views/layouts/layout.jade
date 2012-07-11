@@ -36,13 +36,14 @@ html
                   li
                     a(href="/logout") Logout
               -}
+              ul.nav.pull-right
+                li
+                  a(href="/contact") !{__('Contact')}
               mixin langDropdown(lang)
     .wrapper
       block content
 
     footer
-      .wrapper
-        a(href='/contact') !{__('Contact')}
       .navbar.visible-phone
         .navbar-inner
           .container
@@ -51,6 +52,8 @@ html
               mixin navbarLink(selected, '/courses', 'Training')
               mixin navbarLink(selected, '/team', 'Team')
               mixin navbarLink(selected, '/follow-us', 'Follow-us')
+              li
+                a(href="/contact") !{__('Contact')}
               mixin langPills(lang)
               -if (user) {
                 ul.nav.pull-right

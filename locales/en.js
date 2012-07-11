@@ -36,6 +36,9 @@
 	"show-navbar": "show-navbar",
 	"Training": "Training",
 	"hours": "hours",
+	"vat-exempt": "VAT exempt.",
+	"discount-javasp": "Attendees that are members of extrema-alumni may apply a <strong>15% discount</strong><br>Discounts are not cumulative.",
+	"info-javasp": "If you wish to receive additional information or a customized price for more than five attendees, please send an e-mail to <a href=\"mailto:training@extrema-sistemas.com\">training@extrema-sistemas.com</a> .",
 	"twitter-title": "Follow us on Twitter",
 	"blog-title": "Go to our blog"
 }

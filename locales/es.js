@@ -36,6 +36,8 @@
 	"show-navbar": "show-navbar",
 	"Training": "Training",
 	"hours": "hours",
+	"vat-exempt": "vat-exempt",
+	"discounts-javasp": "discounts-javasp",
 	"twitter-title": "Síguenos en Twitter",
 	"blog-title": "Visita nuestro blog"
 }

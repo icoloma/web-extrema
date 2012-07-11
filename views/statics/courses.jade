@@ -15,10 +15,13 @@ append content
         .span8
           mixin courseContent('Javaspecialists')
         .span4
-          .course-conditions
-            p 
-            | <i class="icon-envelope"></i>
-            |!{__('details-javaspecialists')}
+          ul.course-conditions
+            li
+              !{__('vat-exempt')}
+            li
+              !{__('discount-javasp')}
+            li
+              !{__('info-javasp')}
           .thumbnail
             img(src="images/tripartita.jpg")
             .caption
