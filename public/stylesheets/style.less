@@ -307,18 +307,14 @@ footer > .wrapper > a {
 .about.well {
   box-sizing: border-box;
   margin-bottom: 40px;
-}
 
-.blog-extrema {
-  font-family: Bitter, Georgia, 'Times New Roman', Times, serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: black;
-  font-size: 60px;
+  & > h2 {
+    margin-bottom: 10px;
+  }
 
-  &:hover {
-    text-decoration: none;
-    color: black;
+  & > .details > ul {
+    margin-bottom: 0px;
+    vertical-align: baseline;
   }
 }
 
@@ -340,6 +336,14 @@ h3 > .label {
   position: relative;
 }
 
+.social-sprite(@position, @hover) {
+  @size: 50px;
+  background-position: -@position*@size 0;
+  &:hover {
+    background-position: -@hover*@size 0;
+  }
+}
+
 .sociallinks {
   display: inline-block;
   vertical-align: middle;
@@ -359,21 +363,27 @@ h3 > .label {
       width: 50px;
       height: 50px;
 
-      background: url(../images/sprite_social.png) no-repeat 0 -0px;
+      background: url(../images/sprite_social.png) no-repeat;
+
+      .social-sprite(3, 0);
     }
   }
 }
 
 li.twitterlink > a {
-  background-position: -50px 0px;
+ .social-sprite(5, 2);
+}
+
+li.twitterbiglink > a {
+ .social-sprite(8, 6);
 }
 
 li.linkedinlink > a {
-  background-position: -100px 0px;
+  .social-sprite(4,1);
 }
 
 li.wordpresslink > a {
-  background-position: -150px 0px;
+  .social-sprite(9,7)
 }
 /* ***** */
 
