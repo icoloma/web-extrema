@@ -36,5 +36,6 @@
 	"wrong-captcha": "The answer you entered for the CAPTCHA was not correct.",
 	"captcha-please": "This question is for testing whether you are a human visitor and to prevent automated spam submissions.",
 	"show-navbar": "show-navbar",
-	"Training": "Training"
+	"Training": "Training",
+	"hours": "hours"
 }

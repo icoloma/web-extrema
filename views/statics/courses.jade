@@ -25,7 +25,6 @@ append content
         .span8
           mixin courseContent('HTML5')
         .span4
-          .kcontainer(data-show-id="xrd,htP,STe,v3f,BMf")
           .alert
             !{__('details-HTML5')}
           .thumbnail
@@ -50,22 +49,33 @@ append scripts
   script(src="//www.koliseo.com/w/kperf/1.0/kperf.min.js")
   //- Activar el pill correcto
   script
-    var kcontainer = $('.kcontainer');
-    if(location.hash) {
-      $('li > [href=' + location.hash + ']').parent().addClass('active')
-      $(location.hash).addClass('active')
+    var pill = location.hash || '#HTML5';
+    $('li > [href=' + pill + ']').parent().addClass('active');
+    $(pill).addClass('active');
+ 
+    // Fix para widget de Koliseo
+    var courses = {
+      '#javaspecialists': 'xrd',
+      '#HTML5': 'htP',
+      '#spring': 'STe,v3f,BMf'
+    };
 
-      //- Fix temporal para widget de Koliseo
-      $('.kcontainer').replaceWith('');
-      $(location.hash + '> .span4').prepend(kcontainer)
-    } else {
-      $('li > [href=#HTML5]').parent().addClass('active')
-      $('#HTML5').addClass('active')
+    var courseWidget = function (course) {
+      return {
+        showId: course,
+        locale: '!{lang}',
+        dateFormat: $('.koliseo-widget').width() < 200? 'dd/mm' : 'Ddd Mm* d*'
+      };
     }
-    //- Fix temporal para widget de Koliseo
+
+    $(pill + '> .span4').prepend('<div class="koliseo-widget"></div>');
+    $('.koliseo-widget').kperf(courseWidget(courses[pill]));
+
+    // Fix para widget de Koliseo
     $('[data-toggle="tab"]').on('click', function () {
-      $('.kcontainer').replaceWith('');
-      $($(this).attr('href') + '> .span4').prepend(kcontainer)
+      var pill = $(this).attr('href');
+      $(pill + '> .span4').prepend($('.koliseo-widget'));
+      $('.koliseo-widget').kperf(courseWidget(courses[pill]));
     });
 
   

@@ -36,5 +36,6 @@
 	"wrong-captcha": "La respuesta a la pregunta no es correcta.",
 	"captcha-please": "Esta pregunta se hace para comprobar que es usted una persona real e impedir el envío automatizado de mensajes basura.",
 	"show-navbar": "show-navbar",
-	"Training": "Training"
+	"Training": "Training",
+	"hours": "hours"
 }

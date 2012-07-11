@@ -36,6 +36,10 @@
 }
 
 /* ESTILOS GENERALES */
+body {
+  background-color: #f9fbfb;
+}
+
 ul {
   margin-left: 0px;
   list-style: none;
@@ -343,94 +347,87 @@ li.wordpresslink > a {
   }
 }
 
+
+@backgroundCourseTitleHeight: 45px;
+@courseDetailsHeight: 20px;
 .courses-list {
 
   & > li {
     margin-bottom: 40px;
+      // & > img {
+      //   float: left;
+      //   margin-top: 20px;
+      //   margin-right: 20px;
+      //   margin-bottom: 20px;
+      // }
+    & > h4 {
+      height: @backgroundCourseTitleHeight;
+      line-height: @backgroundCourseTitleHeight;
+      padding-left: 20px;
 
-      & > img {
-        float: left;
-        margin-top: 20px;
-        margin-right: 20px;
-        margin-bottom: 20px;
-      }
+      font-family: 'Exo', sans-serif !important;
+      font-weight:400;
+      font-size:1.6em;
 
-      & > p {
-        margin-top: 20px;
-      }
+      color: white;
+      text-shadow: 0px 1px 0px rgba(100, 100, 100, 0.6);
+    }
+    & > p {
+      margin-top: 20px;
+    }
 
   }
 }
 
-@backgroundCourseTitleHeight: 45px;
-@courseDetailsHeight: 20px;
-
-.course-heading() {
-  font-family: 'Exo', sans-serif !important;
-  font-weight:400;
-
-  font-size:1.6em;
+.course-details {
+  height: @courseDetailsHeight;
+  text-align: right;
+  color: white;
+  padding-right: 20px;
 }
 
-.courseDetails(@color: #fff) {
-  .course-details {
-    height: @courseDetailsHeight;
-    background-color: @color;
-    text-align: right;
-    color: white;
-  }
-}
-
-.courses-list > li > h4 {
-  height: @backgroundCourseTitleHeight;
-  line-height: @backgroundCourseTitleHeight;
-}
+// .courseDetails(@color: #fff) {
+//   .course-details {
+//     height: @courseDetailsHeight;
+//     background-color: @color;
+//     text-align: right;
+//     color: white;
+//   }
+// }
 
 @springColor: #abd33e;
 @javaspecialistsColor: #ffb535;
 @html5Color:#8ac1e5;
 
-#spring {
+.course-heading(@backgroundURL, @detailsColor) {
   .courses-list > li > h4 {
-    .course-heading();
-    color:#a4dc42;
-
-    background: url(../images/fondo-spring.jpg);
+    background: url("../images/@{backgroundURL}");
   }
+  .course-details {
+    background-color: @detailsColor;
+  }
+}
 
-  .courseDetails(@springColor)
+#spring {
+  .course-heading("fondo-spring.jpg", @springColor)
 }
 
 #javaspecialists {
-
-  .courses-list > li > h4 {
-    .course-heading();
-    // color:#a4dc42;
-    
-    background: url(../images/fondo-javaspecialists.jpg);
-  }
-
-  .courseDetails(@javaspecialistsColor)
+  .course-heading("fondo-javaspecialists.jpg", @javaspecialistsColor)
 }
 
 #HTML5 {
-  .courses-list > li > h4 {
-    .course-heading();
-    // color:#a4dc42;
-    
-    background: url(../images/fondo-html5.jpg);
-  }
- .courseDetails(@html5Color)
+  .course-heading("fondo-html5.jpg", @html5Color)
 }
-
-
 
 .voucher {
   border: 1px solid #000;
   display: table;
 
-  @height: 70px;
+  @height: 46px;
   height: @height;
+
+  background: url(../images/estrellas.png) no-repeat 0px 0px;
   
   & > p {
     display: table-cell;
@@ -450,10 +447,16 @@ li.wordpresslink > a {
 
 .voucher-html5 {
   color: @html5Color;
+  background-position: -46px;
 }
 
 .voucher-spring {
   color: @springColor;
+  background-position: -92px;
+}
+
+.koliseo-widget {
+  margin-bottom: 10px;
 }
 
 /* ***** */
