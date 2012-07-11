@@ -6,7 +6,7 @@
 	"lang-es": "Español",
 	"lang-it": "Italiano",
 	"About us": "Quiénes somos",
-	"about-us-p1": "Llevamos desde 2002 implicándonos en todo lo que hacemos. Diseñamos aplicaciones de software para intentar cambiar el mundo, intentando que se conviertan en puntos de referencia del sector. Esto nos ha permitido aprender y reinventarnos cada día, desarrollando un magnífico equipo de trabajo del que sentirnos orgullosos. <p>Tenemos presencia en España, Suiza e Italia, pero seguimos contestando al teléfono nosotros mismos.",
+	"about-us-p1": "Llevamos desde 2002 diseñando software que cambie el mundo y luzca bien durante el proceso. Nuestra experiencia ha combinado un magnífico equipo de trabajo del que sentirnos orgullosos en España, Suiza e Italia.",
 	"IT-team": "Equipo técnico",
 	"Management-team": "Equipo gestión",
 	"Courses": "Cursos",
