@@ -8,15 +8,14 @@ append content
   .container-fluid
     .row-fluid
       .about(itemscope, itemtype="http://schema.org/Corporation").well.span12
-        h2 !{__('About us')}
-        .details
+        .details.span4
           img(src="/images/logo-extrema.png", itemprop="image")
           ul.sociallinks
             li.twitterbiglink
               a(href="http://twitter.com/extremasistemas") Twitter
             li.wordpresslink
               a(href="http:blog.extrema-sistemas.com") Blog
-        p(itemprop="description") !{__('about-us-p1')}
+        .span8(itemprop="description") !{__('about-us-p1')}
     .team-members
       -for(var i = 0; i < members.length; i += 2) {
         .row-fluid
