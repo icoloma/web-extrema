@@ -49,6 +49,7 @@ append content
       .span4.contact-data(itemscope, itemtype="http://schema.org/Corporation")
         .alert.alert-details
           h2.alert-heading Madrid
+          br
           h4 
             | <i class="icon-road"></i>
             | Extrema Sistemas S.L.
@@ -56,18 +57,22 @@ append content
             p(itemprop="streetAddress") C/Casas de Miravete 24A<br />
             span(itemprop="postalCode") 28031 
             span(itemprop="addressCountry") Madrid
+            p
+              a(href="http://goo.gl/maps/3nDy") &raquo; ver en Google Maps 
           h4
             | <i class="icon-th"></i>
             |!{__('Phone')} 
             span(itemprop="telephone") (+34) 91 172 7081
           hr
           h2.alert-heading !{__('Italy')}
+          br
           h4 
             | <i class="icon-th"></i>
             | !{__('Phone')} 
             span(itemprop="telephone") (+39) 06 929 56 158
           hr
           h2.alert-heading Email
+          br
           h4 
             | <i class="icon-envelope"></i> 
             a(href="mailto:info@extrema-sistemas.com",

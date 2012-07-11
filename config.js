@@ -87,7 +87,7 @@ var compileLessFiles = function () {
   var files = fs.readdirSync(cssPath);
 
   files.forEach(function (file) {
-    if(file.match(/less/)) {
+    if(file.match(/less$/)) {
       var noExtension = file.split('.less')[0];
       compileLessFile(cssPath + '/' + file, cssPath + '/' + noExtension + '.css')
     }

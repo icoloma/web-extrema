@@ -37,9 +37,8 @@
 	"Training": "Training",
 	"hours": "hours",
 	"vat-exempt": "vat-exempt",
-	"discounts-javasp": "discounts-javasp",
-	"twitter-title": "Síguenos en Twitter",
-	"blog-title": "Visita nuestro blog",
 	"discount-javasp": "discount-javasp",
-	"info-javasp": "info-javasp"
+	"info-javasp": "info-javasp",
+	"twitter-title": "Síguenos en Twitter",
+	"blog-title": "Visita nuestro blog"
 }

@@ -1,6 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu);
-
-
 //Variables   //
 @barLinksColor: #7da6c6;
 @barLinksHeight: 35px;
@@ -114,8 +111,10 @@ p {
   }
 }
 
-.navbar-inner { //Bootstrap
+.navbar-inner {
   color: @barLinksColor;
+
+  border-radius: 0;
 
   background: none;
   background-color: @backgroundNav;
@@ -131,6 +130,10 @@ p {
   &:hover {
     background-color: @backgroundNavHover !important ;
   }
+}
+
+.lang-dropdown {
+  cursor: pointer;
 }
 
 .caret {
@@ -340,7 +343,13 @@ h3 > .label {
 
 .details  {
   margin-bottom: 10px;
-  position: relative;
+
+
+  & > img {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
 }
 
 .social-sprite(@position, @hover) {
@@ -353,8 +362,9 @@ h3 > .label {
 
 .sociallinks {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: baseline;
   margin-left: 5%;
+  margin-bottom: 0px;
 
   & > li {
     display: inline-block;
@@ -482,7 +492,7 @@ li.wordpresslink > a {
 
 }
 
-@starBackgroundColor: #e9eef4;
+@starBackgroundColor: darken(#e9eef4, 0%);
 
 .star(@height, @color) {
   @padding: 2px;
@@ -497,10 +507,9 @@ li.wordpresslink > a {
 
   line-height: 100%;
   font-size: @total;
-  text-shadow: 0px 0px 1px darken(@starBackgroundColor, 10%);
+  text-shadow: 0px 0px 2px darken(@starBackgroundColor, 50%);
 
   color: @color;
-  background-color: @starBackgroundColor;
 
   margin-right: 10px;
 }
@@ -525,6 +534,7 @@ li.wordpresslink > a {
 
 .voucher-javaspecialists {
   color: darken(@javaspecialistsColor, 20%);
+  background: lighten(@javaspecialistsColor, 35%);
   &:before {
     .star(@voucherHeight, @javaspecialistsColor);
   }
@@ -532,13 +542,15 @@ li.wordpresslink > a {
 
 .voucher-html5 {
   color: darken(@html5Color, 20%);
-  &:before {
-    .star(@voucherHeight, @html5Color);
-  }
+  // background: lighten(@springColor, 35%);
+  // &:before {
+  //   .star(@voucherHeight, @html5Color);
+  // }
 }
 
 .voucher-spring {
   color: darken(@springColor, 20%);
+  background: lighten(@springColor, 35%);
   &:before {
     .star(@voucherHeight, @springColor);
   }
@@ -623,6 +635,18 @@ li.wordpresslink > a {
   color: @barLinksColor;
   background-color: @backgroundNav;
   border-color: @backgroundNavHover;
+
+  & > address {
+    margin: 8px 0 10px 17px;
+  }
+
+  & > h4 > [class^="icon-"] {
+    line-height: inherit;
+  }
+
+  & > h4 > a {
+    color: inherit;
+  }
 }
 
 .contact-form > .control-group {
@@ -670,8 +694,6 @@ li.wordpresslink > a {
   .navbar-inner { //Bootstrap
     width: 100%;
     padding: 0;
-
-    border-radius: 0;
   }
 
   .nav > li {
