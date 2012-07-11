@@ -12,9 +12,9 @@ append content
           img(src="/images/logo-extrema.png", itemprop="image")
           ul.sociallinks
             li.twitterbiglink
-              a(href="http://twitter.com/extremasistemas") Twitter
+              a(href="http://twitter.com/extremasistemas", title=__('twitter-title') ) Twitter
             li.wordpresslink
-              a(href="http:blog.extrema-sistemas.com") Blog
+              a(href="http:blog.extrema-sistemas.com", title=__('blog-title')) Blog
         .span8(itemprop="description") !{__('about-us-p1')}
     .team-members
       -for(var i = 0; i < members.length; i += 2) {
