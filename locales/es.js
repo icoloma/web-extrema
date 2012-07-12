@@ -6,12 +6,13 @@
 	"lang-es": "Español",
 	"lang-it": "Italiano",
 	"About us": "Quiénes somos",
+	"Welcome": "Extrema Sistemas: la formación, consultoría y mentoring que necesitas",
 	"about-us-p1": "Llevamos desde 2002 diseñando software que cambie el mundo y luzca bien durante el proceso. Nuestra experiencia ha combinado un magnífico equipo de trabajo del que sentirnos orgullosos en España, Suiza e Italia.",
 	"IT-team": "Equipo técnico",
 	"Management-team": "Equipo gestión",
 	"Courses": "Cursos",
-	"details-spring": "<p>Exento de IVA.<br><strong>Registro múltiple</strong>: 10% de descuento a partir del segundo alumno.<br><strong>Miembros de extrema-alumni</strong>: 15% de descuento.<br>Los descuentos no son acumulativos.</p><p>Si desea información adicional o condiciones preferentes para cursos con más de cinco asistentes solicítela escribiendo a <a href=\"mailto:training@extrema-sistemas.com\">training@extrema-sistemas.com</a>.</p>",
-	"details-javaspecialists": "<p>Exentos de IVA.<br>Asistentes miembros de extrema-alumni pueden beneficiarse de un <strong>15% de descuento</strong><br>Los descuentos no son acumulables.</p><p>Si desea información adicional o condiciones preferentes para cursos con más de cinco asistentes solicítela escribiendo a <a href=\"mailto:training@extrema-sistemas.com\">training@extrema-sistemas.com</a> .</p>",
+	"details-spring": "<p>Exento de IVA.<br><strong>Registro múltiple</strong>: 10% de descuento a partir del segundo alumno.<br><strong>Miembros de extrema-alumni</strong>: 15% de descuento.<br>Los descuentos no son acumulativos.</p><p>Para información adicional o condiciones preferentes para cursos con más asistentes <a href=\"/contact\">póngase en contacto</a>.</p>",
+	"details-javaspecialists": "<p>Exentos de IVA.<br>Asistentes miembros de extrema-alumni pueden beneficiarse de un <strong>15% de descuento</strong><br>Los descuentos no son acumulables.</p><p>Para información adicional o condiciones preferentes para cursos con más asistentes <a href=\"/contact\">póngase en contacto</a>.</p>",
 	"details-HTML5": "<p>Exento de IVA.<br><strong>Registro múltiple</strong>: 10% de descuento si se inscriben 2 alumnos, 15% a partir del tercero<br><strong>Miembros de extrema-alumni</strong> 15% de descuento.<br>Estos descuentos no son acumulativos.</p>",
 	"tripartita": "Cursos bonificables por la Fundación Tripartita.",
 	"javasp-thumb": "Un curso de 4 días donde los profesionales Java más experimentados sentirán el estímulo del desafío personal.",
@@ -38,8 +39,12 @@
 	"Training": "Training",
 	"hours": "hours",
 	"vat-exempt": "Exento de IVA.",
+	"home1": "En cabeza en formación",
+	"home2": "Tenemos los mejores cursos de formación de IT al precio más asequible.",
+	"home3": "Consigue la ventaja natural de la consultoría",
+	"home4": "Súmate a la lista de clientes que han confiado en nuestros servicios de consultoría y mentoring. <p><a href=\"/contact\" class=\"btn btn-info\">Entra en contacto ahora</a>",
 	"discount-javasp": "Los miembros de extrema-alumni disponen de un <strong>15% de descuento</strong>. Los descuentos no son acumulativos.",
-	"info-javasp": "Si desea información adicional o un precio a medida para más de cinco asistentes, por favor póngase en contacto con <a href=\"mailto:training@extrema-sistemas.com\">training@extrema-sistemas.com</a>.",
+	"info-javasp": "Para información adicional o condiciones preferentes para cursos con más asistentes <a href=\"/contact\">póngase en contacto</a>.</p>",
 	"twitter-title": "Síguenos en Twitter",
 	"blog-title": "Visita nuestro blog",
 	"seeInGoogleMaps": "ver en Google Maps",
@@ -52,6 +57,6 @@
 	"500-img-title": "Es el procesador o el starter. Esto puede que tome un tiempo...",
 	"500-title": "Error interno",
 	"500-error": "Este árbol no debía estar aquí...",
-	"500-explanation": "Algo ha ido mal, mal, mal. Es interno, es feo, y probablemente es culpa nuestra. Refrescar el navegador no ayudará. <p>Por favor vuelve a intentarlo en unos minutos, o <a href=\"mailto:info@extrema-sistemas.com\">contáctanos</a>."
+	"500-explanation": "Algo ha ido mal, mal, mal. Es interno, es feo, y probablemente es culpa nuestra. Refrescar el navegador no ayudará. <p>Por favor vuelve a intentarlo en unos minutos, o <a href=\"/contact\">contáctanos</a>."
 
 }
