@@ -11,7 +11,7 @@ append content
           .alert.alert-danger
             p !{alert}
         -}
-        script(type="text/javascript")
+        script
           var RecaptchaOptions = {
             theme : 'white',
           };
@@ -35,7 +35,7 @@ append content
             textarea(required, name="comment", rows=10) !{fields && fields.comment || ''}
 
           .control-group
-            script(type='text/javascript', src='http://www.google.com/recaptcha/api/challenge?k=6LcjZdMSAAAAAM6BSZH_hjej4enmL1KmSyPq5VrP')
+            script(src='http://www.google.com/recaptcha/api/challenge?k=6LcjZdMSAAAAAM6BSZH_hjej4enmL1KmSyPq5VrP')
       
             noscript
               iframe(src='http://www.google.com/recaptcha/api/noscript?k=your_public_key', height='300', width='500', frameborder='0')
