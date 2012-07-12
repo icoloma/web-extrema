@@ -636,19 +636,31 @@ li.wordpresslink > a {
   background-color: @backgroundNav;
   border-color: @backgroundNavHover;
 
-  & > address {
-    margin: 8px 0 10px 17px;
+  & > address, & > .directions {
+    margin: 0px 0 10px 17px;
   }
 
-  & > h4 > [class^="icon-"] {
-    line-height: inherit;
+  & > h2 {
+    margin-bottom: 10px;
   }
 
-  & > h4 > a {
-    color: inherit;
+  & > h4 {
+
+    margin-bottom: 8px;
+
+    & > [class^="icon-"] {
+      line-height: inherit;
+      opacity: .4;
+    }
+
+    & > a {
+      color: inherit;
+    }
   }
 }
-
+.help-block {
+  font-style: italic;
+}
 .contact-form > .control-group {
 
   & > input {
