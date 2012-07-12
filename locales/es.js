@@ -44,5 +44,14 @@
 	"blog-title": "Visita nuestro blog",
 	"seeInGoogleMaps": "ver en Google Maps",
 	"DirectionsTitle": "Transporte público",
-	"Directions": "Cercanías <i>El pozo</i> y después coger bus T31 (dirección Sierra de Guadalupe). Bajarse en <a href=\"http://goo.gl/maps/HSbS\">Camino Hormigueras con Casas de Miravete</a><p class=\"directions\">Como alternativa, Cercanías <i>Vallecas</i> y después coger bus T31 (dirección El Pozo) o 130 (dirección Villaverde). Bajarse en <a href=\"http://goo.gl/maps/qCiE\">Camino Hormigueras con Casas de Miravete</a>."
+	"Directions": "Cercanías <i>El pozo</i> y después coger bus T31 (dirección Sierra de Guadalupe). Bajarse en <a href=\"http://goo.gl/maps/HSbS\">Camino Hormigueras con Casas de Miravete</a><p class=\"directions\">Como alternativa, Cercanías <i>Vallecas</i> y después coger bus T31 (dirección El Pozo) o 130 (dirección Villaverde). Bajarse en <a href=\"http://goo.gl/maps/qCiE\">Camino Hormigueras con Casas de Miravete</a>.",
+	"404-title": "No tan rápido, batman!",
+	"404-error": "No encontramos la página que estás buscando.",
+	"404-explanation": "Lo sentimos, esta página no está disponible. Puedes volver a intentar desde la <a href=\"/\">página de inicio</a>? Esta vez, ve más lento.",
+	"404-img-title": "Todavía podemos llegar a pie a tu destino. Sólo haz click en los enlaces de arriba.",
+	"500-img-title": "Es el procesador o el starter. Esto puede que tome un tiempo...",
+	"500-title": "Error interno",
+	"500-error": "Este árbol no debía estar aquí...",
+	"500-explanation": "Algo ha ido mal, mal, mal. Es interno, es feo, y probablemente es culpa nuestra. Refrescar el navegador no ayudará. <p>Por favor vuelve a intentarlo en unos minutos, o <a href=\"mailto:info@extrema-sistemas.com\">contáctanos</a>."
+
 }
