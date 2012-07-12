@@ -59,6 +59,7 @@
 	"home4": "Join the list of clients that have relied on our consulting and mentoring services. <p><a href=\"/contact\" class=\"btn btn-info\">Get in contact now</a>",
 	"seeInGoogleMaps": "see in Google Maps",
 	"DirectionsTitle": "Public transport",
-	"Directions": "Cercanías <i>El pozo</i> and then take bus T31 (direction Sierra de Guadalupe). Drop off at <a href=\"http://goo.gl/maps/HSbS\">Camino Hormigueras with Casas de Miravete</a><p class=\"directions\">Alternatively, Cercanías <i>Vallecas</i> and then bus T31 (direction El Pozo) or 130 (direction Villaverde). Drop off at <a href=\"http://goo.gl/maps/qCiE\">Camino Hormigueras with Casas de Miravete</a>."
-
+	"Directions": "Cercanías <i>El pozo</i> and then take bus T31 (direction Sierra de Guadalupe). Drop off at <a href=\"http://goo.gl/maps/HSbS\">Camino Hormigueras with Casas de Miravete</a><p class=\"directions\">Alternatively, Cercanías <i>Vallecas</i> and then bus T31 (direction El Pozo) or 130 (direction Villaverde). Drop off at <a href=\"http://goo.gl/maps/qCiE\">Camino Hormigueras with Casas de Miravete</a>.",
+	"form-error": "Error",
+	"thanks": "Thank you"
 }
