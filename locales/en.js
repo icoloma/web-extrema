@@ -31,15 +31,18 @@
 	"Name": "Name",
 	"Organization": "Organization",
 	"Comment": "Comment",
-	"wrong-captcha": "The answer you entered for the CAPTCHA was not correct.",
-	"captcha-please": "This question is for testing whether you are a human visitor and to prevent automated spam submissions.",
+	"wrong-captcha": "The captcha value introduced is wrong.",
+	"captcha-please": "Please prove that you are human.",
 	"show-navbar": "show-navbar",
 	"Training": "Training",
 	"hours": "hours",
 	"vat-exempt": "VAT exempt.",
-	"discount-javasp": "Attendees that are members of extrema-alumni may apply a <strong>15% discount</strong><br>Discounts are not cumulative.",
-	"info-javasp": "If you wish to receive additional information or a customized price for more than five attendees, please send an e-mail to <a href=\"mailto:training@extrema-sistemas.com\">training@extrema-sistemas.com</a> .",
+	"discount-javasp": "Attendees that are members of extrema-alumni may apply a <strong>15% discount</strong>. Discounts are not cumulative.",
+	"info-javasp": "If you wish to receive additional information or a customized price for more than five attendees, please send an e-mail to <a href=\"mailto:training@extrema-sistemas.com\">training@extrema-sistemas.com</a>.",
 	"twitter-title": "Follow us on Twitter",
 	"blog-title": "Go to our blog",
-	"404-title": "404-title"
+	"404-title": "404-title",
+	"seeInGoogleMaps": "see in Google Maps",
+	"DirectionsTitle": "Public transport",
+	"Directions": "Cercanías <i>El pozo</i> and then take bus T31 (direction Sierra de Guadalupe). Drop off at <a href=\"http://goo.gl/maps/HSbS\">Camino Hormigueras with Casas de Miravete</a><p class=\"directions\">Alternatively, Cercanías <i>Vallecas</i> and then bus T31 (direction El Pozo) or 130 (direction Villaverde). Drop off at <a href=\"http://goo.gl/maps/qCiE\">Camino Hormigueras with Casas de Miravete</a>."
 }

@@ -6,7 +6,7 @@ append content
     .row-fluid
       .span8
         h1 !{__('Contact')}
-        p !{__('required-fields')}
+        p.help-block !{__('required-fields')}
         -if(alert) {
           .alert.alert-danger
             p !{alert}
@@ -35,8 +35,6 @@ append content
             textarea(required, name="comment", rows=10) !{fields && fields.comment || ''}
 
           .control-group
-            label Captcha
-            p !{__('captcha-please')}
             script(type='text/javascript', src='http://www.google.com/recaptcha/api/challenge?k=6LcjZdMSAAAAAM6BSZH_hjej4enmL1KmSyPq5VrP')
       
             noscript
@@ -49,40 +47,34 @@ append content
       .span4.contact-data(itemscope, itemtype="http://schema.org/Corporation")
         .alert.alert-details
           h2.alert-heading Madrid
-          br
-          h4 
-            | <i class="icon-user"></i>
-            | !{__('Address')}
-          address(itemprop="address", itemscope, itemtype="http://schema.org/PostalAddress")
-            p Extrema Sistemas S.L.
-            p(itemprop="streetAddress") C/Casas de Miravete, 24A, Planta 1, Oficina 2 <br />
-            p(itemprop="postalCode") CP 28031 <br />
-            p(itemprop="addressCountry") Madrid
-            p 
-              a(href="http://goo.gl/maps/3nDy") &raquo; ver en Google Maps 
-          h4
-            | <i class="icon-th"></i>
-            |!{__('Phone')}
-          p(itemprop="telephone") (+34) 91 172 7081
+          p
+            b E-mail: 
+            a(href="mailto:info@extrema-sistemas.com", title=__('Email-to') + ": info@extrema-sistemas.com", itemprop="email") info@extrema-sistemas.com
+          p
+            b !{__('Phone')}: 
+            span(itemprop="telephone") (+34) 91 172 7081
+          p
+            span.label.label-info !{__('Address')} 
+            address(itemprop="address", itemscope, itemtype="http://schema.org/PostalAddress")
+              p(itemprop="fn") Extrema Sistemas S.L.
+              p(itemprop="streetAddress") C/Casas de Miravete 24A<br />
+              span(itemprop="postalCode") 28031 
+              span(itemprop="addressCountry") Madrid
+              p
+                a(href="http://goo.gl/maps/3nDy") &raquo; !{__('seeInGoogleMaps')} 
+          p
+            span.label.label-info !{__('DirectionsTitle')} 
+          p.directions !{__('Directions')} 
           hr
           h2.alert-heading !{__('Italy')}
-          br
-          h4 
-            | <i class="icon-th"></i>
-            | !{__('Phone')}
-          p(itemprop="telephone") (+39) 06 929 56 158
+          p
+            b !{__('Phone')} 
+            span(itemprop="telephone") (+39) 06 929 56 158
+          p
+            b E-mail: 
+            a(href="mailto:italy@extrema-sistemas.com", title=__('Email-to') + ": italy@extrema-sistemas.com", itemprop="email") italy@extrema-sistemas.com
           hr
-          h2.alert-heading Email
-          br
-          h4 
-            | <i class="icon-envelope"></i>
-            | Email
-          a(href="mailto:info@extrema-sistemas.com",
-            title=__('Email-to') + ": info@extrema-sistemas.com",
-            itemprop="email") info@extrema-sistemas.com
-          br
-          br
-          h4 !{__('Join-us')}
+          h4.join-us !{__('Join-us')}
           -var linkCV = '<a href="mailto:team@extrema-sistemas.com" class="email" title="' + __('Send-CV') + ': team@extrema-sistemas.com">team@extrema-sistemas.com</a>'
           p  
             | !{__('Join-us-p')}

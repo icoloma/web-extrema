@@ -636,11 +636,31 @@ li.wordpresslink > a {
   background-color: @backgroundNav;
   border-color: @backgroundNavHover;
 
-  & > p, & > address, & > a {
-    margin-left: 14px;
+  & > address, & > .directions {
+    margin: 0px 0 10px 17px;
+  }
+
+  & > h2 {
+    margin-bottom: 10px;
+  }
+
+  & > h4 {
+
+    margin-bottom: 8px;
+
+    & > [class^="icon-"] {
+      line-height: inherit;
+      opacity: .4;
+    }
+
+    & > a {
+      color: inherit;
+    }
   }
 }
-
+.help-block {
+  font-style: italic;
+}
 .contact-form > .control-group {
 
   & > input {
@@ -659,6 +679,10 @@ li.wordpresslink > a {
 
 .contact-data address > p {
   margin-bottom: 0;
+}
+
+.join-us {
+  color: darken(@javaspecialistsColor, 20%);
 }
 
 /* ***** */

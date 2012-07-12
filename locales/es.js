@@ -31,14 +31,18 @@
 	"Name": "Name",
 	"Organization": "Organization",
 	"Comment": "Comment",
-	"wrong-captcha": "La respuesta a la pregunta no es correcta.",
-	"captcha-please": "Esta pregunta se hace para comprobar que es usted una persona real e impedir el envío automatizado de mensajes basura.",
+	"wrong-captcha": "El valor de captcha introducido no es correcto.",
+	"captcha-please": "Por favor demuestra que eres humano.",
 	"show-navbar": "show-navbar",
 	"Training": "Training",
 	"hours": "hours",
-	"vat-exempt": "vat-exempt",
-	"discount-javasp": "discount-javasp",
-	"info-javasp": "info-javasp",
+	"vat-exempt": "Exento de IVA.",
+	"discount-javasp": "Los miembros de extrema-alumni disponen de un <strong>15% de descuento</strong>. Los descuentos no son acumulativos.",
+	"info-javasp": "Si desea información adicional o un precio a medida para más de cinco asistentes, por favor póngase en contacto con <a href=\"mailto:training@extrema-sistemas.com\">training@extrema-sistemas.com</a>.",
 	"twitter-title": "Síguenos en Twitter",
-	"blog-title": "Visita nuestro blog"
+	"blog-title": "Visita nuestro blog",
+	"seeInGoogleMaps": "ver en Google Maps",
+	"DirectionsTitle": "Transporte público",
+	"Directions": "Cercanías <i>El pozo</i> y después coger bus T31 (dirección Sierra de Guadalupe). Bajarse en <a href=\"http://goo.gl/maps/HSbS\">Camino Hormigueras con Casas de Miravete</a><p class=\"directions\">Como alternativa, Cercanías <i>Vallecas</i> y después coger bus T31 (dirección El Pozo) o 130 (dirección Villaverde). Bajarse en <a href=\"http://goo.gl/maps/qCiE\">Camino Hormigueras con Casas de Miravete</a>."
+
 }
