@@ -51,6 +51,7 @@
 	"500-error": "Quest'albero non avrebbe dovuto essere qui…",
 	"500-explanation": "E'appena successo qualcosa di veramente spiacevole e probabilmente è colpa nostra. Aggiornare il browser purtroppo non servirá a niente. <p>Riprovaci tra qualche minuto, per cortesia, o <a href=\"/contact\">scrivici</a>.",
 	"tripartita": "tripartita",
+	"Course-contents": "Course-contents",
 	"Welcome": "Welcome",
 	"sent-mail": "Your comments were sent.",
 	"home1": "Enjoy the training lead",
@@ -60,5 +61,4 @@
 	"seeInGoogleMaps": "see in Google Maps",
 	"DirectionsTitle": "Public transport",
 	"Directions": "Cercanías <i>El pozo</i> and then take bus T31 (direction Sierra de Guadalupe). Drop off at <a href=\"http://goo.gl/maps/HSbS\">Camino Hormigueras with Casas de Miravete</a><p class=\"directions\">Alternatively, Cercanías <i>Vallecas</i> and then bus T31 (direction El Pozo) or 130 (direction Villaverde). Drop off at <a href=\"http://goo.gl/maps/qCiE\">Camino Hormigueras with Casas de Miravete</a>."
-
 }
