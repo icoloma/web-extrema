@@ -2,6 +2,14 @@ extends ../layouts/layout
 
 include ../includes/courses-list
 
+mixin tripartita
+  -if(lang === 'es' || lang === 'en') {
+    .thumbnail
+      img(src="images/tripartita.jpg")
+      .caption
+        h5 !{__('tripartita')}
+  -}
+
 append content
   -var courses = items
   .container-fluid
@@ -22,30 +30,21 @@ append content
               !{__('discount-javasp')}
             li
               !{__('info-javasp')}
-          .thumbnail
-            img(src="images/tripartita.jpg")
-            .caption
-              h5 !{__('tripartita')}
+          mixin tripartita
       .row-fluid.tab-pane#HTML5
         .span8
           mixin courseContent('HTML5')
         .span4
           .course-conditions
             !{__('details-HTML5')}
-          .thumbnail
-            img(src="images/tripartita.jpg")
-            .caption
-              h5 !{__('tripartita')}
+          mixin tripartita
       .row-fluid.tab-pane#spring
         .span8
           mixin courseContent('Spring')
         .span4
           .course-conditions
             !{__('details-spring')}
-          .thumbnail
-            img(src="images/tripartita.jpg")
-            .caption
-              h5 !{__('tripartita')}
+          mixin tripartita
 
     if(user)
       a(href="/courses/new").btn.btn-large.btn-info New

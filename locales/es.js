@@ -60,5 +60,6 @@
 	"500-img-title": "Es el procesador o el starter. Esto puede que tome un tiempo...",
 	"500-title": "Error interno",
 	"500-error": "Este árbol no debía estar aquí...",
-	"500-explanation": "Algo ha ido mal, mal, mal. Es interno, es feo, y probablemente es culpa nuestra. Refrescar el navegador no ayudará. <p>Por favor vuelve a intentarlo en unos minutos, o <a href=\"/contact\">contáctanos</a>."
+	"500-explanation": "Algo ha ido mal, mal, mal. Es interno, es feo, y probablemente es culpa nuestra. Refrescar el navegador no ayudará. <p>Por favor vuelve a intentarlo en unos minutos, o <a href=\"/contact\">contáctanos</a>.",
+	"HTML5-title": "HTML5 and CSS3"
 }
