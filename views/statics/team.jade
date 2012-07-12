@@ -6,16 +6,16 @@ include ../includes/team-member
 append content
   -var members = items
   .container-fluid
-    .row-fluid
-      .about(itemscope, itemtype="http://schema.org/Corporation").well.span12
-        .details.span4
-          img(src="/images/logo-extrema.png", itemprop="image")
-          ul.sociallinks
-            li.twitterbiglink
-              a(href="http://twitter.com/extremasistemas", title=__('twitter-title') ) Twitter
-            li.wordpresslink
-              a(href="http:blog.extrema-sistemas.com", title=__('blog-title')) Blog
-        .span8(itemprop="description") !{__('about-us-p1')}
+    .row-fluid.about(itemscope, itemtype="http://schema.org/Corporation").well
+      .details.span4
+        img(src="/images/logo-extrema.png", itemprop="image")
+        ul.sociallinks
+          li.twitterbiglink
+            a(href="http://twitter.com/extremasistemas", title=__('twitter-title') ) Twitter
+          li.wordpresslink
+            a(href="http:blog.extrema-sistemas.com", title=__('blog-title')) Blog
+      .span8(itemprop="description") 
+        p !{__('about-us-p1')}
     .team-members
       -members = _.shuffle(members);
       -for(var i = 0; i < members.length; i += 2) {
