@@ -19,7 +19,7 @@ module.exports = function (server) {
   server.get('/', function (req, res) {
     Courses.getItems(function (err, items) {
       res.render('statics/index', {
-        title: 'extrema-sistemas.com',
+        title: __('Welcome'),
         courses: items
       });      
     });

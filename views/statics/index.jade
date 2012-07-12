@@ -2,6 +2,8 @@ extends ../layouts/layout
 
 append content
   .container-fluid.training
+    h2 !{__('home1')}
+    p !{__('home2')}
     ul.thumbnails.row-fluid.courses
       li.span4.javaspecialists
         a(href="/courses#javaspecialists").thumbnail
@@ -19,7 +21,10 @@ append content
             h4 Spring
             p !{__('spring-thumb')}
   .row-fluid.clients
-    .span12
+    .span4
+      h2 !{__('home3')}
+      p !{__('home4')}
+    .span8
       span.client-accenture Accenture
       span.client-aena AENA
       span.client-atos Atos
