@@ -178,7 +178,7 @@ var sendEmail = function (body, callback) {
 
   var mailOptions = {
     from: 'Yourself',
-    to: 'rvidal@extrema-sistemas.com',
+    to: 'info@extrema-sistemas.com',
     subject: 'Nuevo comentario en extrema-sistemas.com',
     html: 'Se ha enviado un nuevo comentario desde http://extrema-sistemas.com/contact.<br><br>' +
             '<b>Fecha</b>: ' + date.toLocaleDateString() + ' , ' + date.toLocaleTimeString() +
