@@ -2,5 +2,7 @@
 extend ../layouts/layout
 
 append content
-	p !{__('500-error')}
+  h1 !{__('500-header')}
+  h3 !{__('500-error')}
+  img(src="/images/404.jpg", alt=__('404-img-title'), width="70%")
 
