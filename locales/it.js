@@ -37,5 +37,10 @@
 	"captcha-please": "Questa domanda serve a verificare che il form non venga inviato da procedure automatizzate.",
 	"show-navbar": "show-navbar",
 	"Training": "Training",
-	"hours": "hours"
+	"hours": "hours",
+	"twitter-title": "twitter-title",
+	"blog-title": "blog-title",
+	"vat-exempt": "vat-exempt",
+	"discount-javasp": "discount-javasp",
+	"info-javasp": "info-javasp"
 }

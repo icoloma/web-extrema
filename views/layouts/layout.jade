@@ -2,8 +2,8 @@ include ../includes/navbar-mixins
 
 !!!
 html
-  block head
-    head
+  head
+    block head
       title= title
 
       meta(charset="utf-8")
@@ -13,7 +13,7 @@ html
       !{stylesheetsMixin()}
 
       -if(user) {
-      link(rel='stylesheet', href='/stylesheets/admin-style.css')
+        link(rel='stylesheet', href='/stylesheets/admin-style.css')
       -}
 
   body

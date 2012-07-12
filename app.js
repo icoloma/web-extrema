@@ -36,6 +36,9 @@ require('./routes')(http);
 require('./routes')(https);
 require('./routes/admin')(https); //Rutas de la parte de administración
 
+require('./routes/errors')(http);
+require('./routes/errors')(https);
+
 //Exportar entorno (se copia por seguridad)
 environment = http.settings.env.slice(0);
 
