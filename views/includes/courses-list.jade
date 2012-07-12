@@ -6,7 +6,7 @@ mixin courseContent(type)
           li
             h4 !{course.name[lang]}
             .course-details
-              !{course.price + ' euros, ' + course.duration + ' ' + __('hours')}
+              !{course.price + ' EUR &middot; ' + course.duration + ' ' + __('hours')}
             //- img(src="/courses/" + course._id + "/thumb")
             !{course.description[lang]}
 
