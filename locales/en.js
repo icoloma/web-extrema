@@ -45,5 +45,12 @@
 	"404-title": "404-title",
 	"seeInGoogleMaps": "see in Google Maps",
 	"DirectionsTitle": "Public transport",
-	"Directions": "Cercanías <i>El pozo</i> and then take bus T31 (direction Sierra de Guadalupe). Drop off at <a href=\"http://goo.gl/maps/HSbS\">Camino Hormigueras with Casas de Miravete</a><p class=\"directions\">Alternatively, Cercanías <i>Vallecas</i> and then bus T31 (direction El Pozo) or 130 (direction Villaverde). Drop off at <a href=\"http://goo.gl/maps/qCiE\">Camino Hormigueras with Casas de Miravete</a>."
+	"Directions": "Cercanías <i>El pozo</i> and then take bus T31 (direction Sierra de Guadalupe). Drop off at <a href=\"http://goo.gl/maps/HSbS\">Camino Hormigueras with Casas de Miravete</a><p class=\"directions\">Alternatively, Cercanías <i>Vallecas</i> and then bus T31 (direction El Pozo) or 130 (direction Villaverde). Drop off at <a href=\"http://goo.gl/maps/qCiE\">Camino Hormigueras with Casas de Miravete</a>.",
+	"500-title": "500-title",
+	"500-header": "Not so fast...!",
+	"404-header": "Not so fast...!",
+	"404-looking": "You were looking for ",
+	"404-not-found": " but we couldn't find it. Sorry.",
+	"404-img-title": "Drive safely",
+	"500-error": "Something really bad just happened. And it was probably our fault..."
 }
