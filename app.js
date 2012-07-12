@@ -28,16 +28,17 @@ i18n.configure({
 })
 
 //Servidores
-var http = require('./nonSecureServer'),
-  https = require('./secureServer');
+var http = require('./nonSecureServer')
+// ,
+//   https = require('./secureServer');
 
 // Rutas
 require('./routes')(http);
-require('./routes')(https);
-require('./routes/admin')(https); //Rutas de la parte de administración
+// require('./routes')(https);
+require('./routes/admin')(http); //Rutas de la parte de administración
 
 require('./routes/errors')(http);
-require('./routes/errors')(https);
+// require('./routes/errors')(https);
 
 //Exportar entorno (se copia por seguridad)
 environment = http.settings.env.slice(0);
@@ -46,6 +47,6 @@ http.listen(4000, function(){
   console.log("Express server listening on port %d in %s mode", http.address().port, http.settings.env);
 });
 
-https.listen(4500, function(){
-  console.log("Express server listening on port %d in %s mode", https.address().port, https.settings.env);
-});
+// https.listen(4500, function(){
+//   console.log("Express server listening on port %d in %s mode", https.address().port, https.settings.env);
+// });

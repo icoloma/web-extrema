@@ -33,11 +33,11 @@ module.exports = function (server) {
   server.get('/logout', function (req, res) {
     req.logout();
 
-    //Development
-    res.redirect('http://192.168.2.122:4000');
+      // Development
+      // res.redirect('http://192.168.2.122:4000');
 
-    //Production
-    // res.redirect('http://' + req.headers.host);
+      // Production
+    res.redirect('/');
   });
 
 
