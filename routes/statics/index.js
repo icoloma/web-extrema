@@ -72,13 +72,15 @@ module.exports = function (server) {
     checkCaptcha(req, function (verified) {
       if(verified) {
         sendEmail(req.body, function (err) {
-          alert_message = '';
-          res.redirect('/contact');
+          res.render('statics/contact', {
+            title: __('Contact') + ' | extrema-sistemas.com',
+            success: __('sent-mail')
+          });
         });
       } else {
         res.render('statics/contact', {
           title: __('Contact') + ' | extrema-sistemas.com',
-          alert: __('wrong-captcha'),
+          error: __('wrong-captcha'),
           fields: req.body
         });
       }
@@ -176,7 +178,7 @@ var sendEmail = function (body, callback) {
 
   var mailOptions = {
     from: 'Yourself',
-    to: 'rvidal@extrema-sistemas.com',
+    to: 'info@extrema-sistemas.com',
     subject: 'Nuevo comentario en extrema-sistemas.com',
     html: 'Se ha enviado un nuevo comentario desde http://extrema-sistemas.com/contact.<br><br>' +
             '<b>Fecha</b>: ' + date.toLocaleDateString() + ' , ' + date.toLocaleTimeString() +

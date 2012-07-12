@@ -50,6 +50,9 @@
 	"seeInGoogleMaps": "ver en Google Maps",
 	"DirectionsTitle": "Transporte público",
 	"Directions": "Cercanías <i>El pozo</i> y después coger bus T31 (dirección Sierra de Guadalupe). Bajarse en <a href=\"http://goo.gl/maps/HSbS\">Camino Hormigueras con Casas de Miravete</a><p class=\"directions\">Como alternativa, Cercanías <i>Vallecas</i> y después coger bus T31 (dirección El Pozo) o 130 (dirección Villaverde). Bajarse en <a href=\"http://goo.gl/maps/qCiE\">Camino Hormigueras con Casas de Miravete</a>.",
+	"sent-mail": "Se han enviado tus comentarios.",
+	"form-error": "Error",
+	"thanks": "Gracias",
 	"404-title": "No tan rápido, batman!",
 	"404-error": "No encontramos la página que estás buscando.",
 	"404-explanation": "Lo sentimos, esta página no está disponible. ¿Quieres volver a intentarlo desde la <a href=\"/\">página de inicio</a>? Esta vez, ve más lento.",
@@ -58,5 +61,4 @@
 	"500-title": "Error interno",
 	"500-error": "Este árbol no debía estar aquí...",
 	"500-explanation": "Algo ha ido mal, mal, mal. Es interno, es feo, y probablemente es culpa nuestra. Refrescar el navegador no ayudará. <p>Por favor vuelve a intentarlo en unos minutos, o <a href=\"/contact\">contáctanos</a>."
-
 }
