@@ -113,6 +113,8 @@ module.exports = function (server) {
     });
   });
 
+  require('./redirections')(server);
+
 };
 
 
