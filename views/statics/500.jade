@@ -2,7 +2,12 @@
 extend ../layouts/layout
 
 append content
-  h1 !{__('500-header')}
-  h3 !{__('500-error')}
-  img(src="/images/404.jpg", alt=__('404-img-title'), width="70%")
+  .container-fluid.crash
+    .row-fluid
+      .span5
+        h1 !{__('500-title')}
+        h3 !{__('500-error')}
+        p !{__('500-explanation')}
+      .span7
+        img(src="/images/404.jpg", alt=__('500-img-title'), title=__('500-img-title'))
 

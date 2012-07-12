@@ -46,11 +46,12 @@
 	"seeInGoogleMaps": "see in Google Maps",
 	"DirectionsTitle": "Public transport",
 	"Directions": "Cercanías <i>El pozo</i> and then take bus T31 (direction Sierra de Guadalupe). Drop off at <a href=\"http://goo.gl/maps/HSbS\">Camino Hormigueras with Casas de Miravete</a><p class=\"directions\">Alternatively, Cercanías <i>Vallecas</i> and then bus T31 (direction El Pozo) or 130 (direction Villaverde). Drop off at <a href=\"http://goo.gl/maps/qCiE\">Camino Hormigueras with Casas de Miravete</a>.",
-	"500-title": "500-title",
-	"500-header": "Not so fast...!",
-	"404-header": "Not so fast...!",
-	"404-looking": "You were looking for ",
-	"404-not-found": " but we couldn't find it. Sorry.",
-	"404-img-title": "Drive safely",
-	"500-error": "Something really bad just happened. And it was probably our fault..."
+	"404-title": "Not so fast, batman!",
+	"404-error": "We couldn't find the page you were looking for.",
+	"404-explanation": "Sorry, this page could not be found. Can you try again from the <a href=\"/\">home page</a>? This time, go slower.",
+	"404-img-title": "We can still walk you to your destination. Just click the links above.",
+	"500-img-title": "It's either the processor or the starter. This could take a while...",
+	"500-title": "Internal error",
+	"500-error": "This tree should not be here...",
+	"500-explanation": "Something bad, bad, bad just happened. It is internal, it is ugly, and it was probably our fault. Refreshing the browser won't help. <p>Please try again in some minutes, or <a href=\"mailto:info@extrema-sistemas.com\">contact us</a>."
 }
