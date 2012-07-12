@@ -1,0 +1,21 @@
+.courses {
+
+  & > li {
+
+    background: url(../images/sprite-cursos.png) no-repeat 50% 0px !important;
+
+    &.html5 {
+      background-position-y: -200px !important;
+    }
+
+    &.spring {
+      background-position-y: -400px !important;
+    }
+
+    & > a.thumbnail:hover {
+      background: white;
+      filter: ~"alpha(opacity = 70)";
+      color: black;   
+    }
+  }
+}
