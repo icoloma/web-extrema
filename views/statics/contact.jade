@@ -1,15 +1,21 @@
 extends ../layouts/layout
 
 append content
-  -var alert, fields
+  -var error, fields, success
   .container-fluid
     .row-fluid
       .span8
         h1 !{__('Contact')}
         p.help-block !{__('required-fields')}
-        -if(alert) {
-          .alert.alert-danger
-            p !{alert}
+        -if(error) {
+          .alert.alert-danger.alert-contactform
+            h3.alert-heading !{__('form-error')}
+            p !{error}
+        -}
+        -if(success) {
+          .alert.alert-success.alert-contactform
+            h3.alert-heading !{__('thanks')}
+            p !{success}
         -}
         script
           var RecaptchaOptions = {
@@ -43,7 +49,7 @@ append content
               textarea(name='recaptcha_challenge_field', rows='3', cols='40')
               input(type='hidden', name='recaptcha_response_field', value='manual_challenge')
 
-          button(type="submit") !{__('Submit')}
+          button(type="submit").submit-form !{__('Submit')}
       .span4.contact-data(itemscope, itemtype="http://schema.org/Corporation")
         .alert.alert-details
           h2.alert-heading Madrid
