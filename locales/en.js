@@ -31,6 +31,7 @@
 	"Name": "Name",
 	"Organization": "Organization",
 	"Comment": "Comment",
+	"Course-contents": "Course contents",
 	"wrong-captcha": "The captcha value introduced is wrong.",
 	"captcha-please": "Please prove that you are human.",
 	"show-navbar": "show-navbar",

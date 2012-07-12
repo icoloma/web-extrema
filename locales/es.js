@@ -31,6 +31,7 @@
 	"Name": "Name",
 	"Organization": "Organization",
 	"Comment": "Comment",
+	"Course-contents": "Contenidos del curso",
 	"wrong-captcha": "El valor de captcha introducido no es correcto.",
 	"captcha-please": "Por favor demuestra que eres humano.",
 	"show-navbar": "show-navbar",
@@ -44,5 +45,4 @@
 	"seeInGoogleMaps": "ver en Google Maps",
 	"DirectionsTitle": "Transporte público",
 	"Directions": "Cercanías <i>El pozo</i> y después coger bus T31 (dirección Sierra de Guadalupe). Bajarse en <a href=\"http://goo.gl/maps/HSbS\">Camino Hormigueras con Casas de Miravete</a><p class=\"directions\">Como alternativa, Cercanías <i>Vallecas</i> y después coger bus T31 (dirección El Pozo) o 130 (dirección Villaverde). Bajarse en <a href=\"http://goo.gl/maps/qCiE\">Camino Hormigueras con Casas de Miravete</a>."
-
 }
