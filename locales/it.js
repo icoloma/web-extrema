@@ -42,5 +42,6 @@
 	"blog-title": "blog-title",
 	"vat-exempt": "vat-exempt",
 	"discount-javasp": "discount-javasp",
-	"info-javasp": "info-javasp"
+	"info-javasp": "info-javasp",
+	"404-title": "404-title"
 }

@@ -48,6 +48,8 @@ module.exports = function (server) {
     });
   });
 
+  require('./courses')(server);
+
   //Follow-us page
   server.get('/follow-us', function (req, res) {
     parser.parseUrl('http://blog.extrema-sistemas.com/feed/', function (err, meta, articles) {
