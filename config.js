@@ -51,6 +51,13 @@ exports.prod_config = function (app) {
     app.use(express.errorHandler());
     //Minificar ficheros en 'production'
     minifyFiles();
+
+    app.error(function (err, req, res, next) {
+      res.render('statics/500', {
+        title: __('500-title'),
+        status: 500
+    });
+  });
   };
 };
 

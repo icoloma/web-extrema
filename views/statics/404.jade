@@ -2,5 +2,14 @@
 extend ../layouts/layout
 
 append content
-	p Ey! !{url} was not found
-
+  .container-fluid.crash
+    .row-fluid
+      .span6
+        h1 !{__('404-header')}
+        h3 We couldn't find !{url.slice(1)}, sorry.
+        p 
+          | Sorry, the page you were looking for could not be found. You can use the search form below, or go to the 
+          a(href="/") home page
+          |. 
+      .span6
+        img(src="/images/404.jpg", alt=__('404-img-title'), title=__('404-img-title'))
