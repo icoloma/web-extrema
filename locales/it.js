@@ -66,5 +66,6 @@
 	"HTML5-title": "HTML5 e CSS3",
 	"course-contents": "Contenuto del corso",
 	"more-info": "Richiedi maggiori informazioni",
-	"buy-tickets": "Mi inscrivo!"
+	"buy-tickets": "Mi iscrivo!",
+	"back-courses": "Torna ai corsi"
 }

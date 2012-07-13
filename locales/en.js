@@ -64,5 +64,6 @@
 	"HTML5-title": "HTML5 and CSS3",
 	"course-contents": "Course contents",
 	"more-info": "Ask for more info",
-	"buy-tickets": "Count me in!"
+	"buy-tickets": "Count me in!",
+	"back-courses": "Back to courses"
 }
