@@ -9,7 +9,14 @@ mixin courseContent(type)
               !{course.price + ' EUR &middot; ' + course.duration + ' ' + __('hours')}
             //- img(src="/courses/" + course._id + "/thumb")
             !{course.description[lang]}
-
+            .course-toolbar
+              a.btn.btn-large(href="/courses/" + course.url) !{__('course-contents')}
+              a.btn.btn-success.btn-large(href="//koliseo.com/shows/" + course.show) !{__('buy-tickets')}
+              a(href="/contact") &raquo; !{__('more-info')}
+            -if(course.voucher[lang]) {
+              .voucher(class="voucher-" + type.toLowerCase())
+                p !{course.voucher[lang]}
+            -}
             -if(user) {
               a.btn(href="/courses/" + course._id + "/edit") Edit
             -}

@@ -10,14 +10,32 @@ append content
     action="/courses/"+course._id+"/update",
     enctype="multipart/form-data").form-horizontal
     .row-fluid
+      .span8
+        ul.nav.nav-tabs
+          -appLocales.forEach(function (locale) {
+            li
+              a(data-toggle="tab", href="#fields-"+locale) !{locale}
+          -});
+        .tab-content
+          -appLocales.forEach(function (locale) {
+            .tab-pane(id='fields-'+locale)
+              mixin i18nTextInput(locale, 'Name', 'name', 'required', course.name)
+              mixin i18nTextarea(locale, 'Description', 'description', course.description)
+              mixin i18nTextarea(locale, 'Voucher', 'voucher', course.voucher)
+          -})
       .span4
-        mixin i18nTextInput('Name', 'name', 'required', course.name)
+        .control-group
+          label Show Id in Koliseo&trade;
+          input(type="text", name="show", value=course.show)
         .control-group
           label Type
           select(name="type")
             mixin typeComboOption(item.type, 'HTML5')
             mixin typeComboOption(item.type, 'Spring')
             mixin typeComboOption(item.type, 'Javaspecialists')
+        .control-group
+          label Url
+          input(type="text", name="url", value=course.url)
         .control-group
           label Price
           input(type="number", name="price", value=course.price)
@@ -28,8 +46,6 @@ append content
           label Picture
           img(src="thumb")
           input(type="file", name="thumb")
-      .span8
-          mixin i18nTextarea('Description', 'description', 'class="description-input"', course.description)
     .row-fluid
       button(type="submit").btn.btn-info Submit
       a(href="/courses").btn.btn-warning Cancel
@@ -38,3 +54,8 @@ append content
     button(type="submit").btn.btn-danger.btn-large.pull-right Delete
 
   include ../includes/editions-list
+
+append scripts
+  script
+    $('#fields-en').addClass('active');
+    $('li > a[href="#fields-en"]').parent().addClass('active');

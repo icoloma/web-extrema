@@ -63,5 +63,8 @@
 	"Directions": "Cercanías <i>El pozo</i> e prendere il bus T31 (direzione Sierra de Guadalupe). Scendere alla fermata <a href=\"http://goo.gl/maps/HSbS\">Camino Hormigueras con Casas de Miravete</a><p class=\"directions\">In alternativa, Cercanías <i>Vallecas</i> e poi il bus T31 (direzione El Pozo) o 130 (direzione Villaverde). Scendere alla fermata <a href=\"http://goo.gl/maps/qCiE\">Camino Hormigueras con Casas de Miravete</a>.",
 	"form-error": "Errore",
 	"thanks": "Grazie",
-	"HTML5-title": "HTML5 e CSS3"
+	"HTML5-title": "HTML5 e CSS3",
+	"course-contents": "Contenuto del corso",
+	"more-info": "Richiedi maggiori informazioni",
+	"buy-tickets": "Mi inscrivo!"
 }

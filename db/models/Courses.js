@@ -6,24 +6,30 @@ Modelo de un curso
 Campos:
   Nombre
   Descripción
+  Voucher
+  Url del curso en la web
   Imagen
   Tipo (Spring, HTML5, Javaspecialists)
   Precio
   Duración (horas)
+  Id del show en koliseo
 
 El campo 'deleted' se usa en el borrado lógico.
 */
 var CourseSchema = new mongoose.Schema({
     name: locales
-  , description: locales 
+  , description: locales
+  , voucher: locales
+  , url: String
   , thumb : {
       data: Buffer,
       contentType: String
    }
-  , deleted: {type: Boolean, default: false}
   , type: String
   , price: Number
   , duration: Number
+  , show: String
+  , deleted: {type: Boolean, default: false}
 });
 
 /*

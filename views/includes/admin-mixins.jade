@@ -22,23 +22,16 @@ mixin formatEditionCombos(label, name, list, origin, defaults)
       option(selected=check,label=name) !{id}
       -})
 
-mixin i18nTextInput(label, field, options, content)
-  -appLocales.forEach(function (locale) {
-    .control-group
-      label !{label + ' (' + locale + ')'}
-      -var contentTag = content && content[locale] && ('value="' + content[locale] + '"') || '';
-      -console.log('\n' + content + '\n')
-      |<input type="text" name=!{field + '.' + locale} !{options || ''} !{contentTag}>
-  -})
+mixin i18nTextInput(lang, label, field, options, content)
+  .control-group
+    label !{label + ' (' + lang + ')'}
+    -var contentTag = content && content[lang] && ('value="' + content[lang] + '"') || '';
+    -console.log('\n' + content + '\n')
+    |<input type="text" name=!{field + '.' + lang} !{options || ''} !{contentTag}>
 
-
-
-mixin i18nTextarea(label, field, options, content)
-  -appLocales.forEach(function (locale) {
-    .control-group
-      label !{label + ' (' + locale + ')'}
-      |<textarea rows=5 name=!{field + '.' + locale} !{options || ''}>
-      |#{content && content[locale] || ''}
-      |</textarea>
-
-  -})
+mixin i18nTextarea(lang, label, field, content)
+  -var parsedOptions = content && content[lang];
+  .control-group
+    label !{label + ' (' + lang + ')'}
+    textarea(name= field + '.' + lang).description-input
+      !{content[lang]}

@@ -5,14 +5,32 @@ include ../includes/admin-mixins
 append content
   form(method="post", action="/courses/add",enctype="multipart/form-data").form-horizontal
     .row-fluid
+      .span8
+        ul.nav.nav-tabs
+          -appLocales.forEach(function (locale) {
+            li
+              a(data-toggle="tab", href="#fields-"+locale) !{locale}
+          -});
+        .tab-content
+          -appLocales.forEach(function (locale) {
+            .tab-pane(id='fields-'+locale)
+              mixin i18nTextInput(locale, 'Name', 'name', 'required')
+              mixin i18nTextarea(locale, 'Description', 'description')
+              mixin i18nTextarea(locale, 'Voucher', 'voucher')
+          -})
       .span4
-        mixin i18nTextInput('Name', 'name', 'required')
+        .control-group
+          label Show Id in Koliseo&trade;
+          input(type="text", name="show")
         .control-group
           label Type
           select(name="type")
             option HTML5
             option Spring
             option Javaspecialists
+        .control-group
+          label Url
+          input(type="text", name="url")
         .control-group
           label Price
           input(type="number", name="price")
@@ -22,8 +40,11 @@ append content
         .control-group
           label Picture
           input(type="file", name="thumb")
-      .span8
-        mixin i18nTextarea('Description', 'description', 'class="description-input"')
     div
       button(type="submit").btn.btn-info Submit
       a(href="/courses").btn.btn-warning Cancel
+
+append scripts
+  script
+    $('#fields-en').addClass('active');
+    $('li > a[href="#fields-en"]').parent().addClass('active');

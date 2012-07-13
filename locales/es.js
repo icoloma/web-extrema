@@ -61,5 +61,8 @@
 	"500-title": "Error interno",
 	"500-error": "Este árbol no debía estar aquí...",
 	"500-explanation": "Algo ha ido mal, mal, mal. Es interno, es feo, y probablemente es culpa nuestra. Refrescar el navegador no ayudará. <p>Por favor vuelve a intentarlo en unos minutos, o <a href=\"/contact\">contáctanos</a>.",
-	"HTML5-title": "HTML5 and CSS3"
+	"HTML5-title": "HTML5 and CSS3",
+	"course-contents": "Contenidos del curso",
+	"more-info": "Pedir más información",
+	"buy-tickets": "¡Me apunto!"
 }

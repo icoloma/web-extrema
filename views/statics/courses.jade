@@ -53,38 +53,38 @@ append scripts
   script(src="//www.koliseo.com/w/kperf/1.0/kperf.min.js")
   script
 
-    //- Adjuntar el hash correcto al clicar un pill 
+    // Adjuntar el hash correcto al clicar un pill 
     $('#courses-pills li').on('click', function () {
       window.location.hash = $($(this).html()).attr('href');
     });
 
-    //- Activar el pill correcto
+    // Activar el pill correcto
     var pill = location.hash || '#HTML5';
     $('li > [href=' + pill + ']').parent().addClass('active');
     $(pill).addClass('active');
  
-    //- Generar widget de Koliseo
-    var courses = {
-      '#javaspecialists': 'xrd',
-      '#HTML5': 'htP',
-      '#spring': 'STe,v3f,BMf'
-    };
+//- //- Generar widget de Koliseo
+//- var courses = {
+//-   '#javaspecialists': 'xrd',
+//-   '#HTML5': 'htP',
+//-   '#spring': 'STe,v3f,BMf'
+//- };
 
-    var courseWidget = function (course) {
-      return {
-        showId: course,
-        locale: '!{lang}'
-      };
-    }
+//- var courseWidget = function (course) {
+//-   return {
+//-     showId: course,
+//-     locale: '!{lang}'
+//-   };
+//- }
 
-    $(pill + '> .span4').prepend('<div class="koliseo-widget"></div>');
-    $('.koliseo-widget').kperf(courseWidget(courses[pill]));
+//- $(pill + '> .span4').prepend('<div class="koliseo-widget"></div>');
+//- $('.koliseo-widget').kperf(courseWidget(courses[pill]));
 
-    //- Mover el widget al cambiar de pill
-    $('[data-toggle="tab"]').on('click', function () {
-      var pill = $(this).attr('href');
-      $(pill + '> .span4').prepend($('.koliseo-widget'));
-      $('.koliseo-widget').kperf(courseWidget(courses[pill]));
-    });
+//- //- Mover el widget al cambiar de pill
+//- $('[data-toggle="tab"]').on('click', function () {
+//-   var pill = $(this).attr('href');
+//-   $(pill + '> .span4').prepend($('.koliseo-widget'));
+//-   $('.koliseo-widget').kperf(courseWidget(courses[pill]));
+//- });
 
   

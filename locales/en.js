@@ -61,5 +61,8 @@
 	"500-title": "Internal error",
 	"500-error": "This tree should not be here...",
 	"500-explanation": "Something bad, bad, bad just happened. It is internal, it is ugly, and it was probably our fault. Refreshing the browser won't help. <p>Please try again in some minutes, or <a href=\"/contact\">contact us</a>.",
-	"HTML5-title": "HTML5 and CSS3"
+	"HTML5-title": "HTML5 and CSS3",
+	"course-contents": "Course contents",
+	"more-info": "Ask for more info",
+	"buy-tickets": "Count me in!"
 }
