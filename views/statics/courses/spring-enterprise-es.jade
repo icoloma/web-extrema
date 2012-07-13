@@ -1,0 +1,99 @@
+extends ../../layouts/layout
+append content
+  h1 Enterprise Integration with Spring
+  hr
+
+  p Durante este curso de cuatro días se hará un recorrido por los aspectos y tecnologías de mayor relevancia relacionadas con la integración de aplicaciones en un entorno empresarial.
+  p Se mostrará cómo aplicar Spring para dar solución a los problemas de integración que los desarrolladores se encuentran en el lado servidor. Aunque no es requisito imprescindible, para un mejor aprovechamiento del curso se recomienda haber realizado previamente el curso <a href="/courses/spring-core">Spring Core</a>.
+
+  p Una vez finalizado el curso, cada asistente recibirá un voucher que le permitirá planificar y realizar el examen de certificación para obtener el título <b>SpringSource Certified Spring Enterprise Integration Specialist</b>.
+
+  hr
+
+  .row-fluid
+    section.span6
+      dl.dl-horizontal
+        dt Duración:
+        dd 4 jornadas de 8 horas
+        dt Idioma: 
+        dd Este curso está disponible en español, inglés e italiano. 
+        dt Dirigido a:
+        dd Desarrolladores Java y arquitectos implicados en proyectos grandes de desarrollo.
+        dt Requisitos:
+        dd Cada asistente deberá llevar su propio portátil, en el que deberá tener permisos para instalar aplicaciones.
+      h2 Objetivos
+      ul.bullets
+        li Usar Spring para <b>crear aplicaciones concurrentes</b> y <b>planificar tareas</b>.
+        li Usar <b>Spring Remoting</b> para implementar aplicaciones clienteservidor.
+        li Usar <b>Spring Web Services</b> para crear clientes y servicios web basados en SOAP.
+        li Usar <b>Spring MVC</b> para crear servicios y clientes REST.
+        li Emplear <b>JMS</b> en sus comunicaciones mediante mensajería asíncrona.
+        li Entender y utilizar <b>transacciones locales y distribuidas</b>.
+        li Usar <b>Spring Integration</b> para crear arquitecturas orientadas a eventos e integradas con sistemas externos.
+        li Usar <b>Spring Batch</b> para la gestión de procesos batch escalables basadas en componentes a medida o incluidos en la plataforma.
+
+    section.span6
+      
+      h2 Contenido
+      ol
+        li Introducción
+          ul.bullets
+            li Tipos de integración de aplicaciones.
+            li Transferencia de ficheros, remoting y Servicios Web.
+        li Planificación de Tareas
+          ul.bullets
+            li Introducción a la concurrencia.
+            li APIs de concurrencia en Java .
+            li Soporte para la planificación de tareas en Spring
+        li Remoting
+          ul.bullets
+            li Limitaciones de RMI.
+            li Beneficios de la utilización de Spring Remoting.
+            li Spring Remoting. RMI, HttpInvoker, Hessian y Burlap.
+        li Servicios Web SOAP con Spring WS
+          ul.bullets
+            li Introducción a Spring WS.
+            li Conversión de objetos a XML con la capa de abstracción OXM
+            li Acceso a WS desde el cliente con WebService Template
+            li Gestión de Errores y pruebas integradas.
+        li Servicios Web REST
+          ul.bullets
+            li Conceptos principales en REST.
+            li Soporte REST a partir de Spring 3.0
+            li Anotaciones REST específicas de Spring.
+            li Acceso a servicios REST en cliente con RestTemplate.
+        li Integración de mensajería con JMS
+          ul.bullets
+            li Configuración de recursos JMS con Spring.
+            li Simplificación del envío y recepción de mensajes con Spring.
+            li Transacciones JMS
+            li Gestión de mensajes duplicados.
+        li Transacciones globales
+          ul.bullets
+            li Two-phase commit y XA.
+            li JTA y Spring.
+            li Configuración de JTATransactionManager.
+            li Demarcación transaccional.
+        li Spring Integration
+          ul.bullets
+            li Introducción a Spring Integration. Objetivos y componentes principales.
+            li Definición de canales, endpoints y gateways.
+            li Tipos de canales y pooling.
+            li Entrega síncrona y asíncrona.
+            li Gestión de errores síncrona y asíncrona.
+            li Tipos especiales de endpoints: Bridge y Router.
+        li Caractertísticas avanzadas de Spring Integration
+          ul.bullets
+            li Separación y unión de mensajes.
+            li Configuración de Dispatchers.
+        li Spring Batch
+          ul.bullets
+            li Introducción a Spring Batch y sus componentes principales.
+            li Parametros e identificación de tareas.
+            li Persistencia de estado en BD.
+            li Lectura de ficheros. ItemReaders/writers
+            li Spring Batch listeners.
+        li Spring Batch Admin
+          ul.bullets
+            li La consola de administración de Spring Batch.
+            li Paralelizado y escalado del procesamiento de tareas.

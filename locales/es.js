@@ -17,7 +17,7 @@
 	"tripartita": "Cursos bonificables por la Fundación Tripartita.",
 	"javasp-thumb": "Un curso de 4 días donde los profesionales Java más experimentados sentirán el estímulo del desafío personal.",
 	"HTML5-thumb": "Las últimas novedades de los drafts de HTML5 y CSS3, con especial atención a navegadores modernos y legacy.",
-	"spring-thumb": "Los cursos oficiales del estándar de facto para las aplicaciones empresariales basadas en Java.",
+	"spring-thumb": "Los cursos oficiales del estándar de facto para el desarrollo de aplicaciones Java.",
 	"Contact": "Contacto",
 	"Address": "Dirección",
 	"Phone": "Teléfono",

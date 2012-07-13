@@ -16,7 +16,7 @@
 	"details-HTML5": "<p>VAT exempt.<br><strong>Multiple registrations</strong>: 10% for two registrations and 15% for three or more<br><strong>Members of extrema-alumni</strong> 15% discount.<br>These discounts are not cumulative.</p>",
 	"tripartita": "Courses sponsored by Fundación Tripartita.",
 	"javasp-thumb": "A 4-day course where even the most experienced Java programmer will be challenged.",
-	"spring-thumb": "The official courses about the de facto standard for enterprise applications based on the Java platform.",
+	"spring-thumb": "The official courses about the de facto standard for the development of Java applications.",
 	"HTML5-thumb": "The latest updates on the HTML5 and CSS3 drafts, with special attention to modern and legacy browsers.",
 	"Contact": "Contact",
 	"Address": "Address",
