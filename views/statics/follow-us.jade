@@ -8,8 +8,10 @@ append content
     .row-fluid
       .span8
         .blog-header
-          h1 EX^2
-          h2 El blog de Extrema Sistemas
+          h1
+            a(href="http://blog.extrema-sistemas.com") EX^2
+            | 
+            small El blog de Extrema Sistemas
         for article in articles
           article.post
             -if(article.image && article.image.url)

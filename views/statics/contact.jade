@@ -1,5 +1,11 @@
 extends ../layouts/layout
 
+append head
+  script
+    var RecaptchaOptions = {
+      theme : 'white',
+    };
+
 append content
   -var error, fields, success
   .container-fluid
@@ -17,10 +23,6 @@ append content
             h3.alert-heading !{__('thanks')}
             p !{success}
         -}
-        script
-          var RecaptchaOptions = {
-            theme : 'white',
-          };
         form(method="post", action="/contact").contact-form
           .control-group
             label !{__('Name')}:
@@ -41,10 +43,10 @@ append content
             textarea(required, name="comment", rows=10) !{fields && fields.comment || ''}
 
           .control-group
-            script(src='http://www.google.com/recaptcha/api/challenge?k=6LcjZdMSAAAAAM6BSZH_hjej4enmL1KmSyPq5VrP')
+            script(src='http://www.google.com/recaptcha/api/challenge?k=6LcjZdMSAAAAAM6BSZH_hjej4enmL1KmSyPq5VrP&hl=' + lang)
       
             noscript
-              iframe(src='http://www.google.com/recaptcha/api/noscript?k=your_public_key', height='300', width='500', frameborder='0')
+              iframe(src='http://www.google.com/recaptcha/api/noscript?k=6LcjZdMSAAAAAM6BSZH_hjej4enmL1KmSyPq5VrP&hl=' + lang, height='300', width='500', frameborder='0')
               br
               textarea(name='recaptcha_challenge_field', rows='3', cols='40')
               input(type='hidden', name='recaptcha_response_field', value='manual_challenge')
