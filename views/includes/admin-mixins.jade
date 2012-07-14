@@ -30,8 +30,8 @@ mixin i18nTextInput(lang, label, field, options, content)
     |<input type="text" name=!{field + '.' + lang} !{options || ''} !{contentTag}>
 
 mixin i18nTextarea(lang, label, field, content)
-  -var parsedOptions = content && content[lang];
+  -var parsedContent = content && content[lang] || '';
   .control-group
     label !{label + ' (' + lang + ')'}
     textarea(name= field + '.' + lang).description-input
-      !{content[lang]}
+      !{parsedContent}

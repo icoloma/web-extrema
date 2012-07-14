@@ -45,7 +45,16 @@ append content
           img(src="thumb")
           input(type="file", name="thumb")  
       .span4
-          mixin i18nTextarea('Description', 'description', 'class="description-input"', member.description)
+        ul.nav.nav-tabs
+          -appLocales.forEach(function (locale) {
+            li
+              a(data-toggle="tab", href="#fields-"+locale) !{locale}
+          -});
+        .tab-content
+          -appLocales.forEach(function (locale) {
+            .tab-pane(id='fields-'+locale)
+              mixin i18nTextarea(locale, 'Description', 'description', member.description)
+          -})
       .span4
         label
           h4 Social links
@@ -91,3 +100,6 @@ append scripts
 
         $('#tagname').val('');
     });
+  script
+    $('#fields-en').addClass('active');
+    $('li > a[href="#fields-en"]').parent().addClass('active');
