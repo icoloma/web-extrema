@@ -15,7 +15,7 @@ append content
         for article in articles
           article.post
             -if(article.image && article.image.url)
-              img(src=article.image.url)
+              img(src=article.image.url, alt=article.image.title)
             .post-header
               a(href=article.link)
                 h3 !{article.title}

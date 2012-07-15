@@ -8,7 +8,7 @@ mixin teamMember(member)
         !{member.name}
   -}
   .details
-    img(src="/team/" + member._id + "/thumb", alt=member.name, itemprop="image", width="100px")
+    img(src="/team/" + member._id + "/thumb", alt=member.name, itemprop="image", width="100")
     ul.sociallinks
       -if(member.twitter)
         li.twitterlink
