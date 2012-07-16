@@ -65,5 +65,7 @@
 	"course-contents": "Course contents",
 	"more-info": "Ask for more info",
 	"buy-tickets": "Count me in!",
-	"back-courses": "Back to courses"
+	"back-courses": "Back to courses",
+	"case-studies": "Case studies",
+	"more-studies": "More case studies"
 }

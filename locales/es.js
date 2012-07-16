@@ -65,5 +65,7 @@
 	"course-contents": "Contenidos del curso",
 	"more-info": "Pedir más información",
 	"buy-tickets": "¡Me apunto!",
-	"back-courses": "Volver a cursos"
+	"back-courses": "Volver a cursos",
+	"case-studies": "Casos de éxito",
+	"more-studies": "Más casos de éxito"
 }
