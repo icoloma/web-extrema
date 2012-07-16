@@ -1,0 +1,22 @@
+extends ../layouts/layout
+
+append content
+
+
+  -console.log('EEEEEEEEEEE', studies)
+  ul
+    -studies.forEach(function (study) {
+      li
+        -if(user) {
+          a(href="/studies/" + study._id + "/edit")
+            h3 !{study.name}
+        -} else {
+          h3 !{study.name}
+        -}
+        img(src="/studies/" + study._id + "/thumb")
+        p !{study.description[lang]}
+    -})
+
+  -if(user) {
+    a.btn.btn-large.btn-info(href="/studies/new") New
+  -}

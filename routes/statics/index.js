@@ -1,5 +1,6 @@
 var Members = require('../../db/models/Members').Members,
-  Courses = require('../../db/models/Courses').Courses;
+  Courses = require('../../db/models/Courses').Courses,
+  Studies = require('../../db/models/Studies.js').Studies;
 
 var FeedParser = require('feedparser'),
   parser = new FeedParser(),
@@ -17,11 +18,12 @@ module.exports = function (server) {
 
   //Home page
   server.get('/', function (req, res) {
-    Courses.getItems(function (err, items) {
+    Studies.getItems(function (err, items) {
+      _.shuffle(items);
       res.render('statics/index', {
         title: __('Welcome'),
-        courses: items
-      });      
+        study: items[0] 
+      });
     });
   });
 
@@ -87,6 +89,15 @@ module.exports = function (server) {
     });
   });
 
+  server.get('/studies', function (req, res) {
+    Studies.getItems(function (err, items) {
+      res.render('statics/studies', {
+        title: __('case-studies') + ' | extrema-sistemas.com',
+        studies: items
+      });
+    });
+  });
+
   //Pedir un thumbnail
   server.get('/team/:item/thumb', function (req, res) {
     var id = req.params.item;
@@ -106,6 +117,20 @@ module.exports = function (server) {
     var id = req.params.item;
 
     Courses.getThumbnail(id, function (err, thumb) {
+      if(thumb) {
+        res.contentType(thumb.contentType);
+        res.send(thumb.data);
+      } else {
+        res.redirect('/images/person.png');
+      }
+    });
+  });
+
+  //Pedir un thumbnail
+  server.get('/studies/:item/thumb', function (req, res) {
+    var id = req.params.item;
+
+    Studies.getThumbnail(id, function (err, thumb) {
       if(thumb) {
         res.contentType(thumb.contentType);
         res.send(thumb.data);

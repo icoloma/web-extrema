@@ -44,11 +44,12 @@ module.exports = function (server) {
   var courses = require('./courses'),
     members = require('./members'),
     venues = require('./venues'),
-    editions = require('./editions');
+    editions = require('./editions'),
+    studies = require('./studies');
 
   courses(server);
   members(server);
+  studies(server);
   venues(server);
   editions(server);
-
 };
