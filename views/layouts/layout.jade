@@ -31,15 +31,13 @@ html
                 mixin navbarLink(selected, '/courses', 'Training')
                 mixin navbarLink(selected, '/team', 'Team')
                 mixin navbarLink(selected, '/follow-us', 'Follow-us')
-              -if (user) {
-                ul.nav.pull-right
-                  li
-                    a(href="/logout") Logout
-              -}
               mixin langDropdown(lang)
               ul.nav.pull-right
                 li
                   a(href="/contact") !{__('Contact')}
+              -if (user) {
+                mixin navbarControls
+              -}
     .wrapper
       block content
 
@@ -56,9 +54,7 @@ html
                 a(href="/contact") !{__('Contact')}
             mixin langPills(lang)
             -if (user) {
-              ul.nav.pull-right
-                li
-                  a(href="/logout") Logout
+              mixin navbarControls
             -}
                 
 

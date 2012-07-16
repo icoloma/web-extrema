@@ -28,3 +28,10 @@ mixin navbarLink(selected, href, text)
   -var chosen = selected === href ? 'active-section' : false
   li
     a(href=href,class=chosen) !{__(text)}
+
+mixin navbarControls
+  ul.nav.pull-right
+    li
+      a(href="/studies") Studies
+    li
+      a(href="/logout") Logout
