@@ -1,20 +1,22 @@
 extends ../layouts/layout
 
 append content
-
-
-  -console.log('EEEEEEEEEEE', studies)
+  
+  h2 !{__('case-studies')}
   ul
     -studies.forEach(function (study) {
-      li
+      li.study
         -if(user) {
-          a(href="/studies/" + study._id + "/edit")
-            h3 !{study.name}
+          h3
+            a(href="/studies/" + study._id + "/edit")!{study.name}
         -} else {
           h3 !{study.name}
         -}
-        img(src="/studies/" + study._id + "/thumb")
-        p !{study.description[lang]}
+        .row-fluid
+          .span3
+            img(src="/studies/" + study._id + "/thumb", alt=study.name, title=study.name)
+          .span9
+            p !{study.description[lang]}
     -})
 
   -if(user) {

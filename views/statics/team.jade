@@ -16,6 +16,13 @@ append content
             a(href="http://blog.extrema-sistemas.com", title=__('blog-title')) Blog
       .span8(itemprop="description") 
         p !{__('about-us-p1')}
+    .study.well
+      .row-fluid
+        .span3
+          img(src="/studies/" + study._id + "/thumb", alt=study.name, title=study.name)
+        .span9
+          p !{study.description[lang]}
+          a.btn.btn-warning.pull-right(href="/studies") !{__('more-studies')}
     .team-members
       -members = _.shuffle(members);
       -for(var i = 0; i < members.length; i += 2) {

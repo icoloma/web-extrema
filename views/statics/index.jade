@@ -38,6 +38,15 @@ append content
       span.client-indra INDRA
       span.client-mapfre Mapfre
       span.client-movistar Movistar
+  .study.well
+    .row-fluid
+      .span3
+        img(src="/studies/" + study._id + "/thumb", alt=study.name, title=study.name)
+      .span9
+        p !{study.description[lang]}
+    .row-fluid
+      .span12
+        a.btn.btn-warning.pull-right(href="/studies") !{__('more-studies')}
 
 append head
   //if lte IE 8

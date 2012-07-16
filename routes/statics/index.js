@@ -29,14 +29,22 @@ module.exports = function (server) {
 
   //Team page
   server.get('/team', function (req, res) {
-    Members.getItems(function (err, items) {
-      res.render('statics/team', {
-        title: __('Team') + ' | extrema-sistemas.com',
-        items: items.sort(function (john, jane) {
-          return john.name.localeCompare(jane.name);
-        }),
+    async.parallel([
+      function (cb) {
+        Members.getItems(cb);
+      },
+      function (cb) {
+        Studies.getItems(cb);
+      }],
+      function (err, results) {
+        var items = results[0],
+          study = _.shuffle(results[1])[0];
+        res.render('statics/team', {
+          title: __('Team') + ' | extrema-sistemas.com',
+          items: items,
+          study: study
+        });
       });
-    });
   });
 
   //Courses page
