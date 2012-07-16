@@ -26,7 +26,6 @@ mixin i18nTextInput(lang, label, field, options, content)
   .control-group
     label !{label + ' (' + lang + ')'}
     -var contentTag = content && content[lang] && ('value="' + content[lang] + '"') || '';
-    -console.log('\n' + content + '\n')
     |<input type="text" name=!{field + '.' + lang} !{options || ''} !{contentTag}>
 
 mixin i18nTextarea(lang, label, field, content)
