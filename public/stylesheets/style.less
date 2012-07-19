@@ -27,6 +27,7 @@
 }
 
 .transition(@time, @type: ease) {
+  -ms-transition: all @time @type;
   -webkit-transition: all @time @type;
   -moz-transition: all @time @type;
   -o-transition: all @time @type;
@@ -146,7 +147,7 @@ p {
   opacity: 1;
 }
 
-#btn-toggle {
+.btn-toggle {
   display: none;
 }
 
@@ -159,7 +160,7 @@ p {
 
 /* HOME PAGE */
 
-.courses {
+.courses-home {
 
   & > li {
 
@@ -212,16 +213,16 @@ p {
       }
     }
 
-    &.javaspecialists {
+    &.javaspecialists-home {
       .transition-logos("../images/logo-javasp.png", fadeout(@javaspecialistsDarkColor, 20%);
 
     }
 
-    &.html5 {
+    &.html5-home {
       .transition-logos("../images/logo-html5.png", fadeout(@html5DarkColor, 20%);
     }
 
-    &.spring {
+    &.spring-home {
      .transition-logos("../images/logo-spring.png", fadeout(@springDarkColor, 20%);
     }
   }
@@ -276,23 +277,23 @@ span[class^="client-"] {
   background-position: -800px 0px;
 }
 
-span.client-everis {
+.client-everis {
   width: 70px;
   background-position: -900px 0px;
 }
 
-span.client-icm {
+.client-icm {
   width: 55px;
   background-position: -970px 0px;
 }
 
-span.client-corteingles {
+.client-corteingles {
   width: 90px;
   background-position: -1025px 0px;
 
 }
 
-span.client-movistar {
+.client-movistar {
   width: 70px;
   background-position: -1115px 0px;
 
@@ -347,7 +348,7 @@ footer > .wrapper > a {
     vertical-align: baseline;
   }
 
-  & > [itemprop="description"] {
+  & > div[itemprop="description"] {
     margin-top: 25px
   }
 }
@@ -430,7 +431,7 @@ li.wordpresslink > a {
 
 /* COURSES PAGE */
 
-#courses-pills {
+.courses-pills {
   & > ul {
     display: inline-block;
 
@@ -493,15 +494,15 @@ li.wordpresslink > a {
   text-overflow: ellipsis;
 }
 
-#spring {
+.spring-training {
   .course-heading("fondo-spring.jpg", @springDarkColor, @springColor);
 }
 
-#javaspecialists {
+.javaspecialists-training {
   .course-heading("fondo-javaspecialists.jpg", @javaspecialistsDarkColor, @javaspecialistsColor);
 }
 
-#HTML5 {
+.HTML5-training {
   .course-heading("fondo-html5.jpg", @html5DarkColor, @html5Color);
 }
 
@@ -578,6 +579,10 @@ li.wordpresslink > a {
 
 .voucher-html5 {
   color: darken(@html5Color, 20%);
+  background: lighten(@html5Color, 35%);
+  &:before {
+    .star(@voucherHeight, @html5Color);
+  }
 }
 
 .voucher-spring {
@@ -688,7 +693,7 @@ li.wordpresslink > a {
 
     margin-bottom: 8px;
 
-    & > [class^="icon-"] {
+    & > i[class^="icon-"] {
       line-height: inherit;
       opacity: .4;
     }
@@ -751,7 +756,7 @@ li.wordpresslink > a {
 
 @media (max-width: 580px) {
 
-  [class*="span"] {
+  div[class*="span"] {
     margin-left: 0;
   }
 
@@ -778,7 +783,7 @@ li.wordpresslink > a {
     clear: right !important;
   }
 
-  #btn-toggle {
+  .btn-toggle {
     display: block;
     .hide-text();
 
@@ -828,7 +833,7 @@ li.wordpresslink > a {
     }
   }
 
-  #lang-pills > li {
+  .navbar .nav.lang-pills > li {
       float: left;
       width: 99.9999%/@langsNumber;
 
