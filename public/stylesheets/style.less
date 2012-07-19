@@ -534,7 +534,8 @@ li.wordpresslink > a {
   @total: @padding + @height;
 
   content: "\2605";
-  display: block;
+  display: table-cell;
+  vertical-align: middle;
   text-align: center;
 
   height: 100%;
@@ -577,10 +578,6 @@ li.wordpresslink > a {
 
 .voucher-html5 {
   color: darken(@html5Color, 20%);
-  // background: lighten(@springColor, 35%);
-  // &:before {
-  //   .star(@voucherHeight, @html5Color);
-  // }
 }
 
 .voucher-spring {
@@ -591,9 +588,9 @@ li.wordpresslink > a {
   }
 }
 
-.koliseo-widget {
-  margin-bottom: 10px;
-}
+// .koliseo-widget {
+//   margin-bottom: 10px;
+// }
 
 /* ***** */
 
