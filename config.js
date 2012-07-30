@@ -64,7 +64,8 @@ exports.prod_config = function (app) {
 
 /* Helpers para precompilar */
 
-var bootstrapPath = appPath + '/public/bootstrap/less',
+var bootstrapPath = appPath + '/public/less/bootstrap/less',
+  lessPath = appPath + '/public/less',
   cssPath = appPath + '/public/stylesheets',
   jsPath = appPath + '/public/javascripts',
   compressor = require('node-minify');
@@ -91,12 +92,12 @@ var compileLessFiles = function () {
   compileLessFile(bootstrapPath + '/responsive.less', cssPath + '/bootstrap-responsive.css')
 
   //Resto de ficheros en la carpeta de stylesheets
-  var files = fs.readdirSync(cssPath);
+  var files = fs.readdirSync(lessPath);
 
   files.forEach(function (file) {
     if(file.match(/less$/)) {
       var noExtension = file.split('.less')[0];
-      compileLessFile(cssPath + '/' + file, cssPath + '/' + noExtension + '.css')
+      compileLessFile(lessPath + '/' + file, cssPath + '/' + noExtension + '.css')
     }
   });
 };
