@@ -1,90 +1,152 @@
 /* HOME PAGE */
 
-
-.home1 {
+.home-header {
   color: @barLinksColor;
-  font-size: 50px;
-  line-height: 70px;
+  font-weight: normal;
 }
 
-.home2 {
-  font-size: 24px;
-  line-height: 35px;
+.home-header2 {
+  font-weight: normal;
+  color: darken(@barLinksColor, 25%);
+}
+
+.training-home {
+  & > .home-header {
+    font-size: 50px;
+    line-height: 60px;
+  }
 }
 
 .courses-home {
+
   margin-top: 20px;  
   & > li {
-    .transition(.2s);
-    overflow: hidden;
 
-     & > a.thumbnail {
-      padding: 0;
+    & > .home-thumb {
       .transition(.2s);
-      display: block;
-      height: 200px;
-      color: white;
-      border-radius: 0;
+      overflow: hidden;
+    }
+    & > .show-touch {
+      margin-bottom: 10px;
+    }
+  }
 
-      &:hover {
-        text-decoration: none;
-      }
+  .thumbnail {
+    padding: 0;
+    .transition(.2s);
+    display: block;
+    height: 200px;
+    color: white;
+    border-radius: 0;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .caption {
+    height: 100%;
+    padding: 0;
+
+    & > h4 {
+      .transition(.25s, ease-out);
+      display: block;
+      position: relative;
+      top: -100%;
+
+      text-align: center;
+      line-height:1.59em;
+      font-size:1.6em;
+
+      background-color: black;
+      color: white;
+    }
+
+    & > p {
+      .transition(.3s, ease-out);
+      max-width: 200px;
+
+      text-align: center;
+
+
+      margin: 0 auto;
+      padding: 5px;
+
+      position: relative;
+      top: 150%;
     }
   }
 }
 
-.courses-home .caption {
-  height: 100%;
-  padding: 0;
-
-  & > h4 {
-    .transition(.25s, ease-out);
-    display: block;
-    position: relative;
-    top: -100%;
-
-    text-align: center;
-    line-height:1.59em;
-    font-size:1.6em;
-
-    background-color: black;
-    color: white;
-  }
-
-  & > p {
-    .transition(.3s, ease-out);
-    max-width: 200px;
-
-    text-align: center;
-
-
-    margin: 0 auto;
-    padding: 5px;
-
-    position: relative;
-    top: 150%;
-  }
+.javaspecialists-home > .show-touch > h4 {
+    color: @javaspecialistsDarkColor;
 }
 
-.javaspecialists-home {
+.html5-home > .show-touch > h4 {
+    color: @html5DarkColor;
+}
+
+.spring-home > .show-touch > h4 {
+    color: @springDarkColor;
+}
+
+.javaspecialists-thumb {
   .transition-logos("../images/logo-javasp.png", fadeout(@javaspecialistsDarkColor, 20%);
 }
 
-.html5-home {
+.html5-thumb {
   .transition-logos("../images/logo-html5.png", fadeout(@html5DarkColor, 20%);
 }
 
-.spring-home {
- .transition-logos("../images/logo-spring.png", fadeout(@springDarkColor, 20%);
+.spring-thumb {
+  .transition-logos("../images/logo-spring.png", fadeout(@springDarkColor, 20%);
 }
 
+.consulting-home {
+  padding: 20px;
+  background-color: white;
+
+  border: 1px #ddd solid;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  & > .row-fluid {
+    position: relative;
+  }
+
+  .home-header {
+    width: auto;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .home-header2 {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .btn-info {
+    display: block;
+    position: absolute;
+    top: 50%;
+  }
+
+}
+
+
+@totalClientWidth: 134px;
+
 span[class^="client-"] {
+  box-sizing: border-box;
   display: block;
   float: left;
-  width: 100px;
-  height: 50px;
-  margin: 0 10px;
 
+
+  margin: 0 17px;
+  height: 50px;
+  width: 100px;
   .hide-text();
 
   background-image: url(../images/clients.png);
@@ -132,21 +194,25 @@ span[class^="client-"] {
 
 span.client-everis {
   width: 70px;
+  margin: 0 (@totalClientWidth - 70px)/2;
   background-position: -900px 0px;
 }
 
 span.client-icm {
   width: 55px;
+  margin: 0 (@totalClientWidth - 55px)/2;
   background-position: -970px 0px;
 }
 
 span.client-corteingles {
   width: 90px;
+  margin: 0 (@totalClientWidth - 90px)/2;
   background-position: -1025px 0px;
 }
 
 span.client-movistar {
   width: 70px;
+  margin: 0 (@totalClientWidth - 70px)/2;
   background-position: -1115px 0px;
 }
 
