@@ -74,10 +74,11 @@ var bootstrapPath = appPath + '/public/less/bootstrap/less',
 var compileLessFile = function(lessFile, cssFile) {
 
   //Asume que los imports están en la misma carpeta que el fichero
+  //o en una carpeta 'modules'
   var code = fs.readFileSync(lessFile, 'utf-8'),
     path = lessFile.slice(0, lessFile.lastIndexOf('/'));
 
-  less.render(code, {paths: [path]}, function (err, css) {
+  less.render(code, {paths: [path, path + '/modules']}, function (err, css) {
     if(err) {
       console.log(err);
     }
@@ -97,7 +98,7 @@ var compileLessFiles = function () {
   files.forEach(function (file) {
     if(file.match(/less$/)) {
       var noExtension = file.split('.less')[0];
-      compileLessFile(lessPath + '/' + file, cssPath + '/' + noExtension + '.css')
+      compileLessFile(lessPath + '/' + file, cssPath + '/' + noExtension + '.css');
     }
   });
 };

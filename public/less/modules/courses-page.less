@@ -1,0 +1,166 @@
+/* COURSES PAGE */
+
+.courses-pills {
+  & > ul {
+    display: inline-block;
+
+    & > li {
+      min-width: 10px;
+    }
+
+    & > .active > a {
+      color: white !important;
+      background-color: #08C;
+    }
+  }
+}
+
+@backgroundCourseTitleHeight: 45px;
+@courseDetailsHeight: 25px;
+.courses-list {
+
+  & > li {
+    margin-bottom: 40px;
+
+    & > h4 {
+      height: @backgroundCourseTitleHeight;
+      line-height: @backgroundCourseTitleHeight;
+      padding-left: 20px;
+
+      font-size:1.6em;
+
+      color: white;
+      text-shadow: 0px 1px 0px rgba(100, 100, 100, 0.6);
+    }
+    & > p {
+      margin-top: 20px;
+    }
+
+  }
+}
+
+.course-details {
+  height: @courseDetailsHeight;
+  line-height: @courseDetailsHeight;
+  text-align: right;
+  color: white;
+  padding-right: 20px;
+  text-shadow: 0px -1px rgba(150, 150, 150, 50%);
+}
+
+.course-heading(@backgroundURL, @backColor, @detailsColor) {
+  .courses-list > li > h4 {
+    background: @backColor url("../images/@{backgroundURL}") no-repeat 100% 0%;
+  }
+  .course-details {
+    background-color: @detailsColor;
+  }
+}
+
+.courses-list > li > h4 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.spring-training {
+  .course-heading("fondo-spring.jpg", @springDarkColor, @springColor);
+}
+
+.javaspecialists-training {
+  .course-heading("fondo-javaspecialists.jpg", @javaspecialistsDarkColor, @javaspecialistsColor);
+}
+
+.HTML5-training {
+  .course-heading("fondo-html5.jpg", @html5DarkColor, @html5Color);
+}
+
+.course-conditions {
+  border: 1px solid #fbeed5;
+  padding: 10px 30px 10px 15px;
+  margin-bottom: 10px;
+
+  & > li {
+    margin-bottom: 10px;
+  }
+}
+
+.course-toolbar {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  & > a {
+    margin-right: 10px;
+  }
+  & > .btn-large {
+    font-size: 13px;
+  }
+}
+
+@starBackgroundColor: darken(#e9eef4, 0%);
+
+.star(@height, @color) {
+  @padding: 2px;
+  @total: @padding + @height;
+
+  content: "\2605";
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+
+  height: 100%;
+  width: @total;
+
+  line-height: 100%;
+  font-size: @total;
+  text-shadow: 0px 0px 2px darken(@starBackgroundColor, 50%);
+
+  color: @color;
+}
+
+@voucherHeight: 70px;
+
+.voucher {
+  border: 1px solid @starBackgroundColor;
+  display: table;
+
+  @height: 70px;
+  height: @voucherHeight;
+
+  & > p {
+    display: table-cell;
+    vertical-align: middle;
+
+    @leftPadding: @voucherHeight;
+    padding: 10px 20px 10px 0px;
+  }
+}
+
+.voucher-javaspecialists {
+  color: darken(@javaspecialistsColor, 20%);
+  background: lighten(@javaspecialistsColor, 35%);
+  &:before {
+    .star(@voucherHeight, @javaspecialistsColor);
+  }
+}
+
+.voucher-html5 {
+  color: darken(@html5Color, 20%);
+  background: lighten(@html5Color, 35%);
+  &:before {
+    .star(@voucherHeight, @html5Color);
+  }
+}
+
+.voucher-spring {
+  color: darken(@springColor, 20%);
+  background: lighten(@springColor, 35%);
+  &:before {
+    .star(@voucherHeight, @springColor);
+  }
+}
+
+// .koliseo-widget {
+//   margin-bottom: 10px;
+// }
+
+/* ***** */
