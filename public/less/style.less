@@ -6,6 +6,11 @@
 @import "modules/followus-page";
 @import "modules/contact-page";
 
+
+.show-middle {
+  display: none !important;
+}
+
 /* 404 */ 
 
 .crash {
@@ -28,21 +33,91 @@
 
 /* ***** */
 
-@media (max-width: 580px) {
+// @media (max-width: 980px) {
+//   .nav-collapse.wrapper {
+//     padding: 0;
+//   }
+// }
 
+@media (max-width: 767px) {
   div[class*="span"] {
     margin-left: 0;
   }
 
-  /* HEADER */
+  // .logo {
+  //   height: 60px;
+  // }
+  
+  // .logo-link {
+  //   background-size: auto 42px;
+  // }
 
-  .logo {
-    height: 60px;
+  /* HOME PAGE */
 
-    & > a {
-      background-size: auto 42px;
+  .home-thumb {
+    max-width: 201px;
+    .center();
+  }
+
+  [class$="-home"] > .show-touch {
+    text-align: center;
+    max-width: 250px;
+    .center();
+  }
+
+  .thumbnail {
+    max-width: 200px;
+
+    margin-bottom: 10px;
+  }
+
+  .consulting-home .btn-info {
+    display: inline-block;
+    position: static;
+  }
+
+  .study {
+    img {
+      margin-bottom: 20px;
     }
   }
+
+  /* ***** */
+
+  /* COURSES PAGE */
+
+  .more-info {
+    display: block;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
+  /* ***** */
+
+  /* TEAM PAGE */
+
+  //Fix android
+  .row-fluid.about {
+    width: auto;
+  }
+
+  /* ***** */
+
+}
+
+
+
+@media (max-width: 767px) {
+
+  .hidden-middle {
+    display: none !important;
+  }
+
+  .show-middle {
+    display: block !important;
+  }
+
+  /* HEADER */
 
   .navbar-inner { //Bootstrap
     width: 100%;
@@ -68,8 +143,6 @@
     background-size: auto 50%;
 
     cursor: pointer;
-
-
   }
 
   .nav > li > a, .dropdown-menu > li > a  {
@@ -118,57 +191,20 @@
 
   /* ***** */
 
+}
 
-  /* HOME PAGE */
+@media (max-width: 480px) {
 
-  .thumbnail {
-    max-width: 200px;
-    .center();
-
-    margin-bottom: 10px;
-  }
-
-  .consulting-home .btn-info {
-    display: inline-block;
-    position: static;
-  }
-
-  .study {
-    img {
-      margin-bottom: 20px;
-    }
+  span[class^="client-"] {
+    margin: 20px (@totalClientWidth - 100px - 6px)/2;
   }
 
 
-  /* ***** */
-
-  /* COURSES PAGE */
-
-  .course-toolbar > a:not(.btn) {
-    display: block;
-    padding-top: 9px;
-    padding-bottom: 9px;
+  .contact-input {
+    width: 90%;
   }
 
-  /* ***** */
-
-  /* TEAM PAGE */
-
-  .team-members > li {
-    min-height: 0;
+  textarea.contact-input {
+    width: 95%;
   }
-
-
-  /* ***** */
-
-  /* CONTACT PAGE */
-
-  .contact-form > .control-group {
-
-    & > input, & > textarea {
-      width: 95%;
-    }
-  }
-
-  /* ***** */
 }

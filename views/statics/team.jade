@@ -6,18 +6,20 @@ include ../includes/team-member
 append content
   -var members = items
   .container-fluid
-    .row-fluid.about(itemscope, itemtype="http://schema.org/Corporation").well
-      .details.span4
-        img(src="/images/logo-extrema.png", itemprop="image", alt="Extrema Sistemas")
-        ul.sociallinks
-          li.twitterbiglink
-            a(href="http://twitter.com/extremasistemas", title=__('twitter-title') ) Twitter
-          li.wordpresslink
-            a(href="http://blog.extrema-sistemas.com", title=__('blog-title')) Blog
-      .span8(itemprop="description") 
-        p !{__('about-us-p1')}
+    .row-fluid.about(itemscope, itemtype="http://schema.org/Corporation")
+      h1.ext-h Extrema Sistemas
+      p.ext-h2 !{__('about-us-p1')}
+      ul.sociallinks
+        li.twitterbiglink
+          a(href="http://twitter.com/extremasistemas", title=__('twitter-title') ) Twitter
+        li.wordpresslink
+          a(href="http://blog.extrema-sistemas.com", title=__('blog-title')) Blog
+
     -if(study) {
-      .study.well
+      .study
+        .row-fluid
+          h3.ext-h2 !{__('case-study')}
+          hr
         .row-fluid
           .span3
             img(src="/studies/" + study._id + "/thumb", alt=study.name, title=study.name)
@@ -26,6 +28,9 @@ append content
             a.btn.btn-warning.pull-right(href="/studies") !{__('more-studies')}
     -}
     .team-members
+      .row-fluid
+        h3.ext-h2 !{__('our-team')}
+        hr
       -members = _.shuffle(members);
       -for(var i = 0; i < members.length; i += 2) {
         .row-fluid

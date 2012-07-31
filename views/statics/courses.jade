@@ -4,8 +4,8 @@ include ../includes/courses-list
 
 mixin tripartita
   -if(lang === 'es' || lang === 'en') {
-    .thumbnail
-      img(src="images/tripartita.jpg", alt=__('tripartita'))
+    .thumbnail.tripartita
+      img(src="images/tripartita.jpg", alt=__('tripartita'), width="200")
       .caption
         h5 !{__('tripartita')}
   -}

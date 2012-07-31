@@ -70,5 +70,9 @@
 	"buy-tickets": "Mi iscrivo!",
 	"back-courses": "Torna ai corsi",
 	"case-studies": "Casi di successo",
-	"more-studies": "Più casi di successo"
+	"case-study": "Caso di successo",
+	"more-studies": "Più casi di successo",
+	"browser-warning": "browser-warning",
+	"browser-warning-p": "browser-warning-p",
+	"our-team": "Il nostro team"
 }

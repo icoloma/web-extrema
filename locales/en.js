@@ -68,5 +68,9 @@
 	"buy-tickets": "Count me in!",
 	"back-courses": "Back to courses",
 	"case-studies": "Case studies",
-	"more-studies": "More case studies"
+	"more-studies": "More case studies",
+	"case-study": "Case study",
+	"our-team": "Our team",
+	"browser-warning": "Your browser is old!",
+	"browser-warning-p": "In order to get all the juice while hanging around, please consider to install a fancier browser."
 }

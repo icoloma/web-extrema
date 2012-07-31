@@ -78,14 +78,14 @@ ul {
 }
 
 .wrapper {
-  max-width: 950px;
+  max-width: 940px;
   .center();
 
-  padding: 0;
+  padding: 0 10px;
 
 
   & > .container-fluid {
-    padding: 0 10px;
+    padding: 0;
   }
 }
 
@@ -102,6 +102,17 @@ p {
   margin-left: 20px;
 }
 
+.study {
+  margin: 0 auto 40px auto;
+
+  img {
+    width: 100%;
+    max-width: 150px;
+    max-height: 150px;
+    text-align: center;
+  }
+}
+
 /* ***** */
 
 /* HEADER */
@@ -113,14 +124,14 @@ p {
   background: url('../images/logo-fondo.png') no-repeat 50% 50%, url('../images/fondo-degradado.png');
 
   height: 100px;
+}
 
-  & > a {
-      height: 100%;
-      display: block;
-      background: url('../images/logo-extrema_texto.png') no-repeat 50% 50%;
+.logo-link {
+  height: 100%;
+  display: block;
+  background: url('../images/logo-extrema_texto.png') no-repeat 50% 50%;
 
-      .hide-text();
-  }
+  .hide-text();
 }
 
 .navbar-inner {
@@ -162,6 +173,15 @@ p {
   background-color: @backgroundNavHover !important ;
 }
 
+.touch .navbar .nav-link {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.touch .btn-toggle {
+  height: 55px;
+}
+
 /* ***** */
 
 /* FOOTER */
@@ -175,6 +195,10 @@ footer > .wrapper > a {
   text-align: right;
   margin-bottom: 20px;
   margin-right: 20px;
+}
+
+.navbar.visible-phone {
+  font-weight: bold;
 }
 
 /* ***** */

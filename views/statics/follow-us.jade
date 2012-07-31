@@ -9,9 +9,9 @@ append content
       .span8
         .blog-header
           h1
-            a(href="http://blog.extrema-sistemas.com") EX^2
+            a(href="http://blog.extrema-sistemas.com").ext-h EX^2
             | 
-            small El blog de Extrema Sistemas
+            small.ext-h2 El blog de Extrema Sistemas
         for article in articles
           article.post
             -if(article.image && article.image.url)
@@ -26,7 +26,6 @@ append content
         a(href="http://twitter.com/extremasistemas")
           h4 @extremasistemas
         .tweet
-        //- include ../includes/twitter-widget.html
 
 append scripts
   script

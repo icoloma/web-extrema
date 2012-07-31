@@ -68,5 +68,9 @@
 	"buy-tickets": "¡Me apunto!",
 	"back-courses": "Volver a cursos",
 	"case-studies": "Casos de éxito",
-	"more-studies": "Más casos de éxito"
+	"case-study": "Caso de éxito",
+	"more-studies": "Más casos de éxito",
+	"browser-warning": "¡Tu navegador es demasiado antiguo!",
+	"browser-warning-p": "Para sacarle todo el jugo a esta página necesitas un navegador más moderno.",
+	"our-team": "Nuestro equipo"
 }

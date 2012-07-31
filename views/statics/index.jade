@@ -3,8 +3,8 @@ extends ../layouts/layout
 append content
   .container-fluid
     .row-fluid.training-home
-      h1.home-header !{__('home1')}
-      h3.home-header2 !{__('home2')}
+      h1.ext-h !{__('home1')}
+      h3.ext-h2 !{__('home2')}
       ul.thumbnails.row-fluid.courses-home
         li.span4.javaspecialists-home
           .show-touch
@@ -36,36 +36,35 @@ append content
     .consulting-home
       .row-fluid
         .span9
-          h2.home-header !{__('home3')}
-          p.home-header2 !{__('home4')}
+          h2.ext-h !{__('home3')}
+          p.ext-h2 !{__('home4')}
         .span3
-          a.btn.btn-info !{__('contact-now')}
-    .row-fluid
-      .span12.clients-home
-        span.client-accenture Accenture
-        span.client-aena AENA
-        span.client-atos Atos
-        span.client-bbva BBVA
-        span.client-bde Banco de España
-        span.client-carrefour Carrefour
-        span.client-corteingles El Corte Inglés
-        span.client-everis Everis
-        span.client-iberdrola Iberdrola
-        span.client-icm ICM
-        span.client-indra INDRA
-        span.client-mapfre Mapfre
-        span.client-movistar Movistar
+          a(href="/contact").btn.btn-info !{__('contact-now')}
   -if(study) {
-    .study.well
+    .study
+      .row-fluid
+        h3.ext-h2 !{__('case-study')}
+        hr
       .row-fluid
         .span3
           img(src="/studies/" + study._id + "/thumb", alt=study.name, title=study.name)
         .span9
           p !{study.description[lang]}
-      .row-fluid
-        .span12
           a.btn.btn-warning.pull-right(href="/studies") !{__('more-studies')}
   -}
-append head
-  //if lte IE 8
-    link(rel='stylesheet', href='/stylesheets/ie8-style.css')
+
+    .row-fluid
+      .span12.clients-home
+        span.client-accenture(title="Accenture") Accenture
+        span.client-aena(title="AENA") AENA
+        span.client-atos(title="Atos") Atos
+        span.client-bbva(title="BBVA") BBVA
+        span.client-bde(title="Banco de España") Banco de España
+        span.client-carrefour(title="Carrefour") Carrefour
+        span.client-corteingles(title="El Corte Inglés") El Corte Inglés
+        span.client-everis(title="Everis") Everis
+        span.client-iberdrola(title="Iberdrola") Iberdrola
+        //- span.client-icm(title="ICM") ICM
+        span.client-indra(title="INDRA") INDRA
+        span.client-mapfre(title="Mapfre") Mapfre
+        span.client-movistar(title="Movistar") Movistar

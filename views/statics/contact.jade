@@ -26,21 +26,21 @@ append content
         form(method="post", action="/contact").contact-form
           .control-group
             label !{__('Name')}:
-            input(type="text", name="name", value=(fields && fields.name || false))
+            input(type="text", name="name", value=(fields && fields.name || false)).contact-input
           .control-group
             label !{__('Organization')}:
-            input(type="text", name="organization", value=(fields && fields.organization || false))
+            input(type="text", name="organization", value=(fields && fields.organization || false)).contact-input
           -var required = '<span class="required" title="' + __('required') + '">*</span>'
           .control-group
             label 
               | Email: 
               | !{required}
-            input(type="email", required, name="email", value=(fields && fields.email || false))
+            input(type="email", required, name="email", value=(fields && fields.email || false)).contact-input
           .control-group
             label 
               | !{__('Comment')}:
               | !{required}
-            textarea(required, name="comment", rows=10) !{fields && fields.comment || ''}
+            textarea(required, name="comment", rows=10).contact-input !{fields && fields.comment || ''}
 
           .control-group
             script(src='http://www.google.com/recaptcha/api/challenge?k=6LcjZdMSAAAAAM6BSZH_hjej4enmL1KmSyPq5VrP&hl=' + lang)
@@ -51,7 +51,7 @@ append content
               textarea(name='recaptcha_challenge_field', rows='3', cols='40')
               input(type='hidden', name='recaptcha_response_field', value='manual_challenge')
 
-          button(type="submit").submit-form !{__('Submit')}
+          button(type="submit").btn !{__('Submit')}
       .span4.contact-data(itemscope, itemtype="http://schema.org/Corporation")
         .alert.alert-details
           h2.alert-heading Madrid

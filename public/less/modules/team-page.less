@@ -1,21 +1,15 @@
 /* TEAM PAGE */
-
-.about.well {
-  box-sizing: border-box;
+.about {
   margin-bottom: 40px;
-  background-color: @backgroundNavHover;
-
-  & > h2 {
+  .ext-h {
+    font-size: 40px;
+    line-height: 50px;
     margin-bottom: 10px;
   }
 
-  & > .details > ul {
-    margin-bottom: 0px;
-    vertical-align: baseline;
-  }
-
-  & > div[itemprop="description"] {
-    margin-top: 25px
+  .ext-h2 {
+    font-size: 15px;
+    line-height: 22px;
   }
 }
 
@@ -43,8 +37,7 @@ h3 > .label {
 
 }
 
-.social-sprite(@position, @hover) {
-  @size: 50px;
+.social-sprite(@position, @hover, @size: 50px) {
   background-position: -@position*@size 0;
   &:hover {
     background-position: -@hover*@size 0;
@@ -72,6 +65,7 @@ h3 > .label {
       height: 50px;
 
       background: url(../images/sprite_social.png) no-repeat;
+      background-size: 500px;
 
       .social-sprite(3, 0);
     }

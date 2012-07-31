@@ -17,25 +17,23 @@
 
 @backgroundCourseTitleHeight: 45px;
 @courseDetailsHeight: 25px;
-.courses-list {
 
-  & > li {
-    margin-bottom: 40px;
+.course-item {
+  margin-bottom: 70px;
 
-    & > h4 {
-      height: @backgroundCourseTitleHeight;
-      line-height: @backgroundCourseTitleHeight;
-      padding-left: 20px;
+  & > h4 {
+    height: @backgroundCourseTitleHeight;
+    line-height: @backgroundCourseTitleHeight;
+    padding-left: 20px;
 
-      font-size:1.6em;
+    font-size:1.6em;
 
-      color: white;
-      text-shadow: 0px 1px 0px rgba(100, 100, 100, 0.6);
-    }
-    & > p {
-      margin-top: 20px;
-    }
+    color: white;
+    text-shadow: 0px 1px 0px rgba(100, 100, 100, 0.6);
 
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 
@@ -46,33 +44,39 @@
   color: white;
   padding-right: 20px;
   text-shadow: 0px -1px rgba(150, 150, 150, 50%);
+  margin-bottom: 30px;
 }
 
-.course-heading(@backgroundURL, @backColor, @detailsColor) {
-  .courses-list > li > h4 {
-    background: @backColor url("../images/@{backgroundURL}") no-repeat 100% 0%;
+.course-heading(@backgroundPosition, @backColor, @detailsColor, @backgroundImage: "sprite_fondos.jpg") {
+  .course-item > h4 {
+    background: @backColor url("../images/@{backgroundImage}") no-repeat 100% @backgroundPosition;
   }
   .course-details {
     background-color: @detailsColor;
   }
 }
 
-.courses-list > li > h4 {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.spring-training {
-  .course-heading("fondo-spring.jpg", @springDarkColor, @springColor);
+.HTML5-training {
+  .course-heading(-5px, @html5DarkColor, @html5Color);
 }
 
 .javaspecialists-training {
-  .course-heading("fondo-javaspecialists.jpg", @javaspecialistsDarkColor, @javaspecialistsColor);
+  .course-heading(-105px, @javaspecialistsDarkColor, @javaspecialistsColor);
 }
 
-.HTML5-training {
-  .course-heading("fondo-html5.jpg", @html5DarkColor, @html5Color);
+.spring-training {
+  .course-heading(-205px, @springDarkColor, @springColor);
+}
+
+.course-toolbar {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  & > a {
+    margin-right: 10px;
+  }
+  & > .btn-large {
+    font-size: 13px;
+  }
 }
 
 .course-conditions {
@@ -85,78 +89,47 @@
   }
 }
 
-.course-toolbar {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  & > a {
-    margin-right: 10px;
-  }
-  & > .btn-large {
-    font-size: 13px;
-  }
+.touch .more-info {
+  padding-top: 20px;
 }
 
 @starBackgroundColor: darken(#e9eef4, 0%);
-
-.star(@height, @color) {
-  @padding: 2px;
-  @total: @padding + @height;
-
-  content: "\2605";
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-
-  height: 100%;
-  width: @total;
-
-  line-height: 100%;
-  font-size: @total;
-  text-shadow: 0px 0px 2px darken(@starBackgroundColor, 50%);
-
-  color: @color;
-}
-
-@voucherHeight: 70px;
+@starBlock: 65px;
+@starSpriteHeight: 170px;
 
 .voucher {
   border: 1px solid @starBackgroundColor;
-  display: table;
 
-  @height: 70px;
-  height: @voucherHeight;
+  min-height: 65px;
+
+  background: url(../images/stars.png) no-repeat;
+  background-size: 65px;
+
+  font-size: 14px;
 
   & > p {
-    display: table-cell;
-    vertical-align: middle;
-
-    @leftPadding: @voucherHeight;
-    padding: 10px 20px 10px 0px;
+    margin-bottom: 0;
+    padding: 10px;
+    padding-left: @starBlock + 10px;
   }
 }
 
 .voucher-javaspecialists {
   color: darken(@javaspecialistsColor, 20%);
-  background: lighten(@javaspecialistsColor, 35%);
-  &:before {
-    .star(@voucherHeight, @javaspecialistsColor);
-  }
 }
 
 .voucher-html5 {
   color: darken(@html5Color, 20%);
-  background: lighten(@html5Color, 35%);
-  &:before {
-    .star(@voucherHeight, @html5Color);
-  }
+  background-position-y: -@starSpriteHeight;
 }
 
 .voucher-spring {
   color: darken(@springColor, 20%);
-  background: lighten(@springColor, 35%);
-  &:before {
-    .star(@voucherHeight, @springColor);
-  }
+  background-position-y: -@starSpriteHeight*2;
+}
+
+.tripartita {
+  .center();
 }
 
 // .koliseo-widget {

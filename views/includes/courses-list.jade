@@ -3,7 +3,7 @@ mixin courseContent(type)
     ul.courses-list.span12
       for course in courses
         -if(course.type === type) {
-          li
+          li.course-item
             h4 !{course.name[lang]}
             .course-details
               !{course.price + ' EUR &middot; ' + course.duration + ' ' + __('hours')}
@@ -12,7 +12,7 @@ mixin courseContent(type)
             .course-toolbar
               a.btn.btn-large(href="/courses/" + course.url) !{__('course-contents')}
               a.btn.btn-success.btn-large(href="//koliseo.com/shows/" + course.show) !{__('buy-tickets')}
-              a(href="/contact") &raquo; !{__('more-info')}
+              a(href="/contact").more-info &raquo; !{__('more-info')}
             -if(course.voucher[lang]) {
               .voucher(class="voucher-" + type.toLowerCase())
                 p !{course.voucher[lang]}

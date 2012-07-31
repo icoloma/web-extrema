@@ -11,7 +11,8 @@ html
       meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
       !{stylesheetsMixin()}
-
+      //if lte IE 8
+        link(rel='stylesheet', href='/stylesheets/ie8-style.css')
       -if(user) {
         link(rel='stylesheet', href='/stylesheets/admin-style.css')
       -}
@@ -20,7 +21,7 @@ html
   body
     header
       div.logo
-        a(href="/") Extrema
+        a(href="/").logo-link Extrema
       .navbar
         .navbar-inner
           .container
@@ -35,7 +36,7 @@ html
               mixin langDropdown(lang)
               ul.nav.pull-right
                 li
-                  a(href="/contact") !{__('Contact')}
+                  a(href="/contact").nav-link !{__('Contact')}
               -if (user) {
                 mixin navbarControls
               -}
@@ -52,7 +53,7 @@ html
               mixin navbarLink(selected, '/team', 'Team')
               mixin navbarLink(selected, '/follow-us', 'Follow-us')
               li
-                a(href="/contact") !{__('Contact')}
+                a(href="/contact").nav-link !{__('Contact')}
             mixin langPills(lang)
             -if (user) {
               mixin navbarControls
@@ -71,3 +72,12 @@ html
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+    // if lte IE 7
+      script
+        document.ieWarnings = {
+          browserWarning: "!{__('browser-warning')}",
+          browserWarningDesc: "!{__('browser-warning-p')}"
+        }
+      script(src="/javascripts/bootstrap-alert.js")
+      script(src="/javascripts/old-browser.js")
+
