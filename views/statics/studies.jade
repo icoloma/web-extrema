@@ -4,7 +4,7 @@ append content
   
   h2.ext-h.studies-h !{__('case-studies')}
   ul.case-studies
-    -studies.forEach(function (study) {
+    -for study in studies
       li.study.row-fluid
         .span3
           img(src="/studies/" + study._id + "/thumb", alt=study.name, title=study.name)
@@ -16,7 +16,7 @@ append content
             h3.study-name !{study.name}
           -}
           p.study-p !{study.description[lang]}
-  -})
+
 
   -if(user) {
     a.btn.btn-large.btn-info(href="/studies/new") New
