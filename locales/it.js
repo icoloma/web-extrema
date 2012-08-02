@@ -7,8 +7,6 @@
 	"lang-it": "Italiano",
 	"About us": "Chi siamo",
 	"about-us-p1": "E' dal 2002 che ci impegniamo in tutto quello che facciamo. Progettiamo applicazioni di software per provare a cambiare il mondo e cercando di farle diventare i punti di riferimento del settore.",
-	"about-us-p2": "Molte aziende hanno confidato in noi per portare i loro sistemi informatici ad un livello più elevato in ambiti diversi tra loro come la navigazione aerea o il settore finanziario. Questo ci ha permesso di imparare molto e di reinventarci ogni giorno, sviluppando un magnifico gruppo di lavoro di cui ci sentiamo veramente orgogliosi.",
-	"about-us-p3": "Siamo presenti in Spagna, Svizzera ed Italia ma continuiamo a rispondere al telefono personalmente.",
 	"IT-team": "Team tecnico",
 	"Management-team": "Team amministrativo",
 	"Courses": "Corsi",
@@ -58,13 +56,14 @@
 	"home2": "Abbiamo i migliori corsi IT al miglior prezzo",
 	"home3": "Ti offriamo tutti i vantaggi della consulenza",
 	"home4": "Scopri la lista dei clienti che hanno confidato nei nostri servizi di consulenza e mentoring.",
-	"contact-now": "Contattaci",
 	"seeInGoogleMaps": "Visualizzare su Google Maps",
 	"DirectionsTitle": "Trasporto pubblico",
 	"Directions": "Cercanías <i>El pozo</i> e prendere il bus T31 (direzione Sierra de Guadalupe). Scendere alla fermata <a href=\"http://goo.gl/maps/HSbS\">Camino Hormigueras con Casas de Miravete</a><p class=\"directions\">In alternativa, Cercanías <i>Vallecas</i> e poi il bus T31 (direzione El Pozo) o 130 (direzione Villaverde). Scendere alla fermata <a href=\"http://goo.gl/maps/qCiE\">Camino Hormigueras con Casas de Miravete</a>.",
 	"form-error": "Errore",
 	"thanks": "Grazie",
 	"HTML5-title": "HTML5 e CSS3",
+	
+	"contact-now": "Contattaci",
 	"course-contents": "Contenuto del corso",
 	"more-info": "Richiedi maggiori informazioni",
 	"buy-tickets": "Mi iscrivo!",
@@ -72,7 +71,8 @@
 	"case-studies": "Casi di successo",
 	"case-study": "Caso di successo",
 	"more-studies": "Più casi di successo",
-	"browser-warning": "browser-warning",
-	"browser-warning-p": "browser-warning-p",
-	"our-team": "Il nostro team"
+	"browser-warning": "Il tuo browser é vecchio!",
+	"browser-warning-p": "Se vuoi il massimo vantaggio, installa un buon browser",
+	"our-team": "Il nostro team",
+	"about-us-h1": "Sviluppiamo un software che ti farà brillare"
 }

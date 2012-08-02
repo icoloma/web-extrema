@@ -7,7 +7,7 @@
 	"lang-it": "Italiano",
 	"About us": "About us",
 	"Welcome": "Extrema Sistemas: training, consulting and mentoring just the way you need",
-	"about-us-p1": "Since 2002 we have been making software that changes the world and looks great during the process. Our experience has assembled a great team that makes us proud in Spain, Switzerland and Italy.",
+	"about-us-p1": "Our experience designing software since 2002 has assembled a great team to make us proud in Spain, Switzerland and Italy.",
 	"IT-team": "IT team",
 	"Management-team": "Management team",
 	"Courses": "Courses",
@@ -43,7 +43,6 @@
 	"home2": "We have the best IT training courses at the best possible price",
 	"home3": "Get the natural advantage from consulting",
 	"home4": "Join the list of clients that have relied on our consulting and mentoring services.",
-	"contact-now": "Get in contact now",
 	"discount-javasp": "Attendees that are members of extrema-alumni may apply a <strong>15% discount</strong>. Discounts are not cumulative.",
 	"info-javasp": "If you wish to receive additional information or a customized price for more than five attendees, please <a href=\"/contact\">get in contact</a>.",
 	"twitter-title": "Follow us on Twitter",
@@ -63,6 +62,8 @@
 	"500-error": "This tree should not be here...",
 	"500-explanation": "Something bad, bad, bad just happened. It is internal, it is ugly, and it was probably our fault. Refreshing the browser won't help. <p>Please try again in some minutes, or <a href=\"/contact\">contact us</a>.",
 	"HTML5-title": "HTML5 and CSS3",
+	
+	"contact-now": "Get in contact now",
 	"course-contents": "Course contents",
 	"more-info": "Ask for more info",
 	"buy-tickets": "Count me in!",
@@ -72,5 +73,6 @@
 	"case-study": "Case study",
 	"our-team": "Our team",
 	"browser-warning": "Your browser is old!",
-	"browser-warning-p": "In order to get all the juice while hanging around, please consider to install a fancier browser."
+	"browser-warning-p": "In order to get all the juice while hanging around, please consider to install a decent browser.",
+	"about-us-h1": "We develop software that makes you shine"
 }

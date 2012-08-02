@@ -6,26 +6,27 @@ include ../includes/team-member
 append content
   -var members = items
   .container-fluid
-    .row-fluid.about(itemscope, itemtype="http://schema.org/Corporation")
-      h1.ext-h Extrema Sistemas
-      p.ext-h2 !{__('about-us-p1')}
-      ul.sociallinks
-        li.twitterbiglink
-          a(href="http://twitter.com/extremasistemas", title=__('twitter-title') ) Twitter
-        li.wordpresslink
-          a(href="http://blog.extrema-sistemas.com", title=__('blog-title')) Blog
+    .row-fluid
+      .span12.about(itemscope, itemtype="http://schema.org/Corporation")
+        h1.ext-h !{__('about-us-h1')}
+        ul.sociallinks.pull-right
+          li.twitterlink
+            a(href="http://twitter.com/extremasistemas", title=__('twitter-title') ) Twitter
+          li.wordpresslink
+            a(href="http://blog.extrema-sistemas.com", title=__('blog-title')) Blog
+        p.ext-h2 !{__('about-us-p1')}
 
     -if(study) {
-      .study
-        .row-fluid
-          h3.ext-h2 !{__('case-study')}
-          hr
-        .row-fluid
-          .span3
-            img(src="/studies/" + study._id + "/thumb", alt=study.name, title=study.name)
-          .span9
-            p !{study.description[lang]}
-            a.btn.btn-warning.pull-right(href="/studies") !{__('more-studies')}
+      .row-fluid
+        h3.ext-h2 !{__('case-study')}
+        hr
+      .row-fluid.study
+        .span3
+          img(src="/studies/" + study._id + "/thumb", alt=study.name, title=study.name)
+        .span9
+          h3.study-name !{study.name}
+          p.study-p !{study.description[lang]}
+          a.btn.btn-warning.pull-right(href="/studies") !{__('more-studies')}
     -}
     .team-members
       .row-fluid

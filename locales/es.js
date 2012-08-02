@@ -7,7 +7,7 @@
 	"lang-it": "Italiano",
 	"About us": "Quiénes somos",
 	"Welcome": "Extrema Sistemas: la formación, consultoría y mentoring que necesitas",
-	"about-us-p1": "Llevamos desde 2002 diseñando software que cambie el mundo y luzca bien durante el proceso. Nuestra experiencia ha combinado un magnífico equipo de trabajo del que sentirnos orgullosos en España, Suiza e Italia.",
+	"about-us-p1": "Nuestra experiencia desde 2002 diseñando software ha combinado un magnífico equipo de trabajo del que sentirnos orgullosos en España, Suiza e Italia.",
 	"IT-team": "Equipo técnico",
 	"Management-team": "Equipo gestión",
 	"Courses": "Cursos",
@@ -43,7 +43,6 @@
 	"home2": "Tenemos los mejores cursos de formación de IT al precio más asequible.",
 	"home3": "Consigue la ventaja natural de la consultoría",
 	"home4": "Súmate a la lista de clientes que han confiado en nuestros servicios de consultoría y mentoring.",
-	"contact-now": "Entra en contacto ahora",
 	"discount-javasp": "Los miembros de extrema-alumni disponen de un <strong>15% de descuento</strong>. Los descuentos no son acumulativos.",
 	"info-javasp": "Para información adicional o condiciones preferentes para cursos con más asistentes <a href=\"/contact\">póngase en contacto</a>.</p>",
 	"twitter-title": "Síguenos en Twitter",
@@ -63,6 +62,8 @@
 	"500-error": "Este árbol no debía estar aquí...",
 	"500-explanation": "Algo ha ido mal, mal, mal. Es interno, es feo, y probablemente es culpa nuestra. Refrescar el navegador no ayudará. <p>Por favor vuelve a intentarlo en unos minutos, o <a href=\"/contact\">contáctanos</a>.",
 	"HTML5-title": "HTML5 y CSS3",
+	
+	"contact-now": "Entra en contacto ahora",
 	"course-contents": "Contenidos del curso",
 	"more-info": "Pedir más información",
 	"buy-tickets": "¡Me apunto!",
@@ -72,5 +73,6 @@
 	"more-studies": "Más casos de éxito",
 	"browser-warning": "¡Tu navegador es demasiado antiguo!",
 	"browser-warning-p": "Para sacarle todo el jugo a esta página necesitas un navegador más moderno.",
-	"our-team": "Nuestro equipo"
+	"our-team": "Nuestro equipo",
+	"about-us-h1": "Desarrollamos software que hace que esto luzca"
 }

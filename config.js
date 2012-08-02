@@ -64,8 +64,8 @@ exports.prod_config = function (app) {
 
 /* Helpers para precompilar */
 
-var bootstrapPath = appPath + '/public/less/bootstrap/less',
-  lessPath = appPath + '/public/less',
+var bootstrapPath = appPath + '/less/bootstrap/less',
+  lessPath = appPath + '/less',
   cssPath = appPath + '/public/stylesheets',
   jsPath = appPath + '/public/javascripts',
   compressor = require('node-minify');
