@@ -19,10 +19,9 @@ module.exports = function (server) {
   //Home page
   server.get('/', function (req, res) {
     Studies.getItems(function (err, items) {
-      _.shuffle(items);
       res.render('statics/index', {
         title: __('Welcome'),
-        study: items[0] 
+        study:  _.shuffle(items)[0]
       });
     });
   });
