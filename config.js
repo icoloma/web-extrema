@@ -49,8 +49,9 @@ exports.dev_config = function (app) {
 exports.prod_config = function (app) {
   return function () {
     app.use(express.errorHandler());
-    //Minificar ficheros en 'production'
-    minifyFiles();
+    //Minificar ficheros en producción
+    //con un delay para dar tiempo a compilar las hojas less
+    setTimeout(minifyFiles, 1000);
 
     app.error(function (err, req, res, next) {
       res.render('statics/500', {
