@@ -12,8 +12,6 @@ append content
           -if(user) {
             h3
               a(href="/studies/" + study._id + "/edit")!{study.name}
-          -} else {
-            h3.study-name !{study.name}
           -}
           p.study-p !{study.description[lang]}
 

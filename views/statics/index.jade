@@ -48,7 +48,6 @@ append content
         .span3
           img(src="/studies/" + study._id + "/thumb", alt=study.name, title=study.name)
         .span9
-          h3.study-name !{study.name}
           p.study-p !{study.description[lang]}
           a.btn.btn-warning.pull-right(href="/studies") !{__('more-studies')}
   -}
