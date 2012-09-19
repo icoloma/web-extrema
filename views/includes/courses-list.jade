@@ -11,7 +11,7 @@ mixin courseContent(type)
             !{course.description[lang]}
             .course-toolbar
               a.btn.btn-large(href="/courses/" + course.url) !{__('course-contents')}
-              a.btn.btn-success.btn-large(href=course.show) !{__('buy-tickets')}
+              a.btn.btn-success.btn-large(href=course.show, target="_blank") !{__('buy-tickets')}
               a(href="/contact").more-info &raquo; !{__('more-info')}
             -if(course.voucher[lang]) {
               .voucher(class="voucher-" + type.toLowerCase())
