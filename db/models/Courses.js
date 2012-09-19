@@ -12,7 +12,7 @@ Campos:
   Tipo (Spring, HTML5, Javaspecialists)
   Precio
   Duración (horas)
-  Id del show en koliseo
+  Url del show en koliseo
 
 El campo 'deleted' se usa en el borrado lógico.
 */
