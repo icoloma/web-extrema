@@ -127,7 +127,8 @@ var minifyFiles = function() {
       fileIn: [jsPath + '/jquery-1.7.2.min.js',
                jsPath + '/bootstrap-tab.js',
                jsPath + '/bootstrap-dropdown.js',
-               jsPath + '/bootstrap-collapse.js'],
+               jsPath + '/bootstrap-collapse.js',
+               jsPath + '/touch-devices.js'],
       fileOut: jsPath + '/scripts.min.js',
       callback: function(err) {
           if(err) {

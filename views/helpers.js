@@ -22,7 +22,8 @@ module.exports = {
       '<script type="text/javascript" src="/javascripts/jquery-1.7.2.min.js"></script>' +
       '<script type="text/javascript" src="/javascripts/bootstrap-dropdown.js"></script>' +
       '<script type="text/javascript" src="/javascripts/bootstrap-tab.js"></script>' +
-      '<script type="text/javascript" src="/javascripts/bootstrap-collapse.js"></script>'
+      '<script type="text/javascript" src="/javascripts/bootstrap-collapse.js"></script>' +
+      '<script type="text/javascript" src="/javascripts/touch-devices.js"></script>'
       :
       '<script type="text/javascript" src="/javascripts/scripts.min.js"></script>'
   }

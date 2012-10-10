@@ -11,10 +11,6 @@
 .courses-home {
   margin-top: 20px;
 
-  .show-touch {
-    margin-top: 20px;
-  }
-
   .thumbnail {
     padding: 0;
     height: 200px;
@@ -64,6 +60,10 @@
   }
 }
 
+.course-title {
+  margin-top: 20px;
+}
+
 .home-thumb {
   .transition(.2s);
   overflow: hidden;
@@ -87,15 +87,15 @@
   }
 }
 
-.javaspecialists-home > .show-touch > h4 {
+.javaspecialists-home > .course-title {
     color: @javaspecialistsDarkColor;
 }
 
-.html5-home > .show-touch > h4 {
+.html5-home > .course-title {
     color: @html5DarkColor;
 }
 
-.spring-home > .show-touch > h4 {
+.spring-home > .course-title {
     color: @springDarkColor;
 }
 
@@ -115,6 +115,7 @@
 
 .touch {
   .home-thumb {
+    background-size: 160px;
     & > .thumbnail {
       &:hover {
         background: none;
@@ -126,15 +127,18 @@
   }
 
   .javaspecialists-thumb {
-    background: fadeout(@javaspecialistsDarkColor, 40%) url(../images/logo-javasp.png) no-repeat 50% 50%;
+    background-color: fadeout(@javaspecialistsDarkColor, 40%);
+    background-image: url(../images/logo-javasp.png);
   }
 
   .html5-thumb {
-    background: fadeout(@html5DarkColor, 40%) url(../images/logo-html5.png) no-repeat 50% 50%;
+    background-color: fadeout(@html5DarkColor, 40%);
+    background-image: url(../images/logo-html5.png);
   }
 
   .spring-thumb {
-    background: fadeout(@springDarkColor, 40%) url(../images/logo-spring.png) no-repeat 50% 50%;
+    background-color: fadeout(@springDarkColor, 40%);
+    background-image: url(../images/logo-spring.png);
   }
 }
 

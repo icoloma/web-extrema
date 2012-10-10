@@ -6,28 +6,19 @@ append content
       h1.ext-h !{__('home1')}
       h3.ext-h2 !{__('home2')}
       ul.thumbnails.row-fluid.courses-home
-        li.span4.javaspecialists-home
-          .show-touch
-            h4 Javaspecialists
-            hr
+        li.span4.javaspecialists-home(data-course-title="Javaspecialists")
           .javaspecialists-thumb.home-thumb
             a(href="/courses#javaspecialists").thumbnail
               .caption
                 h4 Javaspecialists
                 p !{__('javasp-thumb')}
-        li.span4.html5-home
-          .show-touch
-            h4 !{__('HTML5-title')}
-            hr
+        li.span4.html5-home(data-course-title=__('HTML5-title'))
           .html5-thumb.home-thumb
             a(href="/courses#HTML5").thumbnail
               .caption
                 h4 !{__('HTML5-title')}
                 p !{__('HTML5-thumb')}
-        li.span4.spring-home
-          .show-touch
-            h4 Spring
-            hr
+        li.span4.spring-home(data-course-title="Spring")
           .spring-thumb.home-thumb
             a(href="/courses#spring").thumbnail
               .caption
