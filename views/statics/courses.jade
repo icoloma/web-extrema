@@ -7,43 +7,48 @@ mixin tripartita
     .thumbnail.tripartita
       img(src="images/tripartita.jpg", alt=__('tripartita'), width="200")
       .caption
-        h5 !{__('tripartita')}
+        p.tripartita-p !{__('tripartita')}
   -}
 
 append content
   -var courses = items
   .container-fluid
-    div.courses-pills
-      ul.nav.nav-pills
-          mixin courseTab('HTML5', 'HTML5')
-          mixin courseTab('Javaspecialists', 'javaspecialists')
-          mixin courseTab('Spring', 'spring')
+    ul.nav.nav-pills.courses-pills
+        mixin courseTab('HTML5', 'html5-training')
+        mixin courseTab('Javaspecialists', 'javaspecialists-training')
+        mixin courseTab('Spring', 'spring-training')
     .tab-content#courses-content
-      .row-fluid.tab-pane#javaspecialists.javaspecialists-training
+
+      .row-fluid.tab-pane#javaspecialists-training
         .span8
           mixin courseContent('Javaspecialists')
         .span4
-          ul.course-conditions
-            li
-              !{__('vat-exempt')}
-            li
-              !{__('discount-javasp')}
-            li
-              !{__('info-javasp')}
+          .course-conditions
+            h2.conditions-h Details
+            mixin courseNumbers('1700', '30')
+            p !{__('vat-exempt')}
+            p !{__('discount-javasp')}
+            p !{__('info-javasp')}
           mixin tripartita
-      .row-fluid.tab-pane#HTML5.HTML5-training
+
+      .row-fluid.tab-pane#html5-training
         .span8
           mixin courseContent('HTML5')
         .span4
           .course-conditions
-            !{__('details-HTML5')}
+            h2.conditions-h Details
+            mixin courseNumbers('1100', '24')
+            p !{__('details-HTML5')}
           mixin tripartita
-      .row-fluid.tab-pane#spring.spring-training
+
+      .row-fluid.tab-pane#spring-training
         .span8
           mixin courseContent('Spring')
         .span4
           .course-conditions
-            !{__('details-spring')}
+            h2.conditions-h Details
+            mixin courseNumbers('1975', '32')
+            p !{__('details-spring')}
           mixin tripartita
 
     if(user)
@@ -59,8 +64,8 @@ append scripts
     });
 
     // Activar el pill correcto
-    var pill = location.hash || '#HTML5';
-    $('li > [href=' + pill + ']').parent().addClass('active');
+    var pill = location.hash || '#html5-training';
+    $('[href=' + pill + ']').parent().addClass('active');
     $(pill).addClass('active');
  
 //- //- Generar widget de Koliseo

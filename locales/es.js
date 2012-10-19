@@ -66,7 +66,7 @@
 	"contact-now": "Entra en contacto ahora",
 	"course-contents": "Contenidos del curso",
 	"more-info": "Pedir más información",
-	"buy-tickets": "¡Me apunto!",
+	"buy-tickets": "Cursos disponibles",
 	"back-courses": "Volver a cursos",
 	"case-studies": "Casos de éxito",
 	"case-study": "Caso de éxito",

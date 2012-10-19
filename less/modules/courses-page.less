@@ -1,18 +1,16 @@
 /* COURSES PAGE */
 
 .courses-pills {
-  & > ul {
-    display: inline-block;
+  display: inline-block;
 
-    & > li {
-      min-width: 10px;
-    }
-
-    & > .active > a {
-      color: white !important;
-      background-color: #08C;
-    }
+  & > li {
+    min-width: 10px;
   }
+
+}
+.active > .course-pill-a {
+  color: white !important;
+  background-color: #08C;
 }
 
 @backgroundCourseTitleHeight: 45px;
@@ -20,51 +18,55 @@
 
 .course-item {
   margin-bottom: 70px;
-
-  & > h4 {
-    height: @backgroundCourseTitleHeight;
-    line-height: @backgroundCourseTitleHeight;
-    padding-left: 20px;
-
-    font-size:1.6em;
-
-    color: white;
-    text-shadow: 0px 1px 0px rgba(100, 100, 100, 0.6);
-
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
 }
 
-.course-details {
-  height: @courseDetailsHeight;
-  line-height: @courseDetailsHeight;
-  text-align: right;
+.course-h {
+  height: @backgroundCourseTitleHeight;
+  line-height: @backgroundCourseTitleHeight;
+  padding-left: 20px;
+
+  font-size:1.6em;
+
   color: white;
-  padding-right: 20px;
-  text-shadow: 0px -1px rgba(150, 150, 150, 50%);
+  text-shadow: 0px 1px 0px rgba(100, 100, 100, 0.6);
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
   margin-bottom: 30px;
 }
 
-.course-heading(@backgroundPosition, @backColor, @detailsColor, @backgroundImage: "sprite-fondos.jpg") {
-  .course-item > h4 {
-    background: @backColor url("../images/@{backgroundImage}") no-repeat 100% @backgroundPosition;
-  }
-  .course-details {
-    background-color: @detailsColor;
-  }
+// .course-details {
+//   color: @textColor;
+//   background-color: @bodyColor;
+//   font-weight: bold;
+//   padding: 10px;
+// }
+
+.conditions-h {
+  text-align: center;
 }
 
-.HTML5-training {
+.course-heading(@backgroundPosition, @backColor, @detailsColor, @backgroundImage: "sprite-fondos.jpg") {
+  .course-h {
+    background: @backColor url("../images/@{backgroundImage}") no-repeat 100% @backgroundPosition;
+  }
+  // .course-details {
+  //   background-color: @detailsColor;
+  //   border-color: darken(@detailsColor, 10%);
+  // }
+}
+
+#html5-training {
   .course-heading(-5px, @html5DarkColor, @html5Color);
 }
 
-.javaspecialists-training {
+#javaspecialists-training {
   .course-heading(-105px, @javaspecialistsDarkColor, @javaspecialistsColor);
 }
 
-.spring-training {
+#spring-training {
   .course-heading(-205px, @springDarkColor, @springColor);
 }
 
@@ -87,6 +89,11 @@
   & > li {
     margin-bottom: 10px;
   }
+}
+
+.detail {
+  font-size: 1.2em;
+  text-align: center;
 }
 
 .touch .more-info {
@@ -135,9 +142,10 @@
 .tripartita {
   .center();
 }
-
-// .koliseo-widget {
-//   margin-bottom: 10px;
-// }
+.tripartita-p {
+  font-weight: bold;
+  font-size: 0.9em;
+  text-align: center;
+}
 
 /* ***** */
