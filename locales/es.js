@@ -62,7 +62,6 @@
 	"500-error": "Este árbol no debía estar aquí...",
 	"500-explanation": "Algo ha ido mal, mal, mal. Es interno, es feo, y probablemente es culpa nuestra. Refrescar el navegador no ayudará. <p>Por favor vuelve a intentarlo en unos minutos, o <a href=\"/contact\">contáctanos</a>.",
 	"HTML5-title": "HTML5 y CSS3",
-	
 	"contact-now": "Entra en contacto ahora",
 	"course-contents": "Contenidos del curso",
 	"more-info": "Pedir más información",
@@ -74,5 +73,6 @@
 	"browser-warning": "¡Tu navegador es demasiado antiguo!",
 	"browser-warning-p": "Para sacarle todo el jugo a esta página necesitas un navegador más moderno.",
 	"our-team": "Nuestro equipo",
-	"about-us-h1": "Desarrollamos software que hace que esto luzca"
+	"about-us-h1": "Desarrollamos software que hace que esto luzca",
+	"details-course": "Detalles"
 }

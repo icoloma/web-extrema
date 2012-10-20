@@ -2,12 +2,11 @@ extends ../layouts/layout
 
 append head
   link(rel="alternate",type="application/rss+xml",title="ex^2 » Feed",href="http://blog.extrema-sistemas.com/feed/")
-
 append content
   .container-fluid
     .row-fluid
-      .span8
-        .blog-header
+      section.span8
+        header.blog-header
           h1
             a(href="http://blog.extrema-sistemas.com").ext-h EX^2
             | 
@@ -16,15 +15,15 @@ append content
           article.post
             -if(article.image && article.image.url)
               img(src=article.image.url, alt=article.image.title)
-            .post-header
-              a(href=article.link)
-                h3 !{article.title}
+            header.post-header
+              h1
+                a(href=article.link).post-h !{article.title}
               p.date !{article.date.toLocaleDateString()}
             p !{article.summary}
           hr
-      .span4.tweets-extrema
-        a(href="http://twitter.com/extremasistemas")
-          h4 @extremasistemas
+      section.span4.tweets-extrema
+        h1
+          a(href="http://twitter.com/extremasistemas").twitter-h @extremasistemas
         .tweet
 
 append scripts

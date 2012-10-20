@@ -1,19 +1,19 @@
 mixin courseContent(type)
-  ul.courses-list
+  .courses-list
     for course in courses
       -if(course.type === type) {
-        li.course-item
+        article.course-item
           h1.course-h !{course.name[lang]}
           //- .alert.course-details
           //-   !{course.price + ' EUR<br>' + course.duration + ' ' + __('hours')}</p>
           //- img(src="/courses/" + course._id + "/thumb")
           !{course.description[lang]}
-          .course-toolbar
+          nav.course-toolbar
             a.btn.btn-large(href="/courses/" + course.url) !{__('course-contents')}
             a.btn.btn-success.btn-large(href=course.show, target="_blank") !{__('buy-tickets')}
             a(href="/contact").more-info &raquo; !{__('more-info')}
           -if(course.voucher[lang]) {
-            .voucher(class="voucher-" + type.toLowerCase())
+            aside.voucher(class="voucher-" + type.toLowerCase())
               p !{course.voucher[lang]}
           -}
           -if(user) {

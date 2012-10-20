@@ -62,7 +62,6 @@
 	"form-error": "Errore",
 	"thanks": "Grazie",
 	"HTML5-title": "HTML5 e CSS3",
-	
 	"contact-now": "Contattaci",
 	"course-contents": "Contenuto del corso",
 	"more-info": "Richiedi maggiori informazioni",
@@ -74,5 +73,6 @@
 	"browser-warning": "Il tuo browser é vecchio!",
 	"browser-warning-p": "Se vuoi il massimo vantaggio, installa un buon browser",
 	"our-team": "Il nostro team",
-	"about-us-h1": "Sviluppiamo un software che ti farà brillare"
+	"about-us-h1": "Sviluppiamo un software che ti farà brillare",
+	"details-course": "Dettagli"
 }

@@ -1,9 +1,9 @@
 mixin teamMember(member)
   -if(!user) {
-    h3(itemprop="name").crewtitle 
+    h2(itemprop="name").crewtitle 
       !{member.name} 
   -} else {
-    h3(itemprop="name").crewtitle 
+    h2(itemprop="name").crewtitle 
       a(href="/team/" + member._id + "/edit") 
         !{member.name}
   -}

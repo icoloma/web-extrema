@@ -10,17 +10,17 @@ append content
   -var error, fields, success
   .container-fluid
     .row-fluid
-      .span8
+      section.span8
         h1 !{__('Contact')}
         p.help-block !{__('required-fields')}
         -if(error) {
           .alert.alert-danger.alert-contactform
-            h3.alert-heading !{__('form-error')}
+            h2.alert-heading !{__('form-error')}
             p !{error}
         -}
         -if(success) {
           .alert.alert-success.alert-contactform
-            h3.alert-heading !{__('thanks')}
+            h2.alert-heading !{__('thanks')}
             p !{success}
         -}
         form(method="post", action="/contact").contact-form
@@ -52,38 +52,41 @@ append content
               input(type='hidden', name='recaptcha_response_field', value='manual_challenge')
 
           button(type="submit").btn !{__('Submit')}
-      .span4.contact-data(itemscope, itemtype="http://schema.org/Corporation")
+      section.span4.contact-data(itemscope, itemtype="http://schema.org/Corporation")
         .alert.alert-details
-          h2.alert-heading Madrid
-          p
-            b E-mail: 
-            a(href="mailto:info@extrema-sistemas.com", title=__('Email-to') + ": info@extrema-sistemas.com", itemprop="email") info@extrema-sistemas.com
-          p
-            b !{__('Phone')}: 
-            a(itemprop="telephone", href="tel:+34911727081") (+34) 91 172 7081
-          p
-            span.label.label-info !{__('Address')} 
-            address(itemprop="address", itemscope, itemtype="http://schema.org/PostalAddress")
-              p(itemprop="fn") Extrema Sistemas S.L.
-              p(itemprop="streetAddress") C/Casas de Miravete 24A<br />
-              span(itemprop="postalCode") 28031 
-              span(itemprop="addressCountry") Madrid
-              p
-                a(href="http://goo.gl/maps/3nDy") &raquo; !{__('seeInGoogleMaps')} 
-          p
-            span.label.label-info !{__('DirectionsTitle')} 
-          p.directions !{__('Directions')} 
+          section
+            h1.alert-heading.contact-h Madrid
+            p
+              b E-mail: 
+              a(href="mailto:info@extrema-sistemas.com", title=__('Email-to') + ": info@extrema-sistemas.com", itemprop="email") info@extrema-sistemas.com
+            p
+              b !{__('Phone')}: 
+              a(itemprop="telephone", href="tel:+34911727081") (+34) 91 172 7081
+            p
+              span.label.label-info !{__('Address')} 
+              address(itemprop="address", itemscope, itemtype="http://schema.org/PostalAddress")
+                p(itemprop="fn").address-p Extrema Sistemas S.L.
+                p(itemprop="streetAddress").address-p C/Casas de Miravete 24A<br />
+                span(itemprop="postalCode") 28031 
+                span(itemprop="addressCountry") Madrid
+                p.address-p
+                  a(href="http://goo.gl/maps/3nDy") &raquo; !{__('seeInGoogleMaps')} 
+            p
+              span.label.label-info !{__('DirectionsTitle')} 
+            p.directions !{__('Directions')} 
           hr
-          h2.alert-heading !{__('Italy')}
-          p
-            b !{__('Phone')} 
-            a(itemprop="telephone", href="tel:+390692956158") (+39) 06 929 56 158
-          p
-            b E-mail: 
-            a(href="mailto:italy@extrema-sistemas.com", title=__('Email-to') + ": italy@extrema-sistemas.com", itemprop="email") italy@extrema-sistemas.com
+          section
+            h1.alert-heading.contact-h !{__('Italy')}
+            p
+              b !{__('Phone')} 
+              a(itemprop="telephone", href="tel:+390692956158") (+39) 06 929 56 158
+            p
+              b E-mail: 
+              a(href="mailto:italy@extrema-sistemas.com", title=__('Email-to') + ": italy@extrema-sistemas.com", itemprop="email") italy@extrema-sistemas.com
           hr
-          h4.join-us !{__('Join-us')}
-          -var linkCV = '<a href="mailto:team@extrema-sistemas.com" class="email" title="' + __('Send-CV') + ': team@extrema-sistemas.com">team@extrema-sistemas.com</a>'
-          p  
-            | !{__('Join-us-p')}
-            | !{linkCV}
+          section
+            h1.join-us !{__('Join-us')}
+            -var linkCV = '<a href="mailto:team@extrema-sistemas.com" class="email" title="' + __('Send-CV') + ': team@extrema-sistemas.com">team@extrema-sistemas.com</a>'
+            p  
+              | !{__('Join-us-p')}
+              | !{linkCV}

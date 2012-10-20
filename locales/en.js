@@ -62,7 +62,6 @@
 	"500-error": "This tree should not be here...",
 	"500-explanation": "Something bad, bad, bad just happened. It is internal, it is ugly, and it was probably our fault. Refreshing the browser won't help. <p>Please try again in some minutes, or <a href=\"/contact\">contact us</a>.",
 	"HTML5-title": "HTML5 and CSS3",
-	
 	"contact-now": "Get in contact now",
 	"course-contents": "Course contents",
 	"more-info": "Ask for more info",
@@ -74,5 +73,6 @@
 	"our-team": "Our team",
 	"browser-warning": "Your browser is old!",
 	"browser-warning-p": "In order to get all the juice while hanging around, please consider to install a decent browser.",
-	"about-us-h1": "We develop software that makes you shine"
+	"about-us-h1": "We develop software that makes you shine",
+	"details-course": "Details"
 }

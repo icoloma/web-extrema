@@ -7,7 +7,7 @@ append content
   -var members = items
   .container-fluid
     .row-fluid
-      .span12.about(itemscope, itemtype="http://schema.org/Corporation")
+      section.span12.about(itemscope, itemtype="http://schema.org/Corporation")
         h1.ext-h !{__('about-us-h1')}
         ul.sociallinks.pull-right
           li.twitterlink
@@ -17,29 +17,29 @@ append content
         p.ext-h2 !{__('about-us-p1')}
 
     -if(study) {
-      .row-fluid
-        h3.ext-h2 !{__('case-study')}
+      section.row-fluid
+        h1.ext-h2 !{__('case-study')}
         hr
-      .row-fluid.study
-        .span3
-          img(src="/studies/" + study._id + "/thumb", alt=study.name, title=study.name)
-        .span9
-          p.study-p !{study.description[lang]}
-          a.btn.btn-warning.pull-right(href="/studies") !{__('more-studies')}
+        .row-fluid.study
+          .span3
+            img(src="/studies/" + study._id + "/thumb", alt=study.name, title=study.name)
+          .span9
+            p.study-p !{study.description[lang]}
+            a.btn.btn-warning.pull-right(href="/studies") !{__('more-studies')}
     -}
-    .team-members
+    section.team-members
       .row-fluid
-        h3.ext-h2 !{__('our-team')}
+        h1.ext-h2 !{__('our-team')}
         hr
       -members = _.shuffle(members);
       -for(var i = 0; i < members.length; i += 2) {
         .row-fluid
           -var member = members[i]
-            .span6.team-member(itemscope, itemtype="http://schema.org/Person")
+            article.span6.team-member(itemscope, itemtype="http://schema.org/Person")
               mixin teamMember(member)
             -if(members[i+1])
               -var member = members[i+1]
-              .span6.team-member(itemscope, itemtype="http://schema.org/Person")
+              article.span6.team-member(itemscope, itemtype="http://schema.org/Person")
                 mixin teamMember(member)
       -}
   -if(user) {

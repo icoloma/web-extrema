@@ -2,9 +2,10 @@ extends ../layouts/layout
 
 append content
   .container-fluid
-    .row-fluid.training-home
-      h1.ext-h !{__('home1')}
-      h3.ext-h2 !{__('home2')}
+    section.row-fluid.training-home
+      hgroup
+        h1.ext-h !{__('home1')}
+        h2.ext-h2 !{__('home2')}
       ul.thumbnails.row-fluid.courses-home
         li.span4.javaspecialists-home(data-course-title="Javaspecialists")
           .javaspecialists-thumb.home-thumb
@@ -24,26 +25,26 @@ append content
               .caption
                 h4 Spring
                 p !{__('spring-thumb')}
-    .consulting-home
+    section.consulting-home
       .row-fluid
         .span9
-          h2.ext-h !{__('home3')}
+          h1.ext-h !{__('home3')}
           p.ext-h2 !{__('home4')}
         .span3
           a(href="/contact").btn.btn-info !{__('contact-now')}
-  -if(study) {
-    .row-fluid
-        h3.ext-h2 !{__('case-study')}
+    -if(study) {
+      section.row-fluid
+        h1.ext-h2 !{__('case-study')}
         hr
-      .row-fluid.study
-        .span3
-          img(src="/studies/" + study._id + "/thumb", alt=study.name, title=study.name)
-        .span9
-          p.study-p !{study.description[lang]}
-          a.btn.btn-warning.pull-right(href="/studies") !{__('more-studies')}
-  -}
+        .row-fluid.study
+          .span3
+            img(src="/studies/" + study._id + "/thumb", alt=study.name, title=study.name)
+          .span9
+            p.study-p !{study.description[lang]}
+            a.btn.btn-warning.pull-right(href="/studies") !{__('more-studies')}
+    -}
 
-    .row-fluid
+    section.row-fluid
       .span12.clients-home
         span.client-accenture(title="Accenture") Accenture
         span.client-aena(title="AENA") AENA

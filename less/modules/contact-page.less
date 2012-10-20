@@ -9,26 +9,8 @@
   background-color: @backgroundNav;
   border-color: @backgroundNavHover;
 
-  & > address, & > .directions {
+  address, .directions {
     margin: 0px 0 10px 17px;
-  }
-
-  & > h2 {
-    margin-bottom: 10px;
-  }
-
-  & > h4 {
-
-    margin-bottom: 8px;
-
-    & > i[class^="icon-"] {
-      line-height: inherit;
-      opacity: .4;
-    }
-
-    & > a {
-      color: inherit;
-    }
   }
 }
 .help-block {
@@ -46,12 +28,21 @@ textarea.contact-input {
   color: red;
 }
 
-.contact-data address > p {
+.address-p {
   margin-bottom: 0;
+}
+
+.contact-h {
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 10px;
 }
 
 .join-us {
   color: darken(@javaspecialistsColor, 20%);
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 /* ***** */
