@@ -30,4 +30,23 @@ module.exports = function (server) {
   redirect('/clients', '/'); //
   redirect('/es/clientes', '/'); //
   redirect('/es/contacto', '/contact');
+
+
+  // Callbacks para los cursos de Spring en Koliseo (redirigidos desde vmware)
+  redirect('/koliseo/core-spring-madrid', 'https://www.koliseo.com/extremasistemas/core-spring-madrid');
+  redirect('/koliseo/core-spring-barcelona', 'https://www.koliseo.com/extremasistemas/core-spring-barcelona');
+  redirect('/koliseo/core-spring-milano', 'https://www.koliseo.com/extremasistemas/core-spring-milano');
+  redirect('/koliseo/core-spring-roma', 'https://www.koliseo.com/extremasistemas/core-spring-roma');
+
+  redirect('/koliseo/spring-web-madrid', 'https://www.koliseo.com/extremasistemas/spring-web-madrid');
+  redirect('/koliseo/spring-web-barcelona', 'https://www.koliseo.com/extremasistemas/spring-web-barcelona');
+  redirect('/koliseo/spring-web-milano', 'https://www.koliseo.com/extremasistemas/spring-web-milano');
+  redirect('/koliseo/spring-web-roma', 'https://www.koliseo.com/extremasistemas/spring-web-roma');
+
+  redirect('/koliseo/enterprise-integration-with-spring-madrid', 'https://www.koliseo.com/extremasistemas/enterprise-integration-with-spring-madrid');
+  redirect('/koliseo/enterprise-integration-with-spring-barcelona', 'https://www.koliseo.com/extremasistemas/enterprise-integration-with-spring-barcelona');
+  redirect('/koliseo/enterprise-integration-with-spring-milano', 'https://www.koliseo.com/extremasistemas/enterprise-integration-with-spring-milano');
+  redirect('/koliseo/enterprise-integration-with-spring-roma', 'https://www.koliseo.com/extremasistemas/enterprise-integration-with-spring-roma');
+
+
 };
