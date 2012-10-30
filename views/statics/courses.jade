@@ -65,7 +65,7 @@ append scripts
     });
 
     // Activar el pill correcto
-    var pill = location.hash || '#html5-training';
+    var pill = location.hash && location.hash.match(/-training/) ? location.hash : '#html5-training';
     $('[href=' + pill + ']').parent().addClass('active');
     $(pill).addClass('active');
  
