@@ -18,7 +18,7 @@ append content
             header.post-header
               h1
                 a(href=article.link).post-h !{article.title}
-              p.date !{article.date.toLocaleDateString()}
+              time(datetime=article.date.toISOString(), pubdate).date !{article.date.toLocaleDateString()}
             p !{article.summary}
           hr
       section.span4.tweets-extrema

@@ -2,8 +2,7 @@ var Members = require('../../db/models/Members').Members,
   Courses = require('../../db/models/Courses').Courses,
   Studies = require('../../db/models/Studies.js').Studies;
 
-var FeedParser = require('feedparser'),
-  parser = new FeedParser(),
+var feedparser = require('feedparser'),
   http = require('http'),
   querystring = require('querystring');
 
@@ -61,7 +60,7 @@ module.exports = function (server) {
 
   //Follow-us page
   server.get('/follow-us', function (req, res) {
-    parser.parseUrl('http://blog.extrema-sistemas.com/feed/', function (err, meta, articles) {
+    feedparser.parseUrl('http://blog.extrema-sistemas.com/feed/', function (err, meta, articles) {
       res.render('statics/follow-us', {
         title: __('Follow-us') + ' | extrema-sistemas.com',
         articles: articles,
