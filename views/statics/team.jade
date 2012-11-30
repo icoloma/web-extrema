@@ -32,16 +32,16 @@ append content
         h1.ext-h2 !{__('our-team')}
         hr
       -members = _.shuffle(members);
-      -for(var i = 0; i < members.length; i += 2) {
-        .row-fluid
-          -var member = members[i]
-            article.span6.team-member(itemscope, itemtype="http://schema.org/Person")
-              mixin teamMember(member)
-            -if(members[i+1])
-              -var member = members[i+1]
-              article.span6.team-member(itemscope, itemtype="http://schema.org/Person")
+      ul.members-list.row-fluid
+        -for(var i = 0; i < members.length; i += 2) {
+            -var member = members[i]
+              li.span6.team-member(itemscope, itemtype="http://schema.org/Person")
                 mixin teamMember(member)
-      -}
+              -if(members[i+1])
+                -var member = members[i+1]
+                li.span6.team-member(itemscope, itemtype="http://schema.org/Person")
+                  mixin teamMember(member)
+        -}
   -if(user) {
   a(href="/team/new").btn New
   -}

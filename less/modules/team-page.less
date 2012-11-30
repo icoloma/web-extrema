@@ -21,7 +21,13 @@ h3 > .label {
 
 .team-member {
   margin-bottom: 30px;
-
+  &:nth-child(odd) {
+    margin-left: 0;
+    clear: left;
+  }
+  &:nth-child(even) {
+    clear: right;
+  }
 }
 
 .crewtitle {
