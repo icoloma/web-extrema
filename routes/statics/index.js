@@ -25,26 +25,6 @@ module.exports = function (server) {
     });
   });
 
-  //Team page
-  server.get('/team', function (req, res) {
-    async.parallel([
-      function (cb) {
-        Members.getItems(cb);
-      },
-      function (cb) {
-        Studies.getItems(cb);
-      }],
-      function (err, results) {
-        var items = results[0],
-          study = _.shuffle(results[1])[0];
-        res.render('statics/team', {
-          title: __('Team') + ' | extrema-sistemas.com',
-          items: items,
-          study: study
-        });
-      });
-  });
-
   //Courses page
   server.get('/courses', function (req, res, next) {
     Courses.getItems(function (err, items) {
@@ -101,20 +81,6 @@ module.exports = function (server) {
         title: __('case-studies') + ' | extrema-sistemas.com',
         studies: items
       });
-    });
-  });
-
-  //Pedir un thumbnail
-  server.get('/team/:item/thumb', function (req, res) {
-    var id = req.params.item;
-
-    Members.getThumbnail(id, function (err, thumb) {
-      if(thumb) {
-        res.contentType(thumb.contentType);
-        res.send(thumb.data);
-      } else {
-        res.redirect('/images/person.png');
-      }
     });
   });
 

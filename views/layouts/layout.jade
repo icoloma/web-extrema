@@ -31,7 +31,7 @@ html
                 -var selected
                 mixin navbarLink(selected, '/', 'Home')
                 mixin navbarLink(selected, '/courses', 'Training')
-                mixin navbarLink(selected, '/team', 'Team')
+                //- mixin navbarLink(selected, '/team', 'Team')
                 mixin navbarLink(selected, '/follow-us', 'Follow-us')
               mixin langDropdown(lang)
               ul.nav.pull-right
@@ -50,7 +50,7 @@ html
             ul.nav.main-list
               mixin navbarLink(selected, '/', 'Home')
               mixin navbarLink(selected, '/courses', 'Training')
-              mixin navbarLink(selected, '/team', 'Team')
+              //- mixin navbarLink(selected, '/team', 'Team')
               mixin navbarLink(selected, '/follow-us', 'Follow-us')
               li
                 a(href="/contact").nav-link !{__('Contact')}

@@ -4,7 +4,7 @@ Rutas para la zona de administración
 
 module.exports = function (server) {
 
-  var adminZone = /edit|delete|add|new|admin|venues|update|editions/;
+  var adminZone = /edit|delete|add|new|admin|venues|update|editions|team/;
 
   server.get(adminZone, function (req, res, next) {
     if (req.user || req.url === '/user') { 

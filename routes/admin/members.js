@@ -1,4 +1,5 @@
-var Members = require(appPath + '/db/models/Members').Members;
+var Members = require(appPath + '/db/models/Members').Members,
+ Studies = require(appPath + '/db/models/Studies').Studies;
 
 var parseTags = function (body) {
   var plainList = body.substring(1, body.length-1),
@@ -9,6 +10,40 @@ var parseTags = function (body) {
 }
 
 module.exports = function (app) {
+
+  //Team page
+  app.get('/team', function (req, res) {
+    async.parallel([
+      function (cb) {
+        Members.getItems(cb);
+      },
+      function (cb) {
+        Studies.getItems(cb);
+      }],
+      function (err, results) {
+        var items = results[0],
+          study = _.shuffle(results[1])[0];
+        res.render('statics/team', {
+          title: __('Team') + ' | extrema-sistemas.com',
+          items: items,
+          study: study
+        });
+      });
+  });
+
+  //Pedir un thumbnail
+  app.get('/team/:item/thumb', function (req, res) {
+    var id = req.params.item;
+
+    Members.getThumbnail(id, function (err, thumb) {
+      if(thumb) {
+        res.contentType(thumb.contentType);
+        res.send(thumb.data);
+      } else {
+        res.redirect('/images/person.png');
+      }
+    });
+  });
 
   //Visualizar y editar un item individual
   app.get('/team/:item/edit', function (req, res) {
