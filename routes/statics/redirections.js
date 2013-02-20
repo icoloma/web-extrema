@@ -47,6 +47,7 @@ module.exports = function (server) {
   redirect('/koliseo/enterprise-integration-with-spring-barcelona', 'https://www.koliseo.com/extremasistemas/enterprise-integration-with-spring-barcelona');
   redirect('/koliseo/enterprise-integration-with-spring-milano', 'https://www.koliseo.com/extremasistemas/enterprise-integration-with-spring-milano');
   redirect('/koliseo/enterprise-integration-with-spring-roma', 'https://www.koliseo.com/extremasistemas/enterprise-integration-with-spring-roma');
+  redirect('/koliseo/core-spring-training-madrid', 'https://www.koliseo.com/extremasistemas/core-spring-training-madrid');
 
 
 };
