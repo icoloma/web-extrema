@@ -40,7 +40,7 @@
 	"hours": "hours",
 	"vat-exempt": "VAT exempt.",
 	"home1": "Enjoy the training lead",
-	"home2": "We have the best IT training courses at the best possible price",
+	"home2": "The best IT training courses at the best price, covering a wide range of different technologies.",
 	"home3": "Get the natural advantage from consulting",
 	"home4": "Join the list of clients that have relied on our consulting and mentoring services.",
 	"discount-javasp": "Attendees that are members of extrema-alumni may apply a <strong>15% discount</strong>. Discounts are not cumulative.",

@@ -40,7 +40,7 @@
 	"hours": "horas",
 	"vat-exempt": "Exento de IVA.",
 	"home1": "Liderando en formación",
-	"home2": "Tenemos los mejores cursos de formación de IT al precio más asequible.",
+	"home2": "Los mejores cursos de formación de IT al precio más asequible, cubriendo un amplio rango de distintas tecnologías.",
 	"home3": "Consigue la ventaja natural de la consultoría",
 	"home4": "Súmate a la lista de clientes que han confiado en nuestros servicios de consultoría y mentoring.",
 	"discount-javasp": "Los miembros de extrema-alumni disponen de un <strong>15% de descuento</strong>. Los descuentos no son acumulativos.",

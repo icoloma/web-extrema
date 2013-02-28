@@ -53,7 +53,7 @@
 	"Welcome": "Welcome",
 	"sent-mail": "Il tuo commento é stato inviato correttamente.",
 	"home1": "Leader nella formazione",
-	"home2": "Abbiamo i migliori corsi IT al miglior prezzo",
+	"home2": "Offriamo i migliori corsi IT al miglior prezzo, coprendo una vastissima gamma di tecnologie.",
 	"home3": "Ti offriamo tutti i vantaggi della consulenza",
 	"home4": "Scopri la lista dei clienti che hanno confidato nei nostri servizi di consulenza e mentoring.",
 	"seeInGoogleMaps": "Visualizzare su Google Maps",

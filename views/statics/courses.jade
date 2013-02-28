@@ -16,11 +16,11 @@ append content
     nav
       ul.nav.nav-pills.courses-pills
           mixin courseTab('HTML5', 'html5-training')
-          mixin courseTab('Javaspecialists', 'javaspecialists-training')
+          //- mixin courseTab('Javaspecialists', 'javaspecialists-training')
           mixin courseTab('Spring', 'spring-training')
     .tab-content#courses-content
 
-      section.row-fluid.tab-pane#javaspecialists-training
+      //- section.row-fluid.tab-pane#javaspecialists-training
         .span8
           mixin courseContent('Javaspecialists')
         .span4
@@ -68,20 +68,6 @@ append scripts
     var pill = location.hash && location.hash.match(/-training/) ? location.hash : '#html5-training';
     $('[href=' + pill + ']').parent().addClass('active');
     $(pill).addClass('active');
- 
-//- //- Generar widget de Koliseo
-//- var courses = {
-//-   '#javaspecialists': 'xrd',
-//-   '#HTML5': 'htP',
-//-   '#spring': 'STe,v3f,BMf'
-//- };
-
-//- var courseWidget = function (course) {
-//-   return {
-//-     showId: course,
-//-     locale: '!{lang}'
-//-   };
-//- }
 
 //- $(pill + '> .span4').prepend('<div class="koliseo-widget"></div>');
 //- $('.koliseo-widget').kperf(courseWidget(courses[pill]));

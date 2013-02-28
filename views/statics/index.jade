@@ -5,26 +5,28 @@ append content
     section.row-fluid.training-home
       hgroup
         h1.ext-h !{__('home1')}
-        h2.ext-h2 !{__('home2')}
-      ul.thumbnails.row-fluid.courses-home
-        li.span4.javaspecialists-home(data-course-title="Javaspecialists")
-          .javaspecialists-thumb.home-thumb
-            a(href="/courses#javaspecialists-training").thumbnail
-              .caption
-                h4 Javaspecialists
-                p !{__('javasp-thumb')}
-        li.span4.html5-home(data-course-title=__('HTML5-title'))
-          .html5-thumb.home-thumb
-            a(href="/courses#html5-training").thumbnail
-              .caption
-                h4 !{__('HTML5-title')}
-                p !{__('HTML5-thumb')}
-        li.span4.spring-home(data-course-title="Spring")
-          .spring-thumb.home-thumb
-            a(href="/courses#spring-training").thumbnail
-              .caption
-                h4 Spring
-                p !{__('spring-thumb')}
+      .row-fluid
+        .span5
+          h2.ext-h2 !{__('home2')}
+        ul.thumbnails.row-fluid.courses-home.span7
+          //- li.span4.javaspecialists-home(data-course-title="Javaspecialists")
+            .javaspecialists-thumb.home-thumb
+              a(href="/courses#javaspecialists-training").thumbnail
+                .caption
+                  h4 Javaspecialists
+                  p !{__('javasp-thumb')}
+          li.span6.html5-home(data-course-title=__('HTML5-title'))
+            .html5-thumb.home-thumb
+              a(href="/courses#html5-training").thumbnail
+                .caption
+                  h4 !{__('HTML5-title')}
+                  p !{__('HTML5-thumb')}
+          li.span6.spring-home(data-course-title="Spring")
+            .spring-thumb.home-thumb
+              a(href="/courses#spring-training").thumbnail
+                .caption
+                  h4 Spring
+                  p !{__('spring-thumb')}
     section.consulting-home
       .row-fluid
         .span9
