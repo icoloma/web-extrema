@@ -71,6 +71,10 @@ var bootstrapPath = appPath + '/less/bootstrap/less',
   jsPath = appPath + '/public/javascripts',
   compressor = require('node-minify');
 
+  if (!fs.existsSync(cssPath)) {
+    fs.mkdirSync(cssPath);
+  }
+
 //Procesa un fichero .less
 var compileLessFile = function(lessFile, cssFile) {
 
@@ -88,7 +92,7 @@ var compileLessFile = function(lessFile, cssFile) {
 };
 
 var compileLessFiles = function () {
-  
+
   //Ficheros de Bootstrap
   compileLessFile(bootstrapPath + '/bootstrap.less', cssPath + '/bootstrap.css')
   compileLessFile(bootstrapPath + '/responsive.less', cssPath + '/bootstrap-responsive.css')
