@@ -1,4 +1,6 @@
-var less = require('less');
+var less = require('less')
+  , fs = require('fs')
+;
 
 /*
 * CONFIGURACIÓN DE LOS SERVIDORES
@@ -17,9 +19,6 @@ exports.initial_config = function(app) {
     app.use(express.cookieParser());
     app.use(express.bodyParser());
     app.use(express.methodOverride());
-
-    //Compilar los ficheros .less al iniciar el servidor
-    compileLessFiles();
 
     app.use(i18n.init);
   };
@@ -49,9 +48,6 @@ exports.dev_config = function (app) {
 exports.prod_config = function (app) {
   return function () {
     app.use(express.errorHandler());
-    //Minificar ficheros en producción
-    //con un delay para dar tiempo a compilar las hojas less
-    setTimeout(minifyFiles, 1000);
 
     app.error(function (err, req, res, next) {
       res.render('statics/500', {
@@ -91,7 +87,7 @@ var compileLessFile = function(lessFile, cssFile) {
   });
 };
 
-var compileLessFiles = function () {
+exports.compileLessFiles = function () {
 
   //Ficheros de Bootstrap
   compileLessFile(bootstrapPath + '/bootstrap.less', cssPath + '/bootstrap.css')
@@ -106,9 +102,10 @@ var compileLessFiles = function () {
       compileLessFile(lessPath + '/' + file, cssPath + '/' + noExtension + '.css');
     }
   });
+
 };
 
-var minifyFiles = function() {
+exports.minifyFiles = function() {
 
   new compressor.minify({
       type: 'yui-css',

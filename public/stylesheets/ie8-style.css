@@ -1,0 +1,32 @@
+.logo-link {
+  background-image: url('../images/logo-extrema-texto-small.png');
+}
+.home-thumb {
+  background: url(../images/sprite-cursos.png) no-repeat 50% 0px !important;
+}
+.home-thumb.html5-thumb {
+  background-position-y: -200px !important;
+}
+.home-thumb.spring-thumb {
+  background-position-y: -400px !important;
+}
+.home-thumb > a.thumbnail:hover {
+  background: white;
+  filter: alpha(opacity = 70);
+  color: black;
+}
+.sociallinks > li > a {
+  background-image: url(../images/sprite-social-small.png);
+}
+span[class^="client-"] {
+  background-image: url(../images/clients-small.png);
+}
+.voucher {
+  background: url(../images/stars-small.png) no-repeat;
+}
+.voucher-html5 {
+  background-position-y: -170px;
+}
+.voucher-spring {
+  background-position-y: -340px;
+}

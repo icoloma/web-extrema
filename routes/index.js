@@ -1,5 +1,5 @@
 
-require('mongoose').connect('mongodb://localhost/extrema');
+require('mongoose').connect('mongodb://nodejitsu_extrema:dr95qimrm2ularqs17ld5dmom4@ds051947.mongolab.com:51947/nodejitsu_extrema_nodejitsudb5861399879');
 
 module.exports = function(server) {
 

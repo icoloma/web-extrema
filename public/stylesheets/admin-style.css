@@ -1,0 +1,15 @@
+.description-input {
+  resize: vertical;
+  width: 85%;
+  height: 240px;
+}
+.thumb-list {
+  width: 50px;
+}
+.thumb-edition {
+  width: 35px;
+  margin-right: 5px;
+}
+.control-group > label {
+  font-weight: bold;
+}
