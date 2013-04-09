@@ -21,7 +21,11 @@
     "subdomain": "extrema",
     "domains": [
         "extrema-sistemas.com",
-        "www.extrema-sistemas.com"
+        "www.extrema-sistemas.com",
+	"extrema-sistemas.net",
+	"www.extrema-sistemas.net",
+	"extrema-sistemas.org",
+	"www.extrema-sistemas.org"
     ],
     "scripts": {
         "start": "node app.js",
