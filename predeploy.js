@@ -1,4 +1,4 @@
-appPath = './';
+appPath = '.';
 var config = require('./config');
 config.compileLessFiles();
-config.minifyFiles();
+setTimeout(config.minifyFiles,1000);
