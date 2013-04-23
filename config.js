@@ -38,7 +38,7 @@ exports.dev_config = function (app) {
     //Compilar los .less con cada nueva petición en 'development'
     app.use(function (req, res, next) {
       if(!req.originalUrl.match(/\.png|\.css|\.js|\.ico|\.jpg|\/thumb/)) {
-        compileLessFiles();
+        exports.compileLessFiles();
       }
       next();
     });
