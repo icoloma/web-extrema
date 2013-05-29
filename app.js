@@ -23,8 +23,10 @@ appLocales = ['en', 'es', 'it'];
 //i18n
 i18n.configure({
   locales: appLocales,
-  register: global,
+  // register: global,
   cookie: 'language',
+  extension: '.js',
+  directory: appPath + '/locales'
 })
 
 //Servidores

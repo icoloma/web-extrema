@@ -19,7 +19,7 @@ module.exports = function (server) {
   server.get('/', function (req, res) {
     Studies.getItems(function (err, items) {
       res.render('statics/index', {
-        title: __('Welcome'),
+        title: res.__('Welcome'),
         study:  _.shuffle(items)[0]
       });
     });
@@ -29,7 +29,7 @@ module.exports = function (server) {
   server.get('/courses', function (req, res, next) {
     Courses.getItems(function (err, items) {
       res.render('statics/courses', {
-        title: __('Courses') + ' | extrema-sistemas.com',
+        title: res.__('Courses') + ' | extrema-sistemas.com',
         items: items,
         initialType: req.params.type
       });
@@ -42,7 +42,7 @@ module.exports = function (server) {
   server.get('/follow-us', function (req, res) {
     feedparser.parseUrl('http://blog.extrema-sistemas.com/feed/', function (err, meta, articles) {
       res.render('statics/follow-us', {
-        title: __('Follow-us') + ' | extrema-sistemas.com',
+        title: res.__('Follow-us') + ' | extrema-sistemas.com',
         articles: articles,
       });
     });
@@ -51,7 +51,7 @@ module.exports = function (server) {
   //Contact page
   server.get('/contact', function (req, res) {
     res.render('statics/contact', {
-      title: __('Contact') + ' | extrema-sistemas.com',
+      title: res.__('Contact') + ' | extrema-sistemas.com',
     });
   });
 
@@ -61,14 +61,14 @@ module.exports = function (server) {
       if(verified) {
         sendEmail(req.body, function (err) {
           res.render('statics/contact', {
-            title: __('Contact') + ' | extrema-sistemas.com',
-            success: __('sent-mail')
+            title: res.__('Contact') + ' | extrema-sistemas.com',
+            success: res.__('sent-mail')
           });
         });
       } else {
         res.render('statics/contact', {
-          title: __('Contact') + ' | extrema-sistemas.com',
-          error: __('wrong-captcha'),
+          title: res.__('Contact') + ' | extrema-sistemas.com',
+          error: res.__('wrong-captcha'),
           fields: req.body
         });
       }
@@ -78,7 +78,7 @@ module.exports = function (server) {
   server.get('/studies', function (req, res) {
     Studies.getItems(function (err, items) {
       res.render('statics/studies', {
-        title: __('case-studies') + ' | extrema-sistemas.com',
+        title: res.__('case-studies') + ' | extrema-sistemas.com',
         studies: items
       });
     });

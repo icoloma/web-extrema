@@ -21,6 +21,14 @@ exports.initial_config = function(app) {
     app.use(express.methodOverride());
 
     app.use(i18n.init);
+    // Chapuza mientras i18n no pase bien __ a res.local
+    app.use(function(req, res, next) {
+      res.local('__', function() {
+        return i18n.__.apply(res, arguments);
+      });
+      return next();
+    });
+
   };
 };
 
@@ -51,7 +59,7 @@ exports.prod_config = function (app) {
 
     app.error(function (err, req, res, next) {
       res.render('statics/500', {
-        title: __('500-title'),
+        title: res.__('500-title'),
         status: 500
     });
   });

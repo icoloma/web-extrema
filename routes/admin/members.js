@@ -24,7 +24,7 @@ module.exports = function (app) {
         var items = results[0],
           study = _.shuffle(results[1])[0];
         res.render('statics/team', {
-          title: __('Team') + ' | extrema-sistemas.com',
+          title: res.__('Team') + ' | extrema-sistemas.com',
           items: items,
           study: study
         });
