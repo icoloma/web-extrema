@@ -1,6 +1,6 @@
 {
     "name": "extrema",
-    "version": "0.0.10",
+    "version": "0.0.11",
     "private": true,
     "repository": "https://github.com/icoloma/web-extrema.git",
     "dependencies": {
