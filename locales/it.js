@@ -74,5 +74,10 @@
 	"browser-warning-p": "Se vuoi il massimo vantaggio, installa un buon browser",
 	"our-team": "Il nostro team",
 	"about-us-h1": "Sviluppiamo un software che ti farà brillare",
-	"details-course": "Dettagli"
+	"details-course": "Dettagli",
+	"cookies-dialog-title": "cookies-dialog-title",
+	"cookies-dialog": "cookies-dialog",
+	"cookies-accept": "cookies-accept",
+	"cookies-policy-title": "cookies-policy-title",
+	"cookie-policy": "cookie-policy"
 }

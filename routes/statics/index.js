@@ -114,6 +114,11 @@ module.exports = function (server) {
 
   require('./redirections')(server);
 
+  // Página de política de cookies
+  server.get('/cookies', function(req, res) {
+    res.render('statics/cookies', {title: res.__('cookies-policy-title')});
+  });
+
 };
 
 

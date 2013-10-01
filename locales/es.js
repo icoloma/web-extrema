@@ -74,5 +74,11 @@
 	"browser-warning-p": "Para sacarle todo el jugo a esta página necesitas un navegador más moderno.",
 	"our-team": "Nuestro equipo",
 	"about-us-h1": "Desarrollamos software que hace que esto luzca",
-	"details-course": "Detalles"
+	"details-course": "Detalles",
+	"cookies-dialog-title": "Este sitio usa cookies",
+	"cookies-dialog": "Usamos cookies propias y de terceros para ofrecerte un mejor servicio. Si continúas navegando, asumimos que aceptas nuestra <a href=\"/cookies\">política de cookies</a>.",
+	"cookies-accept": "Acepto",
+	"cookies-policy-title": "Política de cookies",
+	"cookies-policy": "Todos los sitios web usan cookies para mejorar la experiencia de usuario. Puedes bloquear las cookies en tu navegador, pero eso desactivará algunas mejoras.",
+	"cookies-advantages": "<li><b>Customización</b> Usamos cookies para mostrarte la web en tu idioma preferido en caso de que no coincida con el que tienes por defecto en el navegador. <li><b>Analítica web y mejoras</b> Usamos cookies para identificar qué funcionalidades son las preferidas por nuestros usuarios. Esto nos ayuda a crear mejores interfaces."
 }

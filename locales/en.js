@@ -74,5 +74,11 @@
 	"browser-warning": "Your browser is old!",
 	"browser-warning-p": "In order to get all the juice while hanging around, please consider to install a decent browser.",
 	"about-us-h1": "We develop software that makes you shine",
-	"details-course": "Details"
+	"details-course": "Details",
+	"cookies-dialog-title": "This web site uses cookies.",
+	"cookies-dialog": "We use first and third-party cookies to improve our service. If you continue, we will assume that you accept our <a href=\"/cookies\">cookie policy</a>.",
+	"cookies-accept": "Accept",
+	"cookies-policy-title": "Cookie policy",
+	"cookies-policy": "Every web site uses cookies to improve the user experience. You can block them through your browsers settings, but this will disable some features.",
+	"cookies-advantages": "<li><b>Customization</b> We use cookies to override the preferred language, in case it's not the same as your browser default. <li><b>Analytics and research</b> We use cookies to keep track of the kind of features that people love. They help us to build a better user experience."
 }

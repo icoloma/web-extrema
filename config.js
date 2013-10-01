@@ -133,11 +133,14 @@ exports.minifyFiles = function() {
 
   new compressor.minify({
       type: 'yui-js',
-      fileIn: [jsPath + '/jquery-1.7.2.min.js',
-               jsPath + '/bootstrap-tab.js',
-               jsPath + '/bootstrap-dropdown.js',
-               jsPath + '/bootstrap-collapse.js',
-               jsPath + '/touch-devices.js'],
+      fileIn: [
+        jsPath + '/jquery-1.7.2.min.js',
+        jsPath + '/bootstrap-tab.js',
+        jsPath + '/bootstrap-dropdown.js',
+        jsPath + '/bootstrap-collapse.js',
+        jsPath + '/touch-devices.js',
+        jsPath + '/cookie-permission.js',
+      ],
       fileOut: jsPath + '/scripts.min.js',
       callback: function(err) {
           if(err) {
