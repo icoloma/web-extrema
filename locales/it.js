@@ -75,9 +75,10 @@
 	"our-team": "Il nostro team",
 	"about-us-h1": "Sviluppiamo un software che ti farà brillare",
 	"details-course": "Dettagli",
-	"cookies-dialog-title": "cookies-dialog-title",
-	"cookies-dialog": "cookies-dialog",
-	"cookies-accept": "cookies-accept",
-	"cookies-policy-title": "cookies-policy-title",
-	"cookie-policy": "cookie-policy"
+	"cookies-dialog-title": "Questo sito usa cookie",
+	"cookies-dialog": "Usiamo cookie propri e di terzi per offrirti un servizio migliore. Se continui a navigare, intendiamo che accetti la nostra <a href=\"/cookies\">politica di cookie</a>.",
+	"cookies-accept": "Accetto",
+	"cookies-policy-title": "Politica di cookie",
+	"cookies-policy": "Tutti i siti internet usano cookie per migliorare l'esperienza dell'utente. Puoi bloccare i cookie nel tuo browser, però questo disattiverá alcuni vantaggi",
+	"cookies-advantages": "<li>Personalizzazione. Usiamo cookie per mostrarti la pagina nella tua lingua preferita quando questa non coincide con la lingua predefinita nel tuo web browser. <li>Analisi web e vantaggi. Usiamo cookie per identificare le funzioni prefeite dei nostri utenti. Ciò ci aiuta a creare interfacce migliori."
 }
