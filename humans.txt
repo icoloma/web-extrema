@@ -1,0 +1,19 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Site Maker: Carlos Coloma
+    Twitter: @ccoloma
+
+    CTO: Ignacio Coloma
+    Twitter: @icoloma
+
+    Roberto Vidal -- Web Designer
+
+# SITE
+
+  Last update: 2013/12/03
+  Language: English / Español / Italiano
+  Doctype: HTML5
+  IDE: Sublime Text
