@@ -1,0 +1,33 @@
+<a href="../#spring-training" class="btn btn-warning pull-right">{% t courses.back %}</a>
+{% capture title %}{{ include.i18nRoot }}.title{% endcapture %}
+<h1>{% t title %}</h1>
+<hr>
+{% capture desc %}{{ include.i18nRoot }}.details.desc.intro{% endcapture %}
+{% t desc %}
+{% capture bullets %}{{ include.i18nRoot }}.details.desc.bullets{% endcapture %}
+{% include bullets.html bullets=bullets %}
+{% capture desc %}{{ include.i18nRoot }}.details.desc.final{% endcapture %}
+{% t desc %}
+<hr>
+<div class="row-fluid">
+  <section id="goals" class="span6">
+    {% capture details %}{{ include.i18nRoot }}.details{% endcapture %}
+    {% include course-attrs.html i18nRoot=details %}
+    {% include course-objectives.html i18nRoot=details %}
+  </section>
+  <section class="span6">
+    <h2>{% t Syllabus %}</h2>
+    {% capture syllabus %}{{ include.i18nRoot }}.details.syllabus{% endcapture %}
+    {% t syllabus %}
+    <ol>
+      {% for i in syllabus_list %}
+        <li>{{i[0]}}</li>
+        <ul class="bullets">
+        {% for j in i[1] %}
+          <li>{{j}}</li>
+        {% endfor %}
+        </ul>
+      {% endfor %}
+    </ol>
+  </section>
+</div>

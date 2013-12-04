@@ -1,0 +1,10 @@
+<dl class="dl-horizontal">
+  {% capture duration %}{{ include.i18nRoot }}.duration{% endcapture %}
+  <dt>{% t Duration %}:</dt><dd>{% t duration %}</dd>
+  {% capture language %}{{ include.i18nRoot }}.language{% endcapture %}
+  <dt>{% t Language %}: </dt><dd>{% t language %}</dd>
+  {% capture audience %}{{ include.i18nRoot }}.audience{% endcapture %}
+  <dt>{% t Audience %}:</dt><dd>{% t audience %}</dd>
+  {% capture requirements %}{{ include.i18nRoot }}.requirements{% endcapture %}
+  <dt>{% t Requirements %}:</dt><dd>{% t requirements %}</dd>
+</dl>

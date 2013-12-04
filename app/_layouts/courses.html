@@ -1,0 +1,40 @@
+---
+layout: default
+customScript: training.min.js
+---
+<nav>
+  <ul class="nav nav-pills courses-pills">
+    <li>
+      <a href="#html5-training" data-toggle="tab" class="course-pill-a">HTML5</a>
+    </li>
+    <li>
+      <a href="#spring-training" data-toggle="tab" class="course-pill-a">Spring</a>
+    </li>
+  </ul>
+</nav>
+<div id="courses-content" class="tab-content">
+  <section id="html5-training" class="row-fluid tab-pane">
+    <div class="span8">
+      <div class="courses-list">
+        {% include course-item.html i18nRoot='courses.HTML5' url='courses/html5' scheduleUrl='https://www.koliseo.com/extremasistemas/html5-y-css3' %}
+      </div>
+    </div>
+    <div class="span4">
+      {% include course-details.html price='1100' hours='24' i18nRoot='courses.HTML5.discounts' %}
+    </div>
+  </section>
+  <section id="spring-training" class="row-fluid tab-pane">
+    <div class="span8">
+      <div class="courses-list">
+        {% include course-item.html i18nRoot='courses.SpringCore' url='courses/spring-core' scheduleUrl='http://mylearn.vmware.com/portals/www/search/results.cfm?hostID=614&amp;subjectID=17750' spring=true %}
+
+        {% include course-item.html i18nRoot='courses.SpringWeb' url='courses/spring-rich-web' scheduleUrl='http://mylearn.vmware.com/portals/www/search/results.cfm?hostID=614&amp;subjectID=33053' spring=true %}
+
+        {% include course-item.html i18nRoot='courses.SpringEnterprise' url='courses/spring-enterprise' scheduleUrl='http://mylearn.vmware.com/portals/www/search/results.cfm?hostID=614&amp;subjectID=17833' spring=true %}
+      </div>
+    </div>
+    <div class="span4">
+      {% include course-details.html price='1975' hours='32' i18nRoot='courses.Spring.discounts' spring='true' %}
+    </div>
+  </section>
+</div>

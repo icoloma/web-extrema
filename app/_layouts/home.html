@@ -1,0 +1,74 @@
+---
+layout: default
+title: Home
+customScript: home.min.js
+---
+<section class="row-fluid training-home">
+  <hgroup>
+    <h1 class="ext-h">{% t training.title %}</h1>
+  </hgroup>
+  <div class="row-fluid">
+    <div class="span5">
+      <h2 class="ext-h2">{% t training.desc %}</h2>
+    </div>
+    <ul class="thumbnails row-fluid courses-home span7">
+      <li data-course-title="{% t courses.HTML5.title %}" class="span6 html5-home">
+        <div class="html5-thumb home-thumb">
+          <a href="{{site.baseurl}}courses#html5-training" class="thumbnail">
+            <div class="caption">
+              <h4>{% t courses.HTML5.title %}</h4>
+              <p>{% t courses.HTML5.shortDesc %}</p>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li data-course-title="Spring" class="span6 spring-home">
+        <div class="spring-thumb home-thumb">
+          <a href="{{site.baseurl}}courses#spring-training" class="thumbnail">
+            <div class="caption">
+              <h4>Spring</h4>
+              <p>{% t courses.Spring.desc %}</p>
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="consulting-home">
+  <div class="row-fluid">
+    <div class="span9">
+      <h1 class="ext-h">{% t consulting.title %}</h1>
+      <p class="ext-h2">{% t consulting.desc %}</p>
+    </div>
+    <div class="span3">
+      <a href="{{site.baseurl}}contact" class="btn btn-info">{% t GetInContact %}</a>
+    </div>
+  </div>
+</section>
+<section class="row-fluid">
+  <h1 class="ext-h2">{% t CaseStudy %}</h1>
+  <hr>
+  <div class="row-fluid study selected-study">
+    <a href="/{{ site.lang }}/studies" class="btn btn-warning pull-right">{% t MoreCaseStudies %}</a>
+  </div>
+  <div class="hidden">
+    {% include case-studies.html %}
+  </div>
+</section>
+<section class="row-fluid">
+  <div class="span12 clients-home">
+    <span title="Accenture" class="client-accenture">Accenture</span>
+    <span title="AENA" class="client-aena">AENA</span>
+    <span title="Atos" class="client-atos">Atos</span>
+    <span title="BBVA" class="client-bbva">BBVA</span>
+    <span title="Banco de España" class="client-bde">Banco de España</span>
+    <span title="Carrefour" class="client-carrefour">Carrefour</span>
+    <span title="El Corte Inglés" class="client-corteingles">El Corte Inglés</span>
+    <span title="Everis" class="client-everis">Everis</span>
+    <span title="Iberdrola" class="client-iberdrola">Iberdrola</span>
+    <span title="INDRA" class="client-indra">INDRA</span>
+    <span title="Mapfre" class="client-mapfre">Mapfre</span>
+    <span title="Movistar" class="client-movistar">Movistar</span>
+  </div>
+</section>

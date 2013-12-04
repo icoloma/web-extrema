@@ -1,0 +1,26 @@
+#!/bin/bash
+DIR='.upload'
+
+rm -rf $DIR
+mkdir $DIR
+cd $DIR
+
+git init
+git remote add origin git@github.com:icoloma/web-extrema.git
+git remote update
+git checkout -b gh-pages origin/gh-pages 
+
+cp -r ../dist/* .
+
+git add .
+if [ -z "$1" ]; then
+  MESSAGE="Site updated at $(date +'%d-%m-%Y')"
+else
+  MESSAGE="$1"
+fi
+git commit -m "$MESSAGE"
+git push
+
+cd ..
+
+echo "Successfully uploaded"

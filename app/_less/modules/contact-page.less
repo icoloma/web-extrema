@@ -1,0 +1,91 @@
+/* CONTACT PAGE */
+
+.alert-contactform {
+  width: 60%;
+}
+
+.alert-details {
+  color: @barLinksColor;
+  background-color: @backgroundNav;
+  border-color: @backgroundNavHover;
+
+  address, .directions {
+    margin: 0px 0 10px 17px;
+  }
+}
+.help-block {
+  font-style: italic;
+}
+.contact-input {
+    width: 60%;
+}
+textarea.contact-input {
+  width: 70%;
+  resize: vertical;
+}
+
+.required {
+  color: red;
+}
+
+.address-p {
+  margin-bottom: 0;
+}
+
+.contact-h {
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 10px;
+}
+
+.join-us {
+  color: darken(@javaspecialistsColor, 20%);
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.social {
+  background-color: @socialColor;
+  float: left;
+  margin-left: 12px;
+  -webkit-transition: background-color .25s,border-color .2s;
+  -moz-transition: background-color .25s,border-color .2s;
+  -o-transition: background-color .25s,border-color .2s;
+  transition: background-color .25s,border-color .2s;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  font-size: 26px;
+  text-align: center;
+  line-height: 43px;
+  color: white;
+  border: 2px solid @socialColor;
+
+  &:hover {
+    color: @socialColor;
+    text-decoration: none;
+    background-color: white;
+  }
+}
+
+.social-icon:before {
+  font-family: social;
+  font-weight: normal;
+  content: attr(data-icon);
+}
+
+.hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* ***** */

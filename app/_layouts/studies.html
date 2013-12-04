@@ -1,0 +1,29 @@
+---
+layout: default
+studies:
+  Aena: logo-aena.png
+  Indra: logo-indra.png
+  Banco de España: logo-banco-espana.gif
+  BBVA: logo-bbva.png
+  ONU: logo-onu.gif
+---
+<section>
+  <h1 class="ext-h studies-h">{% t CaseStudies %}</h1>
+  <ul class="case-studies">
+    {% for study in page.studies %}
+      <li class="row-fluid study">
+        <div class="span3">
+          <img src="/img/{{ study[1] }}" alt="{{ study[0] }}" title="{{ study[0] }}">
+        </div>
+        <div class="span9">
+          <p class="study-p">
+            {% capture title %}studies.{{ study[0] }}.title{% endcapture %}
+            {% capture desc %}studies.{{ study[0] }}.desc{% endcapture %}
+            <b>{% t {{ title }} %}</b>
+            {% t {{ desc }} %}
+          </p>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

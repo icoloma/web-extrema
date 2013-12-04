@@ -1,0 +1,27 @@
+<aside class="course-conditions">
+  <h2 class="conditions-h">{% t Details %}</h2>
+  <p class="detail">
+    <b>{{ include.price }} EUR</b> · <b>{{ include.hours }} {% t hours %}</b>
+  </p>
+  <p></p>
+  <p>
+    {% t VATExempt %}<br>
+    {% capture registrations %}{{ include.i18nRoot }}.registrations{% endcapture %}
+    {% t {{ registrations }} %} <br>
+    {% capture extremaAlumni %}{{ include.i18nRoot }}.extremaAlumni{% endcapture %}
+    {% t {{ extremaAlumni }} %} <br>
+    {% t discounts.notCumulative %}
+  </p>
+  {% if include.spring %}
+    <p>{% t GetInfo %}</p>
+  {% endif %}
+  <p></p>
+</aside>
+{% if site.lang != 'it' %}
+  <aside class="thumbnail tripartita">
+    <img src="/img/tripartita.jpg" alt="{% t Tripartita %}" width="200">
+    <div class="caption">
+      <p class="tripartita-p">{% t Tripartita %}</p>
+    </div>
+  </aside>
+{% endif %}

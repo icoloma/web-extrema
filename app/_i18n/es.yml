@@ -1,0 +1,303 @@
+Home: Inicio
+Training: Training
+Contact: Contacto
+training:
+  title: Liderando en formación
+  desc: Los mejores cursos de formación de IT al precio más asequible, cubriendo un amplio rango de distintas tecnologías.
+ShowNavbar: Mostrar barra de navegación
+consulting:
+  title: Consigue la ventaja natural de la consultoría
+  desc: Súmate a la lista de clientes que han confiado en nuestros servicios de consultoría y mentoring.
+GetInContact: Entra en contacto ahora
+CaseStudy: Caso de éxito
+MoreCaseStudies: Más casos de éxito
+CaseStudies: Casos de éxito
+studies: 
+  Aena:
+    title: Aena Navegación Aérea
+    desc: Durante este proyecto de un año se formó un equipo de 16 personas sin experiencia previa con Java, en un proyecto de desarrollo de un sistema de mensajería aérea en tiempo real que integra más de 10 fuentes diferentes de datos con recuperación de errores.
+  Indra:
+    title: Sistema de control de tráfico marítimo
+    desc: Durante este proyecto de seis meses se formó desde cero un equipo para desarrollar un producto de control de tráfico marítimo con alertas (colisión, zonas de peligro, etc) e integración de sistemas de detección en tiempo real (radares, video, goniómero, etc). La plataforma integra fuentes de datos noSQL con plataforma multithreading basada en Java, y actualmente está escalando para controlar la totalidad del tráfico marítimo de un país europeo.
+  Banco de España:
+    title: Arquitectura para desarrollo de aplicaciones
+    desc: Durante este proyecto de seis meses se está actualizando la arquitectura para aplicaciones en sistemas distribuidos de Banco de España a un sistema basado en arquitectura Spring. Este proyecto se encuentra todavía en curso y el equipo incluye seis arquitectos, dos de ellos de la entidad.
+  BBVA:
+    title: Plataforma de E-banking
+    desc: Desarrollo de plataforma de e-banking para el sector de banca privada de BBVA. Este proyecto incluye el desarrollo completo de un front-end web que da acceso a los productos contratados por el usuario, incluyendo informes en tiempo real de las posiciones de portfolio. El producto final incluye la integración de una compleja plataforma de seguridad basada en sistemas de autenticación de última generación en el back-end del banco.
+  ONU:
+    title: Training en Tecnologías Web
+    desc: El equipo IT de la Oficina del Alto Comisionado para los Derechos Humanos de las Naciones Unidas en Ginebra ha recibido una sesión intensiva de training en tecnologías HTML5 y CSS3, para darle un mejor soporte a sus páginas Intranet y Extranet.
+MoreInfo: Pedir más información
+Details: Detalles
+hours: horas
+VATExempt: Exento de IVA.
+discounts:
+  notCumulative: Los descuentos no son acumulativos.
+Tripartita: Cursos bonificables por la Fundación Tripartita.
+GetInfo: Para información adicional o condiciones preferentes para cursos con más asistentes <a href="/es/contact">póngase en contacto</a>.
+Phone: Teléfono
+Italy: Italia
+emailTo: Email a
+Address: Dirección
+SeeInGMaps: ver en Google Maps
+joinUs:
+  title: ¿Quieres ser nuestro próximo desarrollador?
+  desc: Para unirte a nuestro equipo, envía tu CV a
+  cv: Envía tu CV a
+Duration: Duración
+Language: Idioma
+Audience: Dirigido a
+Requirements: Requisitos
+Objectives: Objetivos
+Syllabus: Contenido
+AfterCourse: Al completar este curso
+NotFound:
+  title: No tan rápido, batman!
+  short: No encontramos la página que estás buscando.
+  desc: '<p>Lo sentimos, esta página no está disponible. ¿Quieres volver a intentarlo desde la <a href="/">página de inicio</a>? Esta vez, ve más lento.</p>' 
+  alt: Todavía podemos llegar a pie a tu destino. Sólo haz click en los enlaces de arriba.
+Accept: Acepto
+cookies:
+  policy: 
+    title: Política de cookies
+    desc: Todos los sitios web usan cookies para mejorar la experiencia de usuario. Puedes bloquear las cookies en tu navegador, pero eso desactivará algunas mejoras.
+  customization: "<b>Customización</b> Usamos cookies para mostrarte la web en tu idioma preferido en caso de que no coincida con el que tienes por defecto en el navegador."
+  analytics: <b>Analítica web y mejoras</b> Usamos cookies para identificar qué funcionalidades son las preferidas por nuestros usuarios. Esto nos ayuda a crear mejores interfaces.
+  title: Este sitio usa cookies
+  desc: 'Usamos cookies propias y de terceros para ofrecerte un mejor servicio. Si continúas navegando, asumimos que aceptas nuestra <a href="/es/cookies">política de cookies</a>.'
+courses:
+  back: Volver a cursos
+  contents: Contenidos del curso
+  available: Cursos disponibles
+  Spring:
+    desc: Los cursos oficiales del estándar de facto para el desarrollo de aplicaciones Java.
+    discounts:
+      registrations: "<b>Registro múltiple</b>: 10% de descuento a partir del segundo alumno."
+      extremaAlumni: "<b>Miembros de extrema-alumni</b>: 15% de descuento."
+  HTML5:
+    title: HTML5 y CSS3
+    shortDesc: Las últimas novedades de los drafts de HTML5 y CSS3, con especial atención a navegadores modernos y legacy.
+    desc: <p>Este curso introduce las últimas modificaciones en HTML5 y CSS3, dedicando especial atención al soporte en Firefox, Chrome e Internet Explorer.</p><p>Durante tres días revisaremos las mejores prácticas de desarrollo web actualizadas a los nuevos estándares y se analizarán patrones y técnicas actualizadas de diseño contrastadas con las versiones antiguas. Éste es un curso muy completo que cubre desde wireframing y patrones de capa de presentación hasta una breve introducción a SEO y distribución del mercado de navegadores, incluyendo una detallada descripción de las versiones de IE que siguen siendo relevantes.</p>
+    discounts:
+      registrations: "<b>Registro múltiple</b>: 10% de descuento si se inscriben 2 alumnos, 15% a partir del tercero"
+      extremaAlumni: "<b>Miembros de extrema-alumni</b>: 15% de descuento."
+    details:
+      duration: Tres jornadas de ocho horas
+      language: Este curso está disponible en español e inglés.
+      audience: Diseñadores, maquetadores de HTML y desarrolladores de código servidor (java, python, ruby) de capa web. Es recomendable un mínimo de un año desarrollando aplicaciones web (HTML y CSS). No son necesarios conocimientos de JavaScript.
+      requirements: 'Cada alumno deberá llevar su propio portátil, para el que deberá tener permisos de administrador. Se recomiendan los sistemas operativos Windows (XP, Vista, 7) o distribuciones Linux, dado que son los sistemas con los que el instructor tendrá experiencia. Las herramientas de software que sean necesarias se irán instalando a lo largo del curso. En cursos in-house, es imprescindible que la sala de impartición del curso disponga de conexión a Internet para todos los asistentes.'
+      objectives:
+        intro: '<p>Los objetivos del curso son los siguientes:</p>'
+        bullets: [
+          '<b>Separar contenido y presentación</b> de capa web.',
+          'Conocer los <b>nuevos tags introducidos con HTML5</b>.',
+          'Conocer los <b>nuevos selectores y atributos introducidos con CSS3</b>.',
+          'Aprender lo básico de <b>JavaScript y JQuery</b>.',
+          'Aplicar los <b>nuevos componentes de formulario y reglas de validación</b> presentes en HTML5.',
+          'Asumir la <b>cuota de mercado de cada navegador</b>, con tratamiento especial para las versiones de IE.',
+          '<b>Simplificar el código HTML</b> generado por el servidor.',
+          'Utilizar <b>frameworks de CSS</b> (Twitter Bootstrap, Compass, Less)',
+          '<b>Reducir el tráfico</b> entre navegador y servidor, mejorando el rendimiento.',
+          '<b>Mejorar la accesibilidad</b> de las aplicaciones desarrolladas.',
+          'Optimizar el <b>posicionamiento en buscadores</b>.',
+          '<b>Mantener una imagen coherente entre navegadores</b>, incluyendo aquellos que no soportan HTML5 o CSS3.',
+          'Aprender a escribir <b>CSS de impresión</b>.',
+          'Aprender a utilizar técnicas de <b>responsive design</b>.',
+          'Aprender a utilizar otras <b>tipografías</b> más allá de las consideradas web-safe.',
+          'Conocer los nuevos <b>patrones de interfaces de usuario</b>.'
+        ]
+      after:
+        intro: '<p>Cuando termine este curso el asistente será capaz de:</p>'
+        bullets: [
+          '<b>Crear e interpretar wireframes</b> eficientemente.',
+          'Desarrollar aplicaciones web basadas en <b>HTML5 y CSS3</b>.',
+          'Sustituir código JavaScript por <b>animaciones basadas en CSS3</b>, más rápidas y eficientes en recursos.',
+          'Diseñar <b>páginas web <i>responsive</i></b> que se adapten a cualquier dispositivo.',
+          '<b>Emplear y generar sprites</b> para sus diseños.',
+          'Escribir <b>selectores de CSS más eficientes</b>, mejorando los tiempos de renderizado del navegador.',
+          '<b>Emplear iconos mediante font-face</b> reduciendo las peticiones al servidor.',
+          '<b>Diagnosticar el render de una página web</b> en cualquier navegador de clase A.',
+          '<b>Introducir nuevos tags HTML5</b> en aplicaciones existentes o de nuevo desarrollo, con soporte para navegadores más antiguos.',
+          '<b>Utilizar schema.org</b> en sus propios proyectos.',
+          '<b>Utilizar Modernizr y polyfills</b> para soportar navegadores sin soporte de HTML5.',
+          'Aplicar <b>frameworks CSS y CSS reset</b>.',
+          'Administrar sus hojas de estilo mediante un <b>pre-procesador de CSS</b> (Sass, LESS, Stylus).',
+          'Validar la <b>accesibilidad del HTML</b>.',
+          '<b>Optimizar el ancho de banda</b> consumido por las aplicaciones web.',
+          'Emplear las <b>herramientas de ayuda al desarrollo</b> que hay disponibles online.',
+          '<b>Realizar un SEO básico</b> de sus aplicaciones web.',
+          'Identificar el <b>grado de soporte de cada navegador</b>.',
+          'Realizar pruebas a la vez <b>en distintas versiones de IE</b>.',
+          'Usar <b>LiveReload</b> para editar su página web sin necesidad de recargar en el navegador.'
+        ]
+  SpringCore:
+    title: Curso Oficial Core Spring
+    desc: <p>SpringSource es la empresa que soporta Spring, plataforma que con más de cinco millones de descargas se ha convertido en estándar de facto para las aplicaciones empresariales basadas en tecnología Java. Más de la mitad de las empresas que constituyen el Fortune 500, el 60% de los desarrolladores Java y 9 de cada 10 bancos utilizan la plataforma de SpringSource.</p><p>El curso oficial de Spring Core introduce todos los conceptos, desde básico a avanzado, relativo al uso del framework Spring. Desde inyección de dependencias, aspectos o desarrollo de interfaces REST con seguridad integrada, este curso constituye una introducción obligada para poder desarrollar aplicaciones con Spring.</p>
+    voucher: <p>Los asistentes recibirán un voucher que les permitirá acceder al examen oficial de certificación <b>SpringSource Certified Spring Professional</b>.</p>
+    details:
+      desc:
+        intro: '<p>Curso de 4 días de duración en el cual los asistentes aprenderán el funcionamiento del Core Spring framework Spring de Dependency Injection. Al finalizar este curso los asistentes serán capaces de desarrollar aplicaciones de negocio de una forma ágil y escalable, fácilmente adaptables a la evolución de las necesidades futuras. Tras este curso el asistente dispondrá de la posibilidad de certificarse con Spring realizando gratuitamente el <b>Spring Framework Certification Examination</b> online (cuyo valor de mercado es 115 euros).</p><p>El curso ofertado no se centra únicamente en la explicación de las características del framework y su correcta utilización, sino que además se tratarán temas de arquitectura de sistemas. Para continuar mejorando los conocimientos de Spring es recomendable asistir a <a href="../spring-rich-web">Rich Web Applications with Spring</a> o <a href="../spring-enterprise">Enterprise Integration with Spring</a> una vez completado Core Spring.</p><p>Es importante resaltar que los asistentes al curso deben poseer conocimientos previos de <b>los APIs de Java, conceptos JEE, JTA y del servlet API</b>.</p>'
+        bullets: ' '
+        final: ' '
+      duration: 4 jornadas de 8 horas
+      language: Este curso está disponible en español, inglés e italiano.
+      audience: Desarrolladores Java y arquitectos.
+      requirements: Cada asistente deberá llevar su propio portátil, en el que deberá tener permisos para instalar aplicaciones.
+      objectives:
+        intro: ' '
+        bullets: ' '
+      syllabus:
+        'Fundamentos de Spring Framework <span class="label">Día 1</span>': [
+          'Introducción a la arquitectura de contenedor ligero y el Spring Application Context',
+          'Desarrollo de aplicaciones estructuradas, altamente configurables y testables a través de Dependency Injection y Test-Driven Development.',
+          'Desarrollo de código mejor y más cohesivo, con debate sobre los patrones y mejores prácticas de diseño orientado a objetos.',
+          'Realización de prácticas basadas en modelos de negocios reales.'
+        ]
+        'Arquitectura eficiente de capa de negocio <span class="label">Día 2</span>': [
+          'Programación orientada a objetos pragmática en la capa de negocio, con ejemplos y sin tecnicismos',
+          'Persistencia efectiva: cómo construir una capa de persistencia con Spring utilizando las mejores prácticas.',
+          'Análisis y balance de las estrategias relevantes de persistencia, incluyendo Hibernate y Spring JDBC',
+          'Estrategias de gestión de transacciones con Spring en la capa de servicios',
+          'Estrategias de test unitarios y de integración en la capa de negocio'
+        ]
+        'Implementando conectividad con información Empresarial <span class="label">Día 3</span>': [
+          'Análisis de conectividad ORM e Hibernate con Spring',
+          'Visión general de Spring Web MVC, Spring JavaScript, Spring Web Flow y Spring Faces',
+          'Configuración de servicios remotos gestionados por Spring',
+          'Diseño de los primeros contratos de servicios web a través de Spring'
+        ]
+        'Integración con Enterprise Services <span class="label">Día 4</span>': [
+          'Introducción a Spring Security y el acceso basado en roles',
+          'Gestión a través de Spring JMX',
+          'Configuración de Message-Driven POJOs con Spring JMS',
+          'Análisis de las soluciones empresariales de SpringSource'
+        ]
+  SpringWeb:
+    title: Spring Web
+    desc: <p>Spring Web es un curso de 4 jornadas dirigido por expertos de Spring que aborda el desarrollo de aplicaciones web. Este curso práctico muestra cómo utilizar las últimas funcionalidades de Spring para crear aplicaciones web.</p>
+    voucher: <p>Al finalizar el curso el alumno puede realizar gratuitamente el examen para la obtención del certificado <b>VMware® SpringSource® Certified Spring Web Application Developer</b>. El curso es además la preparación perfecta para dicho examen.</p>
+    details:
+      desc:
+        intro: '<p>El objetivo de este curso es aprender a utilizar la tecnología Spring para crear aplicaciones web completas. El desarrollo de aplicaciones web basadas en Spring desde cero y de forma escalonada junto con una metodología enfocada a resolver los problemas reales más habituales hacen de este curso un complemento ideal para aquéllos que ya tienen cierta experiencia con la tecnología Spring.</p><p>Aunque no es requisito imprescindible, para un mejor aprovechamiento del curso se recomienda haber realizado previamente el curso <a href="../spring-core">Spring Core</a>.</p>'
+        bullets: ' '
+        final: ' '
+      duration: 4 jornadas de 8 horas
+      language: Este curso está disponible en español, inglés e italiano.
+      audience: Desarrolladores Java y arquitectos implicados en proyectos web.
+      requirements: Cada asistente deberá llevar su propio portátil, en el que deberá tener permisos para instalar aplicaciones.
+      objectives:
+        intro: ' '
+        bullets: ' '
+      syllabus:
+        'Spring MVC <span class="label">Día 1</span>': [
+          'Modelo de programación basado en anotaciones Spring MVC',
+          'Composición de páginas con tecnologías basadas en Layouts como Tiles',
+          'Visualización de multiples tipos de contenidos',
+          'Gestión de Excepciones',
+          'Procesado de formularios'
+        ]
+        'Enriqueciendo el interfaz de usuario <span class="label">Día 2</span>': [
+          'Buenas prácticas para el enriquecimiento del interfaz del usuario.',
+          'Fundamentos de JavaScript para desarrollo Ajax',
+          'Uso del toolkit de Dojo y Spring JS',
+          'Internacionalización y personalización'
+        ]
+        'Spring Web Flow <span class="label">Día 3</span>': [
+          'Introducción a Spring WebFlow. Fundamentos del lenguaje de definición de flujos.',
+          'Uso de Actions para invocar lógica de negocio',
+          'Gestión de eventos Ajax, Excepciones y reglas de navegación dinámicas.'
+        ]
+        'Aplicaciones Robustas y Seguras <span class="label">Día 4</span>': [
+          'Spring Faces. Integración con JSF',
+          'Construcción de pruebas funcionales',
+          'Protección de aplicaciones web con Spring Security',
+          'Uso de Grails y Roo para el desarrollo rápido de aplicaciones web.'
+        ]
+  SpringEnterprise:
+    title: Enterprise Integration con Spring (NUEVO)
+    desc: <p>Durante este curso de cuatro jornadas dirigidos por expertos en Spring se hará un recorrido por las tecnologías de mayor relevancia para la integración de aplicaciones en un entorno empresarial.</p><p>Este curso práctico demostrará como aplicar Spring para dar solución a los problemas de integración que se pueden encontrar en el lado servidor.</p>
+    voucher: <p>Finalizado el curso, cada asistente recibirá un voucher que le permitirá planificar y realizar el examen de certificación para obtener el título <b>SpringSource Certified Enterprise Integration Specialist</b>.</p>
+    details:
+      desc: 
+        intro: '<p>Durante este curso de cuatro días se hará un recorrido por los aspectos y tecnologías de mayor relevancia relacionadas con la integración de aplicaciones en un entorno empresarial.</p><p>Se mostrará cómo aplicar Spring para dar solución a los problemas de integración que los desarrolladores se encuentran en el lado servidor. Aunque no es requisito imprescindible, para un mejor aprovechamiento del curso se recomienda haber realizado previamente el curso <a href="../spring-core">Spring Core</a>.</p><p>Una vez finalizado el curso, cada asistente recibirá un voucher que le permitirá planificar y realizar el examen de certificación para obtener el título <b>SpringSource Certified Spring Enterprise Integration Specialist</b>.</p>'
+        bullets: ' '
+        final: ' '
+      duration: '4 jornadas de 8 horas'
+      language: 'Este curso está disponible en español, inglés e italiano.'
+      audience: Desarrolladores Java y arquitectos implicados en proyectos grandes de desarrollo.
+      requirements: Cada asistente deberá llevar su propio portátil, en el que deberá tener permisos para instalar aplicaciones.
+      objectives: 
+        intro: ' '
+        bullets: [
+          'Usar Spring para <b>crear aplicaciones concurrentes</b> y <b>planificar tareas</b>.',
+          'Usar <b>Spring Remoting</b> para implementar aplicaciones clienteservidor.',
+          'Usar <b>Spring Web Services</b> para crear clientes y servicios web basados en SOAP.',
+          'Usar <b>Spring MVC</b> para crear servicios y clientes REST.',
+          'Emplear <b>JMS</b> en sus comunicaciones mediante mensajería asíncrona.',
+          'Entender y utilizar <b>transacciones locales y distribuidas</b>.',
+          'Usar <b>Spring Integration</b> para crear arquitecturas orientadas a eventos e integradas con sistemas externos.',
+          'Usar <b>Spring Batch</b> para la gestión de procesos batch escalables basadas en componentes a medida o incluidos en la plataforma.'
+        ]
+      syllabus:
+        'Introducción': [
+          'Tipos de integración de aplicaciones.',
+          'Transferencia de ficheros, remoting y Servicios Web.'
+        ]
+        'Planificación de Tareas': [
+          'Introducción a la concurrencia.',
+          'APIs de concurrencia en Java.',
+          'Soporte para la planificación de tareas en Spring'
+        ]
+        'Remoting': [
+          'Limitaciones de RMI.',
+          'Beneficios de la utilización de Spring Remoting.',
+          'Spring Remoting. RMI, HttpInvoker, Hessian y Burlap.'
+        ]
+        'Servicios Web SOAP con Spring WS': [
+          'Introducción a Spring WS.',
+          'Conversión de objetos a XML con la capa de abstracción OXM',
+          'Acceso a WS desde el cliente con WebService Template',
+          'Gestión de Errores y pruebas integradas.'
+        ]
+        'Servicios Web REST': [
+          'Conceptos principales en REST.',
+          'Soporte REST a partir de Spring 3.0',
+          'Anotaciones REST específicas de Spring.',
+          'Acceso a servicios REST en cliente con RestTemplate.'
+        ]
+        'Integración de mensajería con JMS': [
+          'Configuración de recursos JMS con Spring.',
+          'Simplificación del envío y recepción de mensajes con Spring.',
+          'Transacciones JMS',
+          'Gestión de mensajes duplicados.'
+        ]
+        'Transacciones globales': [
+          'Two-phase commit y XA.',
+          'JTA y Spring.',
+          'Configuración de JTATransactionManager.',
+          'Demarcación transaccional.'
+        ]
+        'Spring Integration': [
+          'Introducción a Spring Integration. Objetivos y componentes principales.',
+          'Definición de canales, endpoints y gateways.',
+          'Tipos de canales y pooling.',
+          'Entrega síncrona y asíncrona.',
+          'Gestión de errores síncrona y asíncrona.',
+          'Tipos especiales de endpoints: Bridge y Router.'
+        ]
+        'Caractertísticas avanzadas de Spring Integration': [
+          'Separación y unión de mensajes.',
+          'Configuración de Dispatchers.'
+        ]
+        'Spring Batch': [
+          'Introducción a Spring Batch y sus componentes principales.',
+          'Parametros e identificación de tareas.',
+          'Persistencia de estado en BD.',
+          'Lectura de ficheros. ItemReaders/writers',
+          'Spring Batch listeners.'
+        ]
+        'Spring Batch Admin': [
+          'La consola de administración de Spring Batch.',
+          'Paralelizado y escalado del procesamiento de tareas.'
+        ]

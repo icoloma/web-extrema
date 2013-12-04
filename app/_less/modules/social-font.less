@@ -1,0 +1,54 @@
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "social";
+  src:url("fonts/social.eot");
+  src:url("fonts/social.eot?#iefix") format("embedded-opentype"),
+    url("fonts/social.ttf") format("truetype"),
+    url("fonts/social.svg#social") format("svg"),
+    url("fonts/social.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "social" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "social" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-twitter-alt:before {
+  content: "t";
+}
+
+.icon-wordpress:before {
+  content: "w";
+}
+
+.icon-yahoo-buzz:before {
+  content: "b";
+}
+

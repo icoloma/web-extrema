@@ -1,0 +1,17 @@
+<article class="course-item">
+  {% capture title %}{{ include.i18nRoot }}.title{% endcapture %}
+  {% capture desc %}{{ include.i18nRoot }}.desc{% endcapture %}
+  <h1 class="course-h">{% t {{ title }} %}</h1>
+  {% t {{ desc }} %}
+  <nav class="course-toolbar">
+    <a href="{{site.baseurl}}{{ include.url }}" class="btn btn-large">{% t courses.contents %}</a>
+    <a href="{{ include.scheduleUrl }}" target="_blank" class="btn btn-success btn-large">{% t courses.available %}</a>
+    <a href="{{site.baseurl}}contact" class="more-info">» {% t MoreInfo %}</a>
+  </nav>
+  {% if include.spring %}
+    <aside class="voucher voucher-spring">
+      {% capture voucher %}{{ include.i18nRoot }}.voucher{% endcapture %}
+      {% t {{ voucher }} %}
+    </aside>
+  {% endif %}
+</article>
