@@ -137,16 +137,32 @@ courses:
     voucher: <p>Los asistentes recibirán un voucher que les permitirá acceder al examen oficial de certificación <b>SpringSource Certified Spring Professional</b>.</p>
     details:
       desc:
-        intro: '<p>Curso de 4 días de duración en el cual los asistentes aprenderán el funcionamiento del Core Spring framework Spring de Dependency Injection. Al finalizar este curso los asistentes serán capaces de desarrollar aplicaciones de negocio de una forma ágil y escalable, fácilmente adaptables a la evolución de las necesidades futuras. Tras este curso el asistente dispondrá de la posibilidad de certificarse con Spring realizando gratuitamente el <b>Spring Framework Certification Examination</b> online (cuyo valor de mercado es 115 euros).</p><p>El curso ofertado no se centra únicamente en la explicación de las características del framework y su correcta utilización, sino que además se tratarán temas de arquitectura de sistemas. Para continuar mejorando los conocimientos de Spring es recomendable asistir a <a href="../spring-rich-web">Rich Web Applications with Spring</a> o <a href="../spring-enterprise">Enterprise Integration with Spring</a> una vez completado Core Spring.</p><p>Es importante resaltar que los asistentes al curso deben poseer conocimientos previos de <b>los APIs de Java, conceptos JEE, JTA y del servlet API</b>.</p>'
-        bullets: ' '
-        final: ' '
+        intro: '<p>Curso de 4 días de duración en el cual los asistentes aprenderán el funcionamiento del Core Spring framework Spring de Dependency Injection. Al finalizar este curso los asistentes serán capaces de desarrollar aplicaciones de negocio de una forma ágil y escalable, fácilmente adaptables a la evolución de las necesidades futuras. Tras este curso el asistente dispondrá de la posibilidad de certificarse con Spring realizando gratuitamente el <b>Spring Framework Certification Examination</b> online (cuyo valor de mercado es 115 euros).</p><p>El curso ofertado no se centra únicamente en la explicación de las características del framework y su correcta utilización, sino que además se tratarán temas de arquitectura de sistemas.</p><p>Es importante resaltar que los asistentes al curso deben poseer conocimientos previos de <b>los APIs de Java, conceptos JEE, JTA y del servlet API</b>.</p><p>Core Spring es el entrenamiento perfecto si:</p>'
+        bullets: [
+          'Se está interesado en todo lo relacionado sobre el <b>desarrollo de aplicaciones Java con Spring</b>',
+          'Se comienza un proyecto próximamente y <b>se necesita aprender Spring rápidamente</b>',
+          'Desea mejorar su currículum obteniendo la <b>certificación oficial de Spring</b>'
+        ]
+        final: '<p>Para continuar mejorando los conocimientos de Spring es recomendable asistir a <a href="../spring-rich-web">Rich Web Applications with Spring</a> o <a href="../spring-enterprise">Enterprise Integration with Spring</a> una vez completado Core Spring.</p>'
       duration: 4 jornadas de 8 horas
       language: Este curso está disponible en español, inglés e italiano.
       audience: Desarrolladores Java y arquitectos.
       requirements: Cada asistente deberá llevar su propio portátil, en el que deberá tener permisos para instalar aplicaciones.
       objectives:
-        intro: ' '
-        bullets: ' '
+        intro: '<p>Tras este curso, tendrá conocimiento sobre Spring y sus tecnologías asociadas. Además, será capaz de:</p>'
+        bullets: [
+          'Usar <b>Spring Framework</b> para desarrollar aplicaciones Java',
+          'Usar la <b>injección de dependencias</b> para montar y configurar aplicaciones',
+          '<b>Testear aplicaciones basadas en Spring</b>',
+          'Configurar Spring usando <b>XML, anotaciones y configuración Java</b>',
+          'Usar <b>Hibernate y JDBC con Spring</b> para acceder a bases de datos relacionales',
+          'Usar <b>el soporte de Spring para transacciones</b>',
+          'Usar <b>programación orientada a objectos (AOP)</b> para añadir funcionalidades a los objectos',
+          'Desarrollar aplicaciones web básicas usando <b>Spring MVC</b>',
+          'Usar <b>Spring Security</b> para asegurar aplicaciones web',
+          'Usar Spring con <b>RMI, HttpInvoker y JMS</b> para conexiones remotas',
+          'Añadir mantenimiento usando el <b>API JMX</b>'
+        ]
       syllabus:
         'Fundamentos de Spring Framework <span class="label">Día 1</span>': [
           'Introducción a la arquitectura de contenedor ligero y el Spring Application Context',
@@ -179,16 +195,31 @@ courses:
     voucher: <p>Al finalizar el curso el alumno puede realizar gratuitamente el examen para la obtención del certificado <b>VMware® SpringSource® Certified Spring Web Application Developer</b>. El curso es además la preparación perfecta para dicho examen.</p>
     details:
       desc:
-        intro: '<p>El objetivo de este curso es aprender a utilizar la tecnología Spring para crear aplicaciones web completas. El desarrollo de aplicaciones web basadas en Spring desde cero y de forma escalonada junto con una metodología enfocada a resolver los problemas reales más habituales hacen de este curso un complemento ideal para aquéllos que ya tienen cierta experiencia con la tecnología Spring.</p><p>Aunque no es requisito imprescindible, para un mejor aprovechamiento del curso se recomienda haber realizado previamente el curso <a href="../spring-core">Spring Core</a>.</p>'
-        bullets: ' '
-        final: ' '
+        intro: '<p>El objetivo de este curso es aprender a utilizar la tecnología Spring para crear aplicaciones web completas. El desarrollo de aplicaciones web basadas en Spring desde cero y de forma escalonada junto con una metodología enfocada a resolver los problemas reales más habituales hacen de este curso un complemento ideal para aquéllos que ya tienen cierta experiencia con la tecnología Spring.</p><p>Aunque no es requisito imprescindible, para un mejor aprovechamiento del curso se recomienda haber realizado previamente el curso <a href="../spring-core">Spring Core</a>.</p><p>Este curso es el apropiado si:</p>'
+        bullets: [
+          'Quiere volverse un experto en el desarrollo con <b>Spring Framework</b>',
+          'Quiere mostrar sus conocimientos de desarrollador construyendo <b>aplicaciones web</b>',
+          '<b>Ha recibido el curso Core Spring</b> y quiere mejorar aún más sus cocnocimientos como desarrollador',
+          'Trabaja (o tiene planeado hacerlo) en un <b>proyecto web</b>',
+          'Está interesado en obtener la <b>certificación en Spring Rich Web</b>'
+        ]
+        final: '<p>Para mejorar aún más sus habilidades en el desarrollo con Spring, le recomendamos el curso <a href="../spring-enterprise">Enterprise Integration with Spring</a> tras completar el curso Rich Web Applications with Spring.</p>'
       duration: 4 jornadas de 8 horas
       language: Este curso está disponible en español, inglés e italiano.
       audience: Desarrolladores Java y arquitectos implicados en proyectos web.
       requirements: Cada asistente deberá llevar su propio portátil, en el que deberá tener permisos para instalar aplicaciones.
       objectives:
-        intro: ' '
-        bullets: ' '
+        intro: '<p>Al completar este curso, tendrá conocimiento de Spring y sus tecnologías asociadas para el desarrollo web y será capaz de:</p>'
+        bullets: [
+          '<b>Desarrollar aplicaciones web</b> usando Spring Framework',
+          'Usar <b>Spring Web Flow</b> para implementar interacciones con estado',
+          '<b>Asegurar aplicaciones web</b> con Spring Security',
+          '<b>Testear aplicaciones web</b> en lógica y rendimiento',
+          'Crear interfaces de usuario ricas usando <b>HTML, CSS y JavaScript</b>',
+          'Conectar un cliente Flex a un back-end Spring con <b>Spring BlazeDS</b>',
+          'Desarrollar proyectos de forma rápida usando herramientas como <b>Grails y Spring Roo</b>',
+          'Usar <b>SpringSource Tool Suite</b> y <b>Spring Insight</b>'
+        ]
       syllabus:
         'Spring MVC <span class="label">Día 1</span>': [
           'Modelo de programación basado en anotaciones Spring MVC',
@@ -220,15 +251,21 @@ courses:
     voucher: <p>Finalizado el curso, cada asistente recibirá un voucher que le permitirá planificar y realizar el examen de certificación para obtener el título <b>SpringSource Certified Enterprise Integration Specialist</b>.</p>
     details:
       desc: 
-        intro: '<p>Durante este curso de cuatro días se hará un recorrido por los aspectos y tecnologías de mayor relevancia relacionadas con la integración de aplicaciones en un entorno empresarial.</p><p>Se mostrará cómo aplicar Spring para dar solución a los problemas de integración que los desarrolladores se encuentran en el lado servidor. Aunque no es requisito imprescindible, para un mejor aprovechamiento del curso se recomienda haber realizado previamente el curso <a href="../spring-core">Spring Core</a>.</p><p>Una vez finalizado el curso, cada asistente recibirá un voucher que le permitirá planificar y realizar el examen de certificación para obtener el título <b>SpringSource Certified Spring Enterprise Integration Specialist</b>.</p>'
-        bullets: ' '
-        final: ' '
+        intro: '<p>Durante este curso de cuatro días se hará un recorrido por los aspectos y tecnologías de mayor relevancia relacionadas con la integración de aplicaciones en un entorno empresarial.</p><p>Se mostrará cómo aplicar Spring para dar solución a los problemas de integración que los desarrolladores se encuentran en el lado servidor. Aunque no es requisito imprescindible, para un mejor aprovechamiento del curso se recomienda haber realizado previamente el curso <a href="../spring-core">Spring Core</a>.</p><p>Una vez finalizado el curso, cada asistente recibirá un voucher que le permitirá planificar y realizar el examen de certificación para obtener el título <b>SpringSource Certified Spring Enterprise Integration Specialist</b>.</p><p>Enterprise Integration con Spring es perfecto si:</p>'
+        bullets: [
+          'Quiere volverse un experto en el uso de <b>Spring Framework</b>',
+          '<b>Ha hecho el curso Core Spring</b> y quiere mejorar aún más sus habilidades',
+          'Quiere ser capaz de resolver incluso los <b>problemas más complejos con Spring</b>',
+          'Trabaja (o trabajará) en un <b>proyecto de Spring largo</b>',
+          'Está interesado en obtener la <b>certificación como experto en Spring</b>'
+        ]
+        final: '<p>Para mejorar sus conocimientos de Spring, recomendamos el curso <a href="../spring-rich-web">Rich Web Applications con Spring</a> tras completar Enterprise Integration con Spring.</p>'
       duration: '4 jornadas de 8 horas'
       language: 'Este curso está disponible en español, inglés e italiano.'
       audience: Desarrolladores Java y arquitectos implicados en proyectos grandes de desarrollo.
       requirements: Cada asistente deberá llevar su propio portátil, en el que deberá tener permisos para instalar aplicaciones.
       objectives: 
-        intro: ' '
+        intro: '<p>Al completar este curso, tendrá conocimientos de Spring y sus teconologías asociadas para la integración empresarial y será capaz de:</p>'
         bullets: [
           'Usar Spring para <b>crear aplicaciones concurrentes</b> y <b>planificar tareas</b>.',
           'Usar <b>Spring Remoting</b> para implementar aplicaciones clienteservidor.',

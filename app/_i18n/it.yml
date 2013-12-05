@@ -134,11 +134,196 @@ courses:
     title: Corso Ufficiale Core Spring
     desc: "<p>Extrema Sistemas è la società prescelta dalla SpringSource / VMWare per impartire i suoi corsi di formazione ufficiale in Spagna e in Italia.</p><p>SpringSource è la ditta che supporta Spring, piattaforma che con più di cinque milioni di downloads è diventata uno standard di fatto per le applicazioni imprenditoriali basate sulla tecnologia Java. Più della metà delle ditte che costituiscono il Fortune 500, il 60% degli sviluppatori Java e 9 banche su 10 usano la piattaforma di SpringSource.</p>"
     voucher: "<p>Gli alunni di ciascuno di questi corsi riceveranno un voucher che permetterà loro di accedere all'esame ufficiale di certificazione &quot;SpringSource Certified Spring Professional&quot;.</p>"
+    details:
+      desc:
+        intro: ' '
+        bullets: [
+        ]
+        final: ' '
+      duration: 32 ore
+      language: Il corso é in italiano ma in modalità in-house può essere impartito anche in inglese.
+      audience: "E’ quindi importante sottolineare che gli alunni devono possedere previa conoscenza delle API Java, dei concetti JEE, JTA e delle API Servlet."
+      requirements: "Ogni alunno deve portare con sé un laptop ed avere un administrator account. Sono preferibili Windows (XP, Vista, 7) o Linux, con i quali l'istruttore ha maggior familiarità. Altri software tool saranno installati durante i laboratori. Nei corsi in modalitá in-house, é necessaria una connessione Internet per tutti."
+      objectives:
+        intro: ' '
+        bullets: [
+        ]
+      syllabus:
+        'Fondamenti di Spring Framework <span class="label">Giorno 1</span>': [
+          "Introduzione all’ architettura di tipo lightweight, IoC Container ed Application Context.",
+          'Sviluppo di applicazioni strutturate, configurabili e testabili attraverso Dependency Injection e Test-Driven Development.',
+          'Sviluppo di codice migliore e maggiormente coeso, con utilizzo di Design Patterns ed Object Oriented.</li><li>Realizzazione di esercizi basati su modelli di business reali.'
+        ]
+        'Business Layer <span class="label">Giorno 2</span>': [
+          "Aggiungere comportamenti agli oggetti con l’ AOP (Aspect Oriented Programming).",
+          'Introduzione alla Persistenza: come costruire il Persistence Layer con Spring.',
+          'Persistenza con Spring JDBC.',
+          'Strategie di gestione delle transazioni con Spring nel Service Layer.',
+          "Strategie di test d’unità e di integrazione a livello di Business Layer."
+        ]
+        'Enterprise Information Connectivity <span class="label">Giorno 3</span>': [
+          "Introduzione all’ ORM (Object-to-Relational Mapping).",
+          "Utilizzo e configurazione di Hibernate con Spring.",
+          "Architettura di una Web Application con Spring.",
+          "Introduzione a Spring Web MVC, Spring JavaScript, Spring Web Flow e Spring Faces.",
+          "Spring MVC.",
+          "RESTful Web Services con Spring MVC."
+        ]
+        'Integrazione con servizi Enterprise <span class="label">Giorno 4</span>': [
+          "Rendere sicure le applicazioni con Spring Security.",
+          "Introduzione a Spring Remoting.",
+          "Come semplificare applicazioni JMS tramite Message-Driven POJOs con Spring JMS.",
+          "Gestione delle applicazioni con JMX tramite Spring."
+        ]
   SpringWeb:
     title: Spring Web
     desc: <p>Spring Web è un corso di quattro giornate diretto da esperti di SpringSource che abborda lo sviluppo di applicazioni web. Questo corso pratico mostra come usare le ultime funzionalità di Spring per creare applicazioni web.</p>
     voucher: "<p>Alla fine del corso ogni alunno può sostenere l'esame e conseguire il certificato &quot;VMware® SpringSource® Certified Spring Web Application Developer&quot;.</p>"
+    details:
+      desc:
+        intro: ' '
+        bullets: [
+        ]
+        final: ' '
+      duration: 32 ore
+      language: Il corso é in italiano ma in modalità in-house può essere impartito anche in inglese.
+      audience: "E’ quindi importante sottolineare che gli alunni devono possedere previa conoscenza della tecnologia Spring."
+      requirements: "Ogni alunno deve portare con sé un laptop ed avere un administrator account. Sono preferibili Windows (XP, Vista, 7) o Linux, con i quali l'istruttore ha maggior familiarità. Altri software tool saranno installati durante i laboratori. Nei corsi in modalitá in-house, é necessaria una connessione Internet per tutti."
+      objectives:
+        intro: ' '
+        bullets: [
+        ]
+      syllabus:
+        'Applicando MVC <span class="label">Giorno 1</span>': [
+          'Visione generale del corso e delle applicazioni corrispondenti. Aspetti base di Spring MVC.',
+          "Integrazione di varie tecnologie e formati per l’esposizione dei contenuti, includen do JSP/JSTL, Tiles, PDF ed Excel.",
+          'Data-Entry Form, Binding e Validazione.'
+        ]
+        'Implementazione di Interfacce di tipo Rich <span class="label">Giorno 2</span>': [
+          'Analisi delle migliori tecniche per il disegno di interfacce utente in relazione al con tenuto, lo stile ed il comportamento delle stesse.',
+          'Aspetti fondamentali di Javascript per sviluppatori Ajax.',
+          'Massimizzazione delle funzionalitá del Dojo Toolkit.',
+          'Internazionalizzazione, personalizzazione ed accessibilità di Applicazioni Web sviluppate con Spring.'
+        ]
+        'Utilizzo di Spring Web Flow <span class="label">Giorno 3</span>': [
+          'Primi passi con Spring Web Flow.',
+          'Aspetti essenziali del linguaggio utilizzato nella definizione dei Flow (Flow Definition Language). Stati, Eventi e Transizioni. Aggiungere comportamenti ad un Flow.',
+          'Controllo di eventi Ajax, gestione dinamica delle eccezioni e delle regole di navigazione.'
+        ]
+        'Sviluppo di applicazioni web affidabili e sicure <span class="label">Giorno 4</span>': [
+          'Integrazione di componenti JSF con Spring Faces.',
+          "Test di accettazione e di carico durante l’intero ciclo di sviluppo di un Applicazione Web.",
+          'Hibernate in contesti di operatività su grandi volumi ed alta concorrenza.',
+          'Integrazione di vari sistemi di applicazioni, includendo servizi gestiti da Spring, OSGi e Servizi Web.'
+        ]
   SpringEnterprise:
     title: Enterprise Integration with Spring (NUOVO)
     desc: "<p>Durante questo corso di quattro giornate si vedranno gli aspetti e le tecnologie di maggior rilievo relazionati con l'integrazione di applicazioni in ambito impresariale.</p><p>Si mostrerá come applicare Spring per dare soluzione ai problemi di integrazione con i quali gli sviluppatori si imbattono nel lato server.</p>"
     voucher: "<p>Alla fine del corso, ogni partecipante riceverá un voucher che gli permetterá di pianificare e realizzare l'esame di certificazione per ottenere il titolo &quot;SpringSource Certified Spring Enterprise Integration Specialist&quot;.</p>"
+    details:
+      desc:
+        intro: ' '
+        bullets: [
+        ]
+        final: ' '
+      duration: 32 ore
+      language: Il corso é in italiano ma in modalità in-house può essere impartito anche in inglese.
+      audience: Esperienza nello sviluppo di applicazioni Java, conoscenza base di Spring e del Container IOC (Inversione di Controllo). Nonostante non sia imprescindibile, é raccomandabile aver realizzato previamente il corso di Core Spring.
+      requirements: "Ogni alunno deve portare con sé un laptop ed avere un administrator account. Sono preferibili Windows (XP, Vista, 7) o Linux, con i quali l'istruttore ha maggior familiarità. Altri software tool saranno installati durante i laboratori. Nei corsi in modalitá in-house, é necessaria una connessione Internet per tutti."
+      objectives:
+        intro: ' '
+        bullets: [
+          'Usare Spring per la creazione di applicazioni concorrenti e la pianificazione dei Task.',
+          'Usare Remoting per implementare applicazioni client-server.',
+          'Usare Spring Web Services per la creazione, nel rispetto del principio di Loose Coupling, di Servizi Web e Client basati su SOAP.',
+          'Usare Spring MVC per la creazione di Servizi Web e Client RESTful.',
+          'Usare JMS per la gestione asincrona di comunicazioni Messaging-based.',
+          'Capire e usare transazioni locali e distribuite.',
+          'Usare Spring Integration per la creazione di architetture Event-driven e Pipes-and-Filters e come integrarle con sistemi ed applicazioni esterne.',
+          'Usare Spring Batch per la gestione e la scalabilità d’esecuzione di procedure batch basate su componenti standard o create su misura.'
+        ]
+      syllabus:
+        'Introduzione': [
+          'Tipi di integrazione in ambito Enterprise.',
+          'Trasferimento di Fil, Remoting e Servizi Web.'
+        ]
+        'Pianificazione dei Task': [
+          'Introduzione alla concorrenza.',
+          'API per la concorrenza in Java.',
+          'Supporto per la pianificazione dei Task in Spring.',
+          'Il namespace <task>.</task>',
+          'Le annotazioni @Scheduled ed @Asynch.'
+        ]
+        'Remoting': [
+          "Limitazioni nell’utilizzo classico di RMI.",
+          "I benefici dell’utilizzo di Spring Remoting.",
+          'Spring Remoting su RMI. HttpInvoker. Il supporto, in Spring, per Hessian e Burlap.'
+        ]
+        'Servizi Web SOAP con Spring WS': [
+          'Come utilizzare, in modo pratico e migliore, i Servizi Web.',
+          'Introduzione a Spring WS.',
+          "Mappatura di oggetti da e verso XML con il Layer d’ Astrazione Spring OXM.",
+          'Accesso Client ai Servizi Web con il WebServiceTemplate.',
+          'Gestione degli errori.',
+          'Out-of-container Testing, come testare i Servizi Web in isolamento.'
+        ]
+        'Servizi Web REST': [
+          'Concetti principali in REST.',
+          'Il Supporto REST in Spring 3.x.',
+          'Annotazioni specifiche REST in Spring.',
+          'Accesso Client ai Servizi REST con il RestTemplate.'
+        ]
+        'Utilizzare JMS': [
+          'Introduzione a JMS.',
+          'Configurazione delle risorse JMS in Spring.',
+          'Come inviare e ricevere messaggi utilizzando il JmsTemplate ed i Message Listener',
+          'Containers in Spring.'
+        ]
+        'JMS Transazionale': [
+          'Perché utilizzare le transazioni JMS.',
+          'Le risorse transazionali JMS con Spring.',
+          'La gestione della duplicazione dei messaggi.'
+        ]
+        'Transazioni Globali': [
+          'Le Two-phase commit ed XA.',
+          'JTA e Spring.',
+          'Come configurare il JTATransactionManager.',
+          'La demarcazione delle transazioni.'
+        ]
+        'Introduzione a Spring Integration': [
+          'Gli obiettivi di Spring Integration.',
+          'I componenti principali di Spring Integration.',
+          'Definizione di Canali, Message Endpoints e Gateways.',
+          'Spring Integration namespaces.',
+          'Spring Integration ed il Visual Editor basato su Eclipse.'
+        ]
+        'Configurazione di Spring Integration': [
+          'Tipi di Canali e Polling.',
+          '“Handoff” sincrono ed asincrono.',
+          'Gestione degli errori sincrona ed asincrona.',
+          'Tipi speciali di endpoints: Bridge e Router.',
+          'Utilizzare il MessagingTemplate'
+        ]
+        'Caratteristiche avanzate di Spring Integration': [
+          'Separazione ed aggregazione dei messaggi.',
+          'Configurazione del Dispatcher.',
+          'Supporto XML: XPath, XSLT, Object-XML mapping'
+        ]
+        'Introduzione a Spring Batch': [
+          'Spring Batch: Panoramica ad alto livello.',
+          'Come utilizzare Jobs, Steps, Readers e Writers.',
+          'Job: Parametri ed identità.',
+          'Persistenza di stato dei Batch nel Database.',
+          'Spring Batch: Esempio di Quick-start.'
+        ]
+        'Riavvio e Recovery con Spring Batch': [
+          'Stateful ItemReaders/Writers.',
+          'Lettura di File',
+          'Introduzione ai meccanismi di skip, retry, repeat e restart.'
+        ]
+        'Spring Batch Admin': [
+          'Amministrare Spring Batch dalla Spring Batch Admin Web Console.',
+          'Jobs: Esecuzione parallela e scalabilità.',
+          'Steps: Esecuzione parallela e Multi-thread.',
+          'Partizionamento.'
+        ]
