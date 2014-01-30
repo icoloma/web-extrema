@@ -143,7 +143,7 @@ courses:
           'Se comienza un proyecto próximamente y <b>se necesita aprender Spring rápidamente</b>',
           'Desea mejorar su currículum obteniendo la <b>certificación oficial de Spring</b>'
         ]
-        final: '<p>Para continuar mejorando los conocimientos de Spring es recomendable asistir a <a href="../spring-rich-web">Rich Web Applications with Spring</a> o <a href="../spring-enterprise">Enterprise Integration with Spring</a> una vez completado Core Spring.</p>'
+        final: '<p>Para continuar mejorando los conocimientos de Spring es recomendable asistir a <a href="../spring-web">Spring Web</a> o <a href="../spring-enterprise">Enterprise Integration with Spring</a> una vez completado Core Spring.</p>'
       duration: 4 jornadas de 8 horas
       language: Este curso está disponible en español, inglés e italiano.
       audience: Desarrolladores Java y arquitectos.
@@ -201,9 +201,9 @@ courses:
           'Quiere mostrar sus conocimientos de desarrollador construyendo <b>aplicaciones web</b>',
           '<b>Ha recibido el curso Core Spring</b> y quiere mejorar aún más sus cocnocimientos como desarrollador',
           'Trabaja (o tiene planeado hacerlo) en un <b>proyecto web</b>',
-          'Está interesado en obtener la <b>certificación en Spring Rich Web</b>'
+          'Está interesado en obtener la <b>certificación en Spring Web</b>'
         ]
-        final: '<p>Para mejorar aún más sus habilidades en el desarrollo con Spring, le recomendamos el curso <a href="../spring-enterprise">Enterprise Integration with Spring</a> tras completar el curso Rich Web Applications with Spring.</p>'
+        final: '<p>Para mejorar aún más sus habilidades en el desarrollo con Spring, le recomendamos el curso <a href="../spring-enterprise">Enterprise Integration with Spring</a> tras completar el curso Spring Web.</p>'
       duration: 4 jornadas de 8 horas
       language: Este curso está disponible en español, inglés e italiano.
       audience: Desarrolladores Java y arquitectos implicados en proyectos web.
@@ -259,7 +259,7 @@ courses:
           'Trabaja (o trabajará) en un <b>proyecto de Spring largo</b>',
           'Está interesado en obtener la <b>certificación como experto en Spring</b>'
         ]
-        final: '<p>Para mejorar sus conocimientos de Spring, recomendamos el curso <a href="../spring-rich-web">Rich Web Applications con Spring</a> tras completar Enterprise Integration con Spring.</p>'
+        final: '<p>Para mejorar sus conocimientos de Spring, recomendamos el curso <a href="../spring-web">Spring Web</a> tras completar Enterprise Integration con Spring.</p>'
       duration: '4 jornadas de 8 horas'
       language: 'Este curso está disponible en español, inglés e italiano.'
       audience: Desarrolladores Java y arquitectos implicados en proyectos grandes de desarrollo.

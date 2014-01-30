@@ -143,7 +143,7 @@ courses:
           'You have an upcoming project and <b>need to learn Spring quickly</b>',
           'You like to become <b>Spring Certified</b> to improve your career opportunities'
         ]
-        final: '<p>To further improve your Spring developer skills we recommend to take <a href="../spring-rich-web">Rich Web Applications with Spring</a> or <a href="../spring-enterprise">Enterprise Integration with Spring</a> after completing Core Spring.</p>'
+        final: '<p>To further improve your Spring developer skills we recommend to take <a href="../spring-web">Spring Web</a> or <a href="../spring-enterprise">Enterprise Integration with Spring</a> after completing Core Spring.</p>'
       duration: 32 hours
       language: This course is available in English, Spanish and Italian.
       audience: This training is designed for Java developers and architects.
@@ -255,15 +255,15 @@ courses:
     voucher: <p>Completion of this training entitles the student to receive a free voucher to schedule the exam that is required to become a <b>VMware® SpringSource® Certified Spring Web Application Developer</b>. This training is ideal preparation for the certification exam. </p>
     details:
       desc:
-        intro: '<p>Rich Web Applications with Spring is a 4-day training on web application development led by SpringSource experts. This hands-on training teaches you how to apply the latest in Spring to create rich web applications. </p><p>Completion of this training entitles each student to receive a free voucher to schedule an exam at a Pearson Vue Centre to become a <b>SpringSource Certified Spring Web Application Developer</b>. The Rich Web Applications with Spring training is also the ideal preparation for the certification exam.</p><p>Rich Web Applications with Spring is the perfect training if:</p>'
+        intro: '<p>Spring Web is a 4-day training on web application development led by SpringSource experts. This hands-on training teaches you how to apply the latest in Spring to create rich web applications. </p><p>Completion of this training entitles each student to receive a free voucher to schedule an exam at a Pearson Vue Centre to become a <b>SpringSource Certified Spring Web Application Developer</b>. The Spring Web training is also the ideal preparation for the certification exam.</p><p>Spring Web is the perfect training if:</p>'
         bullets: [
           'You like to become an expert at using the <b>Spring Framework</b>',
           'You want to show your developer skills by building beautiful <b>rich web applications</b>',
           '<b>You took Core Spring</b> and want to further improve your developer skills',
           'You are working on/have planned a <b>rich web project</b>',
-          'You are interested in being granted the <b>Spring Rich Web certification</b>'
+          'You are interested in being granted the <b>Spring Web certification</b>'
         ]
-        final: '<p>To further improve your Spring developer skills we recommend to take <a href="../spring-enterprise">Enterprise Integration with Spring</a> after completing Rich Web Applications with Spring.</p>'
+        final: '<p>To further improve your Spring developer skills we recommend to take <a href="../spring-enterprise">Enterprise Integration with Spring</a> after completing Spring Web training.</p>'
       duration: 32 hours
       language: This course is available in English, Spanish and Italian.
       audience: This training is designed for developers interested in developing web applications with Spring.
@@ -324,7 +324,7 @@ courses:
           'You are working on/have planned a <b>large Spring project</b>',
           'You are interested in being granted the <b>expert Spring certification</b>'
         ]
-        final: '<p>To further improve your Spring developer skills we recommend to take <a href="../spring-rich-web">Rich Web Applications with Spring</a> after completing Enterprise Integration with Spring.</p>'
+        final: '<p>To further improve your Spring developer skills we recommend to take <a href="../spring-web">Spring Web</a> after completing Enterprise Integration with Spring.</p>'
       duration: 32 hours
       language: This course is available in English, Spanish and Italian.
       audience: This training is designed for Java developers and architects.

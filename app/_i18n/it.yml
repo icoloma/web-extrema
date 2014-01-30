@@ -136,17 +136,31 @@ courses:
     voucher: "<p>Gli alunni di ciascuno di questi corsi riceveranno un voucher che permetterà loro di accedere all'esame ufficiale di certificazione &quot;SpringSource Certified Spring Professional&quot;.</p>"
     details:
       desc:
-        intro: ' '
+        intro: '<p>Core Spring è il corso di formazione principale, di quattro giorni, di Spring Framework. In questo corso gli studenti impareranno come costruire, in modo pratico e produttivo, un&quot;applicazione Java Spring-powered che mostra le potenzialità di <b>Spring Framework</b> e delle altre tecnologie come <b>Spring AOP</b> e <b>Spring Security</b>.<p>Il completamento di questa formazione dà diritto ad ogni studente di ricevere un voucher gratuito per pianificare un esame in un Pearson VUE Center per diventare uno <b>Spring Core Professional</b>.<p>Core Spring è il training ideale se:</p>'
         bullets: [
+          'Ti interessa sapere tutto sullo <b>sviluppo di applicazioni Java con Spring</b>',
+          'Hai un progetto imminente e <b>hai bisogno di imparare Spring rapidamente</b>',
+          'Ti piacerebbe diventare <b>Spring Certified</b> e migliorare le tue opportunità professionali'
         ]
-        final: ' '
+        final: '<p>Per migliorare ulteriormente le tue capacità come sviluppatore Spring ti suggeriamo di seguire il corso <a href="../spring-web">Spring Web</a> o <a href="../spring-enterprise">Enterprise Integration with Spring</a> dopo aver completato il corso Core Spring.</p>'
       duration: 32 ore
       language: Il corso é in italiano ma in modalità in-house può essere impartito anche in inglese.
       audience: "E’ quindi importante sottolineare che gli alunni devono possedere previa conoscenza delle API Java, dei concetti JEE, JTA e delle API Servlet."
       requirements: "Ogni alunno deve portare con sé un laptop ed avere un administrator account. Sono preferibili Windows (XP, Vista, 7) o Linux, con i quali l'istruttore ha maggior familiarità. Altri software tool saranno installati durante i laboratori. Nei corsi in modalitá in-house, é necessaria una connessione Internet per tutti."
       objectives:
-        intro: ' '
+        intro: '<p>Alla conclusione del training avrai una buona comprensione di Spring e delle tecnologie associate e sarai in grado di:</p>'
         bullets: [
+          'Usare <b>Spring Framework</b> per sviluppare applicazioni Java',
+          'Usare <b>dependency injection</b> per impostare e configurare applicazioni',
+          '<b>Test Spring-based applications</b>',
+          'Impostare la configurazione di Spring usando <b>XML, annotations e configurazioni Java </b>',
+          'Usare <b>Hibernate e JDBC con Spring</b> per accedere ai database relazionali',
+          'Usare <b>Spring support for transactions</b>',
+          'Usare <b>aspect-oriented programming (AOP)</b> per aggiungere comportamenti agli oggetti',
+          'Sviluppare un&quot;applicazione Web di base con <b>Spring MVC</b>',
+          'Usare <b>Spring Security</b> per rendere sicure le applicazioni Web',
+          'Usare Spring con <b>RMI, HttpInvoker e JMS</b> per la comunicazione remota',
+          'Aggiungere gestibilità con <b>JMX API</b>'
         ]
       syllabus:
         'Fondamenti di Spring Framework <span class="label">Giorno 1</span>': [
@@ -181,17 +195,30 @@ courses:
     voucher: "<p>Alla fine del corso ogni alunno può sostenere l'esame e conseguire il certificato &quot;VMware® SpringSource® Certified Spring Web Application Developer&quot;.</p>"
     details:
       desc:
-        intro: ' '
+        intro: '<p>Spring Web è un corso di formazione di 4 giorni per lo sviluppo di applicazioni web. In questo corso gli studenti impareranno come applicare, in modo pratico, le ultime novità in Spring per creare applicazioni web.</p><p>Il completamento di questa formazione dà diritto ad ogni studente di ricevere un voucher gratuito per pianificare un esame in un Pearson VUE Center per diventare un  <b>Vmware® SpringSource® Certified Spring Web Application Developer</b>.</p><p>Spring Web é il training ideale se:</p>'
         bullets: [
+          'Vuoi diventare un esperto nell&qout;utilizzo di <b>Spring Framework</b>',
+          'Vuoi mostrare le tue capacità di sviluppatore costruendo ottime <b>web application</b>',
+          '<b>Hai già seguito il corso Core Spring</b> e vuoi migliorare ulteriormente le tue capacità di sviluppatore',
+          'Stai lavorando su/stai pianificando un <b>progetto web</b>',
+          'Sei interessato a ricevere la <b>certificazione Spring Web</b>'
         ]
-        final: ' '
+        final: '<p>Per migliorare ulteriormente le tue capacità di sviluppatore Spring ti suggeriamo di realizzare <a href="../spring-enterprise">Enterprise Integration with Spring</a> dopo aver completato Spring Web.</p>'
       duration: 32 ore
       language: Il corso é in italiano ma in modalità in-house può essere impartito anche in inglese.
       audience: "E’ quindi importante sottolineare che gli alunni devono possedere previa conoscenza della tecnologia Spring."
       requirements: "Ogni alunno deve portare con sé un laptop ed avere un administrator account. Sono preferibili Windows (XP, Vista, 7) o Linux, con i quali l'istruttore ha maggior familiarità. Altri software tool saranno installati durante i laboratori. Nei corsi in modalitá in-house, é necessaria una connessione Internet per tutti."
       objectives:
-        intro: ' '
+        intro:  '<p>Al termine del training avrai una buona comprensione di Spring e delle tecnologie associate per lo sviluppo web e sarai capace di:</p>'
         bullets: [
+          '<b>sviluppare applicazioni web</b> usando Spring Framework',
+          'Usare <b>Spring Web Flow</b>per implementare interazioni di tipo stateful',
+          '<b>Rendere sicure le applicazioni web</b> con Spring Security',
+          '<b>Testare le applicazioni web</b> per correttezza e performance',
+          'Creare interfacce utente di tipo rich web con <b>HTML, CSS e JavaScript</b>',
+          'Connettere un cliente Flex ad un back-end Spring con <b>Spring BlazeDS</b>',
+          'Mettere tutto insieme con rapidi strumenti di produttività come <b>Grails e Spring Roo</b>',
+          'Usare <b>SpringSource Tool Suite</b> e <b>Spring Insight</b>'
         ]
       syllabus:
         'Applicando MVC <span class="label">Giorno 1</span>': [
@@ -222,16 +249,21 @@ courses:
     voucher: "<p>Alla fine del corso, ogni partecipante riceverá un voucher che gli permetterá di pianificare e realizzare l'esame di certificazione per ottenere il titolo &quot;SpringSource Certified Spring Enterprise Integration Specialist&quot;.</p>"
     details:
       desc:
-        intro: ' '
+        intro: '<p>Enterprise Integration with Spring è un corso di formazione di quattro giorni guidato da esperti SpringSource che discuteranno i temi più importanti e le tecnologie legate all&qout;Enterprise Application Integration. Questa pratica formazione vi insegna come applicare le tecnologie Spring per risolvere i problemi di integrazione che devono affrontare gli sviluppatori lato server.</p><p>Il completamento di questa formazione dà diritto ad ogni studente di ricevere un voucher gratuito per pianificare un esame in un Pearson VUE Center per diventare uno <b>SpringSource Certified Spring Enterprise Integration Specialist</b>.</p><p>Enterprise Integration with Spring è il corso ideale se:</p>'
         bullets: [
+          'Vuoi diventare un esperto nell&quot;utilizzo di <b>Spring Framework</b>',
+          '<b>Hai già realizzato il corso Core Spring</b> e vuoi migliorare ulteriormente le tue capacità di sviluppatore',
+          'Vuoi essere in grado di risolvere anche i <b>problemi più difficili con Spring</b>',
+          'Stai lavorando su/stai pianificando un <b>lungo progetto Spring</b>',
+          'Ti interessa ottenere la<b>certificazione Spring expert</b>'
         ]
-        final: ' '
+        final: '<p>Per migliorare ulteriormente le tue capacità di sviluppatore Spring ti raccomandiamo di realizzare <a href="../spring-web">Spring Web</a> dopo aver completato Enterprise Integration with Spring.</p>'
       duration: 32 ore
       language: Il corso é in italiano ma in modalità in-house può essere impartito anche in inglese.
       audience: Esperienza nello sviluppo di applicazioni Java, conoscenza base di Spring e del Container IOC (Inversione di Controllo). Nonostante non sia imprescindibile, é raccomandabile aver realizzato previamente il corso di Core Spring.
       requirements: "Ogni alunno deve portare con sé un laptop ed avere un administrator account. Sono preferibili Windows (XP, Vista, 7) o Linux, con i quali l'istruttore ha maggior familiarità. Altri software tool saranno installati durante i laboratori. Nei corsi in modalitá in-house, é necessaria una connessione Internet per tutti."
       objectives:
-        intro: ' '
+        intro: '<p>Alla conclusione del training avrai una buona comprensione di Spring e delle tecnologie associate per l&quot;enterprise integration e sarai capace di:</p>'
         bullets: [
           'Usare Spring per la creazione di applicazioni concorrenti e la pianificazione dei Task.',
           'Usare Remoting per implementare applicazioni client-server.',
