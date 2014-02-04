@@ -241,6 +241,9 @@ module.exports = function (grunt) {
           ],
           '<%= yeoman.jsPath %>/training.min.js': [
             '<%= yeoman.jsPath %>/training.js'
+          ],
+          '<%= yeoman.jsPath %>/registration.min.js': [
+            '<%= yeoman.jsPath %>/registration.js'
           ]
         }
       }

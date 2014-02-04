@@ -67,6 +67,7 @@ cookies:
   title: This web site uses cookies.
   desc: 'We use first and third-party cookies to improve our service. If you continue, we will assume that you accept our <a href="/cookies">cookie policy</a>.'
 courses:
+  redirection: Wait a minute, we are redirecting you to the registration page
   back: Back to courses
   contents: Course contents
   available: Available courses

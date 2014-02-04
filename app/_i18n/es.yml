@@ -67,6 +67,7 @@ cookies:
   title: Este sitio usa cookies
   desc: 'Usamos cookies propias y de terceros para ofrecerte un mejor servicio. Si continúas navegando, asumimos que aceptas nuestra <a href="/es/cookies">política de cookies</a>.'
 courses:
+  redirection: Espere un minuto, le estamos redirigiendo a la página de registro
   back: Volver a cursos
   contents: Contenidos del curso
   available: Cursos disponibles

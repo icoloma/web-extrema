@@ -1,0 +1,126 @@
+---
+  languages:
+    en: English
+---
+<!doctype html>
+<html>
+<head>
+  <title>{% t page.title %} | extrema-sistemas.com</title>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; url=https://www.koliseo.com/extremasistemas/{{ page.url | remove:'/koliseo/' }}">
+  <link rel="canonical" href="https://www.koliseo.com/extremasistemas/{{ page.url | remove:'/koliseo/' }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.min.css">
+  <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8-style.css"><![endif]-->
+</head>
+<body>
+  <header>
+    <h1 class="logo">
+      <a href="/" class="logo-link">Extrema</a>
+    </h1>
+    <nav class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a data-toggle="collapse" data-target=".nav-collapse" class="btn-toggle">
+            {% t ShowNavbar %}
+          </a>
+          <div class="nav-collapse wrapper">
+            <ul class="nav main-list">
+              {% for post in site.posts reversed %}
+                {% if post.tags contains 'menu' %}
+                  <li><a href="{{site.baseurl}}{{ post.url | remove_first:'/' }}" class="false nav-link">{% t post.title %}</a></li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+            <ul class="nav pull-right lang-dropdown hidden-middle">
+              <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle nav-link">
+                  {{ page.languages | map: site.lang }}<b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  {% assign i = 0 %}
+                  {% assign limit = page.languages | size | minus: 2 %}
+                  {% for language in page.languages %}
+                    {% if language[0] != site.lang %}
+                      <li>
+                        <a href="
+                          {% if page.linkable != false %}
+                            {% if site.default_lang != language[0] %}
+                              /{{language[0]}}{{ page.url }}
+                            {% else %}
+                              {{ page.url }}
+                            {% endif %}
+                          {% else %}
+                            /
+                          {% endif %}
+                        " class="nav-link">
+                          {{ language[1] }}
+                        </a>
+                      </li>
+                      {% if i != limit %}
+                        <li class="divider"></li>
+                      {% endif %}
+                      {% assign i = i | plus:1 %}
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    {% t courses.redirection %}
+  </div>
+
+  <footer>
+    <nav class="navbar visible-phone">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav main-list">
+            {% for post in site.posts reversed %}
+              {% if post.tags contains 'menu' %}
+                <li><a href="{{site.baseurl}}{{ post.url | remove_first:'/' }}" class="{% if forloop.rindex0 != 0 %}false{% endif %} nav-link">{% t post.title %}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+          <ul class="nav nav-pills lang-pills">
+            {% for language in page.languages %}
+              <li
+              {% if language[0] == site.lang %}
+                class="active"
+              {% endif %}
+              >
+                <a href="
+                  {% if page.linkable != false %}
+                    {% if site.default_lang != language[0] %}
+                      /{{language[0]}}{{ page.url }}
+                    {% else %}
+                      {{ page.url }}
+                    {% endif %}
+                  {% else %}
+                    /
+                  {% endif %}
+                " class="nav-link">{{ language[1] }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </footer>  
+
+  <!--
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="/js/jquery-1.7.2.min.js"><\/script>');
+    Extrema = {
+      languages: '{% for lang in page.languages %}{{ lang[0] }}{% if forloop.rindex0 != 0 %},{% endif %}{% endfor %}'.split(','),
+      lang: '{{site.lang}}'
+    }
+  </script>
+  <script src="/js/registration.min.js"></script>-->
+</body>
+</html>
