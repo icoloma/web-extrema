@@ -37,6 +37,7 @@ discounts:
 Tripartita: Cursos bonificables por la Fundación Tripartita.
 GetInfo: Para información adicional o condiciones preferentes para cursos con más asistentes <a href="/es/contact">póngase en contacto</a>.
 Phone: Teléfono
+Spain: España
 Italy: Italia
 emailTo: Email a
 Address: Dirección
@@ -247,7 +248,7 @@ courses:
           'Uso de Grails y Roo para el desarrollo rápido de aplicaciones web.'
         ]
   SpringEnterprise:
-    title: Enterprise Integration con Spring (NUEVO)
+    title: Enterprise Integration con Spring
     desc: <p>Durante este curso de cuatro jornadas dirigidos por expertos en Spring se hará un recorrido por las tecnologías de mayor relevancia para la integración de aplicaciones en un entorno empresarial.</p><p>Este curso práctico demostrará como aplicar Spring para dar solución a los problemas de integración que se pueden encontrar en el lado servidor.</p>
     voucher: <p>Finalizado el curso, cada asistente recibirá un voucher que le permitirá planificar y realizar el examen de certificación para obtener el título <b>SpringSource Certified Enterprise Integration Specialist</b>.</p>
     details:
@@ -338,4 +339,111 @@ courses:
         'Spring Batch Admin': [
           'La consola de administración de Spring Batch.',
           'Paralelizado y escalado del procesamiento de tareas.'
+        ]
+  HibernateWithSpring:
+    title: Hibernate con Spring (NUEVO)
+    desc: '<p>En este curso de 3 días aprenderás cómo crear aplicaciones data-driven efectivas con Spring y Hibernate. En el curso se enseña tanto la configuración usando XML como la configuración basada en anotaciones de Spring y Hibernate. </p><p>Con nuestros cursos te beneficiarás de la enorme experiencia de nuestro equipo. Te traemos esta experiencia en un curso altamente interactivo y práctico.</p><p class="alert alert-success"><b>Precio:</b> 1695 EUR - 24 horas</p>'
+    details:
+      desc:
+        intro: '<p>En este curso de 3 días aprenderás cómo crear aplicaciones data-driven efectivas con Spring y Hibernate. En el curso se enseña tanto la configuración usando XML como la configuración basada en anotaciones de Spring y Hibernate. </p><p>Con nuestros cursos te beneficiarás de la enorme experiencia de nuestro equipo. Te traemos esta experiencia en un curso altamente interactivo y práctico.</p>'
+        bullets: []
+        final: ' '
+      duration: 24 horas
+      language: 'Este curso está disponible en Ingés e Italiano.'
+      audience: 'Este training esta dirigido a desarrolladores interesados en el utilizo de Hibernate con Spring.'
+      requirements: 'Haber creado aplicaciones web con Java; Conocimiento básico de JDBC y bases de datos relacionales'
+      objectives: 
+        intro: '<p>Tras finalizar este curso, obtendrás conocimiento sobre la creación de aplicaciones basadas en Spring y Hibernate y serás capaz de:</p>'
+        bullets: [
+          'Configurar Hibernate en el contexto de una aplicación basada en Spring',
+          'Crear eficientemente mapeos object/relational con Hibernate',
+          'Utilizar Spring para facilitar las sesiones de Hibernate, así como las transacciones y el manejo de excepciones',
+          'Utilizar Hibernate con Spring y comprender temas de arquitectura fundamentales',
+          'Saber cómo y cuándo utilizar partes de Spring Framework'
+        ]
+      syllabus:
+        'Spring Framework Foundations': [
+          'Introducción a Spring',
+          'Usar Spring para configurar una aplicación',
+          'Simplificar la configuración de aplicaciones',
+          'Inyección de dependencias basada en anotaciones',
+          'Simplificar el acceso a datos basado en JDBC con Spring',
+          'Manejar transacciones de bases de datos usando Spring'
+        ]
+        'Hibernate ORM': [
+          'Introducción a object/relational mapping (ORM)',
+          'Empezar con Hibernate en un entorno con Spring',
+          'Utilizar anotaciones JPA y XML de Hibernate',
+          'Herencia: consideraciones y "trade-offs"',
+          'Definir tipos propios como Value Objects',
+          'Usar consultas: HQL, criteria API, nativo (SQL)',
+          'Hibernate en aplicaciones web: abrir sesión en la vista',
+          'Utilizar los diferentes mapeos de collecciones Java',
+          'Usar joins y componentes que profundizan en el mapeo de la clase a la tabla'
+        ]
+        'Hibernate Internals y configuración': [
+          'Trabajar con los objetos de Hibernate',
+          'Lazy loading y detached objects',
+          'Bloqueo optimista y pesimista',
+          'Mezclar Hibernate y JDBC',
+          'Performance tuning',
+          'Características avanzadas: interceptores, generación del schema, cacheo, batching'
+        ]
+  GroovyAndGrails:
+    title: 'Groovy & Grails'
+    shortDesc: 'Este curso está diseñado para enseñar desde los conceptos más básicos hasta los aspectos más potentes de Groovy and Grails.'
+    desc: '<p>Se trata de un curso intensivo de 4 días para mostrar Groovy and Grails ver detalle. Después de una introducción a la tecnlogía, a los estudiantes se les enseñan muchos aspectos avanzados del lenguaje de programación Groovy y del framework de capa web Grails. Este curso está diseñado para enseñar desde los aspectos más básicos hasta los aspectos más potentes de Groovy and Grails.</p><p>Los estudiantes deben esperar un curso intenso, con laboratorios prácticos e interactivos.</p>'
+    discounts:
+      registrations: "<b>Registro múltiple:</b> 10% por dos inscritos, 15% por tres o más inscritos."
+      extremaAlumni: "<b>Miembros de extrema-alumni:</b> 15% de descuento."
+    details:
+      duration: 32 horas
+      language: Este curso está disponible en Inglés e Italiano.
+      audience: 'Desarrolladores, arquitectos'
+      requirements: 'Experiencia desarrollando aplicaciones Java'
+      objectives:
+        intro: '<p>Al final del curso:</p>'
+        bullets: [
+          'Tendrás conocimiento del lenguaje de programación Groovy y el framework Grails',
+          'Conocerás todo lo necesario para el desarrollo de aplicaciones, desde la capa web hasta la de persistencia',
+          'Entenderás las mejores prácticas claves para el desarrollo de aplicaciones de alta calidad'
+        ]
+      after:
+        intro: '<p>Serás capaz de hacer lo siguiente:</p>'
+        bullets: [
+          'Usar Groovy para desarrollar aplicaciones.',
+          'Integración con Java.',
+          'Usar Groovy para añadir funcionalidad dinámicamente.',
+          'Usar Grails para el desarrollo web y la persistencia.',
+          'Asegurar la calidad de tus aplicaciones Grails a través de tests unitarios y de integración.',
+          'Usar los mecanismos de scaffolding básicos para construir aplicaciones robustas.'
+        ]
+      syllabus:
+        'Groovy': [
+          'Introducción a Groovy',
+          'Instalación y herramientas',
+          'Groovy Beans',
+          'Fundamentos básicos del lenguaje',
+          'Collections y Closures',
+          'APIs e integración con Java'
+        ]
+        'Groovy avanzado': [
+          'Metaprogramación con Groovy',
+          'Groovy Annotations y AST',
+          'Construyendo DSLs con Groovy',
+          'Testing con Groovy'
+        ]
+        'Desarrollando aplicaciones empresariales con Grails': [
+          'Introducción a Grails',
+          'Grails, instalación y quick start',
+          'GORM',
+          'GORM Avanzado: conceptos avanzados de Modeling y Querying',
+          'Testear componentes de Grails'
+        ]
+        'Controladores, Vistas, Servicios y Plug-ins': [
+          'Controladores Grails',
+          'GSP, Tag Libraries y plantillas GSP',
+          'Gestión de formularios y procesamiento AJAX',
+          'Servicios y transacciones con Grails',
+          'Grails Plug-ins'
         ]

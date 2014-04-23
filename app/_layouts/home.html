@@ -8,11 +8,13 @@ customScript: home.min.js
     <h1 class="ext-h">{% t training.title %}</h1>
   </hgroup>
   <div class="row-fluid">
-    <div class="span5">
+    <div class="span12">
       <h2 class="ext-h2">{% t training.desc %}</h2>
     </div>
-    <ul class="thumbnails row-fluid courses-home span7">
-      <li data-course-title="{% t courses.HTML5.title %}" class="span6 html5-home">
+  </div>
+  <div class="row-fluid">
+    <ul class="thumbnails row-fluid courses-home span12">
+      <li data-course-title="{% t courses.HTML5.title %}" class="span4 html5-home">
         <div class="html5-thumb home-thumb">
           <a href="{{site.baseurl}}courses#html5-training" class="thumbnail">
             <div class="caption">
@@ -22,12 +24,22 @@ customScript: home.min.js
           </a>
         </div>
       </li>
-      <li data-course-title="Spring" class="span6 spring-home">
+      <li data-course-title="Spring" class="span4 spring-home">
         <div class="spring-thumb home-thumb">
           <a href="{{site.baseurl}}courses#spring-training" class="thumbnail">
             <div class="caption">
               <h4>Spring</h4>
               <p>{% t courses.Spring.desc %}</p>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li data-course-title="{% t courses.GroovyAndGrails.title %}" class="span4 groovy-and-grails-home">
+        <div class="groovy-and-grails-thumb home-thumb">
+          <a href="{{site.baseurl}}courses#groovy-and-grails-training" class="thumbnail">
+            <div class="caption">
+              <h4>{% t courses.GroovyAndGrails.title %}</h4>
+              <p>{% t courses.GroovyAndGrails.shortDesc %}</p>
             </div>
           </a>
         </div>

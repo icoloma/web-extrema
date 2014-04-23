@@ -16,18 +16,7 @@
     {% include course-objectives.html i18nRoot=details %}
   </section>
   <section class="span6">
-    <h2>{% t Syllabus %}</h2>
     {% capture syllabus %}{{ include.i18nRoot }}.details.syllabus{% endcapture %}
-    {% t syllabus %}
-    <ol>
-      {% for i in syllabus_list %}
-        <li>{{i[0]}}</li>
-        <ul class="bullets">
-        {% for j in i[1] %}
-          <li>{{j}}</li>
-        {% endfor %}
-        </ul>
-      {% endfor %}
-    </ol>
+    {% include syllabus.html syllabus=syllabus %}
   </section>
 </div>

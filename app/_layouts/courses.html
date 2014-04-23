@@ -10,6 +10,9 @@ customScript: training.min.js
     <li>
       <a href="#spring-training" data-toggle="tab" class="course-pill-a">Spring</a>
     </li>
+    <li>
+      <a href="#groovy-and-grails-training" data-toggle="tab" class="course-pill-a">Groovy &amp; Grails</a>
+    </li>
   </ul>
 </nav>
 <div id="courses-content" class="tab-content">
@@ -26,15 +29,27 @@ customScript: training.min.js
   <section id="spring-training" class="row-fluid tab-pane">
     <div class="span8">
       <div class="courses-list">
-        {% include course-item.html i18nRoot='courses.SpringCore' url='courses/spring-core' scheduleUrl='http://mylearn.vmware.com/portals/www/search/results.cfm?hostID=614&amp;subjectID=17750' spring=true %}
+        {% include course-item.html i18nRoot='courses.HibernateWithSpring' url='courses/hibernate-with-spring' scheduleUrl='http://mylearn.vmware.com/portals/www/search/results.cfm?hostID=614&amp;subjectID=18355' %}
 
-        {% include course-item.html i18nRoot='courses.SpringWeb' url='courses/spring-web' scheduleUrl='http://mylearn.vmware.com/portals/www/search/results.cfm?hostID=614&amp;subjectID=33053' spring=true %}
+        {% include course-item.html i18nRoot='courses.SpringCore' url='courses/spring-core' scheduleUrl='http://mylearn.vmware.com/portals/www/search/results.cfm?hostID=614&amp;subjectID=17750' hasCertification=true %}
 
-        {% include course-item.html i18nRoot='courses.SpringEnterprise' url='courses/spring-enterprise' scheduleUrl='http://mylearn.vmware.com/portals/www/search/results.cfm?hostID=614&amp;subjectID=17833' spring=true %}
+        {% include course-item.html i18nRoot='courses.SpringWeb' url='courses/spring-web' scheduleUrl='http://mylearn.vmware.com/portals/www/search/results.cfm?hostID=614&amp;subjectID=33053' hasCertification=true %}
+
+        {% include course-item.html i18nRoot='courses.SpringEnterprise' url='courses/spring-enterprise' scheduleUrl='http://mylearn.vmware.com/portals/www/search/results.cfm?hostID=614&amp;subjectID=17833' hasCertification=true %}
       </div>
     </div>
     <div class="span4">
       {% include course-details.html price='1975' hours='32' i18nRoot='courses.Spring.discounts' spring='true' %}
+    </div>
+  </section>
+  <section id="groovy-and-grails-training" class="row-fluid tab-pane">
+    <div class="span8">
+      <div class="courses-list">
+        {% include course-item.html i18nRoot='courses.GroovyAndGrails' url='courses/groovy-and-grails' scheduleUrl='http://mylearn.vmware.com/portals/www/search/results.cfm?hostID=614&amp;subjectID=0' %}
+      </div>
+    </div>
+    <div class="span4">
+      {% include course-details.html price='1995' hours='32' i18nRoot='courses.GroovyAndGrails.discounts' %}
     </div>
   </section>
 </div>

@@ -8,7 +8,7 @@
     <a href="{{ include.scheduleUrl }}" target="_blank" class="btn btn-success btn-large">{% t courses.available %}</a>
     <a href="{{site.baseurl}}contact" class="more-info">» {% t MoreInfo %}</a>
   </nav>
-  {% if include.spring %}
+  {% if include.hasCertification %}
     <aside class="voucher voucher-spring">
       {% capture voucher %}{{ include.i18nRoot }}.voucher{% endcapture %}
       {% t {{ voucher }} %}

@@ -75,7 +75,7 @@ module.exports = function (grunt) {
       styles: {
         // Which files to watch (all .less files recursively in the less directory)
         files: ['<%= yeoman.app %>/less/**/*.less'],
-        tasks: ['less', 'autoprefixer:server'],
+        tasks: ['buildCss', 'autoprefixer:server'],
         options: {
           nospawn: true
         }
@@ -123,6 +123,7 @@ module.exports = function (grunt) {
           dot: true,
           src: [
             '.tmp',
+            '<%= yeoman.cssPath %>/*',
             '<%= yeoman.dist %>/*',
             // Running Jekyll also cleans the target directory.  Exclude any
             // non-standard `keep_files` here (e.g., the generated files
@@ -133,6 +134,7 @@ module.exports = function (grunt) {
       },
       server: [
         '.tmp',
+        '<%= yeoman.cssPath %>/*',
         '<%= yeoman.jekyll %>'
       ]
     },
@@ -318,7 +320,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           dot: true,
-          cwd: '<%= yeoman.app %>/css',
+          cwd: '<%= yeoman.cssPath %>',
           src: '**/*.css',
           dest: '.tmp/css'
         }]
@@ -357,7 +359,7 @@ module.exports = function (grunt) {
       },
       check: {
         src: [
-          '<%= yeoman.app %>}/css/**/*.css'
+          '<%= yeoman.cssPath %>/**/*.css'
         ]
       }
     },
@@ -382,6 +384,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'concurrent:server',
+      'buildCss',
       'autoprefixer:server',
       'connect:livereload',
       'watch'
@@ -400,6 +403,12 @@ module.exports = function (grunt) {
   //   'connect:test'
   ]);
 
+  grunt.registerTask('buildCss', [
+    'less',
+    'concat',
+    'cssmin'
+  ]);
+
   grunt.registerTask('check', [
     'clean:server',
     'jekyll:check',
@@ -413,11 +422,9 @@ module.exports = function (grunt) {
     // Jekyll cleans files from the target directory, so must run first
     'jekyll:dist',
     'concurrent:dist',
-    'less',
     'useminPrepare',
-    'concat',
     'autoprefixer:dist',
-    'cssmin',
+    'buildCss',
     'uglify',
     'imagemin',
     'svgmin',

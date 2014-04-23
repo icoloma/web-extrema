@@ -1,0 +1,12 @@
+<h2>{% t Syllabus %}</h2>
+{% t include.syllabus %}
+<ol>
+  {% for i in syllabus_list %}
+    <li>{{i[0]}}</li>
+    <ul class="bullets">
+    {% for j in i[1] %}
+      <li>{{j}}</li>
+    {% endfor %}
+    </ul>
+  {% endfor %}
+</ol>

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo npm install -g grunt-cli
+sudo apt-get install ruby1.9.1-dev
+sudo gem install bundler
+bundle install

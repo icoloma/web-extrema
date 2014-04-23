@@ -36,6 +36,7 @@ discounts:
   notCumulative: Gli sconti non sono cumulativi.
 GetInfo: Per conoscere gli sconti disponibili secondo il numero di partecipanti o per organizzare un corso in-house non esiti a contattarci a <a href="mailto:training@extrema-sistemas.com">training@extrema-sistemas.com</a>.
 Phone: Telefono
+Spain: Spagna
 Italy: Italia
 emailTo: Scrivi a
 Address: Indirizzo
@@ -245,7 +246,7 @@ courses:
           'Integrazione di vari sistemi di applicazioni, includendo servizi gestiti da Spring, OSGi e Servizi Web.'
         ]
   SpringEnterprise:
-    title: Enterprise Integration with Spring (NUOVO)
+    title: Enterprise Integration with Spring
     desc: "<p>Durante questo corso di quattro giornate si vedranno gli aspetti e le tecnologie di maggior rilievo relazionati con l'integrazione di applicazioni in ambito impresariale.</p><p>Si mostrerá come applicare Spring per dare soluzione ai problemi di integrazione con i quali gli sviluppatori si imbattono nel lato server.</p>"
     voucher: "<p>Alla fine del corso, ogni partecipante riceverá un voucher che gli permetterá di pianificare e realizzare l'esame di certificazione per ottenere il titolo &quot;SpringSource Certified Spring Enterprise Integration Specialist&quot;.</p>"
     details:
@@ -359,4 +360,111 @@ courses:
           'Jobs: Esecuzione parallela e scalabilità.',
           'Steps: Esecuzione parallela e Multi-thread.',
           'Partizionamento.'
+        ]
+  HibernateWithSpring:
+    title: Hibernate con Spring (NUOVO)
+    desc: '<p>In questo corso di 3 giorni, imparerete come utilizzare Hibernate e Spring per la realizzazione di applicazioni data-driven. Il training mostrerà come utilizzare la configurazione XML e come utilizzare quella basata sulle annotazioni, sia per Hibernate che per Spring.</p><p>Attraverso questo training, apprenderete come trarre il massimo beneficio dalle esperienze e dalle conoscenze del nostro team di esperti. Vi trasmetteremo la nostra esperienza immergendovi in un contesto altamente interattivo.</p><p class="alert alert-success"><b>Prezzo:</b> 1695 EUR - 24 ore</p>'
+    details:
+      desc:
+        intro: '<p>In questo corso di 3 giorni, imparerete come utilizzare Hibernate e Spring per la realizzazione di applicazioni data-driven. Il training mostrerà come utilizzare la configurazione XML e come utilizzare quella basata sulle annotazioni, sia per Hibernate che per Spring.</p><p>Attraverso questo training, apprenderete come trarre il massimo beneficio dalle esperienze e dalle conoscenze del nostro team di esperti. Vi trasmetteremo la nostra esperienza immergendovi in un contesto altamente interattivo.</p>'
+        bullets: []
+        final: ' '
+      duration: 24 ore
+      language: 'Corso disponibile in Italiano e Inglese'
+      audience: 'Tutti gli sviluppatori interessati all’utilizzo di Hibernate con Spring'
+      requirements: 'Saper realizzare applicazioni Java; Conoscenza di base di JDBC e dei concetti legati ai database relazionali'
+      objectives: 
+        intro: '<p>Al termine del training, sarete in grado di realizzare applicazioni basate su Spring ed Hibernate e sarete abili nel:</p>'
+        bullets: [
+          "Configurare Hibernate nel contesto di un'applicazione Spring",
+          "Creare, in modo efficiente, applicazioni basaste su ORM con Hibernate",
+          "Fare leva su Spring Framework per facilitare l’utilizzo delle sessioni di Hibernate, le transazioni e la gestione delle eccezioni",
+          "Utilizzare Hibernate con Spring e capirne le problematiche architetturali fondamentali",
+          "Capire come, e quando, utilizzare i componenti di Spring Framework per Hibernate"
+        ]
+      syllabus:
+        'Fondamenti di Spring Framework': [
+          'Introduzione a Spring',
+          "Utilizzare Spring per la configurazione di un'applicazione",
+          "Semplificare la configurazione di un'applicazione",
+          "Dependency Injection basata sulle annotazioni",
+          "Semplificare l’accesso ai dati basato su JDBC con Spring",
+          "Come utilizzare le transazioni in ambiente Spring"
+        ]
+        "Utilizzo dell'ORM con Hibernate": [
+          'Introduzione all’ Object-to-Relational Mapping (ORM)',
+          'Iniziare ad utilizzare Hibernate in ambiente Spring',
+          'Utilizzare le annotazioni JPA ed Hibernate XML',
+          'Ereditarietà: Considerazioni e “trade-offs”',
+          'Utilizzare user-types personalizzati per Value Objects',
+          'Utilizzare le query: HQL, criteria API, SQL (native)',
+          'Hibernate nelle applicazioni web: Open Session in View',
+          'Vari modi di utilizzo del mapping per le Java Collections',
+          'Utilizzare le Join ed i componenti per superare i limiti del mapping tra tabella ed oggetto'
+        ]
+        'Hibernate Internals e Configurazione': [
+          'Lavorare con gli oggetti di Hibernate',
+          'Lazy loading ed oggetti detached',
+          'Locking ottimistico e pessimistico',
+          'Mixing di Hibernate e JDBC',
+          'Tuning delle performance',
+          'Advanced features: Interceptors, generazione dello schema, caching, batching'
+        ]
+  GroovyAndGrails:
+    title: 'Groovy & Grails'
+    shortDesc: 'Questo training è progettato per far muovere rapidamente i team al di là delle nozioni di base e gli aspetti più potenti di Groovy e Grails.'
+    desc: '<p>Questa formazione intensiva di quattro giorni presenta Groovy e Grails in dettaglio. Dopo una approfondita introduzione alla tecnologia, gli studenti vengono portati attraverso gli aspetti avanzati del linguaggio di programmazione Groovy e il Grails web application framework. Questo training è progettato per far muovere rapidamente i team al di là delle nozioni di base e gli aspetti più potenti di Groovy e Grails.</p><p>Gli studenti affronteranno un laboratorio intenso, altamente pratico e interattivo.</p>'
+    discounts:
+      registrations: "<b>Registro multiplo:</b> 10% per due iscritti, 15% per tre o più iscritti"
+      extremaAlumni: "<b>Membri di extrema-alumni:</b> 15% di sconto"
+    details:
+      duration: 32 ore
+      language: Corso disponibile in Italiano ed Inglese.
+      audience: 'Sviluppatori, architetti'
+      requirements: 'Esperienza nello sviluppo di applicazioni Java'
+      objectives:
+        intro: '<p>Al termine di questo training sarete in grado di:</p>'
+        bullets: [
+          'Comprendere il linguaggio di programmazione Groovy ed il framework Grails ad esso associato',
+          'Avere conoscenza di tutti i concetti del core, dal web al persistence layer',
+          'Capire quali sono, nello sviluppo, i punti chiave e le best practices da applicare per la realizzazione di applicazioni di alta qualità'
+        ]
+      after:
+        intro: '<p>Sarete in grado di applicare:</p>'
+        bullets: [
+          "Groovy per scrivere i programmi",
+          "L’integrazione con Java",
+          "Uso di Groovy per aggiungere funzionalità dinamiche",
+          "Uso di Grails per lo sviluppo del web e del persistence layer",
+          "Assicurare l’affidabilità delle applicazioni Grails tramite i test di unità ed integrazione",
+          "Andare al di là dei meccanismi basici di scaffolding per la creazione di applicazioni solide e robuste"
+        ]
+      syllabus:
+        'Il linguaggio Groovy': [
+          'Introduzione a Groovy',
+          'Tools ed installazione',
+          'Groovy Beans',
+          'I fondamentali del linguaggio',
+          'Closures e Collections',
+          'Miscellanea per API ed interoperabilità Java'
+        ]
+        'Advanced Groovy': [
+          'Groovy Metaprogramming',
+          'Annotazioni Groovy e AST',
+          'Creare Domain Specific Languages con Groovy',
+          'Testing con Groovy'
+        ]
+        'Sviluppo di applicazioni enterprise con Grails': [
+          'Introduzione a Grails',
+          'Grails, installazione e quick start',
+          'GORM basics',
+          'Advanced GORM: concetti avanzati per Modeling e Querying',
+          'Testing dei componenti con Grails'
+        ]
+        'Controllers, Views, Services e Plug-ins': [
+          'Grails Controllers',
+          'GSP, Tag Libraries e GSP Templates',
+          'Gestione delle Form e AJAX processing',
+          'Grails Services e le transazioni',
+          'Grails Plug-Ins'
         ]
