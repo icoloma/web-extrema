@@ -21,7 +21,7 @@ studies:
     desc: "Durante questo progetto di sei mesi si formó da zero un team senza alcuna precedente esperienza in Java. Il progetto consisteva nello sviluppo di un prodotto per il controllo del traffico marittimo con allarmi di collisione ed integrazione di sistemi di detezione in tempo reale (radar, video, goniometro, etc). La piattaforma integra archivi noSQL con piattaforma multithreading basata su Java e attualmente sta scalando per controllare l'intero traffico marittimo di un Paese europeo."
   Banco de España:
     title: Architettura per sviluppo di applicazioni
-    desc: "Durante questo progetto, peraltro attualmente in corso, della durata di sei mesi stiamo aggiornando l'architettura per applicazioni in sistemi distribuiti di Banco de España ad un sistema basato su Spring. Questo progetto comprende un team di sei architetti, due della banca e quattro esterni."
+    desc: "Durante questo progetto della durata di sei mesi, abbiamo aggiornato l'architettura per applicazioni in sistemi distribuiti di Banco de España ad un sistema basato su Spring. Questo progetto ha coinvolto un team di sei architetti, due della banca e quattro esterni."
   BBVA:
     title: Piattaforma di E-banking
     desc: "Sviluppo della piattaforma di e-banking per il settore private bank di BBVA. Questo progetto comprende lo sviluppo completo di un front-end web che dá accesso ai prodotti acquistati dall'utente, includendo rapporti sulle posizioni del portfolio in tempo reale. Il prodotto finale comprende l'integrazione di una piattaforma di sicurezza completa basata su sistemi di autenticazione di ultima generazione nel back-end della banca."

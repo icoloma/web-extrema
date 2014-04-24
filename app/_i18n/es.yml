@@ -21,7 +21,7 @@ studies:
     desc: Durante este proyecto de seis meses se formó desde cero un equipo para desarrollar un producto de control de tráfico marítimo con alertas (colisión, zonas de peligro, etc) e integración de sistemas de detección en tiempo real (radares, video, goniómero, etc). La plataforma integra fuentes de datos noSQL con plataforma multithreading basada en Java, y actualmente está escalando para controlar la totalidad del tráfico marítimo de un país europeo.
   Banco de España:
     title: Arquitectura para desarrollo de aplicaciones
-    desc: Durante este proyecto de seis meses se está actualizando la arquitectura para aplicaciones en sistemas distribuidos de Banco de España a un sistema basado en arquitectura Spring. Este proyecto se encuentra todavía en curso y el equipo incluye seis arquitectos, dos de ellos de la entidad.
+    desc: Durante este proyecto de seis meses se actualizó la arquitectura para aplicaciones en sistemas distribuidos de Banco de España a un sistema basado en arquitectura Spring. El equipo de este proyecto incluyó seis arquitectos, dos de ellos de la entidad.
   BBVA:
     title: Plataforma de E-banking
     desc: Desarrollo de plataforma de e-banking para el sector de banca privada de BBVA. Este proyecto incluye el desarrollo completo de un front-end web que da acceso a los productos contratados por el usuario, incluyendo informes en tiempo real de las posiciones de portfolio. El producto final incluye la integración de una compleja plataforma de seguridad basada en sistemas de autenticación de última generación en el back-end del banco.

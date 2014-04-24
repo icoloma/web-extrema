@@ -21,7 +21,7 @@ studies:
     desc: A team was created from scratch for this six-month project to develop a system that could control  the maritime traffic of a city in Europe, including 20+ different types of navigation alarms (hazards, colisions, restricted areas) and the integration of multiple detection systems in real time (radar, video, goniometer..). The platform integrates a NoSQL data store with a multithreading Java platform, and is actually scaling up to control the entire coast of an European country.
   Banco de España:
     title: Architecture for application development
-    desc: During this one-year project which is still ongoing, we are modifying the architecture for application development of distributed systems to migrate existing systems to a Spring-based platform. This project includes a team of six architects, two of them from the bank.
+    desc: During this one-year project, we modified the architecture for application development of distributed systems to migrate existing systems to a Spring-based platform. This project included a team of six architects, two of them from the bank.
   BBVA:
     title: E-banking platform
     desc: Development of the e-banking platform for the private banking branch of BBVA. This project includes the full development of a web front end that enables access to the user assets, including real-time reports of portfolio positions. The final product includes the integration of a complex security platform based on state-of-the-art authentication systems in the back-end.
