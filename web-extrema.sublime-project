@@ -1,0 +1,26 @@
+{
+  "build_systems":
+  [
+    {
+      "cmd":
+      [
+        "bin/compile"
+      ],
+      "name": "Gulp",
+      "selector": "source.scss, source.js, source.jade, source.json",
+      "working_dir": "${project_path}"
+    }
+  ],
+	"folders":
+	[
+		{
+			"path": "../web-extrema"
+		}
+	],
+	"settings":
+    {
+        "tab_size": 2,
+        "translate_tabs_to_spaces": true,
+        "word_wrap": "true"
+    }
+}

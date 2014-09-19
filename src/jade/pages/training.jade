@@ -1,0 +1,106 @@
+extends ../_layouts/default
+block content
+  section
+    dl.tabs(data-tab, data-options="deep_linking:true")
+      dd.tab-title.active
+        a(href="#data") Courses
+      dd.tab-title
+        a(href="#scheduler") Scheduler
+    div.tabs-content
+      div.content.active(id="data")
+        dl.tabs.nested(data-tab, data-options="deep_linking:true")
+          dd.tab-title.active
+            a(href="#google") Google
+          dd.tab-title
+            a(href="#html5") HTML5
+          dd.tab-title
+            a(href="#spring") Spring
+          dd.tab-title
+            a(href="#groovy-and-grails") Groovy &amp; Grails
+        div.tabs-content
+          mixin course(title, desc, contentUrl, price, duration, certDesc)
+            article.course-item.row(itemscope, itemtype="http://schema.org/Product")
+              h1.course-h.column.small-12(itemprop="name") #{title}
+              div.column.small-12.medium-6
+                div(itemprop="description")
+                  != desc
+                if certDesc
+                  p.bullet-item.certification 
+                    span.icon.icon-star 
+                    != certDesc
+                p
+                  small 
+                    a(href="/" + currentLang + "/contact") » #{askForMoreInfo}
+                nav
+                  a.button.tiny.radius(href="/" + currentLang + "/courses/" + contentUrl, itemprop="url") #{courseContents}
+                  a.button.tiny.radius.secondary(href="https://www.koliseo.com/extrema/" +contentUrl, target="_blank", itemprop="url") #{availableCourses}
+              aside.show-for-small-only
+                div.column.small-6
+                  ul.pricing-table
+                    li.title #{details}
+                    li.price #{price} EUR
+                    li.bullet-item #{duration}
+                    li.bullet-item #{VATexempt}
+                div.column.small-6
+                  ul.pricing-table
+                    li.title #{Discounts}
+                    li.bullet-item 
+                      != multipleRegistrations
+                    li.bullet-item
+                      != extremaAlumni
+                    li.description #{discountsNotCumulative}
+                    if currentLang != 'it'
+                      li.bullet-item.clearfix
+                        img.tripartita(src="/img/tripartita.jpg",alt="#{tripartita}")
+                        span.column #{tripartita}
+              aside.column.medium-6.show-for-medium-up(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
+                ul.pricing-table
+                  li.title #{details}
+                  li.price 
+                    span(itemprop="price") #{price} 
+                    =" "
+                    span(itemprop="priceCurrency") EUR
+                  li.bullet-item #{duration}
+                  li.bullet-item #{VATexempt}
+                  li.bullet-item 
+                    != multipleRegistrations
+                  li.bullet-item
+                    != extremaAlumni
+                  li.description #{discountsNotCumulative}
+                  if currentLang != 'it'
+                    li.bullet-item.clearfix
+                      img.tripartita(src="/img/tripartita.jpg",alt="#{tripartita}")
+                      span.column #{tripartita}
+          div.content.active(id="google")
+            +course("Official Google Cloud Platform Qualification Course", gcpDesc, "google-cloud-platform", 2000, gcpDuration)
+          div.content(id="html5")
+            +course(html5Title, html5Desc, "html5-and-css3", 900, html5Duration)
+          div.content(id="spring")
+            +course(hibernateWithSpringTitle, hibernateWithSpringDesc, "hibernate-with-spring", 1695, hibernateWithSpringDuration)
+            hr
+            +course(springCoreTitle, springCoreDesc, "spring-core", 1975, springCoreDuration, springCoreVoucher)
+            hr
+            +course(springWebTitle, springWebDesc, "spring-web", 1975, springWebDuration, springWebVoucher)
+            hr
+            +course("Enterprise Integration with Spring", eiwsDesc, "enterprise-integration-with-spring", 1975, eiwsDuration, eiwsVoucher)
+          div.content(id="groovy-and-grails")
+            +course("Groovy & Grails", grailsDesc, "groovy-and-grails", 1995, grailsDuration)
+      div.content(id="scheduler")
+        .row
+          .columns
+            fieldset.filter-fieldset
+              legend Course
+              ul.inline-list.filter.course-filter
+                mixin item(title, url)
+                  li
+                    a.label.secondary(data-course=url) #{title}
+                +item('Spring Core', 'spring-core')
+              //  +item("Google Cloud Platform", 'google-cloud-platform')
+                +item(html5Title, 'html5-and-css3')
+                +item('Spring Core', 'spring-core')
+                +item('Spring Web', 'spring-web')
+                +item("Enterprise Integration with Spring", 'enterprise-integration-with-spring')
+                +item("Groovy & Grails", 'groovy-and-grails')
+        div(id="kcontainer")
+block customScripts
+  script(src="http://www.koliseo.com/w/kperf/1.0/kperf.min.js")

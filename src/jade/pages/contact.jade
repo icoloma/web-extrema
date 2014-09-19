@@ -1,0 +1,54 @@
+extends ../_layouts/default
+block content
+  div.row.section
+    hgroup.column
+      h1 #{Contact}
+    hr
+    div(itemscope, itemtype="http://schema.org/Organization")
+      meta(itemprop="name" content="Extrema Sistemas S.L.")
+      section.small-12.medium-6.column
+        h2 #{Spain}
+        p
+          b 
+            = "E-mail: "
+          a(href="mailto:info@extrema-sistemas.com",
+            title=emailTo + ": info@extrema-sistemas.com", 
+            itemprop="email") info@extrema-sistemas.com
+        p
+          b 
+            = Phone + ": " 
+          a(itemprop="telephone", href="tel:0034911239108") 0034 91 123 9108
+        address(itemprop="address",
+                itemscope="",
+                itemtype="http://schema.org/PostalAddress")
+          p.address Extrema Sistemas S.L.
+          p.address(itemprop="streetAddress") C/Casas de Miravete 24A
+          p.address
+            span(itemprop="postalCode") 28031
+            = " "
+            span(itemprop="addressCountry") Madrid
+          p.address
+            a(href="http://goo.gl/maps/3nDy") » #{seeInGoogleMaps}
+      section.small-12.medium-6.column
+        h2 #{Italy}
+        p
+          b 
+            = "E-mail: "
+          a(href="mailto:italy@extrema-sistemas.com",
+            title=emailTo + ": italy@extrema-sistemas.com",
+            itemprop="email") italy@extrema-sistemas.com
+        p
+          b 
+            = Phone + ": "
+          a(itemprop="telephone", href="tel:00393289366640") 0039 328 93 66 640
+    hr
+    div.column
+      section.right
+        a(href="http://blog.extrema-sistemas.com", target="_blank", title="Blog")
+          span.icon-round.icon-box
+        a(href="http://twitter.com/extremasistemas", target="_blank", title="Twitter")
+          span.icon-round.icon-twitter
+      section
+        h2 #{joinTeamTitle}
+        p #{joinTeamDesc}: 
+          a(href="mailto:info@extrema-sistemas.com", title="#{sendCV}: info@extrema-sistemas.com") info@extrema-sistemas.com

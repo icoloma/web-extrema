@@ -1,0 +1,44 @@
+extends default
+mixin course(data)
+  div.section(itemscope, itemtype="http://schema.org/Product")
+    a(href="/" + currentLang + "/training#" + data.tab).button.tiny.radius.right #{backToCourses}
+    h1(itemprop="name") #{data.title}
+    if data.desc
+      hr
+      div(itemprop="description")
+        != data.desc
+    hr
+    div.row
+      dl.column.small-12.medium-7
+        dt #{Duration}:
+        dd #{data.duration}
+        dt #{Language}:
+        dd #{data.language}
+        dt #{Audience}:
+        dd #{data.audience}
+        dt #{Requirements}:
+        dd #{data.requirements}
+      div.small-12.medium-5.column
+        metadata(itemprop="url", content="https://www.koliseo.com/carlos-coloma/spring-core")
+        div.kcontainer.text-center(data-locale=currentLang, data-event-uuid="carlos-coloma/spring-core")
+        
+    hr
+    div.row
+      section.column.small-12.medium-6
+        h2 #{Objectives}
+        != data.objectives
+        if data.syllabus 
+          if data.afterCompleting
+            h2 #{afterCompleting}
+            != data.afterCompleting  
+      section.column.small-12.medium-6
+        if data.syllabus
+          h2 #{Syllabus}
+          != data.syllabus
+        else
+          if data.afterCompleting
+            h2 #{afterCompleting}
+            != data.afterCompleting
+
+block customScripts
+  script(src="http://www.koliseo.com/w/kperf/1.0/kperf.min.js")

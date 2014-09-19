@@ -1,0 +1,12 @@
+footer.show-for-small-only
+  div.small-12
+    ul.footer-block-list
+      - tabs = { Home: '', Training: 'training', Solutions: 'solutions', Contact: 'contact' }
+      each link, key in tabs
+        li
+          a(href="/" + currentLang + "/" + link) #{key}
+  div.small-12
+    ul.footer-inline-list
+      each name, path in langs
+        li(class=currentLang == path? "active" : "")
+          a.nav-link(href="/" + path + "/" + currentTab) #{name}

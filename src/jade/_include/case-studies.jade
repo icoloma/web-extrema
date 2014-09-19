@@ -1,0 +1,12 @@
+ul.unstyled.case-studies
+  mixin study(title, image, desc)
+    li.clearfix
+      div.column.small-3
+        img(src="/img/" + image, alt=title title=title)
+      div.column.small-9
+        != desc
+  +study("Aena", "logo-aena.png", AenaDesc)
+  +study("Indra", "logo-indra.png", IndraDesc)
+  +study("Banco de España", "logo-banco-espana.gif", BdeDesc)
+  +study("BBVA", "logo-bbva.png", BBVADesc)
+  +study("ONU", "logo-onu.gif", ONUDesc)

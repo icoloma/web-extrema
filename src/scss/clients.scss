@@ -1,0 +1,52 @@
+span[class^=client-] {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 50px;
+  width: 100px;
+  text-indent: 110%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-image: url(/img/clients.png);
+  background-size: 1300px;
+  background-repeat: no-repeat;
+}
+
+.client-iberdrola {
+  background-position: 0 0
+}
+.client-bbva { 
+  background-position: -100px 0
+}
+.client-movistar {
+  background-position: -200px 0
+}
+.client-carrefour {
+  background-position: -300px 0
+}
+.client-mapfre {
+  background-position: -400px 0
+}
+.client-corteingles {
+  background-position: -500px 0
+}
+.client-accenture {
+  background-position: -600px 0
+}
+.client-atos {
+  background-position: -700px 0
+}
+.client-aena {
+  background-position: -800px 0
+}
+.client-indra {
+  background-position: -900px 0
+}
+.client-icm {
+  background-position: -1000px 0
+}
+.client-united-nations {
+  background-position: -1100px 0
+}
+.client-bde {
+  background-position: -1200px 0
+}

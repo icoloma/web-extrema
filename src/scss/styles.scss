@@ -1,0 +1,296 @@
+/*
+
+  Nuestros estilos
+
+*/
+
+$margin-small: 10px;
+$blue-light: #7da6c6;
+$footer-color: #555;
+$footer-link-color: white;
+$footer-link-hover-color: $footer-link-color;
+$footer-link-hover-background-color: #999;
+$black: #222;
+
+body {
+  color: $black;
+}
+
+.banner {
+  height: 10px;
+  background: #555;
+  background: repeating-linear-gradient(
+    -45deg,
+    $blue-light,
+    $blue-light 10px,
+    $extrema-blue 10px,
+    $extrema-blue 20px
+  );
+}
+
+.contain-to-grid .top-bar-section li:not(.has-form) a:not(.button),
+.contain-to-grid .top-bar,
+.contain-to-grid,
+.contain-to-grid .top-bar.expanded .title-area {
+  background: $extrema-blue;
+}
+
+.top-bar, .top-bar-section a, .contain-to-grid {
+  transition: background 1s ease-out;
+}
+
+.top-bar a {
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}
+.top-bar .toggle-topbar.menu-icon {
+  margin-top: -18px;
+}
+
+.contain-to-grid .top-bar-section li.active:not(.has-form) a:not(.button) {
+  background: #fff;
+  color: $extrema-blue;
+}
+
+.top-bar .title a {
+  font-size: $topbar-link-font-size;
+  text-transform: none;
+}
+
+.top-logo {
+  height: 32px;
+  text-indent: -1000px;
+  overflow: hidden;
+  background: url('../img/extrema.png') no-repeat 0 0;
+  background-size: contain;
+  margin-top: 20px;
+  margin-left: 15px;
+  float: left;
+  font-size: 32px;
+}
+
+.wrapper {
+  margin-bottom: 10px;
+  section, .section {
+    margin-top: 20px;
+  }
+}
+
+h1 {
+  color: $primary-color;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+ul.unstyled {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+ul.case-studies {
+  margin-top: 40px;
+  li {
+    margin-bottom: 40px;
+  }
+}
+
+.tabs {
+  .tab-title {
+    margin-right: 2px;
+    a {
+      @include radius(5px);
+      background: #fff;
+      color: $black;
+    }
+    &.active a {
+      background-color: $extrema-blue;
+      color: #fff;
+    }
+  }
+  &.nested .tab-title.active a {
+    background-color: $blue-light;
+  }
+}
+
+.training li:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+
+.partner, .certification {
+  background: rgba(129,164,44,0.3);
+  padding: 10px;
+
+  .icon {
+    color: rgb(129,164,44);
+  }
+}
+
+.training-container {
+  margin: 15px 0 0 0;
+  p {
+    color: $black;
+  }
+}
+
+.logo-container {
+  padding: 10px 0;
+}
+
+.training-logo {
+  padding: 10px 0;
+  width: 120px;
+}
+
+legend {
+  text-transform: uppercase;
+  font-size: 10px;
+  color: gray;
+}
+
+fieldset legend {
+  font-weight: 400;
+  background: #fff;
+  padding: 0 .1875rem;
+  margin: 0 0 0 -.1875rem;
+}
+
+.filter-fieldset {
+  padding: .2rem 1.25rem;
+  margin: 0 0 1rem; 
+}
+
+.filter {
+  margin: 10px 0 5px;
+  > li {
+    padding-bottom: 10px;
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
+
+.label {
+  -webkit-user-select: none; 
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;       
+  &:not(.secondary) {
+    color: white;
+  }
+}
+
+.button:not(:last-child) {
+  margin-right: 5px;
+}
+
+.tripartita {
+  width: 170px;
+  margin-bottom: 15px;
+}
+
+.address {
+  line-height: 1;
+}
+
+.icon-round {
+  border: 5px solid $primary-color;
+  padding: 10px;
+  @include radius(50%);
+  font-size: 20px;
+  margin-right: 5px;
+  @include single-transition(background-color, 0.25s, linear);
+  @include single-transition(border-color, 0.25s, linear);
+  &:hover, &:focus {
+    background-color: $primary-color;
+    color: white;
+  }
+  &.icon-box {
+    padding-right: 6px;
+  }
+}
+
+footer {
+  background: $footer-color;
+  font-weight: bold;
+}
+
+.footer-block-list, .footer-inline-list {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  li {
+    padding: 10px 0;
+    a, a:visited {
+      color: $footer-link-color;
+      font-size: 16px;
+    }
+    &:hover {
+      background: $footer-link-hover-background-color;
+      a {
+        color: $footer-link-hover-color;
+      }
+    }
+  }
+}
+
+.footer-inline-list {
+  li {
+    border-radius: 5px;
+    border: 2px solid $footer-color;
+    display: inline-block;
+    width: 33.3333%;
+    &.active {
+      background: $footer-link-hover-background-color;
+      a {
+        color: $footer-link-hover-color;
+      }
+    }
+  }
+}
+
+.bottom-logo {
+  display: block;
+  width: 230px;
+  height: 32px;
+  background: url('../img/extrema.png') no-repeat 0 0;
+  background-size: contain;
+  font-size: 24px;
+  text-indent: -1000px;
+}
+
+.cookie-container {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.cookie-permissions {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px #ddd solid;
+  overflow: hidden;
+  background: #eaf1f1;
+}
+
+@media only screen and (min-width: 40.063em) {
+  .training-container h4 {
+    text-align: left;
+  }
+  .consulting-desc {
+    line-height: 2em;
+  }
+  .wrapper section {
+    margin-top: 40px;
+  }
+}
