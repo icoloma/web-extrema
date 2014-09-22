@@ -1,13 +1,12 @@
 $(function() {
-  var $showBtn = $('.js-show-contents')
-    , $hideBtn = $('.js-hide-contents')
-    , $contents =$('.js-contents')
-    , change = function() {
-      $contents.toggleClass('hide');
-      $showBtn.toggleClass('hidden');
-      $hideBtn.toggleClass('hidden');
-    }
-  ;
-  $showBtn.click(change);
-  $hideBtn.click(change);
+  var change = function(e) {
+    var $this = $(e.target)
+      , $nav = $this.parent()
+    ;
+    $this.closest('article').find('.js-contents').toggleClass('hide');
+    $nav.find('.js-hide-contents').toggleClass('hidden');
+    $nav.find('.js-show-contents').toggleClass('hidden');
+  };
+  $('.js-show-contents').click(change);
+  $('.js-hide-contents').click(change);
 })

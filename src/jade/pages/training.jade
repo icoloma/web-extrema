@@ -34,9 +34,9 @@ block content
               ul.pricing-table
                 li.title #{Discounts}
                 li.bullet-item 
-                  != multipleRegistrations
+                  != (data.multipleRegistrations? data.multipleRegistrations : multipleRegistrations)
                 li.bullet-item
-                  != extremaAlumni
+                  != (data.extremaAlumni? data.extremaAlumni : extremaAlumni)
                 li.description #{discountsNotCumulative}
                 if currentLang != 'it'
                   li.bullet-item.clearfix
@@ -52,9 +52,9 @@ block content
               li.bullet-item #{data.duration}
               li.bullet-item #{VATexempt}
               li.bullet-item 
-                != multipleRegistrations
+                != (data.multipleRegistrations? data.multipleRegistrations : multipleRegistrations)
               li.bullet-item
-                != extremaAlumni
+                != (data.extremaAlumni? data.extremaAlumni : extremaAlumni)
               li.description #{discountsNotCumulative}
               if currentLang != 'it'
                 li.bullet-item.clearfix
@@ -76,7 +76,7 @@ block content
             div.kcontainer.text-center(data-locale=currentLang, data-event-uuid="carlos-coloma/spring-core")
           .small-12.column.section
 
-            .js-contents.hide
+            .js-contents.clearfix.hide
               hr
               section.column.small-12.medium-6
                 h2 #{Objectives}
@@ -123,7 +123,8 @@ block content
           objectives: html5Objectives,
           afterCompleting: html5AfterCompleting,
           audience: html5Audience,
-          requirements: html5Requirements
+          requirements: html5Requirements,
+          multipleRegistrations: html5MultipleRegistrations
         })
       div.content(id="spring")
         +course({
@@ -189,6 +190,7 @@ block content
           duration: grailsDuration,
           language: grailsLanguage,
           objectives: grailsObjectives,
+          afterCompleting: grailsAfterCompleting,
           syllabus: grailsSyllabus,
           audience: grailsAudience,
           requirements: grailsRequirements
