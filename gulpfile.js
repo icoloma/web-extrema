@@ -18,7 +18,7 @@ gulp.task('clean', function () {
     .pipe(clean({ force: true }));
 });
 
-gulp.task('copy-html', ['clean'], function () {
+gulp.task('copy-html', [], function () {
 
   var locals = ['en', 'it', 'es'];
 
@@ -83,12 +83,14 @@ gulp.task('styles', function () {
 });
 
 gulp.task('watch', ['styles'], function () {
-  // Watch .less files and run tasks if they change
-  gulp.watch(['src/scss/**/*.scss','src/img/**/*', 'src/js/**/*', './src/jade/**/*.jade', './src/i18n/*.json'], ['copy']);
+  gulp.watch(['src/jade/**/*.jade'], ['copy-html']);
+  gulp.watch(['src/scss/**/*.scss'], ['styles']);
+  gulp.watch(['src/js/**/*'], ['scripts']);
+  gulp.watch(['src/img/**/*', './src/i18n/*.json'], ['copy']);
 });
 
 // The dist task (used to store all files that will go to the server)
-gulp.task('dist', ['copy-html', 'copy', 'scripts', 'styles']);
+gulp.task('dist', ['clean', 'copy-html', 'copy', 'scripts', 'styles']);
 
 // The default task (called when you run `gulp`)
 gulp.task('default', ['dist', 'watch']);
