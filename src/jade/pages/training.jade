@@ -13,7 +13,7 @@ block content
           a.js-groovy-and-grails(href="#groovy-and-grails") Groovy &amp; Grails
     div.tabs-content
       mixin course(data)
-        article.course-item.row(itemscope, itemtype="http://schema.org/Product")
+        article.course-item.row(itemscope, itemtype="http://schema.org/Product", id=data.koliseoEvent)
           h1.column.small-12(itemprop="name") #{data.title}
           metadata(itemprop="url", content="http://extrema-sistemas.com/en/" + currentTab + "/#" + data.koliseoEvent)
           div.column.small-12.medium-6
@@ -42,7 +42,7 @@ block content
                   li.bullet-item.clearfix
                     img.tripartita(src="/img/tripartita.jpg",alt="#{tripartita}")
                     span.column #{tripartita}
-          aside.column.medium-6.show-for-medium-up(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
+          aside.column.medium-6.show-for-medium-up(itemprop="offers", itemscope, itemtype="http://schema.org/Offer")
             ul.pricing-table
               li.title #{details}
               li.price 
