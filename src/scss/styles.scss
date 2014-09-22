@@ -88,12 +88,17 @@ body {
 h1 {
   color: $primary-color;
   font-size: 40px;
-  font-weight: bold;
+  //font-weight: bold;
+  &> small {
+    display: block;
+    margin-top: 15px;
+    line-height: 1.2;
+  }
 }
 
 h2 {
   font-size: 28px;
-  font-weight: bold;
+  //font-weight: bold;
 }
 
 ul.unstyled {

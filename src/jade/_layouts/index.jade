@@ -3,8 +3,7 @@ block content
   section.clearfix
     hgroup
       h1 #{indexTrainingTitle}
-    div
-      h2 #{indexTrainingDesc}
+        small #{indexTrainingDesc}
     div
       ul.unstyled.training.small-12
         mixin courseArticle(href, logo, title, desc, partnerDesc)
@@ -21,19 +20,17 @@ block content
                       span.icon.icon-star 
                       | #{partnerDesc}  
         +courseArticle("google-cloud-platform", "gcp", "Google Cloud Platform", googleCloudPlatformDesc, googleTrainingPartner)
-        +courseArticle("html5-training", "html5", "HTML5 & CSS3", html5ShortDesc)
         +courseArticle("spring-training", "spring", "Spring", springDesc, springCertifiedPartner)
+        +courseArticle("html5-training", "html5", "HTML5 & CSS3", html5ShortDesc)
         +courseArticle("groovy-and-grails-training", "grails", "Groovy & Grails", groovyAndGrailsDesc)
 
   section
-    hgroup
-      h1 #{consultingTitle}
+    h1 #{consultingTitle}
     a.button.tiny.radius.right(href="/" + currentLang + "/contact") #{getInContact}
     p.consulting-desc #{consultingDesc}
 
   section
-    hgroup
-      h1 #{CaseStudies}
+    h1 #{CaseStudies}
     .hide
       include ../_include/case-studies
     ul.unstyled.studies-container
