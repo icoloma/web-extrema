@@ -61,6 +61,10 @@ body {
   text-transform: none;
 }
 
+.top-bar-section ul {
+  padding-bottom: 1px;
+}
+
 .top-logo {
   height: 32px;
   text-indent: -1000px;
@@ -103,21 +107,31 @@ ul.case-studies {
   }
 }
 
+.tabs-container {
+  padding: .2rem 1.25rem;
+  margin: 0 0 1rem;
+  border: 1px solid #ddd;
+}
 .tabs {
+  display: inline-block;
+  margin: 10px 0 5px;
   .tab-title {
-    margin-right: 2px;
+    padding-bottom: 10px;
+    margin-left: 0;
+    margin-right: 10px;
     a {
-      @include radius(5px);
-      background: #fff;
-      color: $black;
-    }
-    &.active a {
-      background-color: $extrema-blue;
-      color: #fff;
+      -webkit-user-select: none; 
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      background-color: #e7e7e7;   
+      padding: 10px;
+      font-size: 15px;
     }
   }
-  &.nested .tab-title.active a {
-    background-color: $blue-light;
+  .tab-title.active > a {
+    color: white;
+    background-color: $extrema-blue;
   }
 }
 
@@ -149,43 +163,7 @@ ul.case-studies {
 .training-logo {
   padding: 10px 0;
   width: 120px;
-}
-
-legend {
-  text-transform: uppercase;
-  font-size: 10px;
-  color: gray;
-}
-
-fieldset legend {
-  font-weight: 400;
-  background: #fff;
-  padding: 0 .1875rem;
-  margin: 0 0 0 -.1875rem;
-}
-
-.filter-fieldset {
-  padding: .2rem 1.25rem;
-  margin: 0 0 1rem; 
-}
-
-.filter {
-  margin: 10px 0 5px;
-  > li {
-    padding-bottom: 10px;
-    margin-left: 0;
-    margin-right: 10px;
-  }
-}
-
-.label {
-  -webkit-user-select: none; 
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;       
-  &:not(.secondary) {
-    color: white;
-  }
+  min-width: 120px;
 }
 
 .button:not(:last-child) {
@@ -283,7 +261,41 @@ footer {
   background: #eaf1f1;
 }
 
-@media only screen and (min-width: 40.063em) {
+.hidden {
+  display: none !important;
+}
+
+@media #{$medium}{
+  .tabs-container {
+    padding: 0;
+    border: 0;
+  }
+  .tabs {
+    .tab-title {
+      padding-bottom: 0;
+      a {
+        background-color: #fff;   
+        padding: 1rem;
+        font-size: $base-font-size;
+        &:hover, &:focus {
+          color: $extrema-blue;
+        }
+      }
+      &.active > a {
+        color: $black;
+        background-color: #fff;
+        border-bottom: 2px solid #3DC0E3;
+        margin-bottom: -2px;
+      }
+    }
+  }
+  .tabs {
+    list-style: none;
+    border-bottom: 2px solid #ddd;
+  }
+  .top-bar-section ul {
+    padding-bottom: 0;
+  }
   .training-container h4 {
     text-align: left;
   }

@@ -1,29 +1,13 @@
-$(function () {  
-  var username = 'carlos-coloma'
-    , $courseFilter = $('.course-filter a')
-    , $container = $("#kcontainer")
+$(function() {
+  var $showBtn = $('.js-show-contents')
+    , $hideBtn = $('.js-hide-contents')
+    , $contents =$('.js-contents')
+    , change = function() {
+      $contents.toggleClass('hide');
+      $showBtn.toggleClass('hidden');
+      $hideBtn.toggleClass('hidden');
+    }
   ;
-
-  var renderCalendar = function($items) {
-    var uuids = [];
-    $items = $items || $courseFilter;
-    $items.each(function(i, item) { 
-      uuids.push(username + '/' + $(item).data('course'));
-    });
-    $container.kperf({
-      eventUuid: uuids,
-      locale: currentLang
-    });
-  }
-
-  $courseFilter.click(function() {
-    var $this = $(this);
-    $this.toggleClass('secondary');
-    var $selected = $courseFilter.filter(':not(.secondary)');
-    renderCalendar($selected.length? $selected : $courseFilter);
-  });
-
-  if ($container.size()) {
-    renderCalendar();
-  }
+  $showBtn.click(change);
+  $hideBtn.click(change);
 })

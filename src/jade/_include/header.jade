@@ -10,10 +10,13 @@ header.contain-to-grid.clearfix
           span Menu
     section.top-bar-section
       ul.right
-        - tabs = { '': Home, 'training': Training, 'solutions': Solutions, 'contact': Contact }
+        - tabs = { 'training': Training, 'http://blog.extrema-sistemas.com': "Blog", 'contact': Contact }
         each name, link in tabs
           li(class=currentTab == link? "active" : "")
-            a(href="/" + currentLang + "/" + link) #{name}
+            if (name == "Blog")
+              a(href=link, target="_blank") #{name}
+            else 
+              a(href="/" + currentLang + "/" + link) #{name}
         li.has-dropdown.show-for-medium-up
           a #{langs[currentLang]}
           ul.dropdown
