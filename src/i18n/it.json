@@ -106,7 +106,7 @@
   "gcpObjectives": "",
   "gcpRequirements": "This course includes labs to be developed using either Java or Python. It's assumed that the attendee must be fluent in one, but not both.",
   "gcpSyllabus": "",
-  "gcpDuration": "40 hours",
+  "gcpDuration": "40 ore",
   "gcpLanguage": "This course is available in English and Spanish.",
   "gcpAudience": "",
   "gcpDesc": "<p>Extrema Sistemas brings you <b>the Official Google Cloud Platform Qualification Course</b> (CP300).</p><p>CP300 is a comprehensive course that covers five different products of the Google Cloud Platform: <b>App Engine, Compute Engine, Cloud Storage, Cloud SQL</b> and <b>Bigquery</b>. The course includes the possibility to take the official exam to become a <b>Qualified Google Cloud Platform Developer</b>, a recognition extended directly by Google.</p><p>This course is available as a <b>full 5-day course</b> or can be delivered by modules separately. Please consult the available dates for both options. Some courses can be delivered <b>outside of business hours</b> for those members of your team that are absolutely critical.</p><p>With materials developed by Google engineers, this course is delivered by our own <b>Google Developer Experts</b> and <b>Google Authorized Trainers</b>, experts recognized worldwide for their involvement with the developer communities and their expertise with the Google Cloud Platform in particular.</p>",
