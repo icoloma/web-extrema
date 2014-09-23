@@ -120,9 +120,8 @@
   "Phone": "Teléfono",
   "seeInGoogleMaps": "ver en Google Maps",
   "Italy": "Italia",
-  "joinTeamTitle": "¿Quieres ser nuestro próximo desarrollador?",
-  "joinTeamDesc": "Para unirte a nuestro equipo, envía tu CV a: ",
-  "sendCV": "Envía tu CV a",
+  "followUsBlog": "Nuestro blog está repleto de posts impresionantes. ¿Te sientes preparado?",
+  "followUsTwitter": "Síguenos en Twitter para estar al día de las últimas novedades.",
 
   "CaseStudies": "Casos de éxito",
   "AenaDesc": "<b>Aena Navegación Aérea</b> Durante este proyecto de un año se formó un equipo de 16 personas sin experiencia previa con Java, en un proyecto de desarrollo de un sistema de mensajería aérea en tiempo real que integra más de 10 fuentes diferentes de datos con recuperación de errores.",

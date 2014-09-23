@@ -11,6 +11,8 @@ $footer-link-color: white;
 $footer-link-hover-color: $footer-link-color;
 $footer-link-hover-background-color: #999;
 $black: #222;
+$twitter-color: #00aced;
+$blogger-color: #fb8f3d;
 
 body {
   color: $black;
@@ -195,8 +197,9 @@ ul.case-studies {
   margin-bottom: 15px;
 }
 
-.address {
+address {
   line-height: 1;
+  font-style: normal;
 }
 
 .icon-round {
@@ -205,14 +208,18 @@ ul.case-studies {
   @include radius(50%);
   font-size: 20px;
   margin-right: 5px;
-  @include single-transition(background-color, 0.25s, linear);
-  @include single-transition(border-color, 0.25s, linear);
-  &:hover, &:focus {
-    background-color: $primary-color;
+  &.icon-twitter:hover, &.icon-twitter:focus {
     color: white;
+    background-color: $twitter-color;
+    border-color: $twitter-color;
   }
   &.icon-box {
     padding-right: 6px;
+    &:hover, &:focus {
+      color: white;
+      background-color: $blogger-color;
+      border-color: $blogger-color;
+    }
   }
 }
 

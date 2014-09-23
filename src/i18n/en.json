@@ -126,9 +126,8 @@
   "Phone": "Phone",
   "seeInGoogleMaps": "See in Google Maps",
   "Italy": "Italy",
-  "joinTeamTitle": "Want to become a ninja developer?",
-  "joinTeamDesc": "If you want to join our team, send your CV to",
-  "sendCV": "Send your CV to",
+  "followUsBlog": "Our blog is full of awesome posts. Are you ready?",
+  "followUsTwitter": "Follow us on Twitter for the very last news.",
 
   "CaseStudies": "Case studies",
   "AenaDesc": "<b>Aena Air Navigation Messaging System</b> During this 1-year project a team with no prior experience with Java was formed to develop a real-time messaging system for air navigation messages that connects 10+ data sources with error recovery mecanisms.",
