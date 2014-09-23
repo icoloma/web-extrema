@@ -2,200 +2,200 @@ extends ../_layouts/default
 block i18n
   - title = Training
 block content
-  section
-    .tabs-container.clearfix
-      dl.tabs.js-training.column(data-tab)
-        dd.tab-title.active
-          a.js-google(href="#google") Google
-        dd.tab-title
-          a.js-html5(href="#html5") HTML5
-        dd.tab-title
-          a.js-spring(href="#spring") Spring
-        dd.tab-title
-          a.js-groovy-and-grails(href="#groovy-and-grails") Groovy &amp; Grails
-    div.tabs-content
-      mixin course(data)
-        article.course-item.row(itemscope, itemtype="http://schema.org/Product", id=data.koliseoEvent)
-          h1.column.small-12(itemprop="name") #{data.title}
-          metadata(itemprop="url", content="http://extrema-sistemas.com/en/" + currentTab + "/#" + data.koliseoEvent)
-          div.column.small-12.medium-6
-            div(itemprop="description")
-              != data.desc
-            if data.certDesc
-              p.bullet-item.certification 
-                span.icon.icon-star 
-                != data.certDesc
-          aside.show-for-small-only
-            div.column.small-6
-              ul.pricing-table
-                li.title #{details}
-                li.price #{data.price} EUR
-                li.bullet-item #{data.duration}
-                li.bullet-item #{VATexempt}
-            div.column.small-6
-              ul.pricing-table
-                li.title #{Discounts}
-                li.bullet-item 
-                  != (data.multipleRegistrations? data.multipleRegistrations : multipleRegistrations)
-                li.bullet-item
-                  != (data.extremaAlumni? data.extremaAlumni : extremaAlumni)
-                li.description #{discountsNotCumulative}
-                if currentLang != 'it'
-                  li.bullet-item.clearfix
-                    img.tripartita(src="/img/tripartita.jpg",alt="#{tripartita}")
-                    span.column #{tripartita}
-          aside.column.medium-6.show-for-medium-up(itemprop="offers", itemscope, itemtype="http://schema.org/Offer")
-            ul.pricing-table
-              li.title #{details}
-              li.price 
-                span(itemprop="price") #{data.price} 
-                =" "
-                span(itemprop="priceCurrency") EUR
-              li.bullet-item #{data.duration}
-              li.bullet-item #{VATexempt}
-              li.bullet-item 
-                != (data.multipleRegistrations? data.multipleRegistrations : multipleRegistrations)
-              li.bullet-item
-                != (data.extremaAlumni? data.extremaAlumni : extremaAlumni)
-              li.description #{discountsNotCumulative}
-              if currentLang != 'it'
-                li.bullet-item.clearfix
-                  img.tripartita(src="/img/tripartita.jpg",alt="#{tripartita}")
-                  span.column #{tripartita}
-          div.column.small-12.medium-7
-            dl
-              dt #{Language}:
-              dd #{data.language}
-              dt #{Audience}:
-              dd #{data.audience}
-              dt #{Requirements}:
-              dd #{data.requirements}
-            p
-              small 
-                a(href="/" + currentLang + "/contact") » #{askForMoreInfo}
-            
-          div.small-12.medium-5.column
-            div.kcontainer.text-center(data-locale=currentLang, data-event-uuid="extrema/" + data.koliseoEvent)
-          .small-12.column.section
+  nav.magellan-container(data-magellan-expedition="fixed")
+    .row
+      dl.sub-nav.column
+        dd.tab-title(data-magellan-arrival="google")
+          a(href="#google") Google
+        dd.tab-title(data-magellan-arrival="spring")
+          a(href="#spring") Spring
+        dd.tab-title(data-magellan-arrival="html5")
+          a(href="#html5") HTML5
+        dd.tab-title(data-magellan-arrival="groovy")
+          a(href="#groovy") Groovy
+  
+  mixin course(data)
+    article.course-item.row(itemscope, itemtype="http://schema.org/Product", id=data.koliseoEvent)
+      h1.column.small-12(itemprop="name") #{data.title}
+      metadata(itemprop="url", content="http://extrema-sistemas.com/en/" + currentTab + "/#" + data.koliseoEvent)
+      div.column.small-12.medium-6
+        div(itemprop="description")
+          != data.desc
+        if data.certDesc
+          p.bullet-item.certification 
+            span.icon.icon-star 
+            != data.certDesc
+      aside.show-for-small-only
+        div.column.small-6
+          ul.pricing-table
+            li.title #{details}
+            li.price #{data.price} EUR
+            li.bullet-item #{data.duration}
+            li.bullet-item #{VATexempt}
+        div.column.small-6
+          ul.pricing-table
+            li.title #{Discounts}
+            li.bullet-item 
+              != (data.multipleRegistrations? data.multipleRegistrations : multipleRegistrations)
+            li.bullet-item
+              != (data.extremaAlumni? data.extremaAlumni : extremaAlumni)
+            li.description #{discountsNotCumulative}
+            if currentLang != 'it'
+              li.bullet-item.clearfix
+                img.tripartita(src="/img/tripartita.jpg",alt="#{tripartita}")
+                span.column #{tripartita}
+      aside.column.medium-6.show-for-medium-up(itemprop="offers", itemscope, itemtype="http://schema.org/Offer")
+        ul.pricing-table
+          li.title #{details}
+          li.price 
+            span(itemprop="price") #{data.price} 
+            =" "
+            span(itemprop="priceCurrency") EUR
+          li.bullet-item #{data.duration}
+          li.bullet-item #{VATexempt}
+          li.bullet-item 
+            != (data.multipleRegistrations? data.multipleRegistrations : multipleRegistrations)
+          li.bullet-item
+            != (data.extremaAlumni? data.extremaAlumni : extremaAlumni)
+          li.description #{discountsNotCumulative}
+          if currentLang != 'it'
+            li.bullet-item.clearfix
+              img.tripartita(src="/img/tripartita.jpg",alt="#{tripartita}")
+              span.column #{tripartita}
+      div.column.small-12.medium-7
+        dl
+          dt #{Language}:
+          dd #{data.language}
+          dt #{Audience}:
+          dd #{data.audience}
+          dt #{Requirements}:
+          dd #{data.requirements}
+        p
+          small 
+            a(href="/" + currentLang + "/contact") » #{askForMoreInfo}
+        
+      div.small-12.medium-5.column
+        div.kcontainer.text-center(data-locale=currentLang, data-event-uuid="extrema/" + data.koliseoEvent)
+      .small-12.column.section
 
-            .js-contents.clearfix.hide
-              hr
-              section.column.small-12.medium-6
-                h2 #{Objectives}
-                != data.objectives
-                if data.syllabus 
-                  if data.afterCompleting
-                    h2 #{afterCompleting}
-                    != data.afterCompleting  
-              section.column.small-12.medium-6
-                if data.syllabus
-                  h2 #{Syllabus}
-                  != data.syllabus
-                else
-                  if data.afterCompleting
-                    h2 #{afterCompleting}
-                    != data.afterCompleting
-            
-            nav
-              a.js-show-contents.button.radius #{showCourseContents}
-              a.js-hide-contents.button.radius.hidden #{hideCourseContents}
-              a.button.radius.secondary(href="https://www.koliseo.com/extrema/" + data.koliseoEvent, target="_blank", itemprop="url") #{availableCourses}
+        .js-contents.clearfix.hide
+          hr
+          section.column.small-12.medium-6
+            h2 #{Objectives}
+            != data.objectives
+            if data.syllabus 
+              if data.afterCompleting
+                h2 #{afterCompleting}
+                != data.afterCompleting  
+          section.column.small-12.medium-6
+            if data.syllabus
+              h2 #{Syllabus}
+              != data.syllabus
+            else
+              if data.afterCompleting
+                h2 #{afterCompleting}
+                != data.afterCompleting
+        
+        nav
+          a.js-show-contents.button.radius #{showCourseContents}
+          a.js-hide-contents.button.radius.hidden #{hideCourseContents}
+          a.button.radius.secondary(href="https://www.koliseo.com/extrema/" + data.koliseoEvent, target="_blank", itemprop="url") #{availableCourses}
 
-      div.content.active(id="google")
-        +course({
-          title: "Official Google Cloud Platform Qualification Course", 
-          desc: gcpDesc, 
-          koliseoEvent: "google-cloud-platform", 
-          price: 2095, 
-          duration: gcpDuration,
-          language: gcpLanguage,
-          objectives: gcpObjectives,
-          syllabus: gcpSyllabus,
-          audience: gcpAudience,
-          requirements: gcpRequirements
-        })
-      div.content(id="html5")
-        +course({
-          title: "HTML5 & CSS3", 
-          desc: html5Desc,
-          koliseoEvent: "html5-and-css3",
-          price: 900,
-          duration: html5Duration,
-          language: html5Language,
-          objectives: html5Objectives,
-          afterCompleting: html5AfterCompleting,
-          audience: html5Audience,
-          requirements: html5Requirements,
-          multipleRegistrations: html5MultipleRegistrations
-        })
-      div.content(id="spring")
-        +course({
-          title: hibernateWithSpringTitle, 
-          desc: hibernateWithSpringDesc, 
-          koliseoEvent: "hibernate-with-spring", 
-          price: 1695, 
-          duration: hibernateWithSpringDuration,
-          language: hibernateWithSpringLanguage,
-          objectives: hibernateWithSpringObjectives,
-          syllabus: hibernateWithSpringSyllabus,
-          audience: hibernateWithSpringAudience,
-          requirements: hibernateWithSpringRequirements
-        })
-        hr
-        +course({
-          title: springCoreTitle, 
-          desc: springCoreDesc,
-          koliseoEvent: "spring-core", 
-          price: 1975, 
-          duration: springCoreDuration, 
-          certDesc: springCoreVoucher,
-          language: springCoreLanguage,
-          objectives: springCoreObjectives,
-          syllabus: springCoreSyllabus,
-          audience: springCoreAudience,
-          requirements: springCoreRequirements
-        })
-        hr
-        +course({
-          title: springWebTitle, 
-          desc: springWebDesc, 
-          koliseoEvent: "spring-web", 
-          price: 1975, 
-          duration: springWebDuration, 
-          certDesc: springWebVoucher,
-          language: springWebLanguage,
-          objectives: springWebObjectives,
-          syllabus: springWebSyllabus,
-          audience: springWebAudience,
-          requirements: springWebRequirements
-        })
-        hr
-        +course({
-          title: "Enterprise Integration with Spring", 
-          desc: eiwsDesc, 
-          koliseoEvent: "enterprise-integration-with-spring", 
-          price: 1975, 
-          duration: eiwsDuration, 
-          certDesc: eiwsVoucher,
-          language: eiwsLanguage,
-          objectives: eiwsObjectives,
-          syllabus: eiwsSyllabus,
-          audience: eiwsAudience,
-          requirements: eiwsRequirements
-        })
-      div.content(id="groovy-and-grails")
-        +course({
-          title: "Groovy & Grails", 
-          desc: grailsDesc, 
-          koliseoEvent: "groovy-and-grails", 
-          price: 1995, 
-          duration: grailsDuration,
-          language: grailsLanguage,
-          objectives: grailsObjectives,
-          afterCompleting: grailsAfterCompleting,
-          syllabus: grailsSyllabus,
-          audience: grailsAudience,
-          requirements: grailsRequirements
-        })
+  div.content.active(id="google")
+    +course({
+      title: "Official Google Cloud Platform Qualification Course", 
+      desc: gcpDesc, 
+      koliseoEvent: "google-cloud-platform", 
+      price: 2095, 
+      duration: gcpDuration,
+      language: gcpLanguage,
+      objectives: gcpObjectives,
+      syllabus: gcpSyllabus,
+      audience: gcpAudience,
+      requirements: gcpRequirements
+    })
+  div.content(id="html5")
+    +course({
+      title: "HTML5 & CSS3", 
+      desc: html5Desc,
+      koliseoEvent: "html5-and-css3",
+      price: 900,
+      duration: html5Duration,
+      language: html5Language,
+      objectives: html5Objectives,
+      afterCompleting: html5AfterCompleting,
+      audience: html5Audience,
+      requirements: html5Requirements,
+      multipleRegistrations: html5MultipleRegistrations
+    })
+  div.content(id="spring")
+    +course({
+      title: hibernateWithSpringTitle, 
+      desc: hibernateWithSpringDesc, 
+      koliseoEvent: "hibernate-with-spring", 
+      price: 1695, 
+      duration: hibernateWithSpringDuration,
+      language: hibernateWithSpringLanguage,
+      objectives: hibernateWithSpringObjectives,
+      syllabus: hibernateWithSpringSyllabus,
+      audience: hibernateWithSpringAudience,
+      requirements: hibernateWithSpringRequirements
+    })
+    hr
+    +course({
+      title: springCoreTitle, 
+      desc: springCoreDesc,
+      koliseoEvent: "spring-core", 
+      price: 1975, 
+      duration: springCoreDuration, 
+      certDesc: springCoreVoucher,
+      language: springCoreLanguage,
+      objectives: springCoreObjectives,
+      syllabus: springCoreSyllabus,
+      audience: springCoreAudience,
+      requirements: springCoreRequirements
+    })
+    hr
+    +course({
+      title: springWebTitle, 
+      desc: springWebDesc, 
+      koliseoEvent: "spring-web", 
+      price: 1975, 
+      duration: springWebDuration, 
+      certDesc: springWebVoucher,
+      language: springWebLanguage,
+      objectives: springWebObjectives,
+      syllabus: springWebSyllabus,
+      audience: springWebAudience,
+      requirements: springWebRequirements
+    })
+    hr
+    +course({
+      title: "Enterprise Integration with Spring", 
+      desc: eiwsDesc, 
+      koliseoEvent: "enterprise-integration-with-spring", 
+      price: 1975, 
+      duration: eiwsDuration, 
+      certDesc: eiwsVoucher,
+      language: eiwsLanguage,
+      objectives: eiwsObjectives,
+      syllabus: eiwsSyllabus,
+      audience: eiwsAudience,
+      requirements: eiwsRequirements
+    })
+  div.content(id="groovy-and-grails")
+    +course({
+      title: "Groovy & Grails", 
+      desc: grailsDesc, 
+      koliseoEvent: "groovy-and-grails", 
+      price: 1995, 
+      duration: grailsDuration,
+      language: grailsLanguage,
+      objectives: grailsObjectives,
+      afterCompleting: grailsAfterCompleting,
+      syllabus: grailsSyllabus,
+      audience: grailsAudience,
+      requirements: grailsRequirements
+    })
 block customScripts
   script(src="http://www.koliseo.com/w/kperf/1.0/kperf.min.js")

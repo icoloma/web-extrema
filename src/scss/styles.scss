@@ -115,34 +115,40 @@ ul.case-studies {
   }
 }
 
-.case-study-img {
-  max-width: 160px;
-}
-
-.tabs-container {
+.magellan-container {
+  background: #fff;
+  background: rgba(255, 255, 255, .5);
   margin: 0 0 1rem;
-  border: 1px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+
+  .sub-nav {
+    margin-bottom: 0;
+  }
+
 }
-.tabs {
+.tab-title {
   display: inline-block;
-  margin: 10px 0;
-  .tab-title {
-    margin-left: 0;
-    margin-right: 10px;
-    a {
-      -webkit-user-select: none; 
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      background-color: #e7e7e7;   
-      padding: 10px;
-      font-size: 15px;
+  margin-left: 0;
+  margin-right: 10px;
+  &> a {
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 1rem;
+    &:hover, &:focus {
+      color: $extrema-blue;
     }
   }
-  .tab-title.active > a {
-    color: white;
-    background-color: $extrema-blue;
-  }
+}
+.tab-title.active > a {
+  color: $black;
+  background-color: #fff;
+  border-bottom: 2px solid #3DC0E3;
+  margin-bottom: -2px;
 }
 
 .partner, .certification {
@@ -282,32 +288,7 @@ footer {
 }
 
 @media #{$medium}{
-  .tabs-container {
-    border: 0;
-  }
-  .tabs {
-    .tab-title {
-      padding-bottom: 0;
-      a {
-        background-color: #fff;   
-        padding: 1rem;
-        font-size: $base-font-size;
-        &:hover, &:focus {
-          color: $extrema-blue;
-        }
-      }
-      &.active > a {
-        color: $black;
-        background-color: #fff;
-        border-bottom: 2px solid #3DC0E3;
-        margin-bottom: -2px;
-      }
-    }
-  }
-  .tabs {
-    list-style: none;
-    border-bottom: 2px solid #ddd;
-  }
+
   .top-bar-section ul {
     padding-bottom: 0;
   }
