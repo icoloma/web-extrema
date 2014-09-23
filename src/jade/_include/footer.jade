@@ -1,10 +1,13 @@
 footer.show-for-small-only
   div.small-12
     ul.footer-block-list
-      - tabs = { Home: '', Training: 'training', Solutions: 'solutions', Contact: 'contact' }
-      each link, key in tabs
+      - tabs = { '': Home, 'courses': Training, 'http://blog.extrema-sistemas.com': Blog, 'contact': Contact }
+      each name, link in tabs
         li
-          a(href="/" + currentLang + "/" + link) #{key}
+          if (name == "Blog")
+            a(href=link) #{name}
+          else 
+            a(href="/" + currentLang + "/" + link) #{name}
   div.small-12
     ul.footer-inline-list
       each name, path in langs

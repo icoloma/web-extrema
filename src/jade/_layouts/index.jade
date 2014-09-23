@@ -1,4 +1,6 @@
 extends default
+block i18n
+  - title = Home
 block content
   section.columns
     hgroup
@@ -8,7 +10,7 @@ block content
       ul.unstyled.training
         mixin courseArticle(href, logo, title, desc, partnerDesc)
           li.row
-            a(href="/" + currentLang + "/courses/" + href)
+            a(href="/" + currentLang + "/courses#" + href)
               article.training-container
                 div.column.small-12.medium-3.training-logo-container.logo-container.text-center
                   img.training-logo(src="/img/logo-" + logo + ".png")
@@ -19,10 +21,10 @@ block content
                     p.partner 
                       span.icon.icon-star 
                       | #{partnerDesc}  
-        +courseArticle("google-cloud-platform", "gcp", "Google Cloud Platform", googleCloudPlatformDesc, googleTrainingPartner)
-        +courseArticle("spring-training", "spring", "Spring", springDesc, springCertifiedPartner)
-        +courseArticle("html5-training", "html5", "HTML5 & CSS3", html5ShortDesc)
-        +courseArticle("groovy-and-grails-training", "grails", "Groovy & Grails", groovyAndGrailsDesc)
+        +courseArticle("google", "gcp", "Google Cloud Platform", googleCloudPlatformDesc, googleTrainingPartner)
+        +courseArticle("spring", "spring", "Spring", springDesc, springCertifiedPartner)
+        +courseArticle("html5", "html5", "HTML5 & CSS3", html5ShortDesc)
+        +courseArticle("groovy-and-grails", "grails", "Groovy & Grails", groovyAndGrailsDesc)
 
   .columns
     .row
@@ -36,7 +38,7 @@ block content
         .hide
           include ../_include/case-studies
         ul.unstyled.studies-container
-        a.button.secondary.radius(href="/" + currentLang + "/solutions") <span class="icon-right-open"></span> #{moreCaseStudies}
+        a.button.secondary.radius(href="/" + currentLang + "/studies") <span class="icon-right-open"></span> #{moreCaseStudies}
 
   section.column.small-12.text-center
     ul.small-block-grid-3.medium-block-grid-4.large-block-grid-6
