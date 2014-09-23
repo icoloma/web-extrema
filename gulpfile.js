@@ -2,7 +2,7 @@
 // https://github.com/gulpjs/gulp
 
 var gulp    = require('gulp');
-var clean   = require('gulp-clean');
+var rimraf   = require('gulp-rimraf');
 var rename  = require('gulp-rename');
 var sass    = require('gulp-sass');
 var csso    = require('gulp-csso');
@@ -10,12 +10,11 @@ var jade    = require('gulp-jade');
 var fs      = require('fs');
 var uglify  = require('gulp-uglify');
 var concat  = require('gulp-concat');
+//var merge = require('merge-stream'); // see https://github.com/gulpjs/gulp/blob/master/docs/recipes/using-multiple-sources-in-one-task.md
 var dist    = './dist/'; 
 
-gulp.task('clean', function () {
-  // Clear the destination folder
-  gulp.src(dist + '**/*.*', { read: false })
-    .pipe(clean({ force: true }));
+gulp.task('clean', function (cb) {
+  rimraf(dist, cb);
 });
 
 gulp.task('copy-html', [], function () {
