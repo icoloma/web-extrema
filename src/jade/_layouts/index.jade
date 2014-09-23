@@ -1,66 +1,65 @@
 extends default
 block content
-  section.columns
-    hgroup
-      h1 #{indexTrainingTitle}
-        small #{indexTrainingDesc}
-    div
-      ul.unstyled.training
-        mixin courseArticle(href, logo, title, desc, partnerDesc)
-          li.row
-            a(href="/" + currentLang + "/courses/" + href)
+  .row.wrapper
+    section.columns
+      hgroup
+        h1 #{indexTrainingTitle}
+          small #{indexTrainingDesc}
+      div
+        ul.unstyled.training
+          mixin courseArticle(href, logo, title, desc, partnerDesc)
+            li.row
               article.training-container
                 div.column.small-12.medium-3.training-logo-container.logo-container.text-center
-                  img.training-logo(src="/img/logo-" + logo + ".png")
+                  a(href="/" + currentLang + "/courses/" + href)
+                    img.training-logo(src="/img/logo-" + logo + ".png", alt=title)
                 div.column.small-12.medium-9
-                  h4.small-only-text-center #{title}
+                  h4.small-only-text-center 
+                    a(href="/" + currentLang + "/courses/" + href) #{title}
                   p #{desc}
                   if partnerDesc
                     p.partner 
                       span.icon.icon-star 
                       | #{partnerDesc}  
-        +courseArticle("google-cloud-platform", "gcp", "Google Cloud Platform", googleCloudPlatformDesc, googleTrainingPartner)
-        +courseArticle("spring-training", "spring", "Spring", springDesc, springCertifiedPartner)
-        +courseArticle("html5-training", "html5", "HTML5 & CSS3", html5ShortDesc)
-        +courseArticle("groovy-and-grails-training", "grails", "Groovy & Grails", groovyAndGrailsDesc)
+          +courseArticle("google-cloud-platform", "gcp", "Google Cloud Platform", googleCloudPlatformDesc, googleTrainingPartner)
+          +courseArticle("spring-training", "spring", "Spring", springDesc, springCertifiedPartner)
+          +courseArticle("html5-training", "html5", "HTML5 & CSS3", html5ShortDesc)
+          +courseArticle("groovy-and-grails-training", "grails", "Groovy & Grails", groovyAndGrailsDesc)
 
-  .columns
-    .row
-      section.column.small-12.medium-6
-        h1 #{consultingTitle}
-        p.consulting-desc #{consultingDesc}
-        a.button.radius(href="/" + currentLang + "/contact") #{getInContact}
+    section.column.small-12
+      h1 #{consultingTitle}
+      p.consulting-desc #{consultingDesc}
+      .hide
+        include ../_include/case-studies
+      ul.unstyled.studies-container
+      a.button.radius(href="/" + currentLang + "/contact") #{getInContact} 
+      != " "
+      a.button.secondary.radius(href="/" + currentLang + "/solutions") <span class="icon-right-open"></span> #{moreCaseStudies}
 
-      section.column.small-12.medium-6
-        h1 #{CaseStudies}
-        .hide
-          include ../_include/case-studies
-        ul.unstyled.studies-container
-        a.button.secondary.radius(href="/" + currentLang + "/solutions") <span class="icon-right-open"></span> #{moreCaseStudies}
-
-  section.column.small-12.text-center
-    ul.small-block-grid-3.medium-block-grid-4.large-block-grid-6
-      li
-        span.client-accenture(title="Accenture") Accenture
-      li
-        span.client-aena(title="AENA") AENA
-      li
-        span.client-atos(title="Atos") Atos
-      li
-        span.client-bbva(title="BBVA") BBVA
-      li
-        span.client-bde(title="Banco de España") Banco de España
-      li
-        span.client-carrefour(title="Carrefour") Carrefour
-      li
-        span.client-corteingles(title="El Corte Inglés") El Corte Inglés
-      li
-        span.client-united-nations(title="United Nations") United Nations
-      li
-        span.client-iberdrola(title="Iberdrola") Iberdrola
-      li
-        span.client-indra(title="INDRA") INDRA
-      li
-        span.client-mapfre(title="Mapfre") Mapfre
-      li
-        span.client-movistar(title="Movistar") Movistar
+  section.clients-section.clearfix
+    .column.small-12.text-center
+      ul.small-block-grid-3.medium-block-grid-4.large-block-grid-6
+        li
+          span.client-accenture(title="Accenture") Accenture
+        li
+          span.client-aena(title="AENA") AENA
+        li
+          span.client-atos(title="Atos") Atos
+        li
+          span.client-bbva(title="BBVA") BBVA
+        li
+          span.client-bde(title="Banco de España") Banco de España
+        li
+          span.client-carrefour(title="Carrefour") Carrefour
+        li
+          span.client-corteingles(title="El Corte Inglés") El Corte Inglés
+        li
+          span.client-united-nations(title="United Nations") United Nations
+        li
+          span.client-iberdrola(title="Iberdrola") Iberdrola
+        li
+          span.client-indra(title="INDRA") INDRA
+        li
+          span.client-mapfre(title="Mapfre") Mapfre
+        li
+          span.client-movistar(title="Movistar") Movistar
