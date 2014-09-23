@@ -1,0 +1,14 @@
+extends ../_layouts/base
+block i18n
+- title = redirectTitle
+block head
+  meta(http-equiv="refresh", content="0; url=/" + currentLang + "/" +currentTab)
+  meta(name="robots", content="noindex,follow")
+  link(rel="canonical" href="http://extrema-sistemas.com/" + currentLang + "/" + currentTab)
+block baseContent
+  div.row.wrapper
+    .section
+      h1 #{redirectTitle}
+      p #{redirectDesc}: 
+        b
+          a(href="/" + currentLang + "/" +currentTab) #{redirectClick}

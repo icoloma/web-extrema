@@ -1,9 +1,9 @@
 ul.unstyled.case-studies.columns
   mixin study(title, image, desc)
     li.row
-      div.column.small-12.medium-3
-        img(src="/img/" + image, alt=title title=title)
-      p.column.small-12.medium-9 
+      div.img-column
+        img.case-study-img(src="/img/" + image, alt=title title=title)
+      p.content-column
         != desc
   +study("Aena", "logo-aena.png", AenaDesc)
   +study("Indra", "logo-indra.png", IndraDesc)

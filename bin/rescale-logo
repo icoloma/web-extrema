@@ -1,8 +1,0 @@
-#!/bin/bash
-# Rescale a logo
-# Usage:
-# bin/rescale-logo src/static/img/orig/file.png
-
-FILENAME=$(echo $1 | sed 's/orig/rescaled/' | sed 's/\.jpeg/.png/' )
-echo Writing into "$FILENAME"
-convert "$1" -geometry 120x "$FILENAME"
