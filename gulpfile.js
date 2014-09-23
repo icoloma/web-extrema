@@ -53,7 +53,6 @@ gulp.task('copy-html', [], function () {
 gulp.task('copy', function () {
   gulp.src('./src/static/*').pipe(gulp.dest(dist))
   gulp.src('./src/static/img/*').pipe(gulp.dest(dist + 'img'))
-  gulp.src('./src/static/img/rescaled/*').pipe(gulp.dest(dist + 'img'))
   gulp.src('./src/js/vendor/**/*.min.*').pipe(gulp.dest(dist + 'js/vendor/'))
   gulp.src('./src/scss/fontello/**/*').pipe(gulp.dest(dist + 'css/fontello')).on('error', errorHandler)
   gulp.src('./src/scss/opensans/**/*').pipe(gulp.dest(dist + 'css/opensans')).on('error', errorHandler)
