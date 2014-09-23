@@ -15,10 +15,10 @@ block content
           a(href="#groovy") Groovy
   
   mixin course(data)
-    article.course-item.row(itemscope, itemtype="http://schema.org/Product", id=data.koliseoEvent)
-      h1.column.small-12(itemprop="name") #{data.title}
-      metadata(itemprop="url", content="http://extrema-sistemas.com/en/" + currentTab + "/#" + data.koliseoEvent)
+    article.course-item.row(itemscope, itemtype="http://schema.org/Product")
       div.column.small-12.medium-6
+        h1(itemprop="name") #{data.title}
+        metadata(itemprop="url", content="http://extrema-sistemas.com/en/" + currentTab + "/#" + data.koliseoEvent)
         div(itemprop="description")
           != data.desc
         if data.certDesc
@@ -101,9 +101,9 @@ block content
           a.js-hide-contents.button.radius.hidden #{hideCourseContents}
           a.button.radius.secondary(href="https://www.koliseo.com/extrema/" + data.koliseoEvent, target="_blank", itemprop="url") #{availableCourses}
 
-  div.content.active(id="google")
+  div.content.active(id="google", data-magellan-destination="google")
     +course({
-      title: "Official Google Cloud Platform Qualification Course", 
+      title: "Google Cloud Platform", 
       desc: gcpDesc, 
       koliseoEvent: "google-cloud-platform", 
       price: 2095, 
@@ -114,21 +114,7 @@ block content
       audience: gcpAudience,
       requirements: gcpRequirements
     })
-  div.content(id="html5")
-    +course({
-      title: "HTML5 & CSS3", 
-      desc: html5Desc,
-      koliseoEvent: "html5-and-css3",
-      price: 900,
-      duration: html5Duration,
-      language: html5Language,
-      objectives: html5Objectives,
-      afterCompleting: html5AfterCompleting,
-      audience: html5Audience,
-      requirements: html5Requirements,
-      multipleRegistrations: html5MultipleRegistrations
-    })
-  div.content(id="spring")
+  div.content(id="spring", data-magellan-destination="spring")
     +course({
       title: hibernateWithSpringTitle, 
       desc: hibernateWithSpringDesc, 
@@ -183,7 +169,21 @@ block content
       audience: eiwsAudience,
       requirements: eiwsRequirements
     })
-  div.content(id="groovy-and-grails")
+  div.content(id="html5", data-magellan-destination="html5")
+    +course({
+      title: "HTML5 & CSS3", 
+      desc: html5Desc,
+      koliseoEvent: "html5-and-css3",
+      price: 900,
+      duration: html5Duration,
+      language: html5Language,
+      objectives: html5Objectives,
+      afterCompleting: html5AfterCompleting,
+      audience: html5Audience,
+      requirements: html5Requirements,
+      multipleRegistrations: html5MultipleRegistrations
+    })
+  div.content(id="groovy", data-magellan-destination="groovy")
     +course({
       title: "Groovy & Grails", 
       desc: grailsDesc, 
