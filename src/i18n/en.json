@@ -140,5 +140,10 @@
   "cookiePolicyTitle": "This web site uses cookies.",
   "cookiePolicyDesc": "We use first and third-party cookies to improve our service. If you continue, we will assume that you accept our <a href=\"/en/cookies\">cookie policy</a>.",
   "Accept": "Accept",
-  "cookiePolicyDescLong": "<p>Every web site uses cookies to improve the user experience. You can block them through your browsers settings, but this will disable some features.</p><ul><li><b>Customization</b> We use cookies to override the preferred language, in case it's not the same as your browser default.</li><li><b>Analytics and research</b> We use cookies to keep track of the kind of features that people love. They help us to build a better user experience.</li></ul>"
+  "cookiePolicyDescLong": "<p>Every web site uses cookies to improve the user experience. You can block them through your browsers settings, but this will disable some features.</p><ul><li><b>Customization</b> We use cookies to override the preferred language, in case it's not the same as your browser default.</li><li><b>Analytics and research</b> We use cookies to keep track of the kind of features that people love. They help us to build a better user experience.</li></ul>",
+
+  "redirectTitle": "This page has been moved!",
+  "redirectDesc": "Sorry for the hassles, but this page has been moved. If the page does not redirect automatically, use the following link",
+  "redirectClick": "New page"
+
 }

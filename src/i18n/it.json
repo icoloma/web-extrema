@@ -133,5 +133,9 @@
   "cookiePolicyTitle": "Questo sito usa cookie",
   "cookiePolicyDesc": "Usiamo cookie propri e di terzi per offrirti un servizio migliore. Se continui a navigare, intendiamo che accetti la nostra <a href=\"/it/cookies\">politica di cookie</a>.",
   "Accept": "Accetto",
-  "cookiePolicyDescLong": "<p>Tutti i siti internet usano cookie per migliorare l'esperienza dell'utente. Puoi bloccare i cookie nel tuo browser, però questo disattiverá alcuni vantaggi</p><ul><li><b>Personalizzazione</b>. Usiamo cookie per mostrarti la pagina nella tua lingua preferita quando questa non coincide con la lingua predefinita nel tuo web browser.</li><li><b>Analisi web e vantaggi</b>. Usiamo cookie per identificare le funzioni prefeite dei nostri utenti. Ciò ci aiuta a creare interfacce migliori.</li></ul>"
+  "cookiePolicyDescLong": "<p>Tutti i siti internet usano cookie per migliorare l'esperienza dell'utente. Puoi bloccare i cookie nel tuo browser, però questo disattiverá alcuni vantaggi</p><ul><li><b>Personalizzazione</b>. Usiamo cookie per mostrarti la pagina nella tua lingua preferita quando questa non coincide con la lingua predefinita nel tuo web browser.</li><li><b>Analisi web e vantaggi</b>. Usiamo cookie per identificare le funzioni prefeite dei nostri utenti. Ciò ci aiuta a creare interfacce migliori.</li></ul>",
+
+  "redirectTitle": "This page has been moved!",
+  "redirectDesc": "Sorry for the hassles, but this page has been moved. If the page does not redirect automatically, use the following link",
+  "redirectClick": "New page"
 }

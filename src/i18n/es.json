@@ -135,5 +135,9 @@
   "cookiePolicyTitle": "Este sitio usa cookies",
   "cookiePolicyDesc": "Usamos cookies propias y de terceros para ofrecerte un mejor servicio. Si continúas navegando, asumimos que aceptas nuestra <a href=\"/es/cookies\">política de cookies</a>.",
   "Accept": "Acepto",
-  "cookiePolicyDescLong": "<p>Todos los sitios web usan cookies para mejorar la experiencia de usuario. Puedes bloquear las cookies en tu navegador, pero eso desactivará algunas mejoras.</p><ul><li><b>Customización</b> Usamos cookies para mostrarte la web en tu idioma preferido en caso de que no coincida con el que tienes por defecto en el navegador.</li><li><b>Analítica web y mejoras</b> Usamos cookies para identificar qué funcionalidades son las preferidas por nuestros usuarios. Esto nos ayuda a crear mejores interfaces.</li></ul>"
+  "cookiePolicyDescLong": "<p>Todos los sitios web usan cookies para mejorar la experiencia de usuario. Puedes bloquear las cookies en tu navegador, pero eso desactivará algunas mejoras.</p><ul><li><b>Customización</b> Usamos cookies para mostrarte la web en tu idioma preferido en caso de que no coincida con el que tienes por defecto en el navegador.</li><li><b>Analítica web y mejoras</b> Usamos cookies para identificar qué funcionalidades son las preferidas por nuestros usuarios. Esto nos ayuda a crear mejores interfaces.</li></ul>",
+
+  "redirectTitle": "La página ha sido movida",
+  "redirectDesc": "Sentimos las molestias, pero la página que buscas ha sido movida. Si la página no se redirige automáticamente, usa el siguiente enlace",
+  "redirectClick": "Nueva página"
 }

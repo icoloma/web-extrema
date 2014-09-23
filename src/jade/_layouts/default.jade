@@ -1,47 +1,32 @@
-block i18n
-- var langs = { "es": "Español", "en": "English", "it": "Italiano" }
-doctype html
-html(class="no-js")
-  head
-    meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    title #{title} | extrema-sistemas.com
-    meta(name='description', content=description || defaultDesc)
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='/css/app.css')
-    each lang, locale in langs  
-      link(rel="alternate", hreflang=locale, href="/" + locale + "/" + currentTab)
-    script(src='/js/vendor/modernizr-2.8.3.min.js')
-  body
-    <!--[if lt IE 8]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+extends ../_layouts/base
+block head
+  each lang, locale in langs  
+    link(rel="alternate", hreflang=locale, href="/" + locale + "/" + currentTab)
+  script(src='/js/vendor/modernizr-2.8.3.min.js')
+  meta(name='description', content=description || defaultDesc)
 
+block baseContent
+  .cookie-container.hide
+    .cookie-permissions
+      section
+        .row
+          hgroup.column
+            h3 #{cookiePolicyTitle}
+        .row
+          p.columns.small-12.medium-10
+            != cookiePolicyDesc
+          p.columns.small-12.large-2
+            a.accept-cookies.button #{Accept}
     
-    include ../_include/header
+  div.row.wrapper
+    block content
 
-    .cookie-container.hide
-      .cookie-permissions
-        section
-          .row
-            hgroup.column
-              h3 #{cookiePolicyTitle}
-          .row
-            p.columns.small-12.medium-10
-              != cookiePolicyDesc
-            p.columns.small-12.large-2
-              a.accept-cookies.button #{Accept}
-    
-    div.row.wrapper
-      block content
-
-    include ../_include/footer
-
-    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
-    script.
-      window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.0.min.js"><\/script>');
-    script(src="/js/vendor/foundation.min.js")
-    script.
-      window.currentLang = "#{currentLang}";
-    script(src="/js/app.min.js")
-    block customScripts
+block scripts
+  script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
+  script.
+    window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.0.min.js"><\/script>');
+  script(src="/js/vendor/foundation.min.js")
+  script.
+    window.currentLang = "#{currentLang}";
+  script(src="/js/app.min.js")
+  block customScripts
