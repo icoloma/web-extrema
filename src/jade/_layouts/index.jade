@@ -1,15 +1,15 @@
 extends default
 block content
-  section.clearfix
+  section.columns
     hgroup
       h1 #{indexTrainingTitle}
         small #{indexTrainingDesc}
     div
-      ul.unstyled.training.small-12
+      ul.unstyled.training
         mixin courseArticle(href, logo, title, desc, partnerDesc)
-          li.column.small-12
+          li.row
             a(href="/" + currentLang + "/courses/" + href)
-              article.training-container.row
+              article.training-container
                 div.column.small-12.medium-3.training-logo-container.logo-container.text-center
                   img.training-logo(src="/img/logo-" + logo + ".png")
                 div.column.small-12.medium-9
@@ -24,19 +24,21 @@ block content
         +courseArticle("html5-training", "html5", "HTML5 & CSS3", html5ShortDesc)
         +courseArticle("groovy-and-grails-training", "grails", "Groovy & Grails", groovyAndGrailsDesc)
 
-  section
-    h1 #{consultingTitle}
-    a.button.tiny.radius.right(href="/" + currentLang + "/contact") #{getInContact}
-    p.consulting-desc #{consultingDesc}
+  .columns
+    .row
+      section.column.small-12.medium-6
+        h1 #{consultingTitle}
+        p.consulting-desc #{consultingDesc}
+        a.button.radius(href="/" + currentLang + "/contact") #{getInContact}
 
-  section
-    h1 #{CaseStudies}
-    .hide
-      include ../_include/case-studies
-    ul.unstyled.studies-container
-    a.button.alert.right.tiny.radius(href="/" + currentLang + "/solutions") #{moreCaseStudies}
+      section.column.small-12.medium-6
+        h1 #{CaseStudies}
+        .hide
+          include ../_include/case-studies
+        ul.unstyled.studies-container
+        a.button.secondary.radius(href="/" + currentLang + "/solutions") <span class="icon-right-open"></span> #{moreCaseStudies}
 
-  section.text-center
+  section.column.small-12.text-center
     ul.small-block-grid-3.medium-block-grid-4.large-block-grid-6
       li
         span.client-accenture(title="Accenture") Accenture

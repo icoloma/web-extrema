@@ -95,9 +95,9 @@ block content
                     != data.afterCompleting
             
             nav
-              a.js-show-contents.button.tiny.radius #{showCourseContents}
-              a.js-hide-contents.button.tiny.radius.hidden #{hideCourseContents}
-              a.button.tiny.radius.secondary(href="https://www.koliseo.com/extrema/" + data.koliseoEvent, target="_blank", itemprop="url") #{availableCourses}
+              a.js-show-contents.button.radius #{showCourseContents}
+              a.js-hide-contents.button.radius.hidden #{hideCourseContents}
+              a.button.radius.secondary(href="https://www.koliseo.com/extrema/" + data.koliseoEvent, target="_blank", itemprop="url") #{availableCourses}
 
       div.content.active(id="google")
         +course({
