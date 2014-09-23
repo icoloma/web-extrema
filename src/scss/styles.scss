@@ -110,7 +110,26 @@ ul.case-studies {
   margin-top: 40px;
   li {
     margin-bottom: 40px;
+    .img-column {
+       @include grid-column(12);
+    }
+    .content-column {
+       @include grid-column(12);
+    }
   }
+}
+
+.studies-container {
+  .img-column {
+     @include grid-column(12);
+  }
+  .content-column {
+     @include grid-column(12);
+  } 
+}
+.case-study-img {
+  width: 160px;
+  min-width: 160px;
 }
 
 .tabs-container {
@@ -308,5 +327,25 @@ footer {
   }
   .wrapper section {
     margin-top: 40px;
+  }
+  ul.case-studies li {
+    .img-column {
+       @include grid-column(3);
+    }
+    .content-column {
+       @include grid-column(9);
+    }
+  }
+
+}
+
+@media #{$large} {
+  .studies-container {
+    .img-column {
+       @include grid-column(4);
+    }
+    .content-column {
+       @include grid-column(8);
+    } 
   }
 }
