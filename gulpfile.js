@@ -61,15 +61,16 @@ gulp.task('copy', function () {
 gulp.task('scripts', function() {
   // Minify and copy all JavaScript (except vendor scripts)
   // with sourcemaps all the way down
-  gulp.src(['src/js/*.js'])
+  gulp.src([
+    'src/js/vendor/jquery*.js', 
+    'src/js/vendor/foundation.js', 
+    'src/js/vendor/foundation.topbar.js',
+    'src/js/vendor/foundation.tab.js',
+    'src/js/*.js'
+    ])
     .pipe(concat('app.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest(dist + 'js/'));
-
-  gulp.src(['src/js/vendor/foundation*.js'])
-    .pipe(concat('foundation.min.js'))
-    .pipe(uglify()) 
-    .pipe(gulp.dest(dist + 'js/vendor/'));
 });
 
 gulp.task('styles', function () {

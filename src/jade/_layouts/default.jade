@@ -21,10 +21,6 @@ block baseContent
   block content
 
 block scripts
-  script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
-  script.
-    window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.0.min.js"><\/script>');
-  script(src="/js/vendor/foundation.min.js")
   script.
     window.currentLang = "#{currentLang}";
   script(src="/js/app.min.js")
