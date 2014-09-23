@@ -1,6 +1,6 @@
 extends default
 block content
-  .row.wrapper
+  .row
     section.columns
       hgroup
         h1 #{indexTrainingTitle}
@@ -17,15 +17,18 @@ block content
                   h4.small-only-text-center 
                     a(href="/" + currentLang + "/courses/" + href) #{title}
                   p #{desc}
+                    a.nobreak(href="/" + currentLang + "/courses/" + href) <span class="icon-right-open"></span> #{readMore}
                   if partnerDesc
                     p.partner 
                       span.icon.icon-star 
-                      | #{partnerDesc}  
+                      | !{partnerDesc}
           +courseArticle("google-cloud-platform", "gcp", "Google Cloud Platform", googleCloudPlatformDesc, googleTrainingPartner)
           +courseArticle("spring-training", "spring", "Spring", springDesc, springCertifiedPartner)
           +courseArticle("html5-training", "html5", "HTML5 & CSS3", html5ShortDesc)
           +courseArticle("groovy-and-grails-training", "grails", "Groovy & Grails", groovyAndGrailsDesc)
 
+  hr
+  .row
     section.column.small-12
       h1 #{consultingTitle}
       p.consulting-desc #{consultingDesc}

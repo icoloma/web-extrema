@@ -35,6 +35,10 @@ body {
   background: $extrema-blue;
 }
 
+.contain-to-grid {
+  margin-bottom: 1.5rem;
+}
+
 .top-bar, .top-bar-section a, .contain-to-grid {
   transition: background 1s ease-out;
 }
@@ -78,11 +82,9 @@ body {
   min-width: 185px;
 }
 
-.wrapper {
-  margin-bottom: 10px;
-  section, .section {
-    margin-top: 20px;
-  }
+section, .section {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -139,18 +141,17 @@ ul.case-studies {
   }
 }
 
-.training li:not(:last-child) {
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 5px;
-}
-
 .partner, .certification {
-  background: rgba(129,164,44,0.3);
+  background: #FFFFB7;
   padding: 10px;
+  border: 1px solid #FFEBB7;
 
-  .icon {
-    color: rgb(129,164,44);
+  .icon, b {
+    color: #E36736;
   }
+}
+.nobreak {
+  white-space: nowrap;
 }
 
 .training-container {
@@ -311,8 +312,5 @@ footer {
   }
   .consulting-desc {
     line-height: 2em;
-  }
-  .wrapper section {
-    margin-top: 40px;
   }
 }

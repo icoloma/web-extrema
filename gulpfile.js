@@ -82,10 +82,10 @@ gulp.task('styles', function () {
 });
 
 gulp.task('watch', ['styles'], function () {
-  gulp.watch(['src/jade/**/*.jade'], ['copy-html']);
+  gulp.watch(['src/jade/**/*.jade', './src/i18n/*.json'], ['copy-html']);
   gulp.watch(['src/scss/**/*.scss'], ['styles']);
   gulp.watch(['src/js/**/*'], ['scripts']);
-  gulp.watch(['src/img/**/*', './src/i18n/*.json'], ['copy']);
+  gulp.watch(['src/img/**/*'], ['copy']);
 });
 
 // The dist task (used to store all files that will go to the server)
