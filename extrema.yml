@@ -1,0 +1,15 @@
+# tmuxinator config to launch the dev environment (gulp, jekyll and a working shell)
+# To use, run:
+# ln -s $(pwd)/extrema.yml ~/.tmuxinator/
+# tmuxinator start extrema
+
+name: extrema
+root: .
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - # empty shell
+        - gulp
+        - cd dist && http-server
