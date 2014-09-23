@@ -1,4 +1,8 @@
 {
+  "VATexempt": "VAT exempt.",
+  "subsidized": "These courses are subsidized in Spain up to 100% by Fundación Tripartita. Other countries may have other conditions, please contact us for details.",
+  "subsidizedShort": "Subsidized in Spain by Fundación Tripartita",
+  "Price": "Price",
   "Home": "Home",
   "Training": "Training",
   "Contact": "Contact",
@@ -22,7 +26,6 @@
   "availableCourses": "Available courses",
   "askForMoreInfo": "Ask for more info",
   "details": "Details",
-  "VATexempt": "Price VAT exempt.",
   "discountsNotCumulative": "Discounts are not cumulative.",
   "multipleRegistrations": "<b>Multiple registrations:</b> 10% for two registrations and 15% for three or more.",
   "extremaAlumni": "<b>Members of extrema-alumni:</b> 15% discount.",

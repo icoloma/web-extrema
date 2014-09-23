@@ -13,6 +13,12 @@ block content
           a(href="#html5") HTML5
         dd.tab-title(data-magellan-arrival="groovy")
           a(href="#groovy") Groovy
+    .row.subsidized-container
+      .column.small-4.medium-2.large-1
+        img(src="/img/tripartita.jpg" alt="Fundación Tripartita" class="tripartita")
+      .column.small-8.medium-10.large-11.subsidized
+        span.show-for-small #{subsidizedShort}
+        span.show-for-medium-up #{subsidized}
   
   mixin course(data)
     article.course-item.row(itemscope, itemtype="http://schema.org/Product")
@@ -25,44 +31,6 @@ block content
           p.bullet-item.certification 
             span.icon.icon-star 
             != data.certDesc
-      aside.show-for-small-only
-        div.column.small-6
-          ul.pricing-table
-            li.title #{details}
-            li.price #{data.price} EUR
-            li.bullet-item #{data.duration}
-            li.bullet-item #{VATexempt}
-        div.column.small-6
-          ul.pricing-table
-            li.title #{Discounts}
-            li.bullet-item 
-              != (data.multipleRegistrations? data.multipleRegistrations : multipleRegistrations)
-            li.bullet-item
-              != (data.extremaAlumni? data.extremaAlumni : extremaAlumni)
-            li.description #{discountsNotCumulative}
-            if currentLang != 'it'
-              li.bullet-item.clearfix
-                img.tripartita(src="/img/tripartita.jpg",alt="#{tripartita}")
-                span.column #{tripartita}
-      aside.column.medium-6.show-for-medium-up(itemprop="offers", itemscope, itemtype="http://schema.org/Offer")
-        ul.pricing-table
-          li.title #{details}
-          li.price 
-            span(itemprop="price") #{data.price} 
-            =" "
-            span(itemprop="priceCurrency") EUR
-          li.bullet-item #{data.duration}
-          li.bullet-item #{VATexempt}
-          li.bullet-item 
-            != (data.multipleRegistrations? data.multipleRegistrations : multipleRegistrations)
-          li.bullet-item
-            != (data.extremaAlumni? data.extremaAlumni : extremaAlumni)
-          li.description #{discountsNotCumulative}
-          if currentLang != 'it'
-            li.bullet-item.clearfix
-              img.tripartita(src="/img/tripartita.jpg",alt="#{tripartita}")
-              span.column #{tripartita}
-      div.column.small-12.medium-7
         dl
           dt #{Language}:
           dd #{data.language}
@@ -73,6 +41,17 @@ block content
         p
           small 
             a(href="/" + currentLang + "/contact") » #{askForMoreInfo}
+      aside.column.medium-6.show-for-medium-up(itemprop="offers", itemscope, itemtype="http://schema.org/Offer")
+        ul.pricing-table
+          li.price.text-right 
+            b
+              span #{Price}: 
+              span(itemprop="price") #{data.price}
+              span.currency(itemprop="priceCurrency") €
+            div.price-vat #{VATexempt}
+          li.bullet-item.text-left #{Duration}: #{data.duration}
+          li.description.text-left #{data.requirements}
+        
         
       div.small-12.medium-5.column
         div.kcontainer.text-center(data-locale=currentLang, data-event-uuid="extrema/" + data.koliseoEvent)
@@ -106,7 +85,7 @@ block content
       title: "Google Cloud Platform", 
       desc: gcpDesc, 
       koliseoEvent: "google-cloud-platform", 
-      price: 2095, 
+      price: '2,095', 
       duration: gcpDuration,
       language: gcpLanguage,
       objectives: gcpObjectives,
@@ -119,7 +98,7 @@ block content
       title: hibernateWithSpringTitle, 
       desc: hibernateWithSpringDesc, 
       koliseoEvent: "hibernate-with-spring", 
-      price: 1695, 
+      price: '1,695', 
       duration: hibernateWithSpringDuration,
       language: hibernateWithSpringLanguage,
       objectives: hibernateWithSpringObjectives,
@@ -132,7 +111,7 @@ block content
       title: springCoreTitle, 
       desc: springCoreDesc,
       koliseoEvent: "spring-core", 
-      price: 1975, 
+      price: '1,975', 
       duration: springCoreDuration, 
       certDesc: springCoreVoucher,
       language: springCoreLanguage,
@@ -146,7 +125,7 @@ block content
       title: springWebTitle, 
       desc: springWebDesc, 
       koliseoEvent: "spring-web", 
-      price: 1975, 
+      price: '1,975', 
       duration: springWebDuration, 
       certDesc: springWebVoucher,
       language: springWebLanguage,
@@ -160,7 +139,7 @@ block content
       title: "Enterprise Integration with Spring", 
       desc: eiwsDesc, 
       koliseoEvent: "enterprise-integration-with-spring", 
-      price: 1975, 
+      price: '1,975', 
       duration: eiwsDuration, 
       certDesc: eiwsVoucher,
       language: eiwsLanguage,
@@ -174,7 +153,7 @@ block content
       title: "HTML5 & CSS3", 
       desc: html5Desc,
       koliseoEvent: "html5-and-css3",
-      price: 900,
+      price: '900',
       duration: html5Duration,
       language: html5Language,
       objectives: html5Objectives,
@@ -188,7 +167,7 @@ block content
       title: "Groovy & Grails", 
       desc: grailsDesc, 
       koliseoEvent: "groovy-and-grails", 
-      price: 1995, 
+      price: '1,995', 
       duration: grailsDuration,
       language: grailsLanguage,
       objectives: grailsObjectives,

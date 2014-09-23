@@ -171,8 +171,30 @@ ul.case-studies {
   }
 }
 
+.pricing-table .price {
+  border-bottom: solid 1px #ddd;
+  color: #666;
+}
+
 .logo-container {
   padding: 10px 0;
+}
+.price-vat {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+.subsidized-container {
+  padding-bottom: 0.5rem;
+  overflow: hidden;
+  @include single-transition(height);
+}
+.subsidized-container .column {
+  display: inline-block;
+  float: none !important;
+}
+.subsidized {
+  font-size: .75rem;
+  color: #777;
 }
 
 .clients-section {
@@ -192,9 +214,8 @@ ul.case-studies {
   margin-right: 5px;
 }
 
-.tripartita {
-  width: 170px;
-  margin-bottom: 15px;
+.currency {
+  font-size: 80%;
 }
 
 address {
