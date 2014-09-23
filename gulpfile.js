@@ -39,7 +39,7 @@ gulp.task('copy-html', [], function () {
       }))
       .pipe(gulp.dest(dist + local));
     if (local === 'en') {
-      gulp.src('./src/jade/*.jade')
+      gulp.src('./src/jade/static/**/*.jade')
         .pipe(jade({
           locals: locals
         }))
