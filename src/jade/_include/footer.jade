@@ -1,7 +1,7 @@
 footer.show-for-small-only
   div.small-12
     ul.footer-block-list
-      - tabs = { 'home': Home, 'courses': Training, 'http://blog.extrema-sistemas.com': Blog, 'contact': Contact }
+      - tabs = { 'home': Home, 'courses': Training, 'http://blog.extrema-sistemas.com': "Blog", 'contact': Contact }
       each name, link in tabs
         li
           if (name == "Blog")
