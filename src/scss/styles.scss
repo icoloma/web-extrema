@@ -232,6 +232,7 @@ footer {
     width: 33.3333%;
     &.active {
       background: $footer-link-hover-background-color;
+      border-color: $footer-link-hover-background-color;
       a {
         color: $footer-link-hover-color;
       }
