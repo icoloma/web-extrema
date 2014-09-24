@@ -2,9 +2,11 @@ $(function() {
   var $document = $(document)
 
   , scrollTo = function($element) {
-    $('html, body').stop().animate({
-      'scrollTop': $element.offset().top - 100
-    });
+    if ($element.length) {
+      $('html, body').stop().animate({
+        'scrollTop': $element.offset().top - $('.magellan-container').height()
+      });
+    }
   }
 
   // show/hide course contents
@@ -35,6 +37,11 @@ $(function() {
     _.delay(function() {
       $subsidized.remove()
     }, 6000)
+  }
+
+  // the hash is not working that great with magellan
+  if ($('.magellan-container').length && location.hash) {
+    scrollTo($(location.hash))
   }
 
 })

@@ -4,6 +4,7 @@
   "subsidizedShort": "Subsidized in Spain by <a href='http://www.fundaciontripartita.org/' target='_blank'>Fundación Tripartita</a>",
   "Price": "Price",
   "standardRequirements": "Attendees should bring their own laptops with enough permissions to install additional software.",
+  "gcpCertDesc": "After this course the student will be able to take the exam required to become a <b>Qualified Google Cloud Platform Developer</b>.",
 
   "Home": "Home",
   "Training": "Training",
@@ -12,7 +13,7 @@
   "indexTrainingTitle": "Enjoy the training lead",
   "indexTrainingDesc": "The best IT training courses at the best price.",
   "html5ShortDesc": "Learn about the latest updates on the HTML5 and CSS3 drafts, and optimize your development workflow for modern and legacy browsers.",
-  "springDesc": "The official courses about the portfolio of products that have become a de facto standard for the development of Java applications.",
+  "springDesc": "The official courses about the portfolio of products that have become the <i>de facto</i> standard for the development of Java applications.",
   "groovyAndGrailsDesc": "Quickly move your teams beyond the basics and on to the most powerful aspects of Groovy and Grails.",
   "googleCloudPlatformDesc": "Google Cloud Platform enables developers to build, test and deploy applications on Google’s highly-scalable and reliable infrastructure.",
   "googleTrainingPartner": "<b>Official Course:</b> includes the official exam to become a Qualified Google Cloud Developer (emitted by Google).",

@@ -67,7 +67,7 @@ gulp.task('scripts', function() {
     'src/js/vendor/lodash*.js', 
     'src/js/vendor/foundation.js', 
     'src/js/vendor/foundation.topbar.js',
-    'src/js/vendor/foundation.tab.js',
+    //'src/js/vendor/foundation.tab.js',
     'src/js/vendor/foundation.interchange.js',
     'src/js/vendor/foundation.magellan.js',
     'src/js/*.js'

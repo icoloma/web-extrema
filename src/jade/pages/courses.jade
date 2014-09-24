@@ -29,10 +29,7 @@ block content
         metadata(itemprop="url", content="http://extrema-sistemas.com/en/" + currentTab + "/#" + data.koliseoEvent)
         div(itemprop="description")
           != data.desc
-        if data.certDesc
-          p.bullet-item.certification 
-            span.icon.icon-star 
-            != data.certDesc
+        
       aside.column.medium-6.show-for-medium-up(itemprop="offers", itemscope, itemtype="http://schema.org/Offer")
         ul.pricing-table
           li.price.text-right 
@@ -41,11 +38,19 @@ block content
               span(itemprop="price") #{data.price}
               span.currency(itemprop="priceCurrency") €
             div.price-vat #{VATexempt}
+          if data.certDesc
+            li.bullet-item.text-left.certification 
+              span.icon.icon-star 
+              != data.certDesc
           li.bullet-item.text-left #{Duration}: #{data.duration}
           li.bullet-item.text-left #{Language}: #{data.language}
           li.bullet-item.text-left #{Audience}: #{data.audience}
           li.bullet-item.text-left #{Requirements}: #{data.requirements}
+
           li.description.text-left #{standardRequirements}
+          if data.logo
+            li.bullet-item.text-center
+              img(src=data.logo, alt=data.title)
         
         
       div.small-12.medium-5.column
@@ -81,8 +86,10 @@ block content
     +course({
       title: "Google Cloud Platform", 
       desc: gcpDesc, 
+      logo: '/img/logo-google-big.png',
       koliseoEvent: "google-cloud-platform", 
       price: '2,095', 
+      certDesc: gcpCertDesc,
       duration: gcpDuration,
       language: gcpLanguage,
       objectives: gcpObjectives,
@@ -94,6 +101,7 @@ block content
     +course({
       title: hibernateWithSpringTitle, 
       desc: hibernateWithSpringDesc, 
+      logo: '/img/logo-spring-big.png',
       koliseoEvent: "hibernate-with-spring", 
       price: '1,695', 
       duration: hibernateWithSpringDuration,
@@ -106,6 +114,7 @@ block content
     +course({
       title: springCoreTitle, 
       desc: springCoreDesc,
+      logo: '/img/logo-spring-big.png',
       koliseoEvent: "spring-core", 
       price: '1,975', 
       duration: springCoreDuration, 
@@ -119,6 +128,7 @@ block content
     +course({
       title: springWebTitle, 
       desc: springWebDesc, 
+      logo: '/img/logo-spring-big.png',
       koliseoEvent: "spring-web", 
       price: '1,975', 
       duration: springWebDuration, 
@@ -132,6 +142,7 @@ block content
     +course({
       title: "Enterprise Integration with Spring", 
       desc: eiwsDesc, 
+      logo: '/img/logo-spring-big.png',
       koliseoEvent: "enterprise-integration-with-spring", 
       price: '1,975', 
       duration: eiwsDuration, 
@@ -160,6 +171,7 @@ block content
     +course({
       title: "Groovy & Grails", 
       desc: grailsDesc, 
+      logo: '/img/logo-spring-big.png',
       koliseoEvent: "groovy-and-grails", 
       price: '1,995', 
       duration: grailsDuration,

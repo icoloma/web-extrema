@@ -14,11 +14,11 @@ block content
               article.training-container
                 div.column.small-12.medium-3.training-logo-container.logo-container.text-center
                   a(href=href)
-                    img.training-logo(src="/img/logo-" + logo + ".png", alt=title)
+                    img.training-logo(src="/img/logo-" + logo + ".png", alt=title, class=logo)
                 div.column.small-12.medium-9
                   h4.small-only-text-center 
                     a(href=href) #{title}
-                  p #{desc}
+                  p !{desc}
                     a.nobreak(href=href) <span class="icon-right-open"></span> #{readMore}
                   if partnerDesc
                     p.partner 
@@ -27,7 +27,7 @@ block content
           +courseArticle("/" + currentLang + "/courses#google", "gcp", "Google Cloud Platform", googleCloudPlatformDesc, googleTrainingPartner)
           +courseArticle("/" + currentLang + "/courses#spring", "spring", "Spring", springDesc, springCertifiedPartner)
           +courseArticle("/" + currentLang + "/courses#html5", "html5", "HTML5 & CSS3", html5ShortDesc)
-          +courseArticle("/" + currentLang + "/courses#groovy-and-grails", "grails", "Groovy & Grails", groovyAndGrailsDesc)
+          +courseArticle("/" + currentLang + "/courses#groovy", "grails", "Groovy & Grails", groovyAndGrailsDesc)
 
   hr
   .row
@@ -40,6 +40,15 @@ block content
       a.button.radius(href="/" + currentLang + "/contact") #{getInContact} 
       != " "
       a.button.secondary.radius(href="/" + currentLang + "/studies") <span class="icon-right-open"></span> #{moreCaseStudies}
+
+  hr
+  .row
+    section.column.small-12.medium-6
+      p
+        img(src="/img/logo-google-big.png", alt="Google Cloud Platform Training Partner")
+    section.column.small-12.medium-6
+      p
+        img(src="/img/logo-spring-big.png", alt="SpringSource Official Training Partner", style="margin-right: 10px")
 
   section.clients-section.clearfix
     .column.small-12.text-center

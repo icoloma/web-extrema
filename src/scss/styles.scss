@@ -184,15 +184,18 @@ ul.case-studies {
   color: #777;
 }
 
-.partner, .certification {
+.partner, p.certification {
   background: #FFFFB7;
   padding: 10px;
   border: 1px solid #FFEBB7;
 
-  .icon, b {
-    color: #E36736;
-  }
+  
 }
+
+.certification > .icon, .certification > b {
+  color: #E36736;
+}
+
 .nobreak {
   white-space: nowrap;
 }
@@ -225,9 +228,11 @@ ul.case-studies {
 }
 
 .training-logo {
-  padding: 10px 0;
-  width: 120px;
-  min-width: 120px;
+  width: 140px;
+
+  &.spring {
+    width: 120px;
+  }
 }
 
 .button:not(:last-child) {
