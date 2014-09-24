@@ -55,7 +55,7 @@ block content
         
         
       div.small-12.medium-5.column
-        div.kcontainer.text-center(data-locale=currentLang, data-event-uuid="extrema/" + data.koliseoEvent)
+        div.kcontainer(data-locale=currentLang, data-event-uuid="extrema/" + data.koliseoEvent)
       .small-12.column.section
 
         .js-contents.clearfix.hide
@@ -177,5 +177,3 @@ block content
       audience: grailsAudience,
       requirements: grailsRequirements
     })
-block customScripts
-  script(src="http://www.koliseo.com/w/kperf/1.0/kperf.min.js")

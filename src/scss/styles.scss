@@ -321,6 +321,35 @@ footer {
   display: none !important;
 }
 
+.kcontainer {
+  opacity: 1;
+  transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -webkit-transition: opacity 0.3s linear;
+  &:empty {
+    opacity: 0;
+  }
+}
+
+.kperformances {
+  list-style: none;
+}
+
+.kticket-soldout {
+  color: #c43c35;
+  text-decoration: line-through;
+} 
+.kticket-danger {
+  color: #c43c35;
+}
+.kticket-warning {
+  color: #f89406;
+}
+.kticket-ok {
+  color: #46a546;
+}
+
 @media #{$medium}{
 
   .top-bar-section ul {
