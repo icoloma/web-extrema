@@ -114,14 +114,15 @@ ul.case-studies {
 }
 
 .magellan-container {
-  background: #fff;
-  background: rgba(255, 255, 255, .9);
-  margin: 0 0 1rem;
-  border-bottom: 2px solid #ddd;
-  overflow: visible;
   left: 0;
   right: 0;
   z-index: 10;
+}
+.magellan-bar {
+  background: #fff;
+  margin: 0 0 1rem;
+  border-bottom: 2px solid #ddd;
+  overflow: visible;
 
   .sub-nav {
     margin-bottom: 0;
@@ -186,7 +187,14 @@ ul.case-studies {
 .subsidized-container {
   padding-bottom: 0.5rem;
   overflow: hidden;
-  @include single-transition(height);
+  transition: transform 300ms ease-out, opacity 300ms ease-out;
+
+  &.collapsed {
+    -webkit-transform: translatey(-20px);
+    -moz-transform: translatey(-20px);
+    transform: translatey(-20px);
+    opacity: 0;
+  }
 }
 .subsidized-container .column {
   display: inline-block;

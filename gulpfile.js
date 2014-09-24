@@ -63,6 +63,7 @@ gulp.task('scripts', function() {
   // with sourcemaps all the way down
   gulp.src([
     'src/js/vendor/jquery*.js', 
+    'src/js/vendor/lodash*.js', 
     'src/js/vendor/foundation.js', 
     'src/js/vendor/foundation.topbar.js',
     'src/js/vendor/foundation.tab.js',
