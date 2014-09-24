@@ -244,7 +244,8 @@ address {
 }
 
 .icon-round {
-  border: 5px solid $primary-color;
+  border: 5px solid #888;
+  color: #888;
   padding: 10px;
   @include radius(50%);
   font-size: 20px;
