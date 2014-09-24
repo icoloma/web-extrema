@@ -65,9 +65,9 @@ $price-cta-padding: rem-calc(20 20 0) !default;
   margin-#{$default-float}: 0;
   margin-bottom: $price-table-margin-bottom;
 
-  & * {
+  & li {
     list-style: none;
-    line-height: 1;
+    //line-height: 1;
   }
 }
 // @mixins

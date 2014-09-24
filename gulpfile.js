@@ -24,6 +24,7 @@ gulp.task('copy-html', [], function () {
   locals.forEach(function(local) {
     var locals = JSON.parse(fs.readFileSync('./src/i18n/' + local + '.json', 'utf8'));
     locals['currentLang'] = local;
+    locals['escapeStr'] = require('querystring').escape;
     gulp.src('./src/jade/pages/**/*.jade')
       .pipe(rename(function (path) {
         locals['currentTab'] = path.basename != 'index'? path.basename : '';

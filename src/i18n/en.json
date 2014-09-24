@@ -1,8 +1,10 @@
 {
   "VATexempt": "VAT exempt.",
-  "subsidized": "These courses are subsidized in Spain up to 100% by Fundación Tripartita. Other countries may have other conditions, please contact us for details.",
-  "subsidizedShort": "Subsidized in Spain by Fundación Tripartita",
+  "subsidized": "These courses are subsidized in Spain up to 100% by <a href='http://www.fundaciontripartita.org/' target='_blank'>Fundación Tripartita</a>. Other countries may have other conditions, please contact us for details.",
+  "subsidizedShort": "Subsidized in Spain by <a href='http://www.fundaciontripartita.org/' target='_blank'>Fundación Tripartita</a>",
   "Price": "Price",
+  "standardRequirements": "Attendees should bring their own laptops with enough permissions to install additional software.",
+
   "Home": "Home",
   "Training": "Training",
   "Contact": "Contact",
@@ -21,7 +23,7 @@
   "consultingDesc": "Join the list of clients that are relying on our consulting and mentoring services.",
   "Courses": "Courses",
   "html5Desc": "<p>This course introduces the latest updates to HTML5 and CSS3, dedicating special attention to current support in Firefox, Chrome and Internet Explorer.</p><p>During these three days we will review the best practices for web development using the latest standards, reviewing updated techniques and patterns of web design compared with their previous alternatives. This is a very complete course that covers from wireframing and UI patterns to SEO and browser market share, including a detailed description about which versions of IE are still relevant.</p>",
-  "showCourseContents": "Show course contents",
+  "showCourseContents": "View course contents",
   "hideCourseContents": "Hide course contents",
   "availableCourses": "Available courses",
   "askForMoreInfo": "Ask for more info",

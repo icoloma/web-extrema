@@ -1,35 +1,40 @@
 $(function() {
-  var change = function(e) {
-    var $this = $(e.target)
-      , $nav = $this.parent()
-    ;
-    $this.closest('article').find('.js-contents').toggleClass('hide');
-    $nav.find('.js-hide-contents').toggleClass('hidden');
-    $nav.find('.js-show-contents').toggleClass('hidden');
-  };
-  $('.js-show-contents').click(change);
-  $('.js-hide-contents').click(change);
+  var $document = $(document)
 
-  // hide the tripartita when scrolling down, show when scrolling up
-  // http://stackoverflow.com/questions/18604022/slide-header-up-if-you-scroll-down-and-vice-versa
-  var $window = $(window)
-  , $container = $('.subsidized-container')
-  , headerHeight = 100
-  , treshold = 0
-  , lastScroll = 0
+  , scrollTo = function($element) {
+    $('html, body').stop().animate({
+      'scrollTop': $element.offset().top - 100
+    });
+  }
 
-  $container.length && $window.on('scroll', _.throttle(function(e) {
-      var newScroll = $window.scrollTop()
-      , diff = newScroll - lastScroll;
+  // show/hide course contents
+  $document.on('click', '.js-hide-contents, .js-show-contents', function(e) {
 
-      // normalize treshold range
-      treshold = (treshold + diff > headerHeight) ? headerHeight : treshold + diff;
-      treshold = (treshold < 0) ? 0 : treshold;
+    var $article = $(e.currentTarget).closest('article')
+    , $contents = $article.find('.course-contents')
+    if (!$contents.height()) {
+      $contents.css('height', 500)
+      _.delay(function() {
+        $contents.css('height', '')
+      }, 500)
+    } else {
+      $contents.css('height', $contents.height())
+      _.defer(function() { $contents.css('height', 0) });
+    }
+    scrollTo($contents);
+    $article.find('.js-hide-contents, .js-show-contents').toggleClass('hidden');
 
-      $container.toggleClass('collapsed', !!treshold);
+  });
 
-      lastScroll = newScroll;
-  }, 500));
-
+  // hide the subsidies container (fundacion tripartita etc) after 5 sec
+  var $subsidized = $('.subsidized-container');
+  if ($subsidized.length) {
+    _.delay(function() {
+      $subsidized.addClass('collapsed')
+    }, 5000)
+    _.delay(function() {
+      $subsidized.remove()
+    }, 6000)
+  }
 
 })

@@ -14,15 +14,16 @@ block content
             a(href="#html5") HTML5
           dd.tab-title(data-magellan-arrival="groovy")
             a(href="#groovy") Groovy
-    .row.subsidized-container
-      .column.small-4.medium-2.large-1
-        img(src="/img/tripartita.jpg" alt="Fundación Tripartita" class="tripartita")
-      .column.small-8.medium-10.large-11.subsidized
-        span.show-for-small #{subsidizedShort}
-        span.show-for-medium-up #{subsidized}
+    .subsidized-container
+      .row
+        .column.small-4.medium-2.large-1
+          img(src="/img/tripartita.png" alt="Fundación Tripartita" class="tripartita")
+        .column.small-8.medium-10.large-11.subsidized
+          span.show-for-small !{subsidizedShort}
+          span.show-for-medium-up !{subsidized}
   
   mixin course(data)
-    article.course-item.row(itemscope, itemtype="http://schema.org/Product")
+    article.course-item.row.section(itemscope, itemtype="http://schema.org/Product")
       div.column.small-12.medium-6
         h1(itemprop="name") #{data.title}
         metadata(itemprop="url", content="http://extrema-sistemas.com/en/" + currentTab + "/#" + data.koliseoEvent)
@@ -32,16 +33,6 @@ block content
           p.bullet-item.certification 
             span.icon.icon-star 
             != data.certDesc
-        dl
-          dt #{Language}:
-          dd #{data.language}
-          dt #{Audience}:
-          dd #{data.audience}
-          dt #{Requirements}:
-          dd #{data.requirements}
-        p
-          small 
-            a(href="/" + currentLang + "/contact") » #{askForMoreInfo}
       aside.column.medium-6.show-for-medium-up(itemprop="offers", itemscope, itemtype="http://schema.org/Offer")
         ul.pricing-table
           li.price.text-right 
@@ -51,14 +42,17 @@ block content
               span.currency(itemprop="priceCurrency") €
             div.price-vat #{VATexempt}
           li.bullet-item.text-left #{Duration}: #{data.duration}
-          li.description.text-left #{data.requirements}
+          li.bullet-item.text-left #{Language}: #{data.language}
+          li.bullet-item.text-left #{Audience}: #{data.audience}
+          li.bullet-item.text-left #{Requirements}: #{data.requirements}
+          li.description.text-left #{standardRequirements}
         
         
       div.small-12.medium-5.column
         div.kcontainer(data-locale=currentLang, data-event-uuid="extrema/" + data.koliseoEvent)
       .small-12.column.section
 
-        .js-contents.clearfix.hide
+        .course-contents.row.clearfix(style='height:0')
           hr
           section.column.small-12.medium-6
             h2 #{Objectives}
@@ -77,11 +71,13 @@ block content
                 != data.afterCompleting
         
         nav
-          a.js-show-contents.button.radius #{showCourseContents}
-          a.js-hide-contents.button.radius.hidden #{hideCourseContents}
-          a.button.radius.secondary(href="https://www.koliseo.com/extrema/" + data.koliseoEvent, target="_blank", itemprop="url") #{availableCourses}
+          a.js-show-contents.button.radius <span class="icon-down-open"></span> #{showCourseContents}
+          a.js-hide-contents.button.radius.hidden <span class="icon-up-open"></span> #{hideCourseContents}
+          a.button.secondary(href="mailto:training@extrema-sistemas.com?subject=#{escapeStr(data.title)}", target="_blank") <span class="icon-mail"></span> #{askForMoreInfo}
+    hr
+          
 
-  div.content.active(id="google", data-magellan-destination="google")
+  div.active(id="google", data-magellan-destination="google")
     +course({
       title: "Google Cloud Platform", 
       desc: gcpDesc, 
@@ -94,7 +90,7 @@ block content
       audience: gcpAudience,
       requirements: gcpRequirements
     })
-  div.content(id="spring", data-magellan-destination="spring")
+  div(id="spring", data-magellan-destination="spring")
     +course({
       title: hibernateWithSpringTitle, 
       desc: hibernateWithSpringDesc, 
@@ -107,7 +103,6 @@ block content
       audience: hibernateWithSpringAudience,
       requirements: hibernateWithSpringRequirements
     })
-    hr
     +course({
       title: springCoreTitle, 
       desc: springCoreDesc,
@@ -121,7 +116,6 @@ block content
       audience: springCoreAudience,
       requirements: springCoreRequirements
     })
-    hr
     +course({
       title: springWebTitle, 
       desc: springWebDesc, 
@@ -135,7 +129,6 @@ block content
       audience: springWebAudience,
       requirements: springWebRequirements
     })
-    hr
     +course({
       title: "Enterprise Integration with Spring", 
       desc: eiwsDesc, 
@@ -149,7 +142,7 @@ block content
       audience: eiwsAudience,
       requirements: eiwsRequirements
     })
-  div.content(id="html5", data-magellan-destination="html5")
+  div(id="html5", data-magellan-destination="html5")
     +course({
       title: "HTML5 & CSS3", 
       desc: html5Desc,
@@ -163,7 +156,7 @@ block content
       requirements: html5Requirements,
       multipleRegistrations: html5MultipleRegistrations
     })
-  div.content(id="groovy", data-magellan-destination="groovy")
+  div(id="groovy", data-magellan-destination="groovy")
     +course({
       title: "Groovy & Grails", 
       desc: grailsDesc, 
