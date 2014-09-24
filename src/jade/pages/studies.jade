@@ -2,8 +2,14 @@ extends ../_layouts/default
 block i18n
   - title = CaseStudies
 block content
-  article
-    .row
-      hgroup.column
-        h1 #{CaseStudies}
+  article.section.row
+    hgroup.column
+      h1 #{CaseStudies}
+        small #{consultingDesc}
     include ../_include/case-studies
+
+  hr
+  section.row
+    hgroup.column
+      h1 #{doWeHaveYourAttention}
+  include ../_include/clients-footer

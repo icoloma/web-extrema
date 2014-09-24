@@ -30,7 +30,7 @@ block content
         div(itemprop="description")
           != data.desc
         
-      aside.column.medium-6.show-for-medium-up(itemprop="offers", itemscope, itemtype="http://schema.org/Offer")
+      aside.column.medium-6._show-for-medium-up(itemprop="offers", itemscope, itemtype="http://schema.org/Offer")
         ul.pricing-table
           li.price.text-right 
             b
@@ -38,16 +38,15 @@ block content
               span(itemprop="price") #{data.price}
               span.currency(itemprop="priceCurrency") €
             div.price-vat #{VATexempt}
+          li.description.text-left #{Duration}: #{data.duration}
+          li.description.text-left #{Language}: #{data.language}
+          li.description.text-left #{Audience}: #{data.audience}
+          li.description.text-left #{Requirements}: #{data.requirements}
+          li.description.text-left #{standardRequirements}
           if data.certDesc
             li.bullet-item.text-left.certification 
               span.icon.icon-star 
               != data.certDesc
-          li.bullet-item.text-left #{Duration}: #{data.duration}
-          li.bullet-item.text-left #{Language}: #{data.language}
-          li.bullet-item.text-left #{Audience}: #{data.audience}
-          li.bullet-item.text-left #{Requirements}: #{data.requirements}
-
-          li.description.text-left #{standardRequirements}
           if data.logo
             li.bullet-item.text-center
               img(src=data.logo, alt=data.title)
@@ -161,6 +160,7 @@ block content
     +course({
       title: "HTML5 & CSS3", 
       desc: html5Desc,
+      logo: '/img/logo-html5-big.png',
       koliseoEvent: "html5-and-css3",
       price: '900',
       duration: html5Duration,
