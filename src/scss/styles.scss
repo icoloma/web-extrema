@@ -347,6 +347,7 @@ footer {
 
 .kperformances {
   list-style: none;
+  margin-left: 0;
 }
 
 .kticket-soldout {
@@ -361,6 +362,23 @@ footer {
 }
 .kticket-ok {
   color: #46a546;
+}
+.kcontrol {
+  padding: 20px;
+  background-color: #e7e7e7;
+  color: #333;
+  border-radius: 3px;
+  transition: background-color 300ms ease-out;
+  &:hover, &:focus {
+    background-color: #b9b9b9;
+    color: #333;
+  }
+}
+.kperflink {
+  display: block;
+}
+.kaddr {
+  font-size: 80%;
 }
 
 @media #{$medium}{

@@ -8,6 +8,7 @@ $(function() {
       en: {
       ticketsAvailable: 'tickets available',
       seeOther: 'see other dates',
+      buy: 'Get tickets',
       empty: 'There are no performances scheduled for this event.',
       dateFormat: 'Ddd Mm* d* h*:mm a.m',
       weekStart: 0,
@@ -17,6 +18,7 @@ $(function() {
     es: {
       ticketsAvailable: 'de entradas disponibles',
       seeOther: 'ver otras fechas',
+      buy: 'Comprar',
       empty: 'No hay actuaciones programadas para este evento.',
       dateFormat: 'Ddd d* de Mm* HH:mm',
       weekStart: 1,
@@ -26,6 +28,7 @@ $(function() {
     it: {
       ticketsAvailable: 'biglietti disponibili',
       seeOther: 'vedi altre date',
+      buy: 'Compra',
       empty: 'Nessuno spettacolo trovato',
       dateFormat: 'Ddd Mm* d*',
       weekDays: 'Domenica Lunedì Martedì Mercoledì Giovedì Venerdì Sabato',
@@ -105,6 +108,7 @@ $(function() {
             var performances = $.makeArray(cursor.data);
             var size = performances.length;
             var renderPerformances = function(page) {
+              var $content = $('<div class="kcontent"><h2 class="ktitle">' + res.buy + '</h2></div>');
               if (size) {
                 var $list = $('<ul class="kperformances">')
                 $.each(performances.slice(page * pageSize, page * pageSize + pageSize), function(i, perf) {
@@ -126,17 +130,19 @@ $(function() {
                     '</p></li>'
                   ));
                 });
-                $item.html($list);
-                $item.append('<div class="kcontrols">' + 
-                  (page > 0? '<a class="js-kcontrol left" data-page="' + (page - 1) + '">&laquo; Previous</a>' : '') +
-                  (size - pageSize * (page) > pageSize? '<a class="js-kcontrol right" data-page="' + (page + 1) + '">Next &raquo;</a>' : '') +
+                $content.append($list);
+                $content.append('<div class="kcontrols">' + 
+                  (page > 0? '<a class="kcontrol left" data-page="' + (page - 1) + '">&laquo; Previous</a>' : '') +
+                  (size - pageSize * (page) > pageSize? '<a class="kcontrol right" data-page="' + (page + 1) + '">Next &raquo;</a>' : '') +
                   '</div>');
-                $item.click('.js-kcontrol', function(e) {
+                $content.click('.kcontrol', function(e) {
                   var $this = $(e.target);
                   renderPerformances(+$this.data('page'));
                 });
+                $item.html($content);
               } else {
-                $item.html('<p>' + res.empty + '</p>');
+                $content.append('<p>' + res.empty + '</p>')
+                $item.append($content);
               }
               _.defer($item.removeClass, 'loading');
             }
