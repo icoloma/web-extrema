@@ -16,13 +16,13 @@ block content
             a(href="#groovy") Groovy
     .row.subsidized-container
       .column.small-4.medium-2.large-1
-        img(src="/img/tripartita.jpg" alt="Fundación Tripartita" class="tripartita")
+        img(src="/img/tripartita.png" alt="Fundación Tripartita" class="tripartita")
       .column.small-8.medium-10.large-11.subsidized
-        span.show-for-small #{subsidizedShort}
-        span.show-for-medium-up #{subsidized}
+        span.show-for-small !{subsidizedShort}
+        span.show-for-medium-up !{subsidized}
   
   mixin course(data)
-    article.course-item.row(itemscope, itemtype="http://schema.org/Product")
+    article.course-item.row.section(itemscope, itemtype="http://schema.org/Product")
       div.column.small-12.medium-6
         h1(itemprop="name") #{data.title}
         metadata(itemprop="url", content="http://extrema-sistemas.com/en/" + currentTab + "/#" + data.koliseoEvent)
@@ -33,8 +33,6 @@ block content
             span.icon.icon-star 
             != data.certDesc
         dl
-          dt #{Language}:
-          dd #{data.language}
           dt #{Audience}:
           dd #{data.audience}
           dt #{Requirements}:
@@ -51,6 +49,7 @@ block content
               span.currency(itemprop="priceCurrency") €
             div.price-vat #{VATexempt}
           li.bullet-item.text-left #{Duration}: #{data.duration}
+          li.bullet-item.text-left #{Language}: #{data.language}
           li.description.text-left #{data.requirements}
         
         

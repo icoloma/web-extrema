@@ -120,12 +120,15 @@ ul.case-studies {
 }
 .magellan-bar {
   background: #fff;
-  margin: 0 0 1rem;
   border-bottom: 2px solid #ddd;
   overflow: visible;
 
   .sub-nav {
     margin-bottom: 0;
+  }
+
+  dl {
+    font-size: .75rem;
   }
 
 }
@@ -137,7 +140,7 @@ ul.case-studies {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    padding: 1rem;
+    padding: .75rem;
     display: block;
     &:hover, &:focus {
       color: $extrema-blue;
@@ -150,6 +153,30 @@ ul.case-studies {
   background-color: #fff;
   border-bottom: 2px solid #3DC0E3;
   margin-bottom: -2px;
+}
+
+.subsidized-container {
+  padding: 1rem;
+  background: #FFFFB7;
+  border-top: 1px solid #FFEBB7;
+  border-bottom: 1px solid #FFEBB7;
+
+  transition: transform 300ms ease-out, opacity 300ms ease-out;
+
+  &.collapsed {
+    -webkit-transform: translatey(-20px);
+    -moz-transform: translatey(-20px);
+    transform: translatey(-20px);
+    opacity: 0;
+  }
+}
+.subsidized-container .column {
+  display: inline-block;
+  float: none !important;
+}
+.subsidized {
+  font-size: .75rem;
+  color: #777;
 }
 
 .partner, .certification {
@@ -184,26 +211,7 @@ ul.case-studies {
   font-size: 1rem;
   margin-top: 5px;
 }
-.subsidized-container {
-  padding-bottom: 0.5rem;
-  overflow: hidden;
-  transition: transform 300ms ease-out, opacity 300ms ease-out;
 
-  &.collapsed {
-    -webkit-transform: translatey(-20px);
-    -moz-transform: translatey(-20px);
-    transform: translatey(-20px);
-    opacity: 0;
-  }
-}
-.subsidized-container .column {
-  display: inline-block;
-  float: none !important;
-}
-.subsidized {
-  font-size: .75rem;
-  color: #777;
-}
 
 .clients-section {
   clear: both;
@@ -331,5 +339,11 @@ footer {
   }
   .consulting-desc {
     line-height: 2em;
+  }
+  .magellan-bar dl {
+    font-size: 1rem;
+  }
+  .tab-title > a {
+    padding: 1rem;
   }
 }
