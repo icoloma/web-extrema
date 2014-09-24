@@ -53,6 +53,11 @@ body {
   margin-top: -18px;
 }
 
+.course-contents {
+  overflow: hidden;
+  transition: height 300ms ease-out;
+}
+
 .contain-to-grid .top-bar-section li.active:not(.has-form) a:not(.button) {
   background: #fff;
   color: $extrema-blue;
@@ -209,9 +214,8 @@ ul.case-studies {
 }
 .price-vat {
   font-size: 1rem;
-  margin-top: 5px;
+  margin-top: -5px;
 }
-
 
 .clients-section {
   clear: both;
