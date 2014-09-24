@@ -12,21 +12,6 @@ $(function () {
     }
   });
   
-  //KOLISEO
-
-  window.Koliseo = window.Koliseo || {};
-  Koliseo.resources = {
-    it: {
-      ticketsAvailable: 'biglietti disponibili',
-      seeOther: 'vedi altre date',
-      buy: 'Compra',
-      empty: 'Nessuno spettacolo trovato',
-      dateFormat: 'Ddd Mm* d*',
-      weekDays: 'Domenica Lunedì Martedì Mercoledì Giovedì Venerdì Sabato',
-      months: 'Gennaio Febbraio Marzo Aprile Maggio Giugno Luglio Agosto Settembre Ottobre Novembre Dicembre'
-    }
-  };
-
   // COOKIES
 
   var cookieName = 'acceptscookies'

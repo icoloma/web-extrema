@@ -249,7 +249,8 @@ address {
 }
 
 .icon-round {
-  border: 5px solid $primary-color;
+  border: 5px solid #888;
+  color: #888;
   padding: 10px;
   @include radius(50%);
   font-size: 20px;
@@ -336,6 +337,53 @@ footer {
 
 .hidden {
   display: none !important;
+}
+
+.kcontainer {
+  opacity: 1;
+  transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -webkit-transition: opacity 0.3s linear;
+  &:empty {
+    opacity: 0;
+  }
+}
+
+.kperformances {
+  list-style: none;
+  margin-left: 0;
+}
+
+.kticket-soldout {
+  color: #c43c35;
+  text-decoration: line-through;
+} 
+.kticket-danger {
+  color: #c43c35;
+}
+.kticket-warning {
+  color: #f89406;
+}
+.kticket-ok {
+  color: #46a546;
+}
+.kcontrol {
+  padding: 20px;
+  background-color: #e7e7e7;
+  color: #333;
+  border-radius: 3px;
+  transition: background-color 300ms ease-out;
+  &:hover, &:focus {
+    background-color: #b9b9b9;
+    color: #333;
+  }
+}
+.kperflink {
+  display: block;
+}
+.kaddr {
+  font-size: 80%;
 }
 
 @media #{$medium}{
