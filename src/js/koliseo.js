@@ -6,21 +6,21 @@ $(function() {
   window.Koliseo = window.Koliseo || {};
   Koliseo.resources = {
       en: {
-      ticketsAvailable: 'tickets available',
+      ticketsAvailable: 'seats available',
       seeOther: 'see other dates',
-      buy: 'Get tickets',
-      empty: 'There are no performances scheduled for this event.',
-      dateFormat: 'Ddd Mm* d* h*:mm a.m',
+      buy: 'Register for ',
+      empty: 'No courses scheduled. <a href="mailto:training@extrema-sistemas.com?subject=New+Courses" target="_blank">Get in contact with us</a> if you would like to get notified of any changes.',
+      dateFormat: 'Ddd Mm* d*',
       weekStart: 0,
       weekDays: 'Sunday Monday Tuesday Wednesday Thursday Friday Saturday',
       months: 'January February March April May June July August September October November December'
     },
     es: {
-      ticketsAvailable: 'de entradas disponibles',
+      ticketsAvailable: 'plazas disponibles',
       seeOther: 'ver otras fechas',
-      buy: 'Comprar',
-      empty: 'No hay actuaciones programadas para este evento.',
-      dateFormat: 'Ddd d* de Mm* HH:mm',
+      buy: 'Registrarse para ',
+      empty: 'No hay cursos programados. <a href="mailto:training@extrema-sistemas.com?subject=New+Courses" target="_blank">Ponte en contacto</a> para recibir una notificación ante posibles cambios.',
+      dateFormat: 'Ddd d* de Mm*',
       weekStart: 1,
       weekDays: 'Domingo Lunes Martes Miércoles Jueves Viernes Sábado',
       months: 'Enero Febrero Marzo Abril Mayo Junio Julio Agosto Septiembre Octubre Noviembre Diciembre'
@@ -28,7 +28,7 @@ $(function() {
     it: {
       ticketsAvailable: 'biglietti disponibili',
       seeOther: 'vedi altre date',
-      buy: 'Compra',
+      buy: 'Registrare per ',
       empty: 'Nessuno spettacolo trovato',
       dateFormat: 'Ddd Mm* d*',
       weekDays: 'Domenica Lunedì Martedì Mercoledì Giovedì Venerdì Sabato',
@@ -108,7 +108,7 @@ $(function() {
             var performances = $.makeArray(cursor.data);
             var size = performances.length;
             var renderPerformances = function(page) {
-              var $content = $('<div class="kcontent"><h2 class="ktitle">' + res.buy + '</h2></div>');
+              var $content = $('<div class="kcontent"></div>');
               if (size) {
                 var $list = $('<ul class="kperformances">')
                 $.each(performances.slice(page * pageSize, page * pageSize + pageSize), function(i, perf) {
@@ -120,14 +120,14 @@ $(function() {
                       'kticket-ok'
                   ;
                   $list.append($(
-                    '<li><p class="kperformance" title="' + pct + '% ' + res.ticketsAvailable + '">' +
+                    '<li><div class="kperformance" title="' + pct + '% ' + res.ticketsAvailable + '">' +
                       '<a class="kperflink ' + ticketsClass + (pct === 0? ' disabled' : '') + '" href="' + getEventURL(perf.event.uuid) + '?selected=' + perf.id + '" target="_blank">' +             
-                        '<b class="kperfdate">' + formatDate(res.dateFormat, perf.dateTimeStr) + '</b> ' +
-                        availableTickets + '/' + perf.totalTickets  + '<span class="kicon-ticket"></span> ' +
-                        ' <span class="kprice">' + perf.minPrice + ' ' + perf.currency + '</span> ' + 
+                        '<span class="icon-right-open"></span> ' + res.buy + ' ' + '<span class="kperfdate">' + formatDate(res.dateFormat, perf.dateTimeStr) + '</span> ' +
                       '</a>' +
-                      '<span class="kaddr">' + perf.address + '</span>' +
-                    '</p></li>'
+                      '<span class="kaddr"> &middot; ' + perf.address + ' &middot; ' +
+                        availableTickets + '/' + perf.totalTickets  + ' ' + res.ticketsAvailable + ' ' +
+                      '</span>' +
+                    '</div></li>'
                   ));
                 });
                 $content.append($list);

@@ -15,9 +15,15 @@ $(function() {
     var $article = $(e.currentTarget).closest('article')
     , $contents = $article.find('.course-contents')
     if (!$contents.height()) {
-      $contents.css('height', 500)
+      $contents.css({
+        height: 500,
+        'background-color': '#FFFFCD'
+      })
       _.delay(function() {
-        $contents.css('height', '')
+        $contents.css({
+          height: '',
+          'background-color': '#fff'
+        })
       }, 500)
     } else {
       $contents.css('height', $contents.height())

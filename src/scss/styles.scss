@@ -55,7 +55,7 @@ body {
 
 .course-contents {
   overflow: hidden;
-  transition: height 300ms ease-out;
+  transition: height 300ms ease-out, background-color 300ms ease-out;
 }
 
 .contain-to-grid .top-bar-section li.active:not(.has-form) a:not(.button) {
@@ -360,14 +360,15 @@ footer {
   text-decoration: line-through;
 } 
 .kticket-danger {
-  color: #c43c35;
+  color: #c43c35 !important;
 }
 .kticket-warning {
-  color: #f89406;
+  color: #f89406 !important;
 }
-.kticket-ok {
-  color: #46a546;
+.kperflink:hover, .kperflink:focus {
+  text-decoration: underline;
 }
+
 .kcontrol {
   padding: 20px;
   background-color: #e7e7e7;
@@ -379,9 +380,7 @@ footer {
     color: #333;
   }
 }
-.kperflink {
-  display: block;
-}
+
 .kaddr {
   font-size: 80%;
 }
