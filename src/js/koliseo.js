@@ -153,7 +153,7 @@ $(function() {
   ;
 
   var $elements = $('.kcontainer:empty')
-  , THRESHOLD = 500
+  , THRESHOLD = 700
   , $window = $(window)
   , check = function(e) {
     if ($elements.length) {
