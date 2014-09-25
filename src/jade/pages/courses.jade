@@ -2,28 +2,29 @@ extends ../_layouts/default
 block i18n
   - title = Training
 block content
-  nav.magellan-container(data-magellan-expedition="fixed")
-    .magellan-bar
-      .row
-        dl.sub-nav.column
-          dd.tab-title(data-magellan-arrival="google")
-            a(href="#google") Google
-          dd.tab-title(data-magellan-arrival="spring")
-            a(href="#spring") Spring
-          dd.tab-title(data-magellan-arrival="html5")
-            a(href="#html5") HTML5
-          dd.tab-title(data-magellan-arrival="groovy")
-            a(href="#groovy") Groovy
-    .subsidized-container
-      .row
-        .column.small-4.medium-2.large-1
-          img(src="/img/tripartita.png" alt="Fundación Tripartita" class="tripartita")
-        .column.small-8.medium-10.large-11.subsidized
-          span.show-for-small !{subsidizedShort}
-          span.show-for-medium-up !{subsidized}
-  
+  div.contain-to-grid.sticky.nested.clearfix
+    nav.top-bar.expanded(role="navigation", data-topbar)
+      section.top-bar-section
+        .row
+          dl.sub-nav.column
+            dd.tab-title.active
+              a(href="#google") Google
+            dd.tab-title
+              a(href="#spring") Spring
+            dd.tab-title
+              a(href="#html5") HTML5
+            dd.tab-title
+              a(href="#groovy") Groovy
+        .subsidized-container
+          .row
+            .column.small-4.medium-2.large-1
+              img(src="/img/tripartita.png" alt="Fundación Tripartita" class="tripartita")
+            .column.small-8.medium-10.large-11.subsidized
+              span.show-for-small !{subsidizedShort}
+              span.show-for-medium-up !{subsidized}
+    
   mixin course(data)
-    article.course-item.row.section(itemscope, itemtype="http://schema.org/Product")
+    article.course-item.row.section(itemscope, itemtype="http://schema.org/Product", id=data.koliseoEvent)
       div.column.small-12.medium-6
         h1(itemprop="name") #{data.title}
         metadata(itemprop="url", content="http://extrema-sistemas.com/en/" + currentTab + "/#" + data.koliseoEvent)
@@ -85,7 +86,7 @@ block content
     hr
           
 
-  div.active(id="google", data-magellan-destination="google")
+  div(id="google")
     +course({
       title: "Google Cloud Platform", 
       desc: gcpDesc, 
@@ -100,7 +101,7 @@ block content
       audience: gcpAudience,
       requirements: gcpRequirements
     })
-  div(id="spring", data-magellan-destination="spring")
+  div(id="spring")
     +course({
       title: springCoreTitle, 
       desc: springCoreDesc,
@@ -156,7 +157,7 @@ block content
       audience: hibernateWithSpringAudience,
       requirements: hibernateWithSpringRequirements
     })
-  div(id="groovy", data-magellan-destination="groovy")
+  div(id="groovy")
     +course({
       title: "Groovy & Grails", 
       desc: grailsDesc, 
@@ -171,7 +172,7 @@ block content
       audience: grailsAudience,
       requirements: grailsRequirements
     })
-  div(id="html5", data-magellan-destination="html5")
+  div(id="html5")
     +course({
       title: "HTML5 & CSS3", 
       desc: html5Desc,
