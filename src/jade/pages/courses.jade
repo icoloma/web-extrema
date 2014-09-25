@@ -38,11 +38,12 @@ block content
               span(itemprop="price") #{data.price}
               span.currency(itemprop="priceCurrency") €
             div.price-vat #{VATexempt}
-          li.description.text-left #{Duration}: #{data.duration}
-          li.description.text-left #{Language}: #{data.language}
-          li.description.text-left #{Audience}: #{data.audience}
-          li.description.text-left #{Requirements}: #{data.requirements}
-          li.description.text-left #{standardRequirements}
+          li.description.text-left <b>#{Duration}:</b> #{data.duration}
+          li.description.text-left <b>#{Audience}:</b> #{data.audience}
+          li.description.text-left <b>#{Language}:</b> #{data.language}
+          if data.requirements
+            li.description.text-left <b>#{Requirements}:</b> #{data.requirements}
+          li.description.text-left !{standardRequirements}
           if data.certDesc
             li.bullet-item.text-left.certification 
               span.icon.icon-star 
@@ -92,8 +93,8 @@ block content
       koliseoEvent: "google-cloud-platform", 
       price: '2,095', 
       certDesc: gcpCertDesc,
-      duration: gcpDuration,
-      language: gcpLanguage,
+      duration: duration40h,
+      language: langEnEs,
       objectives: gcpObjectives,
       syllabus: gcpSyllabus,
       audience: gcpAudience,
@@ -101,27 +102,14 @@ block content
     })
   div(id="spring", data-magellan-destination="spring")
     +course({
-      title: hibernateWithSpringTitle, 
-      desc: hibernateWithSpringDesc, 
-      logo: '/img/logo-spring-big.png',
-      koliseoEvent: "hibernate-with-spring", 
-      price: '1,695', 
-      duration: hibernateWithSpringDuration,
-      language: hibernateWithSpringLanguage,
-      objectives: hibernateWithSpringObjectives,
-      syllabus: hibernateWithSpringSyllabus,
-      audience: hibernateWithSpringAudience,
-      requirements: hibernateWithSpringRequirements
-    })
-    +course({
       title: springCoreTitle, 
       desc: springCoreDesc,
       logo: '/img/logo-spring-big.png',
       koliseoEvent: "spring-core", 
       price: '1,975', 
-      duration: springCoreDuration, 
+      duration: duration32h, 
       certDesc: springCoreVoucher,
-      language: springCoreLanguage,
+      language: langEnEsIt,
       objectives: springCoreObjectives,
       syllabus: springCoreSyllabus,
       audience: springCoreAudience,
@@ -133,13 +121,13 @@ block content
       logo: '/img/logo-spring-big.png',
       koliseoEvent: "spring-web", 
       price: '1,975', 
-      duration: springWebDuration, 
+      duration: duration32h, 
       certDesc: springWebVoucher,
-      language: springWebLanguage,
+      language: langEnEsIt,
       objectives: springWebObjectives,
       syllabus: springWebSyllabus,
-      audience: springWebAudience,
-      requirements: springWebRequirements
+      audience: springWebAudience
+      //requirements: springWebRequirements
     })
     +course({
       title: "Enterprise Integration with Spring", 
@@ -147,28 +135,26 @@ block content
       logo: '/img/logo-spring-big.png',
       koliseoEvent: "enterprise-integration-with-spring", 
       price: '1,975', 
-      duration: eiwsDuration, 
+      duration: duration32h, 
       certDesc: eiwsVoucher,
-      language: eiwsLanguage,
+      language: langEnEsIt,
       objectives: eiwsObjectives,
       syllabus: eiwsSyllabus,
-      audience: eiwsAudience,
-      requirements: eiwsRequirements
+      audience: eiwsAudience
+      //requirements: eiwsRequirements
     })
-  div(id="html5", data-magellan-destination="html5")
     +course({
-      title: "HTML5 & CSS3", 
-      desc: html5Desc,
-      logo: '/img/logo-html5-big.png',
-      koliseoEvent: "html5-and-css3",
-      price: '900',
-      duration: html5Duration,
-      language: html5Language,
-      objectives: html5Objectives,
-      afterCompleting: html5AfterCompleting,
-      audience: html5Audience,
-      requirements: html5Requirements,
-      multipleRegistrations: html5MultipleRegistrations
+      title: hibernateWithSpringTitle, 
+      desc: hibernateWithSpringDesc, 
+      logo: '/img/logo-spring-big.png',
+      koliseoEvent: "hibernate-with-spring", 
+      price: '1,695', 
+      duration: duration24h,
+      language: langEnEsIt,
+      objectives: hibernateWithSpringObjectives,
+      syllabus: hibernateWithSpringSyllabus,
+      audience: hibernateWithSpringAudience,
+      requirements: hibernateWithSpringRequirements
     })
   div(id="groovy", data-magellan-destination="groovy")
     +course({
@@ -177,11 +163,26 @@ block content
       logo: '/img/logo-spring-big.png',
       koliseoEvent: "groovy-and-grails", 
       price: '1,995', 
-      duration: grailsDuration,
-      language: grailsLanguage,
+      duration: duration32h,
+      language: langEnIt,
       objectives: grailsObjectives,
       afterCompleting: grailsAfterCompleting,
       syllabus: grailsSyllabus,
       audience: grailsAudience,
       requirements: grailsRequirements
+    })
+  div(id="html5", data-magellan-destination="html5")
+    +course({
+      title: "HTML5 & CSS3", 
+      desc: html5Desc,
+      logo: '/img/logo-html5-big.png',
+      koliseoEvent: "html5-and-css3",
+      price: '900',
+      duration: duration24h,
+      language: langEnEs,
+      objectives: html5Objectives,
+      afterCompleting: html5AfterCompleting,
+      audience: html5Audience,
+      requirements: html5Requirements,
+      multipleRegistrations: html5MultipleRegistrations
     })
