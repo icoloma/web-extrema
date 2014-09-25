@@ -1,10 +1,9 @@
 $(function() {
   var $document = $(document)
-
   , scrollTo = function($element) {
     if ($element.length) {
       $('html, body').stop().animate({
-        'scrollTop': $element.offset().top - $('.magellan-container').height()
+        'scrollTop': $element.offset().top - $('.contain-to-grid.nested').height()
       });
     }
   }
@@ -41,13 +40,15 @@ $(function() {
       $subsidized.addClass('collapsed')
     }, 5000)
     _.delay(function() {
-      $subsidized.remove()
+      $subsidized.remove();
+      $('body').addClass('nested-f-topbar-fixed')
     }, 6000)
   }
 
-  // the hash is not working that great with magellan
-  if ($('.magellan-container').length && location.hash) {
-    scrollTo($(location.hash))
-  }
+  // the hash is not working with topbar
+  $('.contain-to-grid.nested a').click(function(e) {
+    $('.contain-to-grid.nested .tab-title').removeClass('active');
+    $(this).parent().addClass('active');
+  });
 
 })

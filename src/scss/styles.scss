@@ -41,6 +41,10 @@ body {
   transition: background 1s ease-out;
 }
 
+.nested-f-topbar-fixed {
+  padding-top: 0 !important;
+}
+
 .top-bar a {
   text-decoration: none;
   text-transform: uppercase;
@@ -122,22 +126,30 @@ ul.case-studies {
   }
 }
 
-.magellan-container {
+.sticky {
   left: 0;
   right: 0;
   z-index: 10;
 }
-.magellan-bar {
+.nested {
   background: #fff;
-  border-bottom: 2px solid #ddd;
-  overflow: visible;
+  .top-bar {
+    background: #fff;
+    border-bottom: 2px solid #ddd;
+    overflow: visible;
+    height: auto;
 
-  .sub-nav {
-    margin-bottom: 0;
-  }
+    .sub-nav {
+      margin-bottom: 0;
+    }
 
-  dl {
-    font-size: .75rem;
+    dl {
+      font-size: .75rem;
+    }
+
+    a {
+      text-transform: none;
+    }
   }
 
 }
@@ -169,6 +181,7 @@ ul.case-studies {
   background: #FFFFB7;
   border-top: 1px solid #FFEBB7;
   border-bottom: 1px solid #FFEBB7;
+  line-height: 18px;
 
   transition: transform 300ms ease-out, opacity 300ms ease-out;
 
@@ -380,7 +393,7 @@ footer {
   .consulting-desc {
     line-height: 2em;
   }
-  .magellan-bar dl {
+  .nested .top-bar dl {
     font-size: 1rem;
   }
   .tab-title > a {

@@ -139,10 +139,13 @@ $(function() {
                   var $this = $(e.target);
                   renderPerformances(+$this.data('page'));
                 });
-                $item.html($content);
               } else {
                 $content.append('<p>' + res.empty + '</p>')
-                $item.append($content);
+              }
+              $item.html($content);
+              var scrollTop = $window.scrollTop();
+              if (scrollTop > $item.offset().top) {
+                $window.scrollTop(scrollTop + $item.height());
               }
               _.defer($item.removeClass, 'loading');
             }
