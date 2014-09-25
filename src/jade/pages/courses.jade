@@ -54,7 +54,17 @@ block content
         
       .small-12.column.section
         
-        .course-contents.row.clearfix(style='height:0')
+        .row
+          .column.small-12
+            h2 #{RegisterFor} #{data.title}
+            .kcontainer(data-locale=currentLang, data-event-uuid="extrema/" + data.koliseoEvent)
+        .row
+          .column
+            nav
+              a.js-show-contents.button.radius <span class="icon-down-open"></span> #{showCourseContents}
+              a.js-hide-contents.button.radius.hidden <span class="icon-up-open"></span> #{hideCourseContents}
+              a.button.secondary(href="mailto:training@extrema-sistemas.com?subject=#{escapeStr(data.title)}", target="_blank") <span class="icon-mail"></span> #{askForMoreInfo}
+        .row.course-contents.clearfix(style='height:0')
           hr
           section.column.small-12.medium-6
             h2 #{Objectives}
@@ -71,17 +81,6 @@ block content
               if data.afterCompleting
                 h2 #{afterCompleting}
                 != data.afterCompleting
-          hr
-        .row
-          .column.small-12
-            h2 #{RegisterFor} #{data.title}
-            .kcontainer(data-locale=currentLang, data-event-uuid="extrema/" + data.koliseoEvent)
-        .row
-          .column
-            nav
-              a.js-show-contents.button.radius <span class="icon-down-open"></span> #{showCourseContents}
-              a.js-hide-contents.button.radius.hidden <span class="icon-up-open"></span> #{hideCourseContents}
-              a.button.secondary(href="mailto:training@extrema-sistemas.com?subject=#{escapeStr(data.title)}", target="_blank") <span class="icon-mail"></span> #{askForMoreInfo}
     hr
           
 

@@ -55,7 +55,11 @@ body {
 
 .course-contents {
   overflow: hidden;
-  transition: height 300ms ease-out, background-color 300ms ease-out;
+  transition: height 300ms ease-out;
+  
+  &.expanded {
+    transition: height 300ms ease-out, opacity 300ms ease-out;
+  }
 }
 
 .contain-to-grid .top-bar-section li.active:not(.has-form) a:not(.button) {
@@ -242,30 +246,8 @@ p.certification {
 }
 
 address {
-  line-height: 1;
+  display: inline;
   font-style: normal;
-}
-
-.icon-round {
-  border: 5px solid #888;
-  color: #888;
-  padding: 10px;
-  @include radius(50%);
-  font-size: 20px;
-  margin-right: 5px;
-  &.icon-twitter:hover, &.icon-twitter:focus {
-    color: white;
-    background-color: $twitter-color;
-    border-color: $twitter-color;
-  }
-  &.icon-box {
-    padding-right: 6px;
-    &:hover, &:focus {
-      color: white;
-      background-color: $blogger-color;
-      border-color: $blogger-color;
-    }
-  }
 }
 
 footer {

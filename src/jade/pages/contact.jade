@@ -3,62 +3,46 @@ block i18n
   - title = Contact
 block content
   .row.section
-    hgroup.column.small-6
+    hgroup.column.small-12
       h1 #{Contact}
-    hr
+  section.row
+    .column.columns.medium-6
+      p !{ContactBody}
+    .aside.columns.medium-6
+      p
+        a.button.success(href="http://blog.extrema-sistemas.com", target="_blank", title="Blog")
+          span.icon-box
+          != " " + followUsBlog
+        a.button(href="http://twitter.com/extremasistemas", target="_blank", title="Twitter")
+          span.icon-twitter
+          != " &nbsp; " + followUsTwitter
+
+  section.row
     div(itemscope, itemtype="http://schema.org/Organization")
       meta(itemprop="name" content="Extrema Sistemas S.L.")
-      section.column
-        br
-        p
-          a(href="http://blog.extrema-sistemas.com", target="_blank", title="Blog")
-            span.icon-round.icon-box
-          = followUsBlog
-        br
-        p
-          a(href="http://twitter.com/extremasistemas", target="_blank", title="Twitter")
-            span.icon-round.icon-twitter
-          = followUsTwitter
       aside.large-6.column
         h2 #{Spain}
-        dl
-          dd
-            p 
-              b 
-                = "E-mail: "
-              a(href="mailto:info@extrema-sistemas.com",
-                title=emailTo + ": info@extrema-sistemas.com", 
-                itemprop="email") info@extrema-sistemas.com
-          dd
-            p
-              b 
-                = Phone + ": " 
-              a(itemprop="telephone", href="tel:+34911239108") +34 91 123 9108
-          dd
-            address(itemprop="address",
-                    itemscope="",
-                    itemtype="http://schema.org/PostalAddress")
-              span(itemprop="streetAddress") C/Casas de Miravete 24A
-              = ", "
-              span(itemprop="postalCode") 28031
-              = ", "
-              span(itemprop="addressCountry") Madrid
-              = " ("
-                a(href="http://goo.gl/maps/3nDy") » #{seeInGoogleMaps}
-              = ")"
+        p
+          b E-mail: 
+          a(href="mailto:info@extrema-sistemas.com", title=emailTo + ": info@extrema-sistemas.com",  itemprop="email") info@extrema-sistemas.com
+          br
+          b #{Phone}: 
+          a(itemprop="telephone", href="tel:+34911239108") +34 91 123 9108
+          br
+          b #{Address}: 
+          span(itemprop="address", itemscope="", itemtype="http://schema.org/PostalAddress")
+            != "<span itemprop='streetAddress'>C/Casas de Miravete 24A</span>, <span itemprop='postalCode'>28031</span>, <span itemprop='addressCountry'>Madrid</span>"
+        p
+          a.button.secondary(href="http://goo.gl/maps/3nDy", target="_blank") 
+            span(class="icon-location")
+            != " "
+            != seeInGoogleMaps
         h2 #{Italy}
-        dl
-          dd
-            p
-              b 
-                = "E-mail: "
-              a(href="mailto:italy@extrema-sistemas.com",
-                title=emailTo + ": italy@extrema-sistemas.com",
-                itemprop="email") italy@extrema-sistemas.com
-          dd
-            p
-              b 
-                = Phone + ": "
-              a(itemprop="telephone", href="tel:+393475913782") :  +39 347 5913782
+        p
+          b E-mail: 
+          a(href="mailto:italy@extrema-sistemas.com", title=emailTo + ": italy@extrema-sistemas.com", itemprop="email") italy@extrema-sistemas.com
+          br
+          b #{Phone}: 
+          a(itemprop="telephone", href="tel:+393475913782") :  +39 347 5913782
       section.large-6.column
         div(data-interchange="[/map-small.html, (small)], [/map-large.html, (large)]")

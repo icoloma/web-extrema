@@ -17,16 +17,16 @@ $(function() {
     if (!$contents.height()) {
       $contents.css({
         height: 500,
-        'background-color': '#FFFFCD'
+        opacity: 0
       })
       _.delay(function() {
         $contents.css({
           height: '',
-          'background-color': '#fff'
-        })
+          opacity: 1
+        }).addClass('expanded')
       }, 500)
     } else {
-      $contents.css('height', $contents.height())
+      $contents.css('height', $contents.height()).removeClass('expanded')
       _.defer(function() { $contents.css('height', 0) });
     }
     scrollTo($contents);
