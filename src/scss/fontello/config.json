@@ -49,16 +49,22 @@
       "src": "fontawesome"
     },
     {
+      "uid": "2dd7e3046b63beb19616dce63c5782a6",
+      "css": "blogger",
+      "code": 59397,
+      "src": "zocial"
+    },
+    {
       "uid": "b1ec8e90c2c85cf0035849980a3789b3",
       "css": "twitter",
       "code": 59399,
       "src": "zocial"
     },
     {
-      "uid": "968e63a0a36311e29e960800200c9a66",
-      "css": "box",
-      "code": 59397,
-      "src": "brandico"
+      "uid": "22cfc7af2c4f158b37317c65c92b48c2",
+      "css": "location",
+      "code": 59400,
+      "src": "elusive"
     }
   ]
 }
