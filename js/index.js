@@ -1,1 +1,0 @@
-$(function(){var a=$(".case-studies li"),e=a.get(Math.floor(Math.random()*a.size()));$(".studies-container").append(e)});
