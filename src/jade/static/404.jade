@@ -1,0 +1,14 @@
+extends ../_layouts/default
+block i18n
+  - currentTab = ""
+  - title = notFoundTitle
+block content
+  section
+    .row
+      div.small-12.column
+        h1 #{notFoundTitle}
+        h3 #{notFoundShort}
+        p #{notFoundDesc}
+    .row
+      div.small-12.medium-8.medium-offset-2.large-6.large-offset-3.column
+        img(src="/img/404.jpg", alt=notFoundAlt, title=notFoundAlt)

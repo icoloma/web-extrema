@@ -10,9 +10,10 @@ git remote add origin git@github.com:icoloma/web-extrema.git
 git remote update
 git checkout -b gh-pages origin/gh-pages 
 
+rm -r *
 cp -r ../dist/* .
 
-git add .
+git add --all .
 if [ -z "$1" ]; then
   MESSAGE="Site updated at $(date +'%d-%m-%Y')"
 else

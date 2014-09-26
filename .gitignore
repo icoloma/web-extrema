@@ -1,8 +1,4 @@
-*.sublime*
-node_modules
-*.css
 dist
-.jekyll
-.tmp
+node_modules
+*.sublime-workspace
 .upload
-Gemfile.lock

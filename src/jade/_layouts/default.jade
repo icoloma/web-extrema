@@ -1,0 +1,27 @@
+extends ../_layouts/base
+block head
+  each lang, locale in langs  
+    link(rel="alternate", hreflang=locale, href="/" + locale + "/" + currentTab)
+  script(src='/js/vendor/modernizr-2.8.3.min.js')
+  meta(name='description', content=description || defaultDesc)
+
+block baseContent
+  .cookie-container.hide
+    .cookie-permissions
+      section
+        .row
+          hgroup.column
+            h3 #{cookiePolicyTitle}
+        .row
+          p.columns.small-12.medium-10
+            != cookiePolicyDesc
+          p.columns.small-12.large-2
+            a.accept-cookies.button #{Accept}
+    
+  block content
+
+block scripts
+  script.
+    window.currentLang = "#{currentLang}";
+  script(src="/js/app.min.js")
+  block customScripts
