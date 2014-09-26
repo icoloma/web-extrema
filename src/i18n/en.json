@@ -144,8 +144,8 @@
   "Accept": "Accept",
   "cookiePolicyDescLong": "<p>Every web site uses cookies to improve the user experience. You can block them through your browsers settings, but this will disable some features.</p><ul><li><b>Customization:</b> We use cookies to override the preferred language, in case it's not the same as your browser default.</li><li><b>Analytics and research:</b> We use cookies to keep track of the kind of features that people love. They help us to build a better user experience.</li></ul><p>You can block or remove cookies using the options menu in your browser.",
 
-  "redirectTitle": "This page has been moved!",
-  "redirectDesc": "Sorry for the hassles, but this page has been moved. If the page does not redirect automatically, use the following link",
+  "redirectTitle": "This page has moved!",
+  "redirectDesc": "You are being redirected automatically. If it takes too long, use the link below.",
   "redirectClick": "New page"
 
 }
