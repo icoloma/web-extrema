@@ -15,13 +15,13 @@ block content
               a(href="#html5") HTML5
             dd.tab-title
               a(href="#groovy") Groovy
-        .subsidized-container
-          .row
-            .column.small-4.medium-2.large-1
-              img(src="/img/tripartita.png" alt="Fundación Tripartita" class="tripartita")
-            .column.small-8.medium-10.large-11.subsidized
-              span.show-for-small !{subsidizedShort}
-              span.show-for-medium-up !{subsidized}
+    .subsidized-container
+      .row
+        .column.small-4.medium-2.large-1
+          img(src="/img/tripartita.png" alt="Fundación Tripartita" class="tripartita")
+        .column.small-8.medium-10.large-11.subsidized
+          span.show-for-small !{subsidizedShort}
+          span.show-for-medium-up !{subsidized}
     
   mixin course(data)
     article.course-item.row.section(itemscope, itemtype="http://schema.org/Product", id=data.koliseoEvent)
