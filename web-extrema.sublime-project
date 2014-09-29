@@ -16,7 +16,7 @@
 		{
 			"path": ".",
       "folder_exclude_patterns": [ 
-        "dist" ]
+        "dist", ".upload", "node_modules" ]
 		}
 	],
 	"settings":
