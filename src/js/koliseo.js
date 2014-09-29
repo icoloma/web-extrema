@@ -105,6 +105,7 @@ $(function() {
           dataType: 'json',
           type: 'GET',
           success: function(cursor) {
+            var oldHeight = $item.height()
             var performances = $.makeArray(cursor.data);
             var size = performances.length;
             var renderPerformances = function(page) {
@@ -142,10 +143,10 @@ $(function() {
               } else {
                 $content.append('<p>' + res.empty + '</p>')
               }
-              $item.html($content);
+              $item.html($content).addClass('populated');
               var scrollTop = $window.scrollTop();
               if (scrollTop > $item.offset().top) {
-                $window.scrollTop(scrollTop + $item.height());
+                $window.scrollTop(scrollTop + $item.height() - oldHeight);
               }
               _.defer($item.removeClass, 'loading');
             }
@@ -155,24 +156,18 @@ $(function() {
       }
   ;
 
-  var $elements = $('.kcontainer:empty')
-  , THRESHOLD = 700
+  var THRESHOLD = 200
   , $window = $(window)
   , check = function(e) {
-    if ($elements.length) {
-      var scrollTop = $window.scrollTop()
-      $elements.each(function() {
-        var $this = $(this);
-        if ($this.offset().top - scrollTop < THRESHOLD) {
-          $this.addClass('loading');
-          // implementar la carga
-          loadPerformances($this);
-        }
-      })
-      _.defer(function() {
-        $elements = $elements.filter(":not(.loading):empty");
-      })
-    }
+    var scrollTop = $window.scrollTop()
+    $('.kcontainer:not(.populated)').each(function() {
+      var $this = $(this);
+      if ($this.offset().top - scrollTop - $window.height() < THRESHOLD) {
+        // http://webdesign.tutsplus.com/tutorials/creating-a-collection-of-css3-animated-pre-loaders--cms-21978
+        $this.html('<div id="preloader_2"> <span></span> <span></span> <span></span> <span></span> </div>');
+        loadPerformances($this);
+      }
+    })
   }
 
   $window.scroll(_.throttle(check, 500))
