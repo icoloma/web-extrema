@@ -38,7 +38,7 @@ block content
               span #{Price}: 
               span(itemprop="price") #{data.price}
               span.currency(itemprop="priceCurrency") €
-            div.price-vat #{VATexempt}
+            div.price-vat !{data.priceNote} #{VATexempt}
           li.description.text-left <b>#{Duration}:</b> #{data.duration}
           li.description.text-left <b>#{Audience}:</b> #{data.audience}
           li.description.text-left <b>#{Language}:</b> #{data.language}
@@ -93,6 +93,7 @@ block content
       logo: '/img/logo-google-big.png',
       koliseoEvent: "google-cloud-platform", 
       price: '2,095', 
+      priceNote: gcpPriceNote,
       certDesc: gcpCertDesc,
       duration: duration40h,
       language: langEnEs,
