@@ -36,7 +36,11 @@ block content
           li.price.text-right 
             b
               span #{Price}: 
-              span(itemprop="price") #{data.price}
+              if data.lowestPrice
+                span #{from} 
+                span(itemprop="price") #{data.lowestPrice}
+              else
+                span(itemprop="price") #{data.price}
               span.currency(itemprop="priceCurrency") €
             div.price-vat #{VATexempt}
           li.description.text-left <b>#{Duration}:</b> #{data.duration}
@@ -92,7 +96,7 @@ block content
       desc: gcpDesc, 
       logo: '/img/logo-google-big.png',
       koliseoEvent: "google-cloud-platform", 
-      price: '2,095', 
+      lowestPrice: '495', 
       certDesc: gcpCertDesc,
       duration: duration40h,
       language: langEnEs,
