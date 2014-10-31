@@ -55,7 +55,7 @@ block content
               != data.certDesc
           if data.logo
             li.bullet-item.text-center
-              img(src=data.logo, alt=data.title)
+              img(class=data.logoClass, src=data.logo, alt=data.title)
         
         
       .small-12.column.section
@@ -110,6 +110,7 @@ block content
       title: springCoreTitle, 
       desc: springCoreDesc,
       logo: '/img/logo-spring-big.png',
+      logoClass: 'logo-spring-big',
       koliseoEvent: "spring-core", 
       price: '1,975', 
       duration: duration32h, 
@@ -124,6 +125,7 @@ block content
       title: springWebTitle, 
       desc: springWebDesc, 
       logo: '/img/logo-spring-big.png',
+      logoClass: 'logo-spring-big',
       koliseoEvent: "spring-web", 
       price: '1,975', 
       duration: duration32h, 
@@ -138,6 +140,7 @@ block content
       title: "Enterprise Integration with Spring", 
       desc: eiwsDesc, 
       logo: '/img/logo-spring-big.png',
+      logoClass: 'logo-spring-big',
       koliseoEvent: "enterprise-integration-with-spring", 
       price: '1,975', 
       duration: duration32h, 
@@ -152,6 +155,7 @@ block content
       title: hibernateWithSpringTitle, 
       desc: hibernateWithSpringDesc, 
       logo: '/img/logo-spring-big.png',
+      logoClass: 'logo-spring-big',
       koliseoEvent: "hibernate-with-spring", 
       price: '1,695', 
       duration: duration24h,
@@ -166,6 +170,7 @@ block content
       title: "Groovy & Grails", 
       desc: grailsDesc, 
       logo: '/img/logo-spring-big.png',
+      logoClass: 'logo-spring-big',
       koliseoEvent: "groovy-and-grails", 
       price: '1,995', 
       duration: duration32h,
