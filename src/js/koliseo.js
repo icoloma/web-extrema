@@ -136,7 +136,7 @@ $(function() {
                   (page > 0? '<a class="kcontrol left" data-page="' + (page - 1) + '">&laquo; Previous</a>' : '') +
                   (size - pageSize * (page) > pageSize? '<a class="kcontrol right" data-page="' + (page + 1) + '">Next &raquo;</a>' : '') +
                   '</div>');
-                $content.click('.kcontrol', function(e) {
+                $content.find('.kcontrol').click(function(e) {
                   var $this = $(e.target);
                   renderPerformances(+$this.data('page'));
                 });
