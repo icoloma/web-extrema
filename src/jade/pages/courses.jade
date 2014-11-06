@@ -12,9 +12,9 @@ block content
             dd.tab-title
               a(href="#spring") Spring
             dd.tab-title
-              a(href="#html5") HTML5
-            dd.tab-title
               a(href="#groovy") Groovy
+            dd.tab-title
+              a(href="#html5") HTML5
     .subsidized-container
       .row
         .column.small-4.medium-2.large-1
@@ -24,7 +24,8 @@ block content
           span.show-for-medium-up !{subsidized}
     
   mixin course(data)
-    article.course-item.row.section(itemscope, itemtype="http://schema.org/Product", id=data.koliseoEvent)
+    article.course-item.row.section(itemscope, itemtype="http://schema.org/Product")
+      div.anchor(id=data.koliseoEvent)
       div.column.small-12.medium-6
         h1(itemprop="name") #{data.title}
         metadata(itemprop="url", content="http://extrema-sistemas.com/en/" + currentTab + "/#" + data.koliseoEvent)
@@ -90,7 +91,8 @@ block content
     hr
           
 
-  div(id="google")
+  div
+    div.anchor(id="google")
     +course({
       title: "Google Cloud Platform", 
       desc: gcpDesc, 
@@ -105,7 +107,8 @@ block content
       audience: gcpAudience,
       requirements: gcpRequirements
     })
-  div(id="spring")
+  div
+    div.anchor(id="spring")
     +course({
       title: springCoreTitle, 
       desc: springCoreDesc,
@@ -165,7 +168,8 @@ block content
       audience: hibernateWithSpringAudience,
       requirements: hibernateWithSpringRequirements
     })
-  div(id="groovy")
+  div
+    div.anchor(id="groovy")
     +course({
       title: "Groovy & Grails", 
       desc: grailsDesc, 
@@ -181,7 +185,8 @@ block content
       audience: grailsAudience,
       requirements: grailsRequirements
     })
-  div(id="html5")
+  div
+    div.anchor(id="html5")
     +course({
       title: "HTML5 & CSS3", 
       desc: html5Desc,

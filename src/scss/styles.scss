@@ -66,6 +66,15 @@ body {
   }
 }
 
+.anchor {
+  position: relative;
+  top: -150px;
+}
+
+.nested-f-topbar-fixed.f-topbar-fixed .anchor {
+  top: -70px; 
+}
+
 .contain-to-grid .top-bar-section li.active:not(.has-form) a:not(.button) {
   background: #fff;
   color: $extrema-blue;
@@ -346,6 +355,7 @@ footer {
   -o-transition: opacity 0.3s linear;
   -moz-transition: opacity 0.3s linear;
   -webkit-transition: opacity 0.3s linear;
+  overflow: hidden;
   &:empty {
     opacity: 0;
   }

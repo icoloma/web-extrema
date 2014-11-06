@@ -40,8 +40,9 @@ $(function() {
       $subsidized.addClass('collapsed')
     }, 5000)
     _.delay(function() {
+      $document.scrollTop($document.scrollTop() - $subsidized.outerHeight());
       $subsidized.remove();
-      $('body').addClass('nested-f-topbar-fixed')
+      $('body').addClass('nested-f-topbar-fixed');
     }, 6000)
   }
 
