@@ -125,8 +125,8 @@ $(function() {
                       '<a class="kperflink ' + ticketsClass + (pct === 0? ' disabled' : '') + '" href="' + getEventURL(perf.event.uuid) + '?selected=' + perf.id + '" target="_blank">' +             
                         '<span class="icon-right-open"></span> ' + res.buy + ' ' + '<span class="kperfdate">' + formatDate(res.dateFormat, perf.dateTimeStr) + '</span> ' +
                       '</a>' +
-                      '<span class="kaddr"> &middot; ' + perf.address + ' &middot; ' +
-                        availableTickets + '/' + perf.totalTickets  + ' ' + res.ticketsAvailable + ' ' +
+                      '<span class="kaddr"> &middot; ' + perf.address + /*' &middot; ' +
+                        availableTickets + '/' + perf.totalTickets  + ' ' + res.ticketsAvailable + ' ' + */
                       '</span>' +
                     '</div></li>'
                   ));

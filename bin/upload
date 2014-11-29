@@ -1,6 +1,8 @@
 #!/bin/bash
 DIR='.upload'
 
+gulp dist || exit 1
+
 rm -rf $DIR
 mkdir $DIR
 cd $DIR
