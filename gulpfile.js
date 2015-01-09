@@ -11,7 +11,9 @@ var fs      = require('fs');
 var uglify  = require('gulp-uglify');
 var concat  = require('gulp-concat');
 //var merge = require('merge-stream'); // see https://github.com/gulpjs/gulp/blob/master/docs/recipes/using-multiple-sources-in-one-task.md
-var dist    = './dist/'; 
+var webserver = require('gulp-webserver');
+
+var dist    = './dist/';
 
 gulp.task('clean', function (cb) {
   rimraf(dist, cb);
@@ -63,9 +65,9 @@ gulp.task('scripts', function() {
   // Minify and copy all JavaScript (except vendor scripts)
   // with sourcemaps all the way down
   gulp.src([
-    'src/js/vendor/jquery*.js', 
-    'src/js/vendor/lodash*.js', 
-    'src/js/vendor/foundation.js', 
+    'src/js/vendor/jquery*.js',
+    'src/js/vendor/lodash*.js',
+    'src/js/vendor/foundation.js',
     'src/js/vendor/foundation.topbar.js',
     //'src/js/vendor/foundation.tab.js',
     'src/js/vendor/foundation.interchange.js',
@@ -82,7 +84,7 @@ gulp.task('styles', function () {
       .pipe(sass())
       .pipe(rename('app.css'))
       .pipe(csso())
-      .pipe(gulp.dest(dist + 'css'))
+      .pipe(gulp.dest(dist + 'css'));
 });
 
 gulp.task('watch', ['styles'], function () {
@@ -92,11 +94,20 @@ gulp.task('watch', ['styles'], function () {
   gulp.watch(['src/img/**/*'], ['copy']);
 });
 
+gulp.task('webserver', function() {
+  gulp.src('dist')
+    .pipe(webserver({
+      livereload: true,
+      directoryListing: false,
+      open: true
+    }));
+});
+
 // The dist task (used to store all files that will go to the server)
 gulp.task('dist', ['clean', 'copy-html', 'copy', 'scripts', 'styles']);
 
 // The default task (called when you run `gulp`)
-gulp.task('default', ['dist', 'watch']);
+gulp.task('default', ['dist', 'watch', 'webserver']);
 
 // Handle the error
 function errorHandler (error) {

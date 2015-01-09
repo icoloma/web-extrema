@@ -2,13 +2,9 @@
 
 Run locally
 ```bash
-npm install -g http-server
-npm install
 gulp
 ```
 
-On a separate shell
-```bash
-cd dist
-http-server
-```
+A browser should open at localhost:8000
+
+To upload, type `bin/upload`. Easy peasy.
