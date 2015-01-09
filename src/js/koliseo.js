@@ -104,6 +104,13 @@ $(function() {
           },
           dataType: 'json',
           type: 'GET',
+          error: function(request, error, message) {
+            console.log('Error connecting to Koliseo');
+            console.log(arguments);
+            $item
+              .html('<div class="kcontent"><p>Course dates are not available at this time. If you want to attend, please <a href="mailto:training@extrema-sistemas.com"><span class="icon-mail"></span> contact us</a>.</p></div>')
+              .addClass('populated');
+          },
           success: function(cursor) {
             var oldHeight = $item.height()
             var performances = $.makeArray(cursor.data);
