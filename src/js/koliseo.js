@@ -41,7 +41,7 @@ $(function() {
     , getEventURL = function(eventUuid) {
         return (isOldIE() ? document.location.protocol : 'https:') + '//www.koliseo.com/' + eventUuid;
       }
-    , pageSize = 5
+    , pageSize = 10
     /* Detect IE 8 and 9*/
     , isOldIE = function() {
         return navigator.userAgent.match(/.+MSIE [89]\.0.+/);
