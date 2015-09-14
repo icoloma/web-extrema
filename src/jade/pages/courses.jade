@@ -12,7 +12,7 @@ block content
             dd.tab-title
               a(href="#spring") Spring
             dd.tab-title
-              a(href="#groovy") Groovy
+              a(href="#big-data") Big Data
             dd.tab-title
               a(href="#html5") HTML5
     .subsidized-container
@@ -129,7 +129,7 @@ block content
       desc: springWhatsNewDesc, 
       logo: '/img/logo-spring-big.png',
       logoClass: 'logo-spring-big',
-      koliseoEvent: "spring-whatsnew", 
+      koliseoEvent: "whats-new-in-spring", 
       price: '1,295', 
       duration: duration24h, 
       //certDesc: springCoreVoucher,
@@ -183,21 +183,21 @@ block content
       requirements: hibernateWithSpringRequirements
     })
   div
-    div.anchor(id="groovy")
+    div.anchor(id="big-data")
     +course({
-      title: "Groovy & Grails", 
-      desc: grailsDesc, 
-      logo: '/img/logo-spring-big.png',
-      logoClass: 'logo-spring-big',
-      koliseoEvent: "groovy-and-grails", 
-      price: '1,995', 
+      title: pivotalHDTitle, 
+      desc: pivotalHDDesc, 
+      logo: '/img/logo-pivotal.png',
+      logoClass: 'logo-pivotal',
+      koliseoEvent: "processing-data-with-pivotal-hd", 
+      price: '2,095', 
       duration: duration32h,
       language: langEnIt,
-      objectives: grailsObjectives,
-      afterCompleting: grailsAfterCompleting,
-      syllabus: grailsSyllabus,
-      audience: grailsAudience,
-      requirements: grailsRequirements
+      objectives: pivotalHDObjectives,
+      afterCompleting: pivotalHDAfterCompleting,
+      syllabus: pivotalHDSyllabus,
+      audience: pivotalHDAudience,
+      requirements: pivotalHDRequirements
     })
   div
     div.anchor(id="html5")
