@@ -95,7 +95,7 @@ gulp.task('watch', ['styles'], function () {
 });
 
 gulp.task('webserver', function() {
-  gulp.src('dist')
+  gulp.src('./dist')
     .pipe(webserver({
       livereload: true,
       directoryListing: false,

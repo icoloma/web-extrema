@@ -10,10 +10,10 @@
   box-sizing: border-box;
 }
 
-@import
-  "variables",
-  "foundation",
-  "fonts",
-  "clients",
-  "loading",
-  "styles";
+@import "variables";
+@import "foundation/normalize";
+@import "foundation/foundation";
+@import "fonts";
+@import "clients";
+@import "loading";
+@import "styles";

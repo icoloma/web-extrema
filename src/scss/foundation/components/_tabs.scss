@@ -2,9 +2,8 @@
 // foundation.zurb.com
 // Licensed under MIT Open Source
 
-@import "global";
-@import "grid";
-@import "type";
+@import 'global';
+@import 'grid';
 
 //
 // @variables
@@ -13,15 +12,16 @@
 $include-html-tabs-classes: $include-html-classes !default;
 
 $tabs-navigation-padding: rem-calc(16) !default;
-$tabs-navigation-bg-color: #efefef !default;
-$tabs-navigation-active-bg-color: #fff !default;
+$tabs-navigation-bg-color: $silver !default;
+$tabs-navigation-active-bg-color: $white !default;
 $tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -6%) !default;
-$tabs-navigation-font-color: #222 !default;
+$tabs-navigation-font-color: $jet !default;
+$tabs-navigation-active-font-color: $tabs-navigation-font-color !default;
 $tabs-navigation-font-size: rem-calc(16) !default;
 $tabs-navigation-font-family: $body-font-family !default;
 
 $tabs-content-margin-bottom: rem-calc(24) !default;
-$tabs-content-padding: $column-gutter/2 !default;
+$tabs-content-padding: ($column-gutter/2) !default;
 
 $tabs-vertical-navigation-margin-bottom: 1.25rem !default;
 
@@ -30,43 +30,55 @@ $tabs-vertical-navigation-margin-bottom: 1.25rem !default;
     .tabs {
       @include clearfix;
       margin-bottom: 0 !important;
-      .tab-title {
-        position: relative;
-        margin-bottom: 0 !important;
+      margin-left: 0;
+      background: $tabs-navigation-bg-color;
+      dd, .tab-title {
         float: $default-float;
+        list-style: none;
+        margin-bottom: 0 !important;
+        position: relative;
         > a {
           display: block;
-          background: $tabs-navigation-bg-color;
+          background: {
+            color: $tabs-navigation-bg-color;
+          }
           color: $tabs-navigation-font-color;
-          padding: $tabs-navigation-padding $tabs-navigation-padding * 2;
           font-family: $tabs-navigation-font-family;
           font-size: $tabs-navigation-font-size;
-          &:hover { background: $tabs-navigation-hover-bg-color; }
+          padding: $tabs-navigation-padding $tabs-navigation-padding * 2;
+          position: relative;
+          &:hover {
+            background-color: $tabs-navigation-hover-bg-color;
+            color: $tabs-navigation-hover-color;
+          }
         }
-        &.active a { background: $tabs-navigation-active-bg-color; }
-      }
-      &.radius {
-        .tab-title:first-child {
-          a { @include side-radius($default-float, $global-radius); }
-        }
-        .tab-title:last-child {
-          a { @include side-radius($opposite-direction, $global-radius); }
-        }
-      }
-      &.vertical {
-        dd {
-          position: inherit;
-          float: none;
-          display: block;
-          top: auto;
+        & a.active {
+          background-color: $tabs-navigation-active-bg-color;
+          color:$tabs-navigation-active-font-color;
+          &::after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              margin-left: -2.5px;
+              display: inline-block;
+              border-right: 5px solid transparent;
+              border-bottom: 5px solid #FFF;
+              border-left: 5px solid transparent;
+          }
         }
       }
     }
 
     .tabs-content {
       @include clearfix;
+      background: $white;
+      border: 1px solid $border-color;
+      border-top: 0;
+      border-radius: 0 3px 3px 0;
       margin-bottom: $tabs-content-margin-bottom;
       width: 100%;
+
       > .content {
         display: none;
         float: $default-float;
@@ -75,32 +87,17 @@ $tabs-vertical-navigation-margin-bottom: 1.25rem !default;
         &.active { display: block; float: none; }
         &.contained { padding: $tabs-content-padding; }
       }
-      &.vertical {
-        display: block;
-        > .content { padding: 0 $tabs-content-padding; }
-      }
+
     }
-    @media #{$medium-up} {
-      .tabs {
-        &.vertical {
-          width: 20%;
-          float: $default-float;
-          margin-bottom: $tabs-vertical-navigation-margin-bottom;
-        }
-      }
-      .tabs-content {
-        &.vertical {
-          width: 80%;
-          float: $default-float;
-          margin-#{$default-float}: -1px;
-        }
-      }
-    }
+
     .no-js {
       .tabs-content > .content {
         display: block;
         float: none;
       }
+    }
+
+    @media #{$medium-up} {
     }
   }
 }
