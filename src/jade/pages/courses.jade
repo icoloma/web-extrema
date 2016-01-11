@@ -13,8 +13,6 @@ block content
               a(href="#spring") Spring
             dd.tab-title
               a(href="#big-data") Big Data
-            dd.tab-title
-              a(href="#html5") HTML5
     .subsidized-container
       .row
         .column.small-4.medium-2.large-1
@@ -31,7 +29,20 @@ block content
         metadata(itemprop="url", content="http://extrema-sistemas.com/en/" + currentTab + "/#" + data.koliseoEvent)
         div(itemprop="description")
           != data.desc
-        
+        if data.newsletterLink
+          .newsletter.columns
+            form(action=data.newsletterLink, method="post", name="mc-embedded-subscribe-form", target="_blank", novalidate)
+              div(id="mc_embed_signup_scroll")
+                label(for="mce-EMAIL")
+                  h2 #{suscribeToNewsletter}
+                p #{data.newsletterDesc}
+                input.email(type="email", value="", name="EMAIL", id="mce-EMAIL", placeholder="Email", required)
+                //- real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                div(style="position: absolute; left: -5000px;", aria-hidden="true")
+                  input(type="text", name="b_6b2bcf54ecc61ae4b7f084a25_ce44b90108", tabindex="-1", value="")
+                div.clear
+                  input(type="submit", value="Subscribe", name="subscribe", id="mc-embedded-subscribe", class="button")
+
       aside.column.medium-6._show-for-medium-up(itemprop="offers", itemscope, itemtype="http://schema.org/Offer")
         ul.pricing-table
           li.price.text-right 
@@ -60,9 +71,8 @@ block content
         
         
       .small-12.column.section
-        
         .row
-          .column.small-12
+          .columns
             h2 #{RegisterFor} #{data.title}
             .kcontainer(data-locale=currentLang, data-event-uuid="extrema/" + data.koliseoEvent)
         .row
@@ -105,7 +115,9 @@ block content
       objectives: gcpObjectives,
       syllabus: gcpSyllabus,
       audience: gcpAudience,
-      requirements: gcpRequirements
+      requirements: gcpRequirements,
+      newsletterLink: "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=ce44b90108",
+      newsletterDesc: suscribeToGcpNewsletter
     })
   div
     div.anchor(id="spring")
@@ -122,7 +134,9 @@ block content
       objectives: springCoreObjectives,
       syllabus: springCoreSyllabus,
       audience: springCoreAudience,
-      requirements: springCoreRequirements
+      requirements: springCoreRequirements,
+      newsletterLink: springNewsletter,
+      newsletterDesc: suscribeToSpringNewsletter
     })
     +course({
       title: springWebTitle, 
@@ -184,20 +198,4 @@ block content
       syllabus: pivotalHDSyllabus,
       audience: pivotalHDAudience,
       requirements: pivotalHDRequirements
-    })
-  div
-    div.anchor(id="html5")
-    +course({
-      title: "HTML5 & CSS3", 
-      desc: html5Desc,
-      logo: '/img/logo-html5-big.png',
-      koliseoEvent: "html5-and-css3",
-      price: '900',
-      duration: duration24h,
-      language: langEnEs,
-      objectives: html5Objectives,
-      afterCompleting: html5AfterCompleting,
-      audience: html5Audience,
-      requirements: html5Requirements,
-      multipleRegistrations: html5MultipleRegistrations
     })

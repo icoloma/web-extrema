@@ -26,7 +26,6 @@ block content
                       | !{partnerDesc}
           +courseArticle("/" + currentLang + "/courses#google", "gcp", "Google Cloud Platform", googleCloudPlatformDesc, googleTrainingPartner)
           +courseArticle("/" + currentLang + "/courses#spring", "spring", "Spring", springDesc, springCertifiedPartner)
-          +courseArticle("/" + currentLang + "/courses#html5", "html5", "HTML5 & CSS3", html5ShortDesc)
           +courseArticle("/" + currentLang + "/courses#big-data", "pivotal-hd", "Pivotal HD", pivotalHDShortDesc)
 
   hr
@@ -40,7 +39,6 @@ block content
       a.button.radius(href="/" + currentLang + "/contact") #{getInContact} 
       != " "
       a.button.secondary.radius(href="/" + currentLang + "/studies") <span class="icon-right-open"></span> #{moreCaseStudies}
-
   hr
   .row
     section.column.small-12.medium-6
@@ -49,5 +47,6 @@ block content
     section.column.small-12.medium-6.text-center
       p
         img.logo-spring-big(src="/img/logo-spring-big.png", alt="SpringSource Official Training Partner", style="margin-right: 10px")
+
 
   include ../_include/clients-footer

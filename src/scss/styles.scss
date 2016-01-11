@@ -13,6 +13,8 @@ $footer-link-hover-background-color: #999;
 $black: #222;
 $twitter-color: #00aced;
 $blogger-color: #fb8f3d;
+$newsletter-color: $white;
+$newsletter-bg-color: #00796B;
 
 body {
   color: $black;
@@ -421,6 +423,29 @@ footer {
   font-size: 80%;
 }
 
+.newsletter {
+  padding-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  .email {
+    width: 100%;
+  }
+  .button {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: $newsletter-bg-color;
+    color: $newsletter-color;
+    border-color: $newsletter-bg-color;
+    border-radius: 5px;
+    &:hover, &:focus {
+      background-color: scale-color($newsletter-bg-color, $lightness: -20%);
+      border-color: scale-color($newsletter-bg-color, $lightness: -20%);
+    }
+  }
+}
+
 @media #{$medium}{
 
   .top-bar-section ul {
@@ -437,5 +462,8 @@ footer {
   }
   .tab-title > a {
     padding: 1rem;
+  }
+  .newsletter {
+    
   }
 }

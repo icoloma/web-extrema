@@ -1,4 +1,16 @@
 {
+
+  "gkeObjectives": "",
+  "gkeSyllabus": "<ol><li></li></ol>",
+  "gkeRequirements": "",
+  "gkeAudience": "",
+  "gkeDesc": "",
+
+  "suscribeToNewsletter": "Suscríbete a nuestra lista de correo",
+  "suscribeToGcpNewsletter": "Si quieres saber lo más reciente de nuestros cursos de Google Cloud Platform, suscríbete a nuestra lista de correo específica de GCP.",
+  "suscribeToSpringNewsletter": "Para estar al día con lo último de los cursos de Spring, suscríbete a nuestra lista de correo de Spring.",
+  "springNewsletter": "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=5f43d4191d",
+
   "from": "desde",
   "subsidized": "Estos cursos son subvencionables en España hasta un 100% a través de la <a href='http://www.fundaciontripartita.org/' target='_blank'>Fundación Tripartita</a>. Otros países podrían tener otras condiciones, por favor contáctanos para más detalles.",
   "subsidizedShort": "Subvencionable en España por la <a href='http://www.fundaciontripartita.org/' target='_blank'>Fundación Tripartita</a>",
@@ -24,7 +36,6 @@
   "springCertifiedPartner": "<b>Curso Oficial:</b> incluye el examen de certificación para obtener el título Certified Spring Developer emitido por VMware.",
   "readMore": "Leer más",
   "hibernateWithSpringTitle": "Curso Oficial Hibernate con Spring",
-  "html5Requirements": "En cursos in-house, es imprescindible que la sala de impartición del curso disponga de conexión a Internet para todos los asistentes.",
   "springCoreRequirements": "Este curso es perfecto para desarrolladores con o sin experiencia previa con Spring Core.",
   "springWebAudience": "Desarrolladores y arquitectos implicados en proyectos web con Spring.", 
   "eiwsAudience": "Este curso está diseñado para desarrolladores y arquitectos Java.",
@@ -43,7 +54,6 @@
   "Contact": "Contacto",
   "defaultDesc": "Extrema Sistemas es la compañía de formación líder en España e Italia, responsable de cursos de certificación para Google Cloud Platform y el conjunto de tecnologías que forman el Spring Portfolio.",
   "indexTrainingTitle": "Habla con el líder en formación",
-  "html5ShortDesc": "Aprende las últimas novedades de los drafts de HTML5 y CSS3, y optimiza tu flujo de trabajo para navegadores modernos y legacy.",
   "springDesc": "Los cursos oficiales sobre el estándar <i>de facto</i> para el desarrollo de aplicaciones Java.",
   "pivotalHDShortDesc": "Aprende a usar todas las funcionalidades de Pivotal HD, 'La distribución de Apache Hadoop más potente del mundo'.",
   "googleCloudPlatformDesc": "Google Cloud Platform permite a los desarrolladores construir, testear y desplegar aplicaciones en la estructura fiable y escalable usada por Google",
@@ -51,7 +61,6 @@
   "consultingTitle": "La ventaja natural de la consultoría",
   "consultingDesc": "Súmate a la lista de clientes que han confiado en nuestros servicios de consultoría y mentoring.",
   "Courses": "Cursos",
-  "html5Desc": "<p>Este curso introduce las últimas incorporaciones en HTML5 y CSS3, incluyendo el soporte en Firefox, Chrome e Internet Explorer.</p><p>Durante tres días revisaremos las mejores prácticas de desarrollo web actualizadas a los nuevos estándares y se analizarán patrones actualizados de diseño contrastados con soluciones antiguas. Éste es un curso muy completo que cubre desde wireframing y patrones de capa de presentación hasta SEO y rendimiento.</p>",
   "showCourseContents": "Ver contenido del curso",
   "hideCourseContents": "Ocultar contenido del curso",
   "availableCourses": "Cursos disponibles",
@@ -76,15 +85,6 @@
   "Objectives": "Objetivos",
   "afterCompleting": "Al completar este curso",
   "Syllabus": "Contenido",
-
-
-
-
-  "html5Audience": "Diseñadores, maquetadores de HTML y desarrolladores de código servidor (Java, python, ruby) de capa web. Es recomendable un mínimo de un año desarrollando aplicaciones web (HTML y CSS). No son necesarios conocimientos de JavaScript.",
-  "html5Objectives": "<p>Los objetivos del curso son los siguientes:</p><ul><li><b>Separar contenido y presentación</b> de capa web.</li><li>Conocer los <b>nuevos tags introducidos con HTML5</b>.</li><li>Conocer los <b>nuevos selectores y atributos introducidos con CSS3</b>.</li><li>Aprender lo básico de <b>JavaScript y JQuery</b>.</li><li>Aplicar los <b>nuevos componentes de formulario y reglas de validación</b> presentes en HTML5.</li><li>Asumir la <b>cuota de mercado de cada navegador</b>, con tratamiento especial para las versiones de IE.</li><li><b>Simplificar el código HTML</b> generado por el servidor.</li><li>Utilizar <b>frameworks de CSS</b> (Bootstrap, Foundation)</li><li><b>Reducir el tráfico</b> entre navegador y servidor, mejorando el rendimiento.</li><li><b>Mejorar la accesibilidad</b> de las aplicaciones desarrolladas.</li><li>Optimizar el <b>posicionamiento en buscadores</b>.</li><li><b>Mantener una imagen coherente entre navegadores</b>, incluyendo aquellos que no soportan HTML5 o CSS3.</li><li>Aprender a escribir <b>CSS de impresión</b>.</li><li>Aprender a utilizar técnicas de <b>responsive design</b>.</li><li>Aprender a utilizar otras <b>tipografías</b> más allá de las consideradas web-safe.</li><li>Conocer los nuevos <b>patrones de interfaces de usuario</b>.</li></ul>",
-  "html5AfterCompleting": "<p>Cuando termine este curso el asistente será capaz de:</p><ul><li><b>Crear e interpretar wireframes</b> eficientemente.</li><li>Desarrollar aplicaciones web basadas en <b>HTML5 y CSS3</b>.</li><li>Sustituir código JavaScript por <b>animaciones basadas en CSS3</b>, más rápidas y eficientes en recursos.</li><li>Diseñar <b>páginas web <i>responsive</i></b> que se adapten a cualquier dispositivo.</li><li><b>Emplear y generar sprites</b> para sus diseños.</li><li>Escribir <b>selectores de CSS más eficientes</b>, mejorando los tiempos de renderizado del navegador.</li><li><b>Emplear iconos mediante font-face</b> reduciendo las peticiones al servidor.</li><li><b>Diagnosticar el render de una página web</b> en cualquier navegador de clase A.</li><li><b>Introducir nuevos tags HTML5</b> en aplicaciones existentes o de nuevo desarrollo, con soporte para navegadores más antiguos.</li><li><b>Utilizar schema.org</b> en sus propios proyectos.</li><li><b>Utilizar Modernizr y polyfills</b> para soportar navegadores sin soporte de HTML5.</li><li>Aplicar <b>frameworks CSS y CSS reset</b>.</li><li>Administrar sus hojas de estilo mediante un <b>pre-procesador de CSS</b> (Sass, LESS, Stylus).</li><li>Validar la <b>accesibilidad del HTML</b>.</li><li><b>Optimizar el ancho de banda</b> consumido por las aplicaciones web.</li><li>Emplear las <b>herramientas de ayuda al desarrollo</b> que hay disponibles online.</li><li><b>Realizar un SEO básico</b> de sus aplicaciones web.</li><li>Identificar el <b>grado de soporte de cada navegador</b>.</li><li>Realizar pruebas a la vez <b>en distintas versiones de IE</b>.</li><li>Usar <b>herramientas basadas en Gulp o Grunt</b> para un flujo de trabajo más eficiente.</li></ul>",
-
-
 
 
 

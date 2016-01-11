@@ -1,4 +1,16 @@
 {
+
+  "gkeObjectives": "",
+  "gkeSyllabus": "<ol><li></li></ol>",
+  "gkeRequirements": "",
+  "gkeAudience": "",
+  "gkeDesc": "",
+
+  "suscribeToNewsletter": "Iscriviti alla nostra newsletter",
+  "suscribeToGcpNewsletter": "Se vuoi ricevere le ultime novità sui corsi di Google Cloud Platform, iscriviti alla nostra newsletter specifica GCP.",
+  "suscribeToSpringNewsletter": "Per sapere tutto sui corsi di Spring, iscriviti alla nostra newsletter di Spring.",
+  "springNewsletter": "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=fbd0ee8d91",
+
   "from": "da",
   "gcpPriceNote": "(<span class=nobreak>per il corso completo</span>; <span class=nobreak>ciascun modulo 995€</span>)<br>",
   "subsidized": "Questi corsi sono finanziabili in Spagna fino al 100% attraverso la <a href='http://www.fundaciontripartita.org/' target='_blank'>Fundación Tripartita</a>. In altri Paesi potrebbero applicarsi altre condizioni, contattaci per maggiori dettagli.",
@@ -40,7 +52,6 @@
   "Contact": "Contatti",
   "defaultDesc": "Extrema Sistemas è una compagnia di training di rilievo sia in Spagna che in Italia, dove realizza i corsi certificati di Google Cloud Platform e Spring.",
   "indexTrainingTitle": "Leader nella formazione",
-  "html5ShortDesc": "Le ultime novità sui draft di HTML5 e CSS3, dedicando speciale attenzione ai browser moderni e legacy.",
   "springDesc": "I corsi ufficiali ormai standard di fatto per le applicazioni imprenditoriali basate sulla tecnologia Java.",
   "pivotalHDShortDesc": "Quickly move your teams to exploit the extended capabilities of Pivotal HD, 'The world’s most powerful Apache Hadoop distribution'.",
   "googleCloudPlatformDesc": "Google Cloud Platform permette agli sviluppatori di costruire, testare e distribuire applicazioni sull'infrastruttura altamente scalabile ed affidabile di Google",
@@ -48,7 +59,6 @@
   "consultingTitle": "Ti offriamo tutti i vantaggi della consulenza",
   "consultingDesc": "Scopri la lista dei clienti che hanno confidato nei nostri servizi di consulenza e mentoring.",
   "Courses": "Corsi",
-  "html5Desc": "<p>Questo corso dá una visione dello stato attuale delle tecnologie web e degli standard più innovativi, dedicando particolare attenzione al supporto presente in Firefox, Chrome e Internet Explorer.</p><p>Durante tre giorni prenderemo in considerazione le migliori pratiche di sviluppo del web secondo i nuovi standard e analizzeremo modelli e tecniche attualizzate di disegno web, in comparazione con le versioni piú antiche. E' un corso molto completo che va dal wireframing e pattern UI ad una breve introduzione a SEO e alle percentuali di mercato dei browser, includendo una dettagliata descrizione del perché IE6 non é piú necessario.</p>",
   "showCourseContents": "Mostrare i contenuti del corso",
   "hideCourseContents": "Nascondere i contenuti del corso",
   "availableCourses": "Date disponibili",
@@ -73,16 +83,6 @@
   "Objectives": "Obiettivi",
   "afterCompleting": "Al termine del corso",
   "Syllabus": "Contenuto",
-
-
-
-
-  "html5Audience": "Designer e sviluppatori web server side (java, python, ruby). E' consigliabile aver maturato un'esperienza minima di un anno nello sviluppo di applicazioni web (HTML e CSS). Non é richiesta alcuna esperienza in Javascript.",
-  "html5Requirements": "Durante i corsi in company tutti i partecipanti dovranno avere accesso ad Internet.",
-  "html5Objectives": "<p>Lo scopo del corso é:</p><ul><li><b>Separare contenuto e presentazione</b></li><li>Introdurre i <b>nuovi tag disponibili nell'HTML5.</b>.</li><li>Introdurre i <b>nuovi selettori disponibili nel CSS3</b>.</li><li>Introdurre le <b>basi di JavaScript e JQuery</b>.</li><li>Applicare i <b>new form elements e le regole di validazione di HTML5</b>.</li><li>Comprendere il <b>market share dei browser</b>, specialmente rispetto ad Internet Explorer.</li><li>Imparare come <b>semplificare il proprio codice HTML</b>.</li><li>Introdurre vari <b>framework CSS</b> (Twitter Bootstrap, Compass).</li><li><b>Migliorare le performance</b> riducendo il traffico tra browser e server.</li><li><b>Migliorare l'accessibilità</b>.</li><li>Ottimizzare il <b>posizionamento nei motori di ricerca</b>.</li><li>Mantenere un'immagine omogenea includendo <b>legacy browser senza il supporto HTML5 o CSS3</b>.</li><li>Imparare a scrivere <b>stylesheet CSS alternativi per la stampa</b>.</li><li>Imparare ad applicare <b>responsive design</b>.</li><li><b>Introdurre nuove fonti</b> oltre a web safe.</li><li>Imparare <b>nuovi pattern UI</b> per web design.</li></ul>",
-  "html5AfterCompleting": "<p>Dopo questo corso, l'alunno sarà in grado di:</p><ul><li><b>Creare e comprendere i wireframe</b>.</li><li>Sviluppare applicazioni web basate su <b>HTML5 e CSS3</b>.</li><li>Sostituire le animazioni JavaScript-based con <b>transizioni CSS3</b> più rapide ed efficienti.</li><li>Sviluppare una <b>responsive web page</b> compatibile con ogni dispositivo.</li><li>Creare ed usare le proprie <b>immagini sprite</b>.</li><li>Scrivere <b>selettori CSS efficienti</b> che aiutino a migliorare il rendering time.</li><li>Usare <b>font-face icon</b> per minimizzare le server request.</li><li><b>Diagnosticare la propria pagina web</b> in qualunque browser di classe A.</li><li><b>Introdurre nuovi tag HTML5</b> in applicazioni nuove o già esistenti senza rompere la compatibilità browser.</li><li><b>Usare schema.org</b> nei propri progetti.</li><li>Usare <b>Modernizr e polyfills</b> per il supporto con i browser legacy.</li><li>Usare <b>framework CSS</b> e <b>reset CSS</b>.</li><li>Gestire i propri stylesheet usando un <b>preprocessor CSS</b> (Sass, LESS, Stylus).</li><li><b>Validare l'accessibilità e la struttura</b> del proprio HTML.</li><li><b>Ottimizzare la larghezza della banda consumata</b> dalle proprie applicazioni web.</li><li>Usare <b>tool di sviluppo online</b>.</li><li><b>Dare i primi passi con il SEO</b>.</li><li>Identificare <b>il supporto browser</b> per i nuovi standard.</li><li>Provare <b>versioni differenti di Internet Explorer</b> allo stesso tempo.</li><li><b>Usare LiveReload</b> per editare la propria pagina web in maniera più efficiente.</li></ul>",
-
-
 
 
 
