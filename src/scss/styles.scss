@@ -257,6 +257,13 @@ p.certification {
 .pricing-table .price {
   border-bottom: solid 1px #ddd;
   color: #666;
+  overflow: hidden;
+
+  .deprecated {
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 }
 
 .pricing-table * {

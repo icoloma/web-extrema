@@ -55,12 +55,16 @@ block content
                 span(itemprop="price") #{data.price}
               span.currency(itemprop="priceCurrency") €
             div.price-vat #{VATexempt}
+            if data.deprecated
+              span.label.warning.radius.right.deprecated Deprecated
           li.description.text-left <b>#{Duration}:</b> #{data.duration}
           li.description.text-left <b>#{Audience}:</b> #{data.audience}
           li.description.text-left <b>#{Language}:</b> #{data.language}
           if data.requirements
             li.description.text-left <b>#{Requirements}:</b> #{data.requirements}
           li.description.text-left !{standardRequirements}
+          if data.creditCardRequired
+            li.description.text-left !{data.creditCardRequired}
           if data.certDesc
             li.bullet-item.text-left.certification 
               span.icon.icon-star 
@@ -104,6 +108,67 @@ block content
   div
     div.anchor(id="google")
     +course({
+      title: cpb200Title, 
+      desc: cpb200Desc, 
+      logo: '/img/logo-google-big.png',
+      koliseoEvent: "cpb200-big-query-for-data-analysts", 
+      price: '1,095', 
+      duration: duration24h,
+      language: langEnEs,
+      objectives: cpb200Objectives,
+      syllabus: cpb200Syllabus,
+      audience: cpb200Audience,
+      requirements: cpb200Requirements,
+      creditCardRequired: creditCardRequired,
+      certDesc: cpb200CertDesc,
+      newsletterLink: "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=ce44b90108",
+      newsletterDesc: suscribeToGcpNewsletter
+    })
+    +course({
+      title: cpd200Title, 
+      desc: cpd200Desc, 
+      logo: '/img/logo-google-big.png',
+      koliseoEvent: "cpd200", 
+      price: '1,095', 
+      duration: duration24h,
+      language: langEnEs,
+      objectives: cpd200Objectives,
+      syllabus: cpd200Syllabus,
+      audience: cpd200Audience,
+      creditCardRequired: creditCardRequired,
+      requirements: cpd200Requirements,
+      certDesc: cpd200CertDesc
+    })
+    +course({
+      title: cpo200Title, 
+      desc: cpo200Desc, 
+      logo: '/img/logo-google-big.png',
+      koliseoEvent: "cpo200-google-cloud-platform-for-systems-operations-professionals1", 
+      price: '1,395', 
+      duration: duration32h,
+      language: langEnEs,
+      objectives: cpo200Objectives,
+      syllabus: cpo200Syllabus,
+      audience: cpo200Audience,
+      creditCardRequired: creditCardRequired,
+      requirements: cpo200Requirements,
+      certDesc: cpo200CertDesc
+    })
+    +course({
+      title: cp306ATitle, 
+      desc: cp306ADesc, 
+      logo: '/img/logo-google-big.png',
+      koliseoEvent: "cp306-gestion-de-contenedores-docker-con-gke-y-kubernetes", 
+      price: '495', 
+      duration: duration8h,
+      language: langEnEs,
+      objectives: cp306AObjectives,
+      syllabus: cp306ASyllabus,
+      audience: cp306AAudience,
+      creditCardRequired: creditCardRequired,
+      requirements: cp306ARequirements
+    })
+    +course({
       title: "Google Cloud Platform", 
       desc: gcpDesc, 
       logo: '/img/logo-google-big.png',
@@ -115,9 +180,11 @@ block content
       objectives: gcpObjectives,
       syllabus: gcpSyllabus,
       audience: gcpAudience,
+      creditCardRequired: creditCardRequired,
       requirements: gcpRequirements,
-      newsletterLink: "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=ce44b90108",
-      newsletterDesc: suscribeToGcpNewsletter
+      deprecated: 'true'
+      //newsletterLink: "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=ce44b90108",
+      //newsletterDesc: suscribeToGcpNewsletter
     })
   div
     div.anchor(id="spring")
@@ -154,7 +221,7 @@ block content
       //requirements: springWebRequirements
     })
     +course({
-      title: "Enterprise Integration with Spring", 
+      title: "Enterprise Spring", 
       desc: eiwsDesc, 
       logo: '/img/logo-spring-big.png',
       logoClass: 'logo-spring-big',
