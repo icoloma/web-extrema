@@ -16,6 +16,7 @@ git checkout -b gh-pages origin/gh-pages
 rm -r *
 cp -r ../* .
 cp ../.gitignore .
+rm -rf node_modules
 
 git add --all .
 if [ -z "$1" ]; then

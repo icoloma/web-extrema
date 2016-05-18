@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{% if page.title %}{{site.data[page.hl][page.title]}}{% else %}{{site.data[page.hl].title}}{% endif %} | extrema-sistemas.com</title>
+    <title>{% if page.title %}{{site.data[page.hl][page.title]}} | {% endif %}extrema-sistemas.com</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="/css/app.css">
     {% for lang in site.data.langs %}
