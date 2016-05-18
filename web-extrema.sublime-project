@@ -16,7 +16,7 @@
 		{
 			"path": ".",
       "folder_exclude_patterns": [ 
-        "dist", ".upload", "node_modules" ]
+        "_site", ".upload", "node_modules", ".sass-cache" ]
 		}
 	],
 	"settings":

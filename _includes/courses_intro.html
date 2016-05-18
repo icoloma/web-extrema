@@ -1,0 +1,17 @@
+<div class="row section">
+  <section class="columns">
+    <hgroup>
+      <h1>
+        {{site.data[page.hl].indexTrainingTitle}}
+        <small>{{site.data[page.hl].indexTrainingDesc}}</small>
+      </h1>
+    </hgroup>
+    <div>
+      <ul class="unstyled training">
+        {% include course_intro.html hash='google' logo='gcp' title='Google Cloud Platform' desc="googleCloudPlatformDesc" partnerDesc="googleTrainingPartner" %}
+        {% include course_intro.html hash="spring" logo="spring" title="Spring" desc="springDesc" partnerDesc="springCertifiedPartner" %}
+        {% include course_intro.html hash="big-data" logo="pivotal-hd" title="Pivotal HD" desc="pivotalHDShortDesc" %}
+      </ul>
+    </div>
+  </section>
+</div>

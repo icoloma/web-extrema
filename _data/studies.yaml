@@ -1,0 +1,15 @@
+- title: "Aena"
+  image: "logo-aena.png"
+  desc: AenaDesc
+- title: "Indra"
+  image: "logo-indra.png"
+  desc: IndraDesc
+- title: "Banco de España"
+  image: "logo-banco-espana.gif"
+  desc: BdeDesc
+- title: "BBVA"
+  image: "logo-bbva.png"
+  desc: BBVADesc
+- title: "ONU"
+  image: "logo-onu.gif"
+  desc: ONUDesc

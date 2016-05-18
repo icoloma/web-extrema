@@ -1,0 +1,24 @@
+{% capture href %}/{{page.hl}}/courses#{{include.hash}}{% endcapture %}
+<li class="row">
+  <article class="training-container">
+    <div class="column small-12 medium-3 training-logo-container logo-container text-center">
+      <a href="{{href}}">
+        <img class="training-logo" src="/img/logo-{{include.logo}}.png" alt="{{include.title}}" class=logo>
+      </a>
+    </div>
+    <div class="column small-12 medium-9">
+      <h4 class="small-only-text-center">
+        <a href="{{href}}">{{include.title}}</a>
+      </h4>
+      <p>
+        {{site.data[page.hl][include.desc]}}
+        <a class="nobreak" href="{{href}}"><span class="icon-right-open"></span> {{site.data[page.hl].readMore}}</a>
+      </p>
+      {% if include.partnerDesc != null %}
+        <p class="certification">
+          <span class="icon icon-star">{{site.data[page.hl][include.partnerDesc]}}</span>
+        </p>
+      {% endif %}
+    </div>
+  </article>
+</li>

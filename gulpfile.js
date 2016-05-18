@@ -2,112 +2,49 @@
 // https://github.com/gulpjs/gulp
 
 var gulp    = require('gulp');
-var rimraf   = require('gulp-rimraf');
-var rename  = require('gulp-rename');
-var sass    = require('gulp-sass');
-var csso    = require('gulp-csso');
-var jade    = require('gulp-jade');
-var fs      = require('fs');
+var rimraf  = require('gulp-rimraf');
 var uglify  = require('gulp-uglify');
 var concat  = require('gulp-concat');
-//var merge = require('merge-stream'); // see https://github.com/gulpjs/gulp/blob/master/docs/recipes/using-multiple-sources-in-one-task.md
+
 var webserver = require('gulp-webserver');
 
-var dist    = './dist/';
+var dist    = './js/';
 
 gulp.task('clean', function (cb) {
   rimraf(dist, cb);
 });
 
-gulp.task('copy-html', [], function () {
-
-  var locals = ['en', 'it', 'es'];
-
-  locals.forEach(function(local) {
-    var locals = JSON.parse(fs.readFileSync('./src/i18n/' + local + '.json', 'utf8'));
-    locals['currentLang'] = local;
-    locals['escapeStr'] = require('querystring').escape;
-    gulp.src('./src/jade/pages/**/*.jade')
-      .pipe(rename(function (path) {
-        locals['currentTab'] = path.basename != 'index'? path.basename : '';
-      }))
-      .pipe(jade({
-        locals: locals
-      }))
-      .pipe(rename(function (path) {
-        if (path.basename != 'index') {
-          path.dirname += "/" + path.basename;
-          path.basename = "index";
-        }
-      }))
-      .pipe(gulp.dest(dist + local));
-    if (local === 'en') {
-      gulp.src('./src/jade/static/**/*.jade')
-        .pipe(jade({
-          locals: locals
-        }))
-        .pipe(gulp.dest(dist))
-    }
-  });
-
-
-});
-
 gulp.task('copy', function () {
-  gulp.src('./src/static/*').pipe(gulp.dest(dist))
-  gulp.src('./src/static/img/*').pipe(gulp.dest(dist + 'img'))
-  gulp.src('./src/js/vendor/**/*.min.*').pipe(gulp.dest(dist + 'js/vendor/'))
-  gulp.src('./src/scss/fontello/**/*').pipe(gulp.dest(dist + 'css/fontello')).on('error', errorHandler)
-  gulp.src('./src/scss/opensans/**/*').pipe(gulp.dest(dist + 'css/opensans')).on('error', errorHandler)
+  gulp.src('./_js/vendor/**/*.min.*').pipe(gulp.dest(dist + 'vendor/'))
 });
 
 gulp.task('scripts', function() {
   // Minify and copy all JavaScript (except vendor scripts)
   // with sourcemaps all the way down
   gulp.src([
-    'src/js/vendor/jquery*.js',
-    'src/js/vendor/lodash*.js',
-    'src/js/vendor/foundation.js',
-    'src/js/vendor/foundation.topbar.js',
-    //'src/js/vendor/foundation.tab.js',
-    'src/js/vendor/foundation.interchange.js',
-//    'src/js/vendor/foundation.magellan.js',
-    'src/js/*.js'
+    '_js/vendor/jquery*.js',
+    '_js/vendor/lodash*.js',
+    '_js/vendor/foundation.js',
+    '_js/vendor/foundation.topbar.js',
+    //'_js/vendor/foundation.tab.js',
+    '_js/vendor/foundation.interchange.js',
+//    '_js/vendor/foundation.magellan.js',
+    '_js/*.js'
     ])
     .pipe(concat('app.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest(dist + 'js/'));
+    .pipe(gulp.dest(dist));
 });
 
-gulp.task('styles', function () {
-  return gulp.src('src/scss/app.scss')
-      .pipe(sass())
-      .pipe(rename('app.css'))
-      .pipe(csso())
-      .pipe(gulp.dest(dist + 'css'));
-});
-
-gulp.task('watch', ['styles'], function () {
-  gulp.watch(['src/jade/**/*.jade', './src/i18n/*.json'], ['copy-html']);
-  gulp.watch(['src/scss/**/*.scss'], ['styles']);
-  gulp.watch(['src/js/**/*'], ['scripts']);
-  gulp.watch(['src/img/**/*'], ['copy']);
-});
-
-gulp.task('webserver', function() {
-  gulp.src('./dist')
-    .pipe(webserver({
-      livereload: true,
-      directoryListing: false,
-      open: true
-    }));
+gulp.task('watch', function () {
+  gulp.watch(['_js/**/*'], ['scripts']);
 });
 
 // The dist task (used to store all files that will go to the server)
-gulp.task('dist', ['clean', 'copy-html', 'copy', 'scripts', 'styles']);
+gulp.task('dist', ['clean', 'copy', 'scripts']);
 
 // The default task (called when you run `gulp`)
-gulp.task('default', ['dist', 'watch', 'webserver']);
+gulp.task('default', ['dist', 'watch']);
 
 // Handle the error
 function errorHandler (error) {

@@ -3,8 +3,9 @@
 Run locally
 ```bash
 gulp
+jekyll serve
 ```
 
-A browser should open at localhost:8000
+Open a browser at localhost:4000
 
 To upload, type `bin/upload`. Easy peasy.
