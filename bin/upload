@@ -2,6 +2,7 @@
 DIR='.upload'
 
 gulp dist || exit 1
+jekyll build || exit 1
 
 rm -rf $DIR
 mkdir $DIR
@@ -13,7 +14,9 @@ git remote update
 git checkout -b gh-pages origin/gh-pages 
 
 rm -r *
-cp -r ../dist/* .
+cp -r ../* .
+cp ../.gitignore .
+rm -rf node_modules
 
 git add --all .
 if [ -z "$1" ]; then
