@@ -1,0 +1,6 @@
+dist
+node_modules
+*.sublime-workspace
+.upload
+.sass-cache
+_site
