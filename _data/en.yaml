@@ -1,0 +1,818 @@
+"i18n": "English"
+"Subscribe": "Subscribe"
+gcpNewsletter: "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=ce44b90108"
+
+"gkeObjectives": ""
+"gkeSyllabus": "<ol><li></li></ol>"
+"gkeRequirements": ""
+"gkeAudience": ""
+"gkeDesc": ""
+
+"suscribeToNewsletter": "Suscribe to our newsletter"
+"suscribeToGcpNewsletter": "If you want the last info of our Google Cloud Platform courses, suscribe to our specific GCP newsletter."
+"suscribeToSpringNewsletter": "To know everything about our Spring courses, suscribe to our newsletter for Spring."
+"springNewsletter": "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=5f43d4191d"
+
+"from": "from"
+"VATexempt": "VAT exempt."
+"subsidized": "These courses can be subsidized in Spain up to 100% by <a href='http://www.fundaciontripartita.org/' target='_blank'>Fundación Tripartita</a>. Other countries may have other conditions, please contact us for details."
+"subsidizedShort": "Subsidized in Spain by <a href='http://www.fundaciontripartita.org/' target='_blank'>Fundación Tripartita</a>"
+"Price": "Price"
+"standardRequirements": "<b>Laptop required:</b> Attendees should bring their own laptops with enough permissions to install additional software."
+"creditCardRequired": "<b>Credit card is required</b> to sign up for the free trial, although your credit card will not be billed."
+"RegisterFor": "Register for"
+"indexTrainingDesc": "We are working hard to bring you the best IT training courses."
+"doWeHaveYourAttention": "Got your attention?"
+"attentionDesc": "If this sounds like a project where you could use some help, just drop us a line to start talking."
+"followUsBlog": "Read our blog"
+"followUsTwitter": "Follow us on Twitter"
+"ContactBody": "We are a small team that answers the phone and replies to every e-mail. Feel free to drop us a line, any time."
+"Address": "Address"
+"langEnEs": "Available in English and Spanish."
+"langEnEsIt": "Available in English, Spanish and Italian."
+"langEnIt": "Available in English and Italian."
+"duration8h": "8 hours."
+"duration24h": "24 hours."
+"duration32h": "32 hours."
+"duration40h": "40 hours."
+
+"Home": "Home"
+"Training": "Training"
+"Contact": "Contact"
+"defaultDesc": "Extrema Sistemas is the lead training company in Spain and Italy, provider of certification courses for Google Cloud Platform and the Spring technology stack."
+"indexTrainingTitle": "Enjoy the training lead"
+"springDesc": "The official courses about the portfolio of products that have become the <i>de facto</i> standard for the development of Java applications."
+"pivotalHDShortDesc": "Quickly move your teams to exploit the extended capabilities of Pivotal HD, 'The world’s most powerful Apache Hadoop distribution'."
+"googleCloudPlatformDesc": "Google Cloud Platform enables developers to build, test and deploy applications on Google’s highly-scalable and reliable infrastructure."
+"googleTrainingPartner": "<b>Official Course:</b> includes the official exam to become a Google Cloud Platform Qualified Developer, emitted by Google."
+"springCertifiedPartner": "<b>Official Course:</b> includes the official exam to become a Certified Spring Developer, emitted by VMware."
+"readMore": "Read more"
+"getInContact": "Get in contact now"
+"consultingTitle": "Get the natural advantage from consulting"
+"consultingDesc": "Join the list of clients that are relying on our consulting and mentoring services."
+"Courses": "Courses"
+"showCourseContents": "View course contents"
+"hideCourseContents": "Hide course contents"
+"availableCourses": "Available courses"
+"askForMoreInfo": "Ask for more info"
+"details": "Details"
+"discountsNotCumulative": "Discounts are not cumulative."
+"tripartita": "Courses sponsored by Fundación Tripartita."
+"Discounts": "Discounts"
+"backToCourses": "Back to courses"
+"Duration": "Duration"
+"Language": "Language"
+"Audience": "Audience"
+"Requirements": "Requirements"
+"Objectives": "Objectives"
+"afterCompleting": "After completing this course"
+"Syllabus": "Syllabus"
+
+
+SpringCore:
+  title: "Spring Core Official Course"
+  requirements: "This course is perfect for developers with or without prior experience with the Spring framework."
+  certDesc: "Attendees will receive a voucher for the certification exam to become a <b>SpringSource Certified Spring Professional</b>."
+  audience: "This course is designed for Java developers and architects."   
+  desc: "<p>Core Spring is the four-day flagship Spring Framework training. In this training, students build a Spring-powered Java application that demonstrates the <b>Spring Framework</b> and other Spring technologies like <b>Spring AOP</b> and <b>Spring Security</b> in an intensely productive, hands-on setting.</p><p>Completion of this training entitles each student to receive a free voucher to schedule an exam at a Pearson VUE Center to become a <b>Spring Certified Professional</b>.</p><p>Core Spring is the perfect training if:</p><ul><li>You are interested in learning all about <b>developing Java applications with Spring</b></li><li>You have an upcoming project and <b>need to learn Spring quickly</b></li><li>You want to become <b>Spring Certified</b> to improve your career opportunities</li></ul><p>To further improve your Spring developer skills we recommend to take <a href=\"#spring-web\">Spring Web</a> or <a href=\"#enterprise-integration-with-spring\">Enterprise Spring</a> after completing Core Spring.</p>"
+  objectives:
+    description: "<p>At the end of the training, you should have an understanding of Spring and associated technologies and be able to do the following:</p>"
+    bullets:
+      - Use the <b>Spring Framework</b> to develop Java applications
+      - Use <b>dependency injection</b> to set up and configure applications
+      - <b>Test Spring-based applications</b>
+      - Set up Spring configuration using <b>XML, annotations and Java configuration</b>
+      - Use <b>Spring Data JPA</b> and <b>JDBC</b> to rapidly implement relational database access
+      - Use <b>Spring support for transactions</b>
+      - Use <b>aspect-oriented programming (AOP)</b> to add behavior to objects
+      - Develop a basic Web application with <b>Spring MVC</b>
+      - Use <b>Spring Security</b> to secure Web applications
+      - Use Spring to easily build <b>REST web services</b>
+      - Take the <b>Spring Boot</b> shortcut to productivity
+      - Start the journey to <b>Microservices</b> and <b>Cloud Native Applications</b>
+  syllabus: 
+    - title: "Introduction to Spring"
+      content:
+        - Java configuration and the Spring application context
+        - "@Configuration and @Bean annotations"
+        - "@Import: working with multiple configuration files"
+        - Launching a Spring Application and obtaining Beans
+    - title: "Spring Java configuration: A deeper look"
+      content:
+        - External properties & Property sources
+        - Environment abstraction
+        - Bean scope, bean profiles
+        - Spring Expression Language (SpEL)
+        - "How it Works: Inheritance based proxies"
+    - title: "Annotation-based dependency injection"
+      content:
+        - Autowiring and component scanning
+        - Java configuration versus annotations, mixing.
+        - "Lifecycle annotations: @PostConstruct and @PreDestroy"
+        - Stereotypes and meta-annotations
+    - title: "XML dependency injection"
+      content:
+        - XML syntax, constructor & setter injection
+        - Resource prefixes
+        - Namespaces and best practices when using XML
+        - XML profile selection
+    - title: "The bean lifecycle: How does Spring work internally?"
+      content:
+        - "The init phase: available interceptors"
+        - "The init phase: what is the difference between XML, annotations and Java configuration?"
+        - "The use and destruction phases"
+    - title: "Testing a Spring-based application"
+      content:
+        - Spring and Test Driven Development
+        - "@ContextConfiguration and @RunWith annotations"
+        - "Application context caching and the @DirtiesContext annotation"
+        - "Profile selection with @ActiveProfiles"
+        - "Easy test data setup with @Sql"
+    - title: "Aspect-oriented programming"
+      content:
+        - What problems does AOP solve?
+        - Differences between Spring AOP and AspectJ
+        - Defining pointcut expressions
+        - "Implementing an advice: @Around, @Before, @After"
+    - title: "Data access and JDBC with Spring"
+      content:
+        - How Spring integrates with existing data access technologies
+        - DataAccessException hierarchy
+        - Implementing caching using @Cacheable
+        - jdbc namespace and Spring‘s JdbcTemplate
+    - title: "Database transactions with Spring"
+      content:
+        - "@Transactional annotation"
+        - "Transactions configuration: XML versus annotations"
+        - "Isolation levels, transaction propagation and rollback rules"
+        - "Transactions and integration testing"
+        - "Should you use read-only transactions?"
+    - title: "JPA with Spring and Spring Data"
+      content:
+        - "Quick introduction to ORM with JPA"
+        - "Benefits of using Spring with JPA"
+        - "JPA configuration in Spring"
+        - "Spring Data JPA dynamic repositories"
+    - title: "Spring in a Web application"
+      content:
+        - "Configuring Spring in a Web application"
+        - "Introduction to Spring MVC, required configuration"
+        - "Controller method signatures"
+        - "Views and ViewResolvers"
+        - "Using @Controller and @RequestMapping annotations"
+    - title: "Spring Boot"
+      content:
+        - "Using Spring Boot to bypass most configuration"
+        - "Simplified dependency management with starter POMs"
+        - "Packaging options, JAR or WAR"
+        - "Easily overriding Spring Boot defaults"
+    - title: "Spring Boot - Going further"
+      content:
+        - Going beyond the default settings
+        - Customizing Spring Boot configuration
+        - Logging control
+        - Configuration properties using YAML
+        - Boot-driven testing
+    - title: "Spring Security"
+      content:
+        - "What problems does Spring Security solve?"
+        - "Configuring authentication and intercepting URLs"
+        - "The Spring Security tag library for JSPs"
+        - "Security at the method level"
+        - "Customizing the Spring Security filter chain"
+    - title: "REST with Spring MVC"
+      content:
+        - "An introduction to the REST architectural style"
+        - "Controlling HTTP response codes with @ResponseStatus"
+        - "Implementing REST with Spring MVC, @RequestBody, @ResponseBody"
+        - "Spring MVC’s HttpMessageConverters and automatic content negotiation"
+    - title: "Microservices with Spring Cloud"
+      content:
+        - "Microservice Architectures"
+        - "Challenges with cloud-native applications"
+        - "Using Spring Cloud"
+        - "Developing a simple microservice system"
+
+
+SpringWeb:
+  title: "Spring Web Official Course"
+  certDesc: "Attendees will receive a voucher for the certification exam to become a <b>SpringSource Certified Spring Web Application Developer</b>"
+  audience: "This course is designed for developers interested in developing web applications with Spring."
+  desc: "<p>Spring Web is a 4-day training on web application development led by SpringSource experts. This hands-on training teaches you how to apply the latest in Spring to create rich web applications.</p><p>Completion of this training entitles each student to receive a free voucher to schedule an exam at a Pearson Vue Centre to become a <b>SpringSource Certified Spring Web Application Developer</b>. The Spring Web training is also the ideal preparation for the certification exam.</p><p>Spring Web is the perfect training if:</p><ul><li>You want to become an expert at using the <b>Spring Framework</b></li><li>You want to show your developer skills by building beautiful <b>rich web applications</b></li><li><b>You took Core Spring</b> and want to further improve your developer skills</li><li>You are working on/have planned a <b>rich web project</b></li><li>You are interested in being granted the <b>Spring Web certification</b></li></ul><p>To further improve your Spring developer skills we recommend to take <a href=\"#enterprise-integration-with-spring\">Enterprise Spring</a> after completing Spring Web training.</p>"
+  objectives:
+    description: "<p>At the end of the training, you should have an understanding of Spring and associated technologies for web development and be able to do the following:</p>"
+    bullets:
+      - "<b>Develop web applications</b> using the Spring Framework"
+      - "Use <b>Spring Tool Suite</b>"
+      - "<b>Implement RESTful servers</b> using Spring MVC"
+      - "Use <b>Spring Boot</b> to build applications quickly with autoconfiguration"
+      - "<b>Secure Web applications</b> with Spring Security"
+      - "<b>Test Web applications</b> for correctness and performance"
+      - "Understand and use <b>Web Sockets</b> with Spring MVC"
+  syllabus:
+    - title: "Spring overview"
+      content:
+        - "Introduction to Spring configuration"
+        - Bean life cycle
+        - Configuration alternatives
+        - Integration testing with Spring
+    - title: Getting started with Spring Web MVC
+      content:
+        - Spring model-view-controller (MVC) overview
+        - DispatcherServlet
+        - Controller programming model overview
+        - Spring MVC views
+        - Simplifying configuration
+    - title: Spring MVC configuration I
+      content:
+        - XML configuration and the mvc namespace
+        - Using Java Configuration as an alternative to XML configuration
+        - Running in a Servlet 3 environment without web.xml
+        - Interceptors
+        - Message sources
+    - title: Managing layouts in Spring MVC
+      content:
+        - Page layout and structure
+        - Creating reusable templates with Apache Tiles
+        - Configuring Tiles in Spring MVC
+    - title: Spring MVC configuration II
+      content:
+        - Resource configuration and the resource pipeline
+        - CORS and @CrossOrigin
+        - Spring MVC infrastructure Beans
+        - URL mappings
+        - Handler mappers and handler adapters
+    - title: Using views in Spring MVC
+      content: 
+        - Views and view resolvers
+        - Setting up a View resolver chain
+        - Alternating views and Content Negotiation
+        - JSON and XML Views
+    - title: Form handling with Spring MVC
+      content: 
+        - Form Rendering
+        - Type Conversion
+        - Data Binding
+        - Form submission lifecycle
+        - Form validation (using Spring and JSR 330 validation)
+        - Form Object management
+    - title: Site personalization with Spring MVC
+      content:
+        - "Working in several languages: internationalization support in Spring MVC"
+        - Look-and-feel changes using themes and locales
+        - Handling Mobile Devices with Spring Mobile
+    - title: Implementing REST
+      content: 
+        - Overview of REST and HATEOAS concepts
+        - Using Spring’s RestTemplate for clients access
+        - Extending Spring MVC to support RESTful interactions
+        - HAL and the Spring HATEAOS project
+    - title: Exception handling
+      content: 
+        - Using @RequestStatus with Exceptions
+        - Adding Exception handlers to Controllers
+        - Global exception handling using Controller Advices and Exception resolvers
+        - Exception handling for RESTful interactions
+    - title: Building client applications with Ajax
+      content:
+        - Ajax and Spring MVC
+        - Using JavaScript frameworks
+        - "Example: Spring MVC REST and jQuery"
+        - Creating custom tags to encapsulate JavaScript
+    - title: Web application security with Spring Security
+      content: 
+        - Motivation for Spring Security
+        - Spring Security in a Web environment
+        - Using Spring Security tag libraries
+        - Method security
+    - title: Debugging and testing Web applications
+      content:
+        - Debugging applications in a browser
+        - Testing Web applications using Spring’s Mock MVC framework
+        - Using Spring HtmlUnit
+    - title: Spring Boot
+      content: 
+        - Fast development and deployment using Spring Boot
+        - Simplified dependency management with starter POMs
+        - Packaging options - JAR or WAR
+        - Easily overriding Spring Boot defaults
+    - title: Spring Websockets
+      content:
+        - Overview of Websocket development
+        - Using Websockets and Stomp with Spring MVC
+
+SpringEnterprise:
+  title: "Enterprise Spring"
+  certDesc: "Completion of this training entitles each student to receive a free voucher to schedule an exam to become a <b>SpringSource Certified Enterprise Integration Specialist</b>."
+  audience: "This course is designed for Java developers and architects."
+  desc: "<p>Enterprise Spring is a four-day training course that is led by SpringSource experts who will discuss the most important topics and technologies related to enterprise application integration. This hands-on training teaches you how to apply Spring technologies to solve integration problems faced by server-side developers.</p><p>Completion of this training entitles each student to receive a free voucher to schedule an exam at a Pearson VUE Center to become a <b>SpringSource Certified Spring Enterprise Integration Specialist</b>.</p><p>Enterprise Spring is the perfect training if:</p><ul><li>You want to become an expert at using the <b>Spring Framework</b></li><li><b>You took Core Spring</b> and want to further improve your developer skills</li><li>You want to be able to solve even the <b>most complex problems with Spring</b></li><li>You are working on/have planned a <b>large Spring project</b></li><li>You are interested in being granted the <b>expert Spring certification</b></li></ul><p>To further improve your Spring developer skills we recommend to take <a href=\"#spring-web\">Spring Web</a> after completing Enterprise Spring.</p>"
+  objectives: 
+    description: "<p>At the end of the training, you should have an understanding of Spring and associated technologies for enterprise integration and be able to do the following:</p>"
+    bullets:
+      - Create <b>concurrent applications</b> and <b>schedule tasks</b> using Spring
+      - Creating and consuming <b>REST Web services</b>
+      - Use <b>JMS</b> for asynchronous communication
+      - Understand and use <b>distributed transactions</b>
+      - Use <b>Spring Batch</b> for Enterprise Integration based on batch processing
+      - Use <b>Spring Integration</b> for pipes-and-filters integration
+      - Use the configuration <b>DSL</b>
+      - Have a basic understanding of <b>Spring XD</b>
+  syllabus: 
+    - title: Styles of Enterprise Integration
+      content:
+        - Integration Styles Pros/Cons
+        - Spring Support
+    - title: Tasks and Scheduling
+      content:
+        - Introduction to concurrency
+        - Java Concurrency support
+        - Spring’s task scheduling support
+    - title: REST Webservices
+      content:
+    - title: Spring Integration configuration
+      content:
+        - Using the DSL
+    - title: Spring Integration advanced features
+      content: 
+        - Splitting and aggregating
+        - Dispatcher configuration
+    - title: Introduction to Spring Batch
+      content: 
+        - Batch concepts
+        - High-Level overview
+        - Job parameters and job identity
+        - Quick start using Spring Batch
+        - Readers, Writers &amp; Processors
+        - JDBC Item Readers
+    - title: Spring Batch restart and recovery
+      content:
+        - ExecutionContext
+        - Reading flat files
+        - Sharing state between steps
+        - Intro to skip, retry, repeat and restart
+        - Listeners
+        - Business logic delegation
+        - Using Java Configuration
+    - title: Spring Batch admin and parallel processing
+      content:
+        - Spring Batch Admin
+        - Scaling and parallel processing
+    - title: Spring XD
+      content: 
+        - Spring XD for Batch Jobs, Integration flow and Data Ingestion
+        - Spring XD Installation
+        - Working with Streams (Definition, Source vs Sink, deployment, use-cases)
+        - Working with Jobs (Definition, deployment, monitoring, use-cases)
+
+SpringHibernate:
+  title: "Hibernate with Spring Official Course"
+  requirements: "The student should know how to create basic Java web applications and have basic understanding of JDBC and relational database concepts."
+  audience: "This course is designed for Java developers interested in using Hibernate with Spring"
+  desc: "<p>In this 3-day training you will learn <b>how to create effective data-driven Spring applications with Hibernate</b>. The training shows the use of both XML and annotation based configuration of both Spring and Hibernate.</p><p>Through our courses you benefit from the wide experience and architectural expertise of our team. We bring that experience to you in a highly interactive, intensely hands-on setting.</p>"
+  objectives: 
+    description: "<p>At the end of the training, you should gain an understanding of creating Spring applications with Hibernate and be able to:</p>"
+    bullets:
+      - Configure Hibernate in the context of a Spring application
+      - Create efficient object/relational mappings with Hibernate
+      - Leverage the Spring Framework to facilitate Hibernate session, transaction and exception management
+      - Use Hibernate with Spring and understand fundamental architectural issues
+      - Know how and when to use parts of the Spring Framework
+  syllabus: 
+    - title: "Spring Framework Foundations"
+      content:
+        - Introduction to Spring
+        - Using Spring to configure an application
+        - Simplifying application configuration
+        - Annotation-based dependency injection
+        - Simplifying JDBC-based data access with Spring
+        - Driving database transactions in a Spring environment
+    - title: "Using the Hibernate ORM"
+      content:
+        - Introducing Object-to-Relational Mapping (ORM)
+        - Getting started with Hibernate in a Spring environment
+        - Using JPA annotations and Hibernate XML
+        - "Inheritance: considerations and trade-offs"
+        - Defining custom user-types for Value Objects
+        - "Using queries: HQL, criteria API, native (SQL)"
+        - "Hibernate in web applications: open session in view"
+        - Using the different Java collection mappings
+        - Using joins and components to go beyond naïve class to table mappings
+    - title: "Hibernate Internals and Configuration"
+      content:
+        - Working with Hibernate objects
+        - Lazy loading and detached objects
+        - Optimistic and pessimistic locking
+        - Mixing Hibernate and JDBC
+        - Performance tuning
+        - "Advanced Features: interceptors, schema generation, caching, batching"
+
+PivotalHD:
+  title: "Processing Big Data with Pivotal HD"
+  requirements: "The student should be comfort with Java programming and data technologies and have a basic understanding of virtualization concepts."
+  audience: "Administrators, engineers, architects and developers considering or who are currently involved in processing Big Data."
+  desc: "<p>This comprehensive four day course will provide competent Java developers with the skills necessary to exploit the extended capabilities of Pivotal HD, “The world’s most powerful Apache Hadoop distribution”. The four-day course commences with a grounding in the relevant core technologies:<ul><li>Big fast data, NoSQL and their role in modern business applications</li><li>Introduction to Hadoop HDFS and Map Reduce</li><li>Using Hadoop ecosystem tools such Pig, Hive and HBase</li><li>Overview of the Pivotal HD distribution</li><li>Using Pivotal HAWQ</li></ul></p>"
+  afterCompleting: "<p>As a result of attending the course, the developer will be able to confidently utilize Pivotal HD, realizing the benefits of this important Hadoop distribution to deliver powerful analysis functionality of massive data with:</p><ul><li>The implementation of Hadoop MapReduce jobs</li><li>The development of real-time data analysis applications with HAWQ</li></ul>"
+  objectives: 
+    description: "<p>By the end of the course, you should be able to meet the following objectives:</p>"
+    bullets:
+      - Understanding the Hadoop and architecture
+      - Getting started with MapReduce to nalyze large data sets
+      - Practical considerations using MapReduce and Designing for MapReduce
+      - Initial understanding of HDFS concepts
+      - Advanced and practical considerations with HDFS
+      - Introduction to streaming MapReduce and Pig
+      - Overview of Hive
+      - Understanding the Pivotal HD architecture
+      - Getting started with HAWQ; Pivotal’s fast SQL driven and HDFS based analysis interface
+      - Advanced and pragmatic considerations when using HAWQ
+  syllabus: 
+    - title: Course introduction
+      content: 
+        - Introductions and course logistics
+        - Course objectives
+    - title: Introduction to Hadoop
+      content:
+        - What is Hadoop?
+        - "The Hadoop ecosystem: Pig, Hive, HBase, Zookeeper..."
+        - Understanding MapReduce and HDFS (Hadoop Distributed File System)
+        - Insuring Data Integrity (checksum...)
+        - "Saving space: input/output compression in Hadoop"
+        - Launching a Hadoop job
+        - Configuring the Hadoop runtime
+    - title: Introduction to Pivotal HD
+      content: 
+    - title: Hadoop distributed file system
+      content: 
+        - "Design goals: ability to run on commodity hardware, be fault tolerant..."
+        - Scaling from one datanode to hundreds of datanodes
+        - HDFS commands
+        - Working with file paths
+        - HDFS administration (UI, admin commands...)
+        - Working with the Java API for HDFS
+        - Working with a Secordary NameNode, Federated NameNodes and High Availability NameNodes
+    - title: Getting started with Map Reduce
+      content: 
+        - Map Reduce overview
+        - Hadoop versions
+        - Writing a mapper
+        - Writing a reducer
+        - Debugging and testing
+    - title: In-depth Map Reduce
+      content:
+        - The Writable hierarchy
+        - Partitionners, Combiners, Shuffle
+        - How to reuse objects and Garbage Collector optimization
+        - Map Reduce restrictions
+        - Joins (Map side and Reduce side)
+    - title: NoSQL overview
+      content: 
+    - title: Streaming MapReduce and Pig
+      content:
+        - High level alternatives to writing Java Mappers and Reducers
+        - Hadoop streaming
+        - Pig scripting
+        - SQL in Hadoop
+    - title: Introduction to Hive
+      content:
+        - Hive overview
+        - Hive tables and DDL
+        - Partitions and external tables
+        - Selecting data
+        - Joins
+        - Transforms &amp; User Defined Functions (UDFs)
+    - title: Getting started with HAWQ
+      content:
+        - HAWQ Installation and Environment
+        - Configuration and Operation Overview
+        - Client access to HAWQ
+        - Introduction to HAWQ SQL
+        - Quick introduction to Spring JDBC and Test Support
+    - title: Working with HAWQ
+      content:
+        - Creating database tables
+        - Queries
+        - Joins
+        - Functions
+    - title: HAWQ external tables
+      content:
+        - External Tables overview
+        - Loading data with gpfdist/gpload
+        - External tables with PXF
+        - Loading &amp; unloading data recap
+        - Hadoop and Sqoop
+    - title: HAWQ practical considerations
+      content:
+        - Query Plans
+        - Using ANALYZE and EXPLAIN
+        - Distributions and partitioning
+        - Data storage and I/O
+
+
+CPB200:
+  title: "Google BigQuery for Data Analysts (CPB200)"
+  certDesc: "After this course the student will be able to take the exam required to become a <b>CPB200 Qualified Developer</b>."
+  requirements: "You should have experience with data analysis using SQL and with business intelligence, reporting and data visualization. You should also have familiarity with extract, transform and load (ETL) activities"
+  audience: "This course is designed for Data Analysts and Data Scientists."
+  desc: "<p>This 3 day instructor-led class introduces participants to Google BigQuery. Through a combination of instructor-led presentations, demonstrations and hands-on labs, students learn how to use BigQuery to analyze data sets no matter how large, at the performance and scale of Google. In this course you model data for BigQuery, load data into BigQuery, query data and visualize data.</p>"
+  objectives: 
+    description: "<p>At the end of this course, participants will be able to:</p>"
+    bullets:
+      - Integrate Google BigQuery into your big data analysis strategy
+      - De-normalize relational data for efficient analysis in BigQuery
+      - Transform, stage and load data into BigQuery
+      - Write BigQuery SQL queries
+      - Use BigQuery functions and user-defined functions
+      - Optimize query performance with efficient modeling, caching, destination tables, table decorators and table range operators
+      - Control access to data using Access Control Lists
+      - Export query results
+      - Integrate BigQuery with spreadsheets, third-party tools and Google Analytics Premium data
+  syllabus: 
+    - title: Introduction to BigQuery
+      content:
+        - Examine the current state big data landscape
+        - Exploit the cloud for big data
+        - Define what is BigQuery
+        - Explore BigQuery use cases
+    - title: BigQuery Functional Overview
+      content: 
+        - Organize BigQuery projects
+        - Store data in BigQuery
+        - Leverage BigQuery architecture
+        - Interact with BigQuery from the web console and command API
+    - title: BigQuery Fundamentals
+      content: 
+        - Define BigQuery table schemas
+        - De-normalize relational data structures for efficient processing
+        - Execute BigQuery jobs
+        - Maximize performance and reduce cost with destination tables and caching
+    - title: Transform, Stage and Load Data
+      content:
+        - Prepare and transform data for upload into BigQuery
+        - Stage and ingest data
+        - Load data
+    - title: Pricing and Quotas
+      content:
+        - Understand the BigQuery pricing model
+        - Calculate the cost of queries
+        - Avoid quota limitations
+    - title: Clauses and Functions
+      content:
+        - Leverage user-defined functions
+    - title: Nested and Repeated Fields
+      content:
+        - Model big data schemas to optimize performance and cost
+        - Define nested, repeated and nested repeated fields using JSON
+        - Query nested and repeated fields in BigQuery
+    - title: Tuning Query Performance
+      content:
+        - Explore how the BigQuery architecture impacts query processing
+        - Analyze the effects of Join and Group By statements on performance
+        - Optimize reads with table decorators and table ranges
+        - Diagnose and resolve query performance issues
+    - title: Troubleshooting Errors
+      content:
+        - Recognize common BigQuery SQL errors
+        - Prevent resource errors
+        - Diagnose HTTP errors
+    - title: Access Control
+      content: 
+        - Define access control lists (ACLs) to protect data
+        - Understand project and dataset access controls
+        - Apply views for row-level security
+    - title: Exporting Data
+      content: 
+        - Export data for backups and for use with third-party tools
+        - Run export jobs
+    - title: Interfacing with External Tools
+      content: 
+        - Integrate BigQuery with Google Sheets
+        - Analyze BigQuery data with R
+    - title: Working with Google Analytics Premium Data
+      content: 
+        - Mine Google Analytics and Google AdSense data with BigQuery
+    - title: Data Visualization
+      content: 
+        - Visualize data using Google Cloud Datalab
+
+CPO200:
+  title: "Google Cloud Platform for Systems Operations Professionals (CPO200)"
+  certDesc: "After this course the student will be able to take the exam required to become a <b>CPO200 Qualified Developer</b>."
+  requirements: "Before attending this course, participants should have basic proficiency with command-line tools on linux operating system environments and prior systems operations experience, either on-premises or using a public cloud"
+  audience: "This course is designed for Systems Operations professionals and Systems Administrators using Google Cloud Platform to create or migrate application environments and infrastructure"
+  desc: "<p>This 4 day instructor-led class introduces participants to the implementation of application environments and public cloud infrastructure using Google Cloud Platform. Through a combination of instructor-led presentations and hands-on labs, students learn how to deploy cloud infrastructure components such as networks, systems and applications. This course is designed to give participants a robust hands-on experience and is primarily lab-focused.</p>"
+  objectives: 
+    description: "<p>At the end of this four-day course, participants will be able to:</p>"
+    bullets:
+      - Understand the core tenants to be considered when designing & deploying to a cloud
+      - Use the Google Developers Console to create and manage multiple projects
+      - Use service accounts and permissions to share view-level access between projects
+      - Create Google Compute Engine instances
+      - Create a non-default network and review your network configuration
+      - Compare default and non-default networks
+      - Create firewall-rules with and without tags
+      - Create and use a customized Compute Engine image
+      - Set authorization scopes for a Compute Engine instance
+      - Reserve an external IP address for an instance
+      - Snapshot a Compute Engine instance
+      - Snapshot a data disk
+      - Create an image using a boot persistent disk
+      - Upload an image to Google Container Registry
+      - Create a Compute Engine instance group with instances
+      - Create a Cloud SQL instance using the Cloud SDK
+      - Deploy and test a web application
+      - Add instance and project metadata
+      - Query instance and project metadata using the Cloud SDK
+      - Create an instance using a startup script in metadata and Google Cloud Storage
+      - Create an instance with a shutdown script and install the Cloud Logging agent
+      - Use the API Explorer to query an API request
+      - Run sample code that uses the Google API Client Library
+      - Test and build a container that uses the Cloud SQL APIs
+      - Create an instance template and managed instance group
+      - Configure a managed instance group for autoscaling
+      - Create multiple autoscaled managed instance groups
+      - Configure fault-tolerant HTTP load balancing
+      - Test health checks for use with HTTP load balancing
+      - Manage application deployment using Jinja and Python templates with Google Cloud Deployment Manager
+      - Delete Google Cloud Platform projects and resources
+  syllabus: 
+    - title: Google Cloud Platform Projects
+      content:
+        - Create and manage multiple projects
+        - Use service accounts and permissions to share view-level access between projects
+        - Identify project resources and quotas
+    - title: Google Compute Engine Instances and Machine Types
+      content: 
+        - Create and move instances
+        - How to connect to and manage instances
+        - Configure the Cloud SDK
+        - Initialize Cloud Source Repositories using Git
+    - title: Networks
+      content:
+        - Create and manage networks in projects
+        - Create and manage firewall rules, routes and IP addresses
+        - Review network configuration in Google Cloud Monitoring
+    - title: Disks and Images
+      content:
+        - Create and manage persistent disks
+        - Create and manage disk images
+    - title: Authorization
+      content:
+        - Purpose of and use cases for service accounts
+        - Types of service account scopes
+    - title: Snapshots
+      content: 
+        - Purpose of and use cases for disk snapshots
+        - Create and manage snapshots
+        - Restore a snapshot
+    - title: Google Cloud Storage
+      content: 
+        - Purpose of and use cases for Google Cloud Storage
+        - Accessing Google Cloud Storage buckets and objects
+        - Security options for buckets and objects (ACLs)
+    - title: Instance Groups
+      content: 
+        - Purpose of and use cases for instance groups
+        - Create and manage instance groups
+    - title: Google Cloud SQL
+      content: 
+        - Create and manage Cloud SQL instances
+        - Accessing Cloud SQL instances from Compute Engine instances
+    - title: Metadata
+      content: 
+        - Purpose of metadata and identify the use cases for project and instance metadata
+        - How to set and query metadata
+    - title: Startup and Shutdown Scripts
+      content: 
+        - Purpose of and use cases for startup and shutdown scripts
+    - title: Autoscaling
+      content: 
+        - Use cases for autoscaling and how autoscaling functions
+        - Purpose of autoscaling policies
+    - title: Load Balancing
+      content: 
+        - Differences between network load balancing and HTTP load balancing
+        - Purpose of and use cases for cross-origin and content-based load balancing
+
+CPD200:
+  title: "Developing Solutions for Google Cloud Platform (CPD200)"
+  certDesc: "After this course the student will be able to take the exam required to become a <b>CPD200 Qualified Developer</b>."
+  requirements: "Attendees should have experience developing web applications using a common programming language such as Java or Python"
+  audience: "This course is designed for experienced application developers who want to learn how to develop and deploy applications on Google Cloud Platform."
+  desc: "This 3 day instructor-led class prepares you to develop applications for Google Cloud Platform. Using a combination of presentations and hands-on labs, you learn how to create cloud-based application environments and how to develop and deploy cloud-based applications. This course is designed to give participants a robust hands-on experience and is primarily lab-focused."
+  objectives: 
+    description: "<p>At the end of this course, participants will be able to:</p>"
+    bullets:
+      - Identify the purpose and value of each of the Google Cloud Platform services
+      - Explain the difference between Iaas, PaaS and SaaS
+      - Describe ways in which customers have used Google Cloud Platform to improve their businesses
+      - List the methods of interacting with Google Cloud Platform services
+      - Create a project and describe its components
+      - "Explain the function of the Compute Engine resources, including: instances, images, persistent disks, networks, snapshots and load balancers"
+      - Use Compute Engine to deploy a container-based application environment
+      - "Explain the function of the Container Engine resources, including: clusters, pods, replication controllers and services"
+      - Create a Container Engine cluster and deploy a pod with application containers
+      - "Explain the function of the App Engine resources, including: task queues, Memcache, application servers, application instances and modules"
+      - Deploy an application to App Engine that uses Memcache
+      - "Explain the function of the Cloud Datastore resources, including: kinds, entities, keys, properties and entity groups"
+      - Deploy an application to App Engine that uses Cloud Datastore to store application data
+      - "Explain the function of the Cloud Storage components, including: buckets, objects and access control lists"
+      - "Describe the differences between the Cloud Storage service options: Standard Storage, Nearline and Durable Reduced Availability Storage"
+      - Deploy an application to App Engine that uses Cloud Storage to store application data
+      - "Compare the Google Cloud Platform storage options: Cloud Storage, Cloud SQL and Cloud Datastore"
+      - Deploy an application to App Engine that uses Cloud SQL to store application data
+      - "Explain the function of the BigQuery resources, including: datasets, tables and access control lists"
+      - Use BigQuery to interactively query application log data streamed from Google Cloud Logging
+      - Identify the Google Cloud Platform partner and support options
+      - List options available for staying up-to-date on Google Cloud Platform
+  syllabus: 
+    - title: Solutions Development on Google Cloud Platform
+    - title: Cloud Endpoints
+    - title: App Engine Modules
+    - title: User Authentications and Credentials
+    - title: Managing App Engine Applications
+    - title: Push to Deploy
+    - title: Storage for Solutions Developers
+    - title: Queries and Indexes
+    - title: Entity Groups, Consistency and Transactions
+    - title: App Engine Performance and Optimization
+    - title: Task Queues
+    - title: Deploying mobile applications
+
+CP306A:
+  title: "Google Container Engine and Kubernetes"
+  requirements: "The student should be comfort with cli tools, docker and container technology, basic computer networking and one or more programming language (Java, Python, JavaScript)"
+  audience: "This course is designed for System Operations Professionals, Solution Architects, Solution Developers or DevOps teams"
+  desc: "<p>The idea of deploying code in containers has grabbed the attention of the industry. Containers offer a uniform and lightweight way to deploy code to testing and production environments. With the proliferation of containers and complex high-availability configurations the management of containers becomes an important challenge.</p><p>Google has used containers for software deployment for over ten years. The Kubernetes open-source project capture Google’s and other industry leaders’ best knowledge related to the creation and orchestration of containers.</p>"
+  objectives: 
+    description: "<p>Google Container Engine is Google’s managed cloud service offering of the open source Kubernetes project. Kubernetes is an orchestration manager for Docker containers running in production environments.</p><p>This one-day course introduces the student to Google Container Engine, a cloud-based service offering of Docker and the Kubernetes management system. Through a combination of lectures, labs and quizzes, the student will learn about the architecture and major working components of Kubernetes</p>"
+  syllabus: 
+    - title: Introducing Container Management from Google
+      content: 
+        - Introduction to Containers and Container Management
+        - Introduction to Kubernetes
+        - Introduction to Container Engine
+        - Container Registry
+        - Cost overview
+    - title: Container Engine Fundamentals
+      content: 
+        - Container Engine building blocks
+        - Master instance
+        - Cluster nodes
+    - title: Interacting with Container Engine
+      content:
+        - Cloud SDK and API
+        - gcloud utility program
+        - Configuration files
+        - kubectl utility program
+        - Google Developer Console
+    - title: Container Clusters
+      content: 
+        - Container infrastructure
+        - Anatomy of a Node
+        - Multiple Container Clusters
+    - title: Pods
+      content:
+        - Overview of Pods and Use Cases
+        - Pod Lifecycle
+        - Pod Configuration and specification
+        - Working with Pods
+    - title: Replication Controllers
+      content:
+        - Overview of Replication Controllers
+        - Use patterns and practices
+        - Working with Replication Controllers
+    - title: Services
+      content: 
+        - Overview and Architectural Role for Services
+        - Service Proxy
+        - Working with Services
+        - Load Balancing and High Availability (HA) Design
+
+"notFoundTitle": "Not so fast, batman!"
+"notFoundShort": "We couldn't find the page you were looking for."
+"notFoundDesc": "Sorry, this page could not be found. Can you try again from the home page? This time, go slower."
+"notFoundAlt": "We can still walk you to your destination. Just click the links above."
+
+"Contact": "Contact"
+"Spain": "Spain"
+"emailTo": "Email to"
+"Phone": "Phone"
+"seeInGoogleMaps": "See in Google Maps"
+"Italy": "Italy"
+
+"CaseStudies": "Case studies"
+"AenaDesc": "<b>Aena Air Navigation Messaging System</b> During this 1-year project a team with no prior experience was formed to develop a real-time messaging system for air navigation messages that connects 10+ data sources with error recovery."
+"IndraDesc": "<b>Vessel Traffic System</b> A team was created from scratch for this six-month project to develop a system that could control the maritime traffic of the coast of Poland, including 20+ different types of navigation alarms (hazards, collisions, restricted areas) and the integration of multiple real-time detection systems (radar, video, goniometer..) with a NoSQL back-end."
+"BdeDesc": "<b>Architecture for application development</b> This one-year project redesigned the architecture to migrate existing systems to a Spring-based platform. This project included a team of six architects, two of them from the bank."
+"BBVADesc": "<b>E-banking platform</b> Development of the e-banking platform for the private banking branch of BBVA. This project includes the full development of a web front-end that enables access to user assets, including real-time reports of portfolio positions. The final product includes the integration of a complex security platform based on state-of-the-art authentication systems."
+"ONUDesc": "<b>Web technologies training</b> The Office of the High Commissioner of Human Rights of the United Nations has received an intensive series of training courses on HTML5 and CSS3 technologies to better support their Intranet and Extranet sites."
+"moreCaseStudies": "More case studies"
+
+"cookiePolicyTitle": "This web site uses cookies."
+"cookiePolicyDesc": "We use first and third-party cookies to improve our service. If you continue, we will assume that you accept our <a href=\"/en/cookies\">cookie policy</a>."
+"Accept": "Accept"
+"cookiePolicyDescLong": "<p>Every web site uses cookies to improve the user experience. You can block them through your browsers settings, but this will disable some features.</p><ul><li><b>Customization:</b> We use cookies to override the preferred language, in case it's not the same as your browser default.</li><li><b>Analytics and research:</b> We use cookies to keep track of the kind of features that people love. They help us to build a better user experience.</li></ul><p>You can block or remove cookies using the options menu in your browser."
+
+"redirectTitle": "This page has moved!"
+"redirectDesc": "You are being redirected automatically. If it takes too long, use the link below."
+"redirectClick": "New page"

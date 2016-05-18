@@ -1,0 +1,19 @@
+<footer class="show-for-small-only">
+  <div class="small-12">
+    <ul class="footer-block-list">
+      <li>
+        <a href="/{{page.hl}}">{{site.data[page.hl].Home}}</a>
+      </li>
+      {% include menu.html %}
+    </ul>
+  </div>
+  <div class="small-12">
+    <ul class="footer-inline-list">
+      {% for lang in site.data.langs %}
+        <li class="{% if page.hl == lang %}active{% endif %}">
+          <a class="nav-link" href="/{{lang}}/{{page.currentTab}}">{{site.data[lang].i18n}}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</footer>

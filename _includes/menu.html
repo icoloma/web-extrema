@@ -1,0 +1,9 @@
+{% for tab in site.data.menu %}
+  <li class="{% if tab.link == page.currentTab %}active{% endif %}">
+    {% if tab.name == 'Blog' %}
+      <a href="{{tab.link}}" target="_blank">{{tab.name}}</a>
+    {% else %}
+      <a href="/{{page.hl}}/{{tab.link}}">{{site.data[page.hl][tab.name]}}</a>
+    {% endif %}
+  </li>
+{% endfor %}
