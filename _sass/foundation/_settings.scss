@@ -793,11 +793,11 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-label-classes: $include-html-classes;
 
 // We use these to style the labels
-// $label-padding: rem-calc(4 8 4);
+ $label-padding: rem-calc( 8 12 8 );// rem-calc(4 8 4);
 // $label-radius: $global-radius;
 
 // We use these to style the label text
-// $label-font-sizing: rem-calc(11);
+ $label-font-sizing: 90%; // rem-calc(11);
 // $label-font-weight: $font-weight-normal;
 // $label-font-color: $oil;
 // $label-font-color-alt: $white;
@@ -1024,7 +1024,7 @@ $include-html-global-classes: $include-html-classes;
 // $price-desc-color: $monsoon;
 // $price-desc-padding: rem-calc(15);
 // $price-desc-align: center;
-// $price-desc-font-size: rem-calc(12);
+ $price-desc-font-size: 85%; //rem-calc(12);
 // $price-desc-weight: $font-weight-normal;
 // $price-desc-line-height: 1.4;
 // $price-desc-bottom-border: dotted 1px $gainsboro;

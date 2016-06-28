@@ -1,35 +1,78 @@
-<div class="contain-to-grid sticky nested clearfix">
-  <nav class="top-bar expanded" role="navigation" data-topbar>
-    <section class="top-bar-section">
-      <div class="row">
-        <dl class="sub-nav column">
-          <dd class="tab-title active">
-            <a href="#google">Google</a>
-          </dd>
-          <dd class="tab-title">
-            <a href="#spring">Spring</a>
-          </dd>
-          <dd class="tab-title">
-            <a href="#big-data">Big Data</a>
-          </dd>
-        </dl>
-      </div>
-    </section>
-  </nav>
-  <div class="subsidized-container">
-    <div class="row">
-      <div class="column small-4 medium-2 large-1">
-        <img src="/img/tripartita.png" alt="Fundación Tripartita" class="tripartita">
-      </div>
-      <div class="column small-8 medium-10 large-11 subsidized">
-        <span class="show-for-small">{{site.data[page.hl].subsidizedShort}}</span>
-        <span class="show-for-medium-up">{{site.data[page.hl].subsidized}}</span>
+<div>
+  <div class="row">
+    <nav class="box filter">
+      <section class="box-content-part">
+        <form class="row collapse">
+          <div class="small-9 medium-10 columns">
+            <input type="text" class="wide" placeholder="{{site.data[page.hl].IntroduceTextToSearch}}">
+          </div>
+          <div class="small-3 medium-2 columns">
+            <button type="submit" class="button postfix">{{site.data[page.hl].Search}}</button>
+          </div>
+        </form>
+        <ul class="tag-categories">
+          {% for filter in site.data.filters %}
+            <li>
+              <div>
+                <fieldset class="filter-fieldset">
+                  <legend>{{site.data[page.hl][filter.name]}}</legend>
+                  <ul class="category-values">
+                    {% for value in filter.values %}
+                      <li>
+                        <a class="label radius secondary" data-value="{{value | downcase | replace: ' ', '-'}}" data-name="{{filter.name | downcase}}">
+                          {% if filter.i18n %}
+                            {{site.data[page.hl][value]}}
+                          {% else %}
+                            {{value}}
+                          {% endif %}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </fieldset>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+        <script type="application/json" id="filters">
+          {
+          {% for filter in site.data.filters %}
+            "{{filter.name | downcase}}": {
+              "values": [
+                {% for value in filter.values %}
+                  "{{value | downcase | replace: ' ', '-'}}"{% if forloop.last == false %},{% endif %}
+                {% endfor %}
+              ],
+              "multiple": {{filter.multiple | default: "false"}}
+            }{% if forloop.last == false %},{% endif %}
+          {% endfor %}
+          }
+        </script>
+      </section>
+    </nav>
+  </div>
+  <div class="row">
+    <div class="columns">
+      <div class="subsidized-container">
+        <div class="subsidized">
+          <img src="/img/tripartita.png" alt="Fundación Tripartita" class="tripartita left">
+          <div class="right">
+            <span class="hide-for-medium-up">{{site.data[page.hl].subsidizedShort}}</span>
+            <span class="show-for-medium-up">{{site.data[page.hl].subsidized}}</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<div>
-  <div class="anchor" id="google"></div>
+<div class="no-results hide">
+  <div class="row">
+    <div class="box">
+      <div class="box-content-part">No results found</div>
+    </div>
+  </div>
+</div>
+<div class="courses">
   {% 
     include course.html
     course='CPB200'
@@ -41,6 +84,7 @@
     creditCardRequired='creditCardRequired'
     newsletterLink="gcpNewsletter"
     newsletterDesc='suscribeToGcpNewsletter'
+    labels="google 3d advanced big-data cloud"
   %}
   {% 
     include course.html
@@ -51,6 +95,7 @@
     duration='duration24h'
     language='langEnEs'
     creditCardRequired='creditCardRequired'
+    labels="google 3d advanced cloud iaas"
   %}
   {% 
     include course.html
@@ -61,6 +106,7 @@
     duration='duration32h'
     language='langEnEs'
     creditCardRequired='creditCardRequired'
+    labels="google 4d advanced cloud paas"
   %}
   {% 
     include course.html
@@ -71,10 +117,18 @@
     duration='duration8h'
     language='langEnEs'
     creditCardRequired='creditCardRequired'
+    labels="google 1d advanced cloud paas iaas"
   %}
-</div>
-<div>
-  <div class=".anchor" id="spring"></div>
+  {% 
+    include course.html
+    course='CP100A'
+    logo='/img/logo-google-big.png'
+    koliseoEvent="google-cloud-platform-fundamentals-cp100-a"
+    duration='duration8h'
+    language='langEnEs'
+    creditCardRequired='creditCardRequired'
+    labels="google 1d beginner cloud paas iaas big-data"
+  %}
   {% 
     include course.html
     course='SpringCore'
@@ -86,6 +140,7 @@
     language='langEnEsIt'
     newsletterLink='springNewsletter'
     newsletterDesc='suscribeToSpringNewsletter'
+    labels="pivotal 4d advanced spring cloud web"
   %}
   {% 
     include course.html
@@ -96,6 +151,7 @@
     price='1,975'
     duration='duration32h'
     language='langEnEsIt'
+    labels="pivotal 4d advanced spring web"
   %}
   {% 
     include course.html
@@ -106,21 +162,8 @@
     price='1,975'
     duration='duration32h'
     language='langEnEsIt'
+    labels="pivotal 4d advanced spring big-data"
   %}
-  {% 
-    include course.html
-    course='SpringHibernate'
-    logo='/img/logo-spring-big.png'
-    logoClass='logo-spring-big'
-    koliseoEvent="hibernate-with-spring"
-    price='1,695'
-    duration='duration24h'
-    language='langEnEsIt'
-    deprecated=true
-  %}
-</div>   
-<div>
-  <div class="anchor" id="big-data"></div>
   {% 
     include course.html
     course='PivotalHD'
@@ -130,5 +173,6 @@
     price='2,095'
     duration='duration32h'
     language='langEnIt'
+    labels="pivotal 4d advanced big-data"
   %}
 </div>

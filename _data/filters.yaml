@@ -1,0 +1,24 @@
+- name: From
+  values:
+    - Google
+    - Pivotal
+- name: Technology
+  multiple: true
+  values:
+    - Big Data
+    - Cloud
+    - Spring
+    - Web
+    - IaaS
+    - PaaS
+- name: Level
+  i18n: true
+  values:
+    - Beginner
+    - Advanced
+- name: Duration
+  i18n: true
+  values: 
+    - 1d
+    - 3d
+    - 4d
