@@ -1,12 +1,18 @@
 "i18n": Español
 "Subscribe": "Suscríbete"
 gcpNewsletter: "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=ce44b90108"
-
-"gkeObjectives": ""
-"gkeSyllabus": "<ol><li></li></ol>"
-"gkeRequirements": ""
-"gkeAudience": ""
-"gkeDesc": ""
+Free: Gratuito
+IntroduceTextToSearch: Introduce texto para buscar
+Search: Buscar
+From: De
+Technology: Tecnología
+Level: Nivel
+Beginner: Principiante
+Advanced: Avanzado
+Duration: Duración
+1d: 1 día
+3d: 3 días
+4d: 4 días
 
 "suscribeToNewsletter": "Suscríbete a nuestra lista de correo"
 "suscribeToGcpNewsletter": "Si quieres saber lo más reciente de nuestros cursos de Google Cloud Platform, suscríbete a nuestra lista de correo específica de GCP."
@@ -78,7 +84,7 @@ SpringCore:
   requirements: "Este curso es perfecto para desarrolladores con o sin experiencia previa con Spring Core."
   certDesc: "Los asistentes recibirán un voucher que les permitirá acceder al examen de certificación para obtener el título <b>SpringSource Certified Spring Professional</b>."
   audience: "Este curso está dirigido a desarrolladores y arquitectos Java." 
-  desc: "<p>Core Spring es el curso estrella en formación del framework Spring. Durante este curso los asistentes desarrollan una aplicación Java que pone a prueba las posibilidades de <b>Spring Framework</b> y otras tecnologías como <b>Spring AOP</b> y <b>Spring Security</b> en un entorno productivo e intensamente práctico.<p>Tras este curso el asistente dispondrá de la posibilidad de realizar gratuitamente el examen en un centro de Pearson VUE para consegur el título <b>Spring Certified Professional</b>.<p>Spring Core es el curso perfecto si:</p><ul><li>Se está interesado en aprender todo lo relacionado con el <b>desarrollo de aplicaciones Java con Spring</b></li><li>Se acerca el arranque de un proyecto y <b>se necesita aprender Spring rápidamente</b></li><li>Se desea mejorar el perfil profesional obteniendo la <b>certificación oficial de Spring</b></li></ul><p>Para continuar mejorando el conocimiento de Spring es recomendable asistir a <a href=\"#spring-web\">Spring Web</a> o <a href=\"#enterprise-integration-with-spring\">Enterprise Spring</a> una vez completado Spring Core.</p>"
+  desc: "<p>Core Spring es el curso estrella en formación del framework Spring. Durante este curso los asistentes desarrollan una aplicación Java que pone a prueba las posibilidades de <b>Spring Framework</b> y otras tecnologías como <b>Spring AOP</b> y <b>Spring Security</b> en un entorno productivo e intensamente práctico.<p>Tras este curso el asistente dispondrá de la posibilidad de realizar gratuitamente el examen en un centro de Pearson VUE para consegur el título <b>Spring Certified Professional</b>.<p>Spring Core es el curso perfecto si:</p><ul><li>Se está interesado en aprender todo lo relacionado con el <b>desarrollo de aplicaciones Java con Spring</b></li><li>Se acerca el arranque de un proyecto y <b>se necesita aprender Spring rápidamente</b></li><li>Se desea mejorar el perfil profesional obteniendo la <b>certificación oficial de Spring</b></li></ul><p>Para continuar mejorando el conocimiento de Spring es recomendable asistir a <a href=\"?technology=spring&q=web\">Spring Web</a> o <a href=\"?technology=spring&q=enterprise\">Enterprise Spring</a> una vez completado Spring Core.</p>"
   objectives: 
     description: "<p>Tras este curso el asistente tendrá conocimiento sobre Spring y sus tecnologías asociadas y será capaz de:</p>"
     bullets:
@@ -94,114 +100,12 @@ SpringCore:
       - Usar Spring para desarrollar fácilmente <b>servicios REST</b>
       - Usar <b>Spring Boot</b> para desarrollar aplicaciones más rápido
       - Comenzar el viaje hacia los <b>Microservicios</b> y <b>Cloud Native Applications</b>
-  syllabus: 
-    - title: "Introduction to Spring"
-      content:
-        - Java configuration and the Spring application context
-        - "@Configuration and @Bean annotations"
-        - "@Import: working with multiple configuration files"
-        - Launching a Spring Application and obtaining Beans
-    - title: "Spring Java configuration: A deeper look"
-      content:
-        - External properties & Property sources
-        - Environment abstraction
-        - Bean scope, bean profiles
-        - Spring Expression Language (SpEL)
-        - "How it Works: Inheritance based proxies"
-    - title: "Annotation-based dependency injection"
-      content:
-        - Autowiring and component scanning
-        - Java configuration versus annotations, mixing.
-        - "Lifecycle annotations: @PostConstruct and @PreDestroy"
-        - Stereotypes and meta-annotations
-    - title: "XML dependency injection"
-      content:
-        - XML syntax, constructor & setter injection
-        - Resource prefixes
-        - Namespaces and best practices when using XML
-        - XML profile selection
-    - title: "The bean lifecycle: How does Spring work internally?"
-      content:
-        - "The init phase: available interceptors"
-        - "The init phase: what is the difference between XML, annotations and Java configuration?"
-        - "The use and destruction phases"
-    - title: "Testing a Spring-based application"
-      content:
-        - Spring and Test Driven Development
-        - "@ContextConfiguration and @RunWith annotations"
-        - "Application context caching and the @DirtiesContext annotation"
-        - "Profile selection with @ActiveProfiles"
-        - "Easy test data setup with @Sql"
-    - title: "Aspect-oriented programming"
-      content:
-        - What problems does AOP solve?
-        - Differences between Spring AOP and AspectJ
-        - Defining pointcut expressions
-        - "Implementing an advice: @Around, @Before, @After"
-    - title: "Data access and JDBC with Spring"
-      content:
-        - How Spring integrates with existing data access technologies
-        - DataAccessException hierarchy
-        - Implementing caching using @Cacheable
-        - jdbc namespace and Spring‘s JdbcTemplate
-    - title: "Database transactions with Spring"
-      content:
-        - "@Transactional annotation"
-        - "Transactions configuration: XML versus annotations"
-        - "Isolation levels, transaction propagation and rollback rules"
-        - "Transactions and integration testing"
-        - "Should you use read-only transactions?"
-    - title: "JPA with Spring and Spring Data"
-      content:
-        - "Quick introduction to ORM with JPA"
-        - "Benefits of using Spring with JPA"
-        - "JPA configuration in Spring"
-        - "Spring Data JPA dynamic repositories"
-    - title: "Spring in a Web application"
-      content:
-        - "Configuring Spring in a Web application"
-        - "Introduction to Spring MVC, required configuration"
-        - "Controller method signatures"
-        - "Views and ViewResolvers"
-        - "Using @Controller and @RequestMapping annotations"
-    - title: "Spring Boot"
-      content:
-        - "Using Spring Boot to bypass most configuration"
-        - "Simplified dependency management with starter POMs"
-        - "Packaging options, JAR or WAR"
-        - "Easily overriding Spring Boot defaults"
-    - title: "Spring Boot - Going further"
-      content:
-        - Going beyond the default settings
-        - Customizing Spring Boot configuration
-        - Logging control
-        - Configuration properties using YAML
-        - Boot-driven testing
-    - title: "Spring Security"
-      content:
-        - "What problems does Spring Security solve?"
-        - "Configuring authentication and intercepting URLs"
-        - "The Spring Security tag library for JSPs"
-        - "Security at the method level"
-        - "Customizing the Spring Security filter chain"
-    - title: "REST with Spring MVC"
-      content:
-        - "An introduction to the REST architectural style"
-        - "Controlling HTTP response codes with @ResponseStatus"
-        - "Implementing REST with Spring MVC, @RequestBody, @ResponseBody"
-        - "Spring MVC’s HttpMessageConverters and automatic content negotiation"
-    - title: "Microservices with Spring Cloud"
-      content:
-        - "Microservice Architectures"
-        - "Challenges with cloud-native applications"
-        - "Using Spring Cloud"
-        - "Developing a simple microservice system"
 
 SpringWeb:
   title: "Curso Oficial de Spring Web"
   certDesc: "Los asistentes recibirán un voucher que les permitirá acceder al examen de certificación para obtener el título <b>SpringSource Certified Spring Web Application Developer</b>."
   audience: "Desarrolladores y arquitectos implicados en proyectos web con Spring."
-  desc: "<p>El objetivo de este curso es aprender a utilizar la tecnología Spring para crear aplicaciones web completas. El desarrollo de aplicaciones web basadas en Spring desde cero y de forma escalonada junto con una metodología enfocada a resolver los problemas reales más habituales hacen de este curso un complemento ideal para aquéllos que ya tienen cierta experiencia con la tecnología Spring.</p><p>Aunque no es requisito imprescindible, para un mejor aprovechamiento del curso se recomienda haber realizado previamente el curso <a href=\"#spring-core\">Spring Core</a>.</p><p>Este curso es el apropiado si:</p><ul><li>Quiere volverse un experto en el desarrollo con <b>Spring Framework</b></li><li>Quiere mostrar sus conocimientos de desarrollador construyendo <b>aplicaciones web</b></li><li><b>Ha recibido el curso Spring Core</b> y quiere mejorar aún más sus cocnocimientos como desarrollador</li><li>Trabaja (o tiene planeado hacerlo) en un <b>proyecto web</b></li><li>Está interesado en obtener la <b>certificación en Spring Web</b></li></ul><p>Para mejorar aún más sus habilidades en el desarrollo con Spring, le recomendamos el curso <a href=\"#enterprise-integration-with-spring\">Enterprise Spring</a> tras completar el curso Spring Web.</p>"
+  desc: "<p>El objetivo de este curso es aprender a utilizar la tecnología Spring para crear aplicaciones web completas. El desarrollo de aplicaciones web basadas en Spring desde cero y de forma escalonada junto con una metodología enfocada a resolver los problemas reales más habituales hacen de este curso un complemento ideal para aquéllos que ya tienen cierta experiencia con la tecnología Spring.</p><p>Aunque no es requisito imprescindible, para un mejor aprovechamiento del curso se recomienda haber realizado previamente el curso <a href=\"?technology=spring&q=core\">Spring Core</a>.</p><p>Este curso es el apropiado si:</p><ul><li>Quiere volverse un experto en el desarrollo con <b>Spring Framework</b></li><li>Quiere mostrar sus conocimientos de desarrollador construyendo <b>aplicaciones web</b></li><li><b>Ha recibido el curso Spring Core</b> y quiere mejorar aún más sus cocnocimientos como desarrollador</li><li>Trabaja (o tiene planeado hacerlo) en un <b>proyecto web</b></li><li>Está interesado en obtener la <b>certificación en Spring Web</b></li></ul><p>Para mejorar aún más sus habilidades en el desarrollo con Spring, le recomendamos el curso <a href=\"?technology=spring&q=enterprise\">Enterprise Spring</a> tras completar el curso Spring Web.</p>"
   objectives: 
     description: "<p>Al completar este curso, el asistente tendrá conocimiento de Spring y sus tecnologías asociadas para el desarrollo web y será capaz de:</p>"
     bullets:
@@ -212,103 +116,12 @@ SpringWeb:
       - <b>Asegurar aplicaciones web</b> con Spring Security
       - <b>Testear aplicaciones web</b> en lógica y rendimiento
       - Entender y usar <b>Web Sockets</b> con Spring MVC
-  syllabus:
-    - title: "Spring overview"
-      content:
-        - "Introduction to Spring configuration"
-        - Bean life cycle
-        - Configuration alternatives
-        - Integration testing with Spring
-    - title: Getting started with Spring Web MVC
-      content:
-        - Spring model-view-controller (MVC) overview
-        - DispatcherServlet
-        - Controller programming model overview
-        - Spring MVC views
-        - Simplifying configuration
-    - title: Spring MVC configuration I
-      content:
-        - XML configuration and the mvc namespace
-        - Using Java Configuration as an alternative to XML configuration
-        - Running in a Servlet 3 environment without web.xml
-        - Interceptors
-        - Message sources
-    - title: Managing layouts in Spring MVC
-      content:
-        - Page layout and structure
-        - Creating reusable templates with Apache Tiles
-        - Configuring Tiles in Spring MVC
-    - title: Spring MVC configuration II
-      content:
-        - Resource configuration and the resource pipeline
-        - CORS and @CrossOrigin
-        - Spring MVC infrastructure Beans
-        - URL mappings
-        - Handler mappers and handler adapters
-    - title: Using views in Spring MVC
-      content: 
-        - Views and view resolvers
-        - Setting up a View resolver chain
-        - Alternating views and Content Negotiation
-        - JSON and XML Views
-    - title: Form handling with Spring MVC
-      content: 
-        - Form Rendering
-        - Type Conversion
-        - Data Binding
-        - Form submission lifecycle
-        - Form validation (using Spring and JSR 330 validation)
-        - Form Object management
-    - title: Site personalization with Spring MVC
-      content:
-        - "Working in several languages: internationalization support in Spring MVC"
-        - Look-and-feel changes using themes and locales
-        - Handling Mobile Devices with Spring Mobile
-    - title: Implementing REST
-      content: 
-        - Overview of REST and HATEOAS concepts
-        - Using Spring’s RestTemplate for clients access
-        - Extending Spring MVC to support RESTful interactions
-        - HAL and the Spring HATEAOS project
-    - title: Exception handling
-      content: 
-        - Using @RequestStatus with Exceptions
-        - Adding Exception handlers to Controllers
-        - Global exception handling using Controller Advices and Exception resolvers
-        - Exception handling for RESTful interactions
-    - title: Building client applications with Ajax
-      content:
-        - Ajax and Spring MVC
-        - Using JavaScript frameworks
-        - "Example: Spring MVC REST and jQuery"
-        - Creating custom tags to encapsulate JavaScript
-    - title: Web application security with Spring Security
-      content: 
-        - Motivation for Spring Security
-        - Spring Security in a Web environment
-        - Using Spring Security tag libraries
-        - Method security
-    - title: Debugging and testing Web applications
-      content:
-        - Debugging applications in a browser
-        - Testing Web applications using Spring’s Mock MVC framework
-        - Using Spring HtmlUnit
-    - title: Spring Boot
-      content: 
-        - Fast development and deployment using Spring Boot
-        - Simplified dependency management with starter POMs
-        - Packaging options - JAR or WAR
-        - Easily overriding Spring Boot defaults
-    - title: Spring Websockets
-      content:
-        - Overview of Websocket development
-        - Using Websockets and Stomp with Spring MVC
 
 SpringEnterprise:
   title: "Enterprise Spring"
   certDesc: "Los asistentes recibirán un voucher que les permitirá acceder al examen de certificación para obtener el título <b>SpringSource Certified Enterprise Integration Specialist</b>."
   audience: "Este curso está diseñado para desarrolladores y arquitectos Java."
-  desc: "<p>Durante este curso de cuatro días se hará un recorrido por los aspectos y tecnologías de mayor relevancia relacionadas con la integración de aplicaciones en un entorno empresarial.</p><p>Se mostrará cómo aplicar Spring para dar solución a los problemas de integración que los desarrolladores se encuentran en el lado servidor. Aunque no es requisito imprescindible, para un mejor aprovechamiento del curso se recomienda haber realizado previamente el curso <a href=\"#spring-core\">Spring Core</a>.</p><p>Una vez finalizado el curso, cada asistente recibirá un voucher que le permitirá planificar y realizar el examen de certificación para obtener el título <b>SpringSource Certified Spring Enterprise Integration Specialist</b>.</p><p>Enterprise Integration con Spring es perfecto si:</p><ul><li>Quiere volverse un experto en el uso de <b>Spring Framework</b></li><li><b>Ha hecho el curso Spring Core</b> y quiere mejorar aún más sus habilidades</li><li>Quiere ser capaz de resolver incluso los <b>problemas más complejos con Spring</b></li><li>Trabaja (o trabajará) en un <b>proyecto de Spring largo</b></li><li>Está interesado en obtener la <b>certificación como experto en Spring</b></li></ul><p>Para mejorar sus conocimientos de Spring, recomendamos el curso <a href=\"#spring-web\">Spring Web</a> tras completar Enterprise Integration con Spring.</p>"
+  desc: "<p>Durante este curso de cuatro días se hará un recorrido por los aspectos y tecnologías de mayor relevancia relacionadas con la integración de aplicaciones en un entorno empresarial.</p><p>Se mostrará cómo aplicar Spring para dar solución a los problemas de integración que los desarrolladores se encuentran en el lado servidor. Aunque no es requisito imprescindible, para un mejor aprovechamiento del curso se recomienda haber realizado previamente el curso <a href=\"?technology=spring&q=core\">Spring Core</a>.</p><p>Una vez finalizado el curso, cada asistente recibirá un voucher que le permitirá planificar y realizar el examen de certificación para obtener el título <b>SpringSource Certified Spring Enterprise Integration Specialist</b>.</p><p>Enterprise Integration con Spring es perfecto si:</p><ul><li>Quiere volverse un experto en el uso de <b>Spring Framework</b></li><li><b>Ha hecho el curso Spring Core</b> y quiere mejorar aún más sus habilidades</li><li>Quiere ser capaz de resolver incluso los <b>problemas más complejos con Spring</b></li><li>Trabaja (o trabajará) en un <b>proyecto de Spring largo</b></li><li>Está interesado en obtener la <b>certificación como experto en Spring</b></li></ul><p>Para mejorar sus conocimientos de Spring, recomendamos el curso <a href=\"?technology=spring&q=web\">Spring Web</a> tras completar Enterprise Integration con Spring.</p>"
   objectives: 
     description: "<p>Al completar este curso, el asistente tendrá conocimientos de Spring y sus tecnologías asociadas para la integración empresarial y será capaz de:</p>"
     bullets:
@@ -320,52 +133,6 @@ SpringEnterprise:
       - Utilizar <b>Spring Integration</b> para crear arquitecturas orientadas a eventos e integradas con sistemas externos
       - Usar configuración <b>DSL</b>
       - Tener un conocimiento básico de <b>Spring XD</b>
-  syllabus: 
-    - title: Styles of Enterprise Integration
-      content:
-        - Integration Styles Pros/Cons
-        - Spring Support
-    - title: Tasks and Scheduling
-      content:
-        - Introduction to concurrency
-        - Java Concurrency support
-        - Spring’s task scheduling support
-    - title: REST Webservices
-      content:
-    - title: Spring Integration configuration
-      content:
-        - Using the DSL
-    - title: Spring Integration advanced features
-      content: 
-        - Splitting and aggregating
-        - Dispatcher configuration
-    - title: Introduction to Spring Batch
-      content: 
-        - Batch concepts
-        - High-Level overview
-        - Job parameters and job identity
-        - Quick start using Spring Batch
-        - Readers, Writers &amp; Processors
-        - JDBC Item Readers
-    - title: Spring Batch restart and recovery
-      content:
-        - ExecutionContext
-        - Reading flat files
-        - Sharing state between steps
-        - Intro to skip, retry, repeat and restart
-        - Listeners
-        - Business logic delegation
-        - Using Java Configuration
-    - title: Spring Batch admin and parallel processing
-      content:
-        - Spring Batch Admin
-        - Scaling and parallel processing
-    - title: Spring XD
-      content: 
-        - Spring XD for Batch Jobs, Integration flow and Data Ingestion
-        - Spring XD Installation
-        - Working with Streams (Definition, Source vs Sink, deployment, use-cases)
-        - Working with Jobs (Definition, deployment, monitoring, use-cases)
 
 SpringHibernate:
   title: "Curso Oficial Hibernate con Spring"
@@ -380,34 +147,6 @@ SpringHibernate:
       - Utilizar Spring para facilitar las sesiones, transacciones y el manejo de excepciones con Hibernate
       - Utilizar Hibernate con Spring y comprender temas de arquitectura fundamentales
       - Saber cómo y cuándo utilizar partes de Spring Framework
-  syllabus: 
-    - title: "Spring Framework Foundations"
-      content:
-        - Introduction to Spring
-        - Using Spring to configure an application
-        - Simplifying application configuration
-        - Annotation-based dependency injection
-        - Simplifying JDBC-based data access with Spring
-        - Driving database transactions in a Spring environment
-    - title: "Using the Hibernate ORM"
-      content:
-        - Introducing Object-to-Relational Mapping (ORM)
-        - Getting started with Hibernate in a Spring environment
-        - Using JPA annotations and Hibernate XML
-        - "Inheritance: considerations and trade-offs"
-        - Defining custom user-types for Value Objects
-        - "Using queries: HQL, criteria API, native (SQL)"
-        - "Hibernate in web applications: open session in view"
-        - Using the different Java collection mappings
-        - Using joins and components to go beyond naïve class to table mappings
-    - title: "Hibernate Internals and Configuration"
-      content:
-        - Working with Hibernate objects
-        - Lazy loading and detached objects
-        - Optimistic and pessimistic locking
-        - Mixing Hibernate and JDBC
-        - Performance tuning
-        - "Advanced Features: interceptors, schema generation, caching, batching"
 
 PivotalHD:
   title: "Procesamiento de Big Data con Pivotal HD"
@@ -428,94 +167,31 @@ PivotalHD:
       - Entender la arquitectura de Pivotal HD
       - Introducción a HAWQ; interfaz para el análisis por SQL basado en HDFS
       - Consideraciones prácticas y avanzadas en el uso de HAWQ
-  syllabus: 
-    - title: Course introduction
-      content: 
-        - Introductions and course logistics
-        - Course objectives
-    - title: Introduction to Hadoop
-      content:
-        - What is Hadoop?
-        - "The Hadoop ecosystem: Pig, Hive, HBase, Zookeeper..."
-        - Understanding MapReduce and HDFS (Hadoop Distributed File System)
-        - Insuring Data Integrity (checksum...)
-        - "Saving space: input/output compression in Hadoop"
-        - Launching a Hadoop job
-        - Configuring the Hadoop runtime
-    - title: Introduction to Pivotal HD
-      content: 
-    - title: Hadoop distributed file system
-      content: 
-        - "Design goals: ability to run on commodity hardware, be fault tolerant..."
-        - Scaling from one datanode to hundreds of datanodes
-        - HDFS commands
-        - Working with file paths
-        - HDFS administration (UI, admin commands...)
-        - Working with the Java API for HDFS
-        - Working with a Secordary NameNode, Federated NameNodes and High Availability NameNodes
-    - title: Getting started with Map Reduce
-      content: 
-        - Map Reduce overview
-        - Hadoop versions
-        - Writing a mapper
-        - Writing a reducer
-        - Debugging and testing
-    - title: In-depth Map Reduce
-      content:
-        - The Writable hierarchy
-        - Partitionners, Combiners, Shuffle
-        - How to reuse objects and Garbage Collector optimization
-        - Map Reduce restrictions
-        - Joins (Map side and Reduce side)
-    - title: NoSQL overview
-      content: 
-    - title: Streaming MapReduce and Pig
-      content:
-        - High level alternatives to writing Java Mappers and Reducers
-        - Hadoop streaming
-        - Pig scripting
-        - SQL in Hadoop
-    - title: Introduction to Hive
-      content:
-        - Hive overview
-        - Hive tables and DDL
-        - Partitions and external tables
-        - Selecting data
-        - Joins
-        - Transforms &amp; User Defined Functions (UDFs)
-    - title: Getting started with HAWQ
-      content:
-        - HAWQ Installation and Environment
-        - Configuration and Operation Overview
-        - Client access to HAWQ
-        - Introduction to HAWQ SQL
-        - Quick introduction to Spring JDBC and Test Support
-    - title: Working with HAWQ
-      content:
-        - Creating database tables
-        - Queries
-        - Joins
-        - Functions
-    - title: HAWQ external tables
-      content:
-        - External Tables overview
-        - Loading data with gpfdist/gpload
-        - External tables with PXF
-        - Loading &amp; unloading data recap
-        - Hadoop and Sqoop
-    - title: HAWQ practical considerations
-      content:
-        - Query Plans
-        - Using ANALYZE and EXPLAIN
-        - Distributions and partitioning
-        - Data storage and I/O
+
+CP100A:
+  title: "Google Cloud Platform Fundamentals (CP100A)"
+  requirements: "Ninguno. Para entender las tecnologías que se cubrirán, ayudar estar familiarizado con el desarrollo de aplicaciones, sistemas operativos Linux, sistemas de operaciones y análisis de datos/machine learning."
+  audience: "Este curso está diseñado para desarrolladores, profesionales de sistemas de operaciones y arquitectos que planeen crear y desarrollar aplicaciones en un entorno de Google Cloud Platform. También está diseñado para que directivos y ejecutivos evalúen el potencial de Google Cloud Platform y las posibilidades de uso en su negocio."
+  desc: "<p>Este curso de un día da una visión general de los productos y servicios de Google Cloud Platform. A través de una combinación de presentaciones y laboratorios, los asistentes aprenderán el valor de Google Cloud Platform y cómo incorporar soluciones basadas en cloud a sus estrategias de negocio.</p>"
+  objectives: 
+    description: "<p>Al finalizar este curso, los asistentes serán capaces de:</p>"
+    bullets:
+      - Identificar el propósito y el valor de cada uno de los productos y servicios de Google Cloud Platform
+      - Explicar la diferencia entre Iaas y PaaS
+      - Enumerar los métodos de interacción con los servicios de Google Cloud Platform
+      - Describir formas que los clientes han utilizado para mejorar sus negocios haciendo uso de Google Cloud Platform
+      - "Entender cómo elegir un entorno de despliegue adecuando en Google Cloud Platform: Google App Engine, Google Container Engine o Google Compute Engine"
+      - "Desplegar una aplicación en Google App Engine, Google Container Engine y Google Compute Engine"
+      - "Comparar las optiones de almacenamiento de Google Cloud Platform: Google Cloud Storage, Google Cloud SQL, Google Cloud Bigtable y Google Cloud Datastore"
+      - Desplegar una aplicación que usa Google Cloud Datastore y Google Cloud Storage para almacenar datos
+      - Cargar datos en BigQuery y hacer consultas sobre ellos
 
 CPB200:
   title: "Google BigQuery for Data Analysts (CPB200)"
   certDesc: "Después de este curso el asistente podrá hacer el examen para obtener el título <b>CPB200 Qualified Developer</b>"
-  requirements: "Se debe tener experiencia en el análisis de datos usando SQL y con business intelligence, reporting y visualización de datos. También se debe estar familiarizado con actividades de extracción, transformación y carga (ETL)"
-  audience: "Este curso está diseñado para Data Analysts y Data Scientists."
-  desc: "<p>Este curso de 3 días introduce a los asistentes a Google BigQuery. Combinando las presentaciones del instructor, las demostraciones y los laboratorios, los alumnos aprenderán cómo usar BigQuery y analizar conjuntos de datos sin importar el tamaño, haciendo uso del rendimiento y la escalabilidad de Google. En este curso se modelan, cargan, consultan y visualizan datos en BigQuery.</p>"
+  requirements: "Se debe haber hecho el curso CP100A - Google Cloud Platform Fundamenteals o CPB100 - Google Cloud Platform Big Data & Machine Learning (o experiencia equivalente) y tener experiencia en el análisis de datos usando SQL"
+  audience: "Este curso está diseñado para Data Analysts y Data Scientists responsables del análisis y visualización de Big Data, implementación de soluciones de Big Data basadas en la nube, desarrollo y migración de aplicaciones de Big Data a una nube pública, implementación y mantenimiento de entornos de almacenamiento de datos de gran tamaño y transformar/procesar de Big Data"
+  desc: "<p>Este curso de 3 días introduce a los asistentes a Google BigQuery. Combinando las presentaciones del instructor, las demostraciones y los laboratorios, los alumnos aprenderán cómo almacenar, transformar, analizar y visualizar datos usando Google BigQuery.</p>"
   objectives: 
     description: "<p>Al final de este curso, los asistentes serán capaces de:</p>"
     bullets:
@@ -528,78 +204,31 @@ CPB200:
       - Controlar el acceso a los datos usando listas de control de acceso (ACLs)
       - Exportar los resultados de una consulta
       - Integrar BigQuery con spreadsheets, herramientas de terceros y Google Analytics Premium
-  syllabus: 
-    - title: Introduction to BigQuery
-      content:
-        - Examine the current state big data landscape
-        - Exploit the cloud for big data
-        - Define what is BigQuery
-        - Explore BigQuery use cases
-    - title: BigQuery Functional Overview
-      content: 
-        - Organize BigQuery projects
-        - Store data in BigQuery
-        - Leverage BigQuery architecture
-        - Interact with BigQuery from the web console and command API
-    - title: BigQuery Fundamentals
-      content: 
-        - Define BigQuery table schemas
-        - De-normalize relational data structures for efficient processing
-        - Execute BigQuery jobs
-        - Maximize performance and reduce cost with destination tables and caching
-    - title: Transform, Stage and Load Data
-      content:
-        - Prepare and transform data for upload into BigQuery
-        - Stage and ingest data
-        - Load data
-    - title: Pricing and Quotas
-      content:
-        - Understand the BigQuery pricing model
-        - Calculate the cost of queries
-        - Avoid quota limitations
-    - title: Clauses and Functions
-      content:
-        - Leverage user-defined functions
-    - title: Nested and Repeated Fields
-      content:
-        - Model big data schemas to optimize performance and cost
-        - Define nested, repeated and nested repeated fields using JSON
-        - Query nested and repeated fields in BigQuery
-    - title: Tuning Query Performance
-      content:
-        - Explore how the BigQuery architecture impacts query processing
-        - Analyze the effects of Join and Group By statements on performance
-        - Optimize reads with table decorators and table ranges
-        - Diagnose and resolve query performance issues
-    - title: Troubleshooting Errors
-      content:
-        - Recognize common BigQuery SQL errors
-        - Prevent resource errors
-        - Diagnose HTTP errors
-    - title: Access Control
-      content: 
-        - Define access control lists (ACLs) to protect data
-        - Understand project and dataset access controls
-        - Apply views for row-level security
-    - title: Exporting Data
-      content: 
-        - Export data for backups and for use with third-party tools
-        - Run export jobs
-    - title: Interfacing with External Tools
-      content: 
-        - Integrate BigQuery with Google Sheets
-        - Analyze BigQuery data with R
-    - title: Working with Google Analytics Premium Data
-      content: 
-        - Mine Google Analytics and Google AdSense data with BigQuery
-    - title: Data Visualization
-      content: 
-        - Visualize data using Google Cloud Datalab
+
+      - Entender el propósito y los casos de uso para Google BigQuery
+      - Describir formas que han utilizado los usuarios para mejorar sus negocios haciendo uso de Google BigQuery
+      - Entender la arquitectura de BigQuery y cómo se procesan las consultas
+      - Interactuar con BigQuery usando las interfaces web y de línea de comandos
+      - Identificar el propósito y la estructura de los esquemas y tipos de datos de BigQuery
+      - Entender el objetivo y las ventajas de los destinations tables y el cacheo
+      - Usar tareas de BigQuery
+      - Transformar y cargar datos en BigQuery
+      - Exportar datos de BigQuery
+      - Almacenar los resultados de una consulta en un destination table.
+      - Creación de consultas
+      - Exportar los datos del log a BigQuery y hacer búsquedas sobre ellos.
+      - Entender la estructura de precios de BigQuery y evaluar mecanismos para controlar los costes de las consultas y el almacenamiento
+      - Identificar las mejores prácticas para optimizar el rendimiento de las consultas
+      - Saber los problemas más comunes cuando se usa BigQuery
+      - Usar varias funciones de BigQuery
+      - Integrar BigQuery con herramientas externas como spreadsheets
+      - Visualizar datos de BigQuery
+      - Usar control de acceso para restringir el acceso a datos
 
 CPO200:
   title: "Google Cloud Platform for Systems Operations Professionals (CPO200)"
   certDesc: "Después de este curso el asistente podrá hacer el examen para obtener el título <b>CPO200 Qualified Developer</b>"
-  requirements: "Para asistir a este curso los alumnos deben tener cierta comodidad con las herramientas de línea de comandos en linux y experiencia básica previa con alguna nube pública"
+  requirements: "Para asistir a este curso los alumnos deben haber asistido al curso CP100A - Google Cloud Platform Fundamentals (o experiencia equivalente), tener cierta comodidad con las herramientas de línea de comandos en linux y experiencia básica previa con alguna nube pública"
   audience: "El curso está preparado para que profesionales de sistemas de operaciones y administradores de sistemas usen Google Cloud Platform para crear y migrar su infraestructura y entornos de aplicaciones"
   desc: "<p>Este curso de 4 días introduce a la implantación de entornos de despliegue en la nube usando Google Cloud Platform. A través de diapositivas y laboratorios se le enseña al asistente cómo desplegar componentes de una infraestructura en la nube tales como redes, sistemas y aplicaciones. Este curso está diseñado para dar a los asistentes una base sólida, principalmente a través de laboratorios.</p>"
   objectives: 
@@ -634,159 +263,68 @@ CPO200:
       - Probar los health checks para usar en un balanceador de carga por HTTP
       - Administrar el despliegue de aplicaciones usando Jinja y plantillas de Python con Google Cloud Deployment Manager
       - Eliminar proyectos y recursos de Google Cloud Platform
-    syllabus: 
-    - title: Google Cloud Platform Projects
-      content:
-        - Create and manage multiple projects
-        - Use service accounts and permissions to share view-level access between projects
-        - Identify project resources and quotas
-    - title: Google Compute Engine Instances and Machine Types
-      content: 
-        - Create and move instances
-        - How to connect to and manage instances
-        - Configure the Cloud SDK
-        - Initialize Cloud Source Repositories using Git
-    - title: Networks
-      content:
-        - Create and manage networks in projects
-        - Create and manage firewall rules, routes and IP addresses
-        - Review network configuration in Google Cloud Monitoring
-    - title: Disks and Images
-      content:
-        - Create and manage persistent disks
-        - Create and manage disk images
-    - title: Authorization
-      content:
-        - Purpose of and use cases for service accounts
-        - Types of service account scopes
-    - title: Snapshots
-      content: 
-        - Purpose of and use cases for disk snapshots
-        - Create and manage snapshots
-        - Restore a snapshot
-    - title: Google Cloud Storage
-      content: 
-        - Purpose of and use cases for Google Cloud Storage
-        - Accessing Google Cloud Storage buckets and objects
-        - Security options for buckets and objects (ACLs)
-    - title: Instance Groups
-      content: 
-        - Purpose of and use cases for instance groups
-        - Create and manage instance groups
-    - title: Google Cloud SQL
-      content: 
-        - Create and manage Cloud SQL instances
-        - Accessing Cloud SQL instances from Compute Engine instances
-    - title: Metadata
-      content: 
-        - Purpose of metadata and identify the use cases for project and instance metadata
-        - How to set and query metadata
-    - title: Startup and Shutdown Scripts
-      content: 
-        - Purpose of and use cases for startup and shutdown scripts
-    - title: Autoscaling
-      content: 
-        - Use cases for autoscaling and how autoscaling functions
-        - Purpose of autoscaling policies
-    - title: Load Balancing
-      content: 
-        - Differences between network load balancing and HTTP load balancing
-        - Purpose of and use cases for cross-origin and content-based load balancing
 
 CPD200:
   title: "Developing Solutions for Google Cloud Platform (CPD200)"
   certDesc: "Después de este curso el asistente podrá hacer el examen para obtener el título <b>CPD200 Qualified Developer</b>"
-  requirements: "Los asistentes deben tener experiencia en el desarrollo de aplicaciones web usando Java o Python"
-  audience: "Este curso está diseñado para desarrolladores con experiencia implementando aplicaciones que quieran aprender a desarrollar y desplegar aplicaciones en Google Cloud Platform."
-  desc: "<p>En este curso de tres días se prepara al alumno para desarrollar aplicaciones para Google Cloud Platform. A través de las diapositivas y los laboratorios se enseñará cómo crear aplicaciones diseñadas para entornos en cloud y cómo desarrollar y desplegar dichas aplicaciones. Este curso está diseñado para dar a los asistentes una base sólida, principalmente a través de laboratorios.</p>"
+  requirements: "Los asistentes deben haber asistido al curso CP100A - Google Cloud Platform Fundamentals (o experiencia equivalente), tener cierta comodidad con las herramientas de línea de comandos en linux, experiencia en el desarrollo de aplicaciones y APIs usando Java o Python y experiencia básica previa con alguna nube pública"
+  audience: "Este curso está diseñado para desarrolladores con experiencia implementando aplicaciones que quieran aprender a desarrollar y desplegar aplicaciones web y móviles con alta escalabilidad en Google Cloud Platform."
+  desc: "<p>En este curso de tres días se prepara al alumno para desarrollar aplicaciones para Google Cloud Platform. A través de las diapositivas, las demostraciones y los laboratorios se enseñará cómo crear aplicaciones diseñadas para entornos en cloud usando Google App Engine, Google Cloud Datastore y Google Cloud Endpoints.</p>"
   objectives: 
     description: "<p>Al finalizar el curso, el asistente será capaz de:</p>"
     bullets:
-      - Identificar el propósito y valor de cada uno de los servicios de Google Cloud Platform
-      - Explicar la diferencia entre Iaas, PaaS y SaaS
-      - Describir las diferentes alternativas que tiene un usuario para mejorar su negocio haciendo uso de Google Cloud Platform
-      - Enumerar los distintos métodos disponibles para interactuar con los servicios de Google Cloud Platform
-      - Crear un proyecto y describir sus componentes
-      - Explicar la función de los recursos de Compute Engine (incluyendo instancias, imágenes, discos persistentes, snapshots, redes y balanceadores de carga)
-      - Usar Compute Engine para desplegar aplicaciones preparadas para un entorno basado en contenedores
-      - Explicar la función de Clusters, Pods, Replication Controllers y Services
-      - Crear un Cluster de Container Engine y desplegar un Pod con contenedores de aplicaciones
-      - Explicar la función de los recursos de App Engine (Task Queues, Memcache, application servers, instancias y módulos)
-      - Desplegar una aplicación que use Memcache en App Engine
-      - Explicar la función de los distintos recursos de Cloud Datastore (Kinds, Entities, Keys, Properties y Entity Groups)
-      - Desplegar en App Engine una aplicación que use Cloud Datastore para almacenar datos
-      - Explicar el funcionamiento de los componentes de Cloud Storage (Buckets, Objects y ACLs)
-      - "Describir las diferencias entre las opciones que proporciona Cloud Storage: Standard Storage, Nearline y Durable Reduced Availability Storage"
-      - Desplegar en App Engine una aplicación que use Cloud Storage para almacenar datos
-      - "Comparar las distintas opciones de almacenamiento de Google Cloud Platform: Cloud Storage, Cloud SQL y Cloud Datastore"
-      - Desplegar en App Engine una aplicación que use Cloud SQL para almacenar datos
-      - Explicar el funcionamiento de los recursos de BigQuery (incluyendo Datasets, Tables y ACLs)
-      - Usar BigQuery para hacer consultas sobre los datos del log de una aplicación desde Google Cloud Logging
-      - Identificar partners de Google Cloud Platform y opciones de soporte
-      - Enumerar las distintas opciones para estar al día con Google Cloud Platform
-  syllabus: 
-    - title: Solutions Development on Google Cloud Platform
-    - title: Cloud Endpoints
-    - title: App Engine Modules
-    - title: User Authentications and Credentials
-    - title: Managing App Engine Applications
-    - title: Push to Deploy
-    - title: Storage for Solutions Developers
-    - title: Queries and Indexes
-    - title: Entity Groups, Consistency and Transactions
-    - title: App Engine Performance and Optimization
-    - title: Task Queues
-    - title: Deploying mobile applications
+      - Administrar Google Cloud Source Repositories usando Google Cloud Platform Console
+      - Probar aplicaciones de App Engine utilizando el SDK de App Engine
+      - Acceder a la consola del servidor de desarrollo de App Engine
+      - Crear un API usando Google Cloud Endpoints
+      - Probar un API de Cloud Endpoint utilizando API Explorer
+      - Desplegar una aplicación en App Engine usando el SDK
+      - Diseñar, estructurar y configurar una aplicación de App Engine usando múltiples servicios
+      - Crear Client IDs usando la consola de Google Cloud Platform
+      - Asegurar servicios de App Engine y APIs de Cloud Endpoints usando autenticación
+      - Configurar y subir nuevas versión de servicios de App Engine
+      - Integrar Google Cloud Logging en aplicaciones de App Engine
+      - Revisar el uso de quotas en un proyecto de Google Cloud Platform
+      - Integrar diferentes tipos de almacenamiento en una aplicación de App Engine
+      - Crear e implementar un modelos de datos para usarlo con Google Cloud Datastore
+      - Implementar varios tipos de consultas para Google Cloud Datastore
+      - Actualizar la configuración del índice en Google Cloud Datastore
+      - Utilizar transacciones al usar Google Cloud Datastore
+      - Revisar los reportes de Review Google Cloud Trace en la consola de Google Cloud Platform
+      - Integrar Memcache en una aplicación de App Engine para mejorar el rendimiento
+      - Configurar, lanzar y analizar el resultado de Google Cloud Security Scanner
+      - Configurar el escalado de servicios de App Engine individualmente
+      - Crear handlers de App Engine para Push Task Queues
+      - Enviar correos desde una aplicación de App Engine utilizando Mail API
+      - Programar Tasks usando Cron Service
+      - Actualizar la configuración de Cron Service
+      - Exportar los datos de un proyecto de Google Cloud Platform
+      - Eliminar proyectos y recursos de Google Cloud Platform
 
 CP306A:
-  title: "Google Container Engine y Kubernetes"
-  requirements: "El alumno debe sentirse cómodo con el uso de herramientas de línea de comando, docker y tecnologías de contenedores, así como conceptos básicos de redes y uno o varios lenguajes de programación (Java, Python, JavaScript)"
-  audience: "Este curso está diseñado para profesionales de sistemas de operaciones, arquitectos, desarrolladores y equipos de DevOps"
-  desc: "<p>La idea de desplegar código en contenedores (containers) ha atraído la atención de toda la industria. Los contenedores ofrecen una forma ligera y uniforme de desplegar código para entornos de producción y pruebas. Con la proliferación de los contenedores y la complejidad de la configuración de alta disponibilidad, la administración de contenedores se ha convertido en un importante reto.</p><p>Google lleva más de diez años usando contenedores para el despliegue de software. El projecto open-source Kubernetes se apoya en lecciones y experiencia acumulada por Google y otros líderes en la industria para la creación y orquestación de contenedores.</p>"
-  objectives: 
+  title: "Google Container Engine y Kubernetes (CP306A)"
+  requirements: "El alumno debe haber asistido al curso CP100A - Google Cloud Platform Fundamentals (o experiencia equivalente), sentirse cómodo con el uso de herramientas de línea de comando, docker y tecnologías de contenedores como Docker, así como alguna nuble pública y experiancia previa en el desarrollo de sistemas de operaciones o desarrollo de aplicaciones"
+  audience: "Este curso está diseñado para profesionales de sistemas de operaciones, arquitectos, desarrolladores y equipos de DevOps que desarrollen, migren y desplieguen aplicaciones basadas en contenedores en Google cloud Platform."
+  desc: "<p>Este curso de un día introduce a los asistentes en Google Container Engine (GKE) y Kubernetes. A través de la combinación de las presentaciones del instructor, las demostraciones y los laboratorios, se aprenderá los conceptos clave y las mejores prácticas para desarrollar y mantener aplicaciones usando Google Container Engine.</p>"
+  objectives:
     description: "<p>Google Container Engine  es el servicio que ofrece Google para administrar proyectos con Kubernetes. Kubernetes es un administrador de contenedores Docker en entornos en producción.</p><p>Este curso de un día introduce al alumno a Google Container Engine, un servicio orientado a la nube para administrar sistemas con Docker y Kubernetes. A través de las diapositivas, laboratorios y tests, el asistente aprenderá sobre la arquitectura y los componentes más utilizados de Kubernetes</p>"
-  syllabus: 
-    - title: Introducing Container Management from Google
-      content: 
-        - Introduction to Containers and Container Management
-        - Introduction to Kubernetes
-        - Introduction to Container Engine
-        - Container Registry
-        - Cost overview
-    - title: Container Engine Fundamentals
-      content: 
-        - Container Engine building blocks
-        - Master instance
-        - Cluster nodes
-    - title: Interacting with Container Engine
-      content:
-        - Cloud SDK and API
-        - gcloud utility program
-        - Configuration files
-        - kubectl utility program
-        - Google Developer Console
-    - title: Container Clusters
-      content: 
-        - Container infrastructure
-        - Anatomy of a Node
-        - Multiple Container Clusters
-    - title: Pods
-      content:
-        - Overview of Pods and Use Cases
-        - Pod Lifecycle
-        - Pod Configuration and specification
-        - Working with Pods
-    - title: Replication Controllers
-      content:
-        - Overview of Replication Controllers
-        - Use patterns and practices
-        - Working with Replication Controllers
-    - title: Services
-      content: 
-        - Overview and Architectural Role for Services
-        - Service Proxy
-        - Working with Services
-        - Load Balancing and High Availability (HA) Design
+  objectives: 
+    description: "<p>Al finalizar el curso, el alumno será capaz de:</p>"
+    bullets:
+      - Identificar el objetivo y los casos de uso de Google Container Engine y Kubernetes
+      - "Explicar la función de los componentes de un cluster de contenedores: pods, labels, replication controllers y services"
+      - Identificar el objetivo y los casos de uso de Google Container Registry
+      - Crear una imagen de Docker y enviarla a Google Container Registry
+      - "Explicar la función de los componentes de un cluster:: la instancia principal y los nodos del cluster"
+      - Usar Cloud Platform Console para crear un cluster de contenedores
+      - Usar la herramienta de línea de comando de Google Cloud SDK y kubectl  para interactuar con clusters
+      - Definir un pod usando una plantilla JSON
+      - Desplegar un pod en un cluster de Container Engine
+      - Crear un cluster de Container Engine para almacenar un grupo de instancias de Redis con escalabilidad dinámica
+      - Completar un fichero de configuración que defina un replication controller y la configuración del pod que maneja
+      - Después de crear un replication controller y los pods, reescalar el grupo
+      - Desplegar una Deploy a container-based application using YAML files that define services, replication controllers, pods, and so on
+      - Define firewall rules and load balancers to expose a service for a container-based application
 
 "Contact": "Contacto"
 "Spain": "España"

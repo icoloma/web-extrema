@@ -1,9 +1,10 @@
 {% assign course = site.data[page.hl][include.course] %} 
-<article class="course-item row section" itemscope itemtype="http://schema.org/Product">
+{% assign syllabus = site.data.en[include.course].syllabus %}
+<article class="course-item row section" itemscope itemtype="http://schema.org/Product" data-labels="{{include.labels}}">
   <div class="anchor" id="{{include.koliseoEvent}}"></div>
   <div class="column small-12 medium-6">
     <h1 itemprop="name">{{course.title}}</h1>
-    <metadata itemprop="url" content="http://extrema-sistemas.com/en/{{page.currentTab}}/#{{include.koliseoEvent}}">
+    <metadata itemprop="url" content="http://extrema-sistemas.com/en/{{page.currentTab}}/#{{include.koliseoEvent}}" />
     <div itemprop="description">
       {{course.desc}}
     </div>
@@ -31,19 +32,26 @@
   <aside class="column medium-6" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
     <ul class="pricing-table">
       <li class="price text-right">
-        <b>
-          <span>{{site.data[page.hl].Price}}: </span>
-          {% if include.lowestPrice %}
-            <span>{{site.data[page.hl].from}}</span>
-            <span itemprop="price">{{include.lowestPrice}}</span>
-          {% else %}
-            <span itemprop="price">{{include.price}}</span>
+        {% if include.lowestPrice or include.price %}
+          <b>
+            <span>{{site.data[page.hl].Price}}: </span>
+            {% if include.lowestPrice %}
+              <span>{{site.data[page.hl].from}}</span>
+              <span itemprop="price">{{include.lowestPrice}}</span>
+            {% else %}
+              <span itemprop="price">{{include.price}}</span>
+            {% endif %}
+            <span class="currency" itemprop="priceCurrency">€</span>
+          </b>
+          <div class="price-vat">{{site.data[page.hl].VATexempt}}</div>
+          {% if include.deprecated %}
+            <span class="label warning radius right deprecated">Deprecated</span>
           {% endif %}
-          <span class="currency" itemprop="priceCurrency">€</span>
-        </b>
-        <div class="price-vat">{{site.data[page.hl].VATexempt}}</div>
-        {% if include.deprecated %}
-          <span class="label warning radius right deprecated">Deprecated</span>
+        {% else %}
+          <b>
+            <span>{{site.data[page.hl].Price}}: </span>
+            <span>{{site.data[page.hl].Free}}</span>
+          </b>
         {% endif %}
       </li>
       <li class="description text-left">
@@ -118,7 +126,7 @@
             </li>
           {% endfor %}
         </ul>
-        {% if course.syllabus %}
+        {% if syllabus %}
           {% if course.afterCompleting %}
             <h2>{{site.data[page.hl].afterCompleting}}</h2>
             {{course.afterCompleting}}
@@ -126,10 +134,10 @@
         {% endif %}
       </section>  
       <section class="column small-12 medium-6">
-        {% if course.syllabus %}
+        {% if syllabus %}
           <h2>{{site.data[page.hl].Syllabus}}</h2>
           <ol>
-            {% for item in course.syllabus %}
+            {% for item in syllabus %}
               <li>
                 {{item.title}}
               </li>
@@ -151,5 +159,5 @@
       </section>
     </div>
   </div>
+  <hr>
 </article>
-<hr>
