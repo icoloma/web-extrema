@@ -1,0 +1,72 @@
+$cookie-font-size: 15px;
+$cookie-medium-font-size: 20px;
+$cookie-bg-color: #111; //#eaf1f1;
+$cookie-color: #fff; // #222;
+$cookie-button-bg-color: #334F66;
+$cookie-link-color: #48AAF9;
+
+.cookie-container {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.cookie-permissions {
+  padding: 20px;
+  overflow: hidden;
+  background: $cookie-bg-color;
+  background: rgba($cookie-bg-color, .95);
+
+  h3 {
+    color: $cookie-color;
+    font-weight: bold;
+    font-size: $cookie-font-size + 2px;
+  }
+
+  p {
+    color: $cookie-color;
+    font-size: $cookie-font-size;
+    margin-bottom: 0
+  }
+
+  a {
+    color: $cookie-link-color;
+    &:hover, &:focus {
+      color: scale-color($cookie-link-color, $lightness: 10%);
+    }
+  }
+}
+
+.accept-cookies {
+  margin: 20px 0 0 0;
+  color: $cookie-color !important;
+  text-transform: uppercase;
+  background-color: $cookie-button-bg-color;
+  border-color: scale-color($cookie-button-bg-color, $lightness: -35%);
+  &:hover, &:focus {
+    background-color: scale-color($cookie-button-bg-color, $lightness: -10%);
+    border-color: scale-color($cookie-button-bg-color, $lightness: -45%);
+  }
+}
+
+@media #{$medium-up} {
+
+  .cookie-permissions {
+
+    h3 {
+      font-size: $cookie-medium-font-size + 2px;
+    }
+
+    p {
+      font-size: $cookie-medium-font-size;
+    }
+  }
+
+  .accept-cookies.button {
+    margin-top: 0px;
+    font-size: $button-font-med;
+  }
+
+}
