@@ -134,20 +134,6 @@ SpringEnterprise:
       - Usar configuración <b>DSL</b>
       - Tener un conocimiento básico de <b>Spring XD</b>
 
-SpringHibernate:
-  title: "Curso Oficial Hibernate con Spring"
-  requirements: "El asistente deberá saber cómo crear aplicaciones web con Java y tener un conocimiento básico de JDBC y bases de datos relacionales"
-  audience: "Este training esta dirigido a desarrolladores interesados en el uso de Hibernate con Spring."
-  desc: "<p>En este curso de 3 días el asistente aprenderá <b>cómo crear aplicaciones efectivas de gestión de información usando Spring y Hibernate</b>. Durante el curso se enseña tanto la configuración usando XML como la configuración basada en anotaciones de Spring y Hibernate.</p><p>Con nuestros cursos te beneficiarás de la amplia experiencia de nuestro equipo. Te traemos esta experiencia en un entorno altamente interactivo y práctico.</p>"
-  objectives: 
-    description: "<p>Tras finalizar este curso el asistente obtendrá conocimiento sobre cómo crear aplicaciones basadas en Spring y Hibernate y será capaz de:</p>"
-    bullets:
-      - Configurar Hibernate en el contexto de una aplicación Spring
-      - Crear eficientemente mapeos objeto/relational con Hibernate
-      - Utilizar Spring para facilitar las sesiones, transacciones y el manejo de excepciones con Hibernate
-      - Utilizar Hibernate con Spring y comprender temas de arquitectura fundamentales
-      - Saber cómo y cuándo utilizar partes de Spring Framework
-
 PivotalHD:
   title: "Procesamiento de Big Data con Pivotal HD"
   requirements: "Los asistentes deben sentirse cómodos con la programación en Java y entender los conceptos básicos de virtualización."
@@ -186,9 +172,24 @@ CP100A:
       - Desplegar una aplicación que usa Google Cloud Datastore y Google Cloud Storage para almacenar datos
       - Cargar datos en BigQuery y hacer consultas sobre ellos
 
+CPB100:
+  title: "Google Cloud Platform Big Data and Machine Learning Fundamentals (CPB100)"
+  requirements: "Para asistir a este curso, los alumnos deben tener aproximadamente un año de experiencia con uno o más de los siguientes aspectos:<ul><li>Un lenguaje común de consultas, como SQL</li><li>Tareas de extracción, transformación y carga de datos</li><li>Modelado de datos</li><li>Machine learning y/o estadísticas</li><li>Programación en Python</li></ul>"
+  audience: "Esta clase está diseñada para Data analysts, Data scientists y Business analysts. También está diseñado para que directivos y ejecutivos evalúen el potencial de Google Cloud Platform y las posibilidades de su uso por data scientists. <p>Esta clase es para la gente que usa grandes datos para:</p><ul><li>Extracción, carga, transformación, limpieza y validación de datos para su uso en analytics</li><li>Diseño de pipelines y arquitecturas para el procesamiento de datos</li><li>Creación y mantenimiento de modelos estadísticos y machine learning</li><li>Consulta sobre conjuntos de datos, visualización de sus resultados y creación de informes</li></ul>"
+  desc: "<p>Esta clase de 8 horas presenta a los participantes las prestaciones que Google Cloud Platform ofrece para Big Data y Machine Learning. Proporciona una visión general de Google Cloud Platform y una visión más en detalle de las funcionalidades de procesamiento de datos.</p>"
+  objectives: 
+    description: "<p>Al finalizar este curso de un día, el alumno será capaz de:</p>"
+    bullets:
+      - Identificar el propósito y el valor de los productos de Big Data y Machine Learning ofrecidos en Google Cloud Platform
+      - Usar CloudSQL y Cloud Dataproc para migrar datos de MySQL y Hadoop/Pig/Spark/Hive a Google Cloud Platform
+      - Utilizar BigQuery y Cloud Datalab para realizar un análisis de datos interactivo
+      - Elegir entre Cloud SQL, BigTable y Datastore
+      - Usar una red neuronal utilizando TensorFlow
+      - Elegir entre los diferentes productos de procesamiento de datos de Google Cloud Platform
+
 CPB200:
   title: "Google BigQuery for Data Analysts (CPB200)"
-  certDesc: "Después de este curso el asistente podrá hacer el examen para obtener el título <b>CPB200 Qualified Developer</b>"
+  certDesc: "Después de este curso el asistente podrá hacer el examen para obtener el título <b>Google Cloud Platform Qualified Data Analyst</b>"
   requirements: "Se debe haber hecho el curso CP100A - Google Cloud Platform Fundamenteals o CPB100 - Google Cloud Platform Big Data & Machine Learning (o experiencia equivalente) y tener experiencia en el análisis de datos usando SQL"
   audience: "Este curso está diseñado para Data Analysts y Data Scientists responsables del análisis y visualización de Big Data, implementación de soluciones de Big Data basadas en la nube, desarrollo y migración de aplicaciones de Big Data a una nube pública, implementación y mantenimiento de entornos de almacenamiento de datos de gran tamaño y transformar/procesar de Big Data"
   desc: "<p>Este curso de 3 días introduce a los asistentes a Google BigQuery. Combinando las presentaciones del instructor, las demostraciones y los laboratorios, los alumnos aprenderán cómo almacenar, transformar, analizar y visualizar datos usando Google BigQuery.</p>"
@@ -227,7 +228,7 @@ CPB200:
 
 CPO200:
   title: "Google Cloud Platform for Systems Operations Professionals (CPO200)"
-  certDesc: "Después de este curso el asistente podrá hacer el examen para obtener el título <b>CPO200 Qualified Developer</b>"
+  certDesc: "Después de este curso el asistente podrá hacer el examen para obtener el título <b>Google Cloud Platform Qualified Systems Operations Professional</b>"
   requirements: "Para asistir a este curso los alumnos deben haber asistido al curso CP100A - Google Cloud Platform Fundamentals (o experiencia equivalente), tener cierta comodidad con las herramientas de línea de comandos en linux y experiencia básica previa con alguna nube pública"
   audience: "El curso está preparado para que profesionales de sistemas de operaciones y administradores de sistemas usen Google Cloud Platform para crear y migrar su infraestructura y entornos de aplicaciones"
   desc: "<p>Este curso de 4 días introduce a la implantación de entornos de despliegue en la nube usando Google Cloud Platform. A través de diapositivas y laboratorios se le enseña al asistente cómo desplegar componentes de una infraestructura en la nube tales como redes, sistemas y aplicaciones. Este curso está diseñado para dar a los asistentes una base sólida, principalmente a través de laboratorios.</p>"
@@ -266,7 +267,7 @@ CPO200:
 
 CPD200:
   title: "Developing Solutions for Google Cloud Platform (CPD200)"
-  certDesc: "Después de este curso el asistente podrá hacer el examen para obtener el título <b>CPD200 Qualified Developer</b>"
+  certDesc: "Después de este curso el asistente podrá hacer el examen para obtener el título <b>Google Cloud Platform Qualified Solution Developer</b>"
   requirements: "Los asistentes deben haber asistido al curso CP100A - Google Cloud Platform Fundamentals (o experiencia equivalente), tener cierta comodidad con las herramientas de línea de comandos en linux, experiencia en el desarrollo de aplicaciones y APIs usando Java o Python y experiencia básica previa con alguna nube pública"
   audience: "Este curso está diseñado para desarrolladores con experiencia implementando aplicaciones que quieran aprender a desarrollar y desplegar aplicaciones web y móviles con alta escalabilidad en Google Cloud Platform."
   desc: "<p>En este curso de tres días se prepara al alumno para desarrollar aplicaciones para Google Cloud Platform. A través de las diapositivas, las demostraciones y los laboratorios se enseñará cómo crear aplicaciones diseñadas para entornos en cloud usando Google App Engine, Google Cloud Datastore y Google Cloud Endpoints.</p>"
