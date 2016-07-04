@@ -370,48 +370,6 @@ SpringEnterprise:
         - Working with Streams (Definition, Source vs Sink, deployment, use-cases)
         - Working with Jobs (Definition, deployment, monitoring, use-cases)
 
-SpringHibernate:
-  title: "Hibernate with Spring Official Course"
-  requirements: "The student should know how to create basic Java web applications and have basic understanding of JDBC and relational database concepts."
-  audience: "This course is designed for Java developers interested in using Hibernate with Spring"
-  desc: "<p>In this 3-day training you will learn <b>how to create effective data-driven Spring applications with Hibernate</b>. The training shows the use of both XML and annotation based configuration of both Spring and Hibernate.</p><p>Through our courses you benefit from the wide experience and architectural expertise of our team. We bring that experience to you in a highly interactive, intensely hands-on setting.</p>"
-  objectives: 
-    description: "<p>At the end of the training, you should gain an understanding of creating Spring applications with Hibernate and be able to:</p>"
-    bullets:
-      - Configure Hibernate in the context of a Spring application
-      - Create efficient object/relational mappings with Hibernate
-      - Leverage the Spring Framework to facilitate Hibernate session, transaction and exception management
-      - Use Hibernate with Spring and understand fundamental architectural issues
-      - Know how and when to use parts of the Spring Framework
-  syllabus: 
-    - title: "Spring Framework Foundations"
-      content:
-        - Introduction to Spring
-        - Using Spring to configure an application
-        - Simplifying application configuration
-        - Annotation-based dependency injection
-        - Simplifying JDBC-based data access with Spring
-        - Driving database transactions in a Spring environment
-    - title: "Using the Hibernate ORM"
-      content:
-        - Introducing Object-to-Relational Mapping (ORM)
-        - Getting started with Hibernate in a Spring environment
-        - Using JPA annotations and Hibernate XML
-        - "Inheritance: considerations and trade-offs"
-        - Defining custom user-types for Value Objects
-        - "Using queries: HQL, criteria API, native (SQL)"
-        - "Hibernate in web applications: open session in view"
-        - Using the different Java collection mappings
-        - Using joins and components to go beyond naïve class to table mappings
-    - title: "Hibernate Internals and Configuration"
-      content:
-        - Working with Hibernate objects
-        - Lazy loading and detached objects
-        - Optimistic and pessimistic locking
-        - Mixing Hibernate and JDBC
-        - Performance tuning
-        - "Advanced Features: interceptors, schema generation, caching, batching"
-
 PivotalHD:
   title: "Processing Big Data with Pivotal HD"
   requirements: "The student should be comfort with Java programming and data technologies and have a basic understanding of virtualization concepts."
@@ -563,10 +521,58 @@ CP100A:
       content:
         - Understand the purpose of and use cases for the products and services in the Google Cloud big data and machine learning platforms
 
+CPB100:
+  title: "Google Cloud Platform Big Data and Machine Learning Fundamentals (CPB100)"
+  requirements: "Before attending this course, participants should have roughly one (1) year of experience with one or more of the following:<ul><li>A common query language such as SQL</li><li>Extract, transform, load activities</li><li>Data modeling</li><li>Machine learning and/or statistics</li><li>Programming in Python</li></ul>"
+  audience: "This class is intended for Data analysts, Data scientists and Business analysts. It is also suitable for IT decision makers evaluating Google Cloud Platform for use by data scientists.<p>This class is for people who do the following with big data:</p><ul><li>Extracting, Loading, Transforming, cleaning, and validating data for use in analytics</li><li>Designing pipelines and architectures for data processing</li><li>Creating and maintaining machine learning and statistical models</li><li>Querying datasets, visualizing query results and creating reports</li></ul>"
+  desc: "<p>This 8 hour instructor-led class introduces participants to the Big Data & Machine Learning capabilities of Google Cloud Platform. It provides a quick overview of the Google Cloud Platform and a deeper dive of the data processing capabilities.</p>"
+  objectives: 
+    description: "<p>At the end of this one-day course, participants will be able to:</p>"
+    bullets:
+      - Identify the purpose and value of the key Big Data and Machine Learning products in the Google Cloud Platform
+      - Use CloudSQL and Cloud Dataproc to migrate existing MySQL and Hadoop/Pig/Spark/Hive workloads to Google Cloud Platform
+      - Employ BigQuery and Cloud Datalab to carry out interactive data analysis
+      - Choose between Cloud SQL, BigTable and Datastore
+      - Train and use a neural network using TensorFlow
+      - Choose between different data processing products on the Google Cloud Platform
+  syllabus:
+    - title: Introduction
+      content:
+        - What is the Google Cloud Platform?
+        - GCP Big Data Products
+        - Usage scenarios
+    - title: Foundation of Google Cloud Platform
+      content:
+        - CPUs on demand (Compute Engine)
+        - A global filesystem (Cloud Storage)
+        - CloudShell
+    - title: Data Analytics on the Cloud
+      content:
+        - Stepping stones to the cloud
+        - "CloudSQL: your SQL database on the cloud"
+        - Dataproc
+    - title: Scaling data analysis
+      content:
+        - Fast random access
+        - Datalab
+        - BigQuery
+        - Machine Learning with TensorFlow
+        - Fully built models for common needs
+        - Genomics API (optional)
+    - title: Data processing architectures
+      content:
+        - Asynchronous processing with TaskQueues
+        - Message-oriented architectures with Pub/Sub
+        - Creating pipelines with Dataflow
+    - title: Summary
+      content:
+        - Why GCP?
+        - Where to go from here
+        - Resources
 
 CPB200:
   title: "Google BigQuery for Data Analysts (CPB200)"
-  certDesc: "After this course the student will be able to take the exam required to become a <b>CPB200 Qualified Developer</b>."
+  certDesc: "After this course the student will be able to take the exam required to become a <b>Google Cloud Platform Qualified Data Analyst</b>."
   requirements: "Before attending this course, participants should have attended CP100A - Google Cloud Platform Fundamentals OR CPB100 - Google Cloud Platform Big Data & Machine Learning Fundamentals (or equivalent experience) and expierence using a SQL-like query language to analyze data"
   audience: "This class is intended for data analysts and data scientists responsible for: analyzing and visualizing big data, implementing cloud-based big data solutions, deploying or migrating big data applications to the public cloud, implementing and maintaining large-scale data storage environments, and transforming/processing big data."
   desc: "<p>This 3 day instructor-led class introduces participants to Google BigQuery. Through a combination of instructor-led presentations, demonstrations and hands-on labs, students learn how to store, transform, analyze, and visualize data using Google BigQuery.</p>"
@@ -658,7 +664,7 @@ CPB200:
 
 CPO200:
   title: "Google Cloud Platform for Systems Operations Professionals (CPO200)"
-  certDesc: "After this course the student will be able to take the exam required to become a <b>CPO200 Qualified Developer</b>."
+  certDesc: "After this course the student will be able to take the exam required to become a <b>Google Cloud Platform Qualified Systems Operations Professional</b>."
   requirements: "Before attending this course, participants should have attended CP100A - Google Cloud Platform Fundamentals (or equivalent experience), basic proficiency with command-line tools on linux operating system environments and prior systems operations experience, either on-premises or using a public cloud environment"
   audience: "This course is designed for Systems Operations professionals and Systems Administrators using Google Cloud Platform to create or migrate application environments and infrastructure"
   desc: "<p>This 4 day instructor-led class introduces participants to the implementation of application environments and public cloud infrastructure using Google Cloud Platform. Through a combination of instructor-led presentations and hands-on labs, students learn how to deploy cloud infrastructure components such as networks, systems and applications. This course is designed to give participants a robust hands-on experience and is primarily lab-focused.</p>"
@@ -752,7 +758,7 @@ CPO200:
 
 CPD200:
   title: "Developing Solutions for Google Cloud Platform (CPD200)"
-  certDesc: "After this course the student will be able to take the exam required to become a <b>CPD200 Qualified Developer</b>."
+  certDesc: "After this course the student will be able to take the exam required to become a <b>Google Cloud Platform Qualified Solution Developer</b>."
   requirements: "Before attending this course, participants should have attended CP100A - Google Cloud Platform Fundamentals (or equivalent experience), basic proficiency with command-line tools and linux operating system environments, experience developing applications and APIs using a common programming language such as Java or Python and prior solutions development experience, either on-premises or in a public cloud environment"
   audience: "This course is designed for experienced application developers who want to learn how to develop solutions using Google Cloud Platform to create highly scalable backends for both web and mobile applications."
   desc: This 3 day instructor-led class introduces participants to Solution Development for Google Cloud Platform. Through a combination of instructor-led presentations, demonstrations, and hands-on labs, students learn how to develop cloud-based applications using Google App Engine, Google Cloud Datastore, and Google Cloud Endpoints.

@@ -56,13 +56,9 @@ body {
     text-decoration: underline;
   }
 }
+
 .top-bar .toggle-topbar.menu-icon {
   margin-top: -18px;
-}
-
-.course-contents {
-  overflow: hidden;
-  transition: all 300ms ease-out;
 }
 
 .anchor {
@@ -152,6 +148,7 @@ ul.case-studies {
   right: 0;
   z-index: 10;
 }
+
 .nested {
   background: #fff;
   border-bottom: 2px solid #ddd;
@@ -172,34 +169,6 @@ ul.case-studies {
       text-transform: none;
     }
   }
-
-}
-
-.subsidized-container {
-  padding: 1rem;
-  background: #FFFFB7;
-  border: 1px solid #FFEBB7;
-}
-.subsidized {
-  font-size: 80%;
-  color: #777;
-  display: flex;
-  align-items: center;
-}
-
-.tripartita {
-  margin-right: 10px;
-  width: 100px;
-}
-
-p.certification {
-  background: #FFFFB7;
-  padding: 10px;
-  border: 1px solid #FFEBB7;  
-}
-
-.certification > .icon, .certification > b {
-  color: #E36736;
 }
 
 .nobreak {
@@ -213,32 +182,8 @@ p.certification {
   }
 }
 
-.pricing-table .description {
-  color: #444;
-}
-
-.pricing-table .price {
-  border-bottom: solid 1px #ddd;
-  color: #666;
-  overflow: hidden;
-
-  .deprecated {
-    margin-top: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-}
-
-.pricing-table * {
-  line-height: inherit;
-}
-
 .logo-container {
   padding: 10px 0;
-}
-.price-vat {
-  font-size: 1rem;
-  margin-top: -5px;
 }
 
 .clients-section {
@@ -254,22 +199,6 @@ p.certification {
   &.spring {
     width: 120px;
   }
-}
-
-.logo-spring-big {
-  max-height: 100px;
-}
-
-.logo-pivotal {
-  max-height: 65px;
-}
-
-.button:not(:last-child) {
-  margin-right: 5px;
-}
-
-.currency {
-  font-size: 80%;
 }
 
 address {
@@ -330,76 +259,6 @@ footer {
   display: none !important;
 }
 
-.kcontainer {
-  opacity: 1;
-  transition: opacity 0.3s linear;
-  -o-transition: opacity 0.3s linear;
-  -moz-transition: opacity 0.3s linear;
-  -webkit-transition: opacity 0.3s linear;
-  overflow: hidden;
-  &:empty {
-    opacity: 0;
-  }
-}
-
-.kperformances {
-  list-style: none;
-  margin-left: 0;
-}
-
-.kticket-soldout {
-  color: #c43c35;
-  text-decoration: line-through;
-} 
-.kticket-danger {
-  color: #c43c35 !important;
-}
-.kticket-warning {
-  color: #f89406 !important;
-}
-.kperflink:hover, .kperflink:focus {
-  text-decoration: underline;
-}
-
-.kcontrol {
-  padding: 20px;
-  background-color: #e7e7e7;
-  color: #333;
-  border-radius: 3px;
-  transition: background-color 300ms ease-out;
-  &:hover, &:focus {
-    background-color: #b9b9b9;
-    color: #333;
-  }
-}
-
-.kaddr {
-  font-size: 80%;
-}
-
-.newsletter {
-  padding-top: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  text-align: center;
-  .email {
-    width: 100%;
-  }
-  .button {
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: $newsletter-bg-color;
-    color: $newsletter-color;
-    border-color: $newsletter-bg-color;
-    border-radius: 5px;
-    &:hover, &:focus {
-      background-color: scale-color($newsletter-bg-color, $lightness: -20%);
-      border-color: scale-color($newsletter-bg-color, $lightness: -20%);
-    }
-  }
-}
-
 .box {
   border: 1px solid $border-color;
   background-color: $white;
@@ -416,40 +275,6 @@ footer {
 .wide {
   width: 100%;
 }
-
-.tag-categories {
-  list-style: none;
-  margin: 0;
-  li {
-    display: inline;
-  }
-}
-
-.filter-fieldset {
-  display: inline-block;
-  margin: 0;
-  padding-bottom: 15px;
-  padding-top: 0;
-}
-
-.filter-fieldset legend {
-  font-variant: small-caps;
-  color: #777;
-}
-
-.category-values {
-  margin: 0;
-}
-
-.label {
-  margin-top: 5px;
-  &.active {
-    background-color: $blue;
-    border-color: scale-color($blue, $lightness: -20%);
-    color: white;
-  }
-}
-
 
 @media #{$medium}{
 
