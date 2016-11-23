@@ -1,32 +1,32 @@
 $develop-button-bg-color: #eb5255;
 $training-button-bg-color: #34495e;
 
-.top-bar-section .has-dropdown>a:hover:after {
-  border-color: rgba($jet, 0.4) transparent transparent transparent;
-}
-
-.top-bar-section a {
-  transition: background 1s ease-out;
-}
-
 .top-bar {
   a {
     text-decoration: none;
     text-transform: uppercase;
+  }
+  .top-bar-section {
+    ul {
+      width: auto;
+      li a {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+    }
+    a {
+      transition: background 1s ease-out;
+    }
+    .has-dropdown > a:hover:after {
+      border-color: rgba($jet, 0.4) transparent transparent transparent;
+    }
   }
   &.expanded {
     overflow: visible;
     .top-bar-section {
       z-index: 9;
       position: absolute;
-      right: 20px;
-      ul {
-        width: auto;
-        li a {
-          padding-right: 20px;
-          padding-left: 20px;
-        }
-      }
+      right: 25px;
     }
   }
 }
@@ -36,6 +36,7 @@ $training-button-bg-color: #34495e;
     max-width: 100%;
     width: 100%;
     background: transparent;
+    overflow: visible;
     a:not(.top-logo) {
       &:hover, &:focus {
         text-decoration: none !important;
@@ -44,9 +45,17 @@ $training-button-bg-color: #34495e;
         border-radius: 3px;
       }
     }
-  }
-  .top-bar-section ul li {
-    background: transparent;
+    &.expanded {
+      .title-area {
+        background: transparent;
+      }
+      .top-bar-section  {
+        top: 70px;
+        ul {
+          background: $jet;
+        }
+      }
+    }
   }
   .toggle-topbar.menu-icon {
     a:hover, a:focus {
@@ -54,14 +63,20 @@ $training-button-bg-color: #34495e;
       color: $white !important;
     }
   }
-  .top-bar-section li:not(.has-form) a:not(.button) {
-    background: transparent;
-  }
-  .top-bar-section .dropdown li:not(.has-form):not(.active)>a:not(.button) {
-    background: transparent;
-  }
-  .top-bar.expanded .title-area {
-    background: transparent;
+  .top-bar-section {
+    @media #{$small-only} {
+      z-index: -1;
+    }
+    
+    ul li {
+      background: transparent;
+    }
+    li:not(.has-form) a:not(.button) {
+      background: transparent;
+    }
+    .dropdown li:not(.has-form):not(.active)>a:not(.button) {
+      background: transparent;
+    }
   }
 }
 
