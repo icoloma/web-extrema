@@ -1,0 +1,31 @@
+<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <a class="top-logo" href="/{{page.hl}}">Extrema Sistemas</a>
+      </h1>
+    </li>
+    <li class="toggle-topbar menu-icon">
+      <a> 
+        <span>Menu</span>
+      </a>
+    </li>
+  </ul>
+  <section class="top-bar-section">
+    <ul class="right">
+      {% include menu.html %}
+      <li class="has-dropdown show-for-medium-up">
+        <a>{{site.data[page.hl].i18n}}</a>
+        <ul class="dropdown">
+          {% for lang in site.data.langs %}
+            {% if lang != page.hl %}
+              <li>
+                <a href="/{{lang}}/{{page.currentTab}}">{{site.data[lang].i18n}}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
+  </section>
+</nav>

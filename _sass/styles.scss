@@ -6,10 +6,6 @@
 
 $margin-small: 10px;
 $blue-light: #7da6c6;
-$footer-color: #555;
-$footer-link-color: white;
-$footer-link-hover-color: $footer-link-color;
-$footer-link-hover-background-color: #999;
 $black: #222;
 $twitter-color: #00aced;
 $blogger-color: #fb8f3d;
@@ -21,44 +17,11 @@ body {
   color: $black;
 }
 
-.banner {
-  height: 10px;
-  background: #555;
-  background: repeating-linear-gradient(
-    -45deg,
-    $blue-light,
-    $blue-light 10px,
-    $extrema-blue 10px,
-    $extrema-blue 20px
-  );
-}
-
-.contain-to-grid .top-bar-section li:not(.has-form) a:not(.button),
-.contain-to-grid .top-bar,
-.contain-to-grid,
-.contain-to-grid .top-bar.expanded .title-area {
-  background: $extrema-blue;
-}
-
-.top-bar, .top-bar-section a, .contain-to-grid {
-  transition: background 1s ease-out;
-}
-
-.nested-f-topbar-fixed {
-  padding-top: 0 !important;
-}
-
-.top-bar a {
-  text-decoration: none;
-  text-transform: uppercase;
-
-  &:hover, &:focus {
-    text-decoration: underline;
-  }
-}
-
-.top-bar .toggle-topbar.menu-icon {
-  margin-top: -18px;
+.content {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .anchor {
@@ -66,39 +29,9 @@ body {
   top: -150px;
 }
 
-.contain-to-grid .top-bar-section li.active:not(.has-form) a:not(.button) {
-  background: #fff;
-  color: $extrema-blue;
-}
-
-.top-bar .title a {
-  font-size: $topbar-link-font-size;
-  text-transform: none;
-}
-
-.top-bar-section ul {
-  padding-bottom: 1px;
-  li > a {
-    padding-left: 25px;
-  }
-}
-
-.top-logo {
-  height: 32px;
-  text-indent: -1000px;
-  overflow: hidden;
-  background: url('../img/extrema.png') no-repeat 0 0;
-  background-size: contain;
-  margin-top: 20px;
-  margin-left: 15px;
-  float: left;
-  font-size: 32px;
-  min-width: 185px;
-}
-
 .section {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 h1 {
@@ -136,39 +69,10 @@ ul.unstyled {
   padding-left: 0;
 }
 
-ul.case-studies {
-  margin-top: 40px;
-  li {
-    margin-bottom: 40px;
-  }
-}
-
 .sticky {
   left: 0;
   right: 0;
   z-index: 10;
-}
-
-.nested {
-  background: #fff;
-  border-bottom: 2px solid #ddd;
-  .top-bar {
-    background: #fff;
-    overflow: visible;
-    height: auto;
-
-    .sub-nav {
-      margin-bottom: 0;
-    }
-
-    dl {
-      font-size: .75rem;
-    }
-
-    a {
-      text-transform: none;
-    }
-  }
 }
 
 .nobreak {
@@ -206,45 +110,6 @@ address {
   font-style: normal;
 }
 
-footer {
-  background: $footer-color;
-  font-weight: bold;
-}
-
-.footer-block-list, .footer-inline-list {
-  list-style: none;
-  text-align: center;
-  margin: 0;
-  li {
-    padding: 10px 0;
-    a, a:visited {
-      color: $footer-link-color;
-      font-size: 16px;
-    }
-    &:hover {
-      background: $footer-link-hover-background-color;
-      a {
-        color: $footer-link-hover-color;
-      }
-    }
-  }
-}
-
-.footer-inline-list {
-  li {
-    border-radius: 5px;
-    border: 2px solid $footer-color;
-    display: inline-block;
-    width: 33.3333%;
-    &.active {
-      background: $footer-link-hover-background-color;
-      a {
-        color: $footer-link-hover-color;
-      }
-    }
-  }
-}
-
 .bottom-logo {
   display: block;
   width: 230px;
@@ -278,9 +143,6 @@ footer {
 
 @media #{$medium}{
 
-  .top-bar-section ul {
-    padding-bottom: 0;
-  }
   .training-container h4 {
     text-align: left;
   }

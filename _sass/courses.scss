@@ -142,3 +142,10 @@ p.certification {
     color: white;
   }
 }
+
+@media #{$medium-up} {
+  .course-container {
+    display: flex;
+    align-items: center;
+  }
+}

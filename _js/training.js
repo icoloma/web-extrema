@@ -3,7 +3,7 @@ $(function() {
   , scrollTo = function($element) {
     if ($element.length) {
       $('html, body').stop().animate({
-        'scrollTop': $element.offset().top - $('.contain-to-grid.nested').height()
+        'scrollTop': $element.offset().top
       });
     }
   }

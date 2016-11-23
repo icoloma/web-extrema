@@ -1,0 +1,150 @@
+$develop-button-bg-color: #eb5255;
+$training-button-bg-color: #34495e;
+
+.top-bar-section .has-dropdown>a:hover:after {
+  border-color: rgba($jet, 0.4) transparent transparent transparent;
+}
+
+.top-bar-section a {
+  transition: background 1s ease-out;
+}
+
+.top-bar {
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  &.expanded {
+    overflow: visible;
+    .top-bar-section {
+      z-index: 9;
+      position: absolute;
+      right: 20px;
+      ul {
+        width: auto;
+        li a {
+          padding-right: 20px;
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+.contain-to-grid {
+  .top-bar {
+    max-width: 100%;
+    width: 100%;
+    background: transparent;
+    a:not(.top-logo) {
+      &:hover, &:focus {
+        text-decoration: none !important;
+        background-color: $white !important;
+        color: $jet !important;
+        border-radius: 3px;
+      }
+    }
+  }
+  .top-bar-section ul li {
+    background: transparent;
+  }
+  .toggle-topbar.menu-icon {
+    a:hover, a:focus {
+      background-color: transparent !important;
+      color: $white !important;
+    }
+  }
+  .top-bar-section li:not(.has-form) a:not(.button) {
+    background: transparent;
+  }
+  .top-bar-section .dropdown li:not(.has-form):not(.active)>a:not(.button) {
+    background: transparent;
+  }
+  .top-bar.expanded .title-area {
+    background: transparent;
+  }
+}
+
+.top-logo {
+  height: 32px;
+  text-indent: -10000px;
+  overflow: hidden;
+  background: url('../img/extrema.png') no-repeat 0 0;
+  background-size: contain;
+  margin-top: 20px;
+  margin-left: 15px;
+  float: left;
+  font-size: 32px;
+  min-width: 185px;
+}
+
+.header {
+  background: url('/img/background.jpg') no-repeat center center fixed;
+  background-size: cover; 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.header-content {
+  background: rgba(34, 35, 46, 0.83);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sections {
+  display: flex;
+  height: 100%;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.develop, .training {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  color: #fff;
+  padding: 0 40px;
+  text-align: center;
+}
+section.top-bar-section {
+  padding: 0;
+}
+.sections section h1 {
+  color: #fff;
+}
+.sections .button {
+  margin: 0;
+}
+.develop .button {
+  background-color: $develop-button-bg-color;
+}
+.training .button {
+  background-color: $training-button-bg-color;
+}
+
+.section.big {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media #{$medium-up} {
+  .header {
+    background-image: url('/img/background-medium.jpg');
+  }
+  .sections {
+    flex-direction: row;
+  }
+  .develop, .training {
+    width: 50%;
+  }
+}
+
+@media #{$large-up} {
+  .header {
+    background-image: url('/img/background-big.jpg');
+  }
+}
