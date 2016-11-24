@@ -1,0 +1,13 @@
+<div class="row section">
+  <div class="columns">
+    <h1>{{site.data.legal.Title}}</h1>
+    {% for section in site.data.legal.sections %}
+      <div>
+        <h2>{{section.Title}}</h2>
+        {% for content in section.Contents %}
+          <p>{{content}}</p>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

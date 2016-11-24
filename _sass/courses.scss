@@ -142,3 +142,19 @@ p.certification {
     color: white;
   }
 }
+
+.course-container.cloud {
+  .logo-container {
+    max-height: 140px;
+  }
+  .training-logo {
+    width: 180px;
+  }
+}
+
+@media #{$medium-up} {
+  .course-container {
+    display: flex;
+    align-items: center;
+  }
+}

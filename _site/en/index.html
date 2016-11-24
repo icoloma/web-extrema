@@ -19,24 +19,44 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="banner show-for-small-only"></div>
-<header class="contain-to-grid clearfix">
-  <nav class="top-bar" data-topbar role="navigation">
-    <ul class="title-area">
-      <li class="name">
-        <h1>
-          <a class="top-logo" href="/en">Extrema Sistemas</a>
-        </h1>
-      </li>
-      <li class="toggle-topbar menu-icon">
-        <a> 
-          <span>Menu</span>
-        </a>
-      </li>
-    </ul>
-    <section class="top-bar-section">
-      <ul class="right">
-        
+    <div class="cookie-container hide">
+      <div class="cookie-permissions">
+        <section>
+          <div class="row">
+            <div class="hgroup">
+              <h3>This web site uses cookies.</h3>
+            </div>
+            <div class="row">
+              <p class="columns small-12 medium-10">
+                We use first and third-party cookies to improve our service. If you continue, we will assume that you accept our <a href="/en/cookies">cookie policy</a>.
+              </p>
+              <p class="columns small-12 medium-2">
+                <a class="accept-cookies button tiny">Accept</a>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <header class="contain-to-grid clearfix header">
+  <div class="header-content">
+    <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <a class="top-logo" href="/en">Extrema Sistemas</a>
+      </h1>
+    </li>
+    <li class="toggle-topbar menu-icon">
+      <a> 
+        <span>Menu</span>
+      </a>
+    </li>
+  </ul>
+  <section class="top-bar-section">
+    <ul class="right">
+      
   <li class="">
     
       <a href="/en/courses">Training</a>
@@ -55,61 +75,61 @@
     
   </li>
 
-        <li class="has-dropdown show-for-medium-up">
-          <a>English</a>
-          <ul class="dropdown">
+      <li class="show-for-small-only">
+        
+          <a href="/es/">Español</a>
+        
+      </li>
+      <li class="has-dropdown show-for-medium-up">
+        <a>English</a>
+        <ul class="dropdown">
+          
             
-              
+          
             
-              
-                <li>
-                  <a href="/es/">Español</a>
-                </li>
-              
+              <li>
+                <a href="/es/">Español</a>
+              </li>
             
-          </ul>
-        </li>
-      </ul>
-    </section>
-  </nav>
+          
+        </ul>
+      </li>
+    </ul>
+  </section>
+</nav>
+    <div class="sections">
+      <section class="develop">
+        <div>
+          <h1>Developing and consulting</h1>
+          <p>StackOverflow is ok, but what if you do it right the first time?</p>
+          <a class="button" href="/en/studies">See clients</a>
+        </div>
+      </section>
+      <section class="training">
+        <div>
+          <h1>Training lead</h1>
+          <p>Because IT changes everyday, you must be up-to-date</p>
+          <a class="button round" href="/en/courses">See courses</a>
+        </div>
+      </section>
+    </div>
+  </div>
 </header>
 
-
-    <div class="cookie-container hide">
-  <div class="cookie-permissions">
-    <section>
-      <div class="row">
-        <div class="hgroup">
-          <h3>This web site uses cookies.</h3>
-        </div>
-        <div class="row">
-          <p class="columns small-12 medium-10">
-            We use first and third-party cookies to improve our service. If you continue, we will assume that you accept our <a href="/en/cookies">cookie policy</a>.
-          </p>
-          <p class="columns small-12 medium-2">
-            <a class="accept-cookies button tiny">Accept</a>
-          </p>
-        </div>
-      </div>
-    </section>
-  </div>
-</div>
-<div class="row section">
-  <section class="columns">
-    <hgroup>
-      <h1>
-        Enjoy the training lead
-        <small>We are working hard to bring you the best IT training courses.</small>
-      </h1>
-    </hgroup>
-    <div>
-      <ul class="unstyled training">
-        
-<li class="row">
-  <article class="training-container">
+<section class="training-content section big">
+  <hgroup class="row">
+    <h1 class="columns">
+      Enjoy the training lead
+      <small>We are working hard to bring you the best IT training courses.</small>
+    </h1>
+  </hgroup>
+  <div class="row">
+    
+<div class="columns">
+  <article class="course-container row ">
     <div class="column small-12 medium-3 training-logo-container logo-container text-center">
       <a href="/en/courses?from=google">
-        <img class="training-logo" src="/img/logo-gcp.png" alt="Google Cloud Platform" class=logo>
+        <img class="training-logo" src="/img/logo-gcp.png" alt="Google Cloud Platform">
       </a>
     </div>
     <div class="column small-12 medium-9">
@@ -127,13 +147,13 @@
       
     </div>
   </article>
-</li>
-        
-<li class="row">
-  <article class="training-container">
+</div>
+    
+<div class="columns">
+  <article class="course-container row ">
     <div class="column small-12 medium-3 training-logo-container logo-container text-center">
       <a href="/en/courses?technology=spring">
-        <img class="training-logo" src="/img/logo-spring.png" alt="Spring" class=logo>
+        <img class="training-logo" src="/img/logo-spring.png" alt="Spring">
       </a>
     </div>
     <div class="column small-12 medium-9">
@@ -146,114 +166,139 @@
       </p>
       
         <p class="certification">
-          <span class="icon icon-star"><b>Official Course:</b> includes the official exam to become a Certified Spring Developer, emitted by VMware.</span>
+          <span class="icon icon-star"><b>Official Course:</b> includes the official exam to become a Certified Spring Developer, emitted by Pivotal.</span>
         </p>
       
     </div>
   </article>
-</li>
-        
-<li class="row">
-  <article class="training-container">
+</div>
+    
+<div class="columns">
+  <article class="course-container row cloud">
     <div class="column small-12 medium-3 training-logo-container logo-container text-center">
-      <a href="/en/courses?q=pivotal%20hd">
-        <img class="training-logo" src="/img/logo-pivotal-hd.png" alt="Pivotal HD" class=logo>
+      <a href="/en/courses?technology=cloud">
+        <img class="training-logo" src="/img/cloud.png" alt="Cloud Computing">
       </a>
     </div>
     <div class="column small-12 medium-9">
       <h4 class="small-only-text-center">
-        <a href="/en/courses?q=pivotal%20hd">Pivotal HD</a>
+        <a href="/en/courses?technology=cloud">Cloud Computing</a>
       </h4>
       <p>
-        Quickly move your teams to exploit the extended capabilities of Pivotal HD, 'The world’s most powerful Apache Hadoop distribution'.
-        <a class="nobreak" href="/en/courses?q=pivotal%20hd"><span class="icon-right-open"></span> Read more</a>
+        Developing cloud-based applications can be really hard. Learn with us to design, build and deploy applications using all the advantages of cloud-native development.
+        <a class="nobreak" href="/en/courses?technology=cloud"><span class="icon-right-open"></span> Read more</a>
       </p>
       
     </div>
   </article>
-</li>
-      </ul>
-    </div>
-  </section>
 </div>
+    
+<div class="columns">
+  <article class="course-container row ">
+    <div class="column small-12 medium-3 training-logo-container logo-container text-center">
+      <a href="/en/courses?technology=big-data">
+        <img class="training-logo" src="/img/big-data.png" alt="Big Data">
+      </a>
+    </div>
+    <div class="column small-12 medium-9">
+      <h4 class="small-only-text-center">
+        <a href="/en/courses?technology=big-data">Big Data</a>
+      </h4>
+      <p>
+        Because in a world when knowledge is everything, it is important to know how to make the most of the many data available to us.
+        <a class="nobreak" href="/en/courses?technology=big-data"><span class="icon-right-open"></span> Read more</a>
+      </p>
+      
+    </div>
+  </article>
+</div>
+  </div>
+</section>
 
-<hr>
+<section class="training-partners section big">
+  <h1>Official Training Partners</h1>
+  <div class="row logos">
+    <div class="column small-12 text-center">
+      <a href="/en/courses?from=google"><img class="gcp-logo" src="/img/logo-google-white-big.png" alt="Google Cloud Platform Training Partner"></a>
+    </div>
+    <div class="column small-12 text-center">
+      <a href="/en/courses?from=pivotal"><img class="logo-spring-big" src="/img/logo-spring-white-big.png" alt="SpringSource Official Training Partner" style="margin-right: 10px"></a>
+    </div>
+  </div>
+</section>
 
-<div class="row">
-  <section class="column small-12">
-    <h1>
-      Get the natural advantage from consulting
-      <small>Join the list of clients that are relying on our consulting and mentoring services.</small>
-    </h1>
-    <div class="hide">
-      <ul class="unstyled case-studies columns">
+<section class="consulting section big">
+  <div class="row">
+    <div class="columns">
+      <h1>
+        Get the natural advantage from consulting
+        <small>Join the list of clients that are relying on our consulting and mentoring services.</small>
+      </h1>
+    </div>
+  </div>
+  <div class="row consulting-content">
+    <div class="column medium-8">
+      <div class="hide">
+        <div class="case-studies columns">
   
-    <li class="row">
-      <div class="column small-12 medium-4 large-3">
+    <div class="row case-study">
+      <div class="column small-12 medium-4 large-3 text-center">
         <img class="case-study-img" src="/img/logo-aena.png" alt="Aena" title="Aena">
       </div>
       <p class="column small-12 medium-8 large-9">
         <b>Aena Air Navigation Messaging System</b> During this 1-year project a team with no prior experience was formed to develop a real-time messaging system for air navigation messages that connects 10+ data sources with error recovery.
       </p>
+    </div>
   
-    <li class="row">
-      <div class="column small-12 medium-4 large-3">
+    <div class="row case-study">
+      <div class="column small-12 medium-4 large-3 text-center">
         <img class="case-study-img" src="/img/logo-indra.png" alt="Indra" title="Indra">
       </div>
       <p class="column small-12 medium-8 large-9">
         <b>Vessel Traffic System</b> A team was created from scratch for this six-month project to develop a system that could control the maritime traffic of the coast of Poland, including 20+ different types of navigation alarms (hazards, collisions, restricted areas) and the integration of multiple real-time detection systems (radar, video, goniometer..) with a NoSQL back-end.
       </p>
+    </div>
   
-    <li class="row">
-      <div class="column small-12 medium-4 large-3">
+    <div class="row case-study">
+      <div class="column small-12 medium-4 large-3 text-center">
         <img class="case-study-img" src="/img/logo-banco-espana.gif" alt="Banco de España" title="Banco de España">
       </div>
       <p class="column small-12 medium-8 large-9">
         <b>Architecture for application development</b> This one-year project redesigned the architecture to migrate existing systems to a Spring-based platform. This project included a team of six architects, two of them from the bank.
       </p>
+    </div>
   
-    <li class="row">
-      <div class="column small-12 medium-4 large-3">
+    <div class="row case-study">
+      <div class="column small-12 medium-4 large-3 text-center">
         <img class="case-study-img" src="/img/logo-bbva.png" alt="BBVA" title="BBVA">
       </div>
       <p class="column small-12 medium-8 large-9">
         <b>E-banking platform</b> Development of the e-banking platform for the private banking branch of BBVA. This project includes the full development of a web front-end that enables access to user assets, including real-time reports of portfolio positions. The final product includes the integration of a complex security platform based on state-of-the-art authentication systems.
       </p>
+    </div>
   
-    <li class="row">
-      <div class="column small-12 medium-4 large-3">
+    <div class="row case-study">
+      <div class="column small-12 medium-4 large-3 text-center">
         <img class="case-study-img" src="/img/logo-onu.gif" alt="ONU" title="ONU">
       </div>
       <p class="column small-12 medium-8 large-9">
         <b>Web technologies training</b> The Office of the High Commissioner of Human Rights of the United Nations has received an intensive series of training courses on HTML5 and CSS3 technologies to better support their Intranet and Extranet sites.
       </p>
-  
-</ul>
     </div>
-    <ul class="unstyled studies-container section">
-    </ul>
-    <a class="button radius" href="/en/contact">Get in contact now </a>
-    <a class="button secondary radius" href="/en/studies"><span class="icon-right-open"></span> More case studies</a>
-  </section>
+  
 </div>
+      </div>
+      <div class="studies-container"></div>
+      <a class="button radius" href="/en/contact">Get in contact now </a>
+      <a class="button secondary radius" href="/en/studies"><span class="icon-right-open"></span> More case studies</a>
+    </div>
+    <div class="columns small-8 medium-4 text-center">
+      <img class="consulting-img" src="/img/consulting-small.jpg" alt="Get in contact!">
+    </div>
+  </div>
+</section>
 
-<hr>
-
-<div class="row">
-  <section class="column small-12 medium-6">
-    <p>
-      <img src="/img/logo-google-big.png" alt="Google Cloud Platform Training Partner">
-    </p>
-  </section>
-  <section class="column small-12 medium-6 text-center">
-    <p>
-      <img class="logo-spring-big" src="/img/logo-spring-big.png" alt="SpringSource Official Training Partner" style="margin-right: 10px">
-    </p>
-  </section>
-</div>
-
-
-<section class="clients-section clearfix">
+<section class="clients-section clearfix section big">
   <div class="column small-12 text-center">
     <ul class="small-block-grid-3 medium-block-grid-4 large-block-grid-6">
       <li>
@@ -296,48 +341,52 @@
   </div>
 </section>
 
-    <footer class="show-for-small-only">
-  <div class="small-12">
-    <ul class="footer-block-list">
-      <li>
-        <a href="/en">Home</a>
-      </li>
-      
-  <li class="">
-    
-      <a href="/en/courses">Training</a>
-    
-  </li>
-
-  <li class="">
-    
-      <a href="http://blog.extrema-sistemas.com" target="_blank">Blog</a>
-    
-  </li>
-
-  <li class="">
-    
-      <a href="/en/contact">Contact</a>
-    
-  </li>
-
-    </ul>
-  </div>
-  <div class="small-12">
-    <ul class="footer-inline-list">
-      
-        <li class="active">
-          <a class="nav-link" href="/en/">English</a>
-        </li>
-      
-        <li class="">
-          <a class="nav-link" href="/es/">Español</a>
-        </li>
-      
-    </ul>
+<footer>
+  <div class="row">
+    <div class="columns small-6 medium-3">
+      <dl class="footer-column">
+        <dt class="footer-column-title">Contact</dt>
+        <dd><a class="footer-link" href="mailto:info@extrema-sistemas.com">E-mail</a></dd>
+        <dd><a class="footer-link" href="https://twitter.com/extremasistemas">Twitter</a></dd>
+        <dd><a class="footer-link" href="https://github.com/icoloma/web-extrema">Github</a></dd>
+      </dl>
+    </div>
+    <div class="columns small-6 medium-3">
+      <dl class="footer-column">
+        <dt class="footer-column-title">Links</dt>
+          <dd>
+            <a class="footer-link" href="/en/courses">
+              Training
+            </a>
+          </dd>
+          <dd>
+            <a class="footer-link" href="http://blog.extrema-sistemas.com">
+              Blog
+            </a>
+          </dd>
+          <dd>
+            <a class="footer-link" href="/en/studies">
+              Case studies
+            </a>
+          </dd>
+          <dd>
+            <a class="footer-link" href="https://www.koliseo.com">
+              Koliseo
+            </a>
+          </dd>
+      </dl>
+    </div>
+    <div class="columns small-6 medium-3">
+      <dl class="footer-column">
+        <dt class="footer-column-title no-margin"><a class="top-logo" href="/en">Extrema Sistemas</a></dt>
+        <dd><a class="footer-link" href="/en/legal">Legal</a></dd>
+        <dd><a class="footer-link" href="./cookies">Cookie Policy</a></dd>
+        <dd><a class="footer-link" href="/legal">About us</a></dd>
+        <dd><a class="footer-link" href="/legal">Privacy</a></dd>
+      </dl>
+    </div>
   </div>
 </footer>
-
     
     <script>
       window.currentLang = "en";

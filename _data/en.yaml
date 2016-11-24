@@ -13,6 +13,19 @@ Duration: Duration
 1d: 1 day
 3d: 3 days
 4d: 4 days
+DevelopingAndConsultingTitle: Developing and consulting
+DevelopingAndConsultingDesc: StackOverflow is ok, but what if you do it right the first time?
+SeeClients: See clients
+TrainingLeadTitle: Training lead
+TrainingLeadDesc: Because IT changes everyday, you must be up-to-date
+SeeTraining: See courses
+AboutUs: About us
+PrivacyPolicy: Privacy
+Links: Links
+Legal: Legal
+cloudComputingDesc: Developing cloud-based applications can be really hard. Learn with us to design, build and deploy applications using all the advantages of cloud-native development.
+bigDataDesc: Because in a world when knowledge is everything, it is important to know how to make the most of the many data available to us.
+ContactForPrice: Contact for price
 
 "suscribeToNewsletter": "Suscribe to our newsletter"
 "suscribeToGcpNewsletter": "If you want the last info of our Google Cloud Platform courses, suscribe to our specific GCP newsletter."
@@ -48,10 +61,9 @@ Duration: Duration
 "defaultDesc": "Extrema Sistemas is the lead training company in Spain and Italy, provider of certification courses for Google Cloud Platform and the Spring technology stack."
 "indexTrainingTitle": "Enjoy the training lead"
 "springDesc": "The official courses about the portfolio of products that have become the <i>de facto</i> standard for the development of Java applications."
-"pivotalHDShortDesc": "Quickly move your teams to exploit the extended capabilities of Pivotal HD, 'The world’s most powerful Apache Hadoop distribution'."
 "googleCloudPlatformDesc": "Google Cloud Platform enables developers to build, test and deploy applications on Google’s highly-scalable and reliable infrastructure."
 "googleTrainingPartner": "<b>Official Course:</b> includes the official exam to become a Google Cloud Platform Qualified Developer, emitted by Google."
-"springCertifiedPartner": "<b>Official Course:</b> includes the official exam to become a Certified Spring Developer, emitted by VMware."
+"springCertifiedPartner": "<b>Official Course:</b> includes the official exam to become a Certified Spring Developer, emitted by Pivotal."
 "readMore": "Read more"
 "getInContact": "Get in contact now"
 "consultingTitle": "Get the natural advantage from consulting"
@@ -370,110 +382,8 @@ SpringEnterprise:
         - Working with Streams (Definition, Source vs Sink, deployment, use-cases)
         - Working with Jobs (Definition, deployment, monitoring, use-cases)
 
-PivotalHD:
-  title: "Processing Big Data with Pivotal HD"
-  requirements: "The student should be comfort with Java programming and data technologies and have a basic understanding of virtualization concepts."
-  audience: "Administrators, engineers, architects and developers considering or who are currently involved in processing Big Data."
-  desc: "<p>This comprehensive four day course will provide competent Java developers with the skills necessary to exploit the extended capabilities of Pivotal HD, “The world’s most powerful Apache Hadoop distribution”. The four-day course commences with a grounding in the relevant core technologies:<ul><li>Big fast data, NoSQL and their role in modern business applications</li><li>Introduction to Hadoop HDFS and Map Reduce</li><li>Using Hadoop ecosystem tools such Pig, Hive and HBase</li><li>Overview of the Pivotal HD distribution</li><li>Using Pivotal HAWQ</li></ul></p>"
-  afterCompleting: "<p>As a result of attending the course, the developer will be able to confidently utilize Pivotal HD, realizing the benefits of this important Hadoop distribution to deliver powerful analysis functionality of massive data with:</p><ul><li>The implementation of Hadoop MapReduce jobs</li><li>The development of real-time data analysis applications with HAWQ</li></ul>"
-  objectives: 
-    description: "<p>By the end of the course, you should be able to meet the following objectives:</p>"
-    bullets:
-      - Understanding the Hadoop and architecture
-      - Getting started with MapReduce to nalyze large data sets
-      - Practical considerations using MapReduce and Designing for MapReduce
-      - Initial understanding of HDFS concepts
-      - Advanced and practical considerations with HDFS
-      - Introduction to streaming MapReduce and Pig
-      - Overview of Hive
-      - Understanding the Pivotal HD architecture
-      - Getting started with HAWQ; Pivotal’s fast SQL driven and HDFS based analysis interface
-      - Advanced and pragmatic considerations when using HAWQ
-  syllabus: 
-    - title: Course introduction
-      content: 
-        - Introductions and course logistics
-        - Course objectives
-    - title: Introduction to Hadoop
-      content:
-        - What is Hadoop?
-        - "The Hadoop ecosystem: Pig, Hive, HBase, Zookeeper..."
-        - Understanding MapReduce and HDFS (Hadoop Distributed File System)
-        - Insuring Data Integrity (checksum...)
-        - "Saving space: input/output compression in Hadoop"
-        - Launching a Hadoop job
-        - Configuring the Hadoop runtime
-    - title: Introduction to Pivotal HD
-      content: 
-    - title: Hadoop distributed file system
-      content: 
-        - "Design goals: ability to run on commodity hardware, be fault tolerant..."
-        - Scaling from one datanode to hundreds of datanodes
-        - HDFS commands
-        - Working with file paths
-        - HDFS administration (UI, admin commands...)
-        - Working with the Java API for HDFS
-        - Working with a Secordary NameNode, Federated NameNodes and High Availability NameNodes
-    - title: Getting started with Map Reduce
-      content: 
-        - Map Reduce overview
-        - Hadoop versions
-        - Writing a mapper
-        - Writing a reducer
-        - Debugging and testing
-    - title: In-depth Map Reduce
-      content:
-        - The Writable hierarchy
-        - Partitionners, Combiners, Shuffle
-        - How to reuse objects and Garbage Collector optimization
-        - Map Reduce restrictions
-        - Joins (Map side and Reduce side)
-    - title: NoSQL overview
-      content: 
-    - title: Streaming MapReduce and Pig
-      content:
-        - High level alternatives to writing Java Mappers and Reducers
-        - Hadoop streaming
-        - Pig scripting
-        - SQL in Hadoop
-    - title: Introduction to Hive
-      content:
-        - Hive overview
-        - Hive tables and DDL
-        - Partitions and external tables
-        - Selecting data
-        - Joins
-        - Transforms &amp; User Defined Functions (UDFs)
-    - title: Getting started with HAWQ
-      content:
-        - HAWQ Installation and Environment
-        - Configuration and Operation Overview
-        - Client access to HAWQ
-        - Introduction to HAWQ SQL
-        - Quick introduction to Spring JDBC and Test Support
-    - title: Working with HAWQ
-      content:
-        - Creating database tables
-        - Queries
-        - Joins
-        - Functions
-    - title: HAWQ external tables
-      content:
-        - External Tables overview
-        - Loading data with gpfdist/gpload
-        - External tables with PXF
-        - Loading &amp; unloading data recap
-        - Hadoop and Sqoop
-    - title: HAWQ practical considerations
-      content:
-        - Query Plans
-        - Using ANALYZE and EXPLAIN
-        - Distributions and partitioning
-        - Data storage and I/O
-
-
-CP100A:
-  title: "Google Cloud Platform Fundamentals (CP100A)"
+CP100:
+  title: "Google Cloud Platform Fundamentals (CP100)"
   requirements: "None. Familiarity with application development, Linux operating systems, systems operations, and data analytics/machine learning is helpful in understanding the technologies covered."
   audience: "This class is intended for solutions developers, systems operations professionals, and solution architects planning to deploy applications and create application environments on Google Cloud Platform. This class is also suitable for executives and business decision makers evaluating the potential of Google Cloud Platform to address their business needs."
   desc: "<p>This 1 day instructor-led class provides an overview of Google Cloud Platform products and services. Through a combination of presentations and hands-on labs, participants learn the value of Google Cloud Platform and how to incorporate cloud-based solutions into business strategies.</p>"
@@ -520,6 +430,52 @@ CP100A:
     - title: Big Data and Machine Learning
       content:
         - Understand the purpose of and use cases for the products and services in the Google Cloud big data and machine learning platforms
+
+CPA200:
+  title: "Google Cloud Platform for Architects (CPA200)"
+  requirements: "Before attending this course, participants should have attended CP100 - Google Cloud Platform Fundamentals"
+  audience: "The intended audience is people who will be designing solutions using Google Cloud Platform but who do not have a lot of experience with designing cloud-based solutions."
+  desc: "<p>This course is intended for people who will be designing solutions using Google Cloud Platform but who do not have a lot of experience with designing cloud-based solutions. Students will understand: the core tenants to be considered when designing & deploying to a cloud; to be confident enough to leverage what Google Cloud Platform offers without focusing on undifferentiated heavy lifting; how to get started on Google Cloud Platform and be able to identify the appropriate Google Cloud Platform products to use for popular architectural patterns.</p>"
+  objectives:
+    description: "<p>At the end of this one-day class, participants will be able to:</p>"
+    bullets:
+      - Understand the core tenants to be considered when designing & deploying to a cloud
+      - Be confident enough to leverage what Google Cloud Platform offers without focusing on undifferentiated heavy lifting
+      - Understand how to get started on Google Cloud Platform
+      - Be able to identify the appropriate Google Cloud Platform products to use for popular architectural patterns
+  syllabus:
+    - title: Keeping things simple
+      content:
+        - Managing applications at scale
+        - Describe the problems that Google addressed to allow them to deploy Google scale applications
+        - Explain how using Google Cloud addresses each of the problems faced when designing for distributed scalable applications that are deployed across regions
+        - Micro services
+        - Security & compliance
+    - title: Focusing on Your Business
+      content:
+        - Managing applications at scale
+        - Describe the problems that Google addressed to allow them to deploy Google scale applications
+        - Explain how using Google Cloud addresses each of the problems faced when designing for distributed scalable applications that are deployed across regions
+        - Micro services
+    - title: Embrace Failure
+      content:
+        - Decoupling
+        - Self healing
+        - Testing
+    - title: Moving to the Cloud
+      content:
+        - Migrating applications to Google Cloud Platform
+        - Off site disaster recovery and archival with Google Cloud Platform
+        - Hybrid architectures and multi cloud deployments
+        - Lock in is not an issue using Google Cloud Platform
+    - title: Architectural patterns using Google Cloud Platform
+      content:
+        - Cloud Deployment manager
+        - Image processing
+        - Mobile applications
+        - Big Data
+        - Virtual network environments
+
 
 CPB100:
   title: "Google Cloud Platform Big Data and Machine Learning Fundamentals (CPB100)"
@@ -570,10 +526,89 @@ CPB100:
         - Where to go from here
         - Resources
 
+
+CPB101:
+  title: "Serverless Data Analysis with BigQuery and Cloud Dataflow (CPB101)"
+  requirements: "Before attending this course, participants should have attended CPB100 - Google Cloud Platform Big Data & Machine Learning Fundamentals, experience using a SQL-like query language to analyze data and knowledge of either Python or Java."
+  audience: "This class is intended for data analysts and data scientists responsible for: analyzing and visualizing big data, implementing cloud-based big data solutions, deploying or migrating big data applications to the public cloud, implementing and maintaining large-scale data storage environments, and transforming/processing big data."
+  desc: "<p>This 8 hour instructor led course introduces participants to BigQuery and Cloud Dataflow for data analysis. Through a combination of instructor-led presentations, demonstrations, and hands-on labs, students learn how to carry out no-ops data warehousing, analysis and pipeline processing.</p>"
+  objectives: 
+    description: "<p>At the end of this course, participants will be able to:"
+    bullets:
+      - Build up a complex BigQuery using clauses, inner selects, built-in functions and joins
+      - Load and export data to/from BigQuery
+      - Identify need for nested, repeated fields and user-defined functions
+      - Understand pipeline processing, terms and concepts
+      - Write pipelines in Java or Python and launch them locally or in the Cloud
+      - Implement Map, Reduce transforms in Dataflow pipelines.
+      - Join datasets as side inputs
+      - Interoperate Dataflow, BigQuery and Cloud Pub/Sub for real-time streaming
+  syllabus:
+    - title: Serverless data analysis with BigQuery
+      content:
+        - What is BigQuery?
+        - Queries and functions
+        - Load and export data
+        - Advanced Capabilities
+        - Performance and pricing
+    - title: Serverless, autoscaling data pipelines with Dataflow
+      content:
+        - What is Dataflow?
+        - Data pipeline
+        - MapReduce in Dataflow
+        - Side inputs
+        - Streaming
+
+CPB102:
+  title: "Machine Learning with Cloud ML (CPB102)"
+  requirements: "Before attending this course, participants should have attended CPB100 - Google Cloud Platform Big Data & Machine Learning Fundamentals, CPB101 - Serverless Data Analysis with BigQuery and Cloud Dataflow, knowledge of Python and familiarity with the numpy package, and knowledge of undergraduate-level stadistics to the level of Udacity ST101"
+  audience: "This class is intended for programmers and data scientists responsible for developing predictive analytics using machine learning. The typical audience member has experience analyzing and visualizing big data, implementing cloud-based big data solutions, and transforming/processing datasets."
+  desc: "<p>This 8 hour instructor led course introduces participants to Machine Learning, TensorFlow and Cloud ML. Through a combination of instructor-led presentations, demonstrations, and hands-on labs, students learn machine learning and develop hands-on skills in developing, evaluating, and productionizing machine learning models.</p>"
+  objectives: 
+    description: "<p><p>At the end of this course, participants will be able to:</p>"
+    bullets:
+      - Understand what kinds of problems machine learning can address
+      - Build a machine learning model using TensorFlow
+      - Build scalable, deployable ML models using Cloud ML
+      - Know the importance of preprocessing and combining features
+      - Incorporate advanced ML concepts into their models
+      - Employ ML APIs
+      - Productionize trained ML model
+  syllabus:
+    - title: Getting Started with Machine Learning
+      content:
+        - What is ML?
+        - Effective ML
+        - Evaluating ML
+        - "ML datasets: generalization"
+    - title: Building ML models with TensorFlow
+      content:
+        - Getting started
+        - TensorFlow graphs and loops
+        - Monitoring
+    - title: Scaling ML models with Cloud ML
+      content:
+        - Why Cloud ML?
+        - Packaging up a TensorFlow model
+        - End-to-end training
+    - title: Feature Engineering
+      content:
+        - Creating good features
+        - Transforming inputs
+        - Synthetic features
+        - Preprocessing with Cloud ML
+    - title: ML architectures
+      content:
+        - Wide and deep
+        - Image analysis
+        - Embeddings and sequences
+        - Recommendation systems
+
+
 CPB200:
   title: "Google BigQuery for Data Analysts (CPB200)"
   certDesc: "After this course the student will be able to take the exam required to become a <b>Google Cloud Platform Qualified Data Analyst</b>."
-  requirements: "Before attending this course, participants should have attended CP100A - Google Cloud Platform Fundamentals OR CPB100 - Google Cloud Platform Big Data & Machine Learning Fundamentals (or equivalent experience) and expierence using a SQL-like query language to analyze data"
+  requirements: "Before attending this course, participants should have attended CP100 - Google Cloud Platform Fundamentals OR CPB100 - Google Cloud Platform Big Data & Machine Learning Fundamentals (or equivalent experience) and expierence using a SQL-like query language to analyze data"
   audience: "This class is intended for data analysts and data scientists responsible for: analyzing and visualizing big data, implementing cloud-based big data solutions, deploying or migrating big data applications to the public cloud, implementing and maintaining large-scale data storage environments, and transforming/processing big data."
   desc: "<p>This 3 day instructor-led class introduces participants to Google BigQuery. Through a combination of instructor-led presentations, demonstrations and hands-on labs, students learn how to store, transform, analyze, and visualize data using Google BigQuery.</p>"
   objectives: 
@@ -665,7 +700,7 @@ CPB200:
 CPO200:
   title: "Google Cloud Platform for Systems Operations Professionals (CPO200)"
   certDesc: "After this course the student will be able to take the exam required to become a <b>Google Cloud Platform Qualified Systems Operations Professional</b>."
-  requirements: "Before attending this course, participants should have attended CP100A - Google Cloud Platform Fundamentals (or equivalent experience), basic proficiency with command-line tools on linux operating system environments and prior systems operations experience, either on-premises or using a public cloud environment"
+  requirements: "Before attending this course, participants should have attended CP100 - Google Cloud Platform Fundamentals (or equivalent experience), basic proficiency with command-line tools on linux operating system environments and prior systems operations experience, either on-premises or using a public cloud environment"
   audience: "This course is designed for Systems Operations professionals and Systems Administrators using Google Cloud Platform to create or migrate application environments and infrastructure"
   desc: "<p>This 4 day instructor-led class introduces participants to the implementation of application environments and public cloud infrastructure using Google Cloud Platform. Through a combination of instructor-led presentations and hands-on labs, students learn how to deploy cloud infrastructure components such as networks, systems and applications. This course is designed to give participants a robust hands-on experience and is primarily lab-focused.</p>"
   objectives: 
@@ -759,7 +794,7 @@ CPO200:
 CPD200:
   title: "Developing Solutions for Google Cloud Platform (CPD200)"
   certDesc: "After this course the student will be able to take the exam required to become a <b>Google Cloud Platform Qualified Solution Developer</b>."
-  requirements: "Before attending this course, participants should have attended CP100A - Google Cloud Platform Fundamentals (or equivalent experience), basic proficiency with command-line tools and linux operating system environments, experience developing applications and APIs using a common programming language such as Java or Python and prior solutions development experience, either on-premises or in a public cloud environment"
+  requirements: "Before attending this course, participants should have attended CP100 - Google Cloud Platform Fundamentals (or equivalent experience), basic proficiency with command-line tools and linux operating system environments, experience developing applications and APIs using a common programming language such as Java or Python and prior solutions development experience, either on-premises or in a public cloud environment"
   audience: "This course is designed for experienced application developers who want to learn how to develop solutions using Google Cloud Platform to create highly scalable backends for both web and mobile applications."
   desc: This 3 day instructor-led class introduces participants to Solution Development for Google Cloud Platform. Through a combination of instructor-led presentations, demonstrations, and hands-on labs, students learn how to develop cloud-based applications using Google App Engine, Google Cloud Datastore, and Google Cloud Endpoints.
   objectives: 
@@ -849,7 +884,7 @@ CPD200:
 
 CP306A:
   title: "Google Container Engine and Kubernetes (CP306A)"
-  requirements: "Before attending this course, participants should have attended CP100A - Google Cloud Platform Fundamentals (or equivalent experience), basic proficiency with command-line tools and linux operating system environments, prior systems operations or development operations experience, either on-premises or in a public cloud environment and familiarity with containers and container-based technologies such as Docker"
+  requirements: "Before attending this course, participants should have attended CP100 - Google Cloud Platform Fundamentals (or equivalent experience), basic proficiency with command-line tools and linux operating system environments, prior systems operations or development operations experience, either on-premises or in a public cloud environment and familiarity with containers and container-based technologies such as Docker"
   audience: "This class is intended for solutions developers, systems operations professionals, solution architects, and development operations professionals who develop, migrate, and deploy container-based applications on Google Cloud Platform (GCP)."
   desc: "<p>This 1 day instructor-led class introduces participants to Google Container Engine (GKE) and Kubernetes. Through a combination of instructor-led presentations, demonstrations, and hands-on labs, students learn the key concepts and practices for deploying and maintaining applications using Google Container Engine.</p>"
   objectives: 
@@ -909,12 +944,13 @@ CP306A:
 
 "CaseStudies": "Case studies"
 "AenaDesc": "<b>Aena Air Navigation Messaging System</b> During this 1-year project a team with no prior experience was formed to develop a real-time messaging system for air navigation messages that connects 10+ data sources with error recovery."
-"IndraDesc": "<b>Vessel Traffic System</b> A team was created from scratch for this six-month project to develop a system that could control the maritime traffic of the coast of Poland, including 20+ different types of navigation alarms (hazards, collisions, restricted areas) and the integration of multiple real-time detection systems (radar, video, goniometer..) with a NoSQL back-end."
+IndraDesc: "<b>Vessel Traffic System</b> A team was created from scratch for this six-month project to develop a system that could control the maritime traffic of the coast of Poland, including 20+ different types of navigation alarms (hazards, collisions, restricted areas) and the integration of multiple real-time detection systems (radar, video, goniometer..) with a NoSQL back-end."
 "BdeDesc": "<b>Architecture for application development</b> This one-year project redesigned the architecture to migrate existing systems to a Spring-based platform. This project included a team of six architects, two of them from the bank."
 "BBVADesc": "<b>E-banking platform</b> Development of the e-banking platform for the private banking branch of BBVA. This project includes the full development of a web front-end that enables access to user assets, including real-time reports of portfolio positions. The final product includes the integration of a complex security platform based on state-of-the-art authentication systems."
 "ONUDesc": "<b>Web technologies training</b> The Office of the High Commissioner of Human Rights of the United Nations has received an intensive series of training courses on HTML5 and CSS3 technologies to better support their Intranet and Extranet sites."
 "moreCaseStudies": "More case studies"
 
+"CookiePolicy": "Cookie Policy"
 "cookiePolicyTitle": "This web site uses cookies."
 "cookiePolicyDesc": "We use first and third-party cookies to improve our service. If you continue, we will assume that you accept our <a href=\"/en/cookies\">cookie policy</a>."
 "Accept": "Accept"

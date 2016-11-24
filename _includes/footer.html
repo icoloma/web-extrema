@@ -1,19 +1,46 @@
-<footer class="show-for-small-only">
-  <div class="small-12">
-    <ul class="footer-block-list">
-      <li>
-        <a href="/{{page.hl}}">{{site.data[page.hl].Home}}</a>
-      </li>
-      {% include menu.html %}
-    </ul>
-  </div>
-  <div class="small-12">
-    <ul class="footer-inline-list">
-      {% for lang in site.data.langs %}
-        <li class="{% if page.hl == lang %}active{% endif %}">
-          <a class="nav-link" href="/{{lang}}/{{page.currentTab}}">{{site.data[lang].i18n}}</a>
-        </li>
-      {% endfor %}
-    </ul>
+<footer>
+  <div class="row">
+    <div class="columns small-6 medium-3">
+      <dl class="footer-column">
+        <dt class="footer-column-title">{{site.data[page.hl].Contact}}</dt>
+        <dd><a class="footer-link" href="mailto:info@extrema-sistemas.com">E-mail</a></dd>
+        <dd><a class="footer-link" href="https://twitter.com/extremasistemas">Twitter</a></dd>
+        <dd><a class="footer-link" href="https://github.com/icoloma/web-extrema">Github</a></dd>
+      </dl>
+    </div>
+    <div class="columns small-6 medium-3">
+      <dl class="footer-column">
+        <dt class="footer-column-title">{{site.data[page.hl].Links}}</dt>
+          <dd>
+            <a class="footer-link" href="/{{page.hl}}/courses">
+              {{site.data[page.hl].Training}}
+            </a>
+          </dd>
+          <dd>
+            <a class="footer-link" href="http://blog.extrema-sistemas.com">
+              Blog
+            </a>
+          </dd>
+          <dd>
+            <a class="footer-link" href="/{{page.hl}}/studies">
+              {{site.data[page.hl].CaseStudies}}
+            </a>
+          </dd>
+          <dd>
+            <a class="footer-link" href="https://www.koliseo.com">
+              Koliseo
+            </a>
+          </dd>
+      </dl>
+    </div>
+    <div class="columns small-6 medium-3">
+      <dl class="footer-column">
+        <dt class="footer-column-title no-margin"><a class="top-logo" href="/{{page.hl}}">Extrema Sistemas</a></dt>
+        <dd><a class="footer-link" href="/{{page.hl}}/legal">Legal</a></dd>
+        <dd><a class="footer-link" href="./cookies">{{site.data[page.hl].CookiePolicy}}</a></dd>
+        <dd><a class="footer-link" href="/legal">{{site.data[page.hl].AboutUs}}</a></dd>
+        <dd><a class="footer-link" href="/legal">{{site.data[page.hl].PrivacyPolicy}}</a></dd>
+      </dl>
+    </div>
   </div>
 </footer>

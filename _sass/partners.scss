@@ -1,0 +1,20 @@
+.training-partners {
+  text-align: center;
+  background-color: #172134;
+  h1 {
+    margin-bottom: 40px;
+    color: #fff;
+  }
+  .logos {
+    display: flex;
+    align-items: center;
+  }
+}
+.training-logo-container {
+  margin: 20px auto;
+  max-height: 160px;
+}
+.gcp-logo {
+  max-width: 350px;
+  width: 100%;
+}

@@ -75,9 +75,10 @@
 <div class="courses">
   {% 
     include course.html
-    course='CP100A'
+    course='CP100'
     logo='/img/logo-google-big.png'
     koliseoEvent="cp100-a"
+    contactForPrice="true"
     duration='duration8h'
     language='langEnEs'
     creditCardRequired='creditCardRequired'
@@ -88,10 +89,44 @@
     course='CPB100'
     logo='/img/logo-google-big.png'
     koliseoEvent="cpb100"
+    contactForPrice="true"
     duration='duration8h'
     language='langEnEs'
     creditCardRequired='creditCardRequired'
-    labels="google 1d beginner big-data cloud"
+    labels="google 1d beginner big-data machine-learning cloud"
+  %}
+  {% 
+    include course.html
+    course='CPB101'
+    logo='/img/logo-google-big.png'
+    koliseoEvent="cpb101-serverless-data-analysis-with-big-query-and-cloud-dataflow"
+    price='495'
+    duration='duration8h'
+    language='langEnEs'
+    creditCardRequired='creditCardRequired'
+    labels="google 1d beginner big-data machine-learning cloud"
+  %}
+  {% 
+    include course.html
+    course='CPB102'
+    logo='/img/logo-google-big.png'
+    koliseoEvent="google-machine-learning-with-cloud-ml"
+    price='495'
+    duration='duration8h'
+    language='langEnEs'
+    creditCardRequired='creditCardRequired'
+    labels="google 1d beginner machine-learning cloud"
+  %}
+  {% 
+    include course.html
+    course='CPA200'
+    logo='/img/logo-google-big.png'
+    koliseoEvent="cpa200-google-cloud-platform-architects-fundamentals"
+    price='495'
+    duration='duration8h'
+    language='langEnEs'
+    creditCardRequired='creditCardRequired'
+    labels="google 1d beginner cloud paas iaas big-data"
   %}
   {% 
     include course.html
@@ -173,16 +208,5 @@
     duration='duration32h'
     language='langEnEsIt'
     labels="pivotal 4d advanced spring big-data"
-  %}
-  {% 
-    include course.html
-    course='PivotalHD'
-    logo='/img/logo-pivotal.png'
-    logoClass='logo-pivotal'
-    koliseoEvent="processing-data-with-pivotal-hd"
-    price='2,095'
-    duration='duration32h'
-    language='langEnIt'
-    labels="pivotal 4d advanced big-data"
   %}
 </div>

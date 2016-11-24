@@ -1,3 +1,68 @@
+$client-section-bg-color: #d0e2eb;
+
+.studies-container {
+  margin-top: 20px;
+}
+
+.case-studies {
+  margin-top: 40px;
+}
+
+.case-study {
+  margin-bottom: 40px !important;
+  &:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+.clients-section {
+  padding-bottom: 1.25rem;
+  li {
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.consulting {
+  background-color: $client-section-bg-color;
+  h1 {
+    color: $jet;
+    small {
+      color: $oil;
+    }
+  }
+}
+
+.consulting-img {
+  max-width: 300px;
+  width: 100%;
+  display: inline-block;
+}
+
+.consulting-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  @media #{$medium-up} {
+    flex-direction: row;
+  }
+}
+
+.case-study-img {
+  margin-bottom: 20px;
+  max-width: 200px;
+  @media #{$medium-up} {
+    margin-bottom: 0;
+    max-width: 100%;
+  }
+}
+
+@media #{$medium-up} {
+  .consulting-content {
+    flex-direction: row;
+  }
+}
+
 span[class^=client-] {
   box-sizing: border-box;
   display: inline-block;

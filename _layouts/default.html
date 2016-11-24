@@ -1,23 +1,11 @@
 ---
 layout: base
 ---
-<div class="cookie-container hide">
-  <div class="cookie-permissions">
-    <section>
-      <div class="row">
-        <div class="hgroup">
-          <h3>{{site.data[page.hl].cookiePolicyTitle}}</h3>
-        </div>
-        <div class="row">
-          <p class="columns small-12 medium-10">
-            {{site.data[page.hl].cookiePolicyDesc}}
-          </p>
-          <p class="columns small-12 medium-2">
-            <a class="accept-cookies button tiny">{{site.data[page.hl].Accept}}</a>
-          </p>
-        </div>
-      </div>
-    </section>
+
+<div class="content">
+  <div>
+    {% include navigation.html %}
+    {{ content }}
   </div>
+  {% include footer.html %}
 </div>
-{{ content }}

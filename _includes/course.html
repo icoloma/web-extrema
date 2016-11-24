@@ -48,10 +48,16 @@
             <span class="label warning radius right deprecated">Deprecated</span>
           {% endif %}
         {% else %}
-          <b>
-            <span>{{site.data[page.hl].Price}}: </span>
-            <span>{{site.data[page.hl].Free}}</span>
-          </b>
+          {% if include.contactForPrice %}
+            <b>
+              <span>{{site.data[page.hl].ContactForPrice}}</span>
+            </b>
+          {% else %}
+            <b>
+              <span>{{site.data[page.hl].Price}}: </span>
+              <span>{{site.data[page.hl].Free}}</span>
+            </b>
+          {% endif %}
         {% endif %}
       </li>
       <li class="description text-left">
@@ -115,7 +121,6 @@
       </div>
     </div>
     <div class="row course-contents clearfix" style="height:0">
-      <hr>
       <section class="column small-12 medium-6">
         <h2>{{site.data[page.hl].Objectives}}</h2>
         {{course.objectives.description}}
