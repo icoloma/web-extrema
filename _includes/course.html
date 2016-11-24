@@ -48,10 +48,16 @@
             <span class="label warning radius right deprecated">Deprecated</span>
           {% endif %}
         {% else %}
-          <b>
-            <span>{{site.data[page.hl].Price}}: </span>
-            <span>{{site.data[page.hl].Free}}</span>
-          </b>
+          {% if include.contactForPrice %}
+            <b>
+              <span>{{site.data[page.hl].ContactForPrice}}</span>
+            </b>
+          {% else %}
+            <b>
+              <span>{{site.data[page.hl].Price}}: </span>
+              <span>{{site.data[page.hl].Free}}</span>
+            </b>
+          {% endif %}
         {% endif %}
       </li>
       <li class="description text-left">

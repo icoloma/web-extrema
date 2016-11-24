@@ -6,6 +6,10 @@ $training-button-bg-color: #34495e;
     text-decoration: none;
     text-transform: uppercase;
   }
+  .name {
+    display: flex;
+    align-items: center;
+  }
   .top-bar-section {
     ul {
       width: auto;
@@ -86,7 +90,6 @@ $training-button-bg-color: #34495e;
   overflow: hidden;
   background: url('../img/extrema.png') no-repeat 0 0;
   background-size: contain;
-  margin-top: 20px;
   margin-left: 15px;
   float: left;
   font-size: 32px;

@@ -1,9 +1,9 @@
 {% capture href %}/{{page.hl}}/courses?{{include.query}}{% endcapture %}
 <div class="columns">
-  <article class="course-container row">
+  <article class="course-container row {{include.class}}">
     <div class="column small-12 medium-3 training-logo-container logo-container text-center">
       <a href="{{href}}">
-        <img class="training-logo" src="/img/logo-{{include.logo}}.png" alt="{{include.title}}">
+        <img class="training-logo" src="/img/{{include.logo}}" alt="{{include.title}}">
       </a>
     </div>
     <div class="column small-12 medium-9">

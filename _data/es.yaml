@@ -23,6 +23,9 @@ AboutUs: Quiénes somos
 PrivacyPolicy: Privacidad
 Links: Enlaces
 Legal: Legal
+cloudComputingDesc: Hacer aplicaciones basadas en la nube puede ser realmente complicado. Aprende con nosotros a diseñar aplicaciones con alta escalabilidad y aprovechando todas las ventajas del desarrollo en la nube.
+bigDataDesc: Porque en un mundo donde el conocimiento lo es todo, es importante saber sacar el máximo partido a los numerosos datos de los que disponemos.
+ContactForPrice: Consultar precio
 
 "suscribeToNewsletter": "Suscríbete a nuestra lista de correo"
 "suscribeToGcpNewsletter": "Si quieres saber lo más reciente de nuestros cursos de Google Cloud Platform, suscríbete a nuestra lista de correo específica de GCP."
