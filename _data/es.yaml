@@ -61,7 +61,6 @@ Legal: Legal
 "defaultDesc": "Extrema Sistemas es la compañía de formación líder en España e Italia, responsable de cursos de certificación para Google Cloud Platform y el conjunto de tecnologías que forman el Spring Portfolio."
 "indexTrainingTitle": "Habla con el líder en formación"
 "springDesc": "Los cursos oficiales sobre el estándar <i>de facto</i> para el desarrollo de aplicaciones Java."
-"pivotalHDShortDesc": "Aprende a usar todas las funcionalidades de Pivotal HD, 'La distribución de Apache Hadoop más potente del mundo'."
 "googleCloudPlatformDesc": "Google Cloud Platform permite a los desarrolladores construir, testear y desplegar aplicaciones en la estructura fiable y escalable usada por Google"
 "getInContact": "Ponte en contacto"
 "consultingTitle": "La ventaja natural de la consultoría"
@@ -139,26 +138,6 @@ SpringEnterprise:
       - Utilizar <b>Spring Integration</b> para crear arquitecturas orientadas a eventos e integradas con sistemas externos
       - Usar configuración <b>DSL</b>
       - Tener un conocimiento básico de <b>Spring XD</b>
-
-PivotalHD:
-  title: "Procesamiento de Big Data con Pivotal HD"
-  requirements: "Los asistentes deben sentirse cómodos con la programación en Java y entender los conceptos básicos de virtualización."
-  audience: "Administradores, ingenieros, arquitectos y desarrolladores que estén considerando o ya estén immersos en el procesamiento de Big Data."
-  desc: "<p>Con este completo curso de cuatro días los desarrolladores serán capaces de aprovechar todas las funcionalidades de Pivotal HD, “La distribución de Hadoop más pontente del mundo”. Se trata de un curso que profundiza en las tecnologías clave:<ul><li>Big data, NoSQL y su rol en las aplicaciones de negocio modernas</li><li>Introducción al HDFS de Hadoop y Map Reduce</li><li>Uso del ecosistema de herramientas para Hadoop como Pig, Hive y HBase</li><li>Pivotal HD</li><li>Uso de HAWQ</li></ul></p>"
-  afterCompleting: "<p>Tras completar este curso, el desarrollador será capaz de usar Pivotal HD, entendiendo los beneficios que aporta esta importante distribución de Hadoop para desarrollar potentes funcionalidades de análisis masivo de datos con:</p><ul><li>La implementación de tareas MapReduce de Hadoop</li><li>El desarrollo aplicaciones de análisis de datos en tiempo real con HAWQ</li></ul>"
-  objectives: 
-    description: "<p>Para este curso se han fijado los siguientes objetivos:</p>"
-    bullets:
-      - Entender Hadoop y su arquitectura
-      - Introducción a MapReduce para analizar grandes conjuntos de datos
-      - Consideraciones prácticas usando y diseñando tareas MapReduce
-      - Introducción a los conceptos de HDFS
-      - HDFS avanzado y consideraciones prácticas
-      - Introducción a MapReduce con Pig
-      - Hive
-      - Entender la arquitectura de Pivotal HD
-      - Introducción a HAWQ; interfaz para el análisis por SQL basado en HDFS
-      - Consideraciones prácticas y avanzadas en el uso de HAWQ
 
 CP100:
   title: "Google Cloud Platform Fundamentals (CP100)"
