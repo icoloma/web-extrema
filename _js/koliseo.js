@@ -151,10 +151,6 @@ $(function() {
                 $content.append('<p>' + res.empty + '</p>')
               }
               $item.html($content).addClass('populated');
-              var scrollTop = $window.scrollTop();
-              if (scrollTop > $item.offset().top) {
-                $window.scrollTop(scrollTop + $item.height() - oldHeight);
-              }
             }
             renderPerformances(0);
           }
@@ -165,20 +161,15 @@ $(function() {
   var THRESHOLD = 200
   , $window = $(window)
   , check = function(e) {
-      var addToScroll = 0;
       $('.kcontainer:not(.populated)').each(function() {
         var scrollTop = $window.scrollTop()
         var $this = $(this);
         if ($this.offset().top - scrollTop - $window.height() < THRESHOLD) {
           // http://webdesign.tutsplus.com/tutorials/creating-a-collection-of-css3-animated-pre-loaders--cms-21978
           $this.html('<div id="preloader_2"> <span></span> <span></span> <span></span> <span></span> </div>');
-          addToScroll += $this.height();
           loadPerformances($this);
         }
       })
-      if (addToScroll) {
-        $window.scrollTop($window.scrollTop() + addToScroll);
-      }
     }
 
   $window.scroll(_.throttle(check, 500))
