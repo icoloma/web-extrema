@@ -21,14 +21,13 @@
   width: 100px;
 }
 
-p.certification {
+.certification {
   background: #FFFFB7;
   padding: 10px;
   border: 1px solid #FFEBB7;  
-}
-
-.certification > .icon, .certification > b {
-  color: #E36736;
+  .icon, b {
+    color: #E36736;
+  }
 }
 
 .pricing-table {
