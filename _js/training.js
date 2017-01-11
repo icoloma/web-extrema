@@ -36,7 +36,7 @@ $(function() {
   var filtersHTML = $('#filters').html();
   if (filtersHTML) {
     var filters = JSON.parse(filtersHTML);
-    var currentFilters = [];
+    var currentFilters = {};
 
     var courses = $document.find('article').toArray();
     var $filter = $document.find('.filter');
@@ -45,24 +45,43 @@ $(function() {
     var $results = $document.find('.courses');
     var hasTag = function(course) {
       var tags = course.dataset.labels.split(' ');
-      return currentFilters.every(function(filter) {
-        return tags.indexOf(filter) != -1;
-      })
+      var result = false;
+      for (var key in currentFilters) {
+        var currentFilter = currentFilters[key];
+        result = currentFilter.every(function(filter) {
+          return tags.indexOf(filter) != -1;
+        })
+      }
+      return result;
     }
     var matchText = function(course, inputValue) {
+      if (!inputValue || !inputValue.length) {
+        return true;
+      }
       var name = $(course).find('h1[itemprop=name]').html().toLowerCase();
       var description = $(course).find('[itemprop=description]').html().toLowerCase();
       return name.indexOf(inputValue) != -1 || description.indexOf(inputValue) != -1;
     }
 
+    var getInputValue = function() {
+      return $name.val().toLowerCase();
+    }
+
     var doFilter = function() {
       var toHide = [];
       var toShow = [];
-      var inputValue = $name.val().toLowerCase();
+      var inputValue = getInputValue();
+      var areFiltersEmpty = true;
+      for (var key in currentFilters) {
+        if (currentFilters[key].length) {
+          areFiltersEmpty = false;
+          break;
+        }
+      }
 
       courses.forEach(function(course) {
         // if there is no tags selected
-        if (currentFilters.length) {
+        if (!areFiltersEmpty) {
           if (hasTag(course) && matchText(course, inputValue)) {
             toShow.push(course);
           } else {
@@ -88,38 +107,73 @@ $(function() {
 
     }
 
+    var pushState = function(forceFilter) {
+      if (history && history.pushState) {
+        var query = [];
+        var inputValue = getInputValue();
+        if (inputValue.trim().length) {
+          query.push('q=' + encodeURIComponent(inputValue));
+        }
+        for (var key in currentFilters) {
+          var values = currentFilters[key];
+          if (values.length) {
+            query.push(encodeURIComponent(key) + '=' + encodeURIComponent(values.join(',')));
+          }
+        }
+        var newPath = location.pathname + '?' + query.join('&');
+        history.pushState({},  '', newPath);
+        // send to google analytics
+        ga && ga('send', 'pageview', newPath);
+      }
+      forceFilter && doFilter();
+    }
+
+    // filter every 250ms
     $name.on('keyup', $.throttle(250, doFilter));
+    // only update state if the user stop writing
+    $name.on('keyup', $.throttle(250, function() {
+      var inputValue = getInputValue();
+      setTimeout(function() {
+        if (inputValue === getInputValue()) {
+          pushState();    
+        }
+      }, 1000);
+    }));
 
     $filter.on('submit', 'form', function(e) {
       e.preventDefault();
-      doFilter();
+      pushState(true);
     });
 
     // update courses with selected labels
     $document.on('click', '.label', function(e) {
       var $target = $(e.target);
+      var filterName = $target.data('name');
+      if (!currentFilters[filterName]) {
+        currentFilters[filterName] = [];
+      }
+      var currentFilter = currentFilters[filterName];
       // si se está activando
       if (!$target.hasClass('active')) {
         // if it not a multiple category, we have to deselect the another ones
-        var filter = filters[$target.data('name')];
+        var filter = filters[filterName];
         if (!filter.multiple) {
           // the categories list
           var tmp = $target.parent().parent().find('.label');
           tmp.removeClass('active');
           filter.values.forEach(function(value) {
-            var index = currentFilters.indexOf(value);
-            index !== -1 && currentFilters.splice(index, 1);
+            var index = currentFilter.indexOf(value);
+            index !== -1 && currentFilter.splice(index, 1);
           })
         }
-        currentFilters.push($target.data('value'));
+        currentFilter.push($target.data('value'));
       } else {
         // si se está desactivando
         // se quita del filtro
-        currentFilters.splice(currentFilters.indexOf($target.data('value')), 1);
+        currentFilter.splice(currentFilter.indexOf($target.data('value')), 1);
       }
       $target.toggleClass('active');
-
-      doFilter();
+      pushState(true);
     })
 
     var query = window.location.search.substring(1);
@@ -132,8 +186,9 @@ $(function() {
         } else {
           if (filters[pair[0]]) {
             var parts = pair[1].split(',');
+            currentFilters[pair[0]] = currentFilters[pair[0]] || [];
             parts.forEach(function(part) {
-              currentFilters.push(part);
+              currentFilters[pair[0]].push(part);
               $filter.find('[data-value=' + part + ']').addClass('active');
             })
           }
