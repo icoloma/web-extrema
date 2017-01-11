@@ -108,23 +108,25 @@ $(function() {
     }
 
     var pushState = function(forceFilter) {
-      if (history && history.pushState) {
-        var query = [];
-        var inputValue = getInputValue();
-        if (inputValue.trim().length) {
-          query.push('q=' + encodeURIComponent(inputValue));
-        }
-        for (var key in currentFilters) {
-          var values = currentFilters[key];
-          if (values.length) {
-            query.push(encodeURIComponent(key) + '=' + encodeURIComponent(values.join(',')));
-          }
-        }
-        var newPath = location.pathname + '?' + query.join('&');
-        history.pushState({},  '', newPath);
-        // send to google analytics
-        ga && ga('send', 'pageview', newPath);
+      var query = [];
+      var inputValue = getInputValue();
+      if (inputValue.trim().length) {
+        query.push('q=' + encodeURIComponent(inputValue));
       }
+      for (var key in currentFilters) {
+        var values = currentFilters[key];
+        if (values.length) {
+          query.push(encodeURIComponent(key) + '=' + encodeURIComponent(values.join(',')));
+        }
+      }
+      var newPath = location.pathname + '?' + query.join('&');
+      // send to google analytics
+      ga && ga('send', 'pageview', newPath);
+
+      if (history && history.pushState) {
+        history.pushState({},  '', newPath);
+      }
+      
       forceFilter && doFilter();
     }
 
