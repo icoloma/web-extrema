@@ -5,7 +5,7 @@ $(function() {
 
   window.Koliseo = window.Koliseo || {};
   Koliseo.resources = {
-      en: {
+    en: {
       ticketsAvailable: 'seats available',
       seeOther: 'see other dates',
       buy: 'Register for ',
@@ -24,15 +24,6 @@ $(function() {
       weekStart: 1,
       weekDays: 'Domingo Lunes Martes Miércoles Jueves Viernes Sábado',
       months: 'Enero Febrero Marzo Abril Mayo Junio Julio Agosto Septiembre Octubre Noviembre Diciembre'
-    },
-    it: {
-      ticketsAvailable: 'biglietti disponibili',
-      seeOther: 'vedi altre date',
-      buy: 'Registrare per ',
-      empty: 'Nessuno spettacolo trovato',
-      dateFormat: 'Ddd Mm* d*',
-      weekDays: 'Domenica Lunedì Martedì Mercoledì Giovedì Venerdì Sabato',
-      months: 'Gennaio Febbraio Marzo Aprile Maggio Giugno Luglio Agosto Settembre Ottobre Novembre Dicembre'
     }
   };
 
