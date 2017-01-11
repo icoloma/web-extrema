@@ -93,7 +93,7 @@ $training-button-bg-color: #34495e;
   margin-left: 15px;
   float: left;
   font-size: 32px;
-  min-width: 185px;
+  min-width: 150px;
 }
 
 .header {
@@ -120,25 +120,30 @@ $training-button-bg-color: #34495e;
 .develop, .training {
   width: 100%;
   height: auto;
+  max-height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
   color: #fff;
-  padding: 0 40px;
+  padding: 10px 40px;
   text-align: center;
 }
 .home-subtitle {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 section.top-bar-section {
   padding: 0;
 }
-.sections section h1 {
-  color: #fff;
-}
-.sections .button {
-  margin: 0;
+.sections {
+  section h1 {
+    color: #fff;
+    font-size: 30px;
+  }
+  .button {
+    margin: 0;
+    padding: $button-sml;
+  }
 }
 .develop .button {
   background-color: $develop-button-bg-color;
@@ -152,6 +157,33 @@ section.top-bar-section {
   padding-bottom: 40px;
 }
 
+@media #{$screen} and (max-width: 16em) {
+  .home-subtitle {
+    margin-bottom: .5rem;
+  }
+  .sections .button {
+    font-size: $button-sml;
+  }
+}
+
+@media #{$screen} and (min-width: 30em) {
+  .sections {
+    section h1 {
+      font-size: 40px;
+    }
+    .button {
+      padding: $button-med;
+    }
+  }
+  .home-subtitle {
+    font-size: 1.5rem;
+  }
+  .top-logo {
+    min-width: 185px;
+  }
+  
+}
+
 @media #{$medium-up} {
   .header {
     background-image: url('/img/background-medium.jpg');
@@ -161,6 +193,7 @@ section.top-bar-section {
   }
   .develop, .training {
     width: 50%;
+    max-height: 100%;
   }
 }
 
