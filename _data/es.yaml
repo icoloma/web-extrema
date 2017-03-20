@@ -1,3 +1,37 @@
+JoinUs: 
+  Title: Únete al equipo
+  Description: En este momento no estamos buscando, pero si crees que deberíamos hablar envíanos tu CV a <a href="mailto:cv@extrema-sistemas.com">cv@extrema-sistemas.com</a>
+  Profile:
+    Description:
+      - Buscamos un <b>Full Stack Engineer</b> (junior o senior) para que nos acompañe en nuevas aventuras en nuestra oficina de Santa Cruz de Tenerife o en Madrid (también somos muy fans de trabajar desde home office). Puedes tener ya experiencia o adquirirla con nosotros. Para nosotros no es imprescindible tener experiencia laboral, sino estar abierto a aprender y enseñar a otros. 
+      - Si sabes o quieres aprender Java y JavaScript con un stack moderno, somos lo que estás buscando. Te certificaremos para impartir cursos de Google Cloud Platform en empresas del IBEX35. Aprenderemos un montón juntos.
+    Points:
+      Responsabilidades:
+        - Desarrollar aplicaciones en el lado servidor (Java), web responsive (React, Webpack, etc.) y Android (React Naive)
+        - Impartir formación de los cursos oficiales de Google Cloud Platform (CPD200, CPB200, CP100, etc)
+        - Una vez al año ayudarnos a organizar Codemotion, el evento técnico más grande de España. Es divertido!
+        - "Give back: participar en eventos de comunidades, sea como ponente o asistente."
+        - Realizar consultoría en estos campos para grandes empresas.
+      Requisitos imprescindibles:
+        - Experiencia demostrable desarrollando aplicaciones
+        - Java o JavaScript fluido
+        - Facilidad para comunicar conceptos complejos de una forma simple
+      Preferible:
+        - Inglés fluido
+        - HTML y CSS fluido
+        - Experiencia diseñando aplicaciones para la nube
+        - Al menos un perfil en Github, Stack Overflow o similar
+      Qué ofrecemos:
+        - Equipo dinámico
+        - Horario flexible
+        - Presupuesto para formación y eventos
+        - No se trabaja el día de tu cumpleaños
+    Contact: Si esto te suena bien, no nos dejes sin saber lo que sería conocerte. <a href="mailto:cv@extrema-sistemas.com">Envíanos tu CV</a>, incluyendo algún sitio donde podamos ver tu código.
+AboutUsTitle: Quiénes somos
+AboutUsContent:
+  - En Extrema Sistemas hacemos consultoría y formación. Como Certified Training Partner de Google y de Pivotal para España e Italia, impartimos todos los cursos oficiales de Google Cloud Platform y Spring. 
+  - Hemos desarrollado el software de integración de sistemas de proyectos estratégicos de gestión de tráfico marítimo, navegación aérea, transporte vial y banca. Desde 2012 estamos organizando Codemotion Spain, el evento más grande de España dedicado a desarrolladores.
+  - Somos una empresa pequeña y dinámica, donde cada miembro del equipo trabaja desde sitios diferentes.
 "i18n": Español
 "Subscribe": "Suscríbete"
 gcpNewsletter: "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=ce44b90108"
@@ -19,7 +53,6 @@ SeeClients: Ver clientes
 TrainingLeadTitle: Líder en formación
 TrainingLeadDesc: El mundo del desarrollo estos días es como un tren en marcha. Nosotros te ayudamos a mantener el ritmo.
 SeeTraining: Ver cursos
-AboutUs: Quiénes somos
 PrivacyPolicy: Privacidad
 Links: Enlaces
 Legal: Legal

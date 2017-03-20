@@ -1,3 +1,37 @@
+JoinUs: 
+  Title: Join us
+  Description: We do not have any vacancies at the moment, but if you think that we should talk send your CV to <a href="mailto:cv@extrema-sistemas.com">cv@extrema-sistemas.com</a>
+  Profile:
+    Description:
+      - We are looking for a <b>Full Stack Engineer</b> (junior or senior) to join us for our new adventures in Santa Cruz de Tenerife or Madrid (we are also fans of working remotely from home, if that’s your thing). You can bring your existing experience or acquire it with us. For us it is not a requirement to have previous work experience, but to be open to learn and enjoy teaching others. 
+      - If you know or want to learn Java and JavaScript with a modern stack, we are what you are looking for. We'll get you certified to deliver Google Cloud Platform courses for IBEX35 companies. We will learn a lot together.
+    Points:
+      Responsibilities:
+        - Develop applications for the server side (Java), web responsive (React, Webpack, etc.) and Android (React Naive)
+        - Provide training for official Google Cloud Platform courses (CPD200, CPB200, CP100, etc.)
+        - Once a year help us organize Codemotion, the biggest technical event in Spain. It’s a lot of fun!
+        - "Give back: participate in community events, either as a speaker or attendee."
+        - Do consulting in these fields for large corporations.
+      Required skills:
+        - Demonstrable experience developing applications
+        - Fluent in either Java or JavaScript
+        - Easy to communicate complex concepts in a simple way
+      Preferable:
+        - Fluent English
+        - Good knowledge of HTML and CSS
+        - Experience designing projects for the Cloud
+        - At least one profile in Github, Stack Overflow or equivalent
+      What we offer:
+        - Dynamic team
+        - Flexible schedule
+        - Budget for training and events
+        - Birthdays are free
+    Contact: If this sounds good, do not leave us without knowing what it would be like to meet you. <a href="mailto:cv@extrema-sistemas.com">Send your CV</a>, including some site where we can see your work.
+AboutUsTitle: About us
+AboutUsContent:
+  - At Extrema Sistemas we do IT consulting and training. As Certified Training Partner by Google and Pivotal in Spain and Italy, we deliver all the official training courses for Google Cloud Platform and Spring. 
+  - We have developed the software for strategic projects for airports, naval traffic management, banks and logistics companies. In 2012 we started organizing Codemotion Spain, the biggest IT event in the country dedicated to software developers. 
+  - We are a small and dynamic company, where every member of the team works from a different location.
 "i18n": "English"
 "Subscribe": "Subscribe"
 gcpNewsletter: "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=ce44b90108"
@@ -19,7 +53,6 @@ SeeClients: See clients
 TrainingLeadTitle: Training lead
 TrainingLeadDesc: IT is a moving train these days. We help you keep up to speed.
 SeeTraining: See courses
-AboutUs: About us
 PrivacyPolicy: Privacy
 Links: Links
 Legal: Legal

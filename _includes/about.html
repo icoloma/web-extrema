@@ -1,0 +1,29 @@
+<section class="row section">
+  <hgroup class="column">
+    <h1>{{site.data[page.hl].AboutUsTitle}}</h1>
+  </hgroup>
+  <div class="column">
+    {% for content in site.data[page.hl].AboutUsContent %}
+      <p>{{content}}</p>
+    {% endfor %}
+  </div>
+</section>
+<section class="row">
+  <hgroup class="column">
+    <h1>{{site.data[page.hl].JoinUs.Title}}</h1>
+  </hgroup>
+  <div class="column">
+    {% for content in site.data[page.hl].JoinUs.Profile.Description %}
+      <p>{{content}}</p>
+    {% endfor %}
+    {% for point in site.data[page.hl].JoinUs.Profile.Points %}
+      <p><b>{{point[0]}}</b></p>
+      <ul>
+        {% for item in point[1] %}
+          <li>{{item}}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+    <p>{{site.data[page.hl].JoinUs.Profile.Contact}}</p>
+  </div>
+</section>
