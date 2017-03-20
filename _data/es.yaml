@@ -1,3 +1,37 @@
+JoinUs: 
+  Title: Únete al equipo
+  Description: En este momento no estamos buscando, pero si crees que deberíamos hablar envíanos tu CV a <a href="mailto:cv@extrema-sistemas.com">cv@extrema-sistemas.com</a>
+  Profile:
+    Description:
+      - Buscamos un <b>Full Stack Engineer</b> (junior o senior) para que nos acompañe en nuevas aventuras en nuestra oficina de Santa Cruz de Tenerife o en Madrid (también somos muy fans de trabajar desde home office). Puedes tener ya experiencia o adquirirla con nosotros. Para nosotros no es imprescindible tener experiencia laboral, sino estar abierto a aprender y enseñar a otros. 
+      - Si sabes o quieres aprender Java y JavaScript con un stack moderno, somos lo que estás buscando. Te certificaremos para impartir cursos de Google Cloud Platform en empresas del IBEX35. Aprenderemos un montón juntos.
+    Points:
+      Responsabilidades:
+        - Desarrollar aplicaciones en el lado servidor (Java), web responsive (React, Webpack, etc.) y Android (React Naive)
+        - Impartir formación de los cursos oficiales de Google Cloud Platform (CPD200, CPB200, CP100, etc)
+        - Una vez al año ayudarnos a organizar Codemotion, el evento técnico más grande de España. Es divertido!
+        - "Give back: participar en eventos de comunidades, sea como ponente o asistente."
+        - Realizar consultoría en estos campos para grandes empresas.
+      Requisitos imprescindibles:
+        - Experiencia demostrable desarrollando aplicaciones
+        - Java o JavaScript fluido
+        - Facilidad para comunicar conceptos complejos de una forma simple
+      Preferible:
+        - Inglés fluido
+        - HTML y CSS fluido
+        - Experiencia diseñando aplicaciones para la nube
+        - Al menos un perfil en Github, Stack Overflow o similar
+      Qué ofrecemos:
+        - Equipo dinámico
+        - Horario flexible
+        - Presupuesto para formación y eventos
+        - No se trabaja el día de tu cumpleaños
+    Contact: Si esto te suena bien, no nos dejes sin saber lo que sería conocerte. <a href="mailto:cv@extrema-sistemas.com">Envíanos tu CV</a>, incluyendo algún sitio donde podamos ver tu código.
+AboutUsTitle: Quiénes somos
+AboutUsContent:
+  - En Extrema Sistemas hacemos consultoría y formación. Como Certified Training Partner de Google y de Pivotal para España e Italia, impartimos todos los cursos oficiales de Google Cloud Platform y Spring. 
+  - Hemos desarrollado el software de integración de sistemas de proyectos estratégicos de gestión de tráfico marítimo, navegación aérea, transporte vial y banca. Desde 2012 estamos organizando Codemotion Spain, el evento más grande de España dedicado a desarrolladores.
+  - Somos una empresa pequeña y dinámica, donde cada miembro del equipo trabaja desde sitios diferentes.
 "i18n": Español
 "Subscribe": "Suscríbete"
 gcpNewsletter: "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=ce44b90108"
@@ -19,7 +53,6 @@ SeeClients: Ver clientes
 TrainingLeadTitle: Líder en formación
 TrainingLeadDesc: El mundo del desarrollo estos días es como un tren en marcha. Nosotros te ayudamos a mantener el ritmo.
 SeeTraining: Ver cursos
-AboutUs: Quiénes somos
 PrivacyPolicy: Privacidad
 Links: Enlaces
 Legal: Legal
@@ -90,7 +123,7 @@ ContactForPrice: Consultar precio
 SpringCore:
   title: "Curso Oficial Spring Core"
   requirements: "Este curso es perfecto para desarrolladores con o sin experiencia previa con Spring Core."
-  certDesc: "Los asistentes recibirán un voucher que les permitirá acceder al examen de certificación para obtener el título <b>SpringSource Certified Spring Professional</b>."
+  certDesc: "Los asistentes recibirán un voucher que les permitirá acceder al examen de certificación para obtener el título <b>Certified Spring Professional</b>."
   audience: "Este curso está dirigido a desarrolladores y arquitectos Java." 
   desc: "<p>Core Spring es el curso estrella en formación del framework Spring. Durante este curso los asistentes desarrollan una aplicación Java que pone a prueba las posibilidades de <b>Spring Framework</b> y otras tecnologías como <b>Spring AOP</b> y <b>Spring Security</b> en un entorno productivo e intensamente práctico.<p>Tras este curso el asistente dispondrá de la posibilidad de realizar gratuitamente el examen en un centro de Pearson VUE para consegur el título <b>Spring Certified Professional</b>.<p>Spring Core es el curso perfecto si:</p><ul><li>Se está interesado en aprender todo lo relacionado con el <b>desarrollo de aplicaciones Java con Spring</b></li><li>Se acerca el arranque de un proyecto y <b>se necesita aprender Spring rápidamente</b></li><li>Se desea mejorar el perfil profesional obteniendo la <b>certificación oficial de Spring</b></li></ul><p>Para continuar mejorando el conocimiento de Spring es recomendable asistir a <a href=\"?technology=spring&q=web\">Spring Web</a> o <a href=\"?technology=spring&q=enterprise\">Enterprise Spring</a> una vez completado Spring Core.</p>"
   objectives: 
@@ -111,7 +144,7 @@ SpringCore:
 
 SpringWeb:
   title: "Curso Oficial de Spring Web"
-  certDesc: "Los asistentes recibirán un voucher que les permitirá acceder al examen de certificación para obtener el título <b>SpringSource Certified Spring Web Application Developer</b>."
+  certDesc: "Los asistentes recibirán un voucher que les permitirá acceder al examen de certificación para obtener el título <b>Certified Spring Web Application Developer</b>."
   audience: "Desarrolladores y arquitectos implicados en proyectos web con Spring."
   desc: "<p>El objetivo de este curso es aprender a utilizar la tecnología Spring para crear aplicaciones web completas. El desarrollo de aplicaciones web basadas en Spring desde cero y de forma escalonada junto con una metodología enfocada a resolver los problemas reales más habituales hacen de este curso un complemento ideal para aquéllos que ya tienen cierta experiencia con la tecnología Spring.</p><p>Aunque no es requisito imprescindible, para un mejor aprovechamiento del curso se recomienda haber realizado previamente el curso <a href=\"?technology=spring&q=core\">Spring Core</a>.</p><p>Este curso es el apropiado si:</p><ul><li>Quiere volverse un experto en el desarrollo con <b>Spring Framework</b></li><li>Quiere mostrar sus conocimientos de desarrollador construyendo <b>aplicaciones web</b></li><li><b>Ha recibido el curso Spring Core</b> y quiere mejorar aún más sus cocnocimientos como desarrollador</li><li>Trabaja (o tiene planeado hacerlo) en un <b>proyecto web</b></li><li>Está interesado en obtener la <b>certificación en Spring Web</b></li></ul><p>Para mejorar aún más sus habilidades en el desarrollo con Spring, le recomendamos el curso <a href=\"?technology=spring&q=enterprise\">Enterprise Spring</a> tras completar el curso Spring Web.</p>"
   objectives: 
@@ -127,9 +160,9 @@ SpringWeb:
 
 SpringEnterprise:
   title: "Enterprise Spring"
-  certDesc: "Los asistentes recibirán un voucher que les permitirá acceder al examen de certificación para obtener el título <b>SpringSource Certified Enterprise Integration Specialist</b>."
+  certDesc: "Los asistentes recibirán un voucher que les permitirá acceder al examen de certificación para obtener el título <b>Certified Enterprise Integration Specialist</b>."
   audience: "Este curso está diseñado para desarrolladores y arquitectos Java."
-  desc: "<p>Durante este curso de cuatro días se hará un recorrido por los aspectos y tecnologías de mayor relevancia relacionadas con la integración de aplicaciones en un entorno empresarial.</p><p>Se mostrará cómo aplicar Spring para dar solución a los problemas de integración que los desarrolladores se encuentran en el lado servidor. Aunque no es requisito imprescindible, para un mejor aprovechamiento del curso se recomienda haber realizado previamente el curso <a href=\"?technology=spring&q=core\">Spring Core</a>.</p><p>Una vez finalizado el curso, cada asistente recibirá un voucher que le permitirá planificar y realizar el examen de certificación para obtener el título <b>SpringSource Certified Spring Enterprise Integration Specialist</b>.</p><p>Enterprise Integration con Spring es perfecto si:</p><ul><li>Quiere volverse un experto en el uso de <b>Spring Framework</b></li><li><b>Ha hecho el curso Spring Core</b> y quiere mejorar aún más sus habilidades</li><li>Quiere ser capaz de resolver incluso los <b>problemas más complejos con Spring</b></li><li>Trabaja (o trabajará) en un <b>proyecto de Spring largo</b></li><li>Está interesado en obtener la <b>certificación como experto en Spring</b></li></ul><p>Para mejorar sus conocimientos de Spring, recomendamos el curso <a href=\"?technology=spring&q=web\">Spring Web</a> tras completar Enterprise Integration con Spring.</p>"
+  desc: "<p>Durante este curso de cuatro días se hará un recorrido por los aspectos y tecnologías de mayor relevancia relacionadas con la integración de aplicaciones en un entorno empresarial.</p><p>Se mostrará cómo aplicar Spring para dar solución a los problemas de integración que los desarrolladores se encuentran en el lado servidor. Aunque no es requisito imprescindible, para un mejor aprovechamiento del curso se recomienda haber realizado previamente el curso <a href=\"?technology=spring&q=core\">Spring Core</a>.</p><p>Una vez finalizado el curso, cada asistente recibirá un voucher que le permitirá planificar y realizar el examen de certificación para obtener el título <b>Certified Spring Enterprise Integration Specialist</b>.</p><p>Enterprise Integration con Spring es perfecto si:</p><ul><li>Quiere volverse un experto en el uso de <b>Spring Framework</b></li><li><b>Ha hecho el curso Spring Core</b> y quiere mejorar aún más sus habilidades</li><li>Quiere ser capaz de resolver incluso los <b>problemas más complejos con Spring</b></li><li>Trabaja (o trabajará) en un <b>proyecto de Spring largo</b></li><li>Está interesado en obtener la <b>certificación como experto en Spring</b></li></ul><p>Para mejorar sus conocimientos de Spring, recomendamos el curso <a href=\"?technology=spring&q=web\">Spring Web</a> tras completar Enterprise Integration con Spring.</p>"
   objectives: 
     description: "<p>Al completar este curso, el asistente tendrá conocimientos de Spring y sus tecnologías asociadas para la integración empresarial y será capaz de:</p>"
     bullets:
