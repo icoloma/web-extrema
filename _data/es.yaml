@@ -372,30 +372,6 @@ CPD200:
       - Exportar los datos de un proyecto de Google Cloud Platform
       - Eliminar proyectos y recursos de Google Cloud Platform
 
-CP306A:
-  title: "Google Container Engine y Kubernetes (CP306A)"
-  requirements: "El alumno debe haber asistido al curso CP100 - Google Cloud Platform Fundamentals (o experiencia equivalente), sentirse cómodo con el uso de herramientas de línea de comando, docker y tecnologías de contenedores como Docker, así como alguna nuble pública y experiancia previa en el desarrollo de sistemas de operaciones o desarrollo de aplicaciones"
-  audience: "Este curso está diseñado para profesionales de sistemas de operaciones, arquitectos, desarrolladores y equipos de DevOps que desarrollen, migren y desplieguen aplicaciones basadas en contenedores en Google cloud Platform."
-  desc: "<p>Este curso de un día introduce a los asistentes en Google Container Engine (GKE) y Kubernetes. A través de la combinación de las presentaciones del instructor, las demostraciones y los laboratorios, se aprenderá los conceptos clave y las mejores prácticas para desarrollar y mantener aplicaciones usando Google Container Engine.</p>"
-  objectives:
-    description: "<p>Google Container Engine  es el servicio que ofrece Google para administrar proyectos con Kubernetes. Kubernetes es un administrador de contenedores Docker en entornos en producción.</p><p>Este curso de un día introduce al alumno a Google Container Engine, un servicio orientado a la nube para administrar sistemas con Docker y Kubernetes. A través de las diapositivas, laboratorios y tests, el asistente aprenderá sobre la arquitectura y los componentes más utilizados de Kubernetes</p>"
-  objectives: 
-    description: "<p>Al finalizar el curso, el alumno será capaz de:</p>"
-    bullets:
-      - Identificar el objetivo y los casos de uso de Google Container Engine y Kubernetes
-      - "Explicar la función de los componentes de un cluster de contenedores: pods, labels, replication controllers y services"
-      - Identificar el objetivo y los casos de uso de Google Container Registry
-      - Crear una imagen de Docker y enviarla a Google Container Registry
-      - "Explicar la función de los componentes de un cluster:: la instancia principal y los nodos del cluster"
-      - Usar Cloud Platform Console para crear un cluster de contenedores
-      - Usar la herramienta de línea de comando de Google Cloud SDK y kubectl  para interactuar con clusters
-      - Definir un pod usando una plantilla JSON
-      - Desplegar un pod en un cluster de Container Engine
-      - Crear un cluster de Container Engine para almacenar un grupo de instancias de Redis con escalabilidad dinámica
-      - Completar un fichero de configuración que defina un replication controller y la configuración del pod que maneja
-      - Después de crear un replication controller y los pods, reescalar el grupo
-      - Desplegar una Deploy a container-based application using YAML files that define services, replication controllers, pods, and so on
-      - Define firewall rules and load balancers to expose a service for a container-based application
 
 "Contact": "Contacto"
 "Spain": "España"
