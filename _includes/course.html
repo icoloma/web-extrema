@@ -82,10 +82,10 @@
           {{site.data[page.hl].creditCardRequired}}
         </li>
       {% endif %}
-      {% if course.certDesc %}
+      {% if include.certDesc %}
         <li class="bullet-item text-left certification">
           <span class="icon icon-star"></span>
-          {{course.certDesc}}
+          {{site.data[page.hl][include.certDesc]}}
         </li>
       {% endif %}
       {% if include.logo %}
