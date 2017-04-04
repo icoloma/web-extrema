@@ -1,3 +1,5 @@
+gcpCertClarification: "This course, together with real-world, hands-on experience, is the best preparation for the Google Certification Exams. Gain industry recognition, validate your technical expertise and take your career to the next level by becoming a Google Certified Professional. More info <a href=\"https://cloud.google.com/certification/\" target=\"_blank\">here</a>."
+springCertClarification: "After the class, purchase your <b>Certification Exam</b> <a href=\"https://academy.pivotal.io/confirm-course?courseid=EDU-1120\" target=\"_blank\">here</a>."
 JoinUs: 
   Title: Join us
   Description: We do not have any vacancies at the moment, but if you think that we should talk send your CV to <a href="mailto:cv@extrema-sistemas.com">cv@extrema-sistemas.com</a>
@@ -8,7 +10,7 @@ JoinUs:
     Points:
       Responsibilities:
         - Develop applications for the server side (Java), web responsive (React, Webpack, etc.) and Android (React Naive)
-        - Provide training for official Google Cloud Platform courses (CPD200, CPB200, CP100, etc.)
+        - Provide training for official Google Cloud Platform courses (CPD200, CPB200, Google Cloud Fundamentals, etc.)
         - Once a year help us organize Codemotion, the biggest technical event in Spain. It’s a lot of fun!
         - "Give back: participate in community events, either as a speaker or attendee."
         - Do consulting in these fields for large corporations.
@@ -95,8 +97,8 @@ ContactForPrice: Ask for price
 "indexTrainingTitle": "Enjoy the training lead"
 "springDesc": "The official courses about the portfolio of products that have become the <i>de facto</i> standard for the development of Java applications."
 "googleCloudPlatformDesc": "Google Cloud Platform enables developers to build, test and deploy applications on Google’s highly-scalable and reliable infrastructure."
-"googleTrainingPartner": "<b>Official Course:</b> includes the official exam to become a Google Cloud Platform Qualified Developer, emitted by Google."
-"springCertifiedPartner": "<b>Official Course:</b> includes the official exam to become a Certified Spring Developer, emitted by Pivotal."
+"googleTrainingPartner": "The <b>Official Training</b> that helps you get the most of Google Cloud technologies and earn the Google Certified Professional Certifications."
+"springCertifiedPartner": "The only <b>official courses</b> recommended to ensure you have mastered the Pivotal technology before taking the Spring certification exams."
 "readMore": "Read more"
 "getInContact": "Get in contact now"
 "consultingTitle": "Get the natural advantage from consulting"
@@ -123,9 +125,8 @@ ContactForPrice: Ask for price
 SpringCore:
   title: "Spring Core Official Course"
   requirements: "This course is perfect for developers with or without prior experience with the Spring framework."
-  certDesc: "Attendees will receive a voucher for the certification exam to become a <b>Certified Spring Professional</b>."
-  audience: "This course is designed for Java developers and architects."   
-  desc: "<p>Core Spring is the four-day flagship Spring Framework training. In this training, students build a Spring-powered Java application that demonstrates the <b>Spring Framework</b> and other Spring technologies like <b>Spring AOP</b> and <b>Spring Security</b> in an intensely productive, hands-on setting.</p><p>Completion of this training entitles each student to receive a free voucher to schedule an exam at a Pearson VUE Center to become a <b>Spring Certified Professional</b>.</p><p>Core Spring is the perfect training if:</p><ul><li>You are interested in learning all about <b>developing Java applications with Spring</b></li><li>You have an upcoming project and <b>need to learn Spring quickly</b></li><li>You want to become <b>Spring Certified</b> to improve your career opportunities</li></ul><p>To further improve your Spring developer skills we recommend to take <a href=\"?technology=spring&q=web\">Spring Web</a> or <a href=\"?technology=spring&q=enterprise\">Enterprise Spring</a> after completing Core Spring.</p>"
+  audience: "This course is designed for Java developers and architects."
+  desc: "<p>Core Spring is the four-day flagship Spring Framework training. In this training, students build a Spring-powered Java application that demonstrates the <b>Spring Framework</b> and other Spring technologies like <b>Spring AOP</b> and <b>Spring Security</b> in an intensely productive, hands-on setting.</p><p>The perfect way to demonstrate your proficiency with the Pivotal product portfolio is to obtain an industry-recognized Pivotal Certification. The role-based certification exams are designed to test and validate your product knowledge and help you advance your career.</p><p><b>Pivotal recommends attending the corresponding training course prior to attempting a certification exam</b>. The lab-based curriculum enables you to fully comprehend key technical concepts, enhance your product expertise, and ultimately helps prepare you for the certification exam.</p><p>Core Spring is the perfect training if:</p><ul><li>You are interested in learning all about <b>developing Java applications with Spring</b></li><li>You have an upcoming project and <b>need to learn Spring quickly</b></li><li>You want to become <b>Spring Certified</b> to improve your career opportunities</li></ul><p>To further improve your Spring developer skills we recommend to take <a href=\"?technology=spring&q=web\">Spring Web</a> or <a href=\"?technology=spring&q=enterprise\">Enterprise Spring</a> after completing Core Spring.</p>"
   objectives:
     description: "<p>At the end of the training, you should have an understanding of Spring and associated technologies and be able to do the following:</p>"
     bullets:
@@ -247,9 +248,8 @@ SpringCore:
 
 SpringWeb:
   title: "Spring Web Official Course"
-  certDesc: "Attendees will receive a voucher for the certification exam to become a <b>Certified Spring Web Application Developer</b>"
   audience: "This course is designed for developers interested in developing web applications with Spring."
-  desc: "<p>Spring Web is a 4-day training on web application development led by Spring experts. This hands-on training teaches you how to apply the latest in Spring to create rich web applications.</p><p>Completion of this training entitles each student to receive a free voucher to schedule an exam at a Pearson Vue Centre to become a <b>Certified Spring Web Application Developer</b>. The Spring Web training is also the ideal preparation for the certification exam.</p><p>Spring Web is the perfect training if:</p><ul><li>You want to become an expert at using the <b>Spring Framework</b></li><li>You want to show your developer skills by building beautiful <b>rich web applications</b></li><li><b>You took Core Spring</b> and want to further improve your developer skills</li><li>You are working on/have planned a <b>rich web project</b></li><li>You are interested in being granted the <b>Spring Web certification</b></li></ul><p>To further improve your Spring developer skills we recommend to take <a href=\"?technology=spring&q=enterprise\">Enterprise Spring</a> after completing Spring Web training.</p>"
+  desc: "<p>Spring Web is a 4-day training on web application development led by Spring experts. This hands-on training teaches you how to apply the latest in Spring to create rich web applications.</p><p>The perfect way to demonstrate your proficiency with the Pivotal product portfolio is to obtain an industry-recognized Pivotal Certification. The role-based certification exams are designed to test and validate your product knowledge and help you advance your career.</p><p><b>Pivotal recommends attending the corresponding training course prior to attempting a certification exam</b>. The lab-based curriculum enables you to fully comprehend key technical concepts, enhance your product expertise, and ultimately helps prepare you for the certification exam.</p><p>Spring Web is the perfect training if:</p><ul><li>You want to become an expert at using the <b>Spring Framework</b></li><li>You want to show your developer skills by building beautiful <b>rich web applications</b></li><li><b>You took Core Spring</b> and want to further improve your developer skills</li><li>You are working on/have planned a <b>rich web project</b></li><li>You are interested in being granted the <b>Spring Web certification</b></li></ul><p>To further improve your Spring developer skills we recommend to take <a href=\"?technology=spring&q=enterprise\">Enterprise Spring</a> after completing Spring Web training.</p>"
   objectives:
     description: "<p>At the end of the training, you should have an understanding of Spring and associated technologies for web development and be able to do the following:</p>"
     bullets:
@@ -354,9 +354,8 @@ SpringWeb:
 
 SpringEnterprise:
   title: "Enterprise Spring"
-  certDesc: "Completion of this training entitles each student to receive a free voucher to schedule an exam to become a <b>Certified Enterprise Integration Specialist</b>."
   audience: "This course is designed for Java developers and architects."
-  desc: "<p>Enterprise Spring is a four-day training course that is led by Spring experts who will discuss the most important topics and technologies related to enterprise application integration. This hands-on training teaches you how to apply Spring technologies to solve integration problems faced by server-side developers.</p><p>Completion of this training entitles each student to receive a free voucher to schedule an exam at a Pearson VUE Center to become a <b>Certified Spring Enterprise Integration Specialist</b>.</p><p>Enterprise Spring is the perfect training if:</p><ul><li>You want to become an expert at using the <b>Spring Framework</b></li><li><b>You took Core Spring</b> and want to further improve your developer skills</li><li>You want to be able to solve even the <b>most complex problems with Spring</b></li><li>You are working on/have planned a <b>large Spring project</b></li><li>You are interested in being granted the <b>expert Spring certification</b></li></ul><p>To further improve your Spring developer skills we recommend to take <a href=\"?technology=spring&q=web\">Spring Web</a> after completing Enterprise Spring.</p>"
+  desc: "<p>Enterprise Spring is a four-day training course that is led by Spring experts who will discuss the most important topics and technologies related to enterprise application integration. This hands-on training teaches you how to apply Spring technologies to solve integration problems faced by server-side developers.</p><p>The perfect way to demonstrate your proficiency with the Pivotal product portfolio is to obtain an industry-recognized Pivotal Certification. The role-based certification exams are designed to test and validate your product knowledge and help you advance your career.</p><p><b>Pivotal recommends attending the corresponding training course prior to attempting a certification exam</b>. The lab-based curriculum enables you to fully comprehend key technical concepts, enhance your product expertise, and ultimately helps prepare you for the certification exam.</p><p>Enterprise Spring is the perfect training if:</p><ul><li>You want to become an expert at using the <b>Spring Framework</b></li><li><b>You took Core Spring</b> and want to further improve your developer skills</li><li>You want to be able to solve even the <b>most complex problems with Spring</b></li><li>You are working on/have planned a <b>large Spring project</b></li><li>You are interested in being granted the <b>expert Spring certification</b></li></ul><p>To further improve your Spring developer skills we recommend to take <a href=\"?technology=spring&q=web\">Spring Web</a> after completing Enterprise Spring.</p>"
   objectives: 
     description: "<p>At the end of the training, you should have an understanding of Spring and associated technologies for enterprise integration and be able to do the following:</p>"
     bullets:
@@ -416,42 +415,43 @@ SpringEnterprise:
         - Working with Jobs (Definition, deployment, monitoring, use-cases)
 
 CP100:
-  title: "Google Cloud Platform Fundamentals (CP100)"
-  requirements: "None. Familiarity with application development, Linux operating systems, systems operations, and data analytics/machine learning is helpful in understanding the technologies covered."
+  title: "Google Cloud Fundamentals: Core Infrastructure"
+  requirements: "Familiarity with application development, Linux operating systems, systems operations, and data analytics/machine learning is helpful in understanding the technologies covered."
   audience: "This class is intended for solutions developers, systems operations professionals, and solution architects planning to deploy applications and create application environments on Google Cloud Platform. This class is also suitable for executives and business decision makers evaluating the potential of Google Cloud Platform to address their business needs."
   desc: "<p>This 1 day instructor-led class provides an overview of Google Cloud Platform products and services. Through a combination of presentations and hands-on labs, participants learn the value of Google Cloud Platform and how to incorporate cloud-based solutions into business strategies.</p>"
   objectives: 
-    description: "<p>At the end of this one-day course, participants will be able to:</p>"
+    description: "<p>This course teaches participants the following skills:</p>"
     bullets:
-      - Identify the purpose and value of each of the Google Cloud Platform products and services
-      - Explain the difference between Iaas and PaaS
-      - List the methods of interacting with Google Cloud Platform services
-      - Describe ways in which customers have used Google Cloud Platform to improve their businesses
-      - "Understand how to choose an appropriate application deployment environment on Google Cloud Platform: Google App Engine, Google Container Engine, or Google Compute Engine"
-      - "Deploy an application to: Google App Engine, Google Container Engine, and Google Compute Engine"
-      - "Compare the Google Cloud Platform storage options: Google Cloud Storage, Google Cloud SQL, Google Cloud Bigtable, and Google Cloud Datastore"
-      - Deploy an application that uses Google Cloud Datastore and Google Cloud Storage to store data
-      - Load data into BigQuery and query it
+      - Identify the purpose and value of Google Cloud Platform products and services
+      - Interact with Google Cloud Platform services
+      - Describe ways in which customers have used Google Cloud Platform
+      - "Choose among and use application deployment environments on Google Cloud Platform: Google App Engine, Google Container Engine, and Google Compute Engine"
+      - "Choose among and use Google Cloud Platform storage options: Google Cloud Storage, Google Cloud SQL, Google Cloud Bigtable, and Google Cloud Datastore"
+      - Make basic use of BigQuery, Google’s managed data warehouse for analytics
   syllabus:
     - title: Introducing Google Cloud Platform
       content:
         - Explain the advantages of Google Cloud Platform
         - "Define the components of Google's network infrastructure, including: Points of presence, data centers, regions, and zones"
         - Understand the difference between Infrastructure-as-a-Service (IaaS) and Platform-as-a-Service (PaaS)
+        - "Lab: Sign Up for the Free Trial and Create a Project"
     - title: Getting Started with Google Cloud Platform
       content:
         - Identify the purpose of projects on Google Cloud Platform
         - Understand the purpose of and use cases for Identity and Access Management
         - List the methods of interacting with Google Cloud Platform
+        - "Lab: Getting Started with Google Cloud Platform"
     - title: Google App Engine and Google Cloud Datastore
       content:
         - Understand the purpose of and use cases for Google App Engine and Google Cloud Datastore
         - Contrast the App Engine Standard environment with the App Engine Flexible environment
         - Understand the purpose of and use cases for Google Cloud Endpoints
+        - "Lab: Deploying Applications Using App Engine and Cloud Datastore"
     - title: Google Cloud Platform Storage Options
       content:
         - "Understand the purpose of and use cases for: Google Cloud Storage, Google Cloud SQL, and Google Cloud Bigtable"
         - Learn how to choose between the various storage options on Google Cloud Platform
+        - "Lab: Integrating Applications with Google Cloud Storage"
     - title: Google Container Engine
       content:
         - Define the concept of a container and identify uses for containers
@@ -460,13 +460,15 @@ CP100:
       content:
         - Identify the purpose of and use cases for Google Compute Engine
         - Understand the various Google Cloud Platform networking and operational tools and services
+        - "Lab: Deploying Applications Using Google Compute Engine"
     - title: Big Data and Machine Learning
       content:
         - Understand the purpose of and use cases for the products and services in the Google Cloud big data and machine learning platforms
+        - "Lab: Getting Started with BigQuery"
 
 CPA200:
   title: "Google Cloud Platform for Architects (CPA200)"
-  requirements: "Before attending this course, participants should have attended CP100 - Google Cloud Platform Fundamentals"
+  requirements: "Before attending this course, participants should have attended Google Cloud Fundamentals: Core Infrastructure"
   audience: "The intended audience is people who will be designing solutions using Google Cloud Platform but who do not have a lot of experience with designing cloud-based solutions."
   desc: "<p>This course is intended for people who will be designing solutions using Google Cloud Platform but who do not have a lot of experience with designing cloud-based solutions. Students will understand: the core tenants to be considered when designing & deploying to a cloud; to be confident enough to leverage what Google Cloud Platform offers without focusing on undifferentiated heavy lifting; how to get started on Google Cloud Platform and be able to identify the appropriate Google Cloud Platform products to use for popular architectural patterns.</p>"
   objectives:
@@ -511,58 +513,64 @@ CPA200:
 
 
 CPB100:
-  title: "Google Cloud Platform Big Data and Machine Learning Fundamentals (CPB100)"
+  title: "Google Cloud Fundamentals: Big Data & Machine Learning"
   requirements: "Before attending this course, participants should have roughly one (1) year of experience with one or more of the following:<ul><li>A common query language such as SQL</li><li>Extract, transform, load activities</li><li>Data modeling</li><li>Machine learning and/or statistics</li><li>Programming in Python</li></ul>"
-  audience: "This class is intended for Data analysts, Data scientists and Business analysts. It is also suitable for IT decision makers evaluating Google Cloud Platform for use by data scientists.<p>This class is for people who do the following with big data:</p><ul><li>Extracting, Loading, Transforming, cleaning, and validating data for use in analytics</li><li>Designing pipelines and architectures for data processing</li><li>Creating and maintaining machine learning and statistical models</li><li>Querying datasets, visualizing query results and creating reports</li></ul>"
-  desc: "<p>This 8 hour instructor-led class introduces participants to the Big Data & Machine Learning capabilities of Google Cloud Platform. It provides a quick overview of the Google Cloud Platform and a deeper dive of the data processing capabilities.</p>"
+  audience: "This class is intended for Data analysts, Data scientists and Business analysts. It is also suitable for IT decision makers evaluating Google Cloud Platform for use by data scientists.<p>This class is for people who do the following with big data:</p><ul><li>Designing pipelines and architectures for data processing</li><li>Creating and maintaining machine learning and statistical models</li><li>Querying datasets, visualizing query results and creating reports</li></ul>"
+  desc: "<p>This 8 hour instructor-led class introduces participants to the Big Data & Machine Learning capabilities of Google Cloud Platform. It provides a quick overview of the Google Cloud Platform and a deeper dive of the data processing capabilities. This course showcases the ease, flexibility, and power of big data solutions on Google Cloud Platform.</p>"
   objectives: 
-    description: "<p>At the end of this one-day course, participants will be able to:</p>"
+    description: "<p>This course teaches participants the following skills:</p>"
     bullets:
       - Identify the purpose and value of the key Big Data and Machine Learning products in the Google Cloud Platform
       - Use CloudSQL and Cloud Dataproc to migrate existing MySQL and Hadoop/Pig/Spark/Hive workloads to Google Cloud Platform
       - Employ BigQuery and Cloud Datalab to carry out interactive data analysis
-      - Choose between Cloud SQL, BigTable and Datastore
       - Train and use a neural network using TensorFlow
+      - Employ ML APIs
       - Choose between different data processing products on the Google Cloud Platform
   syllabus:
-    - title: Introduction
+    - title: Introducing Google Cloud Platform
       content:
-        - What is the Google Cloud Platform?
-        - GCP Big Data Products
+        - Google Platform Fundamentals Overview
+        - Google Cloud Platform Data Products and Technology
         - Usage scenarios
-    - title: Foundation of Google Cloud Platform
+        - "Lab: Sign up for Google Cloud Platform"
+    - title: Compute and Storage Fundamentals
       content:
         - CPUs on demand (Compute Engine)
         - A global filesystem (Cloud Storage)
         - CloudShell
+        - "Lab: Set up a Ingest-Transform-Publish data processing pipeline"
     - title: Data Analytics on the Cloud
       content:
-        - Stepping stones to the cloud
+        - Stepping-stones to the cloud
         - "CloudSQL: your SQL database on the cloud"
-        - Dataproc
+        - "Lab: Importing data into CloudSQL and running queries"
+        - Spark on Dataproc
+        - "Lab: Machine Learning Recommendations with SparkML"
     - title: Scaling data analysis
       content:
         - Fast random access
         - Datalab
         - BigQuery
+        - "Lab: Build machine learning dataset"
         - Machine Learning with TensorFlow
+        - "Lab: Train and use neural network"
         - Fully built models for common needs
-        - Genomics API (optional)
+        - "Lab: Employ ML APIs"
     - title: Data processing architectures
       content:
-        - Asynchronous processing with TaskQueues
         - Message-oriented architectures with Pub/Sub
         - Creating pipelines with Dataflow
+        - Reference architecture for real-time and batch data processing
     - title: Summary
       content:
         - Why GCP?
         - Where to go from here
-        - Resources
+        - Additional Resources
 
 
 CPB101:
   title: "Serverless Data Analysis with BigQuery and Cloud Dataflow (CPB101)"
-  requirements: "Before attending this course, participants should have attended CPB100 - Google Cloud Platform Big Data & Machine Learning Fundamentals, experience using a SQL-like query language to analyze data and knowledge of either Python or Java."
+  requirements: "Before attending this course, participants should have attended Google Cloud Fundamentals: Big Data & Machine Learning, experience using a SQL-like query language to analyze data and knowledge of either Python or Java."
   audience: "This class is intended for data analysts and data scientists responsible for: analyzing and visualizing big data, implementing cloud-based big data solutions, deploying or migrating big data applications to the public cloud, implementing and maintaining large-scale data storage environments, and transforming/processing big data."
   desc: "<p>This 8 hour instructor led course introduces participants to BigQuery and Cloud Dataflow for data analysis. Through a combination of instructor-led presentations, demonstrations, and hands-on labs, students learn how to carry out no-ops data warehousing, analysis and pipeline processing.</p>"
   objectives: 
@@ -594,7 +602,7 @@ CPB101:
 
 CPB102:
   title: "Machine Learning with Cloud ML (CPB102)"
-  requirements: "Before attending this course, participants should have attended CPB100 - Google Cloud Platform Big Data & Machine Learning Fundamentals, CPB101 - Serverless Data Analysis with BigQuery and Cloud Dataflow, knowledge of Python and familiarity with the numpy package, and knowledge of undergraduate-level stadistics to the level of Udacity ST101"
+  requirements: "Before attending this course, participants should have attended Google Cloud Fundamentals: Big Data & Machine Learning, CPB101 - Serverless Data Analysis with BigQuery and Cloud Dataflow, knowledge of Python and familiarity with the numpy package, and knowledge of undergraduate-level stadistics to the level of Udacity ST101"
   audience: "This class is intended for programmers and data scientists responsible for developing predictive analytics using machine learning. The typical audience member has experience analyzing and visualizing big data, implementing cloud-based big data solutions, and transforming/processing datasets."
   desc: "<p>This 8 hour instructor led course introduces participants to Machine Learning, TensorFlow and Cloud ML. Through a combination of instructor-led presentations, demonstrations, and hands-on labs, students learn machine learning and develop hands-on skills in developing, evaluating, and productionizing machine learning models.</p>"
   objectives: 
@@ -640,8 +648,7 @@ CPB102:
 
 CPB200:
   title: "Google BigQuery for Data Analysts (CPB200)"
-  certDesc: "After this course the student will be able to take the exam required to become a <b>Google Cloud Platform Qualified Data Analyst</b>."
-  requirements: "Before attending this course, participants should have attended CP100 - Google Cloud Platform Fundamentals OR CPB100 - Google Cloud Platform Big Data & Machine Learning Fundamentals (or equivalent experience) and expierence using a SQL-like query language to analyze data"
+  requirements: "Before attending this course, participants should have attended Google Cloud Fundamentals: Core Infrastructure OR Google Cloud Fundamentals: Big Data & Machine Learning (or equivalent experience) and expierence using a SQL-like query language to analyze data"
   audience: "This class is intended for data analysts and data scientists responsible for: analyzing and visualizing big data, implementing cloud-based big data solutions, deploying or migrating big data applications to the public cloud, implementing and maintaining large-scale data storage environments, and transforming/processing big data."
   desc: "<p>This 3 day instructor-led class introduces participants to Google BigQuery. Through a combination of instructor-led presentations, demonstrations and hands-on labs, students learn how to store, transform, analyze, and visualize data using Google BigQuery.</p>"
   objectives: 
@@ -732,10 +739,9 @@ CPB200:
 
 CPO200:
   title: "Google Cloud Platform for Systems Operations Professionals (CPO200)"
-  certDesc: "After this course the student will be able to take the exam required to become a <b>Google Cloud Platform Qualified Systems Operations Professional</b>."
-  requirements: "Before attending this course, participants should have attended CP100 - Google Cloud Platform Fundamentals (or equivalent experience), basic proficiency with command-line tools on linux operating system environments and prior systems operations experience, either on-premises or using a public cloud environment"
+  requirements: "Before attending this course, participants should have attended Google Cloud Fundamentals: Core Infrastructure (or equivalent experience), basic proficiency with command-line tools on linux operating system environments and prior systems operations experience, either on-premises or using a public cloud environment"
   audience: "This course is designed for Systems Operations professionals and Systems Administrators using Google Cloud Platform to create or migrate application environments and infrastructure"
-  desc: "<p>This 4 day instructor-led class introduces participants to the implementation of application environments and public cloud infrastructure using Google Cloud Platform. Through a combination of instructor-led presentations and hands-on labs, students learn how to deploy cloud infrastructure components such as networks, systems and applications. This course is designed to give participants a robust hands-on experience and is primarily lab-focused.</p>"
+  desc: "<p>This 4 day instructor-led class introduces participants to the implementation of application environments and public cloud infrastructure using Google Cloud Platform. Through a combination of instructor-led presentations and hands-on labs, students learn how to deploy cloud infrastructure components such as networks, systems and applications. This class is intended for Systems Operations professionals and Systems Administrators; Cloud Architects and DevOps personnel should enroll instead in the Architecting with Google Cloud Platform course sequence.</p>"
   objectives: 
     description: "<p>At the end of this four-day course, participants will be able to:</p>"
     bullets:
@@ -825,143 +831,310 @@ CPO200:
         - Identify the purpose of and use cases for cross-region and content-based load balancing
 
 CPD200:
-  title: "Developing Solutions for Google Cloud Platform (CPD200)"
-  certDesc: "After this course the student will be able to take the exam required to become a <b>Google Cloud Platform Qualified Solution Developer</b>."
-  requirements: "Before attending this course, participants should have attended CP100 - Google Cloud Platform Fundamentals (or equivalent experience), basic proficiency with command-line tools and linux operating system environments, experience developing applications and APIs using a common programming language such as Java or Python and prior solutions development experience, either on-premises or in a public cloud environment"
+  title: "Developing Solutions with Google Cloud Platform (CPD200)"
+  requirements: "Before attending this course, participants should have attended Google Cloud Fundamentals: Core Infrastructure (or equivalent experience), basic proficiency with command-line tools and linux operating system environments, experience developing applications and APIs using a common programming language such as Java or Python and prior solutions development experience, either on-premises or in a public cloud environment"
   audience: "This course is designed for experienced application developers who want to learn how to develop solutions using Google Cloud Platform to create highly scalable backends for both web and mobile applications."
-  desc: This 3 day instructor-led class introduces participants to Solution Development for Google Cloud Platform. Through a combination of instructor-led presentations, demonstrations, and hands-on labs, students learn how to develop cloud-based applications using Google App Engine, Google Cloud Datastore, and Google Cloud Endpoints.
+  desc: This 3 day instructor-led class introduces participants to Solution Development for Google Cloud Platform. Through a combination of instructor-led presentations, demonstrations, and hands-on labs, students learn how to develop cloud-based applications using Google App Engine Standard Environment, Google Cloud Datastore, Google Cloud Endpoints, and Google Cloud Repositories.
   objectives: 
     description: "<p>At the end of this course, participants will be able to:</p>"
     bullets:
-      - Manage Google Cloud Source Repositories using the Google Cloud Platform Console
-      - Test an App Engine application using the App Engine SDK
-      - Access the App Engine Development Server Console
-      - Create an API using Google Cloud Endpoints
-      - Test a Cloud Endpoint API using the API Explorer
-      - Deploy an application to App Engine using the App Engine SDK
-      - Design, structure and configure an App Engine application using multiple services
-      - Create Client IDs using the Google Cloud Platform Console
-      - Secure App Engine services and Cloud Endpoints APIs using authentication
-      - Configure and upload new versions of App Engine services
-      - Integrate Google Cloud Logging into App Engine applications
-      - Review quota usage in a Google Cloud Platform project
-      - Integrate different types of storage with App Engine applications
-      - Create and implement a data model for use with Google Cloud Datastore
-      - Implement a variety of queries in Google Cloud Datastore
-      - Update the index configuration in Google Cloud Datastore
-      - Implement transactions using Google Cloud Datastore
-      - Review Google Cloud Trace reports in the Google Cloud Platform Console
-      - Integrate the Memcache API into an App Engine application to increase performance
-      - Configure, run and review the output of Google Cloud Security Scanner
-      - Configure the scaling behaviour of individual App Engine Services
-      - Create App Engine handlers for Push Task Queues
-      - Send email from an App Engine application using the Mail API
-      - Schedule Tasks in App Engine using the Cron Service
-      - Update the configuration of the Cron Service
-      - Secure Task Push, and Cron Service handlers 
-      - Export Google Cloud Platform data from a project
-      - Delete Google Cloud Platform projects and resources
+      - Build scalable and reliable applications using Google App Engine Standard Environment.
+      - Leverage Google Cloud Endpoints to implement, deploy, and manage API backends.
+      - Create microservice-based applications using App Engine services.
+      - Manage application security, versioning, deployment, and monitoring.
+      - Store application data, optimize query performance, and use transactions in Google Cloud Datastore.
+      - Provide improved performance and capacity with Memcache and instance scaling.
   syllabus: 
-    - title: Developing Solutions for Google Cloud Platform
+    - title: Developing Solutions with Google Cloud Platform
       content:
-        - Identify the advantages of Google Cloud Platform for solution development
-        - Identify services and tools available for solution development using Google Cloud Platform
-        - Compare examples of Google Cloud Platform architectures for solution development
+        - Benefits of Google Cloud Platform
+        - Development tools and services for Google Cloud Platform
+        - Google Cloud Platform solution architectures
+        - "Lab: Google Cloud Source Repositories"
     - title: Google Cloud Endpoints
       content:
-        - Identify Cloud Endpoints features
-        - Explain how to develop APIs using Cloud Endpoints
-        - Compare development of Cloud Endpoints APIs using Java and Python
+        - Cloud Endpoints features
+        - Developing APIs using Cloud Endpoints
+        - Accessing Cloud Endpoints APIs using JavaScript clients
+        - "Lab: Google Cloud Endpoints"
     - title: App Engine Services
       content:
-        - Explain the use cases for App Engine Services and how to use them in structuring an application
-        - Identify how to deploy and access individual App Engine services
-        - Explain how to route requests to individual services
+        - Modular application design and App Engine services
+        - Deploying services
+        - Accessing App Engine services
+        - "Lab: Google App Engine Services"
     - title: User Authentication and Credentials
       content:
-        - Compare authentication and authorization
-        - Identify options for securing App Engine applications
-        - Explain the use cases for Application Default Credentials
+        - Authentication and authorization concepts
+        - Securing access through application configuration
+        - Authentication with the Users service
+        - Authorization with API keys, OAuth, and application default credentials
+        - "Lab: User Authentication"
     - title: Managing App Engine Applications
       content:
-        - Explain the use cases for App Engine versions
-        - Identify how to access App Engine monitoring and logging services
-        - Explain the use of resource quotas and how to troubleshoot related errors
+        - Deploying and managing multiple application versions
+        - Traffic splitting, incremental rollouts, and canary releases
+        - Budgets and quotas
+        - Stackdriver logging and application tracing
+        - "Lab: Managing Google App Engine Applications"
     - title: Storage for Solution Developers
       content:
-        - Compare storage options for App Engine Solutions Developers
-        - Explain the purpose of, and use cases for, Google Cloud Storage
-        - Compare Cloud SQL integration with App Engine and Compute Engine
-        - Explain basic Cloud Datastore terminology and concepts, including Entity Groups
+        - Functionality and benefits of Cloud Platform storage options
+        - Using Google Cloud Storage for immutable BLOB storage
+        - Integrating Google Cloud SQL into App Engine Apps
+        - Cloud Datastore fundamentals
+        - "Lab: Google Cloud Datastore"
     - title: Queries and Indexes
       content:
-        - Identify available query filters for Cloud Datastore
-        - Compare single-property, and composite indexes in Cloud Datastore
-        - Configure and optimize indexes for Cloud Datastore
+        - Implementing query filters with Cloud Datastore
+        - Single-property and composite indexes
+        - Configuring and optimizing indexes
+        - "Lab: Google Cloud Datastore Queries and Indexes"
     - title: Entity Groups, Consistency, and Transactions
       content:
-        - Identify the steps of a Cloud Datastore write
-        - Compare strong and eventual consistency in Cloud Datastore
-        - Identify how to achieve strongly consistent queries
-        - Identify best practises for Cloud Datastore transactions
+        - Strong and eventual consistency in Cloud Datastore
+        - Ensuring strongly consistent queries
+        - Best practices for Cloud Datastore transactions
+        - "Lab: Google Cloud Datastore Transactions"
     - title: App Engine Performance and Optimization
       content:
-        - Identify Memcache types, use cases, and implementation patterns
-        - Compare available scaling behaviours for application services
-        - Configure application scaling for individual services
+        - Memcache use cases and implementation patterns
+        - Manual, basic, and automatic scaling behavior
+        - Configuring application scaling
+        - "Lab: Google App Engine Performance and Optimization"
     - title: Task Queues
       content:
-        - Compare Push and Pull Queues
-        - Explain how to schedule tasks with the Cron Service
-        - Configure and securing Push and Pull Queues, as well as the Cron Service
+        - Push and pull queue capabilities and configuration
+        - Adding and consuming tasks with push and pull queues
+        - Scheduling tasks with the Cron Service
+        - "Lab: Task Queue API"
+        - "Lab: Deleting Google Cloud Platform Projects and Resources"
 
-CP306A:
-  title: "Google Container Engine and Kubernetes (CP306A)"
-  requirements: "Before attending this course, participants should have attended CP100 - Google Cloud Platform Fundamentals (or equivalent experience), basic proficiency with command-line tools and linux operating system environments, prior systems operations or development operations experience, either on-premises or in a public cloud environment and familiarity with containers and container-based technologies such as Docker"
-  audience: "This class is intended for solutions developers, systems operations professionals, solution architects, and development operations professionals who develop, migrate, and deploy container-based applications on Google Cloud Platform (GCP)."
-  desc: "<p>This 1 day instructor-led class introduces participants to Google Container Engine (GKE) and Kubernetes. Through a combination of instructor-led presentations, demonstrations, and hands-on labs, students learn the key concepts and practices for deploying and maintaining applications using Google Container Engine.</p>"
-  objectives: 
-    description: "<p>At the end of this one-day course, participants will be able to:</p>"
+
+GCPArchitectingInfrastructure:
+  title: "Architecting with Google Cloud Platform: Infrastructure"
+  requirements: "To get the most out of this course, participants should have completed Google Cloud Platform Fundamentals (or have equivalent experience), basic proficiency with command-line tools and Linux operating system environments, and Systems Operations experience including deploying and managing applications, either on-premises or in a public cloud environment"
+  audience: "This class is intended for experienced developers who are responsible for managing big data transformations including:<ul><li>Cloud Solutions Architects, Systems Operations professionals, DevOps Engineers, IT managers.</li><li>Individuals using Google Cloud Platform to create new solutions or to integrate existing systems, application environments, and infrastructure with the Google Cloud Platform.</li></ul>"
+  desc: "<p>This three-day instructor-led class introduces participants to the comprehensive and flexible infrastructure and platform services provided by Google Cloud Platform. Through a combination of presentations, demos, and hands-on labs, participants explore and deploy solution elements, including infrastructure components such as networks, systems and applications services. This course also covers deploying practical solutions including securely interconnecting networks, customer-supplied encryption keys, security and access management, quotas and billing, and resource monitoring.</p>"
+  objectives:
+    description: "<p>This course teaches participants the following skills:</p>"
     bullets:
-      - Identify the purpose of and use cases for Google Container Engine and Kubernetes
-      - "Explain the function of the container cluster components: pods, labels, replication controllers, and services"
-      - Identify the purpose of and use cases for Google Container Registry
-      - Create a Docker image and send it to the Google Container Registry
-      - "Explain the function of the cluster components: the master instance and cluster nodes"
-      - Use the Cloud Platform Console to create a container cluster
-      - Use the Google Cloud SDK command-line tools and the kubectl command-line utility to interact with container clusters
-      - Define a pod using a JSON template
-      - Deploy the pod to a Container Engine cluster
-      - Create a Container Engine cluster to host a dynamically scaled group of Redis instances 
-      - Complete a configuration file which defines a replication controller and the pod configuration that it manages
-      - After creating a replication controller and pods, rescale the group
-      - Deploy a container-based application using YAML files that define services, replication controllers, pods, and so on
-      - Define firewall rules and load balancers to expose a service for a container-based application
-  syllabus: 
-    - title: Introduction to Google Container Engine
+      - Consider the entire range of Google Cloud Platform technologies in their plans.
+      - Learn methods to develop, implement, and deploy solutions.
+      - Distinguish between features of similar or related products and technologies.
+      - Recognize a wide variety of solution domains, use cases, and applications.
+      - Develop essential skills for managing and administering solutions.
+      - Develop knowledge of solution patterns -- methods, technologies, and designs that are used to implement security, scalability, high availability, and other desired qualities.
+  syllabus:
+    - title: Introduction to Google Cloud Platform
       content:
-        - Identify the purpose of and use cases for Google Container Engine and Kubernetes
-        - "Explain the function of the container cluster components: pods, labels, replication controllers, and services"
-        - Identify the purpose of and use cases for Google Container Registry
-    - title: Google Container Engine Fundamentals
+        - Role of the Cloud Architect
+        - Learn about Solution Domains as an approach to design
+        - "Lab: Console and Cloud Shell"
+    - title: Virtual Networks
       content:
-        - "Explain the function of the cluster components: the master instance and cluster nodes"
-    - title: Interacting with Google Container Engine
+        - Cloud Virtual Networks (CVN), Projects, Networks, Subnetworks, IP addresses, Routes, Firewall rules
+        - Subnetworks for resource management instead of physical network topology
+        - "Lab: Virtual Networking"
+    - title: Virtual Machines
       content:
-        - Describe the various methods used to interact with a container cluster
-    - title: Container Clusters
+        - GCE, tags, VM options, vCPUs, disk options, images, and special features of persistent disks for VMs
+    - title: Cloud IAM
       content:
-        - Describe the high-level container cluster infrastructure
-        - Identify the components of a container cluster node
-    - title: Pods
+        - Members, roles, organizations, account administration, service accounts
+        - "Lab: Cloud IAM"
+    - title: Resource Management
       content:
-        - Describe the purpose of a pod and how to work with pods
-    - title: Replication Controllers
+        - Billing, Quotas, Labels, Names, Cloud Resource Manager
+        - "Lab: Lab Billing"
+    - title: Data Services
       content:
-        - Describe the purpose of a replication controller and how to work with replication controllers
-    - title: Services
+        - Cloud Storage, Datastore, Bigtable, Cloud SQL
+        - "Lab: Cloud Storage"
+        - "Lab: Cloud SQL"
+    - title: Interconnecting Networks
       content:
-        - Describe the purpose of a service and how to work with servicesigh Availability (HA) Design
+        - VPNs, Cloud Router, Cloud Interconnect, Direct Peering, Cloud DNS
+        - "Lab: VPN and Cloud Router"
+    - title: Infrastructure Automation
+      content:
+        - Infrastructure automation, custom images, startup and shutdown scripts and metadata, Deployment Manager, Cloud Launcher
+        - "Lab: Hadoop Cluster Maker"
+        - "Lab: Virtual Machine"
+    - title: Autoscaling
+      content:
+        - Load Balancing, Instance Groups, Autoscaler
+        - "Lab: Autoscaling"
+    - title: Resource Monitoring
+      content:
+        - Stackdriver, Monitoring, Logging, Error Reporting, Tracing, Debugging
+        - "Lab: Resource Monitoring (Stackdriver)"
+    - title: Containers
+      content:
+        - Containers, Google Container Engine (GKE), and Container Registry
+    - title: Platform Security
+      content:
+        - Learn about Google's layered security strategy that uses a multi-faceted approach to provide platform security services and benefits
+    - title: Managed Services
+      content:
+        - Dataproc, Dataflow, BigQuery, Datalab
+        - "Lab: BigQuery and Datalab"
+    - title: Application Development Infrastructure
+      content:
+        - App Engine, Cloud SDK, Dev Tools, Cloud Source Repos, Cloud Pub/Sub, Cloud Endpoints and Apigee, Cloud Functions
+
+GCPDataEngineering:
+  title: "Data Engineering on Google Cloud Platform"
+  requirements: "To get the most of out of this course, participants should have completed Google Cloud Fundamentals: Big Data & Machine Learning (or equivalent experience), basic proficiency with common query language such as SQL, experience with data modeling, extract, transform, load activities; developing applications using a common programming language such Python, and familiarity with Machine Learning and/or statistics"
+  audience: "This class is intended for experienced developers who are responsible for managing big data transformations including:<ul><li>Extracting, Loading, Transforming, cleaning, and validating data</li><li>Designing pipelines and architectures for data processing</li><li>Creating and maintaining machine learning and statistical models</li><li>Querying datasets, visualizing query results and creating reports</li></ul>"
+  desc: "<p>This four-day instructor-led class provides participants a hands-on introduction to designing and building data processing systems on Google Cloud Platform.</p>"
+  objectives:
+    description: "<p>This course teaches participants the following skills:</p>"
+    bullets:
+      - Design and build data processing systems on Google Cloud Platform
+      - Process batch and streaming data by implementing autoscaling data pipelines on Cloud Dataflow
+      - Derive business insights from extremely large datasets using Google BigQuery
+      - Train, evaluate and predict using machine learning models using Tensorflow and Cloud ML
+      - Leverage unstructured data using Spark and ML APIs on Cloud Dataproc
+      - Enable instant insights from streaming data
+  syllabus:
+    - title: Serverless data analysis with BigQuery
+      content:
+        - What is BigQuery
+        - Advanced Capabilities
+        - Performance and pricing
+        - "Lab: Queries and Functions"
+        - "Lab: Load and Export data"
+    - title: Serverless, autoscaling data pipelines with Dataflow
+      content:
+        - Introduction to Dataflow and capabilities
+        - "Lab: Data pipeline"
+        - "Lab: MapReduce in Dataflow"
+        - "Lab: Side inputs"
+        - "Lab: Streaming"
+    - title: Google Cloud Dataproc Overview
+      content:
+        - Introducing Google Cloud Dataproc
+        - Creating and managing clusters
+        - Defining master and worker nodes
+        - Leveraging custom machine types and preemptible worker nodes
+        - Creating clusters with the Web Console
+        - Scripting clusters with the CLI
+        - Using the Dataproc REST API
+        - Dataproc pricing
+        - Scaling and deleting Clusters
+        - "Lab: Creating Hadoop Clusters with Google Cloud Dataproc"
+    - title: Running Dataproc Jobs
+      content:
+        - Controlling application versions
+        - Submitting jobs
+        - Accessing HDFS and Google Cloud Storage
+        - Hadoop
+        - Spark and PySpark
+        - Pig and Hive
+        - Logging and monitoring jobs
+        - Accessing onto master and worker nodes with SSH
+        - Working with PySpark REPL (command-line interpreter)
+        - "Lab: Running Hadoop and Spark Jobs with Dataproc"
+    - title: Integrating Dataproc with Google Cloud Platform
+      content:
+        - Initialization actions
+        - Programming Jupyter/Datalab notebooks
+        - Accessing Google Cloud Storage
+        - Leveraging relational data with Google Cloud SQL
+        - Reading and writing streaming Data with Google BigTable
+        - Querying Data from Google BigQuery
+        - Making Google API Calls from notebooks
+        - "Lab: Big Data Analysis with Dataproc"
+    - title: Making Sense of Unstructured Data with Google’s Machine Learning APIs
+      content:
+        - Google’s Machine Learning APIs
+        - Common ML Use Cases
+        - Vision API
+        - Natural Language API
+        - Translate
+        - Speech API
+        - "Lab: Adding Machine Learning Capabilities to Big Data Analysis"
+    - title: Getting started with Machine Learning
+      content:
+        - What is machine learning (ML)
+        - "Effective ML: concepts, types"
+        - Evaluating ML
+        - "ML datasets: generalization"
+        - "Lab: Explore and create ML datasets"
+    - title: Building ML models with Tensorflow
+      content:
+        - Getting started with TensorFlow
+        - "Lab: Using tf.learn"
+        - TensorFlow graphs and loops
+        - "Lab: Using low-level TensorFlow + early stopping"
+        - Monitoring ML training
+        - "Lab: Charts and graphs of TensorFlow training"
+    - title: Scaling ML models with CloudML
+      content:
+        - Why Cloud ML?
+        - Packaging up a TensorFlow model
+        - End-to-end training
+        - "Lab: Run a ML model locally and on cloud"
+    - title: Feature Engineering
+      content:
+        - Creating good features
+        - Transforming inputs
+        - Synthetic features
+        - Preprocessing with Cloud ML
+        - "Lab: Feature engineering"
+    - title: ML architectures
+      content:
+        - Wide and deep
+        - Image analysis
+        - "Lab: Custom image classification with transfer learning"
+        - Embeddings and sequences
+        - Recommendation systems
+    - title: Need for real-time streaming analytics
+      content:
+        - What is Streaming Analytics?
+        - Use-cases
+        - Batch vs Streaming (Real-time)
+        - Related terminologies
+        - GCP products that help build for high availability, resiliency, high-throughput, real-time streaming analytics (review of Pub/Sub and Dataflow)
+        - "Lab: Setup project, enable APIs, setup storage"
+    - title: Architecture of streaming pipelines
+      content:
+        - Streaming architectures and considerations
+        - Choosing the right components
+        - "Lab: Explore the dataset"
+        - Windowing
+        - Streaming aggregation
+        - Events, triggers
+        - "Lab: Create architecture reference"
+    - title: Stream data and events into PubSub
+      content:
+        - Topics and Subscriptions
+        - Publishing events into Pub/Sub
+        - "Lab: Streaming data ingest into Pub/Sub"
+        - "Subscribing options: Push vs Pull"
+        - Alerts
+    - title: Build a stream processing pipeline
+      content:
+        - Pipelines, PCollections and Transforms
+        - Windows, Events, and Triggers
+        - Aggregation statistics
+        - Streaming analytics with BigQuery
+        - Low-volume alerts
+        - "Lab: alerting scenario for anomalies"
+    - title: High throughput and low-latency with Bigtable
+      content:
+        - Latency considerations
+        - "Lab: create streaming data processing pipelines with Dataflow"
+        - What is Bigtable?
+        - Designing row keys
+        - Performance considerations
+        - "Lab: high-volume event processing"
+    - title: Building Dashboards
+      content:
+        - What is Google Data Studio?
+        - From data to decisions
+        - "Lab: build a real-time dashboard to visualize processed data"
 
 "notFoundTitle": "Not so fast, batman!"
 "notFoundShort": "We couldn't find the page you were looking for."

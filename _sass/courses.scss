@@ -25,9 +25,16 @@
   background: #FFFFB7;
   padding: 10px;
   border: 1px solid #FFEBB7;  
-  .icon, b {
+  .icon {
     color: #E36736;
   }
+  .icon {
+    font-size: 15px;
+  }
+}
+
+.bullet-item.certification {
+  border-width: 0 0 1px 0;
 }
 
 .pricing-table {

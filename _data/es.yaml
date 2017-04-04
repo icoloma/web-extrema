@@ -1,3 +1,5 @@
+gcpCertClarification: "Este curso es la mejor preparación para los exámenes de certificación de Google junto a la experiencia práctica obtenida en el mundo real. Obtenga el reconocimiento de la industria tecnológica, valide su experiencia técnica y lleve su carrera al siguiente nivel convirtiéndose en un Google Certified Professional. Más información <a href=\"https://cloud.google.com/certification/\" target=\"_blank\">aquí</a>."
+springCertClarification: "Tras el curso, podrás comprar tu <b>examen de certificación</b> <a href=\"https://academy.pivotal.io/confirm-course?courseid=EDU-1120\" target=\"_blank\">aquí</a>."
 JoinUs: 
   Title: Únete al equipo
   Description: En este momento no estamos buscando, pero si crees que deberíamos hablar envíanos tu CV a <a href="mailto:cv@extrema-sistemas.com">cv@extrema-sistemas.com</a>
@@ -8,7 +10,7 @@ JoinUs:
     Points:
       Responsabilidades:
         - Desarrollar aplicaciones en el lado servidor (Java), web responsive (React, Webpack, etc.) y Android (React Naive)
-        - Impartir formación de los cursos oficiales de Google Cloud Platform (CPD200, CPB200, CP100, etc)
+        - Impartir formación de los cursos oficiales de Google Cloud Platform (CPD200, CPB200, Google Cloud Fundamentals, etc)
         - Una vez al año ayudarnos a organizar Codemotion, el evento técnico más grande de España. Es divertido!
         - "Give back: participar en eventos de comunidades, sea como ponente o asistente."
         - Realizar consultoría en estos campos para grandes empresas.
@@ -87,8 +89,8 @@ ContactForPrice: Consultar precio
 "duration32h": "32 horas."
 "duration40h": "40 horas."
 
-"googleTrainingPartner": "<b>Curso Oficial:</b> incluye el examen de certificación para obtener el título Google Cloud Platform Qualified Developer emitido por Google."
-"springCertifiedPartner": "<b>Curso Oficial:</b> incluye el examen de certificación para obtener el título Certified Spring Developer emitido por Pivotal."
+"googleTrainingPartner": "Los <b>cursos oficiales</b> que ayudan a aprovechar al máximo las tecnologías de Google y preparar las certificaciones oficiales de Google Certified Professional."
+"springCertifiedPartner": "Los únicos <b>cursos oficiales</b> recomendados para asegurar su conocimiento de la tecnología de Pivotal antes de tomar los exámenes de certificación de Spring."
 "readMore": "Leer más"
 
 "Home": "Home"
@@ -123,9 +125,8 @@ ContactForPrice: Consultar precio
 SpringCore:
   title: "Curso Oficial Spring Core"
   requirements: "Este curso es perfecto para desarrolladores con o sin experiencia previa con Spring Core."
-  certDesc: "Los asistentes recibirán un voucher que les permitirá acceder al examen de certificación para obtener el título <b>Certified Spring Professional</b>."
   audience: "Este curso está dirigido a desarrolladores y arquitectos Java." 
-  desc: "<p>Core Spring es el curso estrella en formación del framework Spring. Durante este curso los asistentes desarrollan una aplicación Java que pone a prueba las posibilidades de <b>Spring Framework</b> y otras tecnologías como <b>Spring AOP</b> y <b>Spring Security</b> en un entorno productivo e intensamente práctico.<p>Tras este curso el asistente dispondrá de la posibilidad de realizar gratuitamente el examen en un centro de Pearson VUE para consegur el título <b>Spring Certified Professional</b>.<p>Spring Core es el curso perfecto si:</p><ul><li>Se está interesado en aprender todo lo relacionado con el <b>desarrollo de aplicaciones Java con Spring</b></li><li>Se acerca el arranque de un proyecto y <b>se necesita aprender Spring rápidamente</b></li><li>Se desea mejorar el perfil profesional obteniendo la <b>certificación oficial de Spring</b></li></ul><p>Para continuar mejorando el conocimiento de Spring es recomendable asistir a <a href=\"?technology=spring&q=web\">Spring Web</a> o <a href=\"?technology=spring&q=enterprise\">Enterprise Spring</a> una vez completado Spring Core.</p>"
+  desc: "<p>Core Spring es el curso estrella en formación del framework Spring. Durante este curso los asistentes desarrollan una aplicación Java que pone a prueba las posibilidades de <b>Spring Framework</b> y otras tecnologías como <b>Spring AOP</b> y <b>Spring Security</b> en un entorno productivo e intensamente práctico.<p>La mejor manera de demostrar su conocimiento del portfolio del producto de Pivotal es obteniendo la certificación oficial de Pivotal reconocida a nivel empresarial. Los exámenes de certificación basados en roles están diseñados para probar y validar su conocimiento del producto y ayudarle a mejorar profesionalmente.</p><p><b>Pivotal recomienda asistir al curso antes de intentar presentarse al examen de certificación</b>. Su estructura basada en laboratios permite la comprensión de todos los conceptos clave, mejorar el nivel de experiencia con el producto y ayuda a la preparación del examen de certificación.<p>Spring Core es el curso perfecto si:</p><ul><li>Se está interesado en aprender todo lo relacionado con el <b>desarrollo de aplicaciones Java con Spring</b></li><li>Se acerca el arranque de un proyecto y <b>se necesita aprender Spring rápidamente</b></li><li>Se desea mejorar el perfil profesional obteniendo la <b>certificación oficial de Spring</b></li></ul><p>Para continuar mejorando el conocimiento de Spring es recomendable asistir a <a href=\"?technology=spring&q=web\">Spring Web</a> o <a href=\"?technology=spring&q=enterprise\">Enterprise Spring</a> una vez completado Spring Core.</p>"
   objectives: 
     description: "<p>Tras este curso el asistente tendrá conocimiento sobre Spring y sus tecnologías asociadas y será capaz de:</p>"
     bullets:
@@ -144,9 +145,8 @@ SpringCore:
 
 SpringWeb:
   title: "Curso Oficial de Spring Web"
-  certDesc: "Los asistentes recibirán un voucher que les permitirá acceder al examen de certificación para obtener el título <b>Certified Spring Web Application Developer</b>."
   audience: "Desarrolladores y arquitectos implicados en proyectos web con Spring."
-  desc: "<p>El objetivo de este curso es aprender a utilizar la tecnología Spring para crear aplicaciones web completas. El desarrollo de aplicaciones web basadas en Spring desde cero y de forma escalonada junto con una metodología enfocada a resolver los problemas reales más habituales hacen de este curso un complemento ideal para aquéllos que ya tienen cierta experiencia con la tecnología Spring.</p><p>Aunque no es requisito imprescindible, para un mejor aprovechamiento del curso se recomienda haber realizado previamente el curso <a href=\"?technology=spring&q=core\">Spring Core</a>.</p><p>Este curso es el apropiado si:</p><ul><li>Quiere volverse un experto en el desarrollo con <b>Spring Framework</b></li><li>Quiere mostrar sus conocimientos de desarrollador construyendo <b>aplicaciones web</b></li><li><b>Ha recibido el curso Spring Core</b> y quiere mejorar aún más sus cocnocimientos como desarrollador</li><li>Trabaja (o tiene planeado hacerlo) en un <b>proyecto web</b></li><li>Está interesado en obtener la <b>certificación en Spring Web</b></li></ul><p>Para mejorar aún más sus habilidades en el desarrollo con Spring, le recomendamos el curso <a href=\"?technology=spring&q=enterprise\">Enterprise Spring</a> tras completar el curso Spring Web.</p>"
+  desc: "<p>El objetivo de este curso es aprender a utilizar la tecnología Spring para crear aplicaciones web completas. El desarrollo de aplicaciones web basadas en Spring desde cero y de forma escalonada junto con una metodología enfocada a resolver los problemas reales más habituales hacen de este curso un complemento ideal para aquéllos que ya tienen cierta experiencia con la tecnología Spring.</p><p>Aunque no es requisito imprescindible, para un mejor aprovechamiento del curso se recomienda haber realizado previamente el curso <a href=\"?technology=spring&q=core\">Spring Core</a>.</p><p>La mejor manera de demostrar su conocimiento del portfolio del producto de Pivotal es obteniendo la certificación oficial de Pivotal reconocida a nivel empresarial. Los exámenes de certificación basados en roles están diseñados para probar y validar su conocimiento del producto y ayudarle a mejorar profesionalmente.</p><p><b>Pivotal recomienda asistir al curso antes de intentar presentarse al examen de certificación</b>. Su estructura basada en laboratios permite la comprensión de todos los conceptos clave, mejorar el nivel de experiencia con el producto y ayuda a la preparación del examen de certificación.</p><p>Este curso es el apropiado si:</p><ul><li>Quiere volverse un experto en el desarrollo con <b>Spring Framework</b></li><li>Quiere mostrar sus conocimientos de desarrollador construyendo <b>aplicaciones web</b></li><li><b>Ha recibido el curso Spring Core</b> y quiere mejorar aún más sus cocnocimientos como desarrollador</li><li>Trabaja (o tiene planeado hacerlo) en un <b>proyecto web</b></li><li>Está interesado en obtener la <b>certificación en Spring Web</b></li></ul><p>Para mejorar aún más sus habilidades en el desarrollo con Spring, le recomendamos el curso <a href=\"?technology=spring&q=enterprise\">Enterprise Spring</a> tras completar el curso Spring Web.</p>"
   objectives: 
     description: "<p>Al completar este curso, el asistente tendrá conocimiento de Spring y sus tecnologías asociadas para el desarrollo web y será capaz de:</p>"
     bullets:
@@ -160,9 +160,8 @@ SpringWeb:
 
 SpringEnterprise:
   title: "Enterprise Spring"
-  certDesc: "Los asistentes recibirán un voucher que les permitirá acceder al examen de certificación para obtener el título <b>Certified Enterprise Integration Specialist</b>."
   audience: "Este curso está diseñado para desarrolladores y arquitectos Java."
-  desc: "<p>Durante este curso de cuatro días se hará un recorrido por los aspectos y tecnologías de mayor relevancia relacionadas con la integración de aplicaciones en un entorno empresarial.</p><p>Se mostrará cómo aplicar Spring para dar solución a los problemas de integración que los desarrolladores se encuentran en el lado servidor. Aunque no es requisito imprescindible, para un mejor aprovechamiento del curso se recomienda haber realizado previamente el curso <a href=\"?technology=spring&q=core\">Spring Core</a>.</p><p>Una vez finalizado el curso, cada asistente recibirá un voucher que le permitirá planificar y realizar el examen de certificación para obtener el título <b>Certified Spring Enterprise Integration Specialist</b>.</p><p>Enterprise Integration con Spring es perfecto si:</p><ul><li>Quiere volverse un experto en el uso de <b>Spring Framework</b></li><li><b>Ha hecho el curso Spring Core</b> y quiere mejorar aún más sus habilidades</li><li>Quiere ser capaz de resolver incluso los <b>problemas más complejos con Spring</b></li><li>Trabaja (o trabajará) en un <b>proyecto de Spring largo</b></li><li>Está interesado en obtener la <b>certificación como experto en Spring</b></li></ul><p>Para mejorar sus conocimientos de Spring, recomendamos el curso <a href=\"?technology=spring&q=web\">Spring Web</a> tras completar Enterprise Integration con Spring.</p>"
+  desc: "<p>Durante este curso de cuatro días se hará un recorrido por los aspectos y tecnologías de mayor relevancia relacionadas con la integración de aplicaciones en un entorno empresarial.</p><p>Se mostrará cómo aplicar Spring para dar solución a los problemas de integración que los desarrolladores se encuentran en el lado servidor. Aunque no es requisito imprescindible, para un mejor aprovechamiento del curso se recomienda haber realizado previamente el curso <a href=\"?technology=spring&q=core\">Spring Core</a>.</p><p>La mejor manera de demostrar su conocimiento del portfolio del producto de Pivotal es obteniendo la certificación oficial de Pivotal reconocida a nivel empresarial. Los exámenes de certificación basados en roles están diseñados para probar y validar su conocimiento del producto y ayudarle a mejorar profesionalmente.</p><p><b>Pivotal recomienda asistir al curso antes de intentar presentarse al examen de certificación</b>. Su estructura basada en laboratios permite la comprensión de todos los conceptos clave, mejorar el nivel de experiencia con el producto y ayuda a la preparación del examen de certificación.</p><p>Enterprise Integration con Spring es perfecto si:</p><ul><li>Quiere volverse un experto en el uso de <b>Spring Framework</b></li><li><b>Ha hecho el curso Spring Core</b> y quiere mejorar aún más sus habilidades</li><li>Quiere ser capaz de resolver incluso los <b>problemas más complejos con Spring</b></li><li>Trabaja (o trabajará) en un <b>proyecto de Spring largo</b></li><li>Está interesado en obtener la <b>certificación como experto en Spring</b></li></ul><p>Para mejorar sus conocimientos de Spring, recomendamos el curso <a href=\"?technology=spring&q=web\">Spring Web</a> tras completar Enterprise Integration con Spring.</p>"
   objectives: 
     description: "<p>Al completar este curso, el asistente tendrá conocimientos de Spring y sus tecnologías asociadas para la integración empresarial y será capaz de:</p>"
     bullets:
@@ -176,42 +175,40 @@ SpringEnterprise:
       - Tener un conocimiento básico de <b>Spring XD</b>
 
 CP100:
-  title: "Google Cloud Platform Fundamentals (CP100)"
-  requirements: "Ninguno. Para entender las tecnologías que se cubrirán, ayudar estar familiarizado con el desarrollo de aplicaciones, sistemas operativos Linux, sistemas de operaciones y análisis de datos/machine learning."
+  title: "Google Cloud Fundamentals: Core Infrastructure"
+  requirements: "Para entender las tecnologías que se cubrirán, ayudar estar familiarizado con el desarrollo de aplicaciones, sistemas operativos Linux, sistemas de operaciones y análisis de datos/machine learning."
   audience: "Este curso está diseñado para desarrolladores, profesionales de sistemas de operaciones y arquitectos que planeen crear y desarrollar aplicaciones en un entorno de Google Cloud Platform. También está diseñado para que directivos y ejecutivos evalúen el potencial de Google Cloud Platform y las posibilidades de uso en su negocio."
   desc: "<p>Este curso de un día da una visión general de los productos y servicios de Google Cloud Platform. A través de una combinación de presentaciones y laboratorios, los asistentes aprenderán el valor de Google Cloud Platform y cómo incorporar soluciones basadas en cloud a sus estrategias de negocio.</p>"
   objectives: 
-    description: "<p>Al finalizar este curso, los asistentes serán capaces de:</p>"
+    description: "<p>Este curso enseña a los asistentes a:</p>"
     bullets:
-      - Identificar el propósito y el valor de cada uno de los productos y servicios de Google Cloud Platform
-      - Explicar la diferencia entre Iaas y PaaS
-      - Enumerar los métodos de interacción con los servicios de Google Cloud Platform
-      - Describir formas que los clientes han utilizado para mejorar sus negocios haciendo uso de Google Cloud Platform
-      - "Entender cómo elegir un entorno de despliegue adecuando en Google Cloud Platform: Google App Engine, Google Container Engine o Google Compute Engine"
+      - Identificar el propósito y el valor de los productos y servicios de Google Cloud Platform
+      - Interactuar con los servicios de Google Cloud Platform
+      - Describir formas en que los clientes han utilizado Google Cloud Platform
+      - "Elegir un entorno de despliegue adecuando en Google Cloud Platform: Google App Engine, Google Container Engine o Google Compute Engine"
       - "Desplegar una aplicación en Google App Engine, Google Container Engine y Google Compute Engine"
-      - "Comparar las optiones de almacenamiento de Google Cloud Platform: Google Cloud Storage, Google Cloud SQL, Google Cloud Bigtable y Google Cloud Datastore"
-      - Desplegar una aplicación que usa Google Cloud Datastore y Google Cloud Storage para almacenar datos
-      - Cargar datos en BigQuery y hacer consultas sobre ellos
+      - "Usar y elegir entre las diferentes opciones de almacenamiento de Google Cloud Platform: Google Cloud Storage, Google Cloud SQL, Google Cloud Bigtable y Google Cloud Datastore"
+      - Hacer un uso básico de BigQuery, el warehouse de datos administrado por Google para el análisis de datos.
 
 CPB100:
-  title: "Google Cloud Platform Big Data and Machine Learning Fundamentals (CPB100)"
+  title: "Google Cloud Fundamentals: Big Data & Machine Learning"
   requirements: "Para asistir a este curso, los alumnos deben tener aproximadamente un año de experiencia con uno o más de los siguientes aspectos:<ul><li>Un lenguaje común de consultas, como SQL</li><li>Tareas de extracción, transformación y carga de datos</li><li>Modelado de datos</li><li>Machine learning y/o estadísticas</li><li>Programación en Python</li></ul>"
-  audience: "Esta clase está diseñada para Data analysts, Data scientists y Business analysts. También está diseñado para que directivos y ejecutivos evalúen el potencial de Google Cloud Platform y las posibilidades de su uso por data scientists. <p>Esta clase es para la gente que usa grandes datos para:</p><ul><li>Extracción, carga, transformación, limpieza y validación de datos para su uso en analytics</li><li>Diseño de pipelines y arquitecturas para el procesamiento de datos</li><li>Creación y mantenimiento de modelos estadísticos y machine learning</li><li>Consulta sobre conjuntos de datos, visualización de sus resultados y creación de informes</li></ul>"
-  desc: "<p>Esta clase de 8 horas presenta a los participantes las prestaciones que Google Cloud Platform ofrece para Big Data y Machine Learning. Proporciona una visión general de Google Cloud Platform y una visión más en detalle de las funcionalidades de procesamiento de datos.</p>"
+  audience: "Esta clase está diseñada para Data analysts, Data scientists y Business analysts. También está diseñado para que directivos y ejecutivos evalúen el potencial de Google Cloud Platform y las posibilidades de su uso por Data Scientists. <p>Esta clase es para la gente que usa grandes datos para:</p><ul><li>Diseño de pipelines y arquitecturas para el procesamiento de datos</li><li>Creación y mantenimiento de modelos estadísticos y machine learning</li><li>Consulta sobre conjuntos de datos, visualización de sus resultados y creación de informes</li></ul>"
+  desc: "<p>Esta clase de 8 horas presenta a los participantes las prestaciones que Google Cloud Platform ofrece para Big Data y Machine Learning. Proporciona una visión general de Google Cloud Platform y una visión más en detalle de las funcionalidades de procesamiento de datos. Este curso muestra la facilidad, flexibilidad y potencia de las soluciones de big data en Google Cloud Platform.</p>"
   objectives: 
-    description: "<p>Al finalizar este curso de un día, el alumno será capaz de:</p>"
+    description: "<p>Este curso enseña a los asistentes a:</p>"
     bullets:
       - Identificar el propósito y el valor de los productos de Big Data y Machine Learning ofrecidos en Google Cloud Platform
       - Usar CloudSQL y Cloud Dataproc para migrar datos de MySQL y Hadoop/Pig/Spark/Hive a Google Cloud Platform
       - Utilizar BigQuery y Cloud Datalab para realizar un análisis de datos interactivo
-      - Elegir entre Cloud SQL, BigTable y Datastore
       - Usar una red neuronal utilizando TensorFlow
+      - Utilizar las APIs de ML
       - Elegir entre los diferentes productos de procesamiento de datos de Google Cloud Platform
 
 
 CPB101:
   title: "Serverless Data Analysis with BigQuery and Cloud Dataflow (CPB101)"
-  requirements: "Para atender a este curso, los asistentes deben haber asistido al CPB100 - Google Cloud Platform Big Data & Machine Learning Fundamentals, tener experiencia con lenguajes de consulta tipo SQL para analizar datos y conocimientos de Python o Java."
+  requirements: "Para atender a este curso, los asistentes deben haber asistido al Google Cloud Fundamentals: Big Data & Machine Learning, tener experiencia con lenguajes de consulta tipo SQL para analizar datos y conocimientos de Python o Java."
   audience: "Esta clase está orientada para Data analysts y Data scientists responsables de: análisis y visualización de big data, implementación de soluciones de big data en la nube, desarrollo o migración de aplicaciones de big data a la nube pública, implementar y mantener entornos de almacenamiento de datos a gran escala y procesamiento de grandes conjuntos de datos."
   desc: "<p>Este curso de 8 horas presenta a los participantes BigQuery y Cloud DataFlow para el análisis de datos. Los asistentes aprenderán cómo almacenar, analizar y procesar en paralelo grandes conjuntos de datos.</p>"
   objectives: 
@@ -228,7 +225,7 @@ CPB101:
 
 CPB102:
   title: "Machine Learning with Cloud ML (CPB102)"
-  requirements: "Para atender a este curso los alumnos deben haber asistido al CPB100 - Google Cloud Platform Big Data & Machine Learning Fundamentals, el CPB101 - Serverless Data Analysis with BigQuery and Cloud Dataflow, tener conocimientos de Python y estar familiarizado con el paquete numpy, así como conocimiento de estadísticas al nivel de Udacity ST101"
+  requirements: "Para atender a este curso los alumnos deben haber asistido al Google Cloud Fundamentals: Big Data & Machine Learning, el CPB101 - Serverless Data Analysis with BigQuery and Cloud Dataflow, tener conocimientos de Python y estar familiarizado con el paquete numpy, así como conocimiento de estadísticas al nivel de Udacity ST101"
   audience: "Esta clase está pensada para programadores y Data Scientists responsables del desarrollo de análisis predictivo haciendo uso de machine learning. Se trata de asistentes con experiencia analizando y visualizando grandes volúmenes de datos, implementación de soluciones de big data en la nube y transformando/procesando conjuntos de datos."
   desc: "<p>En las 8 horas de curso el instructor introducirá a los asistentes a Machine Learning, TensorFlow y Cloud ML, así como les enseñará a desarrollar, evaluar y poner en producción modelos de machine learning.</p>"
   objectives: 
@@ -245,7 +242,7 @@ CPB102:
 
 CPA200:
   title: "Google Cloud Platform for Architects (CPA200)"
-  requirements: "Para realizar este curso se debe haber hecho el curso CP100 - Google Cloud Platform Fundamenteals"
+  requirements: "Para realizar este curso se debe haber hecho el curso Google Cloud Fundamentals: Core Infrastructure"
   audience: "Esta clase está dirigida a personadas interesadas en el diseño de soluciones basadas en Google Cloud Platform pero que no tienen mucha experiencia diseñando soluciones basadas en la nube."
   desc: "<p>Esta clase está dirigida a personadas interesadas en el diseño de soluciones basadas en Google Cloud Platform pero que no tienen mucha experiencia diseñando soluciones basadas en la nube. Los asistentes aprenderán a: entender los puntos básicos a considerar al diseñar y desplegar en la nube; tener confianza suficiente para aprovechar todo lo que ofrece Google Cloud Platform; comprender la forma de empezar a trabajar con Google Cloud Platform e identificar los productos de Google Cloud Platform apropiados para hacer uso de patrones de aquitectura.</p>"
   objectives:
@@ -259,8 +256,7 @@ CPA200:
 
 CPB200:
   title: "Google BigQuery for Data Analysts (CPB200)"
-  certDesc: "Después de este curso el asistente podrá hacer el examen para obtener el título <b>Google Cloud Platform Qualified Data Analyst</b>"
-  requirements: "Se debe haber hecho el curso CP100 - Google Cloud Platform Fundamenteals o CPB100 - Google Cloud Platform Big Data & Machine Learning (o experiencia equivalente) y tener experiencia en el análisis de datos usando SQL"
+  requirements: "Se debe haber hecho el curso Google Cloud Fundamentals: Core Infrastructure o Google Cloud Fundamentals: Big Data & Machine Learning (o experiencia equivalente) y tener experiencia en el análisis de datos usando SQL"
   audience: "Este curso está diseñado para Data Analysts y Data Scientists responsables del análisis y visualización de Big Data, implementación de soluciones de Big Data basadas en la nube, desarrollo y migración de aplicaciones de Big Data a una nube pública, implementación y mantenimiento de entornos de almacenamiento de datos de gran tamaño y transformar/procesar de Big Data"
   desc: "<p>Este curso de 3 días introduce a los asistentes a Google BigQuery. Combinando las presentaciones del instructor, las demostraciones y los laboratorios, los alumnos aprenderán cómo almacenar, transformar, analizar y visualizar datos usando Google BigQuery.</p>"
   objectives: 
@@ -298,10 +294,9 @@ CPB200:
 
 CPO200:
   title: "Google Cloud Platform for Systems Operations Professionals (CPO200)"
-  certDesc: "Después de este curso el asistente podrá hacer el examen para obtener el título <b>Google Cloud Platform Qualified Systems Operations Professional</b>"
-  requirements: "Para asistir a este curso los alumnos deben haber asistido al curso CP100 - Google Cloud Platform Fundamentals (o experiencia equivalente), tener cierta comodidad con las herramientas de línea de comandos en linux y experiencia básica previa con alguna nube pública"
+  requirements: "Para asistir a este curso los alumnos deben haber asistido al curso Google Cloud Fundamentals: Core Infrastructure (o experiencia equivalente), tener cierta comodidad con las herramientas de línea de comandos en linux y experiencia básica previa con alguna nube pública"
   audience: "El curso está preparado para que profesionales de sistemas de operaciones y administradores de sistemas usen Google Cloud Platform para crear y migrar su infraestructura y entornos de aplicaciones"
-  desc: "<p>Este curso de 4 días introduce a la implantación de entornos de despliegue en la nube usando Google Cloud Platform. A través de diapositivas y laboratorios se le enseña al asistente cómo desplegar componentes de una infraestructura en la nube tales como redes, sistemas y aplicaciones. Este curso está diseñado para dar a los asistentes una base sólida, principalmente a través de laboratorios.</p>"
+  desc: "<p>Este curso de 4 días introduce a la implantación de entornos de despliegue en la nube usando Google Cloud Platform. A través de diapositivas y laboratorios se le enseña al asistente cómo desplegar componentes de una infraestructura en la nube tales como redes, sistemas y aplicaciones. Este curso está diseñado para administradores de sistemas y profesionales de sistemas de operaciones. Cloud Architects o personal de DevOps deberían tomar en su lugar los cursos Architecting with Google Platform</p>"
   objectives: 
     description: "<p>Al finalizar este curso, los asistentes serán capaces de:</p>"
     bullets:
@@ -336,66 +331,49 @@ CPO200:
       - Eliminar proyectos y recursos de Google Cloud Platform
 
 CPD200:
-  title: "Developing Solutions for Google Cloud Platform (CPD200)"
-  certDesc: "Después de este curso el asistente podrá hacer el examen para obtener el título <b>Google Cloud Platform Qualified Solution Developer</b>"
-  requirements: "Los asistentes deben haber asistido al curso CP100 - Google Cloud Platform Fundamentals (o experiencia equivalente), tener cierta comodidad con las herramientas de línea de comandos en linux, experiencia en el desarrollo de aplicaciones y APIs usando Java o Python y experiencia básica previa con alguna nube pública"
+  title: "Developing Solutions with Google Cloud Platform (CPD200)"
+  requirements: "Los asistentes deben haber asistido al curso Google Cloud Fundamentals: Core Infrastructure (o experiencia equivalente), tener cierta comodidad con las herramientas de línea de comandos en linux, experiencia en el desarrollo de aplicaciones y APIs usando Java o Python y experiencia básica previa con alguna nube pública"
   audience: "Este curso está diseñado para desarrolladores con experiencia implementando aplicaciones que quieran aprender a desarrollar y desplegar aplicaciones web y móviles con alta escalabilidad en Google Cloud Platform."
-  desc: "<p>En este curso de tres días se prepara al alumno para desarrollar aplicaciones para Google Cloud Platform. A través de las diapositivas, las demostraciones y los laboratorios se enseñará cómo crear aplicaciones diseñadas para entornos en cloud usando Google App Engine, Google Cloud Datastore y Google Cloud Endpoints.</p>"
+  desc: "<p>En este curso de tres días se prepara al alumno para desarrollar aplicaciones para Google Cloud Platform. A través de las diapositivas, las demostraciones y los laboratorios se enseñará cómo crear aplicaciones diseñadas para entornos en cloud usando Google App Engine Standard Environment, Google Cloud Datastore, Google Cloud Endpoints y Google Cloud Repositories.</p>"
   objectives: 
     description: "<p>Al finalizar el curso, el asistente será capaz de:</p>"
     bullets:
-      - Administrar Google Cloud Source Repositories usando Google Cloud Platform Console
-      - Probar aplicaciones de App Engine utilizando el SDK de App Engine
-      - Acceder a la consola del servidor de desarrollo de App Engine
-      - Crear un API usando Google Cloud Endpoints
-      - Probar un API de Cloud Endpoint utilizando API Explorer
-      - Desplegar una aplicación en App Engine usando el SDK
-      - Diseñar, estructurar y configurar una aplicación de App Engine usando múltiples servicios
-      - Crear Client IDs usando la consola de Google Cloud Platform
-      - Asegurar servicios de App Engine y APIs de Cloud Endpoints usando autenticación
-      - Configurar y subir nuevas versión de servicios de App Engine
-      - Integrar Google Cloud Logging en aplicaciones de App Engine
-      - Revisar el uso de quotas en un proyecto de Google Cloud Platform
-      - Integrar diferentes tipos de almacenamiento en una aplicación de App Engine
-      - Crear e implementar un modelos de datos para usarlo con Google Cloud Datastore
-      - Implementar varios tipos de consultas para Google Cloud Datastore
-      - Actualizar la configuración del índice en Google Cloud Datastore
-      - Utilizar transacciones al usar Google Cloud Datastore
-      - Revisar los reportes de Review Google Cloud Trace en la consola de Google Cloud Platform
-      - Integrar Memcache en una aplicación de App Engine para mejorar el rendimiento
-      - Configurar, lanzar y analizar el resultado de Google Cloud Security Scanner
-      - Configurar el escalado de servicios de App Engine individualmente
-      - Crear handlers de App Engine para Push Task Queues
-      - Enviar correos desde una aplicación de App Engine utilizando Mail API
-      - Programar Tasks usando Cron Service
-      - Actualizar la configuración de Cron Service
-      - Exportar los datos de un proyecto de Google Cloud Platform
-      - Eliminar proyectos y recursos de Google Cloud Platform
+      - Construir aplicaciones fiables y escalables usando Google App Engine Standard Environment.
+      - Aprovechar Google Cloud Endpoints para implementar, desplegar y administrar APIs de backend.
+      - Crear aplicaciones basadas en microservicios usando los servicios de App Engine.
+      - Administrar tanto la seguridad como el versionado, despliegue y monitorización de una aplicación.
+      - Almacenar datos de aplicaciones en Google Cloud Datastore, así como optimizar el rendimiento de las consultas y el uso de transacciones.
+      - Mejorar el rendimiento y la capacidad con Memcache y el escalado de instancias.
 
-CP306A:
-  title: "Google Container Engine y Kubernetes (CP306A)"
-  requirements: "El alumno debe haber asistido al curso CP100 - Google Cloud Platform Fundamentals (o experiencia equivalente), sentirse cómodo con el uso de herramientas de línea de comando, docker y tecnologías de contenedores como Docker, así como alguna nuble pública y experiancia previa en el desarrollo de sistemas de operaciones o desarrollo de aplicaciones"
-  audience: "Este curso está diseñado para profesionales de sistemas de operaciones, arquitectos, desarrolladores y equipos de DevOps que desarrollen, migren y desplieguen aplicaciones basadas en contenedores en Google cloud Platform."
-  desc: "<p>Este curso de un día introduce a los asistentes en Google Container Engine (GKE) y Kubernetes. A través de la combinación de las presentaciones del instructor, las demostraciones y los laboratorios, se aprenderá los conceptos clave y las mejores prácticas para desarrollar y mantener aplicaciones usando Google Container Engine.</p>"
+GCPArchitectingInfrastructure:
+  title: "Architecting with Google Cloud Platform: Infrastructure"
+  requirements: "Los asistentes deben haber asistido al curso Google Cloud Fundamentals: Core Infrastructure (o experiencia equivalente), tener cierta comodidad con las herramientas de línea de comandos en linux y experiencia en operaciones de sistemas incluyendo el despliegue y la administración de aplicaciones, ya sea en instalaciones propias o en alguna nube pública"
+  audience: "Este curso está diseñado para desarrolladores experimentados responsables de la administración de transformaciones de big data, incluyendo:<ul><li>Cloud Solutions Architects, profesionales de sistemas de operaciones, DevOps Engineers y administradores de IT.</li><li>Personas que usan Google Cloud Platform para crear nuevas soluciones o para integrar sistemas ya existentes que usen entornos de aplicaciones y la infraestructura de Google Cloud Platform.</li></ul>"
+  desc: "<p>Este curso de tres días enseña a los asistentes los productos de Google Cloud Platform, asi como la flexible arquitectura que proporciona. A través de las diapositivas, las demostraciones y los laboratorios se enseñará a explorar y desplegar diferentes soluciones, incluyendo componentes de infraestructura como redes, sistemas y servicios de aplicaciones. Este curso también cubre despliegues prácticos como la interconexión segura de redes, claves de encriptación proporcionadas por el usuario, control de seguridad, cuotas, facturación y monitorización de recursos.</p>"
   objectives:
-    description: "<p>Google Container Engine  es el servicio que ofrece Google para administrar proyectos con Kubernetes. Kubernetes es un administrador de contenedores Docker en entornos en producción.</p><p>Este curso de un día introduce al alumno a Google Container Engine, un servicio orientado a la nube para administrar sistemas con Docker y Kubernetes. A través de las diapositivas, laboratorios y tests, el asistente aprenderá sobre la arquitectura y los componentes más utilizados de Kubernetes</p>"
-  objectives: 
-    description: "<p>Al finalizar el curso, el alumno será capaz de:</p>"
+    description: "<p>Este curso enseña a los asistentes a::</p>"
     bullets:
-      - Identificar el objetivo y los casos de uso de Google Container Engine y Kubernetes
-      - "Explicar la función de los componentes de un cluster de contenedores: pods, labels, replication controllers y services"
-      - Identificar el objetivo y los casos de uso de Google Container Registry
-      - Crear una imagen de Docker y enviarla a Google Container Registry
-      - "Explicar la función de los componentes de un cluster:: la instancia principal y los nodos del cluster"
-      - Usar Cloud Platform Console para crear un cluster de contenedores
-      - Usar la herramienta de línea de comando de Google Cloud SDK y kubectl  para interactuar con clusters
-      - Definir un pod usando una plantilla JSON
-      - Desplegar un pod en un cluster de Container Engine
-      - Crear un cluster de Container Engine para almacenar un grupo de instancias de Redis con escalabilidad dinámica
-      - Completar un fichero de configuración que defina un replication controller y la configuración del pod que maneja
-      - Después de crear un replication controller y los pods, reescalar el grupo
-      - Desplegar una Deploy a container-based application using YAML files that define services, replication controllers, pods, and so on
-      - Define firewall rules and load balancers to expose a service for a container-based application
+      - Elegir entre toda la gama de tecnologías que proporciona Google Cloud Platform.
+      - Métodos para desarrollo, implementación y despliegue.
+      - Distinguir entre funcionalidades parecidas o relacionadas de los distintos productos y tecnologías.
+      - Reconocer una gran variedad de soluciones, casos de uso y aplicaciones.
+      - Desarrollar habilidades esenciales para gestionar y administrar soluciones
+      - Mejorar el conocimiento de patrones de desarrollo en cloud para asegurar la seguridad, escalabilidad, alta disponibilidad y otros elementos asociados a las aplicaciones desplegadas. 
+
+GCPDataEngineering:
+  title: "Data Engineering on Google Cloud Platform"
+  requirements: "Los asistentes deben haber asistido al curso Google Cloud Fundamentals: Big Data & Machine Learning (o experiencia equivalente), tener experiencia en el análisis de datos usando SQL, así como en tareas de extracción, carga, transformación y modelado de datos. Además, debe tener conocimiento de desarrollo de aplicaciones usando lenguajes de programación comunes como Python y estar familiarizado con Machine Learning y/o estadística."
+  audience: "Este curso esta diseñado para desarrolladores experimentados cuya responsabilidad sea la administración de transformaciones de grandes conjuntos de datos, incluyendo:<ul><li>Extracción, carga, transformación, limpieza y validación de los datos</li><li>Diseño de pipelines y arquitecturas para el procesamiento de datos</li><li>Creación y administración de modelos estadísticos y de machine learning</li><li>Consulta sobre conjuntos de datos, visualización de los resultados y creación de informes</li></ul>"
+  desc: "<p>Este curso de cuatro días enseña a los asistentes una introducción al diseño y construcción de sistemas de procesamiento de datos usando Google Cloud Platform y sus servicios de Cloud ML y BigQuery.</p>"
+  objectives:
+    description: "<p>Este curso enseña a los asistentes a:</p>"
+    bullets:
+      - Diseñar y construir sistemas de procesamiento de datos en Google Cloud Platform
+      - Procesamiento de datos en batch y streaming implementando pipelines de datos autoescalables sobre Cloud Dataflow
+      - Obtener información de negocio de conjuntos de datos extremadamente grandes usando Google BigQuery 
+      - Entrenar, evaluar y predecir usando modelos de machine learning usando TensorFlow y Cloud ML
+      - Aprovechar los datos no estructurados con las APIs de Spark y ML en Cloud Dataproc
+
 
 "Contact": "Contacto"
 "Spain": "España"
