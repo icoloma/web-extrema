@@ -142,7 +142,7 @@ section.top-bar-section {
   }
   .button {
     margin: 0;
-    padding: $button-sml;
+    padding: 1.1rem 1.5rem;
   }
 }
 .develop .button {
@@ -170,9 +170,6 @@ section.top-bar-section {
   .sections {
     section h1 {
       font-size: 40px;
-    }
-    .button {
-      padding: $button-med;
     }
   }
   .home-subtitle {
