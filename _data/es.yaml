@@ -50,11 +50,11 @@ Duration: Duración
 3d: 3 días
 4d: 4 días
 DevelopingAndConsultingTitle: Desarrollo y consultoría
-DevelopingAndConsultingDesc: StackOverflow está bien, pero ¿por qué no probar a hacerlo bien desde el principio?
-SeeClients: Ver clientes
+DevelopingAndConsultingDesc: Ayuda a tu equipo a crecer más rápido mediante nuestra experiencia práctica
+SeeClients: Nuestros clientes
 TrainingLeadTitle: Líder en formación
-TrainingLeadDesc: El mundo del desarrollo estos días es como un tren en marcha. Nosotros te ayudamos a mantener el ritmo.
-SeeTraining: Ver cursos
+TrainingLeadDesc: Es difícil mantener el ritmo. Nosotros podemos ayudar con eso.
+SeeTraining: Nuestros cursos
 PrivacyPolicy: Privacidad
 Links: Enlaces
 Legal: Legal
@@ -63,8 +63,8 @@ bigDataDesc: Porque en un mundo donde el conocimiento lo es todo, es importante 
 ContactForPrice: Consultar precio
 
 "suscribeToNewsletter": "Suscríbete a nuestra lista de correo"
-"suscribeToGcpNewsletter": "Si quieres saber lo más reciente de nuestros cursos de Google Cloud Platform, suscríbete a nuestra lista de correo específica de GCP."
-"suscribeToSpringNewsletter": "Para estar al día con lo último de los cursos de Spring, suscríbete a nuestra lista de correo de Spring."
+"suscribeToGcpNewsletter": "Para tener las últimas novedades sobre estos cursos, suscríbete a nuestra lista de correo de GCP."
+"suscribeToSpringNewsletter": "Para aprender todo sobre estos cursos, suscríbete a nuestra lista de correo de Spring."
 "springNewsletter": "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=5f43d4191d"
 
 "from": "desde"
@@ -74,7 +74,7 @@ ContactForPrice: Consultar precio
 "standardRequirements": "<b>Portátil obligatorio:</b> Los asistentes deberán traer su propio portátil y tener permisos para instalar software adicional."
 "creditCardRequired": "<b>Es necesaria una tarjeta de crédito</b> para tener acceso a la prueba gratuita de Google, aunque no se efectuará ningún cargo en la tarjeta."
 "RegisterFor": "Registro para "
-"indexTrainingDesc": "Estamos trabajando duro para traerte los mejores cursos de training tecnológico."
+"indexTrainingDesc": "Trabajamos duro para traerte los mejores cursos de training tecnológico."
 "doWeHaveYourAttention": "¿Tenemos tu atención?"
 "attentionDesc": "Si esto suena como un proyecto en que te vendría bien algo de ayuda, envíanos un correo para empezar a hablar."
 "followUsBlog": "Lee nuestro blog"

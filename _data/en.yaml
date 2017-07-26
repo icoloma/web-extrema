@@ -50,21 +50,21 @@ Duration: Duration
 3d: 3 days
 4d: 4 days
 DevelopingAndConsultingTitle: Developing and consulting
-DevelopingAndConsultingDesc: StackOverflow is ok, but what if you get it right the first time?
-SeeClients: See clients
+DevelopingAndConsultingDesc: Enable your team to ramp up faster with hands-on experience
+SeeClients: Our clients
 TrainingLeadTitle: Training lead
-TrainingLeadDesc: IT is a moving train these days. We help you keep up to speed.
-SeeTraining: See courses
+TrainingLeadDesc: It's hard to keep up to speed. We can help you on that.
+SeeTraining: Our courses
 PrivacyPolicy: Privacy
 Links: Links
 Legal: Legal
 cloudComputingDesc: Developing cloud-based applications can be really hard. Learn with us to design, build and deploy applications using all the advantages of cloud-native development.
 bigDataDesc: Because in a world when knowledge is everything, it is important to know how to make the most of the many data available to us.
-ContactForPrice: Ask for price
+ContactForPrice: Ask for a quote
 
 "suscribeToNewsletter": "Suscribe to our newsletter"
-"suscribeToGcpNewsletter": "If you want the last info of our Google Cloud Platform courses, suscribe to our specific GCP newsletter."
-"suscribeToSpringNewsletter": "To know everything about our Spring courses, suscribe to our newsletter for Spring."
+"suscribeToGcpNewsletter": "To get the latest updates about these courses, suscribe to our GCP newsletter."
+"suscribeToSpringNewsletter": "To learn everything about these courses, suscribe to our Spring newsletter."
 "springNewsletter": "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=5f43d4191d"
 
 "from": "from"
@@ -75,7 +75,7 @@ ContactForPrice: Ask for price
 "standardRequirements": "<b>Laptop required:</b> Attendees should bring their own laptops with enough permissions to install additional software."
 "creditCardRequired": "<b>Credit card is required</b> to sign up for the free trial, although your credit card will not be billed."
 "RegisterFor": "Register for"
-"indexTrainingDesc": "We are working hard to bring you the best IT training courses."
+"indexTrainingDesc": "We work hard to bring you the best IT training courses"
 "doWeHaveYourAttention": "Got your attention?"
 "attentionDesc": "If this sounds like a project where you could use some help, just drop us a line to start talking."
 "followUsBlog": "Read our blog"
