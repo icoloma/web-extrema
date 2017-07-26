@@ -58,8 +58,8 @@ SeeTraining: Our courses
 PrivacyPolicy: Privacy
 Links: Links
 Legal: Legal
-cloudComputingDesc: Developing cloud-based applications can be really hard. Learn with us to design, build and deploy applications using all the advantages of cloud-native development.
-bigDataDesc: Because in a world when knowledge is everything, it is important to know how to make the most of the many data available to us.
+cloudComputingDesc: Developing cloud-based applications can be challenging sometimes. Learn with us how to design, build and deploy applications using all the advantages of a cloud native project.
+bigDataDesc: When knowledge is everything, it is important to know how to make the most of the data available to us.
 ContactForPrice: Ask for a quote
 
 "suscribeToNewsletter": "Suscribe to our newsletter"
@@ -95,8 +95,8 @@ ContactForPrice: Ask for a quote
 "Contact": "Contact"
 "defaultDesc": "Extrema Sistemas is the lead training company in Spain and Italy, provider of certification courses for Google Cloud Platform and the Spring technology stack."
 "indexTrainingTitle": "Enjoy the training lead"
-"springDesc": "The official courses about the portfolio of products that have become the <i>de facto</i> standard for the development of Java applications."
-"googleCloudPlatformDesc": "Google Cloud Platform enables developers to build, test and deploy applications on Google’s highly-scalable and reliable infrastructure."
+"springDesc": "The official courses about the portfolio of products that have become <i>de facto</i> standard for the development of Java applications."
+"googleCloudPlatformDesc": "Google Cloud Platform enables developers to build, test and deploy applications on Google’s highly scalable and reliable infrastructure."
 "googleTrainingPartner": "The <b>Official Training</b> that helps you get the most of Google Cloud technologies and earn the Google Certified Professional Certifications."
 "springCertifiedPartner": "The only <b>official courses</b> recommended to ensure you have mastered the Pivotal technology before taking the Spring certification exams."
 "readMore": "Read more"
