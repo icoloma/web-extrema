@@ -1,11 +1,9 @@
-## Quick start
+## Dependencies
+You will need firebase-tools
+`npm install -g firebase-tools`
 
-Run locally
-```bash
-gulp
-jekyll serve
-```
+## Development
+npm run watch
 
-Open a browser at localhost:4000
-
-To upload, type `bin/upload`. Easy peasy.
+## Deploy
+bin/upload

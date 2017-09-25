@@ -1,0 +1,168 @@
+{% assign course = site.data[page.hl][include.course] %} 
+{% assign syllabus = site.data.en[include.course].syllabus %}
+<article class="course-item row section" itemscope itemtype="http://schema.org/Product" data-labels="{{include.labels}}">
+  <div class="anchor" id="{{include.koliseoEvent}}"></div>
+  <div class="column small-12 medium-6">
+    <h1 itemprop="name">{{course.title}}</h1>
+    <metadata itemprop="url" content="http://extrema-sistemas.com/en/{{page.currentTab}}/#{{include.koliseoEvent}}" />
+    <div itemprop="description">
+      {{course.desc}}
+    </div>
+    {% if include.newsletterLink %}
+      <div class="newsletter columns">
+        <form action="{{site.data[page.hl][include.newsletterLink]}}" method="post" name="mc-embedded-subscribe-form" target="_blank" rel="noopener noreferrer" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <label for="mce-EMAIL">
+              <h2>{{site.data[page.hl].suscribeToNewsletter}}</h2>
+            </label>
+            <p>{{site.data[page.hl][include.newsletterDesc]}}</p>
+            <input class="email" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Email" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input type="text" name="b_6b2bcf54ecc61ae4b7f084a25_ce44b90108" tabindex="-1" value="">
+            </div>
+            <div class="clear">
+              <input type="submit" value="{{site.data[page.hl].Subscribe}}" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </div>
+          </div>
+        </form>
+      </div>
+    {% endif %}
+  </div>
+  <aside class="column medium-6" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+    <ul class="pricing-table">
+      <li class="price text-right">
+        {% if include.lowestPrice or include.price %}
+          <b>
+            <span>{{site.data[page.hl].Price}}: </span>
+            {% if include.lowestPrice %}
+              <span>{{site.data[page.hl].from}}</span>
+              <span itemprop="price">{{include.lowestPrice}}</span>
+            {% else %}
+              <span itemprop="price">{{include.price}}</span>
+            {% endif %}
+            <span class="currency" itemprop="priceCurrency">€</span>
+          </b>
+          <div class="price-vat">{{site.data[page.hl].VATexempt}}</div>
+          {% if include.deprecated %}
+            <span class="label warning radius right deprecated">Deprecated</span>
+          {% endif %}
+        {% else %}
+          {% if include.contactForPrice %}
+            <b>
+              <span>{{site.data[page.hl].ContactForPrice}}</span>
+            </b>
+          {% else %}
+            <b>
+              <span>{{site.data[page.hl].Price}}: </span>
+              <span>{{site.data[page.hl].Free}}</span>
+            </b>
+          {% endif %}
+        {% endif %}
+      </li>
+      <li class="description text-left">
+        <b>{{site.data[page.hl].Duration}}:</b> {{site.data[page.hl][include.duration]}}
+      </li>
+      <li class="description text-left">
+        <b>{{site.data[page.hl].Audience}}:</b> {{course.audience}}
+      </li>
+      <li class="description text-left">
+        <b>{{site.data[page.hl].Language}}:</b> {{site.data[page.hl][include.language]}}
+      </li>
+      {% if course.requirements %}
+        <li class="description text-left">
+          <b>{{site.data[page.hl].Requirements}}:</b> {{course.requirements}}
+        </li>
+      {% endif %}
+      <li class="description text-left">
+        {{site.data[page.hl].standardRequirements}}
+      </li>
+      {% if include.creditCardRequired %}
+        <li class="description text-left">
+          {{site.data[page.hl].creditCardRequired}}
+        </li>
+      {% endif %}
+      {% if include.certDesc %}
+        <li class="bullet-item text-left certification">
+          <span class="icon icon-star"></span>
+          {{site.data[page.hl][include.certDesc]}}
+        </li>
+      {% endif %}
+      {% if include.logo %}
+        <li class="bullet-item text-center">
+          <img class="{{include.logoClass}}" src="{{include.logo}}" alt="{{course.title}}">
+        </li>
+      {% endif %}
+    </ul>
+  </aside>
+  <div class="small-12 column section">
+    <div class="row">
+      <div class="columns">
+        <h2>{{site.data[page.hl].RegisterFor}} {{course.title]}}</h2>
+        <div class="kcontainer" data-locale="{{page.hl}}" data-event-uuid="extrema/{{include.koliseoEvent}}"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <nav>
+          <a class="js-show-contents button radius">
+            <span class="icon-down-open"></span>
+            {{site.data[page.hl].showCourseContents}}
+          </a>
+          <a class="js-hide-contents button radius hidden">
+            <span class="icon-up-open"></span>
+            {{site.data[page.hl].hideCourseContents}}
+          </a>
+          <a class="button secondary" href="mailto:training@extrema-sistemas.com?subject={{ site.data[page.hl][include.course].title | cgi_escape }}" target="_blank" rel="noopener noreferrer">
+            <span class="icon-mail"></span>
+            {{site.data[page.hl].askForMoreInfo}}
+          </a>
+        </nav>
+      </div>
+    </div>
+    <div class="row course-contents clearfix" style="height:0">
+      <section class="column small-12 medium-6">
+        <h2>{{site.data[page.hl].Objectives}}</h2>
+        {{course.objectives.description}}
+        <ul>
+          {% for item in course.objectives.bullets %}
+            <li>
+              {{item}}
+            </li>
+          {% endfor %}
+        </ul>
+        {% if syllabus %}
+          {% if course.afterCompleting %}
+            <h2>{{site.data[page.hl].afterCompleting}}</h2>
+            {{course.afterCompleting}}
+          {% endif %}
+        {% endif %}
+      </section>  
+      <section class="column small-12 medium-6">
+        {% if syllabus %}
+          <h2>{{site.data[page.hl].Syllabus}}</h2>
+          <ol>
+            {% for item in syllabus %}
+              <li>
+                {{item.title}}
+              </li>
+              {% if item.content %}
+                <ul>
+                {% for content in item.content %}
+                  <li>{{content}}</li>
+                {% endfor %}
+                </ul>
+              {% endif %}
+            {% endfor %}
+          </ol>
+        {% else %}
+          {% if course.afterCompleting %}
+            <h2>{{site.data[page.hl]}}.afterCompleting}}</h2>
+            {{course.afterCompleting}}
+          {% endif %}
+        {% endif %}
+      </section>
+    </div>
+  </div>
+  <hr>
+</article>

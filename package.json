@@ -2,17 +2,28 @@
   "name": "web-extrema",
   "repository": "https://github.com/icoloma/web-extrema",
   "devDependencies": {
-    "gulp": "~3.8.0",
-    "gulp-clean": "~0.3.1",
-    "gulp-rename": "~1.2.0",
-    "gulp-sass": "^2.1.0",
-    "gulp-csso": "~0.2.9",
-    "gulp-jade": "~0.7.0",
-    "gulp-uglify": "~1.0.1",
-    "gulp-concat": "~2.4.0"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-module-resolver": "^2.7.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.20.2",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2015-minimal": "^2.1.0",
+    "concurrently": "^3.5.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "glob": "~7.1.1",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "node-sass": "~4.5.2",
+    "promise": "~7.1.1",
+    "sass-loader": "~6.0.3",
+    "webpack": "~2.3.3",
+    "whatwg-fetch": "^2.0.3"
   },
-  "dependencies": {
-    "gulp-rimraf": "^0.1.0",
-    "gulp-webserver": "^0.9.0"
+  "scripts": {
+    "watch:js": "webpack --watch --display-error-details --config webpack.config.js",
+    "watch:css": "inotifywait -m -r -e modify,create,delete ./src/scss/ | while read NEWFILE; do node-sass src/scss/app.scss website/css/app.css --output-style compressed; done",
+    "watch": "concurrently \"npm run watch:js\" \"npm run watch:css\" \"jekyll build --watch --baseurl '' --source website\" \"firebase serve\" \"xdg-open http://127.0.0.1:5000/\"",
+    "build": "NODE_ENV=production webpack --optimize-minimize --config webpack.config.js && node-sass src/scss/app.scss website/css/app.css --output-style compressed"
   }
 }

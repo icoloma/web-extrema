@@ -1,0 +1,19 @@
+sass:
+  style: compressed
+
+exclude: [
+  '/bin/', 
+  'README.md', 
+  'CNAME', 
+  'package.json', 
+  'package-lock.json', 
+  '/node_modules/', 
+  'firebase.json', 
+  'firebase-debug.log', 
+  'gulpfile.js', 
+  'web-extrema.sublime-project', 
+  'web-extrema.sublime-workspace', 
+  '/.git/', 
+  '.gitignore', 
+  'extrema.yaml'
+]

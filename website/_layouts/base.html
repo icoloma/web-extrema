@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{site.data[page.hl][page.title]}} | {% endif %}extrema-sistemas.com</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="/css/app.css">
+    {% for lang in site.data.langs %}
+      <link rel="alternate" hreflang=locale href="/{{lang}}/{{page.currentTab}}">
+    {% endfor %}
+    <script src="/js/modernizr-2.8.3.min.js"></script>
+    <meta name="description" content="{% if page.description %}{{page.description}}{% else %}{{site.data[page.hl].defaultDesc}}{% endif %}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if page.title %}{{site.data[page.hl][page.title]}} | {% endif %}Extrema Sistemas">
+    <meta name="twitter:description" content="{% if page.description %}{{page.description}}{% else %}{{site.data[page.hl].defaultDesc}}{% endif %}">
+    <meta name="twitter:image:src" content="http://extrema-sistemas.com/img/background-big.jpg">
+    <meta name="twitter:site" content="@extremasistemas">
+    <meta name="twitter:url" content="https://www.extrema-sistemas.com">
+
+    <meta property="og:title" content="{% if page.title %}{{site.data[page.hl][page.title]}} | {% endif %}Extrema Sistemas">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://extrema-sistemas.com/img/background-big.jpg">
+    <meta property="og:url" content="https://www.extrema-sistemas.com">
+    <meta property="og:description" content="{% if page.description %}{{page.description}}{% else %}{{site.data[page.hl].defaultDesc}}{% endif %}">
+    <meta property="og:site_name" content="Extrema Sistemas">
+
+    <meta name="theme-color" content="#003955">
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="cookie-container hide">
+      <div class="cookie-permissions">
+        <section>
+          <div class="row">
+            <div class="hgroup">
+              <h3>{{site.data[page.hl].cookiePolicyTitle}}</h3>
+            </div>
+            <div class="row">
+              <p class="columns small-12 medium-10">
+                {{site.data[page.hl].cookiePolicyDesc}}
+              </p>
+              <p class="columns small-12 medium-2">
+                <a class="accept-cookies button tiny">{{site.data[page.hl].Accept}}</a>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    {{ content }}
+    
+    <script>
+      window.currentLang = "{{page.hl}}";
+    </script>
+    <script src="/js/scripts.min.js"></script>
+  </body>
+</html>

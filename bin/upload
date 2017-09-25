@@ -1,32 +1,5 @@
 #!/bin/bash
-DIR='.upload'
-
-gulp dist || exit 1
-jekyll build || exit 1
-
-rm -rf $DIR
-mkdir $DIR
-cd $DIR
-
-git init
-git remote add origin git@github.com:icoloma/web-extrema.git
-git remote update
-git checkout -b gh-pages origin/gh-pages 
-
-rm -r *
-cp -r ../* .
-cp ../.gitignore .
-rm -rf node_modules
-
-git add --all .
-if [ -z "$1" ]; then
-  MESSAGE="Site updated at $(date +'%d-%m-%Y')"
-else
-  MESSAGE="$1"
-fi
-git commit -m "$MESSAGE"
-git push
-
-cd ..
-
+npm run build || exit 1
+jekyll build --source website || exit 1
+firebase deploy
 echo "Successfully uploaded"
