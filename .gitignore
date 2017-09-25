@@ -1,6 +1,7 @@
 dist
 node_modules
 *.sublime-workspace
+firebase-debug.log
 .upload
 .sass-cache
 _site
