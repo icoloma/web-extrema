@@ -2,16 +2,6 @@
   values:
     - Google
     - Pivotal
-- name: Technology
-  multiple: true
-  values:
-    - Big Data
-    - Cloud
-    - Spring
-    - Web
-    - IaaS
-    - PaaS
-    - Machine Learning
 - name: Level
   i18n: true
   values:
@@ -25,3 +15,13 @@
     - 2d
     - 3d
     - 4d
+- name: Technology
+  multiple: true
+  values:
+    - Big Data
+    - Cloud
+    - Spring
+    - Web
+    - IaaS
+    - PaaS
+    - Machine Learning

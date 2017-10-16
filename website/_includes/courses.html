@@ -13,24 +13,22 @@
         <ul class="tag-categories">
           {% for filter in site.data.filters %}
             <li>
-              <div>
-                <fieldset class="filter-fieldset">
-                  <legend>{{site.data[page.hl][filter.name]}}</legend>
-                  <ul class="category-values">
-                    {% for value in filter.values %}
-                      <li>
-                        <a class="label radius secondary" data-value="{{value | downcase | replace: ' ', '-'}}" data-name="{{filter.name | downcase}}">
-                          {% if filter.i18n %}
-                            {{site.data[page.hl][value]}}
-                          {% else %}
-                            {{value}}
-                          {% endif %}
-                        </a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                </fieldset>
-              </div>
+              <fieldset class="filter-fieldset">
+                <legend>{{site.data[page.hl][filter.name]}}</legend>
+                <ul class="category-values">
+                  {% for value in filter.values %}
+                    <li>
+                      <a class="label radius secondary" data-value="{{value | downcase | replace: ' ', '-'}}" data-name="{{filter.name | downcase}}">
+                        {% if filter.i18n %}
+                          {{site.data[page.hl][value]}}
+                        {% else %}
+                          {{value}}
+                        {% endif %}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </fieldset>
             </li>
           {% endfor %}
         </ul>
@@ -91,6 +89,7 @@
     price="890"
     duration='duration16h'
     language='langEnEs'
+    certDesc='gcpCertClarification'
     labels="google 2d beginner big-data machine-learning cloud"
   %}
   {% 
