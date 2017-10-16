@@ -46,7 +46,9 @@ Level: Level
 Beginner: Beginner
 Advanced: Advanced
 Duration: Duration
+6h: 6 hours
 1d: 1 day
+2d: 2 days
 3d: 3 days
 4d: 4 days
 DevelopingAndConsultingTitle: Developing and consulting
@@ -85,7 +87,9 @@ ContactForPrice: Ask for a quote
 "langEnEs": "Available in English and Spanish."
 "langEnEsIt": "Available in English, Spanish and Italian."
 "langEnIt": "Available in English and Italian."
+"duration6h": "6 hours."
 "duration8h": "8 hours."
+"duration16h": "16 hours."
 "duration24h": "24 hours."
 "duration32h": "32 hours."
 "duration40h": "40 hours."
@@ -434,7 +438,6 @@ CP100:
         - Explain the advantages of Google Cloud Platform
         - "Define the components of Google's network infrastructure, including: Points of presence, data centers, regions, and zones"
         - Understand the difference between Infrastructure-as-a-Service (IaaS) and Platform-as-a-Service (PaaS)
-        - "Lab: Sign Up for the Free Trial and Create a Project"
     - title: Getting Started with Google Cloud Platform
       content:
         - Identify the purpose of projects on Google Cloud Platform
@@ -514,8 +517,8 @@ CPA200:
 
 CPB100:
   title: "Google Cloud Fundamentals: Big Data & Machine Learning"
-  requirements: "Before attending this course, participants should have roughly one (1) year of experience with one or more of the following:<ul><li>A common query language such as SQL</li><li>Extract, transform, load activities</li><li>Data modeling</li><li>Machine learning and/or statistics</li><li>Programming in Python</li></ul>"
-  audience: "This class is intended for Data analysts, Data scientists and Business analysts. It is also suitable for IT decision makers evaluating Google Cloud Platform for use by data scientists.<p>This class is for people who do the following with big data:</p><ul><li>Designing pipelines and architectures for data processing</li><li>Creating and maintaining machine learning and statistical models</li><li>Querying datasets, visualizing query results and creating reports</li></ul>"
+  requirements: "To get the most of out of this course, participants should have:<ul><li>Basic proficiency with common query language such as SQL.</li><li>Experience with data modeling, extract, transform, load activities.</li><li>Developing applications using a common programming language such Python.</li><li>Familiarity with machine learning and/or statistics.</li></ul>"
+  audience: "This class is intended for the following:<ul><li>Data analysts, Data scientists, Business analysts getting started with Google Cloud Platform.</li><li>Individuals responsible for designing pipelines and architectures for data processing, creating and maintaining machine learning and statistical models, querying datasets, visualizing query results and creating reports.</li><li>Executives and IT decision makers evaluating Google Cloud Platform for use by data scientists.</li></ul>"
   desc: "<p>This 8 hour instructor-led class introduces participants to the Big Data & Machine Learning capabilities of Google Cloud Platform. It provides a quick overview of the Google Cloud Platform and a deeper dive of the data processing capabilities. This course showcases the ease, flexibility, and power of big data solutions on Google Cloud Platform.</p>"
   objectives: 
     description: "<p>This course teaches participants the following skills:</p>"
@@ -931,63 +934,80 @@ GCPArchitectingInfrastructure:
         - Role of the Cloud Architect
         - Learn about Solution Domains as an approach to design
         - "Lab: Console and Cloud Shell"
+        - "Lab: Projects"
+        - "Lab: Infrastructure Preview"
     - title: Virtual Networks
       content:
         - Cloud Virtual Networks (CVN), Projects, Networks, Subnetworks, IP addresses, Routes, Firewall rules
         - Subnetworks for resource management instead of physical network topology
         - "Lab: Virtual Networking"
+        - "Lab: Bastion Host"
     - title: Virtual Machines
       content:
         - GCE, tags, VM options, vCPUs, disk options, images, and special features of persistent disks for VMs
+        - "Lab: Creating Virtual Machines"
+        - "Lab: Working with Virtual Machines"
     - title: Cloud IAM
       content:
         - Members, roles, organizations, account administration, service accounts
         - "Lab: Cloud IAM"
-    - title: Resource Management
-      content:
-        - Billing, Quotas, Labels, Names, Cloud Resource Manager
-        - "Lab: Lab Billing"
-    - title: Data Services
+    - title: Data Storage Services
       content:
         - Cloud Storage, Datastore, Bigtable, Cloud SQL
         - "Lab: Cloud Storage"
         - "Lab: Cloud SQL"
-    - title: Interconnecting Networks
+        - "Lab: Cloud Datastore"
+    - title: Resource Management
       content:
-        - VPNs, Cloud Router, Cloud Interconnect, Direct Peering, Cloud DNS
-        - "Lab: VPN and Cloud Router"
-    - title: Infrastructure Automation
-      content:
-        - Infrastructure automation, custom images, startup and shutdown scripts and metadata, Deployment Manager, Cloud Launcher
-        - "Lab: Hadoop Cluster Maker"
-        - "Lab: Virtual Machine"
-    - title: Autoscaling
-      content:
-        - Load Balancing, Instance Groups, Autoscaler
-        - "Lab: Autoscaling"
+        - Billing, Quotas, Labels, Names, Cloud Resource Manager
+        - "Lab: Billing Administration"
+        - "Lab: Examining Billing Data with BigQuery"
     - title: Resource Monitoring
       content:
         - Stackdriver, Monitoring, Logging, Error Reporting, Tracing, Debugging
         - "Lab: Resource Monitoring (Stackdriver)"
-    - title: Containers
+        - "Lab: Error Reporting and Debugging (Stackdriver)"
+    - title: Interconnecting Networks
       content:
-        - Containers, Google Container Engine (GKE), and Container Registry
-    - title: Platform Security
+        - VPNs, Cloud Router, Cloud Interconnect, Direct Peering, Cloud DNS
+        - "Lab: Virtual Private Networks (VPN)"
+        - "Lab: Dynamic VPN with Cloud Routers"
+    - title: Load Balancing
       content:
-        - Learn about Google's layered security strategy that uses a multi-faceted approach to provide platform security services and benefits
+        - Network Load Balancing, HTTP(S) Load Balancing, SSL Load Balancing and Internal Load Balancing, Managed Instance Groups
+        - "Lab: VM Automation and Load Balancing"
+    - title: Autoscaling
+      content:
+        - Autoscaler
+        - "Lab: Autoscaling"
+    - title: Infrastructure Automation with Cloud API
+      content:
+        - Infrastructure automation, custom images, startup and shutdown scripts and metadata
+        - "Lab: Cloud API Infrastructure Automation"
+    - title: Infrastructure Automation with Deployment Manager
+      content:
+        - Deployment Manager templates
+        - "Lab: Deployment Manager"
     - title: Managed Services
       content:
         - Dataproc, Dataflow, BigQuery, Datalab
-        - "Lab: BigQuery and Datalab"
-    - title: Application Development Infrastructure
+    - title: Application Infrastructure Services
       content:
-        - App Engine, Cloud SDK, Dev Tools, Cloud Source Repos, Cloud Pub/Sub, Cloud Endpoints and Apigee, Cloud Functions
+        - Cloud Pub/Sub, Cloud Endpoints and Apigee, Cloud Functions
+    - title: Application Development Services
+      content:
+        - Google App Engine (GAE), Dev Tools, Cloud Source Repos
+        - "Lab: App Engine Development"
+    - title: Containers
+      content:
+        - Containers, Google Container Engine (GKE), and Container Registry
+        - "Lab: Kubernetes Load Balancing"
 
 GCPDataEngineering:
   title: "Data Engineering on Google Cloud Platform"
   requirements: "To get the most of out of this course, participants should have completed Google Cloud Fundamentals: Big Data & Machine Learning (or equivalent experience), basic proficiency with common query language such as SQL, experience with data modeling, extract, transform, load activities; developing applications using a common programming language such Python, and familiarity with Machine Learning and/or statistics"
   audience: "This class is intended for experienced developers who are responsible for managing big data transformations including:<ul><li>Extracting, Loading, Transforming, cleaning, and validating data</li><li>Designing pipelines and architectures for data processing</li><li>Creating and maintaining machine learning and statistical models</li><li>Querying datasets, visualizing query results and creating reports</li></ul>"
-  desc: "<p>This four-day instructor-led class provides participants a hands-on introduction to designing and building data processing systems on Google Cloud Platform.</p>"
+  desc: "<p>This four-day instructor-led class provides participants a hands-on introduction to designing and building data processing systems on Google Cloud Platform. Through a combination of presentations, demos, and hand-on labs, participants will learn how to design data processing systems, build end-to-end data pipelines, analyze data and carry out machine learning. The course covers structured, unstructured, and streaming data.</p>"
   objectives:
     description: "<p>This course teaches participants the following skills:</p>"
     bullets:
@@ -998,68 +1018,57 @@ GCPDataEngineering:
       - Leverage unstructured data using Spark and ML APIs on Cloud Dataproc
       - Enable instant insights from streaming data
   syllabus:
-    - title: Serverless data analysis with BigQuery
-      content:
-        - What is BigQuery
-        - Advanced Capabilities
-        - Performance and pricing
-        - "Lab: Queries and Functions"
-        - "Lab: Load and Export data"
-    - title: Serverless, autoscaling data pipelines with Dataflow
-      content:
-        - Introduction to Dataflow and capabilities
-        - "Lab: Data pipeline"
-        - "Lab: MapReduce in Dataflow"
-        - "Lab: Side inputs"
-        - "Lab: Streaming"
     - title: Google Cloud Dataproc Overview
       content:
-        - Introducing Google Cloud Dataproc
         - Creating and managing clusters
-        - Defining master and worker nodes
         - Leveraging custom machine types and preemptible worker nodes
-        - Creating clusters with the Web Console
-        - Scripting clusters with the CLI
-        - Using the Dataproc REST API
-        - Dataproc pricing
         - Scaling and deleting Clusters
         - "Lab: Creating Hadoop Clusters with Google Cloud Dataproc"
     - title: Running Dataproc Jobs
       content:
-        - Controlling application versions
-        - Submitting jobs
-        - Accessing HDFS and Google Cloud Storage
-        - Hadoop
-        - Spark and PySpark
-        - Pig and Hive
-        - Logging and monitoring jobs
-        - Accessing onto master and worker nodes with SSH
-        - Working with PySpark REPL (command-line interpreter)
+        - Running Pig and Hive jobs
+        - Separation of storage and compute
         - "Lab: Running Hadoop and Spark Jobs with Dataproc"
+        - "Lab: Submit and monitor jobs"
     - title: Integrating Dataproc with Google Cloud Platform
       content:
-        - Initialization actions
-        - Programming Jupyter/Datalab notebooks
-        - Accessing Google Cloud Storage
-        - Leveraging relational data with Google Cloud SQL
-        - Reading and writing streaming Data with Google BigTable
-        - Querying Data from Google BigQuery
-        - Making Google API Calls from notebooks
-        - "Lab: Big Data Analysis with Dataproc"
+        - Customize cluster with initialization actions
+        - BigQuery Support
+        - "Lab: Leveraging Google Cloud Platform Services"
     - title: Making Sense of Unstructured Data with Google’s Machine Learning APIs
       content:
         - Google’s Machine Learning APIs
         - Common ML Use Cases
-        - Vision API
-        - Natural Language API
-        - Translate
-        - Speech API
+        - Invoking ML APIs
         - "Lab: Adding Machine Learning Capabilities to Big Data Analysis"
+    - title: Serverless data analysis with BigQuery
+      content:
+        - What is BigQuery
+        - Queries and Functions
+        - "Lab: Writing queries in BigQuery"
+        - Loading data into BigQuery
+        - Exporting data from BigQuery
+        - "Lab: Loading and exporting data"
+        - Nested and repeated fields
+        - Querying multiple tables
+        - "Lab: Complex queries"
+        - Performance and pricing
+    - title: Serverless, autoscaling data pipelines with Dataflow
+      content:
+        - The Beam programming model
+        - Data pipelines in Beam Python
+        - Data pipelines in Beam Java
+        - "Lab: Writing a Dataflow pipeline"
+        - Scalable Big Data processing using Beam
+        - "Lab: MapReduce in Dataflow"
+        - Incorporating additional data
+        - "Lab: Side inputs"
+        - Handling stream data
+        - GCP Reference architecture
     - title: Getting started with Machine Learning
       content:
         - What is machine learning (ML)
         - "Effective ML: concepts, types"
-        - Evaluating ML
         - "ML datasets: generalization"
         - "Lab: Explore and create ML datasets"
     - title: Building ML models with Tensorflow
@@ -1083,58 +1092,407 @@ GCPDataEngineering:
         - Synthetic features
         - Preprocessing with Cloud ML
         - "Lab: Feature engineering"
-    - title: ML architectures
+    - title: Architecture of streaming analytics pipelines
       content:
-        - Wide and deep
-        - Image analysis
-        - "Lab: Custom image classification with transfer learning"
-        - Embeddings and sequences
-        - Recommendation systems
-    - title: Need for real-time streaming analytics
+        - "Stream data processing: Challenges"
+        - Handling variable data volumes
+        - Dealing with unordered/late data
+        - "Lab: Designing streaming pipeline"
+    - title: Ingesting Variable Volumes
       content:
-        - What is Streaming Analytics?
-        - Use-cases
-        - Batch vs Streaming (Real-time)
-        - Related terminologies
-        - GCP products that help build for high availability, resiliency, high-throughput, real-time streaming analytics (review of Pub/Sub and Dataflow)
-        - "Lab: Setup project, enable APIs, setup storage"
-    - title: Architecture of streaming pipelines
+        - What is Cloud Pub/Sub?
+        - "How it works: Topics and Subscriptions"
+        - "Lab: Simulator"
+    - title: Implementing streaming pipelines
       content:
-        - Streaming architectures and considerations
-        - Choosing the right components
-        - "Lab: Explore the dataset"
-        - Windowing
-        - Streaming aggregation
-        - Events, triggers
-        - "Lab: Create architecture reference"
-    - title: Stream data and events into PubSub
+        - Challenges in stream processing
+        - "Handle late data: watermarks, triggers, accumulation"
+        - "Lab: Stream data processing pipeline for live traffic data"
+    - title: Streaming analytics and dashboards
       content:
-        - Topics and Subscriptions
-        - Publishing events into Pub/Sub
-        - "Lab: Streaming data ingest into Pub/Sub"
-        - "Subscribing options: Push vs Pull"
-        - Alerts
-    - title: Build a stream processing pipeline
-      content:
-        - Pipelines, PCollections and Transforms
-        - Windows, Events, and Triggers
-        - Aggregation statistics
-        - Streaming analytics with BigQuery
-        - Low-volume alerts
-        - "Lab: alerting scenario for anomalies"
-    - title: High throughput and low-latency with Bigtable
-      content:
-        - Latency considerations
-        - "Lab: create streaming data processing pipelines with Dataflow"
-        - What is Bigtable?
-        - Designing row keys
-        - Performance considerations
-        - "Lab: high-volume event processing"
-    - title: Building Dashboards
-      content:
+        - "Streaming analytics: from data to decisions"
+        - Querying streaming data with BigQuery
         - What is Google Data Studio?
-        - From data to decisions
         - "Lab: build a real-time dashboard to visualize processed data"
+    - title: High throughput and low-latency with Bigtable
+      content: 
+        - What is Cloud Spanner?
+        - Designing Bigtable schema
+        - Ingesting into Bigtable
+        - "Lab: streaming into Bigtable"
+
+GCPFromDataToInsights:
+  title: From Data to Insights with Google Cloud Platform
+  requirements: "To get the most out of this course, participants should have basic proficiency with ANSI SQL."
+  audience: "This class is intended for the following:<ul><li>Data Analysts, Business Analysts, Business Intelligence professionals</li><li>Cloud Data Engineers who will be partnering with Data Analysts to build scalable data solutions on Google Cloud Platform</li></ul>"
+  desc: "<p>Want to know how to query and process petabytes of data in seconds? Curious about data analysis that scales automatically as your data grows? Welcome to the Data Insights course!</p><p>This two-day instructor-led class teaches course participants how to derive insights through data analysis and visualization using the Google Cloud Platform. The course features interactive scenarios and hands-on labs where participants explore, mine, load, visualize, and extract insights from diverse Google BigQuery datasets. The course covers data loading, querying, schema modeling, optimizing performance, query pricing, and data visualization.</p>"
+  objectives:
+    description: "<p>This course teaches participants the following skills:</p>"
+    bullets:
+      - Derive insights from data using the analysis and visualization tools on Google Cloud Platform
+      - Interactively query datasets using Google BigQuery
+      - Load, clean, and transform data at scale
+      - Visualize data using Google Data Studio and other third-party platforms
+      - Distinguish between exploratory and explanatory analytics and when to use each approach
+      - Explore new datasets and uncover hidden insights quickly and effectively
+      - Optimizing data models and queries for price and performance
+  syllabus:
+    - title: Introduction to Data on the Google Cloud Platform
+      content:
+        - Highlight Analytics Challenges Faced by Data Analysts
+        - Compare Big Data On-Premise vs on the Cloud
+        - Learn from Real-World Use Cases of Companies Transformed through Analytics on the Cloud
+        - Navigate Google Cloud Platform Project Basics
+        - "Lab: Getting started with Google Cloud Platform"
+    - title: Big Data Tools Overview
+      content:
+        - Walkthrough Data Analyst Tasks, Challenges, and Introduce Google Cloud Platform Data Tools
+        - "Demo: Analyze 10 Billion Records with Google BigQuery"
+        - Explore 9 Fundamental Google BigQuery Features
+        - Compare GCP Tools for Analysts, Data Scientists, and Data Engineers
+        - "Lab: Exploring Datasets with Google BigQuery"
+    - title: Exploring your Data with SQL
+      content:
+        - Compare Common Data Exploration Techniques
+        - Learn How to Code High Quality Standard SQL
+        - Explore Google BigQuery Public Datasets
+        - "Visualization Preview: Google Data Studio"
+        - "Lab: Troubleshoot Common SQL Errors"
+    - title: Google BigQuery Pricing
+      content:
+        - Walkthrough of a BigQuery Job
+        - "Calculate BigQuery Pricing: Storage, Querying, and Streaming Costs"
+        - Optimize Queries for Cost
+        - "Lab: Calculate Google BigQuery Pricing"
+    - title: Cleaning and Transforming your Data
+      content:
+        - Examine the 5 Principles of Dataset Integrity
+        - Characterize Dataset Shape and Skew
+        - Clean and Transform Data using SQL
+        - "Clean and Transform Data using a new UI: Introducing Cloud Dataprep"
+        - "Lab: Explore and Shape Data with Cloud Dataprep"
+    - title: Storing and Exporting Data
+      content:
+        - Compare Permanent vs Temporary Tables
+        - Save and Export Query Results
+        - "Performance Preview: Query Cache"
+        - "Lab: Creating new Permanent Tables"
+    - title: Ingesting New Datasets into Google BigQuery
+      content:
+        - Query from External Data Sources
+        - Avoid Data Ingesting Pitfalls
+        - Ingest New Data into Permanent Tables
+        - Discuss Streaming Inserts
+        - "Lab: Ingesting and Querying New Datasets"
+    - title: Data Visualization
+      content:
+        - Overview of Data Visualization Principles
+        - Exploratory vs Explanatory Analysis Approaches
+        - "Demo: Google Data Studio UI"
+        - Connect Google Data Studio to Google BigQuery
+        - "Lab: Exploring a Dataset in Google Data Studio"
+    - title: Joining and Merging Datasets
+      content:
+        - Merge Historical Data Tables with UNION
+        - Introduce Table Wildcards for Easy Merges
+        - "Review Data Schemas: Linking Data Across Multiple Tables"
+        - Walkthrough JOIN Examples and Pitfalls
+        - "Lab: Join and Union Data from Multiple Tables"
+    - title: Advanced Functions and Clauses
+      content:
+        - Review SQL Case Statements
+        - Introduce Analytical Window Functions
+        - Safeguard Data with One-Way Field Encryption
+        - Discuss Effective Sub-query and CTE design
+        - Compare SQL and Javascript UDFs
+        - "Lab: Deriving Insights with Advanced SQL Functions"
+    - title: Schema Design and Nested Data Structures
+      content:
+        - Compare Google BigQuery vs Traditional RDBMS Data Architecture
+        - "Normalization vs Denormalization: Performance Tradeoffs"
+        - "Schema Review: The Good, The Bad, and The Ugly"
+        - Arrays and Nested Data in Google BigQuery
+        - "Lab: Querying Nested and Repeated Data"
+    - title: More Visualization with Google Data Studio
+      content:
+        - Create Case Statements and Calculated Fields
+        - Avoid Performance Pitfalls with Cache considerations
+        - Share Dashboards and Discuss Data Access considerations
+    - title: Optimizing for Performance
+      content:
+        - Avoid Google BigQuery Performance Pitfalls
+        - Prevent Hotspots in your Data
+        - Diagnose Performance Issues with the Query Explanation map
+        - "Lab: Optimizing and Troubleshooting Query Performance"
+    - title: Advanced Insights
+      content:
+        - Introducing Cloud Datalab
+        - Cloud Datalab Notebooks and Cells
+        - Benefits of Cloud Datalab
+    - title: Data Access
+      content:
+        - Compare IAM and BigQuery Dataset Roles
+        - Avoid Access Pitfalls
+        - Review Members, Roles, Organizations, Account Administration, and Service Accounts
+
+DevelopingApplicationsWithGCP:
+  title: Developing Applications with Google Cloud Platform
+  requirements: "To get the most benefit from this course, participants should have the following prerequisites:<ul><li>Completed Google Cloud Platform Fundamentals or have equivalent experience</li><li>Working knowledge of Node.js</li><li>Basic proficiency with command-line tools and Linux operating system environments</li></ul>"
+  audience: "Application developers who want to build cloud-native applications or redesign existing applications that will run on Google Cloud Platform"
+  desc: "<p>In this course, application developers learn how to design, develop, and deploy applications that seamlessly integrate components from the Google Cloud ecosystem. Through a combination of presentations, demos, and hands-on labs, participants learn how to use GCP services and pre-trained machine learning APIs to build secure, scalable, and intelligent cloud-native applications.</p>"
+  objectives:
+    description: "<p>This course teaches participants the following skills:</p>"
+    bullets:
+      - Use best practices for application development.
+      - Choose the appropriate data storage option for application data.
+      - Implement federated identity management.
+      - Develop loosely coupled application components or microservices.
+      - Integrate application components and data sources.
+      - Debug, trace, and monitor applications.
+      - Perform repeatable deployments with containers and deployment services.
+      - Choose the appropriate application runtime environment; use Google Container Engine as a runtime environment and later switch to a no-ops solution with Google App Engine Flex.
+  syllabus:
+    - title: Best Practices for Application Development
+      content:
+        - Code and environment management
+        - Design and development of secure, scalable, reliable, loosely coupled application components and microservices
+        - Continuous integration and delivery
+        - Re-architecting applications for the cloud
+    - title: Google Cloud Client Libraries, Google Cloud SDK, and Google Firebase SDK
+      content:
+        - How to set up and use Google Cloud Client Libraries, Google Cloud SDK, and Google Firebase SDK
+        - "Lab: Set up Google Client Libraries, Google Cloud SDK, and Firebase SDK on a Linux instance and set up application credentials"
+    - title: Overview of Data Storage Options
+      content:
+        - Overview of options to store application data
+        - Use cases for Google Cloud Storage, Google Cloud Datastore, Cloud Bigtable, Google Cloud SQL, and Cloud Spanner
+    - title: Best Practices for Using Google Cloud Datastore
+      content:
+        - Queries
+        - Built-in and composite indexes
+        - Inserting and deleting data (batch operations)
+        - Transactions
+        - Error handling
+        - Bulk-loading data into Cloud Datastore by using Google Cloud Dataflow
+        - "Lab: Store application data in Cloud Datastore"
+    - title: Performing Operations on Buckets and Objects
+      content:
+        - Operations that can be performed on buckets and objects
+        - Consistency model
+        - Error handling
+    - title: Best Practices for Using Google Cloud Storage
+      content:
+        - Naming buckets for static websites and other uses
+        - Naming objects (from an access distribution perspective)
+        - Performance considerations
+        - Setting up and debugging a CORS configuration on a bucket
+        - "Lab: Store files in Cloud Storage"
+    - title: Handling Authentication and Authorization
+      content:
+        - Cloud Identity and Access Management (IAM) roles and service accounts
+        - User authentication by using Firebase Authentication
+        - User authentication and authorization by using Cloud Identity-Aware Proxy
+        - "Lab: Authenticate users by using Firebase Authentication"
+    - title: Using Google Cloud Pub/Sub to Integrate Components of Your Application
+      content:
+        - Topics, publishers, and subscribers
+        - Pull and push subscriptions
+        - Use cases for Cloud Pub/Sub
+        - "Lab: Develop a backend service to process messages in a message queue"
+    - title: Adding Intelligence to Your Application
+      content:
+        - Overview of pre-trained machine learning APIs such as Cloud Vision API and Cloud Natural Language Processing API
+    - title: Using Google Cloud Functions for Event-Driven Processing
+      content:
+        - Key concepts such as triggers, background functions, HTTP functions
+        - Use cases
+        - Developing and deploying functions
+        - Logging, error reporting, and monitoring
+    - title: Managing APIs with Google Cloud Endpoints
+      content:
+        - Open API deployment configuration
+        - "Lab: Deploy an API for your application"
+    - title: Deploying an Application by Using Google Cloud Container Builder, Google Cloud Container Registry, and Google Cloud Deployment Manager
+      content:
+        - Creating and storing container images
+        - Repeatable deployments with deployment configuration and templates
+        - "Lab: Use Deployment Manager to deploy a web application into Google App Engine flexible environment test and production environments"
+    - title: Execution Environments for Your Application
+      content:
+        - Google Compute Engine
+        - Container Engine
+        - App Engine flexible environment
+        - Cloud Functions
+        - Cloud Dataflow
+        - "Lab: Deploying your application on App Engine flexible environment"
+    - title: Debugging, Monitoring, and Tuning Performance by Using Google Stackdriver
+      content:
+        - Stackdriver Debugger
+        - Stackdriver Error Reporting
+        - "Lab: Debugging an application error by using Stackdriver Debugger and Error Reporting"
+        - Stackdriver Logging
+        - Key concepts related to Stackdriver Trace and Stackdriver Monitoring.
+        - "Lab: Use Stackdriver Monitoring and Stackdriver Trace to trace a request across services, observe, and optimize performance"
+
+GCPArchitectingDesignAndProcess:
+  title: "Architecting with Google Cloud Platform: Design and Process"
+  requirements: "To get the most out of this course, participants should have:<ul><li>Completed Architecting with Google Cloud Platform: Infrastructure or have equivalent experience</li><li>Basic proficiency with command-line tools and Linux operating system environments</li><li>Systems Operations experience including deploying and managing applications, either on-premises or in a public cloud environment</li></ul>"
+  audience: "This class is intended for the following participants:<ul><li>Cloud Solutions Architects, Site Reliability Engineers, Systems Operations professionals, DevOps Engineers, IT managers.</li><li>Individuals using Google Cloud Platform to create new solutions or to integrate existing systems, application environments, and infrastructure with the Google Cloud Platform.</li></ul>"
+  desc: "<p>This two-day instructor-led class equips students to build highly reliable and efficient solutions on Google Cloud Platform, using proven design patterns and the principles of Google Site Reliability Engineering (SRE). It is a continuation of the Architecting with Google Cloud Platform: Infrastructure course and assumes hands-on experience with the technologies covered in that course.</p><p>Through a combination of presentations, demos, and hands-on labs, participants learn to design GCP deployments that are highly reliable and secure; and how to operate GCP deployments in a highly available and cost-effective manner.</p>"
+  objectives:
+    description: "<p>This course teaches participants the following skills:</p>"
+    bullets:
+      - Design for high availability, scalability, and maintainability.
+      - Assess tradeoffs and make sound choices among Google Cloud Platform products.
+      - Integrate on-premises and cloud resources.
+      - Identify ways to optimize resources and minimize cost.
+      - Implement processes that minimize downtime, such as monitoring and alarming, unit and integration testing, production resilience testing, and incident post-mortem analysis.
+      - Implement policies that minimize security risks, such as auditing, separation of duties and least privilege.
+      - Implement technologies and processes that assure business continuity in the event of a disaster.
+  syllabus:
+    - title: Defining the Service
+      content:
+        - Design in this class.
+        - State and solution.
+        - Measurement.
+        - Gathering requirements, SLOs, SLAs, and SLIs (key performance indicators).
+    - title: Business-logic layer design
+      content:
+        - Microservices architecture.
+        - GCP 12-factor support.
+        - Mapping compute needs to Google Cloud Platform processing services.
+        - Compute system provisioning.
+    - title: Data layer design
+      content:
+        - Classifying and characterizing data.
+        - Data ingest and data migration.
+        - Identification of storage needs and mapping to Google Cloud Platform storage systems.
+    - title: Presentation layer design
+      content:
+        - Network edge configuration.
+        - Network configuration for data transfer within the service, including load balancing and network location.
+        - Network integration with other environments, including on premise and multi-cloud.
+    - title: Design for resiliency, scalability, and disaster recovery
+      content:
+        - Failure due to loss of resources.
+        - Failure due to overload.
+        - Strategies for coping with failure.
+        - Business continuity and disaster recovery, including restore strategy and data lifecycle management.
+        - Scalable and resilient design.
+    - title: Design for security
+      content:
+        - Google Cloud Platform security.
+        - Network access control and firewalls.
+        - Protections against denial of service.
+        - Resource sharing and isolation.
+        - Data encryption and key management.
+        - Identity access and auditing.
+    - title: Capacity planning and cost optimization
+      content:
+        - Capacity planning.
+        - Pricing.
+    - title: Deployment, monitoring and alerting, and incident response
+      content:
+        - Deployment.
+        - Monitoring and alerting.
+        - Incident response.
+
+KubernetesAndGKE:
+  title: Getting Started with Kubernetes and Google Container Engine
+  requirements: "To get the most of out of this course, participants should have:<ul><li>Basic proficiency with command-line tools and Linux operating system environments, as well as Web server technologies such as Nginx.</li><li>Systems Operations experience including deploying and managing applications, either on-premises or in a public cloud environment.</li></ul>"
+  audience: "This class is intended for the following:<ul><li>Application developers, Cloud Solutions Architects, DevOps Engineers, IT managers.</li><li>Individuals using Google Cloud Platform to create new solutions or to integrate existing systems, application environments, and infrastructure with the Google Cloud Platform.</li></ul>"
+  desc: "<p>Learn to containerize workloads in Docker containers, deploy them to Kubernetes clusters provided by Google Container Engine, and scale those workloads to handle increased traffic. You also learn how to continuously deploy new code in a Kubernetes cluster to provide application updates.</p>"
+  objectives:
+    description: "<p>This course teaches participants the following skills:</p>"
+    bullets:
+      - Understand container basics.
+      - Containerize an existing application.
+      - Understand Kubernetes concepts and principles.
+      - Deploy applications to Kubernetes using the CLI.
+      - Set up a continuous delivery pipeline using Jenkins.
+  syllabus:
+    - title: Introduction to Containers and Docker
+      content:
+        - Create a container.
+        - Package a container using Docker.
+        - Store a container image in Google Container Registry.
+        - Launch a Docker container.
+    - title: Kubernetes and Google Container Engine Basics
+      content:
+        - Provision a complete Kubernetes cluster using Google Container Engine.
+        - Deploy and manage Docker containers using kubectl.
+        - Break an application into microservices using Kubernetes’ Deployments and Services.
+    - title: Deploying to Kubernetes
+      content:
+        - Create a Kubernetes deployment.
+        - Trigger, pause, resume, and rollback updates.
+        - Understand and build canary deployments.
+    - title: Continuous Deployment with Jenkins
+      content:
+        - Provision Jenkins in your Kubernetes cluster.
+        - Create a Jenkins pipeline.
+        - Implement a canary deployment using Jenkins.
+
+GCPForAWSProfessionals:
+  title: Google Cloud Platform Fundamentals for AWS Professionals
+  requirements: "To get the most of out of this course, participants should have:<ul><li>Basic proficiency with networking technologies like subnets and routing.</li><li>Experience with Amazon VPC, Amazon EC2 instances, and disks.</li><li>Familiarity with Amazon S3 and AWS database technologies.</li></ul>"
+  audience: "This class is intended for the following:<ul><li>AWS Solution Architects just getting started with Google Cloud Platform.</li><li>AWS SysOps Administrators used to building IaaS solutions.</li><li>Architects and Engineers operating in multi-cloud environments.</li></ul>"
+  desc: "<p>This six-hour course with labs introduces AWS professionals to the core capabilities of Google Cloud Platform (GCP) in the four technology pillars: networking, compute, storage, and database. It is designed for AWS Solution Architects and SysOps Administrators familiar with AWS features and setup and want to gain experience configuring GCP products immediately. With presentations, demos, and hands-on labs, participants get details of similarities, differences, and initial how-tos quickly.</p>"
+  objectives:
+    description: "<p>This course teaches participants the following skills:</p>"
+    bullets:
+      - Identify GCP counterparts for Amazon VPC, subnets, routes, NACLs, IGW, Amazon EC2, Amazon EBS, auto-scaling, Elastic Load Balancing, Amazon S3, Amazon Glacier, Amazon RDS, Amazon Redshift, AWS IAM, and more.
+      - Configure accounts, billing, projects, networks, subnets, firewalls, VMs, disks, auto scaling, load balancing, storage, databases, IAM, and more.
+      - Manage and monitor applications.
+      - Explain feature and pricing model differences.
+      - Locate documentation and training.
+  syllabus:
+    - title: Introducing Google Cloud Platform
+      content:
+        - Google Cloud infrastructure.
+        - AWS regions, availability zones, and CloudFront.
+        - GCP regions, zones, edge caching, and Cloud CDN.
+        - GCP services.
+    - title: Setting up Accounts and Billing
+      content:
+        - AWS accounts, billing, and IAM roles.
+        - GCP accounts, billing accounts, projects, and admin setup.
+        - Account, billing, project, and admin setup.
+        - "Lab: Set up projects and billing accounts with a free-trial GCP account."
+    - title: Networking
+      content:
+        - Amazon VPC, subnets, routes, NACLs, and security groups.
+        - GCP networks, subnets, routes, and firewall rules.
+        - VMs in networks.
+        - "Lab: Add VMs, explore the default network, and test connectivity."
+    - title: Working with VM Instances
+      content:
+        - Amazon EC2 instance types, AMIs, Amazon EBS, ephemeral drives, spot instances.
+        - Google Compute Engine machine types, instances, persistent disks, local SSDs, preemptible VMs.
+        - VM and web app deployment.
+        - "Lab: Deploy VMs with an app by console and command line."
+    - title: Scaling and Load Balancing Apps
+      content:
+        - Amazon EC2 launch configurations, auto-scaling groups, load balancing.
+        - Google Compute Engine instance templates, managed instance groups, load balancing.
+        - Autoscaling and load balancing setup.
+        - "Lab: Scale and load balance instances, and test under load."
+    - title: Isolating Instances and Apps
+      content:
+        - A 3-tier web app in GCP.
+        - A custom network with custom subnets and firewall rules.
+        - "Lab: Build a 3-tier web app with public front-end and private backend."
+    - title: Using Storage as a Service and Database as a Service
+      content:
+        - Amazon S3, Amazon Glacier, Amazon RDS, Amazon DynamoDB, Amazon Redshift, Amazon Athena.
+        - Google Cloud Storage, Google Cloud SQL, Cloud Spanner, Google Cloud Datastore, Google Cloud Bigtable, Google BigQuery.
+        - "Lab: Use gsutil command-line tool to perform operations on buckets and objects in Cloud Storage."
+        - "Lab: Load and analyze data in BigQuery."
+    - title: Deployment and Monitoring
+      content:
+        - AWS CloudFormation, Amazon CloudWatch.
+        - Google Cloud Deployment Manager, Google StackDriver.
+        - "Lab: Deploy your infrastructure using Deployment Manager."
 
 "notFoundTitle": "Not so fast, batman!"
 "notFoundShort": "We couldn't find the page you were looking for."

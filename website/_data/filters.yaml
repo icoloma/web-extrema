@@ -19,7 +19,9 @@
     - Advanced
 - name: Duration
   i18n: true
-  values: 
+  values:
+    - 6h 
     - 1d
+    - 2d
     - 3d
     - 4d

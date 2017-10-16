@@ -81,8 +81,17 @@
     contactForPrice="true"
     duration='duration8h'
     language='langEnEs'
-    creditCardRequired='creditCardRequired'
     labels="google 1d beginner cloud paas iaas big-data"
+  %}
+  {% 
+    include course.html
+    course='GCPFromDataToInsights'
+    logo='/img/logo-google-big.png'
+    koliseoEvent="from-data-to-insights"
+    price="890"
+    duration='duration16h'
+    language='langEnEs'
+    labels="google 2d beginner big-data machine-learning cloud"
   %}
   {% 
     include course.html
@@ -92,18 +101,85 @@
     contactForPrice="true"
     duration='duration8h'
     language='langEnEs'
-    creditCardRequired='creditCardRequired'
     labels="google 1d beginner big-data machine-learning cloud"
   %}
+  {% 
+    include course.html
+    course='GCPDataEngineering'
+    logo='/img/logo-google-big.png'
+    koliseoEvent="data-engineering-on-google-cloud-platform"
+    price="1,650"
+    duration='duration32h'
+    language='langEnEs'
+    certDesc='gcpCertClarification'
+    labels="google 4d advanced cloud big-data machine-learning"
+  %}
+  {% 
+    include course.html
+    course='GCPArchitectingInfrastructure'
+    logo='/img/logo-google-big.png'
+    koliseoEvent="architecting-with-google-cloud-platform-infrastructure"
+    price='1,290'
+    duration='duration24h'
+    language='langEnEs'
+    certDesc='gcpCertClarification'
+    labels="google 3d advanced cloud iaas"
+  %}
+  {% 
+    include course.html
+    course='GCPArchitectingDesignAndProcess'
+    logo='/img/logo-google-big.png'
+    koliseoEvent="gcp-architecting-design-and-process"
+    price='890'
+    duration='duration16h'
+    language='langEnEs'
+    certDesc='gcpCertClarification'
+    labels="google 2d advanced cloud iaas"
+  %}
+  {% 
+    include course.html
+    course='DevelopingApplicationsWithGCP'
+    logo='/img/logo-google-big.png'
+    koliseoEvent="developing-apps-with-gcp"
+    price='1,290'
+    duration='duration24h'
+    language='langEnEs'
+    certDesc='gcpCertClarification'
+    labels="google 3d advanced cloud iaas machine-learning"
+  %}
+  {% 
+    include course.html
+    course='GCPForAWSProfessionals'
+    logo='/img/logo-google-big.png'
+    koliseoEvent="gcp-for-aws-professionals"
+    price='390'
+    duration='duration6h'
+    language='langEnEs'
+    certDesc='gcpCertClarification'
+    labels="google 6h advanced cloud iaas paas big-data machine-learning"
+  %}
+  {% 
+    include course.html
+    course='KubernetesAndGKE'
+    logo='/img/logo-google-big.png'
+    koliseoEvent="getting-started-with-k8s-and-gke"
+    price='450'
+    duration='duration8h'
+    language='langEnEs'
+    certDesc='gcpCertClarification'
+    labels="google 1d beginner cloud iaas"
+  %}
+  
   {% 
     include course.html
     course='CPB101'
     logo='/img/logo-google-big.png'
     koliseoEvent="cpb101-serverless-data-analysis-with-big-query-and-cloud-dataflow"
     price='495'
+    deprecated='true'    
     duration='duration8h'
     language='langEnEs'
-    creditCardRequired='creditCardRequired'
+    creditCardRequired='creditCardRequired'    
     labels="google 1d beginner big-data machine-learning cloud"
   %}
   {% 
@@ -112,6 +188,7 @@
     logo='/img/logo-google-big.png'
     koliseoEvent="google-machine-learning-with-cloud-ml"
     price='495'
+    deprecated="true"
     duration='duration8h'
     language='langEnEs'
     creditCardRequired='creditCardRequired'
@@ -123,6 +200,7 @@
     logo='/img/logo-google-big.png'
     koliseoEvent="cpa200-google-cloud-platform-architects-fundamentals"
     price='495'
+    deprecated="true"
     duration='duration8h'
     language='langEnEs'
     creditCardRequired='creditCardRequired'
@@ -134,6 +212,7 @@
     logo='/img/logo-google-big.png'
     koliseoEvent="cpb200-big-query-for-data-analysts"
     price='1,095'
+    deprecated="true"
     duration='duration24h'
     language='langEnEs'
     creditCardRequired='creditCardRequired'
@@ -144,24 +223,13 @@
   %}
   {% 
     include course.html
-    course='GCPDataEngineering'
-    logo='/img/logo-google-big.png'
-    koliseoEvent="data-engineering-on-google-cloud-platform"
-    contactForPrice="true"
-    duration='duration32h'
-    language='langEnEs'
-    creditCardRequired='creditCardRequired'
-    certDesc='gcpCertClarification'
-    labels="google 4d advanced cloud big-data machine-learning"
-  %}
-  {% 
-    include course.html
     course='CPD200'
     logo='/img/logo-google-big.png'
     koliseoEvent="cpd200"
     price='1,095'
     duration='duration24h'
     language='langEnEs'
+    deprecated="true"
     creditCardRequired='creditCardRequired'
     certDesc='gcpCertClarification'
     labels="google 3d advanced cloud iaas"
@@ -172,24 +240,14 @@
     logo='/img/logo-google-big.png'
     koliseoEvent="cpo200-google-cloud-platform-for-systems-operations-professionals1"
     price='1,395'
+    deprecated="true"
     duration='duration32h'
     language='langEnEs'
     creditCardRequired='creditCardRequired'
     certDesc='gcpCertClarification'
     labels="google 4d advanced cloud iaas"
   %}
-  {% 
-    include course.html
-    course='GCPArchitectingInfrastructure'
-    logo='/img/logo-google-big.png'
-    koliseoEvent="architecting-with-google-cloud-platform-infrastructure"
-    contactForPrice="true"
-    duration='duration24h'
-    language='langEnEs'
-    creditCardRequired='creditCardRequired'
-    certDesc='gcpCertClarification'
-    labels="google 3d advanced cloud iaas"
-  %}
+
   {% 
     include course.html
     course='SpringCore'
