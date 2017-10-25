@@ -36,7 +36,9 @@ AboutUsContent:
   - We are a small and dynamic company, where every member of the team works from a different location.
 "i18n": "English"
 "Subscribe": "Subscribe"
-gcpNewsletter: "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=ce44b90108"
+newsletter: "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=e0033eb79a"
+suscribeToNewsletter: Suscribe to our newsletter
+suscribeToNewsletterDesc: To get the latest updates about out courses, suscribe to our newsletter.
 Free: Free
 IntroduceTextToSearch: Introduce text to search
 Search: Search
@@ -63,11 +65,6 @@ Legal: Legal
 cloudComputingDesc: Developing cloud-based applications can be challenging sometimes. Learn with us how to design, build and deploy applications using all the advantages of a cloud native project.
 bigDataDesc: When knowledge is everything, it is important to know how to make the most of the data available to us.
 ContactForPrice: Ask for a quote
-
-"suscribeToNewsletter": "Suscribe to our newsletter"
-"suscribeToGcpNewsletter": "To get the latest updates about these courses, suscribe to our GCP newsletter."
-"suscribeToSpringNewsletter": "To learn everything about these courses, suscribe to our Spring newsletter."
-"springNewsletter": "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=5f43d4191d"
 
 "from": "from"
 "VATexempt": "VAT exempt."
@@ -1493,6 +1490,48 @@ GCPForAWSProfessionals:
         - AWS CloudFormation, Amazon CloudWatch.
         - Google Cloud Deployment Manager, Google StackDriver.
         - "Lab: Deploy your infrastructure using Deployment Manager."
+
+KubernetesAndGKEAdvanced:
+  title: Kubernetes Master Class
+  requirements: "To get the most of out of this course, participants should have:<ul><li>Basic proficiency with command-line tools and Linux operating system environments.</li><li>Systems Operations experience including deploying and managing applications, either on-premises or in a public cloud environment.</li><li>No previous knowledge of Kubernetes is required.</li></ul>"
+  audience: "This class is intended for the following:<ul><li>Application developers, Cloud Solutions Architects, DevOps Engineers.</li><li>Individuals using Google Cloud Platform to create new solutions or to integrate existing systems, application environments, and infrastructure with the Google Cloud Platform.</li></ul>"
+  desc: "<p>This six-hour hands-on course introduces container orchestration, from the basics of Kubernetes to container-based CI/CD pipelines. The course is composed of 60% theory, 40% of hands-on code labs delivered using Google Cloud Platform. Most of the contents of the course apply to any Kubernetes cluster, be it on premises or on any other Cloud provider. If you want to be ready to deploy containers in production easily, this is your course.</p>"
+  objectives:
+    description: "<p>This course teaches participants the following skills:</p>"
+    bullets:
+      - "Introduction to the basic components of Kubernetes: Pods, Services, Deployments, Replica Sets, Ingress."
+      - Rolling updates and rollbacks.
+      - "Best practices with Kubernetes: container image size, resource limits, liveness and readiness probes, pod/node affinity and antiaffinity, taints and tolerations."
+      - Autoscaling, Autoupdates and Autorepair on Google Container Engine. Multi-zone clusters.
+      - CI/CD pipelines with Kubernetes and Helm.
+      - Monitoring and alerts with StackDriver.
+      - "Updates from the last three Kubernetes versions: 1.6, 1.7, 1.8."
+  syllabus:
+    - title: Intro to Kubernetes
+      content:
+        - Pods, Nodes, Replica Sets, Deployments, Services, Persistent Volumes
+        - Rolling updtaes and deployment rollback
+        - Web console for Kubernetes and Container Engine 
+        - Stateful workloads in Kubernetes
+    - title: Best Practices
+      content:
+        - ConfigMaps and Secrets
+        - Reserving Resources
+        - Liveness and Readiness Probes
+        - Static IP Addresses
+        - Upgrading Kubernetes
+        - Rolling out new container images
+    - title: Updates in Kubernetes 1.6/1.7/1.8
+      content:
+        - Scheduling pods into nodes
+        - Storage
+        - Networking
+        - Security
+    - title: CI/CD with Kubernetes
+      content:
+        - Adding containers to your CI/CD pipeline
+        - Kubernetes with Jenkins
+        - Kubernetes with Container Builder
 
 "notFoundTitle": "Not so fast, batman!"
 "notFoundShort": "We couldn't find the page you were looking for."

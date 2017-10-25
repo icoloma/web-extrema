@@ -62,6 +62,33 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="newsletter box show">
+      <span class="close">
+        <svg viewbox="0 0 40 40">
+          <path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
+        </svg>
+      </span>
+      <div class="box-content-part">
+        <form action="{{site.data[page.hl].newsletter}}" method="post" name="mc-embedded-subscribe-form" target="_blank" rel="noopener noreferrer" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <label for="mce-EMAIL">
+              <h2>{{site.data[page.hl].suscribeToNewsletter}}</h2>
+            </label>
+            <p>{{site.data[page.hl].suscribeToNewsletterDesc}}</p>
+            <div class="newsletter-form">
+              <input class="email" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Email" required>
+              <input type="submit" value="{{site.data[page.hl].Subscribe}}" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </div>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input type="text" name="b_6b2bcf54ecc61ae4b7f084a25_e0033eb79a" tabindex="-1" value="">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="no-results hide">
   <div class="row">
@@ -71,6 +98,16 @@
   </div>
 </div>
 <div class="courses">
+  {% 
+    include course.html
+    course='KubernetesAndGKEAdvanced'
+    logo='/img/kubernetes.svg'
+    koliseoEvent="kubernetes-master-class"
+    price="390"
+    duration='duration6h'
+    language='langEnEs'
+    labels="google 6h advanced cloud containers iaas"
+  %}
   {% 
     include course.html
     course='CP100'
@@ -122,7 +159,7 @@
     duration='duration24h'
     language='langEnEs'
     certDesc='gcpCertClarification'
-    labels="google 3d advanced cloud iaas"
+    labels="google 3d advanced cloud iaas containers"
   %}
   {% 
     include course.html
@@ -144,7 +181,7 @@
     duration='duration24h'
     language='langEnEs'
     certDesc='gcpCertClarification'
-    labels="google 3d advanced cloud iaas machine-learning"
+    labels="google 3d advanced cloud iaas containers machine-learning"
   %}
   {% 
     include course.html
@@ -155,7 +192,7 @@
     duration='duration6h'
     language='langEnEs'
     certDesc='gcpCertClarification'
-    labels="google 6h advanced cloud iaas paas big-data machine-learning"
+    labels="google 6h advanced cloud iaas paas containers big-data machine-learning"
   %}
   {% 
     include course.html
@@ -166,7 +203,7 @@
     duration='duration8h'
     language='langEnEs'
     certDesc='gcpCertClarification'
-    labels="google 1d beginner cloud iaas"
+    labels="google 1d beginner cloud iaas containers"
   %}
   
   {% 
@@ -215,8 +252,6 @@
     duration='duration24h'
     language='langEnEs'
     creditCardRequired='creditCardRequired'
-    newsletterLink="gcpNewsletter"
-    newsletterDesc='suscribeToGcpNewsletter'
     certDesc='gcpCertClarification'
     labels="google 3d advanced big-data cloud"
   %}
@@ -256,8 +291,6 @@
     price='1,975'
     duration='duration32h'
     language='langEnEsIt'
-    newsletterLink='springNewsletter'
-    newsletterDesc='suscribeToSpringNewsletter'
     certDesc='springCertClarification'
     labels="pivotal 4d advanced spring cloud web"
   %}

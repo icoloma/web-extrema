@@ -98,11 +98,18 @@
 }
 
 .newsletter {
-  padding-top: 20px;
+  padding-top: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 20px;
   text-align: center;
+  display: none;
+  &.show {
+    display: block;
+  }
+  label {
+    cursor: default;
+  }
   .email {
     width: 100%;
   }
@@ -113,6 +120,7 @@
     color: $newsletter-color;
     border-color: $newsletter-bg-color;
     border-radius: 5px;
+    margin-bottom: 10px;
     &:hover, &:focus {
       background-color: scale-color($newsletter-bg-color, $lightness: -20%);
       border-color: scale-color($newsletter-bg-color, $lightness: -20%);
@@ -166,5 +174,24 @@
   .course-container {
     display: flex;
     align-items: center;
+  }
+
+  .newsletter {
+    .email {
+      width: 100%;
+      padding: 25px 10px 25px 10px;
+      margin: 0;
+    }
+
+    .button {
+      margin: 0;
+      border-radius: 0 5px 5px 0;
+    }
+  }
+
+  .newsletter-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
   }
 }

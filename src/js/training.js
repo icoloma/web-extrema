@@ -10,6 +10,12 @@ var $document = $(document)
   }
 }
 
+var $newsletter = document.querySelector('.newsletter');
+
+document.querySelector('.close').addEventListener('click', function(e) {
+  $newsletter.classList.remove('show');
+})
+
 // show/hide course contents
 $document.on('click', '.js-hide-contents, .js-show-contents', function(e) {
 

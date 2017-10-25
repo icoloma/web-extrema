@@ -149,6 +149,21 @@ address {
   margin-bottom: 15px;
 }
 
+.close {
+  width: 20px;
+  height: 20px;
+  margin: 10px 20px 10px 10px;
+  float: right;
+}
+
+.close-x {
+  cursor: pointer;
+  stroke: $jumbo;
+  fill: transparent;
+  stroke-linecap: round;
+  stroke-width: 5;
+}
+
 @media #{$medium}{
 
   .training-container h4 {

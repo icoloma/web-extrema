@@ -8,26 +8,6 @@
     <div itemprop="description">
       {{course.desc}}
     </div>
-    {% if include.newsletterLink %}
-      <div class="newsletter columns">
-        <form action="{{site.data[page.hl][include.newsletterLink]}}" method="post" name="mc-embedded-subscribe-form" target="_blank" rel="noopener noreferrer" novalidate>
-          <div id="mc_embed_signup_scroll">
-            <label for="mce-EMAIL">
-              <h2>{{site.data[page.hl].suscribeToNewsletter}}</h2>
-            </label>
-            <p>{{site.data[page.hl][include.newsletterDesc]}}</p>
-            <input class="email" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Email" required>
-            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-              <input type="text" name="b_6b2bcf54ecc61ae4b7f084a25_ce44b90108" tabindex="-1" value="">
-            </div>
-            <div class="clear">
-              <input type="submit" value="{{site.data[page.hl].Subscribe}}" name="subscribe" id="mc-embedded-subscribe" class="button">
-            </div>
-          </div>
-        </form>
-      </div>
-    {% endif %}
   </div>
   <aside class="column medium-6" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
     <ul class="pricing-table">

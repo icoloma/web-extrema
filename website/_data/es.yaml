@@ -36,7 +36,9 @@ AboutUsContent:
   - Somos una empresa pequeña y dinámica, donde cada miembro del equipo trabaja desde sitios diferentes.
 "i18n": Español
 "Subscribe": "Suscríbete"
-gcpNewsletter: "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=ce44b90108"
+newsletter: "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=e0033eb79a"
+suscribeToNewsletter: Suscribe to our newsletter
+suscribeToNewsletterDesc: To get the latest updates about out courses, suscribe to our newsletter.
 Free: Gratuito
 IntroduceTextToSearch: Introduce texto para buscar
 Search: Buscar
@@ -63,11 +65,6 @@ Legal: Legal
 cloudComputingDesc: Hacer aplicaciones basadas en la nube a veces puede ser un verdadero reto. Aprende con nosotros a diseñar, construir y desplegar aplicaciones utilizando todas las ventajas de un proyecto en la nube.
 bigDataDesc: Cuando el conocimiento lo es todo, es importante saber sacar el máximo partido a los numerosos datos de los que disponemos.
 ContactForPrice: Consultar precio
-
-"suscribeToNewsletter": "Suscríbete a nuestra lista de correo"
-"suscribeToGcpNewsletter": "Para tener las últimas novedades sobre estos cursos, suscríbete a nuestra lista de correo de GCP."
-"suscribeToSpringNewsletter": "Para aprender todo sobre estos cursos, suscríbete a nuestra lista de correo de Spring."
-"springNewsletter": "//extrema-sistemas.us9.list-manage.com/subscribe/post?u=6b2bcf54ecc61ae4b7f084a25&id=5f43d4191d"
 
 "from": "desde"
 "subsidized": "Estos cursos son subvencionables en España a través de la <a href='http://www.fundaciontripartita.org/' target='_blank'>Fundación Tripartita</a>. Otros países podrían tener otras condiciones, por favor contáctanos para más detalles."
@@ -442,6 +439,22 @@ GCPForAWSProfessionals:
       - Administrar y monitorizar aplicaciones.
       - Explicar las diferentes funcionalidades y modelos de precios.
       - Localizar documentación y formación.
+
+KubernetesAndGKEAdvanced:
+  title: Kubernetes Master Class
+  requirements: "Para asistir a este curso, los asistentes deben tener:<ul><li>Conocimientos de herramientas de línea de comandos y sistemas Linux</li><li>Experiencia en operaciones de sistemas incluyendo el despliegue y la administración de aplicaciones, ya sea en instalaciones propias o en alguna nube pública</li><li>No se necesitan conocimientos previos de Kubernetes</li></ul>"
+  audience: "Esta clase está enfocada para:<ul><li>Desarrolladores de aplicaciones, Cloud Solutions Architects y DevOps Engineers.</li><li>Profesionales que usen Google Cloud Platform para crear nuevas soluciones o para integrar sistemas ya existentes, entornos de aplicaciones e infraestructura con Google Cloud Platform.</li></ul>"
+  desc: "<p>Este curso práctico de seis horas introduce a la orquestación de contenedores, desde los conceptos básicos de Kubernetes hasta pipelines de CI/CD basados en contenedores. Este curso es un 60% teórico y un 40% práctico con laboratorios basados en Google Cloud Platform. La mayor parte de los contenidos del curso sirven para cualquier cluster de Kubernetes, bien on-premise o en cualquier otro proveedor de nube. Si quieres estar preparado para desplegar contenedores en producción fácilmente, éste es tu curso.</p>"
+  objectives:
+    description: "<p>Este curso enseña a los asistentes a:</p>"
+    bullets:
+      - "Introducción a los componentes básicos de Kubernetes: Pods, Services, Deployments, Replica Sets, Ingress."
+      - Rolling updates y rollbacks.
+      - "Buenas prácticas con Kubernetes: tamaño de la imagen del contenedor, límite de recursos, resource limits, liveness and readiness probes, pod/node affinity and antiaffinity, taints and tolerations."
+      - Autoscaling, Autoupdates y Autorepair en Google Container Engine. Clusters multizona.
+      - Pipelines de CI/CD con Kubernetes y Helm.
+      - Monitorización y alertas con StackDriver.
+      - "Actualizaciones de las últimas tres versiones de Kubernetes: 1.6, 1.7, 1.8."
 
 "Contact": "Contacto"
 "Spain": "España"
