@@ -1533,6 +1533,71 @@ KubernetesAndGKEAdvanced:
         - Kubernetes with Jenkins
         - Kubernetes with Container Builder
 
+DeepLearningForText:
+  title: Deep Learning for Text
+  requirements: To get the most of out of this course, participants should have basic proficiency with Machine Learning and Python.
+  audience: This class is intended for Data Analysts, Business Analysts and Cloud Data Engineers interested in getting started with deep learning models for texts.
+  desc: "<p>This hands-on course course introduces deep learning techniques for text data with TensorFlow. At the end of the course, attendees will be able to create deep learning models for text, including NLP tasks, classification, tagging words, and more.</p>"
+  objectives:
+    description: "<p>This course teaches participants the following skills:</p>"
+    bullets:
+      - Create models to classify text.
+      - Tagging words.
+      - Build language models using deep learning techniques with your owns datasets.
+  syllabus:
+    - title: Intro to deep learning
+      content: 
+        - Overview
+    - title: Intro to deep learning with text data
+      content:
+        - Intro to the recurrent neural networks. Basic and advanced models
+        - "Development of models with deep recurrent neural networks: Network parametrization, training strategies, regularization and embeddings"
+    - title: Intro to the working environment
+      content:
+        - GCP GPU machines
+        - Jupyter notebook
+        - TensorFlow
+    - title: Use cases
+      content:
+        - "Use case 1: Classify texts into categories. Build a sentiment model from scratch"
+        - "Use case 2: word labelling"
+        - "Use case 3: Language models. Build a character level and a word level language models"
+
+DeepLearningForImages:
+  title: Deep Learning for Images
+  requirements: To get the most of out of this course, participants should have basic proficiency with Machine Learning and Python.
+  audience: This class is intended for Data Analysts, Business Analysts and Cloud Data Engineers interested in getting started with deep learning models for images.
+  desc: "<p>This hands-on course course introduces deep learning techniques for images with TensorFlow. At the end of the course, attendees will be able to create deep learning models for images, including classification tasks and object detection.</p>"
+  objectives:
+    description: "<p>This course teaches participants the following skills:</p>"
+    bullets:
+      - Create models to classify images.
+      - Detect objects.
+      - Build models using deep learning techniques with your owns datasets.
+  syllabus:
+    - title: Intro to deep learning
+      content: 
+        - Overview
+    - title: Intro to deep learning applied to images
+      content:
+        - Understand image data
+        - Convolutional neural networks
+    - title: Intro to the working environment
+      content:
+        - GCP GPU machines
+        - Jupyter notebook
+        - TensorFlow
+    - title: "Use case 1: Classify images from scratch"
+      content:
+        - "Development of the models: Net parametrization, regularization and visualization of net and results"
+        - "Data augmentation strategies"
+    - title: "Use case 2: Classify images with pre-builded models - Transfer learning"
+      content:
+        - Understand the most relevant network architectures for image data
+    - title: "Use case 3: Object detection in images. A first approach"
+      content:
+        - Develop of a first model to object detection in images
+
 "notFoundTitle": "Not so fast, batman!"
 "notFoundShort": "We couldn't find the page you were looking for."
 "notFoundDesc": "Sorry, this page could not be found. Can you try again from the home page? This time, go slower."

@@ -456,6 +456,30 @@ KubernetesAndGKEAdvanced:
       - Monitorización y alertas con StackDriver.
       - "Actualizaciones de las últimas tres versiones de Kubernetes: 1.6, 1.7, 1.8."
 
+DeepLearningForText:
+  title: Deep Learning for Text
+  requirements: Para la realización de este curso se requieren conocimientos básicos de Machine Learning y de Python.
+  audience: Este curso esta orientado a Data Analysts, Business Analysts y Cloud Data Engineers interesados en comenzar a trabajar con modelos de deep learning para textos.
+  desc: "<p>Este curso práctico introduce las técnicas de deep learning para el modelado de datos textuales con TensorFlow. Al final del curso el alumno será capaz de construir modelos de deep learning para textos que incluyen tareas de NLP, clasificación, word tagging y otras.</p>"
+  objectives:
+    description: "<p>Este curso enseña a los asistentes a:</p>"
+    bullets:
+      - Crear modelos para clasificar textos.
+      - Etiquetado de palabras.
+      - Construir modelos de lenguaje usando técnicas de deep learning con tus propios conjuntos de datos.
+
+DeepLearningForImages:
+  title: Deep Learning for Images
+  requirements: Para la realización de este curso se requieren conocimientos básicos de Machine Learning y de Python.
+  audience: Este curso esta orientado a Data Analysts, Business Analysts y Cloud Data Engineers interesados en comenzar a trabajar con modelos de deep learning para imágenes.
+  desc: "<p>Este curso práctico introduce las técnicas de deep learning para el modelado de imágenes con TensorFlow. Al final del curso el alumno será capaz de construir modelos de deep learning para imágenes que incluyen tareas de clasificación y detección de objetos.</p>"
+  objectives:
+    description: "<p>Este curso enseña a los asistentes a:</p>"
+    bullets:
+      - Crear modelos para clasificar imágenes.
+      - Detectar objetos.
+      - Construir modelos usando técnicas de deep learning con tus propios conjuntos de datos.
+
 "Contact": "Contacto"
 "Spain": "España"
 "emailTo": "Email a"
