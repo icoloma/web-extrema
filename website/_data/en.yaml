@@ -1395,7 +1395,7 @@ GCPArchitectingDesignAndProcess:
         - Incident response.
 
 KubernetesAndGKE:
-  title: Getting Started with Kubernetes and Google Container Engine
+  title: Getting Started with Google Kubernetes Engine
   requirements: "To get the most of out of this course, participants should have:<ul><li>Basic proficiency with command-line tools and Linux operating system environments, as well as Web server technologies such as Nginx.</li><li>Systems Operations experience including deploying and managing applications, either on-premises or in a public cloud environment.</li></ul>"
   audience: "This class is intended for the following:<ul><li>Application developers, Cloud Solutions Architects, DevOps Engineers, IT managers.</li><li>Individuals using Google Cloud Platform to create new solutions or to integrate existing systems, application environments, and infrastructure with the Google Cloud Platform.</li></ul>"
   desc: "<p>Learn to containerize workloads in Docker containers, deploy them to Kubernetes clusters provided by Google Container Engine, and scale those workloads to handle increased traffic. You also learn how to continuously deploy new code in a Kubernetes cluster to provide application updates.</p>"
@@ -1414,9 +1414,9 @@ KubernetesAndGKE:
         - Package a container using Docker.
         - Store a container image in Google Container Registry.
         - Launch a Docker container.
-    - title: Kubernetes and Google Container Engine Basics
+    - title: Kubernetes Basics
       content:
-        - Provision a complete Kubernetes cluster using Google Container Engine.
+        - Provision a complete Kubernetes cluster using Kubernetes Engine.
         - Deploy and manage Docker containers using kubectl.
         - Break an application into microservices using Kubernetes’ Deployments and Services.
     - title: Deploying to Kubernetes

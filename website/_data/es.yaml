@@ -413,7 +413,7 @@ GCPArchitectingDesignAndProcess:
       - Implementar tecnologías y procesos que aseguren la continuidad del negocio en caso de desastre.
 
 KubernetesAndGKE:
-  title: Getting Started with Kubernetes and Google Container Engine
+  title: Getting Started with Google Kubernetes Engine
   requirements: "Para este curso, los asistentes deben tener:<ul><li>Conocimientos de herramientas de línea de comandos y sistemas Linux, así como de tecnologías de servidores web como Nginx.</li><li>Experiencia en operaciones de sistemas, incluyendo despliegue y administración de aplicaciones, ya sea en entornos on-premise o de nube pública.</li></ul>"
   audience: "Esta clase está enfocada a:<ul><li>Desarrolladores de aplicaciones, Cloud Solutions Architects, DevOps Engineers e IT managers.</li><li>Profesionales que usen Google Cloud Platform para crear nuevas soluciones o para integrar sistemas ya existentes, entornos de aplicaciones e infraestructura con Google Cloud Platform.</li></ul>"
   desc: "<p>Aprende a empaquetar workloads en contenedores Docker, desplegarlos en clusters de Kubernetes provistos por Google Container Engine y escalar dichos workloads para manejar tráfico conforme éste crece. También se aprenderá cómo desplegar contínuamente el nuevo código en un clúster de Kubernetes para actualizar la aplicación.</p>"
