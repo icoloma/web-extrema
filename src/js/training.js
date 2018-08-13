@@ -12,7 +12,8 @@ var $document = $(document)
 
 var $newsletter = document.querySelector('.newsletter');
 
-document.querySelector('.close').addEventListener('click', function(e) {
+var $close = document.querySelector('.close')
+$close && $close.addEventListener('click', function(e) {
   $newsletter.classList.remove('show');
 })
 
