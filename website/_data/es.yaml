@@ -6,11 +6,11 @@ JoinUs:
   Profile:
     Description:
       - Buscamos un <b>Full Stack Engineer</b> (junior o senior) para que nos acompañe en nuevas aventuras en nuestra oficina de Santa Cruz de Tenerife o en Madrid (también somos muy fans de trabajar desde home office). Puedes tener ya experiencia o adquirirla con nosotros. Para nosotros no es imprescindible tener experiencia laboral, sino estar abierto a aprender y enseñar a otros. 
-      - Si sabes o quieres aprender Java y JavaScript con un stack moderno, somos lo que estás buscando. Te certificaremos para impartir cursos de Google Cloud Platform en empresas del IBEX35. Aprenderemos un montón juntos.
+      - Si sabes o quieres aprender Java y JavaScript con un stack moderno, somos lo que estás buscando. Te certificaremos para impartir cursos de Google Cloud en empresas del IBEX35. Aprenderemos un montón juntos.
     Points:
       Responsabilidades:
         - Desarrollar aplicaciones en el lado servidor (Java), web responsive (React, Webpack, etc.) y Android (React Naive)
-        - Impartir formación de los cursos oficiales de Google Cloud Platform (CPD200, CPB200, Google Cloud Fundamentals, etc)
+        - Impartir formación de los cursos oficiales de Google Cloud (CPD200, CPB200, Google Cloud Fundamentals, etc)
         - Una vez al año ayudarnos a organizar Codemotion, el evento técnico más grande de España. Es divertido!
         - "Give back: participar en eventos de comunidades, sea como ponente o asistente."
         - Realizar consultoría en estos campos para grandes empresas.
@@ -31,7 +31,7 @@ JoinUs:
     Contact: Si esto te suena bien, no nos dejes sin saber lo que sería conocerte. <a href="mailto:cv@extrema-sistemas.com">Envíanos tu CV</a>, incluyendo algún sitio donde podamos ver tu código.
 AboutUsTitle: Quiénes somos
 AboutUsContent:
-  - En Extrema Sistemas hacemos consultoría y formación. Como Certified Training Partner de Google y de Pivotal para España e Italia, impartimos todos los cursos oficiales de Google Cloud Platform y Spring. 
+  - En Extrema Sistemas hacemos consultoría y formación. Como Certified Training Partner de Google y de Pivotal para España e Italia, impartimos todos los cursos oficiales de Google Cloud y Spring. 
   - Hemos desarrollado el software de integración de sistemas de proyectos estratégicos de gestión de tráfico marítimo, navegación aérea, transporte vial y banca. Desde 2012 estamos organizando Codemotion Spain, el evento más grande de España dedicado a desarrolladores.
   - Somos una empresa pequeña y dinámica, donde cada miembro del equipo trabaja desde sitios diferentes.
 "i18n": Español
@@ -97,10 +97,10 @@ ContactForPrice: Consultar precio
 "Home": "Home"
 "Training": "Training"
 "Contact": "Contacto"
-"defaultDesc": "Extrema Sistemas es la compañía de formación líder en España e Italia, responsable de cursos de certificación para Google Cloud Platform y el conjunto de tecnologías que forman el Spring Portfolio."
+"defaultDesc": "Extrema Sistemas es la compañía de formación líder en España e Italia, responsable de cursos de certificación para Google Cloud y el conjunto de tecnologías que forman el Spring Portfolio."
 "indexTrainingTitle": "Habla con el líder en formación"
 "springDesc": "Los cursos oficiales sobre el estándar <i>de facto</i> para el desarrollo de aplicaciones Java."
-"googleCloudPlatformDesc": "Google Cloud Platform permite a los desarrolladores construir, testear y desplegar aplicaciones en la estructura fiable y escalable usada por Google"
+"googleCloudPlatformDesc": "Google Cloud permite a los desarrolladores construir, testear y desplegar aplicaciones en la estructura fiable y escalable usada por Google"
 "getInContact": "Ponte en contacto"
 "consultingTitle": "La ventaja natural de la consultoría"
 "consultingDesc": "Súmate a la lista de clientes que han confiado en nuestros servicios de consultoría y mentoring."
@@ -178,33 +178,33 @@ SpringEnterprise:
 CP100:
   title: "Google Cloud Fundamentals: Core Infrastructure"
   requirements: "Para entender las tecnologías que se cubrirán, ayuda estar familiarizado con el desarrollo de aplicaciones, sistemas operativos Linux, sistemas de operaciones y análisis de datos/machine learning."
-  audience: "Este curso está diseñado para desarrolladores, profesionales de sistemas de operaciones y arquitectos que planeen crear y desarrollar aplicaciones en un entorno de Google Cloud Platform. También está diseñado para que directivos y ejecutivos evalúen el potencial de Google Cloud Platform y las posibilidades de uso en su negocio."
-  desc: "<p>Este curso de un día da una visión general de los productos y servicios de Google Cloud Platform. A través de una combinación de presentaciones y laboratorios, los asistentes aprenderán el valor de Google Cloud Platform y cómo incorporar soluciones basadas en cloud a sus estrategias de negocio.</p>"
+  audience: "Este curso está diseñado para desarrolladores, profesionales de sistemas de operaciones y arquitectos que planeen crear y desarrollar aplicaciones en un entorno de Google Cloud. También está diseñado para que directivos y ejecutivos evalúen el potencial de Google Cloud y las posibilidades de uso en su negocio."
+  desc: "<p>Este curso de un día da una visión general de los productos y servicios de Google Cloud. A través de una combinación de presentaciones y laboratorios, los asistentes aprenderán el valor de Google Cloud y cómo incorporar soluciones basadas en cloud a sus estrategias de negocio.</p>"
   objectives: 
     description: "<p>Este curso enseña a los asistentes a:</p>"
     bullets:
-      - Identificar el propósito y el valor de los productos y servicios de Google Cloud Platform
-      - Interactuar con los servicios de Google Cloud Platform
-      - Describir formas en que los clientes han utilizado Google Cloud Platform
-      - "Elegir un entorno de despliegue adecuando en Google Cloud Platform: Google App Engine, Google Container Engine o Google Compute Engine"
+      - Identificar el propósito y el valor de los productos y servicios de Google Cloud
+      - Interactuar con los servicios de Google Cloud
+      - Describir formas en que los clientes han utilizado Google Cloud
+      - "Elegir un entorno de despliegue adecuando en Google Cloud: Google App Engine, Google Container Engine o Google Compute Engine"
       - "Desplegar una aplicación en Google App Engine, Google Container Engine y Google Compute Engine"
-      - "Usar y elegir entre las diferentes opciones de almacenamiento de Google Cloud Platform: Google Cloud Storage, Google Cloud SQL, Google Cloud Bigtable y Google Cloud Datastore"
+      - "Usar y elegir entre las diferentes opciones de almacenamiento de Google Cloud: Google Cloud Storage, Google Cloud SQL, Google Cloud Bigtable y Google Cloud Datastore"
       - Hacer un uso básico de BigQuery, el warehouse de datos administrado por Google para el análisis de datos.
 
 CPB100:
   title: "Google Cloud Fundamentals: Big Data & Machine Learning"
   requirements: "Para asistir a este curso, los alumnos deben tener experiencia con:<ul><li>Un lenguaje común de consultas, como SQL</li><li>Modelado de datos, tareas de extracción, transformación y carga de datos</li><li>Modelado de datos</li><li>Machine learning y/o estadísticas</li><li>Desarrollo de aplicaciones usando un lenguaje de programación como Python</li></ul>"
-  audience: "Esta clase está diseñada para:<ul><li>Data analysts, Data scientists y Business analysts que estén empezando con Google Cloud Platform.</li><li>Responsables del diseño de pipelines y arquitecturas para el procesamiento de datos, creación y mantenimiento de modelos estadísticos y de machine learning, consultas sobre datasets, visualización de resultados de búsqueda y creación de informes.</li><li>Ejecutivos y personal de IT que evalúan el potencial de Google Cloud Platform para su uso por Data Scientists.</li></ul>"
-  desc: "<p>Esta clase de 8 horas presenta a los participantes las prestaciones que Google Cloud Platform ofrece para Big Data y Machine Learning. Proporciona una visión general de Google Cloud Platform y una visión más en detalle de las funcionalidades de procesamiento de datos. Este curso muestra la facilidad, flexibilidad y potencia de las soluciones de big data en Google Cloud Platform.</p>"
+  audience: "Esta clase está diseñada para:<ul><li>Data analysts, Data scientists y Business analysts que estén empezando con Google Cloud.</li><li>Responsables del diseño de pipelines y arquitecturas para el procesamiento de datos, creación y mantenimiento de modelos estadísticos y de machine learning, consultas sobre datasets, visualización de resultados de búsqueda y creación de informes.</li><li>Ejecutivos y personal de IT que evalúan el potencial de Google Cloud para su uso por Data Scientists.</li></ul>"
+  desc: "<p>Esta clase de 8 horas presenta a los participantes las prestaciones que Google Cloud ofrece para Big Data y Machine Learning. Proporciona una visión general de Google Cloud y una visión más en detalle de las funcionalidades de procesamiento de datos. Este curso muestra la facilidad, flexibilidad y potencia de las soluciones de big data en Google Cloud.</p>"
   objectives: 
     description: "<p>Este curso enseña a los asistentes a:</p>"
     bullets:
-      - Identificar el propósito y el valor de los productos de Big Data y Machine Learning ofrecidos en Google Cloud Platform
-      - Usar CloudSQL y Cloud Dataproc para migrar datos de MySQL y Hadoop/Pig/Spark/Hive a Google Cloud Platform
+      - Identificar el propósito y el valor de los productos de Big Data y Machine Learning ofrecidos en Google Cloud
+      - Usar CloudSQL y Cloud Dataproc para migrar datos de MySQL y Hadoop/Pig/Spark/Hive a Google Cloud
       - Utilizar BigQuery y Cloud Datalab para realizar un análisis de datos interactivo
       - Usar una red neuronal utilizando TensorFlow
       - Utilizar las APIs de ML
-      - Elegir entre los diferentes productos de procesamiento de datos de Google Cloud Platform
+      - Elegir entre los diferentes productos de procesamiento de datos de Google Cloud
 
 
 CPB101:
@@ -242,17 +242,17 @@ CPB102:
 
 
 CPA200:
-  title: "Google Cloud Platform for Architects (CPA200)"
+  title: "Google Cloud for Architects (CPA200)"
   requirements: "Para realizar este curso se debe haber hecho el curso Google Cloud Fundamentals: Core Infrastructure"
-  audience: "Esta clase está dirigida a personadas interesadas en el diseño de soluciones basadas en Google Cloud Platform pero que no tienen mucha experiencia diseñando soluciones basadas en la nube."
-  desc: "<p>Esta clase está dirigida a personadas interesadas en el diseño de soluciones basadas en Google Cloud Platform pero que no tienen mucha experiencia diseñando soluciones basadas en la nube. Los asistentes aprenderán a: entender los puntos básicos a considerar al diseñar y desplegar en la nube; tener confianza suficiente para aprovechar todo lo que ofrece Google Cloud Platform; comprender la forma de empezar a trabajar con Google Cloud Platform e identificar los productos de Google Cloud Platform apropiados para hacer uso de patrones de aquitectura.</p>"
+  audience: "Esta clase está dirigida a personadas interesadas en el diseño de soluciones basadas en Google Cloud pero que no tienen mucha experiencia diseñando soluciones basadas en la nube."
+  desc: "<p>Esta clase está dirigida a personadas interesadas en el diseño de soluciones basadas en Google Cloud pero que no tienen mucha experiencia diseñando soluciones basadas en la nube. Los asistentes aprenderán a: entender los puntos básicos a considerar al diseñar y desplegar en la nube; tener confianza suficiente para aprovechar todo lo que ofrece Google Cloud; comprender la forma de empezar a trabajar con Google Cloud e identificar los productos de Google Cloud apropiados para hacer uso de patrones de aquitectura.</p>"
   objectives:
     description: "<p>Al final de este curso, los asistentes serán capaces de:</p>"
     bullets:
       - Entender los puntos básicos a considerar al diseñar y desplegar en la nube
-      - Tener confianza suficiente para aprovechar todo lo que ofrece Google Cloud Platform
-      - Comprender la forma de empezar a trabajar con Google Cloud Platform
-      - Identificar los productos de Google Cloud Platform apropiados para hacer uso de patrones de aquitectura
+      - Tener confianza suficiente para aprovechar todo lo que ofrece Google Cloud
+      - Comprender la forma de empezar a trabajar con Google Cloud
+      - Identificar los productos de Google Cloud apropiados para hacer uso de patrones de aquitectura
 
 
 CPB200:
@@ -284,10 +284,10 @@ CPB200:
       - Usar control de acceso para restringir el acceso a datos
 
 CPO200:
-  title: "Google Cloud Platform for Systems Operations Professionals (CPO200)"
+  title: "Google Cloud for Systems Operations Professionals (CPO200)"
   requirements: "Para asistir a este curso los alumnos deben haber asistido al curso Google Cloud Fundamentals: Core Infrastructure (o experiencia equivalente), tener cierta comodidad con las herramientas de línea de comandos en linux y experiencia básica previa con alguna nube pública"
-  audience: "El curso está preparado para que profesionales de sistemas de operaciones y administradores de sistemas usen Google Cloud Platform para crear y migrar su infraestructura y entornos de aplicaciones"
-  desc: "<p>Este curso de 4 días introduce a la implantación de entornos de despliegue en la nube usando Google Cloud Platform. A través de diapositivas y laboratorios se le enseña al asistente cómo desplegar componentes de una infraestructura en la nube tales como redes, sistemas y aplicaciones. Este curso está diseñado para administradores de sistemas y profesionales de sistemas de operaciones. Cloud Architects o personal de DevOps deberían tomar en su lugar los cursos Architecting with Google Platform</p>"
+  audience: "El curso está preparado para que profesionales de sistemas de operaciones y administradores de sistemas usen Google Cloud para crear y migrar su infraestructura y entornos de aplicaciones"
+  desc: "<p>Este curso de 4 días introduce a la implantación de entornos de despliegue en la nube usando Google Cloud. A través de diapositivas y laboratorios se le enseña al asistente cómo desplegar componentes de una infraestructura en la nube tales como redes, sistemas y aplicaciones. Este curso está diseñado para administradores de sistemas y profesionales de sistemas de operaciones. Cloud Architects o personal de DevOps deberían tomar en su lugar los cursos Architecting with Google Platform</p>"
   objectives: 
     description: "<p>Al finalizar este curso, los asistentes serán capaces de:</p>"
     bullets:
@@ -319,13 +319,13 @@ CPO200:
       - Configurar un balanceador de carga por HTTP tolerante a fallos
       - Probar los health checks para usar en un balanceador de carga por HTTP
       - Administrar el despliegue de aplicaciones usando Jinja y plantillas de Python con Google Cloud Deployment Manager
-      - Eliminar proyectos y recursos de Google Cloud Platform
+      - Eliminar proyectos y recursos de Google Cloud
 
 CPD200:
-  title: "Developing Solutions with Google Cloud Platform (CPD200)"
+  title: "Developing Solutions with Google Cloud (CPD200)"
   requirements: "Los asistentes deben haber asistido al curso Google Cloud Fundamentals: Core Infrastructure (o experiencia equivalente), tener cierta comodidad con las herramientas de línea de comandos en linux, experiencia en el desarrollo de aplicaciones y APIs usando Java o Python y experiencia básica previa con alguna nube pública"
-  audience: "Este curso está diseñado para desarrolladores con experiencia implementando aplicaciones que quieran aprender a desarrollar y desplegar aplicaciones web y móviles con alta escalabilidad en Google Cloud Platform."
-  desc: "<p>En este curso de tres días se prepara al alumno para desarrollar aplicaciones para Google Cloud Platform. A través de las diapositivas, las demostraciones y los laboratorios se enseñará cómo crear aplicaciones diseñadas para entornos en cloud usando Google App Engine Standard Environment, Google Cloud Datastore, Google Cloud Endpoints y Google Cloud Repositories.</p>"
+  audience: "Este curso está diseñado para desarrolladores con experiencia implementando aplicaciones que quieran aprender a desarrollar y desplegar aplicaciones web y móviles con alta escalabilidad en Google Cloud."
+  desc: "<p>En este curso de tres días se prepara al alumno para desarrollar aplicaciones para Google Cloud. A través de las diapositivas, las demostraciones y los laboratorios se enseñará cómo crear aplicaciones diseñadas para entornos en cloud usando Google App Engine Standard Environment, Google Cloud Datastore, Google Cloud Endpoints y Google Cloud Repositories.</p>"
   objectives: 
     description: "<p>Al finalizar el curso, el asistente será capaz de:</p>"
     bullets:
@@ -337,14 +337,14 @@ CPD200:
       - Mejorar el rendimiento y la capacidad con Memcache y el escalado de instancias.
 
 GCPArchitectingInfrastructure:
-  title: "Architecting with Google Cloud Platform: Infrastructure"
+  title: "Architecting with Google Cloud: Infrastructure"
   requirements: "Los asistentes deben haber asistido al curso Google Cloud Fundamentals: Core Infrastructure (o experiencia equivalente), tener cierta comodidad con las herramientas de línea de comandos en Linux y experiencia en operaciones de sistemas incluyendo el despliegue y la administración de aplicaciones, ya sea en instalaciones propias o en alguna nube pública."
-  audience: "Este curso está diseñado para desarrolladores experimentados responsables de la administración de transformaciones de big data, incluyendo:<ul><li>Cloud Solutions Architects, profesionales de sistemas de operaciones, DevOps Engineers y administradores de IT.</li><li>Personas que usan Google Cloud Platform para crear nuevas soluciones o para integrar sistemas ya existentes que usen entornos de aplicaciones y la infraestructura de Google Cloud Platform.</li></ul>"
-  desc: "<p>Este curso de tres días enseña a los asistentes los productos de Google Cloud Platform, asi como la flexible arquitectura que proporciona. A través de las diapositivas, las demostraciones y los laboratorios se enseñará a explorar y desplegar diferentes soluciones, incluyendo componentes de infraestructura como redes, sistemas y servicios de aplicaciones. Este curso también cubre despliegues prácticos como la interconexión segura de redes, claves de encriptación proporcionadas por el usuario, control de seguridad, cuotas, facturación y monitorización de recursos.</p>"
+  audience: "Este curso está diseñado para desarrolladores experimentados responsables de la administración de transformaciones de big data, incluyendo:<ul><li>Cloud Solutions Architects, profesionales de sistemas de operaciones, DevOps Engineers y administradores de IT.</li><li>Personas que usan Google Cloud para crear nuevas soluciones o para integrar sistemas ya existentes que usen entornos de aplicaciones y la infraestructura de Google Cloud.</li></ul>"
+  desc: "<p>Este curso de tres días enseña a los asistentes los productos de Google Cloud, asi como la flexible arquitectura que proporciona. A través de las diapositivas, las demostraciones y los laboratorios se enseñará a explorar y desplegar diferentes soluciones, incluyendo componentes de infraestructura como redes, sistemas y servicios de aplicaciones. Este curso también cubre despliegues prácticos como la interconexión segura de redes, claves de encriptación proporcionadas por el usuario, control de seguridad, cuotas, facturación y monitorización de recursos.</p>"
   objectives:
     description: "<p>Este curso enseña a los asistentes a:</p>"
     bullets:
-      - Elegir entre toda la gama de tecnologías que proporciona Google Cloud Platform.
+      - Elegir entre toda la gama de tecnologías que proporciona Google Cloud.
       - Métodos para desarrollo, implementación y despliegue.
       - Distinguir entre funcionalidades parecidas o relacionadas de los distintos productos y tecnologías.
       - Reconocer una gran variedad de soluciones, casos de uso y aplicaciones.
@@ -352,28 +352,28 @@ GCPArchitectingInfrastructure:
       - Mejorar el conocimiento de patrones de desarrollo en cloud para asegurar la seguridad, escalabilidad, alta disponibilidad y otros elementos asociados a las aplicaciones desplegadas. 
 
 GCPDataEngineering:
-  title: "Data Engineering on Google Cloud Platform"
+  title: "Data Engineering on Google Cloud"
   requirements: "Los asistentes deben haber asistido al curso Google Cloud Fundamentals: Big Data & Machine Learning (o experiencia equivalente), tener experiencia en el análisis de datos usando SQL, así como en tareas de extracción, carga, transformación y modelado de datos. Además, debe tener conocimiento de desarrollo de aplicaciones usando lenguajes de programación comunes como Python y estar familiarizado con Machine Learning y/o estadística."
   audience: "Este curso esta diseñado para desarrolladores experimentados cuya responsabilidad sea la administración de transformaciones de grandes conjuntos de datos, incluyendo:<ul><li>Extracción, carga, transformación, limpieza y validación de los datos</li><li>Diseño de pipelines y arquitecturas para el procesamiento de datos</li><li>Creación y administración de modelos estadísticos y de machine learning</li><li>Consulta sobre conjuntos de datos, visualización de los resultados y creación de informes</li></ul>"
-  desc: "<p>Este curso de cuatro días enseña a los asistentes una introducción al diseño y construcción de sistemas de procesamiento de datos usando Google Cloud Platform. A través de las diapositivas, las demostraciones y los laboratorios se enseñará a los asistentes cómo diseñar sistemas de procesamiento de datos, construir pipelines de datos end-to-end, analizar datos y utilizar machine learning. Este curso cubre tanto datos estructurados como no estructurados y streaming de datos.</p>"
+  desc: "<p>Este curso de cuatro días enseña a los asistentes una introducción al diseño y construcción de sistemas de procesamiento de datos usando Google Cloud. A través de las diapositivas, las demostraciones y los laboratorios se enseñará a los asistentes cómo diseñar sistemas de procesamiento de datos, construir pipelines de datos end-to-end, analizar datos y utilizar machine learning. Este curso cubre tanto datos estructurados como no estructurados y streaming de datos.</p>"
   objectives:
     description: "<p>Este curso enseña a los asistentes a:</p>"
     bullets:
-      - Diseñar y construir sistemas de procesamiento de datos en Google Cloud Platform
+      - Diseñar y construir sistemas de procesamiento de datos en Google Cloud
       - Procesamiento de datos en batch y streaming implementando pipelines de datos autoescalables sobre Cloud Dataflow
       - Obtener información de negocio de conjuntos de datos extremadamente grandes usando Google BigQuery 
       - Entrenar, evaluar y predecir usando modelos de machine learning usando TensorFlow y Cloud ML
       - Aprovechar los datos no estructurados con las APIs de Spark y ML en Cloud Dataproc
 
 GCPFromDataToInsights:
-  title: From Data to Insights with Google Cloud Platform
+  title: From Data to Insights with Google Cloud
   requirements: "Para este curso los alumnos deben tener conocimientos y experiencia básica de ANSI SQL."
-  audience: "Este curso está diseñado para:<ul><li>Data Analysts, Business Analysts y Business Intelligence professionals</li><li>Cloud Data Engineers que trabajen con Data Analysts para construir soluciones de datos escalables en Google Cloud Platform</li></ul>"
-  desc: "<p>¿Quieres saber cómo consultar y procesar petabytes de datos en segundos? ¿Tienes curiosidad por herramientas de análisis de datos que escalan automáticamente conforme crecen tus datos? Bienvenido al curso de Data Insights!</p><p>Este curso de dos días enseña a los asistentes cómo sumergirse en el análisis de datos y su visualización usando Google Cloud Platform. En el curso los asistentes aprenden, a través de laboratorios, a explorar, hacer minería, cargas, visualizar y extraer datos de diversos datasets de Google BigQuery. El curso cubre la carga de datos, su consulta, el esquema del modelo, optimización de rendimiento, precio de las consultas y la visualización de los datos.</p>"
+  audience: "Este curso está diseñado para:<ul><li>Data Analysts, Business Analysts y Business Intelligence professionals</li><li>Cloud Data Engineers que trabajen con Data Analysts para construir soluciones de datos escalables en Google Cloud</li></ul>"
+  desc: "<p>¿Quieres saber cómo consultar y procesar petabytes de datos en segundos? ¿Tienes curiosidad por herramientas de análisis de datos que escalan automáticamente conforme crecen tus datos? Bienvenido al curso de Data Insights!</p><p>Este curso de dos días enseña a los asistentes cómo sumergirse en el análisis de datos y su visualización usando Google Cloud. En el curso los asistentes aprenden, a través de laboratorios, a explorar, hacer minería, cargas, visualizar y extraer datos de diversos datasets de Google BigQuery. El curso cubre la carga de datos, su consulta, el esquema del modelo, optimización de rendimiento, precio de las consultas y la visualización de los datos.</p>"
   objectives:
     description: "<p>Este curso enseña a los asistentes a:</p>"
     bullets:
-      - Extraer información de datos usando las herramientas de análisis y visualización de Google Cloud Platform
+      - Extraer información de datos usando las herramientas de análisis y visualización de Google Cloud
       - Consultar datasets de forma interactiva usando Google BigQuery
       - Cargar, limpiar y transformar datos a gran escala
       - Visualizar datos usando Google Data Studio y otras plataformas de terceros
@@ -381,9 +381,9 @@ GCPFromDataToInsights:
       - Optimizar el precio y el rendimiento del modelo de datos y las consultas
 
 DevelopingApplicationsWithGCP:
-  title: Developing Applications with Google Cloud Platform
-  requirements: "Para asistir a este curso, los alumnos deben cumplir con los siguientes requisitos:<ul><li>Haber completado el curso Google Cloud Platform Fundamentals (o experiencia equivalente)</li><li>Conocimientos de Node.js</li><li>Conocimiento de herramientas de línea de comandos y sistemas Linux</li></ul>"
-  audience: "Desarrolladores de aplicaciones que quieran construir aplicaciones cloud-native o rediseñar aplicaciones existentes que puedan desplegarse en Google Cloud Platform"
+  title: Developing Applications with Google Cloud
+  requirements: "Para asistir a este curso, los alumnos deben cumplir con los siguientes requisitos:<ul><li>Haber completado el curso Google Cloud Fundamentals (o experiencia equivalente)</li><li>Conocimientos de Node.js</li><li>Conocimiento de herramientas de línea de comandos y sistemas Linux</li></ul>"
+  audience: "Desarrolladores de aplicaciones que quieran construir aplicaciones cloud-native o rediseñar aplicaciones existentes que puedan desplegarse en Google Cloud"
   desc: "<p>En este curso los desarrolladores aprenderán como diseñar, desarrollar y desplegar aplicaciones que integren componentes del ecosistema de Google Cloud. A través de una combinación de presentaciones, demos y laboratorios, los asistentes aprenderán cómo usar los servicios de GCP y APIs de machine learning preentrenadas para construir aplicaciones en la nube seguras y escalables.</p>"
   objectives:
     description: "<p>Este curso enseña a los asistentes a:</p>"
@@ -398,10 +398,10 @@ DevelopingApplicationsWithGCP:
       - Elegir el entorno apropiado para cada aplicación; usar Google Container Engine como entorno y luego cambiar a una solución no-ops con Google App Engine Flex.
   
 GCPArchitectingDesignAndProcess:
-  title: "Architecting with Google Cloud Platform: Design and Process"
-  requirements: "Para realizar este curso los asistentes deben:<ul><li>Completar el curso Architecting with Google Cloud Platform: Infrastructure (o experiencia equivalente)</li><li>Conocimientos de herramientas de línea de comandos y sistemas Linux</li><li>Tener experiencia en operaciones de sistemas incluyendo despliegue y administración de aplicaciones, bien on-premise como en una nube pública</li></ul>"
-  audience: "Está clase está enfocada a:<ul><li>Cloud Solutions Architects, Site Reliability Engineers, Systems Operations Professionals, DevOps Engineers o IT managers.</li><li>Personal que use Google Cloud Platform para crear nuevas soluciones o para integrar sistemas existentes con Google Cloud Platform.</li></ul>"
-  desc: "<p>Este curso de dos días permite a los asistentes construir soluciones eficientes y con alta disponibilidad en Google Cloud Platform, usando patrones de diseño y los principios de Google Site Reliability Engineering (SRE). Es una continuación del curso Architecting with Google Cloud Platform: Infrastructure y asume que se tiene experiencia con las tecnologías cubiertas en dicho curso.</p><p>A través de una combinación de presentaciones, demos y laboratorios, los alumnos aprenderán cómo diseñar despliegues con alta disponibilidad, seguros y de una forma cost-effective.</p>"
+  title: "Architecting with Google Cloud: Design and Process"
+  requirements: "Para realizar este curso los asistentes deben:<ul><li>Completar el curso Architecting with Google Cloud: Infrastructure (o experiencia equivalente)</li><li>Conocimientos de herramientas de línea de comandos y sistemas Linux</li><li>Tener experiencia en operaciones de sistemas incluyendo despliegue y administración de aplicaciones, bien on-premise como en una nube pública</li></ul>"
+  audience: "Está clase está enfocada a:<ul><li>Cloud Solutions Architects, Site Reliability Engineers, Systems Operations Professionals, DevOps Engineers o IT managers.</li><li>Personal que use Google Cloud para crear nuevas soluciones o para integrar sistemas existentes con Google Cloud.</li></ul>"
+  desc: "<p>Este curso de dos días permite a los asistentes construir soluciones eficientes y con alta disponibilidad en Google Cloud, usando patrones de diseño y los principios de Google Site Reliability Engineering (SRE). Es una continuación del curso Architecting with Google Cloud: Infrastructure y asume que se tiene experiencia con las tecnologías cubiertas en dicho curso.</p><p>A través de una combinación de presentaciones, demos y laboratorios, los alumnos aprenderán cómo diseñar despliegues con alta disponibilidad, seguros y de una forma cost-effective.</p>"
   objectives:
     description: "<p>Este curso enseña a los asistentes a:</p>"
     bullets:
@@ -415,7 +415,7 @@ GCPArchitectingDesignAndProcess:
 KubernetesAndGKE:
   title: Getting Started with Google Kubernetes Engine
   requirements: "Para este curso, los asistentes deben tener:<ul><li>Conocimientos de herramientas de línea de comandos y sistemas Linux, así como de tecnologías de servidores web como Nginx.</li><li>Experiencia en operaciones de sistemas, incluyendo despliegue y administración de aplicaciones, ya sea en entornos on-premise o de nube pública.</li></ul>"
-  audience: "Esta clase está enfocada a:<ul><li>Desarrolladores de aplicaciones, Cloud Solutions Architects, DevOps Engineers e IT managers.</li><li>Profesionales que usen Google Cloud Platform para crear nuevas soluciones o para integrar sistemas ya existentes, entornos de aplicaciones e infraestructura con Google Cloud Platform.</li></ul>"
+  audience: "Esta clase está enfocada a:<ul><li>Desarrolladores de aplicaciones, Cloud Solutions Architects, DevOps Engineers e IT managers.</li><li>Profesionales que usen Google Cloud para crear nuevas soluciones o para integrar sistemas ya existentes, entornos de aplicaciones e infraestructura con Google Cloud.</li></ul>"
   desc: "<p>Aprende a empaquetar workloads en contenedores Docker, desplegarlos en clusters de Kubernetes provistos por Google Container Engine y escalar dichos workloads para manejar tráfico conforme éste crece. También se aprenderá cómo desplegar contínuamente el nuevo código en un clúster de Kubernetes para actualizar la aplicación.</p>"
   objectives:
     description: "<p>Este curso enseña a los asistentes a:</p>"
@@ -427,10 +427,10 @@ KubernetesAndGKE:
       - Configurar un pipeline de despliegue contínuo usando Jenkins.
 
 GCPForAWSProfessionals:
-  title: Google Cloud Platform Fundamentals for AWS Professionals
+  title: Google Cloud Fundamentals for AWS Professionals
   requirements: "Para asister a este curso, los asistentes deben tener:<ul><li>Conocimiento básico sobre tecnologías de redes como subredes y routing.</li><li>Experiencia con Amazon VPC, así como instancias y discos de Amazon EC2.</li><li>Estar familiarizado con Amazon S3 y las tecnologías de bases de datos de AWS.</li></ul>"
-  audience: "Esta clase está enfocada a:<ul><li>AWS Solution Architects que estén comenzando con Google Cloud Platform.</li><li>AWS SysOps Administrators habituados a construir soluciones usando IaaS.</li><li>Arquitectos e ingenieros que operen con varias nubes.</li></ul>"
-  desc: "<p>Este curso de seis horas con laboratorios introduce a los profesionales de AWS a Google Cloud Platform (GCP) en los cuatros pilares de la tecnología: redes, computación, almacenamiento y bases de datos. Está diseñado para AWS Solution Architects y SysOps Administrators familiarizados con las funcionalidades de AWS que quieren aprender y ganar experiencia configurando productos de GCP inmediatamente. A través de presentaciones, demos y laboratorios, los asistentes tendrán detalles de las semejanzas, diferencias y de cómo comenzar rápidamente.</p>"
+  audience: "Esta clase está enfocada a:<ul><li>AWS Solution Architects que estén comenzando con Google Cloud.</li><li>AWS SysOps Administrators habituados a construir soluciones usando IaaS.</li><li>Arquitectos e ingenieros que operen con varias nubes.</li></ul>"
+  desc: "<p>Este curso de seis horas con laboratorios introduce a los profesionales de AWS a Google Cloud (GCP) en los cuatros pilares de la tecnología: redes, computación, almacenamiento y bases de datos. Está diseñado para AWS Solution Architects y SysOps Administrators familiarizados con las funcionalidades de AWS que quieren aprender y ganar experiencia configurando productos de GCP inmediatamente. A través de presentaciones, demos y laboratorios, los asistentes tendrán detalles de las semejanzas, diferencias y de cómo comenzar rápidamente.</p>"
   objectives:
     description: "<p>Este curso enseña a los asistentes a:</p>"
     bullets:
@@ -443,8 +443,8 @@ GCPForAWSProfessionals:
 KubernetesAndGKEAdvanced:
   title: Kubernetes Master Class
   requirements: "Para asistir a este curso, los asistentes deben tener:<ul><li>Conocimientos de herramientas de línea de comandos y sistemas Linux</li><li>Experiencia en operaciones de sistemas incluyendo el despliegue y la administración de aplicaciones, ya sea en instalaciones propias o en alguna nube pública</li><li>No se necesitan conocimientos previos de Kubernetes</li></ul>"
-  audience: "Esta clase está enfocada para:<ul><li>Desarrolladores de aplicaciones, Cloud Solutions Architects y DevOps Engineers.</li><li>Profesionales que usen Google Cloud Platform para crear nuevas soluciones o para integrar sistemas ya existentes, entornos de aplicaciones e infraestructura con Google Cloud Platform.</li></ul>"
-  desc: "<p>Este curso práctico de seis horas introduce a la orquestación de contenedores, desde los conceptos básicos de Kubernetes hasta pipelines de CI/CD basados en contenedores. Este curso es un 60% teórico y un 40% práctico con laboratorios basados en Google Cloud Platform. La mayor parte de los contenidos del curso sirven para cualquier cluster de Kubernetes, bien on-premise o en cualquier otro proveedor de nube. Si quieres estar preparado para desplegar contenedores en producción fácilmente, éste es tu curso.</p>"
+  audience: "Esta clase está enfocada para:<ul><li>Desarrolladores de aplicaciones, Cloud Solutions Architects y DevOps Engineers.</li><li>Profesionales que usen Google Cloud para crear nuevas soluciones o para integrar sistemas ya existentes, entornos de aplicaciones e infraestructura con Google Cloud.</li></ul>"
+  desc: "<p>Este curso práctico de seis horas introduce a la orquestación de contenedores, desde los conceptos básicos de Kubernetes hasta pipelines de CI/CD basados en contenedores. Este curso es un 60% teórico y un 40% práctico con laboratorios basados en Google Cloud. La mayor parte de los contenidos del curso sirven para cualquier cluster de Kubernetes, bien on-premise o en cualquier otro proveedor de nube. Si quieres estar preparado para desplegar contenedores en producción fácilmente, éste es tu curso.</p>"
   objectives:
     description: "<p>Este curso enseña a los asistentes a:</p>"
     bullets:
