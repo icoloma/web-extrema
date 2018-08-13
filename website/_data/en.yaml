@@ -560,9 +560,10 @@ CPB100:
         - BigQuery
         - "Lab: Build machine learning dataset"
     - title: Machine Learning
+      content:
         - Machine Learning with TensorFlow
         - "Lab: Carry out ML with TensorFlow"
-        - Pre-built models for common needs.
+        - Pre-built models for common needs
         - "Lab: Employ ML APIs"
     - title: Data Processing Architectures
       content:
