@@ -426,9 +426,11 @@ CP100:
       - Identify the purpose and value of Google Cloud products and services
       - Interact with Google Cloud services
       - Describe ways in which customers have used Google Cloud
-      - "Choose among and use application deployment environments on Google Cloud: Google App Engine, Google Container Engine, and Google Compute Engine"
+      - "Choose among and use application deployment environments on Google Cloud: Google App Engine, Google Kubernetes Engine, and Google Compute Engine"
       - "Choose among and use Google Cloud storage options: Google Cloud Storage, Google Cloud SQL, Google Cloud Bigtable, and Google Cloud Datastore"
       - Make basic use of BigQuery, Google’s managed data warehouse for analytics
+      - Make basic use of Cloud Deployment Manager, Google’s tool for creating and managing cloud resources through templates
+      - Make basic use of Google Stackdriver, Google’s monitoring, logging, and diagnostics system
   syllabus:
     - title: Introducing Google Cloud
       content:
@@ -441,30 +443,37 @@ CP100:
         - Understand the purpose of and use cases for Identity and Access Management
         - List the methods of interacting with Google Cloud
         - "Lab: Getting Started with Google Cloud"
-    - title: Google App Engine and Google Cloud Datastore
-      content:
-        - Understand the purpose of and use cases for Google App Engine and Google Cloud Datastore
-        - Contrast the App Engine Standard environment with the App Engine Flexible environment
-        - Understand the purpose of and use cases for Google Cloud Endpoints
-        - "Lab: Deploying Applications Using App Engine and Cloud Datastore"
-    - title: Google Cloud Storage Options
-      content:
-        - "Understand the purpose of and use cases for: Google Cloud Storage, Google Cloud SQL, and Google Cloud Bigtable"
-        - Learn how to choose between the various storage options on Google Cloud
-        - "Lab: Integrating Applications with Google Cloud Storage"
-    - title: Google Container Engine
-      content:
-        - Define the concept of a container and identify uses for containers
-        - Identify the purpose of and use cases for Google Container Engine and Kubernetes
-    - title: Google Compute Engine and Networking
+    - title: Virtual Machines and Networks in the Cloud
       content:
         - Identify the purpose of and use cases for Google Compute Engine
-        - Understand the various Google Cloud networking and operational tools and services
-        - "Lab: Deploying Applications Using Google Compute Engine"
-    - title: Big Data and Machine Learning
+        - Understand the various Google Cloud Platform networking and operational tools and services
+        - "Lab: Compute Engine"
+    - title: Storage in the Cloud
+      content:
+        - "Understand the purpose of and use cases for: Google Cloud Storage, Google Cloud SQL, Google Cloud Bigtable, and Google Cloud Datastore"
+        - Learn how to choose between the various storage options on Google Cloud
+        - "Lab: Google Cloud Storage and Cloud SQL"
+    - title: Containers in the Cloud
+      content:
+        - Define the concept of a container and identify uses for containers
+        - Identify the purpose of and use cases for Google Kubernetes Engine and Kubernetes
+        - "Lab: Kubernetes Engine"
+    - title: Applications in the Cloud
+      content:
+        - Understand the purpose of and use cases for Google App Engine
+        - Contrast the App Engine Standard environment with the App Engine Flexible environment
+        - Understand the purpose of and use cases for Google Cloud Endpoints
+        - "Lab: App Engine"
+    - title: Developing, Deploying, and Monitoring in the Cloud
+      content:
+        - Understand options for software developers to host their source code
+        - Understand the purpose of template-based creation and management of resources
+        - Understand the purpose of integrated monitoring, alerting, and debugging
+        - "Lab: Deployment Manager and Stackdriver"
+    - title: Big Data and Machine Learning in the Cloud
       content:
         - Understand the purpose of and use cases for the products and services in the Google Cloud big data and machine learning platforms
-        - "Lab: Getting Started with BigQuery"
+        - "Lab: BigQuery"
 
 CPA200:
   title: "Google Cloud for Architects (CPA200)"
@@ -530,9 +539,7 @@ CPB100:
     - title: Introducing Google Cloud
       content:
         - Google Platform Fundamentals Overview
-        - Google Cloud Data Products and Technology
-        - Usage scenarios
-        - "Lab: Sign up for Google Cloud"
+        - Google Cloud Platform Big Data Products
     - title: Compute and Storage Fundamentals
       content:
         - CPUs on demand (Compute Engine)
@@ -546,17 +553,18 @@ CPB100:
         - "Lab: Importing data into CloudSQL and running queries"
         - Spark on Dataproc
         - "Lab: Machine Learning Recommendations with SparkML"
-    - title: Scaling data analysis
+    - title: Scaling Data Analysis
       content:
         - Fast random access
         - Datalab
         - BigQuery
         - "Lab: Build machine learning dataset"
+    - title: Machine Learning
         - Machine Learning with TensorFlow
-        - "Lab: Train and use neural network"
-        - Fully built models for common needs
+        - "Lab: Carry out ML with TensorFlow"
+        - Pre-built models for common needs.
         - "Lab: Employ ML APIs"
-    - title: Data processing architectures
+    - title: Data Processing Architectures
       content:
         - Message-oriented architectures with Pub/Sub
         - Creating pipelines with Dataflow
@@ -928,77 +936,84 @@ GCPArchitectingInfrastructure:
   syllabus:
     - title: Introduction to Google Cloud
       content:
-        - Role of the Cloud Architect
-        - Learn about Solution Domains as an approach to design
+        - Google Cloud Platform (GCP) Infrastructure
+        - Using GCP
         - "Lab: Console and Cloud Shell"
-        - "Lab: Projects"
+        - "Demo: Projects"
         - "Lab: Infrastructure Preview"
     - title: Virtual Networks
       content:
-        - Cloud Virtual Networks (CVN), Projects, Networks, Subnetworks, IP addresses, Routes, Firewall rules
+        - Virtual Private Cloud (VPC), Projects, Networks, Subnetworks, IP addresses, Routes, Firewall rules
         - Subnetworks for resource management instead of physical network topology
         - "Lab: Virtual Networking"
         - "Lab: Bastion Host"
     - title: Virtual Machines
       content:
-        - GCE, tags, VM options, vCPUs, disk options, images, and special features of persistent disks for VMs
+        - Compute Engine
         - "Lab: Creating Virtual Machines"
+        - Compute options (vCPU and Memory)
+        - Images
+        - Common Compute Engine actions
         - "Lab: Working with Virtual Machines"
     - title: Cloud IAM
       content:
-        - Members, roles, organizations, account administration, service accounts
+        - Organizations, Roles, Members, Service accounts, Cloud IAM best practices
         - "Lab: Cloud IAM"
     - title: Data Storage Services
       content:
-        - Cloud Storage, Datastore, Bigtable, Cloud SQL
+        - Cloud Storage
         - "Lab: Cloud Storage"
+        - Cloud SQL
         - "Lab: Cloud SQL"
+        - Cloud Spanner, Cloud Datastore
         - "Lab: Cloud Datastore"
+        - Cloud Bigtable
     - title: Resource Management
       content:
-        - Billing, Quotas, Labels, Names, Cloud Resource Manager
-        - "Lab: Billing Administration"
+        - Cloud Resource Manager, Quotas, Labels, Names, Billing
+        - "Demo: Billing Administration"
         - "Lab: Examining Billing Data with BigQuery"
     - title: Resource Monitoring
       content:
-        - Stackdriver, Monitoring, Logging, Error Reporting, Tracing, Debugging
+        - Stackdriver, Monitoring
         - "Lab: Resource Monitoring (Stackdriver)"
+        - Logging, Error Reporting, Tracing, Debugging
         - "Lab: Error Reporting and Debugging (Stackdriver)"
     - title: Interconnecting Networks
       content:
-        - VPNs, Cloud Router, Cloud Interconnect, Direct Peering, Cloud DNS
+        - Cloud Virtual Private Network (VPN)
         - "Lab: Virtual Private Networks (VPN)"
-        - "Lab: Dynamic VPN with Cloud Routers"
+        - Cloud Router, Cloud Interconnect, External Peering, Cloud DNS
     - title: Load Balancing
       content:
-        - Network Load Balancing, HTTP(S) Load Balancing, SSL Load Balancing and Internal Load Balancing, Managed Instance Groups
+        - Managed Instance Groups, HTTPS load balancing, Cross-region and content-based load balancing, SSL proxy/TCP proxy load balancing, Network load balancing
         - "Lab: VM Automation and Load Balancing"
     - title: Autoscaling
       content:
-        - Autoscaler
+        - Autoscaling, Policies, Configuration
         - "Lab: Autoscaling"
-    - title: Infrastructure Automation with Cloud API
+    - title: Infrastructure Automation with Google Cloud Platform APIs
       content:
-        - Infrastructure automation, custom images, startup and shutdown scripts and metadata
-        - "Lab: Cloud API Infrastructure Automation"
+        - Infrastructure automation, Images, Metadata, Scripts, Google Cloud API
+        - "Lab: Google Cloud Platform API Infrastructure Automation"
     - title: Infrastructure Automation with Deployment Manager
       content:
-        - Deployment Manager templates
+        - Deployment Manager, Configuration, Cloud Launcher
         - "Lab: Deployment Manager"
     - title: Managed Services
       content:
-        - Dataproc, Dataflow, BigQuery, Datalab
+        - Cloud Dataproc, Cloud Dataflow, BigQuery, Cloud Datalab
     - title: Application Infrastructure Services
       content:
-        - Cloud Pub/Sub, Cloud Endpoints and Apigee, Cloud Functions
+        - Cloud Pub/Sub, API Management, Cloud Functions, Cloud Source Repositories, Specialty APIs
     - title: Application Development Services
       content:
-        - Google App Engine (GAE), Dev Tools, Cloud Source Repos
-        - "Lab: App Engine Development"
+        - App Engine
     - title: Containers
       content:
-        - Containers, Google Container Engine (GKE), and Container Registry
+        - Containers, Kubernetes Engine, Container Registry
         - "Lab: Kubernetes Load Balancing"
+        - Kubernetes Engine, App Engine, or Containers on Compute Engine?
 
 GCPDataEngineering:
   title: "Data Engineering on Google Cloud"
@@ -1247,7 +1262,7 @@ DevelopingApplicationsWithGCP:
       - Integrate application components and data sources.
       - Debug, trace, and monitor applications.
       - Perform repeatable deployments with containers and deployment services.
-      - Choose the appropriate application runtime environment; use Google Container Engine as a runtime environment and later switch to a no-ops solution with Google App Engine Flex.
+      - Choose the appropriate application runtime environment; use Google Kubernetes Engine as a runtime environment and later switch to a no-ops solution with Google App Engine Flex.
   syllabus:
     - title: Best Practices for Application Development
       content:
@@ -1317,7 +1332,7 @@ DevelopingApplicationsWithGCP:
     - title: Execution Environments for Your Application
       content:
         - Google Compute Engine
-        - Container Engine
+        - Kubernetes Engine
         - App Engine flexible environment
         - Cloud Functions
         - Cloud Dataflow
@@ -1398,7 +1413,7 @@ KubernetesAndGKE:
   title: Getting Started with Google Kubernetes Engine
   requirements: "To get the most of out of this course, participants should have:<ul><li>Basic proficiency with command-line tools and Linux operating system environments, as well as Web server technologies such as Nginx.</li><li>Systems Operations experience including deploying and managing applications, either on-premises or in a public cloud environment.</li></ul>"
   audience: "This class is intended for the following:<ul><li>Application developers, Cloud Solutions Architects, DevOps Engineers, IT managers.</li><li>Individuals using Google Cloud to create new solutions or to integrate existing systems, application environments, and infrastructure with the Google Cloud.</li></ul>"
-  desc: "<p>Learn to containerize workloads in Docker containers, deploy them to Kubernetes clusters provided by Google Container Engine, and scale those workloads to handle increased traffic. You also learn how to continuously deploy new code in a Kubernetes cluster to provide application updates.</p>"
+  desc: "<p>Learn to containerize workloads in Docker containers, deploy them to Kubernetes clusters provided by Google Kubernetes Engine, and scale those workloads to handle increased traffic. You also learn how to continuously deploy new code in a Kubernetes cluster to provide application updates.</p>"
   objectives:
     description: "<p>This course teaches participants the following skills:</p>"
     bullets:
@@ -1502,7 +1517,7 @@ KubernetesAndGKEAdvanced:
       - "Introduction to the basic components of Kubernetes: Pods, Services, Deployments, Replica Sets, Ingress."
       - Rolling updates and rollbacks.
       - "Best practices with Kubernetes: container image size, resource limits, liveness and readiness probes, pod/node affinity and antiaffinity, taints and tolerations."
-      - Autoscaling, Autoupdates and Autorepair on Google Container Engine. Multi-zone clusters.
+      - Autoscaling, Autoupdates and Autorepair on Google Kubernetes Engine. Multi-zone clusters.
       - CI/CD pipelines with Kubernetes and Helm.
       - Monitoring and alerts with StackDriver.
       - "Updates from the last three Kubernetes versions: 1.6, 1.7, 1.8."
@@ -1511,7 +1526,7 @@ KubernetesAndGKEAdvanced:
       content:
         - Pods, Nodes, Replica Sets, Deployments, Services, Persistent Volumes
         - Rolling updtaes and deployment rollback
-        - Web console for Kubernetes and Container Engine 
+        - Web console for Kubernetes and Kubernetes Engine 
         - Stateful workloads in Kubernetes
     - title: Best Practices
       content:
