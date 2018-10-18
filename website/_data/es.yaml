@@ -426,7 +426,7 @@ KubernetesAndGKE:
       - Usar contenedores en una aplicación ya existente.
       - Entender los conceptos y principios de Kubernetes.
       - Desplegar aplicaciones en Kubernetes usando línea de comandos.
-      - Configurar un pipeline de despliegue contínuo usando Jenkins.
+      - Configurar un pipeline de despliegue contínuo usando Spinnaker y/o Jenkins.
 
 GCPForAWSProfessionals:
   title: Google Cloud Fundamentals for AWS Professionals

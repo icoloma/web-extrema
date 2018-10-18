@@ -1422,7 +1422,7 @@ KubernetesAndGKE:
       - Containerize an existing application.
       - Understand Kubernetes concepts and principles.
       - Deploy applications to Kubernetes using the CLI.
-      - Set up a continuous delivery pipeline using Jenkins.
+      - Set up a continuous delivery pipeline using Spinnaker and/or Jenkins.
   syllabus:
     - title: Introduction to Containers and Docker
       content:
@@ -1440,11 +1440,12 @@ KubernetesAndGKE:
         - Create a Kubernetes deployment.
         - Trigger, pause, resume, and rollback updates.
         - Understand and build canary deployments.
-    - title: Continuous Deployment with Jenkins
+    - title: Creating a Continuous Delivery Pipeline
       content:
-        - Provision Jenkins in your Kubernetes cluster.
-        - Create a Jenkins pipeline.
-        - Implement a canary deployment using Jenkins.
+        - Provision Spinnaker or Jenkins in your Kubernetes cluster.
+        - Manage application code in a source repository that can trigger code changes to a continuous delivery pipeline.
+        - Create a continuous delivery pipeline and start it manually or automatically with a code change.
+        - Implement a canary deployment that hosts two versions of your application in production for release testing.
 
 GCPForAWSProfessionals:
   title: Google Cloud Fundamentals for AWS Professionals
