@@ -1,5 +1,5 @@
 gcpCertClarification: "This course, together with real-world, hands-on experience, is the best preparation for the Google Certification Exams. Gain industry recognition, validate your technical expertise and take your career to the next level by becoming a Google Certified Professional. More info <a href=\"https://cloud.google.com/certification/\" target=\"_blank\">here</a>."
-springCertClarification: "After the class, purchase your <b>Certification Exam</b> <a href=\"https://academy.pivotal.io/confirm-course?courseid=EDU-1120-APP\" target=\"_blank\">here</a>."
+springCertClarification: "After the class, purchase your <b>Certification Exam</b> <a href=\"https://academy.pivotal.io/store-catalog#headingOne_EDU-1120-APP\" target=\"_blank\">here</a>."
 JoinUs: 
   Title: Join us
   Description: We do not have any vacancies at the moment, but if you think that we should talk send your CV to <a href="mailto:cv@extrema-sistemas.com">cv@extrema-sistemas.com</a>
@@ -127,7 +127,7 @@ SpringCore:
   title: "Spring Core Official Course"
   requirements: "This course is perfect for developers with or without prior experience with the Spring framework."
   audience: "This course is designed for Java developers and architects."
-  desc: "<p>Core Spring is the four-day flagship Spring Framework training. In this training, students build a Spring-powered Java application that demonstrates the <b>Spring Framework</b> and other Spring technologies like <b>Spring AOP</b> and <b>Spring Security</b> in an intensely productive, hands-on setting.</p><p>The perfect way to demonstrate your proficiency with the Pivotal product portfolio is to obtain an industry-recognized Pivotal Certification. The role-based certification exams are designed to test and validate your product knowledge and help you advance your career.</p><p><b>Pivotal recommends attending the corresponding training course prior to attempting a certification exam</b>. The lab-based curriculum enables you to fully comprehend key technical concepts, enhance your product expertise, and ultimately helps prepare you for the certification exam.</p><p>Core Spring is the perfect training if:</p><ul><li>You are interested in learning all about <b>developing Java applications with Spring</b></li><li>You have an upcoming project and <b>need to learn Spring quickly</b></li><li>You want to become <b>Spring Certified</b> to improve your career opportunities</li></ul><p>To further improve your Spring developer skills we recommend to take <a href=\"?technology=spring&q=web\">Spring Web</a> or <a href=\"?technology=spring&q=enterprise\">Enterprise Spring</a> after completing Core Spring.</p>"
+  desc: "<p>Core Spring is the four-day flagship Spring Framework training. In this training, students build a Spring-powered Java application that demonstrates the <b>Spring Framework</b> and other Spring technologies like <b>Spring AOP</b> and <b>Spring Security</b> in an intensely productive, hands-on setting.</p><p>The perfect way to demonstrate your proficiency with the Pivotal product portfolio is to obtain an industry-recognized Pivotal Certification. The role-based certification exams are designed to test and validate your product knowledge and help you advance your career.</p><p><b>Pivotal recommends attending the corresponding training course prior to attempting a certification exam</b>. The lab-based curriculum enables you to fully comprehend key technical concepts, enhance your product expertise, and ultimately helps prepare you for the certification exam.</p><p>Core Spring is the perfect training if:</p><ul><li>You are interested in learning all about <b>developing Java applications with Spring</b></li><li>You have an upcoming project and <b>need to learn Spring quickly</b></li><li>You want to become <b>Spring Certified</b> to improve your career opportunities</li></ul><p>To further improve your Spring developer skills we recommend to take <a href=\"?q=spring%20boot&technology=spring\">Spring Boot Developer</a> or <a href=\"?q=spring%20cloud&technology=spring\">Spring Cloud Developer</a> after completing Core Spring.</p>"
   objectives:
     description: "<p>At the end of the training, you should have an understanding of Spring and associated technologies and be able to do the following:</p>"
     bullets:
@@ -246,6 +246,141 @@ SpringCore:
         - "Using Spring Cloud"
         - "Developing a simple microservice system"
 
+
+SpringBootDeveloper:
+  title: "Spring Boot Developer"
+  requirements: "Basic Java, Git and IDE knowledge and understanding of Spring and/or completion of the Core Spring course."
+  audience: "This course is designed for developers who want to increase their understanding of Spring Boot and its major features."
+  desc: "<p>Building on the benefits of the Spring framework, Spring Boot represents the next chapter in Java development. Spring Boot’s opinionated approach removes much of the boilerplate and configuration that characterizes Spring, making development faster and deployment easier.</p><p>This course offers experience with Spring Boot and its major features, including auto-configuration, data access, Actuator, and more. On completion, participants will have a foundation for creating enterprise-ready applications.</p><p>Please note that this course is a subset of the material in our 4 day Core Spring course - there is no need to take both courses. This course is recommended if you have a good working knowledge of Spring Basics but are new to Spring Boot.</p>"
+  objectives:
+    description: "<p>Upon completion of this course, participants will understand how Spring Boot enhances the following:</p>"
+    bullets:
+      - "Describe the benefits provided by Spring Boot"
+      - "Initialize a project using Spring Boot Starters"
+      - "Leverage Spring Boot's auto configuration features to enable JDBC setup and initialization"
+      - "Create simplified backing-store solutions using Spring Data and JPA"
+      - "Build a simple MVC application using Spring Boot, embedded Web Server and fat JARs or classic WARs"
+      - "Build a RESTful Web application"
+      - "Use Spring Security to secure Web and REST endpoints"
+      - "Enable and extend metrics and monitoring capabilities using Spring Boot actuator"
+      - "Leverage advance configuration capabilities"
+      - "Utilize Spring Boot enhancements to testing"
+  syllabus: 
+    - title: "Review of Spring Essentials"
+      content:
+        - "Why Spring"
+        - "Configuration using Spring"
+        - "Bean creation"
+        - "Data Management"
+    - title: "Spring Boot Introduction"
+      content:
+        - "Introduction to Spring Boot"
+        - "Value Proposition of Spring Boot"
+        - "High-level Spring Boot features"
+        - "Creating a simple Boot application using Spring Initializr web-site"
+    - title: "Spring Boot dependencies, auto-configuration and runtime"
+      content:
+        - "Dependency management using Spring Boot starters"
+        - "How auto-configuration works"
+        - "Configuration properties"
+        - "Overriding auto-configuration"
+        - "Using CommandLineRunner"
+    - title: "JPA with Spring and Spring Data"
+      content:
+        - "Quick introduction to ORM with JPA"
+        - "Benefits of using Spring with JPA"
+        - "JPA configuration in Spring"
+        - "Configuring Spring JPA using Spring Boot"
+        - "Spring Data JPA dynamic repositories"
+    - title: "Spring MVC architecture and overview"
+      content:
+        - "Introduction to Spring MVC and request processing"
+        - "Controller method signatures"
+        - "Using @Controller, @RestController and @GetMapping annotations"
+        - "Configuring Spring MVC with Spring Boot"
+        - "Spring Boot packaging options, JAR or WAR"
+    - title: "REST with Spring MVC"
+      content:
+        - "An introduction to the REST architectural style"
+        - "Controlling HTTP response codes with @ResponseStatus"
+        - "Implementing REST with Spring MVC, @RequestMapping, @RequestBody and @ResponseBody"
+        - "Spring MVC’s HttpMessageConverters and automatic content negotiation"
+    - title: "Spring Security"
+      content:
+        - "What problems does Spring Security solve?"
+        - "Configuring authentication"
+        - "Implementing authorization by intercepting URLs"
+        - "Authorization using OAuth"
+        - "Authorization at the Java method level"
+        - "Understanding the Spring Security filter chain"
+    - title: "Actuators, metrics and health indicators"
+      content:
+        - "Enabling Spring Boot Actuator"
+        - "Custom Metrics"
+        - "Health Indicators"
+        - "Creating custom Health Indicators"
+        - "External monitoring systems"
+    - title: "Spring Boot testing enhancements"
+      content: 
+        - "Spring Boot testing overview"
+        - "Integration testing and slices"
+        - "Slices to test different layers of the application"
+
+SpringCloudDeveloper:
+  title: "Spring Cloud Developer"
+  audience: "This course is designed for developers interested in learning how to construct scalable and fault-tolerant cloud-native applications using the Spring Cloud family of projects."
+  requirements: "This course assumes you have significant Java experience and one of the following:<ul><li>Completion of Pivotal’s Spring Core course</li><li>Completion of Pivotal’s Spring Boot course</li><li>Spring Boot experience</li></ul>"
+  desc: "<p>Cloud-native application architectures and processes are becoming a proven strategy to enable fast delivery of business value.</p><p>Spring Boot and Spring Cloud are a powerful combination for building modern cloud-native application architectures that leverage industry battle-tested Spring ecosystem and 3rd party solutions to solve accompanying problems of scaling, availability and fault tolerance.</p><p>The 3-day Spring Cloud Developer course provides participants with an in-depth coverage of cloud-native and microservices patterns using Spring Cloud and Netflix components to help solve challenges associated with running distributed, cloud-native applications over a microservices architecture.</p>"
+  objectives:
+    description: "<p>Upon completion of this course, participants will be able to demonstrate how each of following components contribute to Cloud-Native applications deployment, scaling and fault tolerance characteristics:</p>"
+    bullets:
+      - "Distributed Application"
+      - "Service-to-service Calls"
+      - "Service Registration and Discovery"
+      - "Client vs. Server Side Load balancing"
+      - "Circuit Breakers"
+      - "Config Server"
+      - "Distributed Trace"
+  syllabus:
+    - title: "Introduction"
+      content:
+        - "Spring Cloud Introduction"
+    - title: "Distributed application"
+      content:
+        - "Application Continuum"
+        - "Spring Cloud Dependencies"
+    - title: "Service Registry and Discovery"
+      content:
+        - "Service Registry Pattern"
+        - "Eureka Service Registry"
+        - "Service Discovery Clients"
+        - "Eureka Server REST Operations"
+        - "Eureka Client Health Check"
+    - title: "Client Load Balancing"
+      content:
+        - "Spring Cloud Netflix Ribbon"
+        - "Retry and Custom Load Balancing Rule"
+    - title: "Circuit Breaker"
+      content:
+        - "Netflix Hystrix"
+        - "Stats Aggregation"
+    - title: "Config Server"
+      content:
+        - "External Configuration"
+        - "Spring Cloud Config Server"
+        - "Distributed Updates"
+        - "Vault Backend"
+        - "Handling Transient Failures"
+    - title: "Declarative REST client"
+      content:
+        - "Netflix Feign Client"
+    - title: "Distributed trace"
+      content:
+        - "Producer - Sleuth"
+        - "Consumer - Zipkin"
+    - title: "Security with OAuth 2.0"
+      content:
+        - "Securing REST Endpoints"
 
 SpringWeb:
   title: "Spring Web Official Course"

@@ -1,5 +1,5 @@
 gcpCertClarification: "Este curso es la mejor preparación para los exámenes de certificación de Google junto a la experiencia práctica obtenida en el mundo real. Obtén el reconocimiento de la industria tecnológica, valida tu experiencia técnica y lleva tu carrera al siguiente nivel convirtiéndote en un Google Certified Professional. Más información <a href=\"https://cloud.google.com/certification/\" target=\"_blank\">aquí</a>."
-springCertClarification: "Tras el curso, podrás comprar tu <b>examen de certificación</b> <a href=\"https://academy.pivotal.io/confirm-course?courseid=EDU-1120-APP\" target=\"_blank\">aquí</a>."
+springCertClarification: "Tras el curso, podrás comprar tu <b>examen de certificación</b> <a href=\"https://academy.pivotal.io/store-catalog#headingOne_EDU-1120-APP\" target=\"_blank\">aquí</a>."
 JoinUs: 
   Title: Únete al equipo
   Description: En este momento no estamos buscando, pero si crees que deberíamos hablar envíanos tu CV a <a href="mailto:cv@extrema-sistemas.com">cv@extrema-sistemas.com</a>
@@ -127,7 +127,7 @@ SpringCore:
   title: "Curso Oficial Spring Core"
   requirements: "Este curso es perfecto para desarrolladores con o sin experiencia previa con Spring Core."
   audience: "Este curso está dirigido a desarrolladores y arquitectos Java." 
-  desc: "<p>Core Spring es el curso estrella en formación del framework Spring. Durante este curso los asistentes desarrollan una aplicación Java que pone a prueba las posibilidades de <b>Spring Framework</b> y otras tecnologías como <b>Spring AOP</b> y <b>Spring Security</b> en un entorno productivo e intensamente práctico.<p>La mejor manera de demostrar el conocimiento del portfolio del producto de Pivotal es obteniendo la certificación oficial de Pivotal reconocida a nivel empresarial. Los exámenes de certificación basados en roles están diseñados para probar y validar el conocimiento del producto y ayudar a mejorar profesionalmente.</p><p><b>Pivotal recomienda asistir al curso antes de intentar presentarse al examen de certificación</b>. Su estructura basada en laboratios permite la comprensión de todos los conceptos clave, mejorar el nivel de experiencia con el producto y ayuda a la preparación del examen de certificación.<p>Spring Core es el curso perfecto si:</p><ul><li>Se está interesado en aprender todo lo relacionado con el <b>desarrollo de aplicaciones Java con Spring</b></li><li>Se acerca el arranque de un proyecto y <b>se necesita aprender Spring rápidamente</b></li><li>Se desea mejorar el perfil profesional obteniendo la <b>certificación oficial de Spring</b></li></ul><p>Para continuar mejorando el conocimiento de Spring es recomendable asistir a <a href=\"?technology=spring&q=web\">Spring Web</a> o <a href=\"?technology=spring&q=enterprise\">Enterprise Spring</a> una vez completado Spring Core.</p>"
+  desc: "<p>Core Spring es el curso estrella en formación del framework Spring. Durante este curso los asistentes desarrollan una aplicación Java que pone a prueba las posibilidades de <b>Spring Framework</b> y otras tecnologías como <b>Spring AOP</b> y <b>Spring Security</b> en un entorno productivo e intensamente práctico.<p>La mejor manera de demostrar el conocimiento del portfolio del producto de Pivotal es obteniendo la certificación oficial de Pivotal reconocida a nivel empresarial. Los exámenes de certificación basados en roles están diseñados para probar y validar el conocimiento del producto y ayudar a mejorar profesionalmente.</p><p><b>Pivotal recomienda asistir al curso antes de intentar presentarse al examen de certificación</b>. Su estructura basada en laboratios permite la comprensión de todos los conceptos clave, mejorar el nivel de experiencia con el producto y ayuda a la preparación del examen de certificación.<p>Spring Core es el curso perfecto si:</p><ul><li>Se está interesado en aprender todo lo relacionado con el <b>desarrollo de aplicaciones Java con Spring</b></li><li>Se acerca el arranque de un proyecto y <b>se necesita aprender Spring rápidamente</b></li><li>Se desea mejorar el perfil profesional obteniendo la <b>certificación oficial de Spring</b></li></ul><p>Para continuar mejorando el conocimiento de Spring es recomendable asistir a <a href=\"?q=spring%20boot&technology=spring\">Spring Boot Developer</a> o <a href=\"?q=spring%20cloud&technology=spring\">Spring Cloud Developer</a> una vez completado Spring Core.</p>"
   objectives: 
     description: "<p>Tras este curso el asistente tendrá conocimiento sobre Spring y sus tecnologías asociadas y será capaz de:</p>"
     bullets:
@@ -143,6 +143,41 @@ SpringCore:
       - Usar Spring para desarrollar fácilmente <b>servicios REST</b>
       - Usar <b>Spring Boot</b> para desarrollar aplicaciones más rápido
       - Comenzar el viaje hacia los <b>Microservicios</b> y <b>Cloud Native Applications</b>
+
+SpringBootDeveloper:
+  title: "Spring Boot Developer"
+  requirements: "Haber asistido al curso de Spring Core o experiencia equivalente."
+  audience: "Este curso está dirigido a desarrolladores que quieran mejorar su de Spring Boot y sus funcionalidades principales."
+  desc: "<p>Tomando como base los beneficios de Spring framework, Spring Boot representa el siguiente capítulo en el desarrollo Java. El enfoque de Spring Boot elimina gran parte de la configuración redundante necesaria con Spring, lo que hace que el desarrollo sea más rápido y el despliegue sea más fácil.</p><p>Este curso ofrece experiencia con Spring Boot y sus funciones principales, incluida la configuración automática, el acceso a datos, Actuator y más. Al finalizar, los alumnos tendrán una base para crear aplicaciones listas para desplegar.</p><p>Ten en cuenta que este curso es un subconjunto del material en nuestro curso Core Spring de 4 días. No es necesario tomar ambos cursos. Se recomienda este curso si tienes un buen conocimiento práctico de los conceptos básicos de Spring pero eres nuevo en Spring Boot.</p>"
+  objectives:
+    description: "<p>Tras este curso el asistente será capaz de:</p>"
+    bullets:
+      - "Describir los beneficios que aporta Spring Boot"
+      - "Configurar un proyecto usando Spring Boot Starters"
+      - "Aprovechar las opciones de configuración automática de Spring Boot para habilitar la configuración e inicialización de JDBC"
+      - "Crear sistemas simplificados de almacenamiento de respaldo utilizando Spring Data y JPA"
+      - "Construir aplicaciones MVC sencillas usando Spring Boot, con un servidor web incorporado en un único JAR o creando un WAR clásico"
+      - "Crear una aplicación web RESTful"
+      - "Usar Spring Security para proteger webs y endpoints REST"
+      - "Habilitar y extender las métricas y capacidades de monitorización con Spring Boot actuator"
+      - "Aprovechar las prestaciones de la configuración avanzada"
+      - "Usar Spring Boot para mejorar los tests"
+
+SpringCloudDeveloper:
+  title: "Spring Cloud Developer"
+  audience: "Este curso está diseñado para desarrolladores interesados en aprender a construir aplicaciones escalables y con tolerancia a fallos usando el conjunto de proyectos de Spring Cloud."
+  requirements: "Para este curso es necesario tener experiencia significativa con Java y cumplir alguno de los siguientes requisitos:<ul><li>Haber completado el curso Spring Core</li><li>Haber completado el curso Spring Boot Developer</li><li>Experiencia con Spring Boot</li></ul>"
+  desc: "<p>Las arquitecturas y procesos de aplicaciones en la nube se están convirtiendo en una estrategia probada para permitir la entrega rápida de valor comercial.</p><p>Spring Boot y Spring Cloud son una potente combinación para construir arquitecturas de aplicaciones en la nube que aprovecha las soluciones tanto de Spring como de terceros para solucionar los problemas de escalabilidad, disponibilidad y tolerancia a fallos de las aplicaciones.</p><p>Este curso de 3 días ofrece una cobertura en profundidad de los patrones de microservicios y desarrollo en la nube que utilizan los componentes usando los componentes de Spring Cloud y Netflix para ayudar a resolver los desafíos asociados con la ejecución distribuida de aplicaciones en la nube basadas en una arquitectura de microservicios.</p>"
+  objectives:
+    description: "<p>Al finalizar este curso, el asistente será capaz demostrar cómo contribuyen los siguientes componentes en el desarrollo de aplicaciones desplegadas en la nube, escalables y con tolerancia a fallos:</p>"
+    bullets:
+      - "Aplicaciones distribuidas"
+      - "Llamadas entre servicios"
+      - "Service Registration y Service Discovery"
+      - "Balanceadores de carga en el lado cliente y servidor"
+      - "Circuit Breakers"
+      - "Servidor de configuración"
+      - "Trazas distribuidas"
 
 SpringWeb:
   title: "Curso Oficial de Spring Web"

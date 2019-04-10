@@ -1,9 +1,12 @@
 {% for tab in site.data.menu %}
-  <li class="{% if tab.link == page.currentTab %}active{% endif %}">
-    {% if tab.name == 'Blog' %}
-      <a href="{{tab.link}}" target="_blank" rel="noopener noreferrer">{{tab.name}}</a>
-    {% else %}
-      <a href="/{{page.hl}}/{{tab.link}}">{{site.data[page.hl][tab.name]}}</a>
-    {% endif %}
-  </li>
+  {% if tab.name == 'Blog' %}
+    <a href="{{tab.link}}" class="topbar-link" target="_blank" rel="noopener noreferrer">{{tab.name}}</a>
+  {% else %}
+    <a href="/{{page.hl}}/{{tab.link}}" class="topbar-link {% if tab.link == page.currentTab %}active{% endif %}">{{site.data[page.hl][tab.name]}}</a>
+  {% endif %}
 {% endfor %}
+{% if page.hl == 'en'%}
+  <a href="/es/{{page.currentTab}}" class="topbar-link" >Español</a>
+{% else %}
+  <a href="/en/{{page.currentTab}}" class="topbar-link" >English</a>
+{% endif %}

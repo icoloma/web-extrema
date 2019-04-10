@@ -1,99 +1,144 @@
 $develop-button-bg-color: #eb5255;
 $training-button-bg-color: #34495e;
 
-.top-bar {
-  a {
-    text-decoration: none;
-    text-transform: uppercase;
+$topbar-bg: #003955;
+$topbar-color: $white;
+$topbar-dropdown-bg: #003955;
+$topbar-dropgown-bg-hover: lighten($topbar-dropdown-bg, 15%);
+$logo-margin: 0.8rem .6rem;
+
+.topbar {
+  background-color: rgba($topbar-bg, .95);
+  color: $topbar-color;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  font-size: 1.1rem
+}
+.topbar > .content {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  padding: 0 1rem;
+  .popup-menu-contents {
+    top: 70px;
+    right: 10px;
   }
-  .name {
-    display: flex;
-    align-items: center;
+}
+.topbar-logo {
+  float: left;
+  display: block;
+  margin: $logo-margin;
+  margin-left: 0;
+}
+.topbar-separator {
+  flex-grow: 1;
+}
+.topbar-link {
+  padding: $logo-margin;
+  color: $topbar-color;
+  text-decoration: none;
+  transition: background 1s ease-out;
+  border-radius: 3px;
+  text-decoration: none;
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+    color: $topbar-color;
   }
-  .top-bar-section {
-    ul {
-      width: auto;
-      li a {
-        padding-right: 20px;
-        padding-left: 20px;
-      }
-    }
-    a {
-      transition: background 1s ease-out;
-    }
-    .has-dropdown > a:hover:after {
-      border-color: rgba($jet, 0.4) transparent transparent transparent;
+}
+.topbar-logo-img {
+  height: 32px;
+  min-width: 150px;
+  display: block;
+  font-size: 32px;
+}
+.topbar-links {
+  display: none;
+}
+.topbar-hamburger {
+  width: 2rem;
+  height: 2rem;
+  padding: 0.4rem;
+  text-align: right;
+  display: inline-block;
+}
+.topbar-hamburguer-icon {
+  fill: $topbar-color;
+}
+.topbar-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  border-radius: 3px;
+  background: $topbar-dropdown-bg;
+  z-index: 89;
+  .topbar-link {
+    display: block;
+    padding: 10px 20px;
+    &:hover {
+      background: $topbar-dropgown-bg-hover;
     }
   }
-  &.expanded {
-    overflow: visible;
-    .top-bar-section {
-      z-index: 9;
-      position: absolute;
-      right: 25px;
+  &::before {
+    right: 0.8rem;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 6px;
+    border-color: transparent transparent $topbar-dropdown-bg transparent;
+    border-bottom-style: solid;
+    position: absolute;
+    top: -12px;
+    z-index: 89;
+  }
+}
+.topbar-dropdown-menu {
+  position: relative;
+  &:hover,
+  &:focus {
+    .topbar-dropdown {
+      display: block;
     }
   }
 }
 
 .contain-to-grid {
-  .top-bar {
-    max-width: 100%;
-    width: 100%;
-    background: transparent;
-    overflow: visible;
-    a:not(.top-logo) {
-      &:hover, &:focus {
-        text-decoration: none !important;
+  .topbar {
+    position: relative;
+    background-color: transparent;
+    .topbar-link {
+      &:hover, &:focus, &.active {
         background-color: $white !important;
         color: $jet !important;
-        border-radius: 3px;
       }
     }
-    &.expanded {
-      .title-area {
-        background: transparent;
+    .topbar-dropdown {
+      background: $jet;
+      border-color: $jet;
+      &:before {
+        border-color: transparent transparent $jet transparent;
       }
-      .top-bar-section  {
-        top: 70px;
-        ul {
-          background: $jet;
-        }
-      }
-    }
-  }
-  .toggle-topbar.menu-icon {
-    a:hover, a:focus {
-      background-color: transparent !important;
-      color: $white !important;
-    }
-  }
-  .top-bar-section {
-    @media #{$small-only} {
-      z-index: -1;
-    }
-    
-    ul li {
-      background: transparent;
-    }
-    li:not(.has-form) a:not(.button) {
-      background: transparent;
-    }
-    .dropdown li:not(.has-form):not(.active)>a:not(.button) {
-      background: transparent;
     }
   }
 }
 
-.top-logo {
-  height: 32px;
-  text-indent: -10000px;
-  overflow: hidden;
-  background: url('../img/extrema.png') no-repeat 0 0;
-  background-size: contain;
-  margin-left: 15px;
-  float: left;
-  font-size: 32px;
-  min-width: 150px;
+@media #{$medium-up} {
+  .topbar-links {
+    display: block;
+  }
+  .topbar-dropdown-menu {
+    display: none;
+  }
+  .topbar-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .header {

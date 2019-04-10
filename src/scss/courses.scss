@@ -1,6 +1,14 @@
 .course-contents {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s, height 0.5s linear;
+  height: 0;
   overflow: hidden;
-  transition: all 300ms ease-out;
+  &.show {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+  }
 }
 
 .subsidized-container {

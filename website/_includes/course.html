@@ -1,10 +1,10 @@
 {% assign course = site.data[page.hl][include.course] %} 
 {% assign syllabus = site.data.en[include.course].syllabus %}
 <article class="course-item row section" itemscope itemtype="http://schema.org/Product" data-labels="{{include.labels}}">
-  <div class="anchor" id="{{include.koliseoEvent}}"></div>
+  <div class="anchor" id="{{include.id}}"></div>
   <div class="column small-12 medium-6">
     <h1 itemprop="name">{{course.title}}</h1>
-    <metadata itemprop="url" content="http://extrema-sistemas.com/en/{{page.currentTab}}/#{{include.koliseoEvent}}" />
+    <metadata itemprop="url" content="http://extrema-sistemas.com/en/{{page.currentTab}}/#{{include.id}}" />
     <div itemprop="description">
       {{course.desc}}
     </div>
@@ -77,12 +77,6 @@
   </aside>
   <div class="small-12 column section">
     <div class="row">
-      <div class="columns">
-        <h2>{{site.data[page.hl].RegisterFor}} {{course.title]}}</h2>
-        <div class="kcontainer" data-locale="{{page.hl}}" data-event-uuid="extrema/{{include.koliseoEvent}}"></div>
-      </div>
-    </div>
-    <div class="row">
       <div class="column">
         <nav>
           <a class="js-show-contents button radius">
@@ -93,14 +87,14 @@
             <span class="icon-up-open"></span>
             {{site.data[page.hl].hideCourseContents}}
           </a>
-          <a class="button secondary" href="mailto:training@extrema-sistemas.com?subject={{ site.data[page.hl][include.course].title | cgi_escape }}" target="_blank" rel="noopener noreferrer">
+          <a class="button secondary" href="mailto:training@extrema-sistemas.com">
             <span class="icon-mail"></span>
             {{site.data[page.hl].askForMoreInfo}}
           </a>
         </nav>
       </div>
     </div>
-    <div class="row course-contents clearfix" style="height:0">
+    <div class="row course-contents clearfix">
       <section class="column small-12 medium-6">
         <h2>{{site.data[page.hl].Objectives}}</h2>
         {{course.objectives.description}}

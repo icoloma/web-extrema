@@ -1,5 +1,5 @@
-import './app';
-import './index';
-import './koliseo';
-import './training';
-import './contact';
+import "./polyfills";
+import "./app";
+import "./index";
+import "./training";
+import "./contact";
