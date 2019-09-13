@@ -12,32 +12,12 @@
   <aside class="column medium-6" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
     <ul class="pricing-table">
       <li class="price text-right">
-        {% if include.lowestPrice or include.price %}
-          <b>
-            <span>{{site.data[page.hl].Price}}: </span>
-            {% if include.lowestPrice %}
-              <span>{{site.data[page.hl].from}}</span>
-              <span itemprop="price">{{include.lowestPrice}}</span>
-            {% else %}
-              <span itemprop="price">{{include.price}}</span>
-            {% endif %}
-            <span class="currency" itemprop="priceCurrency">€</span>
-          </b>
-          <div class="price-vat">{{site.data[page.hl].VATexempt}}</div>
-          {% if include.deprecated %}
-            <span class="label warning radius right deprecated">Deprecated</span>
-          {% endif %}
-        {% else %}
-          {% if include.contactForPrice %}
-            <b>
-              <span>{{site.data[page.hl].ContactForPrice}}</span>
-            </b>
-          {% else %}
-            <b>
-              <span>{{site.data[page.hl].Price}}: </span>
-              <span>{{site.data[page.hl].Free}}</span>
-            </b>
-          {% endif %}
+        <b>
+          <span>{{site.data[page.hl].ContactForPrice}}</span>
+        </b>
+        <div class="groups-only">{{site.data[page.hl].OnlyInCompanyGroups}}</div>
+        {% if include.deprecated %}
+          <span class="label warning radius right deprecated">Deprecated</span>
         {% endif %}
       </li>
       <li class="description text-left">
