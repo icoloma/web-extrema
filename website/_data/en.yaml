@@ -80,7 +80,7 @@ OnlyInCompanyGroups: Only in-company courses available
 "attentionDesc": "If this sounds like a project where you could use some help, just drop us a line to start talking."
 "followUsBlog": "Read our blog"
 "followUsTwitter": "Follow us on Twitter"
-"ContactBody": "We are a small team that answers the phone and replies to every e-mail. Feel free to drop us a line, any time."
+"ContactBody": "We are a small team that replies to every e-mail. Feel free to drop us a line, any time."
 "Address": "Address"
 "langEnEs": "Available in English and Spanish."
 "langEnEsIt": "Available in English, Spanish and Italian."
@@ -1759,7 +1759,6 @@ DeepLearningForImages:
 "Contact": "Contact"
 "Spain": "Spain"
 "emailTo": "Email to"
-"Phone": "Phone"
 "seeInGoogleMaps": "See in Google Maps"
 "Italy": "Italy"
 

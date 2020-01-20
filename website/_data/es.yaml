@@ -79,7 +79,7 @@ OnlyInCompanyGroups: Disponible sólo para cursos in-company
 "attentionDesc": "Si esto suena como un proyecto en que te vendría bien algo de ayuda, envíanos un correo para empezar a hablar."
 "followUsBlog": "Lee nuestro blog"
 "followUsTwitter": "Síguenos en Twitter"
-"ContactBody": "Somos un pequeño equipo que contesta al teléfono y responde todos los correos. Siéntete libre de escribirnos, a cualquier hora."
+"ContactBody": "Somos un pequeño equipo que responde todos los correos. Siéntete libre de escribirnos, a cualquier hora."
 "Address": "Dirección"
 "langEnEs": "Disponible en inglés y español."
 "langEnEsIt": "Disponible en inglés, español e italiano."
@@ -521,7 +521,6 @@ DeepLearningForImages:
 "Contact": "Contacto"
 "Spain": "España"
 "emailTo": "Email a"
-"Phone": "Teléfono"
 "seeInGoogleMaps": "Ver en Google Maps"
 "Italy": "Italia"
 
