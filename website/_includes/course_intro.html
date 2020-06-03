@@ -1,18 +1,14 @@
-{% capture href %}/{{page.hl}}/courses?{{include.query}}{% endcapture %}
 <div class="columns">
   <article class="course-container row {{include.class}}">
     <div class="column small-12 medium-3 training-logo-container logo-container text-center">
-      <a href="{{href}}">
-        <img class="training-logo" src="/img/{{include.logo}}" alt="{{include.title}}">
-      </a>
+      <img class="training-logo" src="/img/{{include.logo}}" alt="{{include.title}}">
     </div>
     <div class="column small-12 medium-9">
       <h4 class="small-only-text-center">
-        <a href="{{href}}">{{include.title}}</a>
+        {{include.title}}
       </h4>
       <p>
         {{site.data[page.hl][include.desc]}}
-        <a class="nobreak" href="{{href}}"><span class="icon-right-open"></span> {{site.data[page.hl].readMore}}</a>
       </p>
       {% if include.partnerDesc != null %}
         <p class="certification">

@@ -162,7 +162,7 @@ $logo-margin: 0.8rem .6rem;
   flex-direction: column;
   justify-content: space-around;
 }
-.develop, .training {
+.develop {
   width: 100%;
   height: auto;
   max-height: 50%;
@@ -173,6 +173,15 @@ $logo-margin: 0.8rem .6rem;
   color: #fff;
   padding: 10px 40px;
   text-align: center;
+  h1 {
+    color: #fff;
+    font-size: 30px;
+  }
+  .button {
+    margin: 0;
+    padding: 1.1rem 1.5rem;
+    background-color: $develop-button-bg-color;
+  }
 }
 .home-subtitle {
   font-size: 1rem;
@@ -180,23 +189,6 @@ $logo-margin: 0.8rem .6rem;
 section.top-bar-section {
   padding: 0;
 }
-.sections {
-  section h1 {
-    color: #fff;
-    font-size: 30px;
-  }
-  .button {
-    margin: 0;
-    padding: 1.1rem 1.5rem;
-  }
-}
-.develop .button {
-  background-color: $develop-button-bg-color;
-}
-.training .button {
-  background-color: $training-button-bg-color;
-}
-
 .section.big {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -206,16 +198,14 @@ section.top-bar-section {
   .home-subtitle {
     margin-bottom: .5rem;
   }
-  .sections .button {
+  .develop .button {
     font-size: $button-sml;
   }
 }
 
 @media #{$screen} and (min-width: 30em) {
-  .sections {
-    section h1 {
-      font-size: 40px;
-    }
+  .develop h1 {
+    font-size: 40px;
   }
   .home-subtitle {
     font-size: 1.5rem;
@@ -230,11 +220,7 @@ section.top-bar-section {
   .header {
     background-image: url('/img/background-medium.jpg');
   }
-  .sections {
-    flex-direction: row;
-  }
-  .develop, .training {
-    width: 50%;
+  .develop {
     max-height: 100%;
   }
 }

@@ -1,32 +1,7 @@
-.course-contents {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s, height 0.5s linear;
-  height: 0;
-  overflow: hidden;
-  &.show {
-    visibility: visible;
-    opacity: 1;
-    height: auto;
+.course-container {
+  h4 {
+    color: #5987AC;
   }
-}
-
-.subsidized-container {
-  padding: 1rem;
-  background: #FFFFB7;
-  border: 1px solid #FFEBB7;
-}
-
-.subsidized {
-  font-size: 80%;
-  color: #777;
-  display: flex;
-  align-items: center;
-}
-
-.tripartita {
-  margin-right: 10px;
-  width: 100px;
 }
 
 .certification {
@@ -41,60 +16,8 @@
   }
 }
 
-.bullet-item.certification {
-  border-width: 0 0 1px 0;
-}
-
-.pricing-table {
-
-  * {
-    line-height: inherit;
-  }
-
-  .price {
-    border-bottom: solid 1px #ddd;
-    color: #666;
-    overflow: hidden;
-
-    .deprecated {
-      margin-top: 5px;
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-  }
-
-  .description {
-    color: #444;
-
-    p, ul {
-      font-size: 100%;
-      margin-bottom: 0;
-      margin-top: 20px;
-    }
-
-    ul li {
-      list-style-type: circle;
-    }
-
-  }
-
-}
-
-.price-vat {
-  font-size: 1rem;
-  margin-top: -5px;
-}
-
-.groups-only {
-  font-size: .9rem;
-}
-
 .logo-spring-big {
   max-height: 100px;
-}
-
-.logo-pivotal {
-  max-height: 65px;
 }
 
 .button {
@@ -103,74 +26,6 @@
 
 .button:not(:last-child) {
   margin-right: 5px;
-}
-
-.currency {
-  font-size: 80%;
-}
-
-.newsletter {
-  padding-top: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  text-align: center;
-  display: none;
-  &.show {
-    display: block;
-  }
-  label {
-    cursor: default;
-  }
-  .email {
-    width: 100%;
-  }
-  .button {
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: $newsletter-bg-color;
-    color: $newsletter-color;
-    border-color: $newsletter-bg-color;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    &:hover, &:focus {
-      background-color: scale-color($newsletter-bg-color, $lightness: -20%);
-      border-color: scale-color($newsletter-bg-color, $lightness: -20%);
-    }
-  }
-}
-
-.tag-categories {
-  list-style: none;
-  margin: 0;
-  li {
-    display: inline;
-  }
-}
-
-.filter-fieldset {
-  display: inline-block;
-  margin: 0;
-  padding-bottom: 15px;
-  padding-top: 0;
-
-  legend {
-    font-variant: small-caps;
-    color: #777;
-  }
-}
-
-.category-values {
-  margin: 0;
-}
-
-.label {
-  margin-top: 5px;
-  &.active {
-    background-color: $blue;
-    border-color: scale-color($blue, $lightness: -20%);
-    color: white;
-  }
 }
 
 .course-container.cloud {
@@ -186,24 +41,5 @@
   .course-container {
     display: flex;
     align-items: center;
-  }
-
-  .newsletter {
-    .email {
-      width: 100%;
-      padding: 25px 10px 25px 10px;
-      margin: 0;
-    }
-
-    .button {
-      margin: 0;
-      border-radius: 0 5px 5px 0;
-    }
-  }
-
-  .newsletter-form {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
   }
 }

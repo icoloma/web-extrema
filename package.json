@@ -11,9 +11,9 @@
     "babel-preset-es2015-minimal": "^2.1.0",
     "concurrently": "^3.5.0",
     "glob": "~7.1.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "promise": "~7.1.1",
-    "sass-loader": "~6.0.3",
+    "sass-loader": "^8.0.2",
     "webpack": "~2.3.3",
     "whatwg-fetch": "^2.0.3"
   },
